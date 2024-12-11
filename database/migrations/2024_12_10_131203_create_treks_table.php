@@ -1,5 +1,6 @@
 <?php
 
+use App\Helpers\CuratorMigrationHelper;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,8 +15,8 @@ return new class extends Migration {
             $table->id();
             $table->string('title')
                 ->required();
-            $table->string('cover_image')
-                ->required();
+            // $table->string('cover_image')
+            //     ->required();
             $table->longText('description')
                 ->required();
             $table->string('duration')
@@ -40,6 +41,11 @@ return new class extends Migration {
                 ->required();
             $table->timestamps();
         });
+
+        CuratorMigrationHelper::migrateMediaField('treks', 'cover_image_id');
+        CuratorMigrationHelper::migrateMediaField('treks', 'feature_image_id');
+
+        CuratorMigrationHelper::migratePivotTable('media_trek', 'trek_id');
     }
 
     /**
@@ -47,6 +53,10 @@ return new class extends Migration {
      */
     public function down(): void
     {
+        CuratorMigrationHelper::rollbackPivotTable('media_trek');
+
+        CuratorMigrationHelper::rollbackMediaField('treks', 'feature_image_id');
+        CuratorMigrationHelper::rollbackMediaField('treks', 'cover_image_id');
         Schema::dropIfExists('treks');
     }
 };

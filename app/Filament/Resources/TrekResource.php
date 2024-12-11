@@ -6,6 +6,7 @@ use App\Enums\TrekDifficulty;
 use App\Filament\Resources\TrekResource\Pages;
 use App\Filament\Resources\TrekResource\RelationManagers;
 use App\Models\Trek;
+use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -35,7 +36,18 @@ class TrekResource extends Resource
                         TextInput::make('title')
                             ->columnSpanFull(),
                         RichEditor::make('description'),
-                        FileUpload::make('cover_image'),
+                        CuratorPicker::make('cover_image_id')
+                            ->color('primary')
+                            ->label('Cover Image')
+                            ->relationship('coverImage', 'id'),
+                        CuratorPicker::make('feature_image_id')
+                            ->label('Feature Image')
+                            ->relationship('featureImage', 'id'),
+
+                        CuratorPicker::make('images')
+                            ->multiple()
+                            ->relationship('images', 'id')
+
                     ]),
                 Section::make('Additional Details')
                     ->schema([
