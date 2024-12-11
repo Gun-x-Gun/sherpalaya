@@ -6,9 +6,12 @@ use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -23,7 +26,22 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Section::make('Info')
+                    ->columns(2)
+                    ->schema([
+                        TextInput::make('name')
+                            ->required(),
+                        TextInput::make('email')
+                            ->email()
+                            ->required(),
+                    ]),
+                Section::make('Password')
+                    ->hiddenOn('view')
+                    ->schema([
+                        TextInput::make('password')
+                            ->password()
+                            ->revealable(),
+                    ]),
             ]);
     }
 
@@ -31,12 +49,14 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('email'),
             ])
             ->filters([
                 //
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
@@ -58,6 +78,7 @@ class UserResource extends Resource
         return [
             'index' => Pages\ListUsers::route('/'),
             'create' => Pages\CreateUser::route('/create'),
+            'view' => Pages\ViewUser::route('/{record}'),
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
     }

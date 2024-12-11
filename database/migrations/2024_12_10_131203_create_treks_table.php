@@ -34,7 +34,8 @@ return new class extends Migration {
             $table->string('highest_altitude')
                 ->required();
             $table->string('trek_difficulty')
-                ->required();
+                ->nullable()
+                ->default(null);
             $table->longText('key_highlights')
                 ->required();
             $table->timestamps();
