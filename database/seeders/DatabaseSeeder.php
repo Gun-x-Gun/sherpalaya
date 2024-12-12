@@ -17,8 +17,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             // KeyPointSeeder::class,
+            ShieldSeeder::class,
             UserSeeder::class,
             TrekSeeder::class,
+            DestinationSeeder::class,
         ]);
     }
 }
