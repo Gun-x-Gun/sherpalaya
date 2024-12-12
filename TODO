@@ -1,0 +1,9 @@
+
+TrekItenery:
+    ☐ trek_id
+    ☐ 'itinerary_title',
+    ☐ 'itinerary_description',
+    ☐ 'itinerary_trek_hours',
+
+Todo:
+  ☐ Item
