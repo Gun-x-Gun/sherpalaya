@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             // KeyPointSeeder::class,
             UserSeeder::class,
-
+            TrekSeeder::class,
         ]);
     }
 }
