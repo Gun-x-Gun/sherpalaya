@@ -6,6 +6,7 @@ use Filament\Http\Middleware\Authenticate;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -67,11 +68,25 @@ class AdminPanelProvider extends PanelProvider
                 ->label('Media')
                 ->pluralLabel('Media')
                 ->navigationIcon('heroicon-o-photo')
-                ->navigationGroup('Content')
+                ->navigationGroup('Control')
                 ->navigationSort(3)
                 ->navigationCountBadge()
                 ->registerNavigation(true)
 
+            ])
+            ->navigationItems([
+                NavigationItem::make('Roles')
+                    ->url('/admin/shield/roles')
+                    ->icon('heroicon-o-cog')
+                    ->group('Control')
+                    ->isActiveWhen(function(){
+                        return request()->is('admin/shield/roles');
+                    })
+            ])
+            ->navigationGroups([
+                'Services',
+                'Users',
+                'Control',
             ]);
     }
 }
