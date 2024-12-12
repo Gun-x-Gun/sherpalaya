@@ -24,8 +24,8 @@ return new class extends Migration {
             $table->string('grade')
                 ->nullable()
                 ->default(null);
-            $table->longText('destinations')
-                ->required();
+            // $table->longText('destinations')
+            //     ->required();
             $table->string('starting_ending_point')
                 ->required();
             $table->string('best_time_for_trek')
@@ -38,6 +38,12 @@ return new class extends Migration {
                 ->nullable()
                 ->default(null);
             $table->longText('key_highlights')
+                ->required();
+            $table->longText('costs_include')
+                ->required();
+            $table->longText('costs_exclude')
+                ->required();
+            $table->longText('essential_tips')
                 ->required();
             $table->timestamps();
         });
