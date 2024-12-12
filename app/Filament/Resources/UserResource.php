@@ -7,6 +7,7 @@ use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -27,16 +28,22 @@ class UserResource extends Resource
         return $form
             ->schema([
                 Section::make('Info')
-                    ->columns(2)
+                    ->columns(3)
                     ->schema([
                         TextInput::make('name')
                             ->required(),
                         TextInput::make('email')
                             ->email()
                             ->required(),
+                            Select::make('roles')
+                            ->relationship('roles', 'name')
+                            ->multiple()
+                            ->preload()
+                            ->searchable(),
+
                     ]),
                 Section::make('Password')
-                    ->hiddenOn('view')
+                    ->visibleOn('create')
                     ->schema([
                         TextInput::make('password')
                             ->password()
@@ -51,6 +58,8 @@ class UserResource extends Resource
             ->columns([
                 TextColumn::make('name'),
                 TextColumn::make('email'),
+                TextColumn::make('roles.name')
+                    ->label('Role'),
             ])
             ->filters([
                 //
