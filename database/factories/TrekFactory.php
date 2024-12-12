@@ -19,7 +19,7 @@ class TrekFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->words(3, true),
+            'title' => $this->faker->city(),
             'description' => $this->faker->paragraph(),
             'duration' => $this->faker->numberBetween(5, 60),  // Example duration (days)
             'grade' => $this->faker->numberBetween(1, 10),
