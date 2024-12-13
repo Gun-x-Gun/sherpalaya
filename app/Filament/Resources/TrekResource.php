@@ -152,6 +152,7 @@ class TrekResource extends Resource
                                         ->schema([
                                             TextInput::make('best_time_for_trek'),
                                             TextInput::make('starting_ending_point')
+                                            ->label('Starting/Ending Point')
                                         ]),
 
                                 ]),

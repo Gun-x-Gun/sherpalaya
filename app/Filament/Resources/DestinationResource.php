@@ -17,6 +17,7 @@ use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
+use Filament\Tables\Columns\Layout\Split;
 use Filament\Tables\Columns\Layout\Stack;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -98,12 +99,12 @@ class DestinationResource extends Resource
     {
         return $table
             ->columns([
-                Stack::make([
+                Split::make([
                     TextColumn::make('name')
                     ->size(TextColumn\TextColumnSize::Large)
                     ->weight(FontWeight::Bold),
                     CuratorColumn::make('destinationImages')
-                    ->size(200)
+                    ->size(90)
                     ->ring(1) // options 0,1,2,4
                     ->overlap(2) // options 0,2,3,4
                     ->limit(2),
