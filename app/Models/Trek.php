@@ -54,18 +54,24 @@ class Trek extends Model
         return $this->belongsToMany(
             Destination::class,
             'destination_trek'
-        )->using(DestinationTrek::class);
+        )->using(DestinationTrek::class)
+            ->withPivot([
+                'order'
+            ]);
     }
 
-    public function coverImage(): BelongsTo{
+    public function coverImage(): BelongsTo
+    {
         return CuratorModelHelper::belongsTo($this, 'cover_image_id');
     }
 
-    public function featureImage(): BelongsTo{
+    public function featureImage(): BelongsTo
+    {
         return CuratorModelHelper::belongsTo($this, 'feature_image_id');
     }
 
-    public function images(): BelongsToMany{
+    public function images(): BelongsToMany
+    {
         return CuratorModelHelper::belongsToMany($this, 'media_trek', 'trek_id');
     }
 }

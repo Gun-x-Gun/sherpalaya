@@ -34,7 +34,9 @@ class TrekResource extends Resource
 {
     protected static ?string $model = Trek::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-swatch';
+
+    protected static ?string $navigationGroup = 'Services';
 
     public static function form(Form $form): Form
     {
@@ -47,35 +49,35 @@ class TrekResource extends Resource
                             ->schema([
                                 Sidebar::make([
                                     Section::make('')
-                                    ->columns(2)
-                                    ->schema([
-                                        TextInput::make('title')
-                                            ->columnSpanFull()
-                                            ->required(),
-                                        RichEditor::make('description')
-                                            ->columnSpanFull()
-                                            ->required(),
-                                        CuratorPicker::make('cover_image_id')
-                                            ->color('primary')
-                                            ->label('Cover Image')
-                                            ->hint('for trek page')
-                                            ->relationship('coverImage', 'id'),
-                                        CuratorPicker::make('feature_image_id')
-                                            ->label('Feature Image')
-                                            ->hint('for home page')
-                                            ->relationship('featureImage', 'id'),
+                                        ->columns(2)
+                                        ->schema([
+                                            TextInput::make('title')
+                                                ->columnSpanFull()
+                                                ->required(),
+                                            RichEditor::make('description')
+                                                ->columnSpanFull()
+                                                ->required(),
+                                            CuratorPicker::make('cover_image_id')
+                                                ->color('primary')
+                                                ->label('Cover Image')
+                                                ->hint('for trek page')
+                                                ->relationship('coverImage', 'id'),
+                                            CuratorPicker::make('feature_image_id')
+                                                ->label('Feature Image')
+                                                ->hint('for home page')
+                                                ->relationship('featureImage', 'id'),
 
-                                    ]),
-                                ],[
+                                        ]),
+                                ], [
                                     Section::make('')
-                                    // ->columns(2)
-                                    ->schema([
-                                        CuratorPicker::make('images')
-                                        ->multiple()
-                                        ->label('Images')
-                                        ->hint('any other relevant images')
-                                        ->relationship('images', 'id')
-                                    ])
+                                        // ->columns(2)
+                                        ->schema([
+                                            CuratorPicker::make('images')
+                                                ->multiple()
+                                                ->label('Images')
+                                                ->hint('any other relevant images')
+                                                ->relationship('images', 'id')
+                                        ])
                                 ]),
                             ]),
                         Tabs\Tab::make('Other')
@@ -87,59 +89,70 @@ class TrekResource extends Resource
                                     //         ->hiddenLabel()
                                     //         ->columnSpanFull(),
                                     //     ]),
+                                    Section::make('Destinations')
+                                        ->schema([
+                                            Select::make('destinations')
+                                                ->hiddenLabel()
+                                                ->multiple()
+                                                ->relationship(titleAttribute: 'name')
+                                                ->preload()
+                                                ->searchable(['name', 'location'])
+                                                ->native(false),
+                                        ]),
                                     Section::make('Key Highlights')
                                         ->schema([
                                             Repeater::make('key_highlights')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextInput::make('key_highlights')
                                                 ->hiddenLabel()
-                                                ->columnSpanFull(),
-                                            )
-                                            ]),
+                                                ->simple(
+                                                    TextInput::make('key_highlights')
+                                                        ->hiddenLabel()
+                                                        ->columnSpanFull(),
+                                                )
+                                        ]),
                                     Section::make('Essential Tips')
                                         ->schema([
                                             Repeater::make('essential_tips')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextInput::make('key_highlights')
                                                 ->hiddenLabel()
-                                                ->columnSpanFull(),
-                                            )
+                                                ->simple(
+                                                    TextInput::make('key_highlights')
+                                                        ->hiddenLabel()
+                                                        ->columnSpanFull(),
+                                                )
                                         ])
-                                ],[
+                                ], [
                                     Section::make()
                                         ->columns(2)
                                         ->schema([
-                                        Select::make('trek_difficulty')
-                                            ->options(TrekDifficulty::class)
-                                            ->native(false)
-                                            ->columnSpanFull(),
-                                        TextInput::make('duration')
-                                            ->numeric()
-                                            ->minValue(1)
-                                            ->maxValue(999)
-                                            ->suffix('days'),
-                                        TextInput::make('grade')
-                                            ->numeric()
-                                            ->minValue(1)
-                                            ->maxValue(10)
-                                            ->suffix('/10'),
-                                        TextInput::make('starting_altitude')
-                                            ->numeric()
-                                            ->minValue(0)
-                                            ->maxValue(3000)
-                                            ->suffix("m"),
-                                        TextInput::make('highest_altitude')
-                                            ->numeric()
-                                            ->minValue(1000)
-                                            ->maxValue(8849)
-                                            ->suffix("m"),
+                                            Select::make('trek_difficulty')
+                                                ->options(TrekDifficulty::class)
+                                                ->native(false)
+                                                ->columnSpanFull(),
+                                            TextInput::make('duration')
+                                                ->numeric()
+                                                ->minValue(1)
+                                                ->maxValue(999)
+                                                ->suffix('days'),
+                                            TextInput::make('grade')
+                                                ->numeric()
+                                                ->minValue(1)
+                                                ->maxValue(10)
+                                                ->suffix('/10'),
+                                            TextInput::make('starting_altitude')
+                                                ->numeric()
+                                                ->minValue(0)
+                                                ->maxValue(3000)
+                                                ->suffix("m"),
+                                            TextInput::make('highest_altitude')
+                                                ->numeric()
+                                                ->minValue(1000)
+                                                ->maxValue(8849)
+                                                ->suffix("m"),
                                         ]),
-                                Section::make()
+                                    Section::make()
                                         ->schema([
                                             TextInput::make('best_time_for_trek'),
                                             TextInput::make('starting_ending_point')
+                                            ->label('Starting/Ending Point')
                                         ]),
 
                                 ]),
@@ -153,8 +166,8 @@ class TrekResource extends Resource
                                             ->hiddenLabel()
                                             ->simple(
                                                 TextInput::make('costs_include')
-                                                        ->prefixIcon('heroicon-o-check-badge')
-                                                        ->prefixIconColor('success')
+                                                    ->prefixIcon('heroicon-o-check-badge')
+                                                    ->prefixIconColor('success')
 
                                             )
                                     ]),
@@ -164,25 +177,22 @@ class TrekResource extends Resource
                                             ->hiddenLabel()
                                             ->simple(
                                                 TextInput::make('costs_exclude')
-                                                ->prefixIcon('heroicon-o-x-circle')
-                                                ->prefixIconColor('danger')
-
-
-
+                                                    ->prefixIcon('heroicon-o-x-circle')
+                                                    ->prefixIconColor('danger')
                                             )
                                     ]),
                             ]),
-                            Tabs\Tab::make('Itinerary')
+                        Tabs\Tab::make('Itinerary')
                             ->schema([
                                 Section::make("")
-                                ->schema([
-                                    Repeater::make('itinerary')
-                                        ->label('Itenarary')
-                                        ->relationship('itineraries')
-                                        ->columns(7)
-                                        ->schema([
-                                            TextInput::make('title')
-                                                ->columnSpan(7),
+                                    ->schema([
+                                        Repeater::make('itinerary')
+                                            ->label('Itenarary')
+                                            ->relationship('itineraries')
+                                            ->columns(7)
+                                            ->schema([
+                                                TextInput::make('title')
+                                                    ->columnSpan(7),
                                                 TableRepeater::make('itineraryDetails')
                                                     ->relationship('itineraryDetails')
                                                     ->schema([
@@ -191,16 +201,12 @@ class TrekResource extends Resource
                                                             ->native(false),
                                                         TextInput::make('description')
                                                     ])
-                                        ])
-
-                                ]),
-                            ])
+                                                    ->reorderable()
+                                                    ->cloneable()
+                                            ])
+                                    ]),
+                            ]),
                     ]),
-
-
-
-
-
             ]);
     }
 
@@ -209,18 +215,18 @@ class TrekResource extends Resource
         return $table
             ->columns([
 
-                    Split::make([
-                        CuratorColumn::make('cover_image_id')
+                Split::make([
+                    CuratorColumn::make('cover_image_id')
                         ->label('Cover Image')
                         ->size(200),
-                        TextColumn::make('title')
+                    TextColumn::make('title')
                         ->size(TextColumn\TextColumnSize::Large)
                         ->weight(FontWeight::Bold),
-                        // ->description(fn (Trek $record): string => strip_tags($record->grade . "/10"))
-                        // ->html(),
-                    ]),
+                    // ->description(fn (Trek $record): string => strip_tags($record->grade . "/10"))
+                    // ->html(),
+                ]),
 
-                ])
+            ])
             ->contentGrid([
                 'md' => 2,
                 // 'xl' => 3,
