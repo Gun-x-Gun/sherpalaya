@@ -94,7 +94,7 @@
                 <li><a href="/contact">Contact Us</a></li>
             </ul>
         </div>
-        <a class="btn btn-ghost text-3xl">SherpaLayaaaa</a>
+        <a class="btn btn-ghost hidden text-3xl">SherpaLayaaaa</a>
     </div>
 
     <div class="navbar-center hidden lg:flex ">
@@ -117,8 +117,10 @@
             <li><a href="/contact">Contact Us</a></li>
         </ul>
     </div>
-    <div class="navbar-end ">
+    <div class="navbar-end">
+        <div class="sm:hidden">
         <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+        </div>
     </div>
 </div>
 <script>

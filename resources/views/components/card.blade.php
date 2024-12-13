@@ -1,37 +1,12 @@
-<div class="carousel carousel-center bg-neutral rounded-box w-full space-x-4 p-4">
-    <div class="carousel-item ">
-        <img
-            src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-            class="rounded-box" />
-    </div>
-    <div class="carousel-item">
-        <img
-            src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-            class="rounded-box" />
-    </div>
-    <div class="carousel-item">
-        <img
-            src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-            class="rounded-box" />
-    </div>
-    <div class="carousel-item">
-        <img
-            src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-            class="rounded-box" />
-    </div>
-    <div class="carousel-item">
-        <img
-            src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-            class="rounded-box" />
-    </div>
-    <div class="carousel-item">
-        <img
-            src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-            class="rounded-box" />
-    </div>
-    <div class="carousel-item">
-        <img
-            src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-            class="rounded-box" />
+<div class="max-w-full mx-auto border-4 bg-white shadow-md overflow-hidden xl:h-96 ">
+    <div class=" md:flex xl:grid grid-cols-2 gap-4 h-full">
+        <div class="md:shrink-0 ">
+            <img class="w-full object-cover object-top md:h-full xl:w-full grid col-span-2" src="{{asset('photos/Chor.jpg')}}" alt="">
+        </div>
+        <div class="p-8">
+            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Company retreats</div>
+            <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible accommodation for your team</a>
+            <p class="mt-2 text-slate-500">Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of places to do just that.</p>
+        </div>
     </div>
 </div>
