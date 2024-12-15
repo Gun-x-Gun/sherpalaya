@@ -8,6 +8,12 @@ export default {
         './resources/**/*.blade.php',
         './resources/**/*.js',
         './resources/**/*.vue',
+        './node_modules/flyonui/dist/js/*.js',
+
+    ],
+    plugins: [
+        require('flyonui'),
+        require('flyonui/plugin')
     ],
     theme: {
         extend: {
@@ -16,12 +22,6 @@ export default {
             },
         },
     },
-    //...
-    plugins: [
-        require('daisyui'),
-    ],
-    
-    daisyui: {
-        themes: ["light", "dark", "cupcake"],
-    },
+
 };
+
