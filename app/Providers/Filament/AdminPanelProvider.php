@@ -31,6 +31,10 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->font('Quicksand')
+            // ->topbar(false)
+            // ->topNavigation()
+            ->sidebarCollapsibleOnDesktop()
+        ->collapsedSidebarWidth('9rem')
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->colors([
                 'primary' => Color::Amber,
@@ -78,7 +82,7 @@ class AdminPanelProvider extends PanelProvider
                 NavigationItem::make('Roles')
                     ->url('/admin/shield/roles')
                     ->icon('heroicon-o-cog')
-                    ->group('Control')
+                    ->group('Users')
                     ->isActiveWhen(function(){
                         return request()->is('admin/shield/roles');
                     })
