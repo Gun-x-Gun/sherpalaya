@@ -13,6 +13,7 @@ enum ItineraryTypes: string implements HasLabel
     case BED_BREAKFAST = 'bed_breakfast';
     case HIMALAYA = 'himalaya';
     case ALTITUDE = 'altitude';
+    case HELICOPTER = 'helicopter';
     case OTHERS = 'others';
 
     public function getLabel(): string
@@ -22,6 +23,7 @@ enum ItineraryTypes: string implements HasLabel
             self::DRIVE => 'Drive',
             self::WALK => 'Walk',
             self::REST => 'Rest',
+            self::HELICOPTER => 'Helicopter',
             self::BED_BREAKFAST => 'Bed and Breakfast',
             self::HIMALAYA => 'Himalaya',
             self::ALTITUDE => 'Altitude',
