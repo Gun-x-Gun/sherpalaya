@@ -1,6 +1,9 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
+
+const { addDynamicIconSelectors } = require("@iconify/tailwind")
+
 export default {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
@@ -9,19 +12,25 @@ export default {
         './resources/**/*.js',
         './resources/**/*.vue',
         './node_modules/flyonui/dist/js/*.js',
+        "./src/*.html",
 
     ],
     plugins: [
         require('flyonui'),
-        require('flyonui/plugin')
+        require('flyonui/plugin'),
+        addDynamicIconSelectors()
     ],
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
-        },
-    },
+    // theme: {
+    //     extend: {
+    //         fontFamily: {
+    //             sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+
+    //         },
+    //     },
+    // },
+    flyonui: {
+        themes: ["light", "dark", "gourmet", "corporate", "luxury", "soft"]
+      }
 
 };
 
