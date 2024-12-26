@@ -34,6 +34,7 @@ class TrekFactory extends Factory
             'essential_tips' => $this->faker->words(3),
             'cover_image_id' => null, // You can link to an actual image using Curator or another package
             'feature_image_id' => null,
+            'is_featured' => false,
         ];
     }
 
