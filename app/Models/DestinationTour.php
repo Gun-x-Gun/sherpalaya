@@ -2,17 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class DestinationTrek extends Pivot
+class DestinationTour extends Pivot
 {
     protected $fillable = [
         'destination_id',
-        'trek_id',
+        'tour_id',
         'order'
     ];
-
-    //Relationships
-
-
 }

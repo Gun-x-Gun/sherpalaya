@@ -30,6 +30,16 @@ class Destination extends Model
             'order'
         ]);
     }
+    public function tours()
+    {
+        return $this->belongsToMany(
+            Tour::class,
+            'destination_tour'
+        )->using(DestinationTour::class)
+        ->withPivot([
+            'order'
+        ]);
+    }
 
     public function destinationImages(): BelongsToMany
     {
