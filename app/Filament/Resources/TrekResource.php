@@ -17,13 +17,16 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\Layout\Grid;
 use Filament\Tables\Columns\Layout\Split;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 use Icetalker\FilamentTableRepeater\Forms\Components\TableRepeater;
 use Illuminate\Database\Eloquent\Builder;
@@ -62,21 +65,24 @@ class TrekResource extends Resource
                                                 ->label('Cover Image')
                                                 ->hint('for trek page')
                                                 ->relationship('coverImage', 'id'),
-                                            CuratorPicker::make('feature_image_id')
-                                                ->label('Feature Image')
-                                                ->hint('for home page')
-                                                ->relationship('featureImage', 'id'),
+                                            CuratorPicker::make('images')
+                                                ->multiple()
+                                                ->label('Images')
+                                                ->hint('any other relevant images')
+                                                ->relationship('images', 'id'),
+
 
                                         ]),
                                 ], [
                                     Section::make('')
                                         // ->columns(2)
                                         ->schema([
-                                            CuratorPicker::make('images')
-                                                ->multiple()
-                                                ->label('Images')
-                                                ->hint('any other relevant images')
-                                                ->relationship('images', 'id')
+                                            CuratorPicker::make('feature_image_id')
+                                                ->label('Feature Image')
+                                                ->hint('for home page')
+                                                ->relationship('featureImage', 'id'),
+                                            Toggle::make('is_featured')
+                                                ->default(false),
                                         ])
                                 ]),
                             ]),
