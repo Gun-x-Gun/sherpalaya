@@ -102,7 +102,8 @@ class DestinationResource extends Resource
                 Split::make([
                     TextColumn::make('name')
                     ->size(TextColumn\TextColumnSize::Large)
-                    ->weight(FontWeight::Bold),
+                    // ->weight(FontWeight::Bold)
+                    ->searchable(),
                     CuratorColumn::make('destinationImages')
                     ->size(90)
                     ->ring(1) // options 0,1,2,4

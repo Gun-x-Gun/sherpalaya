@@ -13,7 +13,8 @@ class ItineraryDetail extends Model
     protected $fillable =[
         'itinerary_id',
         'type',
-        'description'
+        'description',
+        // 'destination_id'
     ];
 
     protected $casts = [
