@@ -11,16 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('itineraries', function (Blueprint $table) {
+        Schema::create('destination_tour', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('trek_id')
-                ->nullable()
-                ->default(null);
-            $table->foreignId('tour_id')
-                ->nullable()
-                ->default(null);
-            $table->string('title')
-                ->required();
+            $table->foreignId('destination_id');
+            $table->foreignId('tour_id');
+            $table->unsignedBigInteger('order')
+                ->default(0);
             $table->timestamps();
         });
     }
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('itineraries');
+        Schema::dropIfExists('destination_tour');
     }
 };

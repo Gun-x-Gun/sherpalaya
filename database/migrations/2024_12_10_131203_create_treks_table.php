@@ -26,6 +26,7 @@ return new class extends Migration {
                 ->default(null);
             // $table->longText('destinations')
             //     ->required();
+            $table->boolean('is_featured');
             $table->string('starting_ending_point')
                 ->required();
             $table->string('best_time_for_trek')
