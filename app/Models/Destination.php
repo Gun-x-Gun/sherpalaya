@@ -13,6 +13,7 @@ class Destination extends Model
     protected $fillable =[
         'name',
         'description',
+        'region_id',
         'location',
     ];
 
@@ -20,6 +21,11 @@ class Destination extends Model
         'location' => 'array',
     ];
 
+// RELATIONSHIPS
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
     public function treks()
     {
         return $this->belongsToMany(

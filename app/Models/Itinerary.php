@@ -14,6 +14,8 @@ class Itinerary extends Model
     protected $fillable =[
         'trek_id',
         'tour_id',
+        'expedition_id',
+        'peak_id',
         'title',
     ];
 
@@ -28,6 +30,14 @@ class Itinerary extends Model
     public function tour()
     {
         return $this->belongsTo(Tour::class);
+    }
+    public function expedition()
+    {
+        return $this->belongsTo(Expedition::class);
+    }
+    public function peak()
+    {
+        return $this->belongsTo(Peak::class);
     }
     public function itineraryDetails()
     {
