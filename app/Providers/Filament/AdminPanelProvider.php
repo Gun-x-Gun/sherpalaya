@@ -89,6 +89,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->navigationGroups([
                 'Services',
+                'Info',
                 'Users',
                 'Control',
             ]);
