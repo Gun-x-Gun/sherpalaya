@@ -19,6 +19,12 @@ return new class extends Migration
             $table->foreignId('tour_id')
                 ->nullable()
                 ->default(null);
+            $table->foreignId('expedition_id')
+                ->nullable()
+                ->default(null);
+            $table->foreignId('peak_id')
+                ->nullable()
+                ->default(null);
             $table->string('title')
                 ->required();
             $table->timestamps();
