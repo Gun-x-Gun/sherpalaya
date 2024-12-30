@@ -23,7 +23,7 @@ class ListTours extends ListRecords
     public function getTabs(): array
 {
     return [
-        'all' => Tab::make('All tours'),
+        'all' => Tab::make('All'),
         'cycling' => Tab::make('Cycling')
             ->modifyQueryUsing(fn (Builder $query) => $query->where('type', TourType::CYCLING)),
         'running' => Tab::make('Running')
