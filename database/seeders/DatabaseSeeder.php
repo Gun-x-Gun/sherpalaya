@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             ShieldSeeder::class,
             UserSeeder::class,
             TrekSeeder::class,
+            RegionSeeder::class,
             DestinationSeeder::class,
         ]);
     }
