@@ -3,10 +3,9 @@
 namespace App\Filament\Resources;
 
 use App\Enums\ItineraryTypes;
-use App\Enums\TourType;
-use App\Filament\Resources\TourResource\Pages;
-use App\Filament\Resources\TourResource\RelationManagers;
-use App\Models\Tour;
+use App\Filament\Resources\PeakResource\Pages;
+use App\Filament\Resources\PeakResource\RelationManagers;
+use App\Models\Peak;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Filament\Forms;
 use Filament\Forms\Components\Repeater;
@@ -14,7 +13,6 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
@@ -27,11 +25,11 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use RalphJSmit\Filament\Components\Forms\Sidebar;
 
-class TourResource extends Resource
+class PeakResource extends Resource
 {
-    protected static ?string $model = Tour::class;
+    protected static ?string $model = Peak::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-swatch';
+    protected static ?string $navigationIcon = 'heroicon-o-sun';
     protected static ?string $navigationGroup = 'Services';
 
 
@@ -43,10 +41,8 @@ class TourResource extends Resource
                     Section::make('General')
                         ->columns(2)
                         ->schema([
-                            TextInput::make('title'),
-                            Select::make('type')
-                                ->options(TourType::class)
-                                ->native(false),
+                            TextInput::make('title')
+                            ->columnSpanFull(),
                             RichEditor::make('description')
                                 ->columnSpanFull()
                                 ->required()
@@ -69,7 +65,7 @@ class TourResource extends Resource
                             CuratorPicker::make('cover_image_id')
                                 ->color('primary')
                                 ->label('Cover Image')
-                                ->hint('for tour page')
+                                ->hint('for peak page')
                                 ->relationship('coverImage', 'id'),
                             CuratorPicker::make('images')
                                 ->multiple()
@@ -80,15 +76,13 @@ class TourResource extends Resource
                 ], [
                     Section::make()
                         ->schema([
-                            Toggle::make('is_featured')
-                                ->default(false),
                             CuratorPicker::make('feature_image_id')
                                 ->color('primary')
                                 ->label('Feature Image')
                                 ->hint('for homepage')
                                 ->relationship('featureImage', 'id'),
                         ]),
-                    ]),
+                ]),
                 Section::make('Destinations')
                     ->schema([
                         Select::make('destinations')
@@ -99,7 +93,7 @@ class TourResource extends Resource
                             ->searchable(['name', 'location'])
                             ->native(false),
                     ]),
-                    Section::make("")
+                Section::make("")
                     ->schema([
                         Repeater::make('itinerary')
                             ->label('Itenarary')
@@ -149,7 +143,6 @@ class TourResource extends Resource
             ]);
     }
 
-
     public static function getRelations(): array
     {
         return [
@@ -160,10 +153,10 @@ class TourResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTours::route('/'),
-            'create' => Pages\CreateTour::route('/create'),
-            'view' => Pages\ViewTour::route('/{record}'),
-            'edit' => Pages\EditTour::route('/{record}/edit'),
+            'index' => Pages\ListPeaks::route('/'),
+            'create' => Pages\CreatePeak::route('/create'),
+            'view' => Pages\ViewPeak::route('/{record}'),
+            'edit' => Pages\EditPeak::route('/{record}/edit'),
         ];
     }
 }

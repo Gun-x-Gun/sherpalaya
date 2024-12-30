@@ -25,6 +25,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\Layout\Grid;
 use Filament\Tables\Columns\Layout\Split;
+use Filament\Tables\Columns\Layout\Stack;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
@@ -37,7 +38,7 @@ class TrekResource extends Resource
 {
     protected static ?string $model = Trek::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-swatch';
+    protected static ?string $navigationIcon = 'heroicon-o-eye';
 
     protected static ?string $navigationGroup = 'Services';
 
@@ -59,7 +60,23 @@ class TrekResource extends Resource
                                                 ->required(),
                                             RichEditor::make('description')
                                                 ->columnSpanFull()
-                                                ->required(),
+                                                ->required()
+                                                ->toolbarButtons([
+                                                    // 'attachFiles',
+                                                    'blockquote',
+                                                    'bold',
+                                                    'bulletList',
+                                                    // 'codeBlock',
+                                                    'h2',
+                                                    'h3',
+                                                    'italic',
+                                                    'link',
+                                                    'orderedList',
+                                                    'redo',
+                                                    // 'strike',
+                                                    'underline',
+                                                    'undo',
+                                                ]),
                                             CuratorPicker::make('cover_image_id')
                                                 ->color('primary')
                                                 ->label('Cover Image')
@@ -158,7 +175,7 @@ class TrekResource extends Resource
                                         ->schema([
                                             TextInput::make('best_time_for_trek'),
                                             TextInput::make('starting_ending_point')
-                                            ->label('Starting/Ending Point')
+                                                ->label('Starting/Ending Point')
                                         ]),
 
                                 ]),
@@ -225,9 +242,21 @@ class TrekResource extends Resource
                     CuratorColumn::make('cover_image_id')
                         ->label('Cover Image')
                         ->size(200),
-                    TextColumn::make('title')
-                        ->size(TextColumn\TextColumnSize::Large)
-                        ->weight(FontWeight::Bold),
+                    Stack::make([
+                        TextColumn::make('title')
+                            ->size(TextColumn\TextColumnSize::Large)
+                            ->weight(FontWeight::Bold),
+                        TextColumn::make('duration')
+                            ->icon('heroicon-m-clock')
+                            ->size(TextColumn\TextColumnSize::Small)
+                            ->suffix(' days'),
+                        TextColumn::make('trek_difficulty')
+                            ->badge()
+                            ->icon('heroicon-m-bolt')
+                            ->size(TextColumn\TextColumnSize::Small)
+                            ->prefix(''),
+                    ]),
+
                     // ->description(fn (Trek $record): string => strip_tags($record->grade . "/10"))
                     // ->html(),
                 ]),

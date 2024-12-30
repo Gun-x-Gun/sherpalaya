@@ -11,6 +11,7 @@ use Dotswan\MapPicker\Fields\Map;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Forms\Set;
@@ -31,7 +32,7 @@ class DestinationResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-map-pin';
 
-    protected static ?string $navigationGroup = 'Services';
+    protected static ?string $navigationGroup = 'Info';
 
 
     public static function form(Form $form): Form
@@ -42,7 +43,23 @@ class DestinationResource extends Resource
                     Section::make('')
                         ->schema([
                             TextInput::make('name'),
-                            RichEditor::make('description'),
+                            RichEditor::make('description')
+                            ->toolbarButtons([
+                                // 'attachFiles',
+                                'blockquote',
+                                'bold',
+                                'bulletList',
+                                // 'codeBlock',
+                                'h2',
+                                'h3',
+                                'italic',
+                                'link',
+                                'orderedList',
+                                'redo',
+                                // 'strike',
+                                'underline',
+                                'undo',
+                            ]),
                             Map::make('location')
                                 ->label('Location')
                                 ->columnSpanFull()
@@ -81,7 +98,17 @@ class DestinationResource extends Resource
 
                 ], [
                     Section::make()
+                    ->schema([
+                        Select::make('region_id')
+                            ->relationship('region','name')
+                            ->native(false)
+                            ->preload()
+                            ->searchable(),
+
+                    ]),
+                    Section::make()
                         ->schema([
+
                             CuratorPicker::make('destinationImages')
                                 ->multiple()
                                 ->label('Images')
@@ -104,11 +131,14 @@ class DestinationResource extends Resource
                     ->size(TextColumn\TextColumnSize::Large)
                     // ->weight(FontWeight::Bold)
                     ->searchable(),
+                    TextColumn::make('region.name')
+                        ->badge(),
                     CuratorColumn::make('destinationImages')
                     ->size(90)
                     ->ring(1) // options 0,1,2,4
                     ->overlap(2) // options 0,2,3,4
                     ->limit(2),
+
                 ]),
             ])
             ->contentGrid([
