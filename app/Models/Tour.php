@@ -4,12 +4,15 @@ namespace App\Models;
 
 use App\Enums\TourType;
 use App\Helpers\CuratorModelHelper;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Tour extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'cover_image_id',
         'feature_image_id',

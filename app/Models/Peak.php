@@ -3,12 +3,15 @@
 namespace App\Models;
 
 use App\Helpers\CuratorModelHelper;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Peak extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'title',
         'cover_image_id',
