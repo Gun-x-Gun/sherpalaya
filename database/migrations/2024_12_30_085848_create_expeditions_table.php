@@ -18,6 +18,31 @@ return new class extends Migration
                 ->required();
             $table->longText('description')
                 ->required();
+            $table->string('duration')
+                ->required();
+            $table->string('grade')
+                ->nullable()
+                ->default(null);
+            $table->string('starting_ending_point')
+                ->required();
+            $table->string('best_time_for_expedition')
+                ->required();
+            $table->string('starting_altitude')
+                ->required();
+            $table->string('highest_altitude')
+                ->required();
+            $table->string('expedition_difficulty')
+                ->nullable()
+                ->default(null);
+            $table->longText('key_highlights')
+                ->required();
+            $table->longText('costs_include')
+                ->required();
+            $table->longText('costs_exclude')
+                ->required();
+            $table->longText('essential_tips')
+                ->required();
+            $table->boolean('is_featured');
             $table->timestamps();
         });
         CuratorMigrationHelper::migrateMediaField('expeditions', 'cover_image_id');
