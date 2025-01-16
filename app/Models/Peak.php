@@ -17,17 +17,32 @@ class Peak extends Model
         'title',
         'cover_image_id',
         'feature_image_id',
-        'media_peak',
         'description',
+        'duration',
+        'grade',
+        'is_featured',
+        'starting_ending_point',
+        'best_time_for_peak',
+        'starting_altitude',
+        'highest_altitude',
+        'peak_difficulty',
+        'key_highlights',
+        'costs_include',
+        'costs_exclude',
+        'essential_tips',
     ];
 
     protected $casts = [
-        //
+        'peak_difficulty' => TrekDifficulty::class,
+        'costs_exclude' => 'array',
+        'costs_include' => 'array',
+        'key_highlights' => 'array',
+        'essential_tips' => 'array',
     ];
 
-    public function itineraries():MorphMany
+    public function itineraries(): MorphMany
     {
-        return $this->morphMany(Itinerary::class,'itinerable');
+        return $this->morphMany(Itinerary::class, 'itinerable');
     }
     public function destinations()
     {

@@ -22,9 +22,21 @@ class Tour extends Model
         'title',
         'type',
         'is_featured',
+        'duration',
+        'grade',
+        'starting_ending_point',
+        'best_time_for_tour',
+        'key_highlights',
+        'costs_include',
+        'costs_exclude',
+        'essential_tips',
     ];
     protected $casts = [
         'type' => TourType::class,
+        'costs_exclude' => 'array',
+        'costs_include' => 'array',
+        'key_highlights' => 'array',
+        'essential_tips' => 'array',
     ];
 
     // RELATIONSHIPS

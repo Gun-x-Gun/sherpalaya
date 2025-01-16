@@ -17,13 +17,27 @@ class Expedition extends Model
         'title',
         'cover_image_id',
         'feature_image_id',
-        'expedition_media',
         'description',
+        'duration',
+        'grade',
+        'starting_ending_point',
+        'best_time_for_expedition',
+        'starting_altitude',
+        'highest_altitude',
+        'expedition_difficulty',
+        'key_highlights',
+        'costs_include',
+        'costs_exclude',
+        'essential_tips',
+        'is_featured',
     ];
 
     protected $casts = [
-        //
-    ];
+        'expedition_difficulty' => TrekDifficulty::class,
+        'costs_exclude' => 'array',
+        'costs_include' => 'array',
+        'key_highlights' => 'array',
+        'essential_tips' => 'array',    ];
 
     public function itineraries():MorphMany
     {
