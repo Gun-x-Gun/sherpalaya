@@ -18,18 +18,13 @@ class Trek extends Model
         'title',
         'cover_image_id',
         'feature_image_id',
-        'media_trek',
-        // 'extra_images',
         'description',
-        //trek details
         'duration',
-        'grade', //rating out of 10
-        // 'destinations',
+        'grade',
         'starting_ending_point',
         'best_time_for_trek',
         'starting_altitude',
         'highest_altitude',
-        //secondary data
         'trek_difficulty',
         'key_highlights',
         'costs_include',
@@ -62,6 +57,8 @@ class Trek extends Model
                 'order'
             ]);
     }
+
+
 
     public function coverImage(): BelongsTo
     {
