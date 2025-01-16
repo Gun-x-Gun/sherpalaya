@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Enums\ItineraryTypes;
 use App\Enums\TourType;
+use App\Enums\TrekDifficulty;
 use App\Filament\Resources\TourResource\Pages;
 use App\Filament\Resources\TourResource\RelationManagers;
 use App\Models\Tour;
@@ -41,10 +42,10 @@ class TourResource extends Resource
         return $form
             ->schema([
                 Wizard::make([
-                    Wizard\Step::make('1')
+                    Wizard\Step::make('General')
                         ->schema([
                             Sidebar::make([
-                                Section::make('General')
+                                Section::make('')
                                     ->columns(2)
                                     ->schema([
                                         TextInput::make('title'),
@@ -70,18 +71,16 @@ class TourResource extends Resource
                                                 'underline',
                                                 'undo',
                                             ]),
+                                    ]),
+                            ], [
+                                Section::make()
+                                    ->schema([
                                         CuratorPicker::make('cover_image_id')
                                             ->color('primary')
                                             ->label('Cover Image')
                                             ->hint('for tour page')
                                             ->relationship('coverImage', 'id'),
-                                        CuratorPicker::make('images')
-                                            ->multiple()
-                                            ->label('Images')
-                                            ->hint('any other relevant images')
-                                            ->relationship('images', 'id'),
                                     ]),
-                            ], [
                                 Section::make()
                                     ->schema([
                                         Toggle::make('is_featured')
@@ -92,22 +91,103 @@ class TourResource extends Resource
                                             ->hint('for homepage')
                                             ->relationship('featureImage', 'id'),
                                     ]),
+
                             ]),
                         ]),
-                    Wizard\Step::make('2')
+                    Wizard\Step::make('Images')
                         ->schema([
-                            Section::make('Destinations')
+                            Section::make()
                                 ->schema([
-                                    Select::make('destinations')
-                                        ->hiddenLabel()
+                                    CuratorPicker::make('images')
                                         ->multiple()
-                                        ->relationship(titleAttribute: 'name')
-                                        ->preload()
-                                        ->searchable(['name', 'location'])
-                                        ->native(false),
+                                        ->label('Images')
+                                        ->hint('any other relevant images')
+                                        ->relationship('images', 'id'),
                                 ]),
                         ]),
-                    Wizard\Step::make('3')
+                    Wizard\Step::make('Other')
+                        ->schema([
+                            Sidebar::make([
+                                // Section::make('Destinations')
+                                //     ->schema([
+                                //         RichEditor::make('destinations')
+                                //         ->hiddenLabel()
+                                //         ->columnSpanFull(),
+                                //     ]),
+                                Section::make('Destinations')
+                                    ->schema([
+                                        Select::make('destinations')
+                                            ->hiddenLabel()
+                                            ->multiple()
+                                            ->relationship(titleAttribute: 'name')
+                                            ->preload()
+                                            ->searchable(['name', 'location'])
+                                            ->native(false),
+                                    ]),
+                                Section::make('Key Highlights')
+                                    ->schema([
+                                        Repeater::make('key_highlights')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('key_highlights')
+                                                    ->hiddenLabel()
+                                                    ->columnSpanFull(),
+                                            )
+                                    ]),
+                                Section::make('Essential Tips')
+                                    ->schema([
+                                        Repeater::make('essential_tips')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('key_highlights')
+                                                    ->hiddenLabel()
+                                                    ->columnSpanFull(),
+                                            )
+                                    ])
+                            ], [
+                                Section::make()
+                                    ->columns(2)
+                                    ->schema([
+                                        TextInput::make('duration'),
+                                        TextInput::make('grade')
+                                            ->numeric()
+                                            ->minValue(1)
+                                            ->maxValue(10)
+                                            ->suffix('/10'),
+                                    ]),
+                                Section::make()
+                                    ->schema([
+                                        TextInput::make('best_time_for_tour'),
+                                        TextInput::make('starting_ending_point')
+                                            ->label('Starting/Ending Point')
+                                    ]),
+                                ]),
+                        ]),
+                    Wizard\Step::make('Costs')
+                        ->schema([
+                            Section::make('Costs Include')
+                                    ->schema([
+                                        Repeater::make('costs_include')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('costs_include')
+                                                    ->prefixIcon('heroicon-o-check-badge')
+                                                    ->prefixIconColor('success')
+
+                                            )
+                                    ]),
+                                Section::make('Costs Exclude')
+                                    ->schema([
+                                        Repeater::make('costs_exclude')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('costs_exclude')
+                                                    ->prefixIcon('heroicon-o-x-circle')
+                                                    ->prefixIconColor('danger')
+                                            )
+                                    ]),
+                        ]),
+                    Wizard\Step::make('Itinerary')
                         ->schema([
                             Section::make("")
                                 ->schema([
@@ -139,7 +219,7 @@ class TourResource extends Resource
                                 ]),
                         ]),
                 ])->columnSpanFull()
-                    ->skippable(),
+                  ->skippable(),
             ]);
     }
 

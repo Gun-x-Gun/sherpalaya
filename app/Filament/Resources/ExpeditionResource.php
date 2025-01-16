@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Enums\ItineraryTypes;
+use App\Enums\TrekDifficulty;
 use App\Filament\Resources\ExpeditionResource\Pages;
 use App\Filament\Resources\ExpeditionResource\RelationManagers;
 use App\Models\Expedition;
@@ -14,6 +15,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
@@ -36,74 +38,166 @@ class ExpeditionResource extends Resource
     {
         return $form
             ->schema([
-                Tabs::make('Trek')
-                ->columnSpanFull()
-                ->tabs([
-                    Tabs\Tab::make('Primary')
-                        ->schema([
-                            Sidebar::make([
-                                Section::make('General')
-                                    ->columns(2)
+                Tabs::make('Expedition')
+                    ->columnSpanFull()
+                    ->tabs([
+                        Tabs\Tab::make('Expedition')
+                            ->schema([
+                                Sidebar::make([
+                                    Section::make('General')
+                                        ->columns(2)
+                                        ->schema([
+                                            TextInput::make('title')
+                                                ->columnSpanFull(),
+                                            RichEditor::make('description')
+                                                ->columnSpanFull()
+                                                ->required()
+                                                ->toolbarButtons([
+                                                    // 'attachFiles',
+                                                    'blockquote',
+                                                    'bold',
+                                                    'bulletList',
+                                                    // 'codeBlock',
+                                                    'h2',
+                                                    'h3',
+                                                    'italic',
+                                                    'link',
+                                                    'orderedList',
+                                                    'redo',
+                                                    // 'strike',
+                                                    'underline',
+                                                    'undo',
+                                                ]),
+                                        ]),
+                                ], [
+                                    Section::make('')
+                                        ->schema([
+                                            CuratorPicker::make('cover_image_id')
+                                                ->color('primary')
+                                                ->label('Cover Image')
+                                                ->hint('for expedition page')
+                                                ->relationship('coverImage', 'id'),
+                                        ]),
+                                    Section::make('')
+                                        ->schema([
+                                            Toggle::make('is_featured')
+                                                ->default(false),
+                                            CuratorPicker::make('feature_image_id')
+                                                ->color('primary')
+                                                ->label('Feature Image')
+                                                ->hint('for homepage')
+                                                ->relationship('featureImage', 'id'),
+                                        ]),
+                                ]),
+                            ]),
+                        Tabs\Tab::make('Images')
+                            ->schema([
+                                Section::make()
                                     ->schema([
-                                        TextInput::make('title')
-                                            ->columnSpanFull(),
-                                        RichEditor::make('description')
-                                            ->columnSpanFull()
-                                            ->required()
-                                            ->toolbarButtons([
-                                                // 'attachFiles',
-                                                'blockquote',
-                                                'bold',
-                                                'bulletList',
-                                                // 'codeBlock',
-                                                'h2',
-                                                'h3',
-                                                'italic',
-                                                'link',
-                                                'orderedList',
-                                                'redo',
-                                                // 'strike',
-                                                'underline',
-                                                'undo',
-                                            ]),
-                                        CuratorPicker::make('cover_image_id')
-                                            ->color('primary')
-                                            ->label('Cover Image')
-                                            ->hint('for expedition page')
-                                            ->relationship('coverImage', 'id'),
                                         CuratorPicker::make('images')
                                             ->multiple()
                                             ->label('Images')
                                             ->hint('any other relevant images')
                                             ->relationship('images', 'id'),
                                     ]),
-                            ], [
-                                Section::make()
+                            ]),
+                        Tabs\Tab::make('Other')
+                            ->schema([
+                                Sidebar::make([
+                                    Section::make('Destinations')
+                                        ->schema([
+                                            Select::make('destinations')
+                                                ->hiddenLabel()
+                                                ->multiple()
+                                                ->relationship(titleAttribute: 'name')
+                                                ->preload()
+                                                ->searchable(['name', 'location'])
+                                                ->native(false),
+                                        ]),
+                                    Section::make('Key Highlights')
+                                        ->schema([
+                                            Repeater::make('key_highlights')
+                                                ->hiddenLabel()
+                                                ->simple(
+                                                    TextInput::make('key_highlights')
+                                                        ->hiddenLabel()
+                                                        ->columnSpanFull(),
+                                                )
+                                        ]),
+                                    Section::make('Essential Tips')
+                                        ->schema([
+                                            Repeater::make('essential_tips')
+                                                ->hiddenLabel()
+                                                ->simple(
+                                                    TextInput::make('key_highlights')
+                                                        ->hiddenLabel()
+                                                        ->columnSpanFull(),
+                                                )
+                                                ]),
+                                ], [
+                                    Section::make()
+                                        ->columns(2)
+                                        ->schema([
+                                            Select::make('expedition_difficulty')
+                                                ->options(TrekDifficulty::class)
+                                                ->native(false)
+                                                ->columnSpanFull(),
+                                            TextInput::make('duration')
+                                                ->numeric()
+                                                ->minValue(1)
+                                                ->maxValue(999)
+                                                ->suffix('days'),
+                                            TextInput::make('grade')
+                                                ->numeric()
+                                                ->minValue(1)
+                                                ->maxValue(10)
+                                                ->suffix('/10'),
+                                            TextInput::make('starting_altitude')
+                                                ->numeric()
+                                                ->minValue(0)
+                                                ->maxValue(3000)
+                                                ->suffix("m"),
+                                            TextInput::make('highest_altitude')
+                                                ->numeric()
+                                                ->minValue(1000)
+                                                ->maxValue(8849)
+                                                ->suffix("m"),
+                                        ]),
+                                    Section::make()
+                                        ->schema([
+                                            TextInput::make('best_time_for_expedition'),
+                                            TextInput::make('starting_ending_point')
+                                                ->label('Starting/Ending Point')
+                                        ]),
+
+                                ]),
+                            ]),
+                        Tabs\Tab::make('Costs')
+                            ->schema([
+                                Section::make('Costs Include')
                                     ->schema([
-                                        CuratorPicker::make('feature_image_id')
-                                            ->color('primary')
-                                            ->label('Feature Image')
-                                            ->hint('for homepage')
-                                            ->relationship('featureImage', 'id'),
+                                        Repeater::make('costs_include')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('costs_include')
+                                                    ->prefixIcon('heroicon-o-check-badge')
+                                                    ->prefixIconColor('success')
+                                            )
+                                    ]),
+                                Section::make('Costs Exclude')
+                                    ->schema([
+                                        Repeater::make('costs_exclude')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('costs_exclude')
+                                                    ->prefixIcon('heroicon-o-x-circle')
+                                                    ->prefixIconColor('danger')
+                                            )
                                     ]),
                             ]),
-                        ]),
-                    Tabs\Tab::make('2')
-                        ->schema([
-                            Section::make('Destinations')
-                            ->schema([
-                                Select::make('destinations')
-                                    ->hiddenLabel()
-                                    ->multiple()
-                                    ->relationship(titleAttribute: 'name')
-                                    ->preload()
-                                    ->searchable(['name', 'location'])
-                                    ->native(false),
-                            ]),
-                        ]),
-                    Tabs\Tab::make('3')
-                        ->schema([
-                            Section::make("")
+                Tabs\Tab::make('Itinerary')
+                    ->schema([
+                        Section::make("")
                             ->schema([
                                 Repeater::make('itinerary')
                                     ->label('Itenarary')
@@ -131,11 +225,7 @@ class ExpeditionResource extends Resource
                                             ->cloneable()
                                     ])
                             ]),
-                        ]),
-                    Tabs\Tab::make('4')
-                        ->schema([
-
-                        ]),
+                    ]),
                 ]),
             ]);
     }

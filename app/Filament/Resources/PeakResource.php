@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Enums\ItineraryTypes;
+use App\Enums\TrekDifficulty;
 use App\Filament\Resources\PeakResource\Pages;
 use App\Filament\Resources\PeakResource\RelationManagers;
 use App\Models\Peak;
@@ -13,6 +14,7 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Wizard;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -39,10 +41,10 @@ class PeakResource extends Resource
         return $form
             ->schema([
                 Wizard::make([
-                    Wizard\Step::make('Order')
+                    Wizard\Step::make('General')
                         ->schema([
                             Sidebar::make([
-                                Section::make('General')
+                                Section::make('')
                                     ->columns(2)
                                     ->schema([
                                         TextInput::make('title')
@@ -66,16 +68,6 @@ class PeakResource extends Resource
                                                 'underline',
                                                 'undo',
                                             ]),
-                                        CuratorPicker::make('cover_image_id')
-                                            ->color('primary')
-                                            ->label('Cover Image')
-                                            ->hint('for peak page')
-                                            ->relationship('coverImage', 'id'),
-                                        CuratorPicker::make('images')
-                                            ->multiple()
-                                            ->label('Images')
-                                            ->hint('any other relevant images')
-                                            ->relationship('images', 'id'),
                                     ]),
                             ], [
                                 Section::make()
@@ -85,23 +77,135 @@ class PeakResource extends Resource
                                             ->label('Feature Image')
                                             ->hint('for homepage')
                                             ->relationship('featureImage', 'id'),
+                                        Toggle::make('is_featured')
+                                            ->default(false),
+                                    ]),
+                                Section::make()
+                                    ->schema([
+                                        CuratorPicker::make('cover_image_id')
+                                            ->color('primary')
+                                            ->label('Cover Image')
+                                            ->hint('for peak page')
+                                            ->relationship('coverImage', 'id'),
                                     ]),
                             ]),
                         ]),
-                    Wizard\Step::make('Delivery')
+                    Wizard\Step::make('Images')
                         ->schema([
-                            Section::make('Destinations')
+                            Section::make('')
                                 ->schema([
-                                    Select::make('destinations')
-                                        ->hiddenLabel()
-                                        ->multiple()
-                                        ->relationship(titleAttribute: 'name')
-                                        ->preload()
-                                        ->searchable(['name', 'location'])
-                                        ->native(false),
+                                    CuratorPicker::make('images')
+                                            ->multiple()
+                                            ->label('Images')
+                                            ->hint('any other relevant images')
+                                            ->relationship('images', 'id'),
                                 ]),
                         ]),
-                    Wizard\Step::make('Billing')
+                    Wizard\Step::make('Other')
+                        ->schema([
+                            Sidebar::make([
+                                // Section::make('Destinations')
+                                //     ->schema([
+                                //         RichEditor::make('destinations')
+                                //         ->hiddenLabel()
+                                //         ->columnSpanFull(),
+                                //     ]),
+                                Section::make('Destinations')
+                                    ->schema([
+                                        Select::make('destinations')
+                                            ->hiddenLabel()
+                                            ->multiple()
+                                            ->relationship(titleAttribute: 'name')
+                                            ->preload()
+                                            ->searchable(['name', 'location'])
+                                            ->native(false),
+                                    ]),
+                                Section::make('Key Highlights')
+                                    ->schema([
+                                        Repeater::make('key_highlights')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('key_highlights')
+                                                    ->hiddenLabel()
+                                                    ->columnSpanFull(),
+                                            )
+                                    ]),
+                                Section::make('Essential Tips')
+                                    ->schema([
+                                        Repeater::make('essential_tips')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('key_highlights')
+                                                    ->hiddenLabel()
+                                                    ->columnSpanFull(),
+                                            )
+                                    ])
+                            ], [
+                                Section::make()
+                                    ->columns(2)
+                                    ->schema([
+                                        Select::make('peak_difficulty')
+                                            ->options(TrekDifficulty::class)
+                                            ->native(false)
+                                            ->columnSpanFull(),
+                                        // Select::make('region_id')
+                                        //     ->relationship('regions','name')
+                                        //     ->native(false)
+                                        //     ->columnSpanFull(),
+                                        TextInput::make('duration')
+                                            ->numeric()
+                                            ->minValue(1)
+                                            ->maxValue(999)
+                                            ->suffix('days'),
+                                        TextInput::make('grade')
+                                            ->numeric()
+                                            ->minValue(1)
+                                            ->maxValue(10)
+                                            ->suffix('/10'),
+                                        TextInput::make('starting_altitude')
+                                            ->numeric()
+                                            ->minValue(0)
+                                            ->maxValue(3000)
+                                            ->suffix("m"),
+                                        TextInput::make('highest_altitude')
+                                            ->numeric()
+                                            ->minValue(1000)
+                                            ->maxValue(8849)
+                                            ->suffix("m"),
+                                    ]),
+                                Section::make()
+                                    ->schema([
+                                        TextInput::make('best_time_for_peak'),
+                                        TextInput::make('starting_ending_point')
+                                            ->label('Starting/Ending Point')
+                                    ]),
+                                ]),
+                        ]),
+                    Wizard\Step::make('Costs')
+                        ->schema([
+                            Section::make('Costs Include')
+                                    ->schema([
+                                        Repeater::make('costs_include')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('costs_include')
+                                                    ->prefixIcon('heroicon-o-check-badge')
+                                                    ->prefixIconColor('success')
+
+                                            )
+                                    ]),
+                                Section::make('Costs Exclude')
+                                    ->schema([
+                                        Repeater::make('costs_exclude')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('costs_exclude')
+                                                    ->prefixIcon('heroicon-o-x-circle')
+                                                    ->prefixIconColor('danger')
+                                            )
+                                    ]),
+                        ]),
+                    Wizard\Step::make('Itinerary')
                         ->schema([
                             Section::make("")
                                 ->schema([

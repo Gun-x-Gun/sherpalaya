@@ -49,7 +49,7 @@ class TrekResource extends Resource
                 Tabs::make('Trek')
                     ->columnSpanFull()
                     ->tabs([
-                        Tabs\Tab::make('Primary')
+                        Tabs\Tab::make('Trek')
                             ->schema([
                                 Sidebar::make([
                                     Section::make('')
@@ -89,14 +89,13 @@ class TrekResource extends Resource
                                         ]),
 
                                     Section::make('')
-                                        // ->columns(2)
                                         ->schema([
+                                            Toggle::make('is_featured')
+                                                ->default(false),
                                             CuratorPicker::make('feature_image_id')
                                                 ->label('Feature Image')
                                                 ->hint('for home page')
                                                 ->relationship('featureImage', 'id'),
-                                            Toggle::make('is_featured')
-                                                ->default(false),
                                         ]),
 
                                 ]),
@@ -111,18 +110,10 @@ class TrekResource extends Resource
                                         ->hint('any other relevant images')
                                         ->relationship('images', 'id'),
                                     ]),
-
-
                             ]),
                         Tabs\Tab::make('Other')
                             ->schema([
                                 Sidebar::make([
-                                    // Section::make('Destinations')
-                                    //     ->schema([
-                                    //         RichEditor::make('destinations')
-                                    //         ->hiddenLabel()
-                                    //         ->columnSpanFull(),
-                                    //     ]),
                                     Section::make('Destinations')
                                         ->schema([
                                             Select::make('destinations')
@@ -152,7 +143,7 @@ class TrekResource extends Resource
                                                         ->hiddenLabel()
                                                         ->columnSpanFull(),
                                                 )
-                                        ])
+                                                ]),
                                 ], [
                                     Section::make()
                                         ->columns(2)
@@ -161,10 +152,6 @@ class TrekResource extends Resource
                                                 ->options(TrekDifficulty::class)
                                                 ->native(false)
                                                 ->columnSpanFull(),
-                                            // Select::make('region_id')
-                                            //     ->relationship('regions','name')
-                                            //     ->native(false)
-                                            //     ->columnSpanFull(),
                                             TextInput::make('duration')
                                                 ->numeric()
                                                 ->minValue(1)
@@ -206,7 +193,6 @@ class TrekResource extends Resource
                                                 TextInput::make('costs_include')
                                                     ->prefixIcon('heroicon-o-check-badge')
                                                     ->prefixIconColor('success')
-
                                             )
                                     ]),
                                 Section::make('Costs Exclude')
