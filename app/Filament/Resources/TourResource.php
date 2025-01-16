@@ -88,7 +88,7 @@ class TourResource extends Resource
                                 ->hint('for homepage')
                                 ->relationship('featureImage', 'id'),
                         ]),
-                    ]),
+                ]),
                 Section::make('Destinations')
                     ->schema([
                         Select::make('destinations')
@@ -99,7 +99,7 @@ class TourResource extends Resource
                             ->searchable(['name', 'location'])
                             ->native(false),
                     ]),
-                    Section::make("")
+                Section::make("")
                     ->schema([
                         Repeater::make('itinerary')
                             ->label('Itenarary')
@@ -107,7 +107,14 @@ class TourResource extends Resource
                             ->columns(7)
                             ->schema([
                                 TextInput::make('title')
-                                    ->columnSpan(7),
+                                    ->columnSpan(3),
+                                Select::make('destinations')
+                                    ->relationship('destinations', 'name')
+                                    ->multiple()
+                                    ->preload()
+                                    ->searchable()
+                                    ->columnSpan(4)
+                                    ->native(false),
                                 TableRepeater::make('itineraryDetails')
                                     ->relationship('itineraryDetails')
                                     ->schema([
@@ -129,10 +136,10 @@ class TourResource extends Resource
             ->columns([
                 Split::make([
                     TextColumn::make('title')
-                ->size(TextColumn\TextColumnSize::Large)
+                        ->size(TextColumn\TextColumnSize::Large)
                         ->weight(FontWeight::Bold),
-                // TextColumn::make('type')
-                //     ->badge(),
+                    // TextColumn::make('type')
+                    //     ->badge(),
                 ]),
             ])
             ->filters([

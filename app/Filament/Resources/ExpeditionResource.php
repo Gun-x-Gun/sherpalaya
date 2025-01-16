@@ -40,7 +40,7 @@ class ExpeditionResource extends Resource
                         ->columns(2)
                         ->schema([
                             TextInput::make('title')
-                            ->columnSpanFull(),
+                                ->columnSpanFull(),
                             RichEditor::make('description')
                                 ->columnSpanFull()
                                 ->required()
@@ -99,7 +99,14 @@ class ExpeditionResource extends Resource
                             ->columns(7)
                             ->schema([
                                 TextInput::make('title')
-                                    ->columnSpan(7),
+                                    ->columnSpan(3),
+                                Select::make('destinations')
+                                    ->relationship('destinations', 'name')
+                                    ->multiple()
+                                    ->preload()
+                                    ->searchable()
+                                    ->columnSpan(4)
+                                    ->native(false),
                                 TableRepeater::make('itineraryDetails')
                                     ->relationship('itineraryDetails')
                                     ->schema([
@@ -121,10 +128,10 @@ class ExpeditionResource extends Resource
             ->columns([
                 Split::make([
                     TextColumn::make('title')
-                ->size(TextColumn\TextColumnSize::Large)
+                        ->size(TextColumn\TextColumnSize::Large)
                         ->weight(FontWeight::Bold),
-                // TextColumn::make('type')
-                //     ->badge(),
+                    // TextColumn::make('type')
+                    //     ->badge(),
                 ]),
             ])
             ->filters([
