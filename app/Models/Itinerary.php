@@ -6,41 +6,38 @@ use App\Enums\ItineraryTypes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Itinerary extends Model
 {
     use HasFactory;
 
     protected $fillable =[
-        'trek_id',
-        'tour_id',
-        'expedition_id',
-        'peak_id',
         'title',
+        'itinerable_id',
+        'itinerable_type',
     ];
 
     protected $casts = [
         // 'type' => ItineraryTypes::class,
     ];
 
-    public function trek()
+    public function itinerable(): MorphTo
     {
-        return $this->belongsTo(Trek::class);
-    }
-    public function tour()
-    {
-        return $this->belongsTo(Tour::class);
-    }
-    public function expedition()
-    {
-        return $this->belongsTo(Expedition::class);
-    }
-    public function peak()
-    {
-        return $this->belongsTo(Peak::class);
+        return $this->morphTo();
     }
     public function itineraryDetails()
     {
         return $this->hasMany(ItineraryDetail::class);
+    }
+    public function destinations()
+    {
+        return $this->belongsToMany(
+            Destination::class,
+            'destination_itinerary'
+        )->using(DestinationItinerary::class)
+            ->withPivot([
+                'order'
+            ]);
     }
 }

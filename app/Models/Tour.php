@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Tour extends Model
 {
@@ -26,10 +27,10 @@ class Tour extends Model
         'type' => TourType::class,
     ];
 
-// RELATIONSHIPS
-    public function itineraries()
+    // RELATIONSHIPS
+    public function itineraries(): MorphMany
     {
-        return $this->hasMany(Itinerary::class);
+        return $this->morphMany(Itinerary::class, 'itinerary');
     }
 
     public function destinations()

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Peak extends Model
 {
@@ -24,9 +25,9 @@ class Peak extends Model
         //
     ];
 
-    public function itineraries()
+    public function itineraries():MorphMany
     {
-        return $this->hasMany(Itinerary::class);
+        return $this->morphMany(Itinerary::class,'itinerary');
     }
     public function destinations()
     {

@@ -26,6 +26,11 @@ class Destination extends Model
     {
         return $this->belongsTo(Region::class);
     }
+    public function itinerary()
+    {
+        return $this->belongsTo(Region::class);
+    }
+
     public function treks()
     {
         return $this->belongsToMany(

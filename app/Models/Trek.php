@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class Trek extends Model
 {
@@ -46,9 +48,9 @@ class Trek extends Model
 
     // Relationships
 
-    public function itineraries()
+    public function itineraries():MorphMany
     {
-        return $this->hasMany(Itinerary::class);
+        return $this->morphMany(Itinerary::class,'itinerable');
     }
     public function destinations()
     {
