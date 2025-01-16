@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('itineraries', function (Blueprint $table) {
+        Schema::create('destination_itinerary', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('itinerable_id');
-            $table->string('itinerable_type');
-            $table->string('title')
-                ->required();
+            $table->foreignId('destination_id');
+            $table->foreignId('itinerary_id');
+            $table->unsignedBigInteger('order')
+                ->default(0);
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('itineraries');
+        Schema::dropIfExists('destination_itinerary');
     }
 };
