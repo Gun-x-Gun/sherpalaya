@@ -30,7 +30,7 @@ class ServiceResource extends Resource
     {
         return $form
             ->schema([
-                Section::make('General')
+                Section::make('')
                     ->columns(2)
                     ->schema([
                         TextInput::make('title')

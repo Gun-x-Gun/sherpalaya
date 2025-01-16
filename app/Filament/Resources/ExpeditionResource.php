@@ -12,6 +12,7 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -35,90 +36,107 @@ class ExpeditionResource extends Resource
     {
         return $form
             ->schema([
-                Sidebar::make([
-                    Section::make('General')
-                        ->columns(2)
+                Tabs::make('Trek')
+                ->columnSpanFull()
+                ->tabs([
+                    Tabs\Tab::make('Primary')
                         ->schema([
-                            TextInput::make('title')
-                                ->columnSpanFull(),
-                            RichEditor::make('description')
-                                ->columnSpanFull()
-                                ->required()
-                                ->toolbarButtons([
-                                    // 'attachFiles',
-                                    'blockquote',
-                                    'bold',
-                                    'bulletList',
-                                    // 'codeBlock',
-                                    'h2',
-                                    'h3',
-                                    'italic',
-                                    'link',
-                                    'orderedList',
-                                    'redo',
-                                    // 'strike',
-                                    'underline',
-                                    'undo',
-                                ]),
-                            CuratorPicker::make('cover_image_id')
-                                ->color('primary')
-                                ->label('Cover Image')
-                                ->hint('for expedition page')
-                                ->relationship('coverImage', 'id'),
-                            CuratorPicker::make('images')
-                                ->multiple()
-                                ->label('Images')
-                                ->hint('any other relevant images')
-                                ->relationship('images', 'id'),
+                            Sidebar::make([
+                                Section::make('General')
+                                    ->columns(2)
+                                    ->schema([
+                                        TextInput::make('title')
+                                            ->columnSpanFull(),
+                                        RichEditor::make('description')
+                                            ->columnSpanFull()
+                                            ->required()
+                                            ->toolbarButtons([
+                                                // 'attachFiles',
+                                                'blockquote',
+                                                'bold',
+                                                'bulletList',
+                                                // 'codeBlock',
+                                                'h2',
+                                                'h3',
+                                                'italic',
+                                                'link',
+                                                'orderedList',
+                                                'redo',
+                                                // 'strike',
+                                                'underline',
+                                                'undo',
+                                            ]),
+                                        CuratorPicker::make('cover_image_id')
+                                            ->color('primary')
+                                            ->label('Cover Image')
+                                            ->hint('for expedition page')
+                                            ->relationship('coverImage', 'id'),
+                                        CuratorPicker::make('images')
+                                            ->multiple()
+                                            ->label('Images')
+                                            ->hint('any other relevant images')
+                                            ->relationship('images', 'id'),
+                                    ]),
+                            ], [
+                                Section::make()
+                                    ->schema([
+                                        CuratorPicker::make('feature_image_id')
+                                            ->color('primary')
+                                            ->label('Feature Image')
+                                            ->hint('for homepage')
+                                            ->relationship('featureImage', 'id'),
+                                    ]),
+                            ]),
                         ]),
-                ], [
-                    Section::make()
+                    Tabs\Tab::make('2')
                         ->schema([
-                            CuratorPicker::make('feature_image_id')
-                                ->color('primary')
-                                ->label('Feature Image')
-                                ->hint('for homepage')
-                                ->relationship('featureImage', 'id'),
+                            Section::make('Destinations')
+                            ->schema([
+                                Select::make('destinations')
+                                    ->hiddenLabel()
+                                    ->multiple()
+                                    ->relationship(titleAttribute: 'name')
+                                    ->preload()
+                                    ->searchable(['name', 'location'])
+                                    ->native(false),
+                            ]),
+                        ]),
+                    Tabs\Tab::make('3')
+                        ->schema([
+                            Section::make("")
+                            ->schema([
+                                Repeater::make('itinerary')
+                                    ->label('Itenarary')
+                                    ->relationship('itineraries')
+                                    ->columns(7)
+                                    ->schema([
+                                        TextInput::make('title')
+                                            ->columnSpan(3),
+                                        Select::make('destinations')
+                                            ->relationship('destinations', 'name')
+                                            ->multiple()
+                                            ->preload()
+                                            ->searchable()
+                                            ->columnSpan(4)
+                                            ->native(false),
+                                        TableRepeater::make('itineraryDetails')
+                                            ->relationship('itineraryDetails')
+                                            ->schema([
+                                                Select::make('type')
+                                                    ->options(ItineraryTypes::class)
+                                                    ->native(false),
+                                                TextInput::make('description')
+                                            ])
+                                            ->reorderable()
+                                            ->cloneable()
+                                    ])
+                            ]),
+                        ]),
+                    Tabs\Tab::make('4')
+                        ->schema([
+
                         ]),
                 ]),
-                Section::make('Destinations')
-                    ->schema([
-                        Select::make('destinations')
-                            ->hiddenLabel()
-                            ->multiple()
-                            ->relationship(titleAttribute: 'name')
-                            ->preload()
-                            ->searchable(['name', 'location'])
-                            ->native(false),
-                    ]),
-                Section::make("")
-                    ->schema([
-                        Repeater::make('itinerary')
-                            ->label('Itenarary')
-                            ->relationship('itineraries')
-                            ->columns(7)
-                            ->schema([
-                                TextInput::make('title')
-                                    ->columnSpan(3),
-                                Select::make('destinations')
-                                    ->relationship('destinations', 'name')
-                                    ->multiple()
-                                    ->preload()
-                                    ->searchable()
-                                    ->columnSpan(4)
-                                    ->native(false),
-                                TableRepeater::make('itineraryDetails')
-                                    ->relationship('itineraryDetails')
-                                    ->schema([
-                                        Select::make('type')
-                                            ->options(ItineraryTypes::class)
-                                            ->native(false),
-                                        TextInput::make('description')
-                                    ])
-                                    ->reorderable()
-                                    ->cloneable()
-                            ])
-                    ]),
             ]);
     }
 
