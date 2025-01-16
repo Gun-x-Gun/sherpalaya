@@ -19,9 +19,11 @@ class DatabaseSeeder extends Seeder
             // KeyPointSeeder::class,
             ShieldSeeder::class,
             UserSeeder::class,
-            TrekSeeder::class,
             RegionSeeder::class,
             DestinationSeeder::class,
+            TrekSeeder::class,
+            ItinerarySeeder::class,
+
         ]);
     }
 }
