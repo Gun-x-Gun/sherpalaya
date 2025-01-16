@@ -88,7 +88,7 @@ class AdminPanelProvider extends PanelProvider
                     })
             ])
             ->navigationGroups([
-                'Services',
+                'Content',
                 'Info',
                 'Users',
                 'Control',
