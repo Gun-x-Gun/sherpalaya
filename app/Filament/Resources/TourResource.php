@@ -32,7 +32,7 @@ class TourResource extends Resource
     protected static ?string $model = Tour::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-swatch';
-    protected static ?string $navigationGroup = 'Services';
+    protected static ?string $navigationGroup = 'Content';
 
 
     public static function form(Form $form): Form

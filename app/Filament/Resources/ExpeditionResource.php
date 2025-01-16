@@ -28,7 +28,7 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 class ExpeditionResource extends Resource
 {
     protected static ?string $model = Expedition::class;
-    protected static ?string $navigationGroup = 'Services';
+    protected static ?string $navigationGroup = 'Content';
     protected static ?string $navigationIcon = 'heroicon-o-moon';
 
     public static function form(Form $form): Form

@@ -132,6 +132,7 @@ class DestinationResource extends Resource
                     // ->weight(FontWeight::Bold)
                     ->searchable(),
                     TextColumn::make('region.name')
+                        ->searchable()
                         ->badge(),
                     CuratorColumn::make('destinationImages')
                     ->size(90)
@@ -140,6 +141,9 @@ class DestinationResource extends Resource
                     ->limit(2),
 
                 ]),
+            ])
+            ->groups([
+                'region.name'
             ])
             ->contentGrid([
                 'sm' => 1,

@@ -40,7 +40,7 @@ class TrekResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-eye';
 
-    protected static ?string $navigationGroup = 'Services';
+    protected static ?string $navigationGroup = 'Content';
 
     public static function form(Form $form): Form
     {
@@ -103,11 +103,15 @@ class TrekResource extends Resource
                             ]),
                         Tabs\Tab::make('Images')
                             ->schema([
-                                CuratorPicker::make('images')
-                                    ->multiple()
-                                    ->label('Images')
-                                    ->hint('any other relevant images')
-                                    ->relationship('images', 'id'),
+                                Section::make()
+                                    ->schema([
+                                        CuratorPicker::make('images')
+                                        ->multiple()
+                                        ->label('Images')
+                                        ->hint('any other relevant images')
+                                        ->relationship('images', 'id'),
+                                    ]),
+
 
                             ]),
                         Tabs\Tab::make('Other')
@@ -157,6 +161,10 @@ class TrekResource extends Resource
                                                 ->options(TrekDifficulty::class)
                                                 ->native(false)
                                                 ->columnSpanFull(),
+                                            // Select::make('region_id')
+                                            //     ->relationship('regions','name')
+                                            //     ->native(false)
+                                            //     ->columnSpanFull(),
                                             TextInput::make('duration')
                                                 ->numeric()
                                                 ->minValue(1)
