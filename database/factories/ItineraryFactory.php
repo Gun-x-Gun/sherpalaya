@@ -19,7 +19,8 @@ class ItineraryFactory extends Factory
     public function definition(): array
     {
         return [
-            'trek_id' => Trek::factory(), // Associate with a trek
+            'itinerable_id' => Trek::factory(), // Associate with a trek
+            'itinerable_type' => Trek::class, // Associate with a trek
             'title' => $this->faker->words(3, true),  // Example itinerary title
         ];
     }
