@@ -30,7 +30,7 @@ class Tour extends Model
     // RELATIONSHIPS
     public function itineraries(): MorphMany
     {
-        return $this->morphMany(Itinerary::class, 'itinerary');
+        return $this->morphMany(Itinerary::class, 'itinerable');
     }
 
     public function destinations()
