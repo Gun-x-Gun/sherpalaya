@@ -17,7 +17,6 @@ class Tour extends Model
     protected $fillable = [
         'cover_image_id',
         'feature_image_id',
-        'media_tour',
         'description',
         'title',
         'type',
