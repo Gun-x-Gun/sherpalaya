@@ -77,20 +77,17 @@ class TrekResource extends Resource
                                                     'underline',
                                                     'undo',
                                                 ]),
+                                        ]),
+                                ], [
+                                    Section::make('')
+                                        ->schema([
                                             CuratorPicker::make('cover_image_id')
                                                 ->color('primary')
                                                 ->label('Cover Image')
                                                 ->hint('for trek page')
                                                 ->relationship('coverImage', 'id'),
-                                            CuratorPicker::make('images')
-                                                ->multiple()
-                                                ->label('Images')
-                                                ->hint('any other relevant images')
-                                                ->relationship('images', 'id'),
-
-
                                         ]),
-                                ], [
+
                                     Section::make('')
                                         // ->columns(2)
                                         ->schema([
@@ -100,8 +97,18 @@ class TrekResource extends Resource
                                                 ->relationship('featureImage', 'id'),
                                             Toggle::make('is_featured')
                                                 ->default(false),
-                                        ])
+                                        ]),
+
                                 ]),
+                            ]),
+                        Tabs\Tab::make('Images')
+                            ->schema([
+                                CuratorPicker::make('images')
+                                    ->multiple()
+                                    ->label('Images')
+                                    ->hint('any other relevant images')
+                                    ->relationship('images', 'id'),
+
                             ]),
                         Tabs\Tab::make('Other')
                             ->schema([
@@ -216,13 +223,13 @@ class TrekResource extends Resource
                                             ->schema([
                                                 TextInput::make('title')
                                                     ->columnSpan(3),
-                                                    Select::make('destinations')
-                                                        ->relationship('destinations', 'name')
-                                                        ->multiple()
-                                                        ->preload()
-                                                        ->searchable()
-                                                        ->columnSpan(4)
-                                                        ->native(false),
+                                                Select::make('destinations')
+                                                    ->relationship('destinations', 'name')
+                                                    ->multiple()
+                                                    ->preload()
+                                                    ->searchable()
+                                                    ->columnSpan(4)
+                                                    ->native(false),
                                                 TableRepeater::make('itineraryDetails')
                                                     ->relationship('itineraryDetails')
                                                     ->schema([
