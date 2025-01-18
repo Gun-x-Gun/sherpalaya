@@ -8,9 +8,10 @@ enum ItineraryTypes: string implements HasLabel
 {
     case FLIGHT = 'flight';
     case DRIVE = 'drive';
-    case WALK = 'walk';
+    case TREK = 'trek';
+    case TREK_HOURS = 'trek-hours';
     case REST = 'rest';
-    case BED_BREAKFAST = 'bed_breakfast';
+    case ACCOMODATION = 'accomodation';
     case HIMALAYA = 'himalaya';
     case ALTITUDE = 'altitude';
     case HELICOPTER = 'helicopter';
@@ -21,10 +22,11 @@ enum ItineraryTypes: string implements HasLabel
         return match ($this){
             self::FLIGHT => 'Flight',
             self::DRIVE => 'Drive',
-            self::WALK => 'Walk',
+            self::TREK => 'Trek',
+            self::TREK_HOURS => 'Trek Hours',
             self::REST => 'Rest',
             self::HELICOPTER => 'Helicopter',
-            self::BED_BREAKFAST => 'Bed and Breakfast',
+            self::ACCOMODATION => 'Accomodation',
             self::HIMALAYA => 'Himalaya',
             self::ALTITUDE => 'Altitude',
             self::OTHERS => 'Others',
