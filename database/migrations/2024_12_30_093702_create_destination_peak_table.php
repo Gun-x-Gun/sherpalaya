@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('destination_peak', function (Blueprint $table) {
             $table->id();
             $table->foreignId('destination_id');
-            $table->foreignId('expedition_id');
+            $table->foreignId('peak_id');
             $table->unsignedBigInteger('order')
                 ->default(0);
             $table->timestamps();
