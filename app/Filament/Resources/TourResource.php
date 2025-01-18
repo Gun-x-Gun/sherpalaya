@@ -43,6 +43,8 @@ class TourResource extends Resource
             ->schema([
                 Wizard::make([
                     Wizard\Step::make('General')
+                    ->icon('heroicon-m-clipboard')
+                    ->completedIcon('heroicon-m-clipboard')
                         ->schema([
                             Sidebar::make([
                                 Section::make('')
@@ -94,18 +96,10 @@ class TourResource extends Resource
 
                             ]),
                         ]),
-                    Wizard\Step::make('Images')
-                        ->schema([
-                            Section::make()
-                                ->schema([
-                                    CuratorPicker::make('images')
-                                        ->multiple()
-                                        ->label('Images')
-                                        ->hint('any other relevant images')
-                                        ->relationship('images', 'id'),
-                                ]),
-                        ]),
-                    Wizard\Step::make('Other')
+                        Wizard\Step::make('Details')
+                    ->icon('heroicon-m-chart-bar-square')
+                    ->completedIcon('heroicon-m-chart-bar-square')
+
                         ->schema([
                             Sidebar::make([
                                 // Section::make('Destinations')
@@ -163,7 +157,25 @@ class TourResource extends Resource
                                     ]),
                                 ]),
                         ]),
+                    Wizard\Step::make('Images')
+                    ->icon('heroicon-m-photo')
+                    ->completedIcon('heroicon-m-photo')
+
+                        ->schema([
+                            Section::make()
+                                ->schema([
+                                    CuratorPicker::make('images')
+                                        ->multiple()
+                                        ->label('Images')
+                                        ->hint('any other relevant images')
+                                        ->relationship('images', 'id'),
+                                ]),
+                        ]),
+
                     Wizard\Step::make('Costs')
+                    ->icon('heroicon-m-exclamation-circle')
+                    ->completedIcon('heroicon-m-exclamation-circle')
+
                         ->schema([
                             Section::make('Costs Include')
                                     ->schema([
@@ -188,6 +200,9 @@ class TourResource extends Resource
                                     ]),
                         ]),
                     Wizard\Step::make('Itinerary')
+                    ->icon('heroicon-m-calendar-date-range')
+                    ->completedIcon('heroicon-m-calendar-date-range')
+
                         ->schema([
                             Section::make("")
                                 ->schema([

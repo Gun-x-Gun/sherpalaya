@@ -49,7 +49,8 @@ class TrekResource extends Resource
                 Tabs::make('Trek')
                     ->columnSpanFull()
                     ->tabs([
-                        Tabs\Tab::make('Trek')
+                        Tabs\Tab::make('General')
+                        ->icon('heroicon-m-clipboard')
                             ->schema([
                                 Sidebar::make([
                                     Section::make('')
@@ -100,18 +101,8 @@ class TrekResource extends Resource
 
                                 ]),
                             ]),
-                        Tabs\Tab::make('Images')
-                            ->schema([
-                                Section::make()
-                                    ->schema([
-                                        CuratorPicker::make('images')
-                                        ->multiple()
-                                        ->label('Images')
-                                        ->hint('any other relevant images')
-                                        ->relationship('images', 'id'),
-                                    ]),
-                            ]),
-                        Tabs\Tab::make('Other')
+                        Tabs\Tab::make('Details')
+                        ->icon(icon: 'heroicon-m-chart-bar-square')
                             ->schema([
                                 Sidebar::make([
                                     Section::make('Destinations')
@@ -143,7 +134,7 @@ class TrekResource extends Resource
                                                         ->hiddenLabel()
                                                         ->columnSpanFull(),
                                                 )
-                                                ]),
+                                        ]),
                                 ], [
                                     Section::make()
                                         ->columns(2)
@@ -163,12 +154,10 @@ class TrekResource extends Resource
                                                 ->maxValue(10)
                                                 ->suffix('/10'),
                                             TextInput::make('starting_altitude')
-                                                ->numeric()
                                                 ->minValue(0)
                                                 ->maxValue(3000)
                                                 ->suffix("m"),
                                             TextInput::make('highest_altitude')
-                                                ->numeric()
                                                 ->minValue(1000)
                                                 ->maxValue(8849)
                                                 ->suffix("m"),
@@ -183,7 +172,22 @@ class TrekResource extends Resource
                                 ]),
 
                             ]),
+                        Tabs\Tab::make('Images')
+                        ->icon('heroicon-m-photo')
+
+                            ->schema([
+                                Section::make()
+                                    ->schema([
+                                        CuratorPicker::make('images')
+                                            ->multiple()
+                                            ->label('Images')
+                                            ->hint('any other relevant images')
+                                            ->relationship('images', 'id'),
+                                    ]),
+                            ]),
                         Tabs\Tab::make('Costs')
+                        ->icon('heroicon-m-exclamation-circle')
+
                             ->schema([
                                 Section::make('Costs Include')
                                     ->schema([
@@ -207,6 +211,8 @@ class TrekResource extends Resource
                                     ]),
                             ]),
                         Tabs\Tab::make('Itinerary')
+                        ->icon('heroicon-m-calendar-date-range')
+
                             ->schema([
                                 Section::make("")
                                     ->schema([

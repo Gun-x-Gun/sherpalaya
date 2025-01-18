@@ -43,10 +43,11 @@ class ExpeditionResource extends Resource
                 Tabs::make('Expedition')
                     ->columnSpanFull()
                     ->tabs([
-                        Tabs\Tab::make('Expedition')
+                        Tabs\Tab::make('General')
+                        ->icon('heroicon-m-clipboard')
                             ->schema([
                                 Sidebar::make([
-                                    Section::make('General')
+                                    Section::make('')
                                         ->columns(2)
                                         ->schema([
                                             TextInput::make('title')
@@ -92,7 +93,79 @@ class ExpeditionResource extends Resource
                                         ]),
                                 ]),
                             ]),
+
+                        Tabs\Tab::make('Details')
+                        ->icon(icon: 'heroicon-m-chart-bar-square')
+                        ->schema([
+                            Sidebar::make([
+                                Section::make('Destinations')
+                                    ->schema([
+                                        Select::make('destinations')
+                                            ->hiddenLabel()
+                                            ->multiple()
+                                            ->relationship(titleAttribute: 'name')
+                                            ->preload()
+                                            ->searchable(['name', 'location'])
+                                            ->native(false),
+                                    ]),
+                                Section::make('Key Highlights')
+                                    ->schema([
+                                        Repeater::make('key_highlights')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('key_highlights')
+                                                    ->hiddenLabel()
+                                                    ->columnSpanFull(),
+                                            )
+                                    ]),
+                                Section::make('Essential Tips')
+                                    ->schema([
+                                        Repeater::make('essential_tips')
+                                            ->hiddenLabel()
+                                            ->simple(
+                                                TextInput::make('key_highlights')
+                                                    ->hiddenLabel()
+                                                    ->columnSpanFull(),
+                                            )
+                                            ]),
+                            ], [
+                                Section::make()
+                                    ->columns(2)
+                                    ->schema([
+                                        Select::make('expedition_difficulty')
+                                            ->options(TrekDifficulty::class)
+                                            ->native(false)
+                                            ->columnSpanFull(),
+                                        TextInput::make('duration')
+                                            ->numeric()
+                                            ->minValue(1)
+                                            ->maxValue(999)
+                                            ->suffix('days'),
+                                        TextInput::make('grade')
+                                            ->numeric()
+                                            ->minValue(1)
+                                            ->maxValue(10)
+                                            ->suffix('/10'),
+                                        TextInput::make('starting_altitude')
+                                            ->minValue(0)
+                                            ->maxValue(3000)
+                                            ->suffix("m"),
+                                        TextInput::make('highest_altitude')
+                                            ->minValue(1000)
+                                            ->maxValue(8849)
+                                            ->suffix("m"),
+                                    ]),
+                                Section::make()
+                                    ->schema([
+                                        TextInput::make('best_time_for_expedition'),
+                                        TextInput::make('starting_ending_point')
+                                            ->label('Starting/Ending Point')
+                                    ]),
+
+                            ]),
+                        ]),
                         Tabs\Tab::make('Images')
+                        ->icon('heroicon-m-photo')
                             ->schema([
                                 Section::make()
                                     ->schema([
@@ -103,78 +176,8 @@ class ExpeditionResource extends Resource
                                             ->relationship('images', 'id'),
                                     ]),
                             ]),
-                        Tabs\Tab::make('Other')
-                            ->schema([
-                                Sidebar::make([
-                                    Section::make('Destinations')
-                                        ->schema([
-                                            Select::make('destinations')
-                                                ->hiddenLabel()
-                                                ->multiple()
-                                                ->relationship(titleAttribute: 'name')
-                                                ->preload()
-                                                ->searchable(['name', 'location'])
-                                                ->native(false),
-                                        ]),
-                                    Section::make('Key Highlights')
-                                        ->schema([
-                                            Repeater::make('key_highlights')
-                                                ->hiddenLabel()
-                                                ->simple(
-                                                    TextInput::make('key_highlights')
-                                                        ->hiddenLabel()
-                                                        ->columnSpanFull(),
-                                                )
-                                        ]),
-                                    Section::make('Essential Tips')
-                                        ->schema([
-                                            Repeater::make('essential_tips')
-                                                ->hiddenLabel()
-                                                ->simple(
-                                                    TextInput::make('key_highlights')
-                                                        ->hiddenLabel()
-                                                        ->columnSpanFull(),
-                                                )
-                                                ]),
-                                ], [
-                                    Section::make()
-                                        ->columns(2)
-                                        ->schema([
-                                            Select::make('expedition_difficulty')
-                                                ->options(TrekDifficulty::class)
-                                                ->native(false)
-                                                ->columnSpanFull(),
-                                            TextInput::make('duration')
-                                                ->numeric()
-                                                ->minValue(1)
-                                                ->maxValue(999)
-                                                ->suffix('days'),
-                                            TextInput::make('grade')
-                                                ->numeric()
-                                                ->minValue(1)
-                                                ->maxValue(10)
-                                                ->suffix('/10'),
-                                            TextInput::make('starting_altitude')
-                                                ->numeric()
-                                                ->minValue(0)
-                                                ->maxValue(3000)
-                                                ->suffix("m"),
-                                            TextInput::make('highest_altitude')
-                                                ->numeric()
-                                                ->minValue(1000)
-                                                ->maxValue(8849)
-                                                ->suffix("m"),
-                                        ]),
-                                    Section::make()
-                                        ->schema([
-                                            TextInput::make('best_time_for_expedition'),
-                                            TextInput::make('starting_ending_point')
-                                                ->label('Starting/Ending Point')
-                                        ]),
-
-                                ]),
-                            ]),
                         Tabs\Tab::make('Costs')
+                        ->icon('heroicon-m-exclamation-circle')
                             ->schema([
                                 Section::make('Costs Include')
                                     ->schema([
@@ -198,6 +201,8 @@ class ExpeditionResource extends Resource
                                     ]),
                             ]),
                 Tabs\Tab::make('Itinerary')
+                ->icon('heroicon-m-calendar-date-range')
+
                     ->schema([
                         Section::make("")
                             ->schema([
