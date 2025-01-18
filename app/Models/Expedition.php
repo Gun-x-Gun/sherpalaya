@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorModelHelper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -37,11 +38,12 @@ class Expedition extends Model
         'costs_exclude' => 'array',
         'costs_include' => 'array',
         'key_highlights' => 'array',
-        'essential_tips' => 'array',    ];
+        'essential_tips' => 'array',
+    ];
 
-    public function itineraries():MorphMany
+    public function itineraries(): MorphMany
     {
-        return $this->morphMany(Itinerary::class,'itinerable');
+        return $this->morphMany(Itinerary::class, 'itinerable');
     }
     public function destinations()
     {

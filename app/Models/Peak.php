@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorModelHelper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -67,6 +68,6 @@ class Peak extends Model
 
     public function images(): BelongsToMany
     {
-        return CuratorModelHelper::belongsToMany($this, 'media_peak', 'expedition_id');
+        return CuratorModelHelper::belongsToMany($this, 'media_peak', 'peak_id');
     }
 }
