@@ -11,8 +11,4 @@ class DestinationTrek extends Pivot
         'trek_id',
         'order'
     ];
-
-    //Relationships
-
-
 }
