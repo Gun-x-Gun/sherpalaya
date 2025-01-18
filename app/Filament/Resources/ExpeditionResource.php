@@ -8,6 +8,7 @@ use App\Filament\Resources\ExpeditionResource\Pages;
 use App\Filament\Resources\ExpeditionResource\RelationManagers;
 use App\Models\Expedition;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
+use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
@@ -21,6 +22,7 @@ use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
 use Filament\Tables\Columns\Layout\Split;
+use Filament\Tables\Columns\Layout\Stack;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Icetalker\FilamentTableRepeater\Forms\Components\TableRepeater;
@@ -235,12 +237,28 @@ class ExpeditionResource extends Resource
         return $table
             ->columns([
                 Split::make([
-                    TextColumn::make('title')
-                        ->size(TextColumn\TextColumnSize::Large)
-                        ->weight(FontWeight::Bold),
-                    // TextColumn::make('type')
-                    //     ->badge(),
+                    CuratorColumn::make('cover_image_id')
+                        ->label('Cover Image')
+                        ->size(200),
+                    Stack::make([
+                        TextColumn::make('title')
+                            ->size(TextColumn\TextColumnSize::Large)
+                            ->weight(FontWeight::Bold),
+                        TextColumn::make('duration')
+                            ->icon('heroicon-m-clock')
+                            ->size(TextColumn\TextColumnSize::Small)
+                            ->suffix(' days'),
+                        TextColumn::make('expedition_difficulty')
+                            ->badge()
+                            ->icon('heroicon-m-bolt')
+                            ->size(TextColumn\TextColumnSize::Small)
+                            ->prefix(''),
+                    ]),
                 ]),
+            ])
+            ->contentGrid([
+                'md' => 2,
+                // 'xl' => 3,
             ])
             ->filters([
                 //
