@@ -23,15 +23,12 @@ Everest Base Camp Trekking is known as the one of the most popular trekking in 
 
 The best season for this trip starts from beginning of March to May and  September to October is also favorable for the trek. During the trek, you can easily find food(local and continental), comfortable lodges. Hot shower is also available for some extra charge. Supplies are shipped to the Base Camp by guides or porters, and with the help of animals, usually yaks, mules and Jyopkyos.
 ',
-            //trek details
             'duration' => '10',
-            'grade' => '7', //rating out of 10
-            // 'destinations',
+            'grade' => '7',
             'starting_ending_point' => 'Lukla',
             'best_time_for_trek' => 'Autumn (Sep-Oct-Nov) and Spring        (March-April-May)',
             'starting_altitude' => '2,610',
             'highest_altitude' => '5,545',
-            //secondary data
             'trek_difficulty' => TrekDifficulty::CHALLENGING,
             'key_highlights' => [
                 'Breathtaking Views',
