@@ -2,6 +2,12 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\ExpeditionResource;
+use App\Filament\Resources\PeakResource;
+use App\Filament\Resources\TrekResource;
+use App\Filament\Resources\TourResource;
+use Awcodes\Overlook\OverlookPlugin;
+use Awcodes\Overlook\Widgets\OverlookWidget;
 use Filament\Http\Middleware\Authenticate;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -48,6 +54,7 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 // Widgets\AccountWidget::class,
                 // Widgets\FilamentInfoWidget::class,
+                OverlookWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -64,6 +71,14 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
+                OverlookPlugin::make()
+                ->columns(4)
+                ->includes([
+                        ExpeditionResource::class,
+                        PeakResource::class,
+                        TrekResource::class,
+                        TourResource::class,
+                    ]),
                 FilamentShieldPlugin::make(),
                 FilamentBackgroundsPlugin::make()
                 ->showAttribution(false),
