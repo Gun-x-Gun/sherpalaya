@@ -8,19 +8,24 @@ use App\Filament\Resources\TrekResource;
 use App\Models\Expedition;
 use App\Models\Peak;
 use App\Models\Trek;
+use Illuminate\Database\Eloquent\Model;
+use Filament\Tables\Concerns\HasRecords;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 
 class RegionStats extends BaseWidget
 {
 
+    public ?Model $record = null;
+
+
     protected function getStats(): array
     {
-        $region = $this->id();
+        $region = $this->record;
 
-        $expeditionCount = Expedition::where('region_id', 1)->count();
-        $peakCount = Peak::where('region_id', 1)->count();
-        $trekCount = Trek::where('region_id', 1)->count();
+        $expeditionCount = Expedition::where('region_id', $region->id)->count();
+        $peakCount = Peak::where('region_id', $region->id)->count();
+        $trekCount = Trek::where('region_id', $region->id)->count();
 
         // dd($expeditionCount);
         // $expeditionCount = Expedition::where('region_id', ????)->count();
