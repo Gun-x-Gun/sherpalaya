@@ -32,6 +32,8 @@ class DestinationResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-map-pin';
 
+    protected static ?int $navigationSort = 2;
+
     protected static ?string $navigationGroup = 'Info';
 
 
@@ -131,9 +133,9 @@ class DestinationResource extends Resource
                     ->size(TextColumn\TextColumnSize::Large)
                     // ->weight(FontWeight::Bold)
                     ->searchable(),
-                    TextColumn::make('region.name')
-                        ->searchable()
-                        ->badge(),
+                    // TextColumn::make('region.name')
+                    //     ->searchable()
+                    //     ->badge(),
                     CuratorColumn::make('destinationImages')
                     ->size(90)
                     ->ring(1) // options 0,1,2,4
@@ -147,14 +149,15 @@ class DestinationResource extends Resource
             ])
             ->contentGrid([
                 'sm' => 1,
-                'lg' => 2
+                'md' => 2,
+                'xl' => 2,
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\ViewAction::make(),
+                // Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

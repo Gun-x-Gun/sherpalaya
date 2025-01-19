@@ -34,6 +34,8 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 class PeakResource extends Resource
 {
     protected static ?string $model = Peak::class;
+    protected static ?int $navigationSort = 2;
+
 
     protected static ?string $navigationIcon = 'heroicon-o-sun';
     protected static ?string $navigationGroup = 'Content';
@@ -117,12 +119,14 @@ class PeakResource extends Resource
                                             ->searchable(['name', 'location'])
                                             ->native(false),
                                     ]),
-                                Section::make('Key Highlights')
+                                    Section::make('Key Highlights')
                                     ->schema([
                                         Repeater::make('key_highlights')
                                             ->hiddenLabel()
                                             ->simple(
-                                                TextInput::make('key_highlights')
+                                                TextArea::make('key_highlights')
+                                                    ->rows(1)
+                                                    ->autosize()
                                                     ->hiddenLabel()
                                                     ->columnSpanFull(),
                                             )
@@ -132,11 +136,13 @@ class PeakResource extends Resource
                                         Repeater::make('essential_tips')
                                             ->hiddenLabel()
                                             ->simple(
-                                                TextInput::make('key_highlights')
+                                                TextArea::make('essential_tips')
+                                                    ->rows(1)
+                                                    ->autosize()
                                                     ->hiddenLabel()
                                                     ->columnSpanFull(),
                                             )
-                                    ])
+                                    ]),
                             ], [
                                 Section::make()
                                     ->columns(2)
@@ -289,8 +295,9 @@ class PeakResource extends Resource
 
             ])
             ->contentGrid([
+                'sm' => 1,
                 'md' => 2,
-                // 'xl' => 3,
+                'xl' => 2,
             ])
             ->filters([
                 //

@@ -33,6 +33,8 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 class TourResource extends Resource
 {
     protected static ?string $model = Tour::class;
+    protected static ?int $navigationSort = 4;
+
 
     protected static ?string $navigationIcon = 'heroicon-o-swatch';
     protected static ?string $navigationGroup = 'Content';
@@ -124,7 +126,9 @@ class TourResource extends Resource
                                         Repeater::make('key_highlights')
                                             ->hiddenLabel()
                                             ->simple(
-                                                TextInput::make('key_highlights')
+                                                TextArea::make('key_highlights')
+                                                    ->rows(1)
+                                                    ->autosize()
                                                     ->hiddenLabel()
                                                     ->columnSpanFull(),
                                             )
@@ -134,11 +138,13 @@ class TourResource extends Resource
                                         Repeater::make('essential_tips')
                                             ->hiddenLabel()
                                             ->simple(
-                                                TextInput::make('key_highlights')
+                                                TextArea::make('essential_tips')
+                                                    ->rows(1)
+                                                    ->autosize()
                                                     ->hiddenLabel()
                                                     ->columnSpanFull(),
                                             )
-                                    ])
+                                    ]),
                             ], [
                                 Section::make()
                                     ->columns(2)
@@ -228,7 +234,7 @@ class TourResource extends Resource
                                                         ->options(ItineraryTypes::class)
                                                         ->native(false),
                                                     Textarea::make('description')
-                                                    ->rows(1)
+                                                        ->rows(1)
                                                         ->autosize(),
                                                 ])
                                                 ->reorderable()
@@ -252,6 +258,11 @@ class TourResource extends Resource
                     // TextColumn::make('type')
                     //     ->badge(),
                 ]),
+            ])
+            ->contentGrid([
+                'sm' => 1,
+                'md' => 2,
+                'xl' => 2,
             ])
             ->filters([
                 //

@@ -6,16 +6,21 @@ use App\Filament\Resources\ServiceResource\Pages;
 use App\Filament\Resources\ServiceResource\RelationManagers;
 use App\Models\Service;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
+use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
+use Filament\Tables\Columns\Layout\Split;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\HtmlString;
 use RalphJSmit\Filament\Components\Forms\Sidebar;
 
 class ServiceResource extends Resource
@@ -24,7 +29,9 @@ class ServiceResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationGroup = 'Content';
+    protected static ?string $navigationGroup = 'Info';
+    protected static ?int $navigationSort = 3;
+
 
     public static function form(Form $form): Form
     {
@@ -54,7 +61,6 @@ class ServiceResource extends Resource
                                 'underline',
                                 'undo',
                             ]),
-
                         CuratorPicker::make('cover_image_id')
                             ->color('primary')
                             ->label('Cover Image')
@@ -73,7 +79,20 @@ class ServiceResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Split::make([
+                    CuratorColumn::make('cover_image_id')
+                        ->label('Cover Image')
+                        ->size(150),
+                    TextColumn::make('title')
+                    ->size(TextColumn\TextColumnSize::Large)
+                    ->weight(FontWeight::Bold)
+                    ->description(fn (?Service $record): HtmlString => new HtmlString($record?->description ?? '')),
+                ]),
+            ])
+            ->contentGrid([
+                'sm' => 1,
+                'md' => 2,
+                'xl' => 2,
             ])
             ->filters([
                 //

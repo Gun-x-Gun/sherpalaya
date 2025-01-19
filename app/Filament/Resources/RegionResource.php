@@ -8,6 +8,7 @@ use App\Filament\Resources\RegionResource\RelationManagers\DestinationsRelationM
 use App\Filament\Resources\RegionResource\Widgets\RegionStats;
 use App\Models\Region;
 use Filament\Forms;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -25,14 +26,21 @@ class RegionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-map';
 
+    protected static ?int $navigationSort = 1;
+
     protected static ?string $navigationGroup = 'Info';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                TextInput::make('name')
-                    ->hiddenOn('view'),
+                Section::make('Region Name')
+                ->hiddenOn('view')
+                    ->schema([
+                        TextInput::make('name')
+                            ->hiddenOn('view')
+                            ->hiddenLabel(),
+                    ]),
             ]);
     }
 
@@ -45,14 +53,18 @@ class RegionResource extends Resource
                     ->size(TextColumn\TextColumnSize::Large)
                     ->weight(FontWeight::Bold),
                 ]),
-
+            ])
+            ->contentGrid([
+                'sm' => 1,
+                'md' => 2,
+                'xl' => 3,
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\ViewAction::make(),
+                // Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

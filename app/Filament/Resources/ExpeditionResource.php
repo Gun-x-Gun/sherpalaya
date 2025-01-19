@@ -35,6 +35,8 @@ class ExpeditionResource extends Resource
 {
     protected static ?string $model = Expedition::class;
     protected static ?string $navigationGroup = 'Content';
+    protected static ?int $navigationSort = 1;
+
     protected static ?string $navigationIcon = 'heroicon-o-moon';
 
     public static function form(Form $form): Form
@@ -115,12 +117,14 @@ class ExpeditionResource extends Resource
                                                 ->searchable(['name', 'location'])
                                                 ->native(false),
                                         ]),
-                                    Section::make('Key Highlights')
+                                        Section::make('Key Highlights')
                                         ->schema([
                                             Repeater::make('key_highlights')
                                                 ->hiddenLabel()
                                                 ->simple(
-                                                    TextInput::make('key_highlights')
+                                                    TextArea::make('key_highlights')
+                                                        ->rows(1)
+                                                        ->autosize()
                                                         ->hiddenLabel()
                                                         ->columnSpanFull(),
                                                 )
@@ -130,7 +134,9 @@ class ExpeditionResource extends Resource
                                             Repeater::make('essential_tips')
                                                 ->hiddenLabel()
                                                 ->simple(
-                                                    TextInput::make('key_highlights')
+                                                    TextArea::make('essential_tips')
+                                                        ->rows(1)
+                                                        ->autosize()
                                                         ->hiddenLabel()
                                                         ->columnSpanFull(),
                                                 )
@@ -272,8 +278,9 @@ class ExpeditionResource extends Resource
                 ]),
             ])
             ->contentGrid([
+                'sm' => 1,
                 'md' => 2,
-                // 'xl' => 3,
+                'xl' => 2,
             ])
             ->filters([
                 //
