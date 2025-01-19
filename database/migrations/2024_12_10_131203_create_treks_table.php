@@ -24,6 +24,7 @@ return new class extends Migration {
             $table->string('grade')
                 ->nullable()
                 ->default(null);
+            $table->foreignId('region_id');
             // $table->longText('destinations')
             //     ->required();
             $table->boolean('is_featured');

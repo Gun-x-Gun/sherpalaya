@@ -32,6 +32,7 @@ return new class extends Migration
                 ->required();
             $table->unsignedSmallInteger('highest_altitude')
                 ->required();
+            $table->foreignId('region_id');
             $table->string('peak_difficulty')
                 ->nullable()
                 ->default(null);

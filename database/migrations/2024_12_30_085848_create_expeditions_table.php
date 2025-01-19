@@ -20,6 +20,7 @@ return new class extends Migration
                 ->required();
             $table->string('duration')
                 ->required();
+            $table->foreignId('region_id');
             $table->string('grade')
                 ->nullable()
                 ->default(null);
