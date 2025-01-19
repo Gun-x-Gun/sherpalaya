@@ -154,10 +154,12 @@ class TrekResource extends Resource
                                                 ->maxValue(10)
                                                 ->suffix('/10'),
                                             TextInput::make('starting_altitude')
+                                            ->numeric()
                                                 ->minValue(0)
                                                 ->maxValue(3000)
                                                 ->suffix("m"),
                                             TextInput::make('highest_altitude')
+                                            ->numeric()
                                                 ->minValue(1000)
                                                 ->maxValue(8849)
                                                 ->suffix("m"),
