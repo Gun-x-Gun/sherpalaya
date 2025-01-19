@@ -27,9 +27,9 @@ return new class extends Migration
                 ->required();
             $table->string('best_time_for_expedition')
                 ->required();
-            $table->string('starting_altitude')
+            $table->unsignedSmallInteger('starting_altitude')
                 ->required();
-            $table->string('highest_altitude')
+            $table->unsignedSmallInteger('highest_altitude')
                 ->required();
             $table->string('expedition_difficulty')
                 ->nullable()
