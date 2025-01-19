@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\RegionResource\Pages;
 use App\Filament\Resources\RegionResource\RelationManagers;
 use App\Filament\Resources\RegionResource\RelationManagers\DestinationsRelationManager;
+use App\Filament\Resources\RegionResource\Widgets\RegionStats;
 use App\Models\Region;
 use Filament\Forms;
 use Filament\Forms\Components\TextInput;
@@ -30,7 +31,8 @@ class RegionResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name'),
+                TextInput::make('name')
+                    ->hiddenOn('view'),
             ]);
     }
 
@@ -63,6 +65,12 @@ class RegionResource extends Resource
     {
         return [
             DestinationsRelationManager::class,
+        ];
+    }
+    public static function getWidgets(): array
+    {
+        return [
+            RegionStats::class,
         ];
     }
 

@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\RegionResource\Pages;
 
 use App\Filament\Resources\RegionResource;
+use App\Filament\Resources\RegionResource\Widgets\RegionStats;
 use Filament\Actions;
 use Filament\Resources\Pages\ViewRecord;
 
@@ -10,10 +11,21 @@ class ViewRegion extends ViewRecord
 {
     protected static string $resource = RegionResource::class;
 
+    public function getTitle(): string
+    {
+        return $this->getRecord()->name; // Assuming the Region model has a "name" field
+    }
+    
     protected function getHeaderActions(): array
     {
         return [
             Actions\EditAction::make(),
+        ];
+    }
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            RegionStats::class
         ];
     }
 }
