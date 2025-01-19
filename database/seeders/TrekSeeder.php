@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Enums\TrekDifficulty;
 use App\Models\Destination;
+use App\Models\Region;
 use App\Models\Trek;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -29,6 +30,7 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'best_time_for_trek' => 'Autumn (Sep-Oct-Nov) and Spring        (March-April-May)',
             'starting_altitude' => 2610,
             'highest_altitude' => 5545,
+            'region_id' => Region::first()->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING,
             'key_highlights' => [
                 'Breathtaking Views',

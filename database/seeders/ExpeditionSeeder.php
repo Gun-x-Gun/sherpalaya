@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Enums\TrekDifficulty;
 use App\Models\Destination;
 use App\Models\Expedition;
+use App\Models\Region;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -22,6 +23,7 @@ Everest has fascinated mountaineers all over the world since European climbers d
 While climbing Mt. Everest is the opportunity of a lifetime, expeditions encounter many obstacles including high altitude, harsh weather conditions, and sheer exhaustion. Snow Leopard Trek strives to conduct the best expedition by putting high importance and priority on the safety aspects of the climb. We believe that our planning, logistics, staffing and experience coupled with your enthusiasm, patience, and perseverance would help you achieve your lifetime dream.
 ',
             'duration' => '72',
+            'region_id' => Region::first()->id,
             'grade' => '9',
             'starting_ending_point' => 'Kathmandu',
             'best_time_for_expedition' => 'Autumn (Sep-Oct-Nov) and Spring        (March-April-May)',

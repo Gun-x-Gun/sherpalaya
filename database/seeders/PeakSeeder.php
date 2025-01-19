@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Enums\TrekDifficulty;
 use App\Models\Destination;
 use App\Models\Peak;
+use App\Models\Region;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +21,7 @@ class PeakSeeder extends Seeder
         'description' => 'Lobuche Peak is one the best peak in Everest region as it’s best view is seen from the summit. Summit is sourounded by panoramic view including Mt. Everest.
 We approach Lobuche via completing Everest Base Camp and Kalapattar trip which helps you with proper acclimatization and return to Lukla along the famous Khumbu Valley, with its diverse wildlife and vegetation, as well as its rich culture, where villages and rustic dwellings have seemingly scrambled up to perch atop rocky outcrops and vertiginous ledges. A truly memorable experience closely following the footsteps of legendary mountaineers.',
         'duration' => '17',
+        'region_id' => Region::first()->id,
         'grade' => '5',
         'is_featured' => false,
         'starting_ending_point' => 'Kathmandu',
