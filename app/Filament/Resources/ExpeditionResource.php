@@ -48,10 +48,16 @@ class ExpeditionResource extends Resource
                             ->schema([
                                 Sidebar::make([
                                     Section::make('')
-                                        ->columns(2)
+                                        ->columns(5)
                                         ->schema([
                                             TextInput::make('title')
-                                                ->columnSpanFull(),
+                                                ->columnSpan(3)
+                                                ->required(),
+                                            Select::make('region_id')
+                                                ->label('Region')
+                                                ->relationship('region', 'name')
+                                                ->native(false)
+                                                ->columnSpan(2),
                                             RichEditor::make('description')
                                                 ->columnSpanFull()
                                                 ->required()

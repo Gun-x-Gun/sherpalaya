@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\RegionResource\Pages;
 use App\Filament\Resources\RegionResource\RelationManagers;
+use App\Filament\Resources\RegionResource\RelationManagers\DestinationsRelationManager;
 use App\Models\Region;
 use Filament\Forms;
 use Filament\Forms\Components\TextInput;
@@ -61,7 +62,7 @@ class RegionResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            DestinationsRelationManager::class,
         ];
     }
 

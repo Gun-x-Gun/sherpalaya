@@ -44,15 +44,21 @@ class PeakResource extends Resource
             ->schema([
                 Wizard::make([
                     Wizard\Step::make('General')
-                    ->icon('heroicon-m-clipboard')
-                    ->completedIcon('heroicon-m-clipboard')
+                        ->icon('heroicon-m-clipboard')
+                        ->completedIcon('heroicon-m-clipboard')
                         ->schema([
                             Sidebar::make([
                                 Section::make('')
-                                    ->columns(2)
+                                    ->columns(5)
                                     ->schema([
                                         TextInput::make('title')
-                                            ->columnSpanFull(),
+                                            ->columnSpan(3)
+                                            ->required(),
+                                        Select::make('region_id')
+                                            ->label('Region')
+                                            ->relationship('region', 'name')
+                                            ->native(false)
+                                            ->columnSpan(2),
                                         RichEditor::make('description')
                                             ->columnSpanFull()
                                             ->required()
@@ -95,8 +101,8 @@ class PeakResource extends Resource
                             ]),
                         ]),
                     Wizard\Step::make('Details')
-                    ->icon('heroicon-m-chart-bar-square')
-                    ->completedIcon('heroicon-m-chart-bar-square')
+                        ->icon('heroicon-m-chart-bar-square')
+                        ->completedIcon('heroicon-m-chart-bar-square')
 
                         ->schema([
                             Sidebar::make([
@@ -172,8 +178,8 @@ class PeakResource extends Resource
                             ]),
                         ]),
                     Wizard\Step::make('Images')
-                    ->icon('heroicon-m-photo')
-                    ->completedIcon('heroicon-m-photo')
+                        ->icon('heroicon-m-photo')
+                        ->completedIcon('heroicon-m-photo')
 
                         ->schema([
                             Section::make('')
@@ -186,8 +192,8 @@ class PeakResource extends Resource
                                 ]),
                         ]),
                     Wizard\Step::make('Costs')
-                    ->icon('heroicon-m-exclamation-circle')
-                    ->completedIcon('heroicon-m-exclamation-circle')
+                        ->icon('heroicon-m-exclamation-circle')
+                        ->completedIcon('heroicon-m-exclamation-circle')
 
                         ->schema([
                             Section::make('Costs Include')
@@ -213,8 +219,8 @@ class PeakResource extends Resource
                                 ]),
                         ]),
                     Wizard\Step::make('Itinerary')
-                    ->icon('heroicon-m-calendar-date-range')
-                    ->completedIcon('heroicon-m-calendar-date-range')
+                        ->icon('heroicon-m-calendar-date-range')
+                        ->completedIcon('heroicon-m-calendar-date-range')
 
                         ->schema([
                             Section::make("")
