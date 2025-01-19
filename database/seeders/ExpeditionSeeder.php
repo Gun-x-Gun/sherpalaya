@@ -25,8 +25,8 @@ While climbing Mt. Everest is the opportunity of a lifetime, expeditions encount
             'grade' => '9',
             'starting_ending_point' => 'Kathmandu',
             'best_time_for_expedition' => 'Autumn (Sep-Oct-Nov) and Spring        (March-April-May)',
-            'starting_altitude' => '2,610',
-            'highest_altitude' => '8,848',
+            'starting_altitude' => 2610,
+            'highest_altitude' => 8848,
             'expedition_difficulty' => TrekDifficulty::CHALLENGING,
             'key_highlights' => [
                 'Breathtaking Views',

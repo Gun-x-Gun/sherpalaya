@@ -24,8 +24,8 @@ We approach Lobuche via completing Everest Base Camp and Kalapattar trip which h
         'is_featured' => false,
         'starting_ending_point' => 'Kathmandu',
         'best_time_for_peak' => 'March-May October-November',
-        'starting_altitude' => '2640',
-        'highest_altitude' => '6119',
+        'starting_altitude' => 2640,
+        'highest_altitude' => 6119,
         'peak_difficulty' => TrekDifficulty::HARD,
         'key_highlights' => [
                 'Breathtaking Views',

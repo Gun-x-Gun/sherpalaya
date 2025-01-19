@@ -27,8 +27,8 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'grade' => '7',
             'starting_ending_point' => 'Lukla',
             'best_time_for_trek' => 'Autumn (Sep-Oct-Nov) and Spring        (March-April-May)',
-            'starting_altitude' => '2,610',
-            'highest_altitude' => '5,545',
+            'starting_altitude' => 2610,
+            'highest_altitude' => 5545,
             'trek_difficulty' => TrekDifficulty::CHALLENGING,
             'key_highlights' => [
                 'Breathtaking Views',
