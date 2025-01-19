@@ -14,6 +14,7 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Wizard;
@@ -43,8 +44,8 @@ class TourResource extends Resource
             ->schema([
                 Wizard::make([
                     Wizard\Step::make('General')
-                    ->icon('heroicon-m-clipboard')
-                    ->completedIcon('heroicon-m-clipboard')
+                        ->icon('heroicon-m-clipboard')
+                        ->completedIcon('heroicon-m-clipboard')
                         ->schema([
                             Sidebar::make([
                                 Section::make('')
@@ -96,9 +97,9 @@ class TourResource extends Resource
 
                             ]),
                         ]),
-                        Wizard\Step::make('Details')
-                    ->icon('heroicon-m-chart-bar-square')
-                    ->completedIcon('heroicon-m-chart-bar-square')
+                    Wizard\Step::make('Details')
+                        ->icon('heroicon-m-chart-bar-square')
+                        ->completedIcon('heroicon-m-chart-bar-square')
 
                         ->schema([
                             Sidebar::make([
@@ -155,11 +156,11 @@ class TourResource extends Resource
                                         TextInput::make('starting_ending_point')
                                             ->label('Starting/Ending Point')
                                     ]),
-                                ]),
+                            ]),
                         ]),
                     Wizard\Step::make('Images')
-                    ->icon('heroicon-m-photo')
-                    ->completedIcon('heroicon-m-photo')
+                        ->icon('heroicon-m-photo')
+                        ->completedIcon('heroicon-m-photo')
 
                         ->schema([
                             Section::make()
@@ -173,35 +174,35 @@ class TourResource extends Resource
                         ]),
 
                     Wizard\Step::make('Costs')
-                    ->icon('heroicon-m-exclamation-circle')
-                    ->completedIcon('heroicon-m-exclamation-circle')
+                        ->icon('heroicon-m-exclamation-circle')
+                        ->completedIcon('heroicon-m-exclamation-circle')
 
                         ->schema([
                             Section::make('Costs Include')
-                                    ->schema([
-                                        Repeater::make('costs_include')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextInput::make('costs_include')
-                                                    ->prefixIcon('heroicon-o-check-badge')
-                                                    ->prefixIconColor('success')
+                                ->schema([
+                                    Repeater::make('costs_include')
+                                        ->hiddenLabel()
+                                        ->simple(
+                                            TextInput::make('costs_include')
+                                                ->prefixIcon('heroicon-o-check-badge')
+                                                ->prefixIconColor('success')
 
-                                            )
-                                    ]),
-                                Section::make('Costs Exclude')
-                                    ->schema([
-                                        Repeater::make('costs_exclude')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextInput::make('costs_exclude')
-                                                    ->prefixIcon('heroicon-o-x-circle')
-                                                    ->prefixIconColor('danger')
-                                            )
-                                    ]),
+                                        )
+                                ]),
+                            Section::make('Costs Exclude')
+                                ->schema([
+                                    Repeater::make('costs_exclude')
+                                        ->hiddenLabel()
+                                        ->simple(
+                                            TextInput::make('costs_exclude')
+                                                ->prefixIcon('heroicon-o-x-circle')
+                                                ->prefixIconColor('danger')
+                                        )
+                                ]),
                         ]),
                     Wizard\Step::make('Itinerary')
-                    ->icon('heroicon-m-calendar-date-range')
-                    ->completedIcon('heroicon-m-calendar-date-range')
+                        ->icon('heroicon-m-calendar-date-range')
+                        ->completedIcon('heroicon-m-calendar-date-range')
 
                         ->schema([
                             Section::make("")
@@ -226,7 +227,9 @@ class TourResource extends Resource
                                                     Select::make('type')
                                                         ->options(ItineraryTypes::class)
                                                         ->native(false),
-                                                    TextInput::make('description')
+                                                    Textarea::make('description')
+                                                    ->rows(1)
+                                                        ->autosize(),
                                                 ])
                                                 ->reorderable()
                                                 ->cloneable()
@@ -234,7 +237,7 @@ class TourResource extends Resource
                                 ]),
                         ]),
                 ])->columnSpanFull()
-                  ->skippable(),
+                    ->skippable(),
             ]);
     }
 
