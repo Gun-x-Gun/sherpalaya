@@ -26,24 +26,19 @@ class RegionStats extends BaseWidget
         $expeditionCount = Expedition::where('region_id', $region)->count();
         $peakCount = Peak::where('region_id', $region)->count();
         $trekCount = Trek::where('region_id', $region)->count();
-
-        // dd($expeditionCount);
-        // $expeditionCount = Expedition::where('region_id', ????)->count();
         return [
-
             Stat::make('Expeditions', $expeditionCount)
-            ->description('')
-            ->icon('heroicon-m-moon')
-            ->url(ExpeditionResource::getUrl()),
+                ->description('')
+                ->icon('heroicon-m-moon')
+                ->url(ExpeditionResource::getUrl()),
             Stat::make('Peaks', $peakCount)
-            ->description('')
-            ->icon('heroicon-m-sun')
-            ->url(PeakResource::getUrl()),
+                ->description('')
+                ->icon('heroicon-m-sun')
+                ->url(PeakResource::getUrl()),
             Stat::make('Treks', $trekCount)
-            ->description('')
-            ->icon('heroicon-m-eye')
-            ->url(TrekResource::getUrl()),
-
+                ->description('')
+                ->icon('heroicon-m-eye')
+                ->url(TrekResource::getUrl()),
         ];
     }
 }
