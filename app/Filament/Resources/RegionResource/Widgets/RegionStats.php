@@ -21,11 +21,11 @@ class RegionStats extends BaseWidget
 
     protected function getStats(): array
     {
-        $region = $this->record;
+        $region = $this->record->id;
 
-        $expeditionCount = Expedition::where('region_id', $region->id)->count();
-        $peakCount = Peak::where('region_id', $region->id)->count();
-        $trekCount = Trek::where('region_id', $region->id)->count();
+        $expeditionCount = Expedition::where('region_id', $region)->count();
+        $peakCount = Peak::where('region_id', $region)->count();
+        $trekCount = Trek::where('region_id', $region)->count();
 
         // dd($expeditionCount);
         // $expeditionCount = Expedition::where('region_id', ????)->count();
