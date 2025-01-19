@@ -20,6 +20,7 @@ class Trek extends Model
         'feature_image_id',
         'description',
         'duration',
+        'region_id',
         'grade',
         'starting_ending_point',
         'best_time_for_trek',
@@ -47,6 +48,11 @@ class Trek extends Model
     {
         return $this->morphMany(Itinerary::class,'itinerable');
     }
+
+    public function region(): BelongsTo
+    {
+        return $this->belongsTo(Region::class);
+    }
     public function destinations()
     {
         return $this->belongsToMany(
@@ -57,8 +63,6 @@ class Trek extends Model
                 'order'
             ]);
     }
-
-
 
     public function coverImage(): BelongsTo
     {

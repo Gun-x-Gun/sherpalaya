@@ -18,6 +18,7 @@ class Expedition extends Model
         'title',
         'cover_image_id',
         'feature_image_id',
+        'region_id',
         'description',
         'duration',
         'grade',
@@ -54,6 +55,11 @@ class Expedition extends Model
             ->withPivot([
                 'order'
             ]);
+    }
+
+    public function region(): BelongsTo
+    {
+        return $this->belongsTo(Region::class);
     }
 
     public function coverImage(): BelongsTo
