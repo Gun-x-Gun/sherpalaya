@@ -2,18 +2,20 @@
 
 namespace App\View\Components\Featured;
 
+use App\Models\Expedition;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class FeaturedExpedition extends Component
 {
+    public $expeditions;
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        //
+        $this->expeditions = Expedition::all();
     }
 
     /**
@@ -21,6 +23,8 @@ class FeaturedExpedition extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.featured.featured-expedition');
+        return view('components.featured.featured-expedition', [
+            'expeditions' => $this->expeditions,
+        ]);
     }
 }

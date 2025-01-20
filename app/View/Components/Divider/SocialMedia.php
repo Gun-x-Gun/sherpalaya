@@ -1,22 +1,19 @@
 <?php
 
-namespace App\View\Components\Featured;
+namespace App\View\Components\Divider;
 
-use App\Models\Peak;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class FeaturedPeak extends Component
+class SocialMedia extends Component
 {
-    public $peaks;
-
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        $this->peaks = Peak::all();
+        //
     }
 
     /**
@@ -24,8 +21,6 @@ class FeaturedPeak extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.featured.featured-peak',[
-            'peaks' => $this->peaks,
-        ]);
+        return view('components.divider.social-media');
     }
 }

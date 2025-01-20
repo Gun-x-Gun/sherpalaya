@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="corporate">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,20 +8,22 @@
 
     @vite('resources/css/app.css')
 
-
 </head>
 
-<body>
+<body class="bg-white font-mono">
 
+    {{-- top --}}
     <x-partials.navbar />
 
-    <div class="m-2">
-        {{ $slot }}
-    </div>
-    <div class="m-2">
-        <x-partials.footer />
+    {{-- start --}}
 
-    </div>
+    {{ $slot }}
+
+    {{-- stop --}}
+
+    <x-partials.footer />
+    {{-- bottom --}}
+
 
     @vite('resources/js/app.js')
 

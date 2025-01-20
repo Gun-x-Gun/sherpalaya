@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Expedition;
+use App\Models\Peak;
+use App\Models\Trek;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,6 +21,9 @@ Route::get('/peaks', function () {
 Route::get('/expeditions', function () {
     return view('website.expeditions');
 })->name('website.expeditions');
+Route::get('/tour', function () {
+    return view('website.tours');
+})->name('website.contact');
 Route::get('/contact', function () {
     return view('website.contact_us');
 })->name('website.contact');
@@ -40,6 +46,23 @@ Route::get('/tour/sight_seeing', function () {
     return view('website.tour_items.sight_seeing');
 })->name('website.tours.sightseeing');
 
+//trek
+Route::get('/trek/{id}', function ($id) {
+    $trek = Trek::findOrFail($id);
+    return view('website.id_pages.show_trek', compact('trek'));
+})->name('show_trek');
+
+//expedition
+Route::get('/expeditions/{id}', function ($id) {
+    $expedition = Expedition::findOrFail($id);
+    return view('website.id_pages.show_expedition', compact('expedition'));
+})->name('show_expedition');
+
+//peak
+Route::get('/peaks/{id}', function ($id) {
+    $peak = Peak::findOrFail($id);
+    return view('website.id_pages.show_peak', compact('peak'));
+})->name('show_peak');
 
 // Route::get('/home', function(){
 //     return view('website.home');

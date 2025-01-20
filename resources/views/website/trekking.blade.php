@@ -1,3 +1,3 @@
 <x-website-layout>
-    Trekking
+    <x-trek.trek-landing-page />
 </x-website-layout>

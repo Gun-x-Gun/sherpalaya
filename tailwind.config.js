@@ -27,10 +27,45 @@ export default {
 
     //         },
     //     },
+    //     fontFamily: {
+    //         sans: ['Graphik', 'sans-serif'],
+    //         serif: ['Merriweather', 'serif'],
+    //     },
     // },
+    // themes: [
+    //     {
+    //         mytheme: {
+    //             primary: "#0d0d0d",
+    //             secondary: "#2F4F4F",
+    //             accent: "#37cdbe",
+    //             neutral: "#3d4451",
+    //             "base-100": "#ffffff"
+    //         },
+    //         fontFamily: {
+    //             sans: ['Graphik', 'sans-serif'],
+    //         },
+    //     },
+
+
+    // ]
+
     flyonui: {
-        themes: ["light", "dark", "gourmet", "corporate", "luxury", "soft"]
-      }
+        themes: [
+          {
+            mytheme: {
+              primary: "#000000",
+              secondary: "#00008B",
+              accent: "#A9A9A9",
+            //   neutral: "#3d4451",
+            //   "base-100": "#ffffff",
+            },
+          },
+        ],
+      },
+      theme: {
+        extend: {},
+      },
+
 
 };
 
