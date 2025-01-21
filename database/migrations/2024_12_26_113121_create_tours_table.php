@@ -27,7 +27,7 @@ return new class extends Migration
                 ->default(null);
             $table->string('starting_ending_point')
                 ->required();
-            $table->string('best_time_for_trek')
+            $table->string('best_time_for_tour')
                 ->required();
             $table->longText('key_highlights')
                 ->required();
