@@ -76,6 +76,61 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'is_featured' => false,
         ]);
 
+        $trek2 = Trek::create([
+            'title' => 'Annapurna Base Camp Trek',
+            'description' => 'The Annapurna Base Camp (ABC) Trek is one of the most popular trekking routes in Nepal, offering breathtaking views of the Annapurna massif and other Himalayan peaks.',
+            'duration' => '7', // Assuming duration
+            'grade' => '6', // Moderate to Challenging
+            'starting_ending_point' => 'Nayapul',
+            'best_time_for_trek' => 'Spring (March-May) and Autumn (September-November)',
+            'starting_altitude' => 1070,
+            'highest_altitude' => 4130,
+            'region_id' => 3,
+            'trek_difficulty' => TrekDifficulty::MODERATE,
+            'key_highlights' => [
+                'Stunning Mountain Views: The trek offers panoramic views of Annapurna I, Annapurna South, Machhapuchhre (Fishtail Peak), and other majestic peaks.',
+                'Diverse Landscapes: Experience a variety of landscapes, from lush rhododendron forests to alpine meadows and glacial valleys.',
+                'Cultural Immersion: Trek through traditional Gurung and Magar villages, experiencing their unique culture, customs, and hospitality.',
+                'Wildlife: Encounter diverse wildlife, including Himalayan tahr, langur monkeys, and various bird species.',
+            ],
+            'costs_include' => [
+                'Transfer from airport to your hotel during both arrival and departure.',
+                'Stay two nights in Kathmandu and two nights in Pokhara with a BB plan.',
+                'Go sightseeing around Kathmandu on a private vehicle.',
+                'All entrance fees during Kathmandu and Pokhara Day Tours.',
+                'Ground 4x4 luxury transportation through the private vehicle as referred to in the itinerary.',
+                'All mandatory permit fees, including TIMS card and Annapurna Conservation Area Permit.',
+                'Accommodation in tea houses or lodges during the trekking.',
+                'Three-course meals (breakfast, lunch, and dinner) during the trekking period.',
+                'A skillful trekking guide with excellent communication skills.',
+                'Two porters for three trekkers during the trekking.',
+                'Insurance for the guide and porters.',
+                'Farewell dinner at Kathmandu.',
+                'All applicable VAT, Tax, and needed paperwork.',
+            ],
+            'costs_exclude' => [
+                'Dinner and lunch in Kathmandu and Pokhara except for the farewell dinner.',
+                'Your personal expenses for mineral water, soft beverages, confectionaries, laundries, phone calls, hot drinking water, bar bills, showers, etc.',
+                'Internet facility, battery chargers, multi-plugs, etc.',
+                'Personal trekking equipment.',
+                'Your travel insurance that covers Helicopter evacuation.',
+                'Medical expenses and trip cancellation.',
+                'Any other extended trips and accommodation.',
+                'Tips for the guide, porters, and driver as a token of appreciation.',
+                'Any other expenses or charges that are not mentioned in the "costs include" list.',
+                'Nepal arrival visa.',
+            ],
+            'essential_tips' => [
+                'Physical Fitness: Train regularly to improve your cardiovascular health and leg strength.',
+                'Acclimatization: Prioritize acclimatization to avoid altitude sickness.',
+                'Proper Gear: Pack warm clothing, waterproof gear, sturdy hiking boots, and other essential items.',
+                'Hiring a Guide and Porter: Consider hiring a local guide and porter to enhance your experience and ensure safety.',
+                'Travel Insurance: Purchase comprehensive travel insurance to cover medical emergencies and trip cancellations.',
+                'Permits: Obtain necessary permits (TIMS card and Annapurna Conservation Area Permit) before starting the trek.',
+            ],
+            'is_featured' => false,
+        ]);
+
         $trek->destinations()->sync(
             Destination::inRandomOrder()
                 ->limit(5)
@@ -83,6 +138,14 @@ The best season for this trip starts from beginning of March to May and  Septemb
                 ->pluck('id')
                 ->toArray()
         );
+        $trek2->destinations()->sync(
+            Destination::inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+
 
     }
 }
