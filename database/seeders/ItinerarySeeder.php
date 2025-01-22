@@ -234,6 +234,167 @@ class ItinerarySeeder extends Seeder
                 ],
             ],
         ];
+        $annapurnaItineraries = [
+            [
+                'title' => 'Day 1: Arrival in Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "Arrive at Tribhuvan International Airport, transfer to your hotel. Rest and acclimatize to the altitude, prepare gears, and obtain necessary permits.",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 2: Fly to Pokhara and Drive to Nayapul',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "Take an early morning flight from Kathmandu to Pokhara, offering breathtaking views of the Annapurna and Dhaulagiri ranges.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Drive to Nayapul and begin trekking to Tikhedhunga (1540m), passing terraced fields and rhododendron forests.",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 3: Trek to Ghorepani',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trek to Ghorepani (2850m) via Ulleri and Banthanti. Enjoy panoramic views of Machhapuchhre (Fishtail Peak) and Annapurna South.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,850 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 4: Hike to Poon Hill and Trek to Tadapani',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Hike early morning to Poon Hill (3210m) to witness breathtaking sunrise views over the Annapurna and Dhaulagiri ranges. Then descend to Ghorepani and trek to Tadapani (2630m).",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,210 m (Poon Hill) and 2,630 m (Tadapani)",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 5: Trek to Chhomrong',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trek to Chhomrong (2170m), passing through rhododendron forests and Gurung villages. Immerse yourself in the local culture and enjoy stunning mountain views.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,170 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "5-6 hours",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 6: Trek to Himalaya',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Descend through rhododendron forests, cross suspension bridges, and ascend gradually to Himalaya (2600m).",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,600 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 7: Trek to Annapurna Base Camp via Machhapuchhre Base Camp',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Ascend to Machhapuchhre Base Camp (3700m), offering panoramic views of the Annapurna range, and then to Annapurna Base Camp (4130m), the highlight of the trek.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "4,130 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 8: Trek to Bamboo',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Descend to Bamboo (2310m), retracing your route through rhododendron forests and terraced fields.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,310 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 9: Trek to Jhinu Danda and Drive to Pokhara',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trek to Jhinu Danda (1940m), known for its hot springs. Relax and rejuvenate before driving back to Pokhara.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "1,940 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "5-6 hours",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 10: Drive or Fly Back to Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "Fly back to Kathmandu, bidding farewell to the mountains. Alternatively, take a scenic drive back to the capital.",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 11: Departure',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "Transfer to Tribhuvan International Airport for your departure flight.",
+                    ],
+                ],
+            ],
+        ];
 
         $peakItineraries = [
             [
@@ -729,11 +890,176 @@ class ItinerarySeeder extends Seeder
             ],
         ];
 
+            $annapurnaItineraries = [
+                [
+                    'title' => 'Day 1: Arrival in Kathmandu',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::FLIGHT,
+                            'description' => "Arrive at Tribhuvan International Airport, transfer to your hotel. Rest and acclimatize to the altitude, prepare gears, and obtain necessary permits.",
+                        ],
+                    ],
+                ],
+                [
+                    'title' => 'Day 2: Fly to Pokhara and Drive to Nayapul',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::FLIGHT,
+                            'description' => "Take an early morning flight from Kathmandu to Pokhara, offering breathtaking views of the Annapurna and Dhaulagiri ranges.",
+                        ],
+                        [
+                            'type' => ItineraryTypes::TREK,
+                            'description' => "Drive to Nayapul and begin trekking to Tikhedhunga (1540m), passing terraced fields and rhododendron forests.",
+                        ],
+                    ],
+                ],
+                [
+                    'title' => 'Day 3: Trek to Ghorepani',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::TREK,
+                            'description' => "Trek to Ghorepani (2850m) via Ulleri and Banthanti. Enjoy panoramic views of Machhapuchhre (Fishtail Peak) and Annapurna South.",
+                        ],
+                        [
+                            'type' => ItineraryTypes::ALTITUDE,
+                            'description' => "2,850 m",
+                        ],
+                        [
+                            'type' => ItineraryTypes::TREK_HOURS,
+                            'description' => "6-7 hours",
+                        ],
+                    ],
+                ],
+                [
+                    'title' => 'Day 4: Hike to Poon Hill and Trek to Tadapani',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::TREK,
+                            'description' => "Hike early morning to Poon Hill (3210m) to witness breathtaking sunrise views over the Annapurna and Dhaulagiri ranges. Then descend to Ghorepani and trek to Tadapani (2630m).",
+                        ],
+                        [
+                            'type' => ItineraryTypes::ALTITUDE,
+                            'description' => "3,210 m (Poon Hill) and 2,630 m (Tadapani)",
+                        ],
+                        [
+                            'type' => ItineraryTypes::TREK_HOURS,
+                            'description' => "6-7 hours",
+                        ],
+                    ],
+                ],
+                [
+                    'title' => 'Day 5: Trek to Chhomrong',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::TREK,
+                            'description' => "Trek to Chhomrong (2170m), passing through rhododendron forests and Gurung villages. Immerse yourself in the local culture and enjoy stunning mountain views.",
+                        ],
+                        [
+                            'type' => ItineraryTypes::ALTITUDE,
+                            'description' => "2,170 m",
+                        ],
+                        [
+                            'type' => ItineraryTypes::TREK_HOURS,
+                            'description' => "5-6 hours",
+                        ],
+                    ],
+                ],
+                [
+                    'title' => 'Day 6: Trek to Himalaya',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::TREK,
+                            'description' => "Descend through rhododendron forests, cross suspension bridges, and ascend gradually to Himalaya (2600m).",
+                        ],
+                        [
+                            'type' => ItineraryTypes::ALTITUDE,
+                            'description' => "2,600 m",
+                        ],
+                        [
+                            'type' => ItineraryTypes::TREK_HOURS,
+                            'description' => "6-7 hours",
+                        ],
+                    ],
+                ],
+                [
+                    'title' => 'Day 7: Trek to Annapurna Base Camp via Machhapuchhre Base Camp',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::TREK,
+                            'description' => "Ascend to Machhapuchhre Base Camp (3700m), offering panoramic views of the Annapurna range, and then to Annapurna Base Camp (4130m), the highlight of the trek.",
+                        ],
+                        [
+                            'type' => ItineraryTypes::ALTITUDE,
+                            'description' => "4,130 m",
+                        ],
+                        [
+                            'type' => ItineraryTypes::TREK_HOURS,
+                            'description' => "6-7 hours",
+                        ],
+                    ],
+                ],
+                [
+                    'title' => 'Day 8: Trek to Bamboo',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::TREK,
+                            'description' => "Descend to Bamboo (2310m), retracing your route through rhododendron forests and terraced fields.",
+                        ],
+                        [
+                            'type' => ItineraryTypes::ALTITUDE,
+                            'description' => "2,310 m",
+                        ],
+                        [
+                            'type' => ItineraryTypes::TREK_HOURS,
+                            'description' => "6-7 hours",
+                        ],
+                    ],
+                ],
+                [
+                    'title' => 'Day 9: Trek to Jhinu Danda and Drive to Pokhara',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::TREK,
+                            'description' => "Trek to Jhinu Danda (1940m), known for its hot springs. Relax and rejuvenate before driving back to Pokhara.",
+                        ],
+                        [
+                            'type' => ItineraryTypes::ALTITUDE,
+                            'description' => "1,940 m",
+                        ],
+                        [
+                            'type' => ItineraryTypes::TREK_HOURS,
+                            'description' => "5-6 hours",
+                        ],
+                    ],
+                ],
+                [
+                    'title' => 'Day 10: Drive or Fly Back to Kathmandu',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::FLIGHT,
+                            'description' => "Fly back to Kathmandu, bidding farewell to the mountains. Alternatively, take a scenic drive back to the capital.",
+                        ],
+                    ],
+                ],
+                [
+                    'title' => 'Day 11: Departure',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::FLIGHT,
+                            'description' => "Transfer to Tribhuvan International Airport for your departure flight.",
+                        ],
+                    ],
+                ],
+            ];
 
 
         $this->createItinerariesWithDetails(
             Trek::first(),
             $trekItineraries
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(2),
+            $annapurnaItineraries
         );
         $this->createItinerariesWithDetails(
             Peak::first(),
@@ -747,15 +1073,16 @@ class ItinerarySeeder extends Seeder
 
     protected function createItinerariesWithDetails(Model $model, array $itineraries): void
     {
+
         foreach ($itineraries as $itineraryData) {
             // Create the Itinerary
             $itinerary = $model->itineraries()->create([
                 'title' => $itineraryData['title'],
             ]);
-
             // Create destinations
             $destinationIds = Destination::inRandomOrder()->limit(2)->pluck('id');
             $itinerary->destinations()->attach($destinationIds);
+
 
             // Create the Itinerary Details
             if (isset($itineraryData['details']) && is_array($itineraryData['details'])) {
