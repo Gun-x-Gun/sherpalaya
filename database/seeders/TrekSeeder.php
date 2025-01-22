@@ -132,14 +132,16 @@ The best season for this trip starts from beginning of March to May and  Septemb
         ]);
 
         $trek->destinations()->sync(
-            Destination::inRandomOrder()
+            Destination::where('region_id',1)
+                ->inRandomOrder()
                 ->limit(5)
                 ->get()
                 ->pluck('id')
                 ->toArray()
         );
         $trek2->destinations()->sync(
-            Destination::inRandomOrder()
+            Destination::where('region_id',3)
+                ->inRandomOrder()
                 ->limit(5)
                 ->get()
                 ->pluck('id')
