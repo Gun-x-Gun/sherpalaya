@@ -7,6 +7,7 @@ use App\Filament\Resources\ServiceResource\RelationManagers;
 use App\Models\Service;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
+use Dotswan\MapPicker\Fields\Map;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
@@ -37,31 +38,72 @@ class ServiceResource extends Resource
     {
         return $form
             ->schema([
-                Section::make('')
-                    ->columns(2)
+                Sidebar::make([
+                    Section::make('')
                     ->schema([
+
                         TextInput::make('title')
-                            ->columnSpanFull(),
-                        RichEditor::make('description')
+                        ->columnSpanFull(),
+                    RichEditor::make('description')
+                        ->columnSpanFull()
+                        ->required()
+                        ->toolbarButtons([
+                            // 'attachFiles',
+                            'blockquote',
+                            'bold',
+                            'bulletList',
+                            // 'codeBlock',
+                            'h2',
+                            'h3',
+                            'italic',
+                            'link',
+                            'orderedList',
+                            'redo',
+                            // 'strike',
+                            'underline',
+                            'undo',
+                        ]),
+
+
+                        Map::make('location')
+                            ->label('Location')
                             ->columnSpanFull()
-                            ->required()
-                            ->toolbarButtons([
-                                // 'attachFiles',
-                                'blockquote',
-                                'bold',
-                                'bulletList',
-                                // 'codeBlock',
-                                'h2',
-                                'h3',
-                                'italic',
-                                'link',
-                                'orderedList',
-                                'redo',
-                                // 'strike',
-                                'underline',
-                                'undo',
-                            ]),
-                        CuratorPicker::make('cover_image_id')
+                            ->defaultLocation(latitude: 40.4168, longitude: -3.7038)
+                            ->extraStyles([
+                                'min-height: 50vh',
+                                'border-radius: 50px'
+                            ])
+                            // ->liveLocation(true, true, 5000)
+                            // ->showMarker()
+                            ->markerColor("#22c55eff")
+                            ->showFullscreenControl()
+                            ->showZoomControl()
+                            ->draggable()
+                            ->tilesUrl("https://tile.openstreetmap.de/{z}/{x}/{y}.png")
+                            ->zoom(15)
+                            ->detectRetina()
+                            ->showMyLocationButton()
+                            ->geoMan(false)
+                            ->geoManEditable(true)
+                            ->geoManPosition('bottomright')
+                            ->drawCircleMarker()
+                            // ->rotateMode()
+                            // ->clickable() //click to move marker
+                            // ->drawMarker()
+                            // ->drawPolygon()
+                            // ->drawPolyline()
+                            // ->drawCircle()
+                            ->dragMode()
+                            // ->cutPolygon()
+                            // ->editPolygon()
+                            // ->deleteLayer()
+                            ->setColor('#3388ff')
+                            ->setFilledColor('#cad9ec'),
+                    ]),
+                ],[
+                    Section::make()
+                        ->schema([
+                            CuratorPicker::make('cover_image_id')
                             ->color('primary')
                             ->label('Cover Image')
                             ->hint('for service page')
@@ -71,7 +113,8 @@ class ServiceResource extends Resource
                             ->label('Images')
                             ->hint('any other relevant images')
                             ->relationship('images', 'id'),
-                    ]),
+                        ]),
+                ]),
             ]);
     }
 

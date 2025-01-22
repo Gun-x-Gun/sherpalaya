@@ -18,6 +18,8 @@ return new class extends Migration
                 ->required();
             $table->longText('description')
                 ->required();
+            $table->longText('location');
+
             $table->timestamps();
         });
         CuratorMigrationHelper::migrateMediaField('services', 'cover_image_id');

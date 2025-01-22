@@ -13,6 +13,10 @@ class Service extends Model
         'title',
         'description',
         'cover_image_id',
+        'location',
+    ];
+    protected $casts = [
+        'location' => 'array',
     ];
 
     public function coverImage(): BelongsTo
