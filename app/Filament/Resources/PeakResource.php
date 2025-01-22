@@ -233,7 +233,7 @@ class PeakResource extends Resource
                             Section::make("")
                                 ->schema([
                                     Repeater::make('itinerary')
-                                        ->label('Itenarary')
+                                        ->label('Itinerary')
                                         ->relationship('itineraries')
                                         ->columns(7)
                                         ->schema([

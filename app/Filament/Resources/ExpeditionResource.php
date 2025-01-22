@@ -217,12 +217,11 @@ class ExpeditionResource extends Resource
                             ]),
                         Tabs\Tab::make('Itinerary')
                             ->icon('heroicon-m-calendar-date-range')
-
                             ->schema([
                                 Section::make("")
                                     ->schema([
                                         Repeater::make('itinerary')
-                                            ->label('Itenarary')
+                                            ->label('Itinerary')
                                             ->relationship('itineraries')
                                             ->columns(7)
                                             ->schema([
