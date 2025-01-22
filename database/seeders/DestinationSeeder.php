@@ -163,13 +163,6 @@ class DestinationSeeder extends Seeder
         ]);
 
         Destination::create([
-            'name' => 'Kathmandu',
-            'region_id' => 3,
-            'description' => 'The capital city of Nepal, known for its rich history, cultural heritage, and stunning temples.',
-            'location' => ['lat' => 27.7172, 'lng' => 85.3240],
-        ]);
-
-        Destination::create([
             'name' => 'Pokhara',
             'region_id' => 3,
             'description' => 'A picturesque city known as the gateway to the Annapurna region, offering stunning lake and mountain views.',
