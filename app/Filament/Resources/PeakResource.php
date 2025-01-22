@@ -83,6 +83,15 @@ class PeakResource extends Resource
                                             ]),
                                     ]),
                             ], [
+
+                                Section::make()
+                                    ->schema([
+                                        CuratorPicker::make('cover_image_id')
+                                            ->color('primary')
+                                            ->label('Cover Image')
+                                            ->hint('for peak page')
+                                            ->relationship('coverImage', 'id'),
+                                    ]),
                                 Section::make()
                                     ->schema([
                                         CuratorPicker::make('feature_image_id')
@@ -93,14 +102,7 @@ class PeakResource extends Resource
                                         Toggle::make('is_featured')
                                             ->default(false),
                                     ]),
-                                Section::make()
-                                    ->schema([
-                                        CuratorPicker::make('cover_image_id')
-                                            ->color('primary')
-                                            ->label('Cover Image')
-                                            ->hint('for peak page')
-                                            ->relationship('coverImage', 'id'),
-                                    ]),
+
                             ]),
                         ]),
                     Wizard\Step::make('Details')
