@@ -162,6 +162,97 @@ class DestinationSeeder extends Seeder
             'location' => ['lat' => 27.9616, 'lng' => 86.9334],
         ]);
 
+        Destination::create([
+            'name' => 'Kathmandu',
+            'region_id' => 3,
+            'description' => 'The capital city of Nepal, known for its rich history, cultural heritage, and stunning temples.',
+            'location' => ['lat' => 27.7172, 'lng' => 85.3240],
+        ]);
+
+        Destination::create([
+            'name' => 'Pokhara',
+            'region_id' => 3,
+            'description' => 'A picturesque city known as the gateway to the Annapurna region, offering stunning lake and mountain views.',
+            'location' => ['lat' => 28.2096, 'lng' => 83.9856],
+        ]);
+
+        Destination::create([
+            'name' => 'Nayapul',
+            'region_id' => 3,
+            'description' => 'The starting point of the Annapurna Base Camp trek, a small village located near Pokhara.',
+            'location' => ['lat' => 28.3646, 'lng' => 83.7785],
+        ]);
+
+        Destination::create([
+            'name' => 'Tikhedhunga',
+            'region_id' => 3,
+            'description' => 'A small village and the first trekking stop, surrounded by terraced fields and rhododendron forests.',
+            'location' => ['lat' => 28.3820, 'lng' => 83.7853],
+        ]);
+
+        Destination::create([
+            'name' => 'Ghorepani',
+            'region_id' => 3,
+            'description' => 'A popular stop on the trek known for its stunning sunrise views from Poon Hill.',
+            'location' => ['lat' => 28.4007, 'lng' => 83.6985],
+        ]);
+
+        Destination::create([
+            'name' => 'Poon Hill',
+            'region_id' => 3,
+            'description' => 'A famous viewpoint offering breathtaking sunrise views of the Annapurna and Dhaulagiri mountain ranges.',
+            'location' => ['lat' => 28.4013, 'lng' => 83.6931],
+        ]);
+
+        Destination::create([
+            'name' => 'Tadapani',
+            'region_id' => 3,
+            'description' => 'A scenic village with views of the Annapurna range and surrounded by rhododendron forests.',
+            'location' => ['lat' => 28.4235, 'lng' => 83.6761],
+        ]);
+
+        Destination::create([
+            'name' => 'Chhomrong',
+            'region_id' => 3,
+            'description' => 'A Gurung village known for its hospitality, stunning mountain views, and terraced farmlands.',
+            'location' => ['lat' => 28.4334, 'lng' => 83.8021],
+        ]);
+
+        Destination::create([
+            'name' => 'Himalaya',
+            'region_id' => 3,
+            'description' => 'A peaceful stop on the trek surrounded by forests and located in the Modi River valley.',
+            'location' => ['lat' => 28.5326, 'lng' => 83.8568],
+        ]);
+
+        Destination::create([
+            'name' => 'Machhapuchhre Base Camp',
+            'region_id' => 3,
+            'description' => 'A base camp offering stunning panoramic views of Machhapuchhre (Fishtail) and the Annapurna range.',
+            'location' => ['lat' => 28.5355, 'lng' => 83.8808],
+        ]);
+
+        Destination::create([
+            'name' => 'Annapurna Base Camp',
+            'region_id' => 3,
+            'description' => 'The highlight of the trek, situated at 4130m with breathtaking views of the Annapurna massif.',
+            'location' => ['lat' => 28.5382, 'lng' => 83.8844],
+        ]);
+
+        Destination::create([
+            'name' => 'Bamboo',
+            'region_id' => 3,
+            'description' => 'A small stop on the trek, surrounded by forests and offering a peaceful atmosphere.',
+            'location' => ['lat' => 28.5026, 'lng' => 83.8417],
+        ]);
+
+        Destination::create([
+            'name' => 'Jhinu Danda',
+            'region_id' => 3,
+            'description' => 'A village famous for its natural hot springs, providing a relaxing end to a challenging trek.',
+            'location' => ['lat' => 28.4563, 'lng' => 83.7994],
+        ]);
+
 
     }
 }
