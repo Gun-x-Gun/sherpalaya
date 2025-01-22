@@ -95,7 +95,7 @@ class DestinationResource extends Resource
                                 // ->editPolygon()
                                 // ->deleteLayer()
                                 ->setColor('#3388ff')
-                                ->setFilledColor('#cad9ec')
+                                ->setFilledColor('#cad9ec'),
                         ]),
 
                 ], [
