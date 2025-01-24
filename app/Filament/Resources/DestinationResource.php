@@ -4,7 +4,11 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\DestinationResource\Pages;
 use App\Filament\Resources\DestinationResource\RelationManagers;
+use App\Filament\Resources\DestinationResource\Widgets\DestinationExpeditionTable;
+use App\Filament\Resources\DestinationResource\Widgets\DestinationPeakTable;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationServiceTable;
+use App\Filament\Resources\DestinationResource\Widgets\DestinationToursTable;
+use App\Filament\Resources\DestinationResource\Widgets\DestinationTrekTable;
 use App\Models\Destination;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
@@ -42,11 +46,19 @@ class DestinationResource extends Resource
     {
         return $form
             ->schema([
-                Sidebar::make([
                     Section::make('')
+                        ->columns(5)
                         ->schema([
-                            TextInput::make('name'),
+                            TextInput::make('name')
+                                ->columnSpan(3),
+                            Select::make('region_id')
+                            ->relationship('region','name')
+                            ->native(false)
+                            ->preload()
+                            ->columnSpan(2)
+                            ->searchable(),
                             RichEditor::make('description')
+                            ->columnSpan(3)
                             ->toolbarButtons([
                                 // 'attachFiles',
                                 'blockquote',
@@ -65,7 +77,7 @@ class DestinationResource extends Resource
                             ]),
                             Map::make('location')
                                 ->label('Location')
-                                ->columnSpanFull()
+                                ->columnSpan(2)
                                 ->defaultLocation(latitude: 40.4168, longitude: -3.7038)
                                 ->extraStyles([
                                     'min-height: 50vh',
@@ -97,22 +109,9 @@ class DestinationResource extends Resource
                                 // ->deleteLayer()
                                 ->setColor('#3388ff')
                                 ->setFilledColor('#cad9ec'),
-                        ]),
-
-                ], [
-                    Section::make()
-                    ->schema([
-                        Select::make('region_id')
-                            ->relationship('region','name')
-                            ->native(false)
-                            ->preload()
-                            ->searchable(),
-
-                    ]),
-                    Section::make()
-                        ->schema([
 
                             CuratorPicker::make('destinationImages')
+                                ->columnSpanFull()
                                 ->multiple()
                                 ->label('Images')
                                 ->hint('related')
@@ -120,7 +119,7 @@ class DestinationResource extends Resource
 
                         ]),
 
-                ]),
+
 
             ]);
     }
@@ -177,6 +176,10 @@ class DestinationResource extends Resource
     {
         return [
             DestinationServiceTable::class,
+            DestinationToursTable::class,
+            DestinationExpeditionTable::class,
+            DestinationPeakTable::class,
+            DestinationTrekTable::class,
         ];
     }
 
