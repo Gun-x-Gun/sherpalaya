@@ -1,103 +1,140 @@
+{{-- <x-website-layout>
+
+    <div class="card--rounded-none image-full h-[80vh] bg-blue-100/50">
+        <figure class="h-[80vh] w-full">
+            <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="Trekking background image"
+                class="h-[80vh] w-full object-cover" />
+        </figure>
+        <div class="card-body relative ">
+            <div
+                class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                <div class=" max-w-[92%] 2xl:max-w-[70%]">
+
+                    <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">Explore Treks With
+                    </h2>
+                    <h5 class="card-title mb-2.5 text-primary text-3xl md:text-7xl uppercase font-extrabold ">
+                        Sherpalaya
+                    </h5>
+                    <p class="mb-4 2xl:text-xl text-white font-bold backdrop-blur-sm">A high-quality smartphone with the
+                        latest
+                        features for a premium user experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</x-website-layout> --}}
 <x-website-layout>
     {{-- top section --}}
+    <div class="bg-blue-100/50">
+        <div class="h-28 "></div>
+        <div class="2xl:mx-44 mx-4 text-left">
+            <h1
+                class="text-2xl lg:text-5xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
+                {{ $trek->title }}
+            </h1>
+            <p
+                class="text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
+                {{ $trek->description }} </p>
+        </div>
+        <div class="h-12 "></div>
 
-    <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1" class="">
-        <div id="scrollspy-scrollable-parent-1" class="">
+    </div>
 
-            <div class="card--rounded-none image-full h-[90vh] ">
-                <figure class="h-full w-full scale-100">
-                    <img src="{{ $trek->coverImage->url ?? asset('photos/DSCF2600.JPG') }}"
-                        alt="{{ $trek->title }} Cover Image" class="h-full w-full object-cover" />
-                </figure>
-                <div class="card-body relative">
-                    <div
-                        class="absolute 2xl:bottom-24 2xl:left-44  bottom-20 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                        <h2
-                            class="kbd text-white lg:text-8xl text-3xl tracking-tight font-bold rounded-none border-none shadow-none px-0">
-                            {{-- class="font-bold uppercase tracking-widest text-4xl sm:text-8xl text-primary overflow-hidden"> --}}
-                            {{ $trek->title }}
-                        </h2>
-                        {{-- top-section end --}}
-                        <div class="bg-transparent backdrop-blur-md">
-                            <div class="lg:grid lg:grid-cols-3 grid grid-cols-2 gap-5  md:text-xl">
-                                <div class=" sm:px-0 gap-0 flex flex-row  items-center">
-                                    <div class="">
-                                        <span
-                                            class="icon-[solar--calendar-outline] lg:size-12 size-8 text-accent"></span>
+    <div class="bg-white">
+        <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1" class="">
+            <div id="scrollspy-scrollable-parent-1" class="">
+
+                {{-- <div class="card--rounded-none image-full h-[90vh] ">
+                    <figure class="h-full w-full scale-100">
+                        <img src="{{ $trek->coverImage->url ?? asset('photos/DSCF2600.JPG') }}"
+                            alt="{{ $trek->title }} Cover Image" class="h-full w-full object-cover" />
+                    </figure>
+                    <div class="card-body relative">
+                        <div
+                            class="absolute 2xl:bottom-24 2xl:left-44  bottom-20 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                            <h2
+                                class="kbd text-white lg:text-8xl text-3xl tracking-tight font-bold rounded-none border-none shadow-none px-0">
+                                {{ $trek->title }}
+                            </h2>
+                            <div class="bg-transparent backdrop-blur-md">
+                                <div class="lg:grid lg:grid-cols-3 grid grid-cols-2 gap-5  md:text-xl">
+                                    <div class=" sm:px-0 gap-0 flex flex-row  items-center">
+                                        <div class="">
+                                            <span
+                                                class="icon-[solar--calendar-outline] lg:size-12 size-8 text-accent"></span>
+                                        </div>
+                                        <div class="flex flex-col pl-2 justify-center items-start">
+                                            <span class="text-primary font-bold"> Duration:</span>
+                                            <span class="text-primary-soft"> {{ $trek->duration . ' days' }}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="flex flex-col pl-2 justify-center items-start">
-                                        <span class="text-primary font-bold"> Duration:</span>
-                                        <span class="text-primary-soft"> {{ $trek->duration . ' days' }}
-                                        </span>
+                                    <div class=" sm:px-0 gap-0 flex flex-row  items-center">
+                                        <div class="">
+                                            <span
+                                                class="icon-[solar--notebook-broken] lg:size-12 size-8 text-accent"></span>
+                                        </div>
+                                        <div class="flex flex-col pl-2 justify-center items-start">
+                                            <span class="text-primary font-bold"> Grade:</span>
+                                            <span class="text-primary-soft"> {{ $trek->grade }}
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class=" sm:px-0 gap-0 flex flex-row  items-center">
-                                    <div class="">
-                                        <span
-                                            class="icon-[solar--notebook-broken] lg:size-12 size-8 text-accent"></span>
+                                    <div class=" sm:px-0 gap-0 flex flex-row  items-center">
+                                        <div class="">
+                                            <span
+                                                class="icon-[solar--calendar-search-linear] lg:size-12 size-8 text-accent"></span>
+                                        </div>
+                                        <div class="justify-center flex flex-col pl-2 items-start">
+                                            <span class="text-primary font-bold"> Best Time:</span>
+                                            <span class="text-primary-soft"> {{ $trek->best_time_for_trek }}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="flex flex-col pl-2 justify-center items-start">
-                                        <span class="text-primary font-bold"> Grade:</span>
-                                        <span class="text-primary-soft"> {{ $trek->grade }}
-                                        </span>
+                                    <div class=" sm:px-0 gap-0 flex flex-row items-center">
+                                        <div class="">
+                                            <span
+                                                class="icon-[solar--alt-arrow-up-bold] lg:size-12 size-8 text-accent"></span>
+                                        </div>
+                                        <div class="justify-center flex flex-col pl-2 items-start">
+                                            <span class="text-primary font-bold"> Highest Altitude :</span>
+                                            <span class="text-primary-soft"> {{ $trek->highest_altitude . ' m' }}
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class=" sm:px-0 gap-0 flex flex-row  items-center">
-                                    <div class="">
-                                        <span
-                                            class="icon-[solar--calendar-search-linear] lg:size-12 size-8 text-accent"></span>
+                                    <div class=" sm:px-0 gap-0 flex flex-row items-center">
+                                        <div class="">
+                                            <span
+                                                class="icon-[solar--alt-arrow-up-bold] lg:size-12 size-8 text-accent"></span>
+                                        </div>
+                                        <div class="justify-center flex flex-col pl-2 items-start">
+                                            <span class="text-primary font-bold"> Highest Altitude :</span>
+                                            <span class="text-primary-soft"> {{ $trek->highest_altitude . ' m' }}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="justify-center flex flex-col pl-2 items-start">
-                                        <span class="text-primary font-bold"> Best Time:</span>
-                                        <span class="text-primary-soft"> {{ $trek->best_time_for_trek }}
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class=" sm:px-0 gap-0 flex flex-row items-center">
-                                    <div class="">
-                                        <span
-                                            class="icon-[solar--alt-arrow-up-bold] lg:size-12 size-8 text-accent"></span>
-                                    </div>
-                                    <div class="justify-center flex flex-col pl-2 items-start">
-                                        <span class="text-primary font-bold"> Highest Altitude :</span>
-                                        <span class="text-primary-soft"> {{ $trek->highest_altitude . ' m' }}
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class=" sm:px-0 gap-0 flex flex-row items-center">
-                                    <div class="">
-                                        <span
-                                            class="icon-[solar--alt-arrow-up-bold] lg:size-12 size-8 text-accent"></span>
-                                    </div>
-                                    <div class="justify-center flex flex-col pl-2 items-start">
-                                        <span class="text-primary font-bold"> Highest Altitude :</span>
-                                        <span class="text-primary-soft"> {{ $trek->highest_altitude . ' m' }}
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class=" sm:px-0 gap-0 flex flex-row items-center">
-                                    <div class="">
-                                        <span
-                                            class="icon-[solar--alt-arrow-up-bold] lg:size-12 size-8 text-accent"></span>
-                                    </div>
-                                    <div class="justify-center flex flex-col pl-2 items-start">
-                                        <span class="text-primary font-bold"> Highest Altitude :</span>
-                                        <span class="text-primary-soft"> {{ $trek->highest_altitude . ' m' }}
-                                        </span>
+                                    <div class=" sm:px-0 gap-0 flex flex-row items-center">
+                                        <div class="">
+                                            <span
+                                                class="icon-[solar--alt-arrow-up-bold] lg:size-12 size-8 text-accent"></span>
+                                        </div>
+                                        <div class="justify-center flex flex-col pl-2 items-start">
+                                            <span class="text-primary font-bold"> Highest Altitude :</span>
+                                            <span class="text-primary-soft"> {{ $trek->highest_altitude . ' m' }}
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{-- info-section --}}
                     </div>
-                </div>
-            </div>
+                </div> --}}
 
 
 
-            {{-- info-section end --}}
+                {{-- info-section end --}}
 
-            {{-- <div class="bg-slate-500 ">
+                {{-- <div class="bg-slate-500 ">
                 <div class="lg:grid lg:grid-cols-2 gap-2 lg:max-w-[77%] 2xl:mx-44 md:text-xl">
                     <div
                         class="card sm:max-w-full rounded-none  bg-transparent shadow-none border-none items-center  lg:items-start ">
@@ -170,7 +207,7 @@
                     </div> --}}
 
 
-            {{-- <div class="card sm:max-w-full rounded-none mt-2 items-center md:px-0 md:items-end bg-transparent shadow-none border-none px-4"
+                {{-- <div class="card sm:max-w-full rounded-none mt-2 items-center md:px-0 md:items-end bg-transparent shadow-none border-none px-4"
                 dir="ltr">
                 <div class="flex flex-row items-center justify-center gap-2 ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -188,15 +225,37 @@
 
 
 
+                <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
+                    <figure class="h-[80vh] w-full">
+                        <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="Trekking background image"
+                            class="h-[80vh] w-full object-cover" />
+                    </figure>
+                    <div class="card-body relative">
+                        <div
+                            class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                            <div class=" max-w-[92%] 2xl:max-w-[70%]">
 
+                                <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">
+                                    Explore Treks With
+                                </h2>
+                                <h5
+                                    class="card-title mb-2.5 text-primary text-3xl md:text-7xl uppercase font-extrabold ">
+                                    Sherpalaya
+                                </h5>
+                                <p class="mb-4 2xl:text-xl text-white font-bold backdrop-blur-sm">A high-quality
+                                    trek experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            {{-- tabs --}}
-            {{-- scrollspy --}}
-            <div class="bg-white sticky top-0 z-10 mt-0">
-                <nav id="dropdown-navbar-collapse" data-scrollspy="#scrollspy-1"
-                    class="tabs tabs-bordered horizontal-scrollbar  2xl:mx-44 mx-4" aria-label="Scrollspy navbar"
-                    role="tablist" aria-orientation="horizontal">
-                    <button href="#description" type="button"
+                {{-- tabs --}}
+                {{-- scrollspy --}}
+                <div class="bg-white sticky top-15  z-10 mt-0">
+                    <nav id="dropdown-navbar-collapse" data-scrollspy="#scrollspy-1"
+                        class="tabs tabs-bordered horizontal-scrollbar  2xl:mx-44 mx-4" aria-label="Scrollspy navbar"
+                        role="tablist" aria-orientation="horizontal">
+                        {{-- <button href="#description" type="button"
                         class="tab active-tab:tab-active active scrollspy-active:text-bg-soft-primary "
                         id="tabs-scroll-item-1" data-tab="#tabs-scroll-1" aria-controls="#tabs-scroll-1" role="tab"
                         aria-selected="true">
@@ -204,207 +263,91 @@
                             <span class="icon-[tdesign--assignment-filled] size-5"></span>
                             Description
                         </div>
-                    </button>
-                    <button href="#costs_include" type="button"
-                        class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary" id="tabs-scroll-item-2"
-                        data-tab="#tabs-scroll-2" aria-controls="#tabs-scroll-2" role="tab" aria-selected="false">
-                        <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
-                            <span class="icon-[eva--done-all-fill] size-5"></span>
-                            Cost Include
-                        </div>
-                    </button>
-                    <button href="#costs_exclude" type="button"
-                        class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary" id="tabs-scroll-item-3"
-                        data-tab="#tabs-scroll-3" aria-controls="#tabs-scroll-3" role="tab" aria-selected="false">
-                        <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
-                            <span class="icon-[eva--alert-circle-fill] size-5"></span> Cost Exclude
-                        </div>
-                    </button>
-                    <button href="#itineraries" type="button"
-                        class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary " id="tabs-scroll-item-4"
-                        data-tab="#tabs-scroll-4" aria-controls="#tabs-scroll-4" role="tab"
-                        aria-selected="false">
-                        <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
-                            <span class="icon-[eva--calendar-fill] size-5"></span>
-                            Itinerary
-                        </div>
-                    </button>
-                    <button href="#key_highlights" type="button"
-                        class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary "
-                        id="tabs-scroll-item-5" data-tab="#tabs-scroll-5" aria-controls="#tabs-scroll-5"
-                        role="tab" aria-selected="false">
-                        <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
-                            <span class="icon-[eva--bulb-outline] size-5"></span>
-                            Key Highlights
-                        </div>
-                    </button>
-                    <button href="#essential_tips" type="button"
-                        class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary "
-                        id="tabs-scroll-item-6" data-tab="#tabs-scroll-6" aria-controls="#tabs-scroll-6"
-                        role="tab" aria-selected="false">
-                        <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
-                            <span class="icon-[eva--info-fill] size-5"></span>
-                            Essential Tips
-                        </div>
-                    </button>
-                    <button href="#destination" type="button"
-                        class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary "
-                        id="tabs-scroll-item-7" data-tab="#tabs-scroll-7" aria-controls="#tabs-scroll-7"
-                        role="tab" aria-selected="false">
-                        <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
-                            <span class="icon-[tdesign--activity-filled] size-5"></span>
-                            Destinations
-                        </div>
-                    </button>
-                </nav>
-            </div>
+                    </button> --}}
+                        <button href="#key_highlights" type="button"
+                            class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary "
+                            id="tabs-scroll-item-5" data-tab="#tabs-scroll-5" aria-controls="#tabs-scroll-5"
+                            role="tab" aria-selected="false">
+                            <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
+                                <span class="icon-[eva--bulb-outline] size-5"></span>
+                                Key Highlights
+                            </div>
+                        </button>
+                        <button href="#itineraries" type="button"
+                            class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary "
+                            id="tabs-scroll-item-4" data-tab="#tabs-scroll-4" aria-controls="#tabs-scroll-4"
+                            role="tab" aria-selected="false">
+                            <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
+                                <span class="icon-[eva--calendar-fill] size-5"></span>
+                                Itinerary
+                            </div>
+                        </button>
+                        <button href="#costs_include" type="button"
+                            class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary"
+                            id="tabs-scroll-item-2" data-tab="#tabs-scroll-2" aria-controls="#tabs-scroll-2"
+                            role="tab" aria-selected="false">
+                            <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
+                                <span class="icon-[eva--done-all-fill] size-5"></span>
+                                Cost Include
+                            </div>
+                        </button>
+                        <button href="#costs_exclude" type="button"
+                            class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary"
+                            id="tabs-scroll-item-3" data-tab="#tabs-scroll-3" aria-controls="#tabs-scroll-3"
+                            role="tab" aria-selected="false">
+                            <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
+                                <span class="icon-[eva--alert-circle-fill] size-5"></span> Cost Exclude
+                            </div>
+                        </button>
+                        <button href="#essential_tips" type="button"
+                            class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary "
+                            id="tabs-scroll-item-6" data-tab="#tabs-scroll-6" aria-controls="#tabs-scroll-6"
+                            role="tab" aria-selected="false">
+                            <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
+                                <span class="icon-[eva--info-fill] size-5"></span>
+                                Essential Tips
+                            </div>
+                        </button>
+                        <button href="#destination" type="button"
+                            class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary "
+                            id="tabs-scroll-item-7" data-tab="#tabs-scroll-7" aria-controls="#tabs-scroll-7"
+                            role="tab" aria-selected="false">
+                            <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
+                                <span class="icon-[tdesign--activity-filled] size-5"></span>
+                                Destinations
+                            </div>
+                        </button>
+                    </nav>
+                </div>
 
-            {{-- scrollspy body --}}
-            <div class="lg:grid grid-cols-3  2xl:mx-44 gap-2 max-w-full">
-                <div class=" mx-4 lg:grid col-span-2">
+                {{-- scrollspy body --}}
+                <div class="mx-4  2xl:mx-44 gap-2 max-w-full bg-gray-100/30">
+
+
+
                     {{-- key_highlights --}}
-                    <div id="key_highlights" class="card 2xl:max-w-full   rounded-none bg-transparent ">
-                        <div class="card-header">
-                            <h5 class="card-title text-primary  ">Key Highlights</h5>
+                    <div id="key_highlights" class="card 2xl:max-w-full rounded-none bg-blue-100/10 ">
+                        <div class="card-header flex gap-4 ">
+                            <span class="icon-[eva--bulb-outline] size-8 text-primary"></span>
+                            <h5 class="card-title text-accent uppercase font-extralight">Key Highlights
+                            </h5>
                         </div>
                         <div class="card-body ">
-                            <ul class="space-y-3 text-sm list-inside list-disc">
+                            <ul class="space-y-3 xs:text-sm md:text-lg list-inside list-disc">
                                 @foreach ($trek->key_highlights as $highlight)
-                                    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                                    <li
+                                        class="flex items-center space-x-3 rtl:space-x-reverse xl:max-w-[50%] text-justify">
                                         {{-- <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180"></span> --}}
-                                        <span class="text-secondary uppercase font-bold text-xl">
-                                            {{ $highlight . ':' }}
-                                            <p class="text-secondary normal-case text-justify font-light text-sm">
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                                                expedita
-                                                quos, in voluptates maxime non odit a deleniti sunt alias.
-                                            </p>
+                                        <span class="text-slate-700 font-light text-md first-line:font-bold">
+                                            {{ $highlight }}
                                         </span>
-
                                     </li>
                                 @endforeach
                             </ul>
                         </div>
                     </div>
 
-
-                    {{-- description --}}
-                    <div id="description" class="card 2xl:max-w-full   rounded-none bg-transparent">
-                        <div class="card-header">
-                            <h5 class="card-title text-primary  ">Overview</h5>
-                        </div>
-                        <div class="card-body text-black">
-                            <p>
-                                {{ $trek->description }}
-                            </p>
-                        </div>
-                        <div class="accordion divide-neutral/20 divide-y">
-                            <div class="accordion-item active" id="payment-arrow">
-                                <button
-                                    class="accordion-toggle inline-flex items-center gap-x-4 text-start text-secondary font-bold "
-                                    aria-controls="payment-arrow-collapse" aria-expanded="true">
-                                    <span
-                                        class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-                                    Regions/ Destinations
-                                </button>
-                                <div id="payment-arrow-collapse"
-                                    class="accordion-content w-full overflow-hidden transition-[height] duration-300 "
-                                    aria-labelledby="payment-arrow" role="region">
-                                    <div class="px-5 pb-4">
-                                        <p class="text-secondary font-normal">
-                                            Payment is taken during the checkout process when you pay for your order.
-                                            The order number that appears on the
-                                            confirmation screen indicates payment has been successfully processed.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item" id="delivery-arrow">
-                                <button
-                                    class="accordion-toggle inline-flex items-center gap-x-4 text-start text-secondary font-bold"
-                                    aria-controls="delivery-arrow-collapse" aria-expanded="false">
-                                    <span
-                                        class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-                                    Difficulty
-                                </button>
-                                <div id="delivery-arrow-collapse"
-                                    class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                                    aria-labelledby="delivery-arrow" role="region">
-                                    <div class="px-5 pb-4">
-                                        <p class="text-secondary font-normal">
-                                            For large products, we deliver your product via a third party logistics
-                                            company offering you the “room of
-                                            choice” scheduled delivery service. For small products, we offer free parcel
-                                            delivery.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item" id="cancel-arrow">
-                                <button
-                                    class="accordion-toggle inline-flex items-center gap-x-4 text-start text-secondary font-bold"
-                                    aria-controls="cancel-arrow-collapse" aria-expanded="false">
-                                    <span
-                                        class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
-                                    Can I cancel my order?
-                                </button>
-                                <div id="cancel-arrow-collapse"
-                                    class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                                    aria-labelledby="cancel-arrow" role="region">
-                                    <div class="px-5 pb-4">
-                                        <p class="text-secondary font-normal">
-                                            Scheduled delivery orders can be cancelled 72 hours prior to your selected
-                                            delivery date for full refund.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {{-- cost include --}}
-                    <div id="costs_include" class="card 2xl:max-w-full   rounded-none bg-transparent">
-                        <div class="card-header">
-                            <h5 class="card-title text-primary">Cost Include</h5>
-                        </div>
-                        <div class="card-body ">
-                            <ul class="space-y-3 text-sm">
-                                @foreach ($trek->costs_include as $cost_include)
-                                    <li class="flex items-center space-x-3 rtl:space-x-reverse">
-                                        <span
-                                            class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
-                                            <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180"></span>
-                                        </span>
-                                        <span class="text-black"> {{ $cost_include . ':' }} </span>
-                                        <p class="text-secondary">shfsajkfsdf</p>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-
-                    {{-- cost exclude --}}
-                    <div id="costs_exclude" class="card 2xl:max-w-full   rounded-none bg-transparent">
-                        <div class="card-header">
-                            <h5 class="card-title text-primary">Cost Exclude</h5>
-                        </div>
-                        <div class="card-body ">
-                            <ul class="space-y-3 text-sm">
-                                @foreach ($trek->costs_exclude as $cost_exclude)
-                                    <li class="flex items-center space-x-3 rtl:space-x-reverse">
-                                        <span
-                                            class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
-                                            <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180"></span>
-                                        </span>
-                                        <span class="text-black"> {{ $cost_exclude . ':' }} </span>
-                                        <p class="text-secondary">shfsajkfsdf</p>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    </div>
-
-                    {{-- itenaries --}}
+                    {{-- itineraries --}}
                     <div id="itineraries" class="card 2xl:max-w-full   rounded-none bg-transparent">
                         <div class="card-header">
                             <h5 class="card-title text-primary">Itinerary</h5>
@@ -436,9 +379,52 @@
                         </div>
                     </div>
 
+                    {{-- description --}}
+                    {{-- <div id="description" class="card 2xl:max-w-full   rounded-none bg-transparent">   
+                    </div> --}}
+
+                    {{-- cost include --}}
+                    <div id="costs_include" class="card 2xl:max-w-full   rounded-none bg-transparent">
+                        <div class="card-header">
+                            <h5 class="card-title text-primary">Cost Include</h5>
+                        </div>
+                        <div class="card-body ">
+                            <ul class="space-y-3 text-sm">
+                                @foreach ($trek->costs_include as $cost_include)
+                                    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                                        <span
+                                            class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+                                            <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180"></span>
+                                        </span>
+                                        <span class="text-black"> {{ $cost_include . ':' }} </span>
+                                        <p class="text-secondary">shfsajkfsdf</p>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
 
 
-
+                    {{-- cost exclude --}}
+                    <div id="costs_exclude" class="card 2xl:max-w-full   rounded-none bg-transparent">
+                        <div class="card-header">
+                            <h5 class="card-title text-primary">Cost Exclude</h5>
+                        </div>
+                        <div class="card-body ">
+                            <ul class="space-y-3 text-sm">
+                                @foreach ($trek->costs_exclude as $cost_exclude)
+                                    <li class="flex items-center space-x-3 rtl:space-x-reverse">
+                                        <span
+                                            class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+                                            <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180"></span>
+                                        </span>
+                                        <span class="text-black"> {{ $cost_exclude . ':' }} </span>
+                                        <p class="text-secondary">shfsajkfsdf</p>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
 
 
                     {{-- essential_tips --}}
@@ -482,13 +468,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="h-96"></div>
-                </div>
+                    <div class="h-[50%]"></div>
 
 
 
-                {{-- carousel  --}}
-                <div class=" ">
+                    {{-- carousel  --}}
+                    {{-- <div class=" ">
                     <div class="card-header  sticky top-10">
                         <h5 class="card-title text-primary">Images</h5>
                     </div>
@@ -535,9 +520,11 @@
                             </span>
                         </button>
                     </div>
+                </div> --}}
                 </div>
+                {{-- scrollspy-body -end --}}
             </div>
-            {{-- scrollspy-body -end --}}
         </div>
     </div>
+
 </x-website-layout>

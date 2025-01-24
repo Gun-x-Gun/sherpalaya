@@ -1,4 +1,4 @@
-<div class="bg-gray-300">
+<div class="bg-blue-100/40">
 
     <div class="h-16 ">
 

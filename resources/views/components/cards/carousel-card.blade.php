@@ -19,24 +19,85 @@
 {{-- md:mx-44 md:mt-72 max-w-[50%] w-full mt-72 ml-15  --}}
 {{-- text-center md:text-left md:pl-48 pt-[20rem] --}}
 
+<div class="bg-blue-100/50">
 
-<div class="card--rounded-none image-full h-screen">
-    <figure class="h-full w-full">
-        <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="Trekking background image" class="h-full w-full object-cover" />
-    </figure>
-    <div class="card-body relative">
-        <div
-            class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-            <h1
-                class="kbd text-white lg:text-7xl text-4xl tracking-tight font-bold rounded-none border-none shadow-none px-0">
-                {{-- class="font-bold uppercase tracking-widest text-4xl sm:text-8xl text-primary overflow-hidden"> --}}
-                Mt-kanchanjunga
-                {{-- {{ $trek->title }} --}}
-            </h1>
-            <p class="2xl:w-[70%] max-w-[80%] bg-transparent backdrop-blur-md text-xl lg:line-clamp-3 line-clamp-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint debitis atque necessitatibus iure distinctio placeat. Explicabo est rem id? Dolorum porro delectus quibusdam quasi veritatis voluptate, doloribus exercitationem sunt!
-            </p>
-           
+    <div class="card--rounded-none image-full h-full">
+        <figure class="h-[100vh] w-full">
+            <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="Trekking background image"
+                class="h-[100vh] w-full object-cover" />
+        </figure>
+        <div class="card-body relative">
+            <div
+                class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                <div class=" max-w-[92%] 2xl:max-w-[70%]">
+
+                    <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">Explore</h2>
+                    <h5 class="card-title mb-2.5 text-primary text-3xl md:text-7xl uppercase font-extrabold">Mt
+                        Kanchunjunga
+                    </h5>
+                    <p class="mb-4 2xl:text-xl text-white font-bold backdrop-blur-sm">A high-quality smartphone with the
+                        latest
+                        features for a premium user experience.</p>
+                    <div class="card-actions items-center mt-4">
+                        <a href="/trekking">
+                            <button class="btn btn-accent hover:btn-primary">
+                                Let's Go
+                                <span class="icon-[line-md--chevron-right-circle] size-5">
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+{{-- old --}}
+{{-- <div class="card-body relative">
+    <div
+        class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+        <div class="backdrop-blur-sm max-w-[92%] 2xl:max-w-[70%]">
+
+            <a href="/home">
+                <h1
+                    class="text-5xl md:text-5xl lg:text-8xl normal-case  text-primary  tracking-tight font-bold rounded-none 
+                 px-0 line-clamp-2  ">
+                    Mt-kanchanjunga
+                </h1>
+            </a>
+
+            <p class="2xl:w-[70%] max-w-[90%] bg-transparent  md:text-xl text-lg lg:line-clamp-3 line-clamp-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint debitis atque necessitatibus
+                iure
+                distinctio placeat. Explicabo est rem id? Dolorum porro delectus quibusdam quasi veritatis
+                voluptate, doloribus exercitationem sunt!
+            </p>
+        </div>
+    </div>
+</div> --}}
+
+
+{{-- <div style="background-image: url('{{ asset('photos/DSCF2513.JPG') }}');"
+    class="bg-cover object-center bg-center h-[100vh] w-full bg-fixed brightness-90">
+    <div class="static 2xl:mx-44">
+        <div class="card glass text-white h-[50%] absolute bottom-20 2xl:top-60 md:bottom-52 lg:bottom-20 ">
+            <div class="card-body  ">
+                <h2 class="card-title mb-2.5  text-white text-xl md:text-5xl uppercase font-bold">Explore</h2>
+                <h5 class="card-title mb-2.5 text-primary text-2xl md:text-7xl uppercase font-extrabold ml-4">Mt Kanchunjunga
+                </h5>
+                <strong class="mb-4 2xl:text-xl font-bold backdrop-blur-sm">A high-quality smartphone with the latest
+                    features for a premium user experience.</strong>
+                <div class="card-actions items-center">
+                    <a href="/trekking">
+                        <button class="btn btn-accent hover:btn-primary">
+                            Let's Go
+                            <span class="icon-[line-md--chevron-right-circle] size-5">
+                            </span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}

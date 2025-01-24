@@ -1,5 +1,5 @@
   <div style="background-image: url('{{ asset('photos/DSCF2513.JPG') }}');" class="bg-cover bg-center h-full w-full opacity-70">
-      <footer class="footer footer-center text-white rounded-none p-6 opacity-100" >
+      <footer class="footer footer-center text-white rounded-none p-6 opacity-100 sticky bottom-0" >
           <nav class="grid grid-flow-col gap-4 text-white">
               <a href="#" class="link link-hover">About</a>
               <a href="#" class="link link-hover">Contact</a>

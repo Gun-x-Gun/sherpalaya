@@ -12,6 +12,7 @@ class TrekLandingPage extends Component
 {
     public $treks;
     public $users;
+    public $trekImages;
 
     /**
      * Create a new component instance.
@@ -22,6 +23,8 @@ class TrekLandingPage extends Component
         // Fetch all treks or apply filters as needed
         $this->treks = Trek::all();
         $this->users = User::all();
+        // $this->trekImages = Trek::with('images')
+        //     ->get();
     }
 
     /**
@@ -33,7 +36,8 @@ class TrekLandingPage extends Component
             'components.trek.trek-landing-page',
             [
                 'treks' => $this->treks,
-                'users' => $this->users
+                'users' => $this->users,
+                'trekImages' => $this->trekImages
             ]
         );
     }

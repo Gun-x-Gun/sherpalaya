@@ -1,3 +1,4 @@
+ 
  <div id="carousel-container" class="relative top-0 m-0 w-full ">
      <div id="snap"
          data-carousel='{ "loadingClasses": "opacity-0", "isAutoPlay": true, "speed": 100000, "isCentered": true, "dotsItemClasses": "carousel-box"}'
@@ -22,7 +23,7 @@
                  </div>
              </div>
          </div>
-         <div class="carousel-pagination absolute bottom-8 end-0 start-0 flex justify-center gap-3"></div>
+         <div class="carousel-pagination absolute bottom-8 end-0 start-0 flex justify-center gap-3 "></div>
 
          <!-- Previous Slide -->
          <button type="button" class="carousel-prev ">

@@ -2,6 +2,7 @@
 
 use App\Models\Expedition;
 use App\Models\Peak;
+use App\Models\Tour;
 use App\Models\Trek;
 use Illuminate\Support\Facades\Route;
 
@@ -53,16 +54,22 @@ Route::get('/trek/{id}', function ($id) {
 })->name('show_trek');
 
 //expedition
-Route::get('/expeditions/{id}', function ($id) {
+Route::get('/expedition/{id}', function ($id) {
     $expedition = Expedition::findOrFail($id);
     return view('website.id_pages.show_expedition', compact('expedition'));
 })->name('show_expedition');
 
 //peak
-Route::get('/peaks/{id}', function ($id) {
+Route::get('/peak/{id}', function ($id) {
     $peak = Peak::findOrFail($id);
     return view('website.id_pages.show_peak', compact('peak'));
 })->name('show_peak');
+
+//tour
+Route::get('/tour/{id}', function ($id) {
+    $peak = Tour::findOrFail($id);
+    return view('website.id_pages.show_peak', compact('tour'));
+})->name('show_tour');
 
 // Route::get('/home', function(){
 //     return view('website.home');

@@ -53,7 +53,7 @@ export default {
         themes: [
           {
             mytheme: {
-              primary: "#000000",
+              primary: "#00008B",
               secondary: "#00008B",
               accent: "#A9A9A9",
             //   neutral: "#3d4451",
