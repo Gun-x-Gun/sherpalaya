@@ -10,6 +10,10 @@ class ViewTour extends ViewRecord
 {
     protected static string $resource = TourResource::class;
 
+    public function getTitle(): string
+    {
+        return $this->getRecord()->title; // Assuming the Region model has a "name" field
+    }
     protected function getHeaderActions(): array
     {
         return [
