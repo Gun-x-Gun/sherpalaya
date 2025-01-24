@@ -2,10 +2,13 @@
 
 namespace App\Filament\Resources\RegionResource\RelationManagers;
 
+use App\Filament\Resources\DestinationResource;
+use App\Models\Destination;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
+use Filament\Tables\Columns\Layout\Split;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -29,9 +32,19 @@ class DestinationsRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('name')
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('location'),
+                Split::make([
+                    Tables\Columns\TextColumn::make('name'),
+                ]),
             ])
+            ->contentGrid([
+                'xl' => 3,
+                'md' => 2,
+                'sm' => 1,
+            ])
+            ->paginated(false)
+            ->recordUrl(fn (Destination $record) =>
+                    DestinationResource::getUrl('view', ['record' => $record])
+            )
             ->filters([
                 //
             ])
