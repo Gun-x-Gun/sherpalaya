@@ -11,6 +11,7 @@ use Dotswan\MapPicker\Fields\Map;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -63,6 +64,16 @@ class ServiceResource extends Resource
                             'underline',
                             'undo',
                         ]),
+                        Section::make('Destinations')
+                                    ->schema([
+                                        Select::make('destinations')
+                                            ->hiddenLabel()
+                                            ->multiple()
+                                            ->relationship(titleAttribute: 'name')
+                                            ->preload()
+                                            ->searchable(['name', 'location'])
+                                            ->native(false),
+                                    ]),
 
 
                         Map::make('location')
@@ -99,6 +110,7 @@ class ServiceResource extends Resource
                             // ->deleteLayer()
                             ->setColor('#3388ff')
                             ->setFilledColor('#cad9ec'),
+
                     ]),
                 ],[
                     Section::make()

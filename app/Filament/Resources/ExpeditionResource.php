@@ -55,7 +55,8 @@ class ExpeditionResource extends Resource
                                         ->schema([
                                             TextInput::make('title')
                                                 ->columnSpan(3)
-                                                ->required(),
+                                                ->required()
+                                                ->hiddenOn('view'),
                                             Select::make('region_id')
                                                 ->label('Region')
                                                 ->relationship('region', 'name')

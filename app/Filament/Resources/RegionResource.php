@@ -5,7 +5,11 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\RegionResource\Pages;
 use App\Filament\Resources\RegionResource\RelationManagers;
 use App\Filament\Resources\RegionResource\RelationManagers\DestinationsRelationManager;
+use App\Filament\Resources\RegionResource\Widgets\RegionExpeditionTable;
+use App\Filament\Resources\RegionResource\Widgets\RegionMultiWidget;
+use App\Filament\Resources\RegionResource\Widgets\RegionPeakTable;
 use App\Filament\Resources\RegionResource\Widgets\RegionStats;
+use App\Filament\Resources\RegionResource\Widgets\RegionTrekTable;
 use App\Models\Region;
 use Filament\Forms;
 use Filament\Forms\Components\Section;
@@ -83,6 +87,10 @@ class RegionResource extends Resource
     {
         return [
             RegionStats::class,
+            RegionExpeditionTable::class,
+            RegionPeakTable::class,
+            RegionTrekTable::class,
+            RegionMultiWidget::class,
         ];
     }
 

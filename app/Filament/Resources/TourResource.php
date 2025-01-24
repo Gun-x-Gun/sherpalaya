@@ -55,7 +55,8 @@ class TourResource extends Resource
                                 Section::make('')
                                     ->columns(2)
                                     ->schema([
-                                        TextInput::make('title'),
+                                        TextInput::make('title')
+                                        ->hiddenOn('view'),
                                         Select::make('type')
                                             ->options(TourType::class)
                                             ->native(false),

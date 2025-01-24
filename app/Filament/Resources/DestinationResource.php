@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\DestinationResource\Pages;
 use App\Filament\Resources\DestinationResource\RelationManagers;
+use App\Filament\Resources\DestinationResource\Widgets\DestinationServiceTable;
 use App\Models\Destination;
 use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
@@ -170,6 +171,12 @@ class DestinationResource extends Resource
     {
         return [
             //
+        ];
+    }
+    public static function getWidgets(): array
+    {
+        return [
+            DestinationServiceTable::class,
         ];
     }
 
