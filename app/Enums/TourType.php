@@ -16,7 +16,7 @@ enum TourType: string implements HasLabel
     public function getLabel(): string
     {
         return match ($this){
-            self::SIGHTSEEING => 'Sightseeing(Helicopter/Vehicle)',
+            self::SIGHTSEEING => 'Sightseeing',
             self::CYCLING => 'Cycling',
             self::RUNNING => 'Running',
             self::PHOTOGRAPHY => 'Photography',
