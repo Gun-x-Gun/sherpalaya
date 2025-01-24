@@ -19,6 +19,16 @@ class Service extends Model
         'location' => 'array',
     ];
 
+    public function destinations()
+    {
+        return $this->belongsToMany(
+            Destination::class,
+            'destination_service'
+        )->using(DestinationService::class)
+            ->withPivot([
+                'order'
+            ]);
+    }
     public function coverImage(): BelongsTo
     {
         return CuratorModelHelper::belongsTo($this, 'cover_image_id');

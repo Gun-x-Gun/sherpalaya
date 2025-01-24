@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use App\Filament\Resources\DestinationResource\Widgets\DestinationServiceTable;
 use App\Helpers\CuratorModelHelper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Destination extends Model
 {
@@ -29,6 +31,17 @@ class Destination extends Model
     public function itinerary()
     {
         return $this->belongsTo(Region::class);
+    }
+
+    public function services(): BelongsToMany
+    {
+        return $this->belongsToMany(
+            Service::class,
+        'destination_service'
+        )->using(DestinationService::class)
+        ->withPivot([
+            'order'
+        ]);
     }
 
     public function treks()
