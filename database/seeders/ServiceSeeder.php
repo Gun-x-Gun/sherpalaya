@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Destination;
 use App\Models\Service;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -77,7 +78,14 @@ class ServiceSeeder extends Seeder
         ];
 
         foreach ($services as $serviceData) {
-            Service::create($serviceData);
+           $serv = Service::create($serviceData);
+           $serv->destinations()->sync(
+            Destination::inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
         }
     }
     }
