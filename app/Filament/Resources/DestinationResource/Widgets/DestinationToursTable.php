@@ -24,7 +24,8 @@ class DestinationToursTable extends BaseWidget
     }
     protected function getTableHeading(): string
     {
-        return "Tours";
+        return "in this destination";
+
     }
     public function table(Table $table): Table
     {

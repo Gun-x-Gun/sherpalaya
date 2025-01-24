@@ -8,7 +8,10 @@ use Kenepa\MultiWidget\MultiWidget;
 class DestinationMultiWidget extends MultiWidget
 {
     public array $widgets = [
-        DestinationToursTable::class,
         DestinationServiceTable::class,
+        DestinationToursTable::class,
+        DestinationExpeditionTable::class,
+        DestinationPeakTable::class,
+        DestinationTrekTable::class,
     ];
 }
