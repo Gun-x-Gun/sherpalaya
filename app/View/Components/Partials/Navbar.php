@@ -2,18 +2,27 @@
 
 namespace App\View\Components\Partials;
 
+use App\Models\Expedition;
+use App\Models\Peak;
+use App\Models\Region;
+use App\Models\Tour;
+use App\Models\Trek;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class Navbar extends Component
 {
-    /**
-     * Create a new component instance.
-     */
+    public $navTours;
+    public $navRegions;
     public function __construct()
     {
-        //
+        $this->navRegions = Region::with([
+            'treks',
+            'peaks',
+            'expeditions',
+        ])->get();
+        $this->navTours = Tour::all()->groupBy('type');
     }
 
     /**
@@ -21,6 +30,9 @@ class Navbar extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.partials.navbar');
+        return view('components.partials.navbar', [
+            'navRegions' => $this->navRegions,
+            'navTours' => $this->navTours,
+        ]);
     }
 }

@@ -7,16 +7,16 @@
     </div>
     <div class="navbar-center max-xl:hidden tracking-wide">
         <ul class="menu menu-horizontal p-0 font-medium bg-transparent">
-            <li class="text-slate-900"><a href="/home" @class(['active' => request()->route()->getName() == 'website.home'])>Home</a></li>
-            <li class="text-slate-900"><a href="/about" @class(['active' => request()->route()->getName() == 'website.about'])>About</a></li>
+            <li class="text-slate-900"><a href="/home" @class(['underline decoration-wavy text-primary' => request()->route()->getName() == 'website.home'])>Home</a></li>
+            <li class="text-slate-900"><a href="/about" @class(['underline decoration-wavy text-primary' => request()->route()->getName() == 'website.about'])>About</a></li>
             <li class="text-slate-900"><a href="/trekking" @class([
-                'active' => request()->route()->getName() == 'website.trekking',
+                'underline decoration-wavy text-primary' => request()->route()->getName() == 'website.trekking',
             ])>Trekking</a></li>
-            <li class="text-slate-900"><a href="/peaks" @class(['active' => request()->route()->getName() == 'website.peaks'])>Peaks</a></li>
+            <li class="text-slate-900"><a href="/peaks" @class(['underline decoration-wavy text-primary' => request()->route()->getName() == 'website.peaks'])>Peaks</a></li>
             <li class="text-slate-900"><a href="/expeditions" @class([
-                'active' => request()->route()->getName() == 'website.expeditions',
+                'underline decoration-wavy text-primary' => request()->route()->getName() == 'website.expeditions',
             ])>Expeditions</a></li>
-            <div class="dropdown relative inline-flex [--trigger:hover] rtl:[--placement:bottom-end] bg-transparent">
+            <div class="dropdown relative inline-flex  rtl:[--placement:bottom-end] bg-transparent">
                 <li class="text-slate-900"><a href="/tour">Tours</a></li>
                 <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full bg-none"
                     role="menu" aria-orientation="vertical" aria-labelledby="dropdown-hover">
@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <li class="text-slate-900"><a href="/contact" @class([
-                'active' => request()->route()->getName() == 'website.contact',
+                'underline decoration-wavy text-primary' => request()->route()->getName() == 'website.contact',
             ])>Contact</a></li>
         </ul>
     </div>
@@ -228,7 +228,7 @@
     }
 </script> --}}
 
-<nav id="navbar" class="navbar rounded-none shadow fixed top-0 z-30 h-15">
+{{-- <nav id="navbar" class="navbar rounded-none shadow fixed top-0 z-30 h-15">
     <div class="w-full xl:flex xl:items-center xl:gap-4">
         <div class="flex items-center justify-between">
             <div class="navbar-start items-center justify-between max-xl:w-full 2xl:ml-44 mx-4">
@@ -253,18 +253,18 @@
             <div class="2xl:mr-40 mx-4">
                 <ul class="menu xl:menu-horizontal gap-2 p-0 text-base max-xl:mt-2 font-medium bg-transparent">
                     <li class="text-slate-900 hover:bg-accent rounded-lg text-md"><a href="/home"
-                            @class(['active' => request()->route()->getName() == 'website.home'])>Home</a></li>
+                            @class(['underline decoration-wavy text-primary' => request()->route()->getName() == 'website.home'])>Home</a></li>
                     <li class="text-slate-900 hover:bg-accent rounded-lg text-md"><a href="/about"
-                            @class(['active' => request()->route()->getName() == 'website.about'])>About</a></li>
+                            @class(['underline decoration-wavy text-primary' => request()->route()->getName() == 'website.about'])>About</a></li>
                     <li class="text-slate-900 hover:bg-accent rounded-lg text-md"><a href="/trekking"
                             @class([
-                                'active' => request()->route()->getName() == 'website.trekking',
+                                'underline decoration-wavy text-primary' => request()->route()->getName() == 'website.trekking',
                             ])>Trekking</a></li>
                     <li class="text-slate-900 hover:bg-accent rounded-lg text-md"><a href="/peaks"
-                            @class(['active' => request()->route()->getName() == 'website.peaks'])>Peaks</a></li>
+                            @class(['underline decoration-wavy text-primary' => request()->route()->getName() == 'website.peaks'])>Peaks</a></li>
                     <li class="text-slate-900 hover:bg-accent rounded-lg text-md"><a href="/expeditions"
                             @class([
-                                'active' => request()->route()->getName() == 'website.expeditions',
+                                'underline decoration-wavy text-primary' => request()->route()->getName() == 'website.expeditions',
                             ])>Expeditions</a></li>
                     <li
                         class="dropdown relative inline-flex [--trigger:hover] rtl:[--placement:bottom-end] text-slate-900 hover:bg-accent rounded-lg text-md ">
@@ -292,7 +292,7 @@
                     </li>
                     <li class="text-slate-900 hover:bg-accent rounded-lg text-md"><a href="/contact"
                             @class([
-                                'active' => request()->route()->getName() == 'website.contact',
+                                'underline decoration-wavy text-primary' => request()->route()->getName() == 'website.contact',
                             ])>Contact</a></li>
                 </ul>
             </div>
@@ -309,7 +309,7 @@
             </button>
         </div>
         <div class="drawer-body justify-center pb-6">
-            <ul class="menu space-y-0.5 p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 md:text-2xl">
+            <ul class="menu space-y-0.5 p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 xl:text-2xl">
                 <li>
                     <a href="/home">
                         <span class="icon-[tabler--home] size-6"></span>
@@ -402,9 +402,9 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> --}}
 
-<script>
+{{-- <script>
     const scrollableElement = document.body; //document.getElementById('scrollableElement');
     const navbar = document.getElementById('navbar');
 
@@ -432,4 +432,395 @@
     //     }
     //     return event.deltaY < 0;
     // }
+</script> --}}
+
+<header id="navbar"
+    class="fixed top-0 z-50  flex w-full flex-wrap py-2 text-lg xl:flex-nowrap xl:justify-start xl:py-0 bg-transparent">
+    <nav  class="w-full  2xl:mx-44 mx-4" aria-label="Global">
+        <div class=" relative xl:flex xl:items-center">
+            <div class="flex items-center justify-between">
+                <a class="link text-base-content link-neutral texl-2xl font-semibold no-underline" href="#">
+                    Sherpalaya
+                </a>
+                {{-- <div class="xl:hidden">
+                    <button type="button" class="collapse-toggle btn btn-outline btn-secondary btn-sm btn-square"
+                        data-collapse="#navbar-mega-menu-click" aria-controls="navbar-mega-menu-click"
+                        aria-label="Toggle navigation">
+                        <span class="icon-[tabler--menu-2] collapse-open:hidden size-4"></span>
+                        <span class="icon-[tabler--x] collapse-open:block hidden size-4"></span>
+                    </button>
+                </div> --}}
+
+                <div class="xl:hidden">
+                    <button type="button" class="btn btn-transparent border-none" aria-haspopup="dialog"
+                        aria-expanded="false" aria-controls="overlay-end-example" data-overlay="#overlay-end-example">
+                        <span class="icon-[tabler--menu-2] collapse-open:hidden size-5"></span>
+                        <span class="icon-[tabler--x] collapse-open:block hidden size-5"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="navbar-mega-menu-click"
+                class="collapse hidden grow basis-full overflow-hidden rounded-lg transition-all duration-300  xl:block ">
+                <div
+                    class="flex flex-col rounded-lg max-xl:mt-3 max-xl:border max-xl:p-2 xl:flex-row xl:items-center xl:justify-end gap-2 xl:ps-5 xl:pe-0.5 xl:py-0.5">
+                    <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent ">
+                        <li class=" hover:bg-accent rounded-lg "><a href="/home" @class([
+                            'underline decoration-wavy text-primary' =>
+                                request()->route()->getName() == 'website.home',
+                        ])>Home</a>
+                        </li>
+                        <li class=" hover:bg-accent rounded-lg ">
+                            <a href="/about" @class([
+                                'underline decoration-wavy text-primary' =>
+                                    request()->route()->getName() == 'website.about',
+                            ])>
+                                About
+                            </a>
+                        </li>
+                    </ul>
+                    <div
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute] ">
+                        <button type="button"
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content max-xl:px-3"
+                            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                            Expedition
+                            <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none 
+                        transition-[opacity,margin] duration-[0.1ms] before:absolute "
+                            role="menu" aria-orientation="vertical">
+                            <ul
+                                class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow ">
+                                <div class="2xl:grid grid-cols-3">
+                                    @foreach ($navRegions as $navRegion)
+                                        @if ($navRegion->expeditions->isNotEmpty())
+                                            <li>
+                                                <a href="#"
+                                                    class="menu font-bold text-primary">{{ $navRegion->name }}
+                                                    Region</a>
+                                                <ul class="menu">
+                                                    @foreach ($navRegion->expeditions as $expedition)
+                                                        <li class=" text-slate-500 text-sm hover:text-primary">
+                                                            <a
+                                                                href="{{ route('show_expedition', $expedition->id) }}">{{ $expedition->title }}</a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
+                        <button type="button"
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content max-xl:px-3"
+                            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                            Treks
+                            <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
+                            role="menu" aria-orientation="vertical">
+                            <ul class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
+                                <div class="2xl:grid grid-cols-3">
+                                    @foreach ($navRegions as $navRegion)
+                                        @if ($navRegion->treks->isNotEmpty())
+                                            <li>
+                                                <a href="#"
+                                                    class="menu font-bold text-primary">{{ $navRegion->name }}
+                                                    Region</a>
+                                                <ul class="menu">
+                                                    @foreach ($navRegion->treks as $trek)
+                                                        <li class="text-slate-500 text-sm hover:text-primary">
+                                                            <a
+                                                                href="{{ route('show_trek', $trek->id) }}">{{ $trek->title }}</a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
+                        <button type="button"
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content max-xl:px-3"
+                            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                            Peaks
+                            <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
+                            role="menu" aria-orientation="vertical">
+                            <ul class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
+                                <div class="2xl:grid grid-cols-3">
+
+                                    @foreach ($navRegions as $navRegion)
+                                        @if ($navRegion->peaks->isNotEmpty())
+                                            <li>
+                                                <a href="#"
+                                                    class="menu font-bold text-primary">{{ $navRegion->name }}
+                                                    Region</a>
+                                                <ul class="menu">
+                                                    @foreach ($navRegion->peaks as $peak)
+                                                        <li class="text-slate-500 hover:text-primary text-sm">
+                                                            <a
+                                                                href="{{ route('show_peak', $peak->id) }}">{{ $peak->title }}</a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
+                        <button type="button"
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content max-xl:px-3"
+                            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                            Tours
+                            <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-lg p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
+                            role="menu" aria-orientation="vertical">
+                            <ul
+                                class="menu xl:menu-horizontal rounded-none w-full max-xl:gap-4 max-xl:border xl:shadow">
+                                <div class="2xl:grid grid-cols-3">
+                                    @foreach ($navTours as $type => $tours)
+                                        @php
+                                            $typeLabel = \App\Enums\TourType::tryFrom($type)?->getLabel() ?? 'Unknown';
+                                        @endphp
+                                        @if ($tours->isNotEmpty())
+                                            <li class="items-start">
+                                                <a href="#"
+                                                    class="menu font-bold text-primary">{{ $typeLabel }}</a>
+                                                @foreach ($tours as $tour)
+                                                    <ul class="menu pl-4">
+                                                        <li class="text-slate-500 hover:text-primary text-wrap text-sm">
+                                                            <a
+                                                                href="{{ route('show_tour', $tour->id) }}">{{ $tour->title }}</a>
+                                                        </li>
+                                                    </ul>
+                                                @endforeach
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </div>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent">
+                        <li class="text-slate-900 hover:bg-accent rounded-lg text-md"><a href="/contact"
+                                @class([
+                                    'underline decoration-wavy text-primary' =>
+                                        request()->route()->getName() == 'website.contact',
+                                ])>Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+</header>
+<div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden xl:hidden "
+    role="dialog" tabindex="-1">
+    <div class="drawer-body px-2 ">
+        <div class="drawer-header">
+            <h3 class="drawer-title">Menu</h3>
+            <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close"
+                data-overlay="#overlay-end-example">
+                <span class="icon-[tabler--x] size-4 "></span>
+            </button>
+        </div>
+        <div class="drawer-body justify-start pb-6 px-0">
+            <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5">
+                <li class=" hover:bg-accent rounded-lg "><a href="/home" @class([
+                    'underline decoration-wavy text-primary' =>
+                        request()->route()->getName() == 'website.home',
+                ])>
+                        <span class="icon-[tabler--layout-navbar] size-5"></span>
+                        Home
+                    </a>
+                </li>
+                <li class=" hover:bg-accent rounded-lg "><a href="/about" @class([
+                    'underline decoration-wavy text-primary' =>
+                        request()->route()->getName() == 'website.about',
+                ])>
+                        <span class="icon-[tabler--layout-navbar] size-5"></span>
+                        About
+                    </a>
+                </li>
+                <li class="nested-collapse-wrapper">
+                    <a class="collapse-toggle nested-collapse" id="expedition-collapse"
+                        data-collapse="#expedition-collapse-menu">
+                        <span class="icon-[tabler--layout-navbar] size-5"></span>
+                        Expeditions
+                        <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
+                    </a>
+                    <ul id="expedition-collapse-menu"
+                        class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
+                        aria-labelledby="expedition-collapse">
+                        @foreach ($navRegions as $navRegion)
+                            @if ($navRegion->expeditions->isNotEmpty())
+                                <li class="px-0">
+                                    <a href="#" class="menu font-bold text-primary">{{ $navRegion->name }}
+                                        Region</a>
+                                    <ul class="menu ">
+                                        @foreach ($navRegion->expeditions as $expedition)
+                                            <li class=" text-slate-500 text-sm hover:text-primary ">
+                                                <a
+                                                    href="{{ route('show_expedition', $expedition->id) }}">{{ $expedition->title }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </li>
+                <li class="nested-collapse-wrapper">
+                    <a class="collapse-toggle nested-collapse" id="trek-page-collapse"
+                        data-collapse="#trek-page-collapse-menu">
+                        <span class="icon-[tabler--box-multiple] size-5"></span>
+                        Treks
+                        <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
+                    </a>
+                    <ul id="trek-page-collapse-menu"
+                        class="collapse hidden w-auto overflow-hidden transition-[height] duration-300"
+                        aria-labelledby="trek-page-collapse">
+                        @foreach ($navRegions as $navRegion)
+                            @if ($navRegion->treks->isNotEmpty())
+                                <li>
+                                    <a href="#" class="menu font-bold text-primary">{{ $navRegion->name }}
+                                        Region</a>
+                                    <ul class="menu">
+                                        @foreach ($navRegion->treks as $trek)
+                                            <li class="text-slate-500 text-sm hover:text-primary">
+                                                <a href="{{ route('show_trek', $trek->id) }}">{{ $trek->title }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </li>
+                <li class="nested-collapse-wrapper">
+                    <a class="collapse-toggle nested-collapse" id="peak-page-collapse"
+                        data-collapse="#peak-page-collapse-menu">
+                        <span class="icon-[tabler--box-multiple] size-5"></span>
+                        Peaks
+                        <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
+                    </a>
+                    <ul id="peak-page-collapse-menu"
+                        class="collapse hidden w-auto overflow-hidden transition-[height] duration-300"
+                        aria-labelledby="peak-page-collapse">
+                        @foreach ($navRegions as $navRegion)
+                            @if ($navRegion->peaks->isNotEmpty())
+                                <li>
+                                    <a href="#" class="menu font-bold text-primary">{{ $navRegion->name }}
+                                        Region</a>
+                                    <ul class="menu">
+                                        @foreach ($navRegion->peaks as $peak)
+                                            <li class="text-slate-500 hover:text-primary text-sm">
+                                                <a href="{{ route('show_peak', $peak->id) }}">{{ $peak->title }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </li>
+                <li class="nested-collapse-wrapper">
+                    <a class="collapse-toggle nested-collapse" id="tour-page-collapse"
+                        data-collapse="#tour-page-collapse-menu">
+                        <span class="icon-[tabler--box-multiple] size-5"></span>
+                        Tours
+                        <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
+                    </a>
+                    <ul id="tour-page-collapse-menu"
+                        class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
+                        aria-labelledby="tour-page-collapse">
+                        @foreach ($navTours as $type => $tours)
+                            @php
+                                $typeLabel = \App\Enums\TourType::tryFrom($type)?->getLabel() ?? 'Unknown';
+                            @endphp
+                            @if ($tours->isNotEmpty())
+                                <li class="items-start">
+                                    <a href="#" class="menu font-bold text-primary">{{ $typeLabel }}</a>
+                                    @foreach ($tours as $tour)
+                                        <ul class="menu py-0">
+                                            <li class="text-slate-500 hover:text-primary  text-sm">
+                                                <a href="{{ route('show_tour', $tour->id) }}">{{ $tour->title }}</a>
+                                            </li>
+                                        </ul>
+                                    @endforeach
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </li>
+                <li class="text-slate-900 hover:bg-accent rounded-lg text-md"><a href="/contact"
+                        @class([
+                            'underline decoration-wavy text-primary' =>
+                                request()->route()->getName() == 'website.contact',
+                        ])>
+                        <span class="icon-[tabler--layout-navbar] size-5"></span>
+                        Contact
+                    </a>
+                </li>
+                <li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const scrollableElement = document.body; // document.getElementById('scrollableElement');
+    const navbar = document.getElementById('navbar');
+
+    // Add smooth transition for background and visibility
+    navbar.style.transition = "background 0.5s ease, transform 0.5s ease";
+
+    scrollableElement.addEventListener('wheel', checkScrollDirection);
+
+    function checkScrollDirection(event) {
+        const currentScroll = window.pageYOffset;
+
+        // Change background based on position
+        if (currentScroll === 0) {
+            navbar.style.background = "transparent"; // At the top
+        } else {
+            navbar.style.background = "rgba(255, 255, 255, 1)"; // bg-slate-100
+        }
+
+        // Show or hide the navbar based on scroll direction
+        if (checkScrollDirectionIsUp(event)) {
+            navbar.style.transform = "translateY(0)"; // Show navbar
+        } else {
+            navbar.style.transform = "translateY(-100%)"; // Hide navbar
+        }
+    }
+
+    function checkScrollDirectionIsUp(event) {
+        if (event.wheelDelta) {
+            return event.wheelDelta > 0;
+        }
+        return event.deltaY < 0;
+    }
 </script>
