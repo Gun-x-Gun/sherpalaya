@@ -1,7 +1,7 @@
-<div class="bg-gray-300">
+<div class="bg-blue-100/50">
     <div class="h-20"></div>
     <div
-        class="accordion accordion-shadow max-w-full grid grid-cols-1mx-4 gap-2 2xl:mx-44 mx-4 text-justify bg-gray-200">
+        class="accordion accordion-shadow max-w-full grid grid-cols-1mx-4 gap-2 2xl:mx-44 mx-4 text-justify bg-blue-100/10">
         <div class="accordion-item active rounded-none bg-transparent" id="payment-arrow-right">
             <button class="accordion-toggle inline-flex items-center justify-between text-start"
                 aria-controls="payment-arrow-right-collapse" aria-expanded="true">

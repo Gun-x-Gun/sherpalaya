@@ -46,6 +46,7 @@ class Expedition extends Model
     {
         return $this->morphMany(Itinerary::class, 'itinerable');
     }
+    
     public function destinations()
     {
         return $this->belongsToMany(

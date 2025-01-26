@@ -1,10 +1,7 @@
 {{-- <div class="bg-slate-300"> --}}
 
 
-{{-- <x-breadcrumb :breadcrumbs="[
-        ['name' => 'Home', 'url' => url('/home')],
-        ['name' => 'Trekking', 'url' => url('/trekking')],
-    ]" /> --}}
+{{-- --}}
 
 {{-- <div class="2xl:mx-44 mx-4 mt-8 ">
         <h5 class="text-primary text-2xl 2xl:text-4xl font-semibold">Trek With Sherpalaya</h5>
@@ -162,9 +159,10 @@
 <div class="bg-blue-100/50">
     <div class="card--rounded-none image-full h-[80vh] bg-blue-100/50">
         <figure class="h-[80vh] w-full">
-            <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="Trekking background image"
+            <img src="{{ $trek->coverImage->url ?? asset('photos/P1030127.JPG') }}" alt="Trekking background image"
                 class="h-[80vh] w-full object-cover" />
         </figure>
+        
         <div class="card-body relative ">
             <div
                 class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
@@ -185,101 +183,102 @@
 
     <x-home-page.searchbar />
 
+    <x-breadcrumb :breadcrumbs="[['name' => 'Home', 'url' => url('/home')], ['name' => 'Trekking', 'url' => url('/trekking')]]" />
 
     <div class="h-12"></div>
 
-    <div class="text-left 2xl:mx-44 mx-4">
-        <p class="text-accent text-xl uppercase">
-            Showing <strong>{{ $treks->count() }}</strong> Treks
-        </p>
-    </div>
 
-    <div class="h-12"></div>
+    {{-- Showing <strong>{{ $trekRegion->treks->count() }}</strong> --}}
+    <div class="2xl:mx-44 mx-4">
 
-    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 2xl:mx-44 mx-4 flex flex-col gap-4">
-
-
-        @foreach ($treks as $trek)
-            <div class="card w-full ">
-                <div>
-                    <div id="info"
-                        data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true, "slidesQty": 1 }'
-                        class="relative w-full">
-                        <div class="carousel h-80 rounded-none rounded-t-md">
-                            <div class="carousel-body h-full opacity-0">
-                                @foreach ($trek->images as $media)
-                                    <div class="carousel-slide">
-                                        <a href="{{ route('show_trek', $trek->id) }}">
-                                            <div class="bg-base-200/50 flex h-full justify-center">
-                                                <span class="self-start w-full ">
-                                                    <figure><img src="{{ $media->url ?? asset('photos/P1030127.JPG') }}"
-                                                            alt="{{ $trek->title }} Cover Image"
-                                                            class="h-80  object-cover" />
-                                                    </figure>
-                                                </span>
-                                            </div>
-                                        </a>
+        @foreach ($treksRegion as $trekRegion)
+            @if ($trekRegion->treks->isNotEmpty())
+                <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
+                    {{ $trekRegion->name }} Region Packages
+                </h5>
+                <div class="md:grid md:grid-cols-2 lg:grid-cols-3  flex flex-col gap-4">
+                    @foreach ($trekRegion->treks as $trek)
+                        <div class="card w-full ">
+                            <div>
+                                <div id="info"
+                                    data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true, "slidesQty": 1 }'
+                                    class="relative w-full">
+                                    <div class="carousel h-80 rounded-none rounded-t-md">
+                                        <div class="carousel-body h-full opacity-0">
+                                            @foreach ($trek->images as $image)
+                                                <div class="carousel-slide">
+                                                    <a href="{{ route('show_trek', $trek->id) }}">
+                                                        <div class="bg-base-200/50 flex h-full justify-center">
+                                                            <span class="self-start w-full ">
+                                                                <figure>
+                                                                    <img src="{{ $image->url ?? asset('photos/P1030127.JPG') }}"
+                                                                        alt="{{ $trek->title }} Cover Image"
+                                                                        class="h-80 object-cover" />
+                                                                </figure>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            @endforeach
+                                        </div>
                                     </div>
-                                @endforeach
+
+                                    <!-- Previous Slide -->
+
+                                    <div
+                                        class="carousel-info absolute bottom-3 start-[90%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-4">
+                                        <span class="carousel-info-current me-1">0</span>
+                                        /
+                                        <span class="carousel-info-total ms-1">0</span>
+
+                                        <button type="button" class="carousel-prev">
+                                            <span
+                                                class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
+                                                <span
+                                                    class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                                            </span>
+                                            <span class="sr-only">Previous</span>
+                                        </button>
+                                        <!-- Next Slide -->
+                                        <button type="button" class="carousel-next">
+                                            <span class="sr-only">Next</span>
+                                            <span
+                                                class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
+                                                <span
+                                                    class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body px-2 pt-2 bg-blue-100/30 ">
+                                <a href="{{ route('show_trek', $trek->id) }}">
+                                    <h5
+                                        class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
+                                        {{ $trek->title }}</h5>
+                                </a>
+                                <div class="justify-start flex flex-row items-center  gap-2">
+                                    <span
+                                        class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
+                                    {{-- <span class="text-primary font-font-extralight	 uppercase items-center px-2"> Duration : </span> --}}
+                                    <span class="text-primary uppercase items-center font-extrabold ">
+                                        {{ $trek->duration . ' days' }}
+                                    </span>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Previous Slide -->
-
-                        <div
-                            class="carousel-info absolute bottom-3 start-[90%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-4">
-                            <span class="carousel-info-current me-1">0</span>
-                            /
-                            <span class="carousel-info-total ms-1">0</span>
-
-                            <button type="button" class="carousel-prev">
-                                <span class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
-                                    <span
-                                        class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
-                                </span>
-                                <span class="sr-only">Previous</span>
-                            </button>
-                            <!-- Next Slide -->
-                            <button type="button" class="carousel-next">
-                                <span class="sr-only">Next</span>
-                                <span class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
-                                    <span
-                                        class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-
-                <div class="card-body px-2 pt-2 bg-blue-100/30">
-                    <a href="{{ route('show_trek', $trek->id) }}">
-                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-bold">
-                            {{ $trek->title }}</h5>
-                    </a>
-                    <div class="justify-start flex flex-row items-center  gap-2">
-                        <span class="icon-[solar--calendar-outline] size-5 font-extrabold text-accent"></span>
-                        {{-- <span class="text-primary font-font-extralight	 uppercase items-center px-2"> Duration : </span> --}}
-                        <span class="text-accent uppercase items-center font-extrabold ">
-                            {{ $trek->duration . ' days' }}
-                        </span>
-                    </div>
-                    {{-- <div class="justify-start flex flex-row items-start mt-1">
-                        <span class="icon-[solar--calendar-outline] size-5 text-accent"></span>
-                        <span class="text-primary font-font-extralight	 uppercase px-2"> Difficulty : </span>
-                        <span class="text-secondary uppercase"> {{ $trek->trek_difficulty->value }}
-                        </span>
-                    </div>
-                    <div class="justify-start flex flex-row items-start mt-1">
-                        <span class="icon-[solar--calendar-outline] size-5 text-accent"></span>
-                        <span class="text-primary font-font-extralight	 uppercase px-2"> Highest Altitude : </span>
-                        <span class="text-secondary uppercase"> {{ $trek->highest_altitude . ' m' }}
-                        </span>
-                    </div> --}}
-                </div>
-
-            </div>
+                <div class="h-10"></div>
+            @endif
         @endforeach
     </div>
+
+
+    <div class="h-12"></div>
+
+
     <div class="h-20">
 
     </div>

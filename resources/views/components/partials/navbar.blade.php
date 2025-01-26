@@ -436,7 +436,7 @@
 
 <header id="navbar"
     class="fixed top-0 z-50  flex w-full flex-wrap py-2 text-lg xl:flex-nowrap xl:justify-start xl:py-0 bg-transparent">
-    <nav  class="w-full  2xl:mx-44 mx-4" aria-label="Global">
+    <nav class="w-full  2xl:mx-44 mx-4" aria-label="Global">
         <div class=" relative xl:flex xl:items-center">
             <div class="flex items-center justify-between">
                 <a class="link text-base-content link-neutral texl-2xl font-semibold no-underline" href="#">
@@ -496,14 +496,19 @@
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->expeditions->isNotEmpty())
                                             <li>
-                                                <a href="#"
-                                                    class="menu font-bold text-primary">{{ $navRegion->name }}
-                                                    Region</a>
+                                                <a href="#" class="menu font-bold text-primary">
+                                                    <p class="text-md">
+                                                        {{ $navRegion->name }}
+                                                        Region
+                                                    </p>
+                                                </a>
                                                 <ul class="menu">
                                                     @foreach ($navRegion->expeditions as $expedition)
-                                                        <li class=" text-slate-500 text-sm hover:text-primary">
-                                                            <a
-                                                                href="{{ route('show_expedition', $expedition->id) }}">{{ $expedition->title }}</a>
+                                                        <li
+                                                            class=" text-slate-500  hover:text-primary hover:underline decoration-wavy">
+                                                            <a href="{{ route('show_expedition', $expedition->id) }}">
+                                                                <p class=""> {{ $expedition->title }} </p>
+                                                            </a>
                                                         </li>
                                                     @endforeach
                                                 </ul>
@@ -531,12 +536,14 @@
                                             <li>
                                                 <a href="#"
                                                     class="menu font-bold text-primary">{{ $navRegion->name }}
-                                                    Region</a>
+                                                    Region</p></a>
                                                 <ul class="menu">
                                                     @foreach ($navRegion->treks as $trek)
-                                                        <li class="text-slate-500 text-sm hover:text-primary">
-                                                            <a
-                                                                href="{{ route('show_trek', $trek->id) }}">{{ $trek->title }}</a>
+                                                        <li
+                                                            class="text-slate-500  hover:text-primary hover:underline decoration-wavy">
+                                                            <a href="{{ route('show_trek', $trek->id) }}">
+                                                                {{ $trek->title }}
+                                                            </a>
                                                         </li>
                                                     @endforeach
                                                 </ul>
@@ -569,7 +576,8 @@
                                                     Region</a>
                                                 <ul class="menu">
                                                     @foreach ($navRegion->peaks as $peak)
-                                                        <li class="text-slate-500 hover:text-primary text-sm">
+                                                        <li
+                                                            class="text-slate-500 hover:text-primary hover:underline decoration-wavy">
                                                             <a
                                                                 href="{{ route('show_peak', $peak->id) }}">{{ $peak->title }}</a>
                                                         </li>
@@ -605,7 +613,8 @@
                                                     class="menu font-bold text-primary">{{ $typeLabel }}</a>
                                                 @foreach ($tours as $tour)
                                                     <ul class="menu pl-4">
-                                                        <li class="text-slate-500 hover:text-primary text-wrap text-sm">
+                                                        <li
+                                                            class="text-slate-500 hover:text-primary text-wrap hover:underline decoration-wavy">
                                                             <a
                                                                 href="{{ route('show_tour', $tour->id) }}">{{ $tour->title }}</a>
                                                         </li>
@@ -638,8 +647,8 @@
 <div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden xl:hidden "
     role="dialog" tabindex="-1">
     <div class="drawer-body px-2 ">
-        <div class="drawer-header">
-            <h3 class="drawer-title">Menu</h3>
+        <div class="drawer-header px-2">
+            <h3 class="drawer-title">Sherpalaya</h3>
             <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close"
                 data-overlay="#overlay-end-example">
                 <span class="icon-[tabler--x] size-4 "></span>
@@ -680,7 +689,7 @@
                                         Region</a>
                                     <ul class="menu ">
                                         @foreach ($navRegion->expeditions as $expedition)
-                                            <li class=" text-slate-500 text-sm hover:text-primary ">
+                                            <li class=" text-slate-500  hover:text-primary hover:underline decoration-wavy">
                                                 <a
                                                     href="{{ route('show_expedition', $expedition->id) }}">{{ $expedition->title }}</a>
                                             </li>
@@ -708,7 +717,7 @@
                                         Region</a>
                                     <ul class="menu">
                                         @foreach ($navRegion->treks as $trek)
-                                            <li class="text-slate-500 text-sm hover:text-primary">
+                                            <li class="text-slate-500  hover:text-primary hover:underline decoration-wavy">
                                                 <a href="{{ route('show_trek', $trek->id) }}">{{ $trek->title }}</a>
                                             </li>
                                         @endforeach
@@ -735,7 +744,7 @@
                                         Region</a>
                                     <ul class="menu">
                                         @foreach ($navRegion->peaks as $peak)
-                                            <li class="text-slate-500 hover:text-primary text-sm">
+                                            <li class="text-slate-500 hover:text-primary hover:underline decoration-wavy">
                                                 <a href="{{ route('show_peak', $peak->id) }}">{{ $peak->title }}</a>
                                             </li>
                                         @endforeach
@@ -764,7 +773,7 @@
                                     <a href="#" class="menu font-bold text-primary">{{ $typeLabel }}</a>
                                     @foreach ($tours as $tour)
                                         <ul class="menu py-0">
-                                            <li class="text-slate-500 hover:text-primary  text-sm">
+                                            <li class="text-slate-500 hover:text-primary  hover:underline decoration-wavy">
                                                 <a href="{{ route('show_tour', $tour->id) }}">{{ $tour->title }}</a>
                                             </li>
                                         </ul>

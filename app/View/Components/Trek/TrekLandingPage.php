@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Trek;
 
+use App\Models\Region;
 use App\Models\Trek;
 use App\Models\User;
 use Closure;
@@ -11,8 +12,7 @@ use Illuminate\View\Component;
 class TrekLandingPage extends Component
 {
     public $treks;
-    public $users;
-    public $itenararyTreks;
+    public $treksRegion;
 
     /**
      * Create a new component instance.
@@ -22,9 +22,9 @@ class TrekLandingPage extends Component
     {
         // Fetch all treks or apply filters as needed
         $this->treks = Trek::all();
-        $this->users = User::all();
-        // $this->itenararyTreks = Trek::with('itineraries.itineraryDetails', 'itineraries.destinations')->get();
-
+        $this->treksRegion = Region::with([
+            'treks'
+        ])->get();
     }
 
     /**
@@ -36,8 +36,7 @@ class TrekLandingPage extends Component
             'components.trek.trek-landing-page',
             [
                 'treks' => $this->treks,
-                'users' => $this->users,
-                // 'itenararyTreks' => $this->itenararyTreks
+                'treksRegion' => $this->treksRegion,
             ]
         );
     }

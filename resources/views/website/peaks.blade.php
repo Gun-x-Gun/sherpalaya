@@ -1,3 +1,3 @@
 <x-website-layout>
-    Peaks
+    <x-peak.peak-landing-page />
 </x-website-layout>

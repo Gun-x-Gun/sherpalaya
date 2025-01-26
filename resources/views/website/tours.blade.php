@@ -1,3 +1,3 @@
 <x-website-layout>
-    Tours
+    <x-tour.tour-landing-page />
 </x-website-layout>

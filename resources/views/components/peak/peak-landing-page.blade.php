@@ -3,12 +3,12 @@
     <div class="2xl:mx-44 mx-4 text-left">
         <h1
             class="text-2xl lg:text-5xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
-            Expedition Adventure In Nepal
+            peak Adventure In Nepal
         </h1>
         {{-- <h3 class="text-3xl tracking-widest text-primary "> With Sherpalaya</h3> --}}
         <p
             class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
-            For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support and
+            For those seeking the ultimate challenge, Sherpalaya’s peak services offer unparalleled support and
             expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks, Sherpalaya handles every
             detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
             Trek into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
@@ -21,16 +21,17 @@
 <div class="bg-blue-100/50">
     <div class="card--rounded-none image-full h-[80vh] bg-blue-100/50">
         <figure class="h-[80vh] w-full">
-            <img src="{{ $expedition->coverImage->url ?? asset('photos/P1030127.JPG') }}" alt="Expedition background image"
+            <img src="{{ $peak->coverImage->url ?? asset('photos/P1030127.JPG') }}" alt="peak background image"
                 class="h-[80vh] w-full object-cover" />
         </figure>
-        
+
         <div class="card-body relative ">
             <div
                 class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class=" max-w-[92%] 2xl:max-w-[70%]">
 
-                    <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">Explore expeditions With
+                    <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">Explore
+                        peaks With
                     </h2>
                     <h5 class="card-title mb-2.5 text-primary text-3xl md:text-7xl uppercase font-extrabold ">
                         Sherpalaya
@@ -45,21 +46,21 @@
 
     <x-home-page.searchbar />
 
-    <x-breadcrumb :breadcrumbs="[['name' => 'Home', 'url' => url('/home')], ['name' => 'Expeditions', 'url' => url('/expeditions')]]" />
+    <x-breadcrumb :breadcrumbs="[['name' => 'Home', 'url' => url('/home')], ['name' => 'Peaks', 'url' => url('/peak')]]" />
 
     <div class="h-12"></div>
 
 
-    {{-- Showing <strong>{{ $expeditionRegion->expeditions->count() }}</strong> --}}
+    {{-- Showing <strong>{{ $peakRegion->peaks->count() }}</strong> --}}
     <div class="2xl:mx-44 mx-4">
 
-        @foreach ($expeditionsRegion as $expeditionRegion)
-            @if ($expeditionRegion->expeditions->isNotEmpty())
+        @foreach ($peaksRegion as $peakRegion)
+            @if ($peakRegion->peaks->isNotEmpty())
                 <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
-                    {{ $expeditionRegion->name }} Region Packages
+                    {{ $peakRegion->name }} Region Packages
                 </h5>
                 <div class="md:grid md:grid-cols-2 lg:grid-cols-3  flex flex-col gap-4">
-                    @foreach ($expeditionRegion->expeditions as $expedition)
+                    @foreach ($peakRegion->peaks as $peak)
                         <div class="card w-full ">
                             <div>
                                 <div id="info"
@@ -67,14 +68,14 @@
                                     class="relative w-full">
                                     <div class="carousel h-80 rounded-none rounded-t-md">
                                         <div class="carousel-body h-full opacity-0">
-                                            @foreach ($expedition->images as $image)
+                                            @foreach ($peak->images as $image)
                                                 <div class="carousel-slide">
-                                                    <a href="{{ route('show_expedition', $expedition->id) }}">
+                                                    <a href="{{ route('show_peak', $peak->id) }}">
                                                         <div class="bg-base-200/50 flex h-full justify-center">
                                                             <span class="self-start w-full ">
                                                                 <figure>
                                                                     <img src="{{ $image->url ?? asset('photos/P1030127.JPG') }}"
-                                                                        alt="{{ $expedition->title }} Cover Image"
+                                                                        alt="{{ $peak->title }} Cover Image"
                                                                         class="h-80 object-cover" />
                                                                 </figure>
                                                             </span>
@@ -115,17 +116,17 @@
                             </div>
 
                             <div class="card-body px-2 pt-2 bg-blue-100/30 ">
-                                <a href="{{ route('show_expedition', $expedition->id) }}">
+                                <a href="{{ route('show_peak', $peak->id) }}">
                                     <h5
                                         class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-extrabold">
-                                        {{ $expedition->title }}</h5>
+                                        {{ $peak->title }}</h5>
                                 </a>
                                 <div class="justify-start flex flex-row items-center  gap-2">
                                     <span
                                         class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
                                     {{-- <span class="text-primary font-font-extralight	 uppercase items-center px-2"> Duration : </span> --}}
                                     <span class="text-primary uppercase items-center font-normal ">
-                                        {{ $expedition->duration . ' days' }}
+                                        {{ $peak->duration . ' days' }}
                                     </span>
                                 </div>
                             </div>

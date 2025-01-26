@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SearchController;
 use App\Models\Expedition;
 use App\Models\Peak;
 use App\Models\Tour;
@@ -22,9 +23,9 @@ Route::get('/peaks', function () {
 Route::get('/expeditions', function () {
     return view('website.expeditions');
 })->name('website.expeditions');
-Route::get('/tour', function () {
+Route::get('/tours', function () {
     return view('website.tours');
-})->name('website.contact');
+})->name('website.tour');
 Route::get('/contact', function () {
     return view('website.contact_us');
 })->name('website.contact');
@@ -67,9 +68,14 @@ Route::get('/peak/{id}', function ($id) {
 
 //tour
 Route::get('/tour/{id}', function ($id) {
-    $peak = Tour::findOrFail($id);
-    return view('website.id_pages.show_peak', compact('tour'));
+    $tour = Tour::findOrFail($id);
+    // dd($tour);
+    return view('website.id_pages.show_tour', compact('tour'));
 })->name('show_tour');
+
+
+
+// searchbar
 
 // Route::get('/home', function(){
 //     return view('website.home');

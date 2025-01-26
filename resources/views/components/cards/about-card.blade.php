@@ -26,13 +26,15 @@
     <div class="h-20"></div>
 
 </div> --}}
-<div class="bg-gray-300">
-<div class="h-16">
+<div class="bg-blue-300">
+    <div class="h-16">
 
-</div>
-<div class="mx-0 ">
-    <div style="background-image: url('{{ asset('photos/DSCF4385.JPG') }}');"
-        class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed">
     </div>
-</div>
+    <div class="mx-0 ">
+        <div style="background-image: url('{{ asset('photos/DSCF4385.JPG') }}');"
+            class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed">
+        </div>
+    </div>
+    <div class="h-16">
+    </div>
 </div>
