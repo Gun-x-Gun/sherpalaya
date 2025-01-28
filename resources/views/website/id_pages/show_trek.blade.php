@@ -456,157 +456,13 @@
                                     </div>
                                 @endif
 
-                                {{-- destinations --}}
-                                @if (!empty($trek->destinations))
-                                    <div id="destination" class="card 2xl:max-w-full rounded-none bg-blue-100/30">
-                                        <div class="h-6">
 
-                                        </div>
-                                        <div class="card-header p-2 pb-4">
-                                            <h5 class="card-title text-primary uppercase font-extralight">Destinations
-                                            </h5>
-                                        </div>
-
-                                        <div class="md:grid md:grid-cols-1 flex flex-col gap-4 p-2 ">
-                                            @foreach ($trek->destinations as $destination)
-                                                <div class="card w-full">
-                                                    @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty())
-                                                        <div>
-                                                            <div id="info"
-                                                                data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true, "slidesQty": 1 }'
-                                                                class="relative w-full">
-                                                                <div class="carousel h-96 rounded-none rounded-t-md">
-                                                                    <div class="carousel-body h-full opacity-0">
-                                                                        @foreach ($destination->destinationImages as $destinationImage)
-                                                                            <div class="carousel-slide">
-                                                                                <div
-                                                                                    class="bg-base-200/50 flex h-full justify-center">
-                                                                                    <span class="self-start w-full">
-                                                                                        <figure>
-                                                                                            <img src="{{ $destinationImage->url ?? asset('photos/P1030127.JPG') }}"
-                                                                                                alt="{{ $destination->name }} Cover Image"
-                                                                                                class="h-96 object-cover" />
-                                                                                        </figure>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        @endforeach
-                                                                    </div>
-                                                                </div>
-                                                                <!-- Previous and Next buttons -->
-                                                                <div
-                                                                    class="carousel-info absolute bottom-3 start-[90%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-4">
-                                                                    <span class="carousel-info-current me-1">0</span>
-                                                                    /
-                                                                    <span class="carousel-info-total ms-1">0</span>
-                                                                    <button type="button" class="carousel-prev">
-                                                                        <span
-                                                                            class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
-                                                                            <span
-                                                                                class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
-                                                                        </span>
-                                                                        <span class="sr-only">Previous</span>
-                                                                    </button>
-                                                                    <button type="button" class="carousel-next">
-                                                                        <span class="sr-only">Next</span>
-                                                                        <span
-                                                                            class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
-                                                                            <span
-                                                                                class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
-                                                                        </span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    @endif
-
-                                                    <div class="card-body px-2 pt-2 bg-blue-100/30">
-                                                        <h5
-                                                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-bold">
-                                                            {{ $destination->name }}
-                                                        </h5>
-                                                        <div class="justify-start flex flex-col items-start gap-1">
-                                                            <p class="text-slate-700">
-                                                                {{ $destination->description }}
-                                                            </p>
-                                                            <p class="text-primary uppercase items-center font-light">
-                                                                {{ $destination->region->name }} Region
-                                                            </p>
-                                                            <div class="flex">
-                                                                @if (!empty($destination->location['lat']) && !empty($destination->location['lng']))
-                                                                    <a href="https://maps.google.com/?q={{ $destination->location['lat'] }},{{ $destination->location['lng'] }}"
-                                                                        target="_blank" rel="noopener noreferrer">
-                                                                        <p class="text-primary">
-                                                                            Location:
-                                                                            {{ $destination->location['lat'] }},
-                                                                            {{ $destination->location['lng'] }}
-                                                                        </p>
-                                                                    </a>
-                                                                @else
-                                                                    <p class="text-slate-500 italic">Location not
-                                                                        available
-                                                                    </p>
-                                                                @endif
-                                                            </div>
-                                                            @if ($destination->services->isNotEmpty())
-                                                                <div class="mt-4">
-                                                                    <p
-                                                                        class="text-slate-700 uppercase items-center font-extrabold ">
-                                                                        Available Services
-                                                                    </p>
-                                                                </div>
-                                                                <div
-                                                                    class="md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 flex-cols gap-2 ">
-                                                                    @foreach ($destination->services as $service)
-                                                                        <div class="card w-full p-0 rounded-none ">
-
-                                                                            {{-- <a href="{{ route('show_service', $service->id) }}"> --}}
-                                                                            <div
-                                                                                class="bg-base-200/50 flex flex-col h-48 w-full justify-center mx-0 p-0">
-
-                                                                                <figure class="h-48 w-full">
-                                                                                    <img src="{{ $service->coverImage->url ?? asset('photos/P1030127.JPG') }}"
-                                                                                        alt="{{ $service->name }} Cover Image"
-                                                                                        class="h-48 w-full object-cover p-0" />
-                                                                                </figure>
-                                                                            </div>
-                                                                            {{-- </a> --}}
-
-                                                                            <div
-                                                                                class="card-body px-2 pt-2 bg-blue-100/30 ">
-                                                                                {{-- <a href="{{ route('show_service', $service->id) }}"> --}}
-                                                                                <h5
-                                                                                    class="card-title mb-2.5 line-clamp-2 uppercase text-sm text-primary font-normal">
-                                                                                    {{ $service->title }}</h5>
-                                                                                {{-- </a> --}}
-                                                                                <div
-                                                                                    class="justify-start flex flex-col  gap-2">
-                                                                                    <p
-                                                                                        class="text-slate-700 capitalize items-center font-normal text-sm">
-                                                                                        {{ $service->description }}
-                                                                                    </p>
-
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    @endforeach
-                                                                </div>
-                                                            @endif
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                        <div class="h-6">
-
-                                        </div>
-                                    </div>
-                                @endif
                                 <div class="h-96"></div>
                             </div>
                             <div class="">
                                 <div class="h-16"></div>
-                                <div class="hidden md:card sm:max-w-sm md:sticky top-20">
+
+                                <div class="hidden md:card sm:max-w-sm md:sticky md:top-20">
                                     <div class="card-body bg-blue-200">
                                         {{-- <p class="mb-4">Discover the features and benefits that our service offers.
                                             Enhance your experience with our user-friendly platform designed to meet all
@@ -616,12 +472,71 @@
                                             <button class="btn btn-info  btn-wide uppercase">Inquiry</button>
                                         </div>
                                     </div>
+
+                                    {{-- destinations --}}
+                                    @if (!empty($trek->destinations))
+                                        <div id="destination"
+                                            class="card 2xl:max-w-full rounded-none bg-blue-100/30 h-[40rem] overflow-scroll vertical-scrollbar">
+                                            <div class="h-6">
+
+                                            </div>
+                                            <div class="card-header p-2 pb-4">
+                                                <h5 class="card-title text-primary uppercase font-extralight">
+                                                    Destinations
+                                                </h5>
+                                            </div>
+
+                                            <div class=" ">
+                                                <div id="snap"
+                                                    data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "lg": 3 }, "isCentered": true, "isSnap": true }'
+                                                    class="relative w-full">
+                                                    <div
+                                                        class="carousel h-80 flex vertical-scrollbar snap-x snap-mandatory overflow-x-auto">
+                                                            <div class="carousel-body h-full gap-2 opacity-0">
+                                                                <!-- Slide 1 -->
+                                                                <div class="carousel-slide snap-center">
+                                                                    <div
+                                                                        class="bg-base-200/50 flex h-full justify-center p-6">
+                                                                        <span class="self-center text-lg">First
+                                                                            slide</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        {{-- @endforeach --}}
+
+                                                    </div>
+                                                    <!-- Previous Slide -->
+                                                    <button type="button" class="carousel-prev">
+                                                        <span
+                                                            class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
+                                                            <span
+                                                                class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                        </span>
+                                                        <span class="sr-only">Previous</span>
+                                                    </button>
+                                                    <!-- Next Slide -->
+                                                    <button type="button" class="carousel-next">
+                                                        <span class="sr-only">Next</span>
+                                                        <span
+                                                            class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
+                                                            <span
+                                                                class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="h-6">
+
+                                            </div>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 {{-- scrollspy-body -end --}}
+
             </div>
         </div>
     </div>
