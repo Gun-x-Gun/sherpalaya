@@ -67,7 +67,11 @@ Route::get('/tour/sight_seeing', function () {
 
 //trek
 Route::get('/trek/{id}', function ($id) {
-    $trek = Trek::findOrFail($id);
+    $trek = Trek::with([
+        'coverImage'
+    ])
+        ->where('id', $id)
+        ->firstOrFail();
     return view('website.id_pages.show_trek', compact('trek'));
 })->name('show_trek');
 
