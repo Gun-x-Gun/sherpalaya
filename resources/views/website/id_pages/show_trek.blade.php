@@ -1,12 +1,29 @@
 <x-website-layout>
 
+    <script type="module">
+        let {
+            element
+        } = HSCollapse.getInstance('#trek-description-collapse-button', true);
+
+        shortTrekDescription = document.getElementById("short-trek-description");
+
+        trekDescriptionButton.on('open', function(instance) {
+            shortTrekDescription.classList.add("hidden");
+
+        });
+        trekDescriptionButton.on('hide', function(instance) {
+            shortTrekDescription.classList.remove("hidden");
+        });
+    </script>
+
 
     {{-- top section --}}
-    <div class="bg-blue-100/50">
+    {{-- <div class="bg-blue-100/50">
         <div class="h-28 "></div>
         <div class="2xl:mx-44 mx-4 text-left">
             <h1
-                class="text-2xl lg:text-5xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
+                class="text-2xl lg:text-5xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty"
+            >
                 {{ $trek->title }}
             </h1>
             <p
@@ -15,119 +32,121 @@
             </p>
         </div>
         <div class="h-12 "></div>
-    </div>
+    </div> --}}
     {{-- top section end --}}
 
 
 
     <div class="bg-white">
-        <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1" class="">
-            <div id="scrollspy-scrollable-parent-1" class="">
-                <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
-                    <figure class="h-[80vh] w-full">
-                        <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="Trekking background image"
-                            class="h-[80vh] w-full object-cover" />
+        <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1">
+            <div id="scrollspy-scrollable-parent-1 overflow-x-hidden">
+                <div class="card--rounded-none image-full  bg-blue-100/50 h-[100vh]">
+                    <figure class="h-[100vh] w-full">
+                        <img src="{{ $trek->coverImage->url }}" alt="Trekking background image"
+                            class="h-[100vh] w-full object-cover" />
                     </figure>
                     <div class="card-body relative">
-                        <div
-                            class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                            <div class=" max-w-[92%] 2xl:max-w-[70%]">
 
-                                <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">
-                                    Explore Treks With
-                                </h2>
-                                <h5
-                                    class="card-title mb-2.5 text-primary text-3xl md:text-7xl uppercase font-extrabold ">
-                                    Sherpalaya
-                                </h5>
-                                <p class="mb-4 2xl:text-xl text-white font-bold backdrop-blur-sm">A high-quality
-                                    trek experience.</p>
+                        <div
+                            class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4 max-w-full overflow-hidden border-none backdrop-blur-sm">
+
+                            <h2
+                                class="card-title mb-2.5 text-4xl md:tet-6xl  text-white  uppercase font-bold sticky top-0">
+                                {{ $trek->title }}
+                            </h2>
+                            <div class=" max-w-[92%] 2xl:max-w-[70%] max-h-96 overflow-y-scroll">
+
+                                <p class="mb-4 2xl:text-xl text-white font-bold glass">
+                                <p class="inline text-base-content/80" id="short-trek-description">
+                                    {{ Str::words($trek->description, 30) }}
+                                </p>
+
+                                <p id="trek-description-collapse-heading"
+                                    class="inline collapse hidden w-full overflow-hidden transition-[height] duration-300"
+                                    aria-labelledby="trek-description-collapse">
+                                    {{ $trek->description }}
+                                </p>
+
+                                <button type="button" class="collapse-toggle link text-white inline-flex items-center"
+                                    id="trek-description-collapse-button" aria-expanded="false"
+                                    aria-controls="trek-description-collapse-heading"
+                                    data-collapse="#trek-description-collapse-heading">
+                                    <span class="collapse-open:hidden">Read more</span>
+                                    <span class="collapse-open:block hidden">Read less</span>
+                                    <span
+                                        class="icon-[tabler--chevron-down] collapse-open:rotate-180 ms-2 size-4"></span>
+                                </button>
+
+
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {{-- stat --}}
+                <div class="w-full my-4">
 
-
-                <div class="bg-blue-100/50">
                     <div class="2xl:mx-44 mx-4">
-                        <div class="card  rounded-none  bg-transparent ">
-                            <div class="card-body flex flex-col md:flex-row lg:flex-row gap-10 px-0">
-                                @if (!empty($trek->duration))
-                                    <div class="flex flex-col">
-                                        <h5
-                                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
-                                            Duration</h5>
-                                        <div class="justify-start flex flex-row items-start  gap-2">
-                                            <p class="text-slate-700 uppercase items-center font-extrabold text-xl">
-                                                {{ $trek->duration }} Days
-                                            </p>
-                                        </div>
-                                    </div>
-                                @endif
-                                @if (!empty($trek->grade))
-                                    <div class=" flex flex-col">
-                                        <h5
-                                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
-                                            Grade</h5>
-                                        <div class="justify-start  items-start  gap-2">
-                                            <p class="text-slate-700 uppercase items-center font-extrabold text-xl ">
-                                                {{ $trek->grade }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                @endif
-                                @if (!empty($trek->starting_altitude))
-                                    <div class=" flex flex-col">
-                                        <h5
-                                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
-                                            Start Altitude</h5>
-                                        <div class="justify-start  items-start  gap-2">
-                                            <p class="text-slate-700 uppercase items-center font-extrabold text-xl">
-                                                {{ $trek->starting_altitude }}m
-                                            </p>
-                                        </div>
-                                    </div>
-                                @endif
-                                @if (!empty($trek->highest_altitude))
-                                    <div class=" flex flex-col">
-                                        <h5
-                                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
-                                            Max Altitude</h5>
-                                        <div class="justify-start  items-start  gap-2">
-                                            <p class="text-slate-700 uppercase items-center font-extrabold text-xl">
-                                                {{ $trek->highest_altitude }}m
-                                            </p>
-                                        </div>
-                                    </div>
-                                @endif
-                                @if (!empty($trek->trek_difficulty))
-                                    <div class=" flex flex-col">
-                                        <h5
-                                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
-                                            Difficulty</h5>
-                                        <div class="justify-start  items-start  gap-2">
-                                            <p class="text-slate-700 uppercase items-center font-extrabold ">
-                                                {{ $trek->trek_difficulty->value }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                @endif
-                                @if (!empty($trek->best_time_for_trek))
-                                    <div class=" flex flex-col">
-                                        <h5
-                                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
-                                            Best Time</h5>
-                                        <div class="justify-start  items-start  gap-2">
-                                            <p class="text-slate-700 uppercase items-center font-extrabold text-wrap ">
-                                                {{ $trek->best_time_for_trek }}
-                                            </p>
-                                        </div>
-                                    </div>
-                                @endif
+
+                        <div class="stats max-md:stats-vertical bg-blue-100/50 w-full">
+                            <div class="stat">
+                                <div class="stat-title">Duration</div>
+                                <div class="stat-value">{{ $trek->duration ? $trek->duration . ' Days' : 'N/A' }}
+                                </div>
+                                <div class="stat-value">
+                                    <span class="badge badge-outline badge-success">
+                                        @if (!empty($trek->best_time_for_trek))
+                                            Best Time: {{ $trek->best_time_for_trek }}
+                                        @endif
+                                    </span>
+                                </div>
+
+
+                                {{-- <div class="stat-actions">
+                                    <button class="btn btn-sm btn-primary">Upgrade Plan</button>
+                                </div> --}}
+                            </div>
+
+                            <div class="stat">
+                                <div class="stat-title">Difficulty</div>
+                                <div class="stat-value">
+                                    @if ($trek->grade)
+                                        <span class="badge badge-outline badge-primary">Grade:
+                                            {{ $trek->grade }}</span>
+                                    @endif
+                                    @if ($trek->trek_difficulty)
+                                        <span
+                                            class="badge badge-outline badge-error">{{ $trek->trek_difficulty->getLabel() }}</span>
+                                    @endif
+                                </div>
+                                {{-- <div class="stat-actions flex flex-wrap gap-2">
+                                    <button class="btn btn-sm btn-soft">View Details</button>
+                                    <button class="btn btn-sm btn-warning btn-soft">Change Payment Method</button>
+                                </div> --}}
+                            </div>
+
+                            <div class="stat">
+                                <div class="stat-title">Altitude</div>
+                                <div class="stat-value">
+
+                                    @if (!empty($trek->starting_altitude))
+                                        <span class="badge badge-outline">
+                                            Start: {{ $trek->starting_altitude }}
+                                        </span>
+                                    @endif
+
+                                    @if (!empty($trek->highest_altitude))
+                                        <span class="badge badge-outline">
+                                            Highest: {{ $trek->highest_altitude }}
+                                        </span>
+                                    @endif
+                                    </span>
+                                </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
 
