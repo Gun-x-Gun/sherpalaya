@@ -2,10 +2,14 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\DestinationResource;
 use App\Filament\Resources\ExpeditionResource;
 use App\Filament\Resources\PeakResource;
+use App\Filament\Resources\RegionResource;
+use App\Filament\Resources\ServiceResource;
 use App\Filament\Resources\TrekResource;
 use App\Filament\Resources\TourResource;
+use Awcodes\Curator\Resources\MediaResource;
 use Awcodes\Overlook\OverlookPlugin;
 use Awcodes\Overlook\Widgets\OverlookWidget;
 use Filament\Http\Middleware\Authenticate;
@@ -78,7 +82,12 @@ class AdminPanelProvider extends PanelProvider
                         PeakResource::class,
                         TrekResource::class,
                         TourResource::class,
-                    ]),
+                        RegionResource::class,
+                        DestinationResource::class,
+                        ServiceResource::class,
+                        MediaResource::class,
+                    ])
+                    ,
                 FilamentShieldPlugin::make(),
                 FilamentBackgroundsPlugin::make()
                 ->showAttribution(false),

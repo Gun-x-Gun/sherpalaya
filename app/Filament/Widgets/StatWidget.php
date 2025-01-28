@@ -20,18 +20,18 @@ class StatWidget extends BaseWidget
     protected function getStats(): array
     {
         return [
-            Stat::make('Regions', Region::count())
-                ->description('')
-                ->icon('heroicon-m-map')
-                ->url(RegionResource::getUrl()),
-            Stat::make('Destinations', Destination::count())
-                ->description('In all regions')
-                ->icon('heroicon-m-map-pin')
-                ->url(DestinationResource::getUrl()),
-            Stat::make('Services', Service::count())
-                ->description('Offered')
-                ->icon('heroicon-m-rectangle-stack')
-                ->url(ServiceResource::getUrl()),
+            // Stat::make('Regions', Region::count())
+            //     ->description('')
+            //     ->icon('heroicon-m-map')
+            //     ->url(RegionResource::getUrl()),
+            // Stat::make('Destinations', Destination::count())
+            //     ->description('In all regions')
+            //     ->icon('heroicon-m-map-pin')
+            //     ->url(DestinationResource::getUrl()),
+            // Stat::make('Services', Service::count())
+            //     ->description('Offered')
+            //     ->icon('heroicon-m-rectangle-stack')
+            //     ->url(ServiceResource::getUrl()),
         ];
     }
 }

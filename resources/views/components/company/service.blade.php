@@ -21,7 +21,15 @@
 <div class="bg-blue-100/50">
     <x-home-page.searchbar />
 
-    <x-breadcrumb :breadcrumbs="[['name' => 'Home', 'url' => url('/home')], ['name' => 'Services', 'url' => url('/services')]]" />
+    <x-breadcrumb :breadcrumbs="[
+        [
+            'name' => 'Home',
+            'url' => url('/home'),
+        ],
+        [
+            'name' => 'Services',
+        ],
+    ]" />
 
     <div class="h-12"></div>
 
@@ -45,21 +53,21 @@
                                     <div class="carousel h-80 rounded-none rounded-t-md">
                                         <div class="carousel-body h-full opacity-0">
                                             {{-- @foreach ($servicesDestination as $serviceDestination) --}}
-                                                @foreach ($service->images as $image)
-                                                    <div class="carousel-slide">
-                                                        {{-- <a href="{{ route('show_service', $service->id) }}"> --}}
-                                                        <div class="bg-base-200/50 flex h-full justify-center">
-                                                            <span class="self-start w-full ">
-                                                                <figure>
-                                                                    <img src="{{ $image->url ?? asset('photos/P1030127.JPG') }}"
-                                                                        alt="{{ $service->title }} Cover Image"
-                                                                        class="h-80 object-cover" />
-                                                                </figure>
-                                                            </span>
-                                                        </div>
-                                                        {{-- </a> --}}
+                                            @foreach ($service->images as $image)
+                                                <div class="carousel-slide">
+                                                    {{-- <a href="{{ route('show_service', $service->id) }}"> --}}
+                                                    <div class="bg-base-200/50 flex h-full justify-center">
+                                                        <span class="self-start w-full ">
+                                                            <figure>
+                                                                <img src="{{ $image->url ?? asset('photos/P1030127.JPG') }}"
+                                                                    alt="{{ $service->title }} Cover Image"
+                                                                    class="h-80 object-cover" />
+                                                            </figure>
+                                                        </span>
                                                     </div>
-                                                @endforeach
+                                                    {{-- </a> --}}
+                                                </div>
+                                            @endforeach
                                             {{-- @endforeach --}}
                                         </div>
                                     </div>

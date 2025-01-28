@@ -46,7 +46,15 @@
 
     <x-home-page.searchbar />
 
-    <x-breadcrumb :breadcrumbs="[['name' => 'Home', 'url' => url('/home')], ['name' => 'Peaks', 'url' => url('/peak')]]" />
+    <x-breadcrumb :breadcrumbs="[
+        [
+            'name' => 'Home',
+            'url' => url('/home'),
+        ],
+        [
+            'name' => 'Peaks',
+        ],
+    ]" />
 
     <div class="h-12"></div>
 

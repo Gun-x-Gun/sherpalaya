@@ -11,5 +11,6 @@ class RegionMultiWidget extends MultiWidget
         RegionExpeditionTable::class,
         RegionPeakTable::class,
         RegionTrekTable::class,
+        RegionTourTable::class,
     ];
 }

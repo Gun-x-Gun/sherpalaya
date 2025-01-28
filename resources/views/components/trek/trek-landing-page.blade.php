@@ -162,7 +162,7 @@
             <img src="{{ $trek->coverImage->url ?? asset('photos/P1030127.JPG') }}" alt="Trekking background image"
                 class="h-[80vh] w-full object-cover" />
         </figure>
-        
+
         <div class="card-body relative ">
             <div
                 class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
@@ -183,7 +183,15 @@
 
     <x-home-page.searchbar />
 
-    <x-breadcrumb :breadcrumbs="[['name' => 'Home', 'url' => url('/home')], ['name' => 'Trekking', 'url' => url('/trekking')]]" />
+    <x-breadcrumb :breadcrumbs="[
+        [
+            'name' => 'Home',
+            'url' => url('/home'),
+        ],
+        [
+            'name' => 'Trekking',
+        ],
+    ]" />
 
     <div class="h-12"></div>
 

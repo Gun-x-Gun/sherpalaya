@@ -21,16 +21,17 @@
 <div class="bg-blue-100/50">
     <div class="card--rounded-none image-full h-[80vh] bg-blue-100/50">
         <figure class="h-[80vh] w-full">
-            <img src="{{ $expedition->coverImage->url ?? asset('photos/P1030127.JPG') }}" alt="Expedition background image"
-                class="h-[80vh] w-full object-cover" />
+            <img src="{{ $expedition->coverImage->url ?? asset('photos/P1030127.JPG') }}"
+                alt="Expedition background image" class="h-[80vh] w-full object-cover" />
         </figure>
-        
+
         <div class="card-body relative ">
             <div
                 class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class=" max-w-[92%] 2xl:max-w-[70%]">
 
-                    <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">Explore expeditions With
+                    <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">Explore
+                        expeditions With
                     </h2>
                     <h5 class="card-title mb-2.5 text-primary text-3xl md:text-7xl uppercase font-extrabold ">
                         Sherpalaya
@@ -45,7 +46,15 @@
 
     <x-home-page.searchbar />
 
-    <x-breadcrumb :breadcrumbs="[['name' => 'Home', 'url' => url('/home')], ['name' => 'Expeditions', 'url' => url('/expeditions')]]" />
+    <x-breadcrumb :breadcrumbs="[
+        [
+            'name' => 'Home',
+            'url' => url('/home'),
+        ],
+        [
+            'name' => 'Expeditions',
+        ],
+    ]" />
 
     <div class="h-12"></div>
 
