@@ -14,9 +14,9 @@ Route::get('/home', function () {
 Route::get('/trekking', function () {
     return view('website.trekking');
 })->name('website.trekking');
-Route::get('/about', function () {
-    return view('website.about_us');
-})->name('website.about');
+// Route::get('/about', function () {
+//     return view('website.about_us');
+// })->name('website.about');
 Route::get('/peaks', function () {
     return view('website.peaks');
 })->name('website.peaks');
@@ -29,6 +29,22 @@ Route::get('/tours', function () {
 Route::get('/contact', function () {
     return view('website.contact_us');
 })->name('website.contact');
+
+
+// company about
+Route::get('/about_us', function () {
+    return view('website.company.about_us');
+})->name('website.company.about_us');
+
+// company services
+Route::get('/services', function () {
+    return view('website.company.our_services');
+})->name('website.company.our_services');
+
+// company why_us??
+Route::get('/why_sherpalaya', function () {
+    return view('website.company.why_sherpalaya');
+})->name('website.company.why_sherpalaya');
 
 
 // sub navigation

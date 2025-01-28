@@ -88,7 +88,7 @@
     </div>
 @elseif($peaks->where('is_featured', true)->count() === 1)
     <div class="bg-blue-100/30">
-        <div class="h-6">
+        <div class="h-8 md:h-20">
 
         </div>
         @foreach ($peaks->where('is_featured', true) as $featuredPeak)
@@ -117,6 +117,9 @@
                 </div>
             </div>
         @endforeach
+        <div class="h-8 md:h-20">
+
+        </div>
     </div>
 
 @endif

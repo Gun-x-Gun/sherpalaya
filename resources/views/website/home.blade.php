@@ -9,5 +9,5 @@
     <x-featured.featured-tour />
     <x-cards.about-card />
     <x-review />
-    {{-- <x-divider.social-media /> --}}
+    {{-- <x-company.service /> --}}
 </x-website-layout>

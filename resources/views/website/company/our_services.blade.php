@@ -1,3 +1,3 @@
 <x-website-layout>
-    Services
+    <x-company.service />
 </x-website-layout>
