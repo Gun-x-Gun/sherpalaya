@@ -9,6 +9,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/home');
 
+// Search route
+
+Route::resource('search', SearchController::class)
+    ->only([
+        'index'
+    ]);
+
+
+Route::get('/search/query', [
+    SearchController::class, 'query'
+]);
+
+
+
+
+// Subin Route
+
 Route::get('/home', function () {
     return view('website.home');
 })->name('website.home');

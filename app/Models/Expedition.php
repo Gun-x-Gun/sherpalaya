@@ -9,10 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Laravel\Scout\Searchable;
 
 class Expedition extends Model
 {
     use HasFactory;
+    use Searchable;
+
 
     protected $fillable = [
         'title',
@@ -46,7 +49,7 @@ class Expedition extends Model
     {
         return $this->morphMany(Itinerary::class, 'itinerable');
     }
-    
+
     public function destinations()
     {
         return $this->belongsToMany(

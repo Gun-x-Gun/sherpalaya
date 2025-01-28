@@ -6,9 +6,12 @@ use App\Helpers\CuratorModelHelper;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Laravel\Scout\Searchable;
 
 class Service extends Model
 {
+    use Searchable;
+
     protected $fillable=[
         'title',
         'description',
