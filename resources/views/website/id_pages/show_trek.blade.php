@@ -58,13 +58,13 @@
 
                                 <p class="mb-4 2xl:text-xl text-white font-bold glass">
                                 <p class="inline text-base-content/80" id="short-trek-description">
-                                    {{ Str::words($trek->description, 30) }}
+                                    {{ Str::words(strip_tags($trek->description), 30) }}
                                 </p>
 
                                 <p id="trek-description-collapse-heading"
                                     class="inline collapse hidden w-full overflow-hidden transition-[height] duration-300"
                                     aria-labelledby="trek-description-collapse">
-                                    {{ $trek->description }}
+                                    {!! $trek->description !!}
                                 </p>
 
                                 <button type="button" class="collapse-toggle link text-white inline-flex items-center"
