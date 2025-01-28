@@ -9,6 +9,7 @@ use App\Filament\Resources\RegionResource\Widgets\RegionExpeditionTable;
 use App\Filament\Resources\RegionResource\Widgets\RegionMultiWidget;
 use App\Filament\Resources\RegionResource\Widgets\RegionPeakTable;
 use App\Filament\Resources\RegionResource\Widgets\RegionStats;
+use App\Filament\Resources\RegionResource\Widgets\RegionTourTable;
 use App\Filament\Resources\RegionResource\Widgets\RegionTrekTable;
 use App\Models\Region;
 use Filament\Forms;
@@ -90,6 +91,7 @@ class RegionResource extends Resource
             RegionExpeditionTable::class,
             RegionPeakTable::class,
             RegionTrekTable::class,
+            RegionTourTable::class,
             RegionMultiWidget::class,
         ];
     }
