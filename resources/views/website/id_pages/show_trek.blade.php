@@ -54,18 +54,18 @@
                                 class="card-title mb-2.5 text-4xl md:tet-6xl  text-white  uppercase font-bold sticky top-0">
                                 {{ $trek->title }}
                             </h2>
-                            <div class=" max-w-[92%] 2xl:max-w-[70%] max-h-96 overflow-y-scroll">
+                            <div class=" max-w-[92%] 2xl:max-w-[70%] max-h-96 overflow-y-scroll vertical-scrollbar">
 
                                 <p class="mb-4 2xl:text-xl text-white font-bold glass">
                                 <p class="inline text-base-content/80" id="short-trek-description">
                                     {{ Str::words(strip_tags($trek->description), 30) }}
                                 </p>
 
-                                <p id="trek-description-collapse-heading"
-                                    class="inline collapse hidden w-full overflow-hidden transition-[height] duration-300"
+                                <div id="trek-description-collapse-heading"
+                                    class="collapse hidden w-full overflow-hidden transition-[height] duration-300"
                                     aria-labelledby="trek-description-collapse">
                                     {!! $trek->description !!}
-                                </p>
+                                </div>
 
                                 <button type="button" class="collapse-toggle link text-white inline-flex items-center"
                                     id="trek-description-collapse-button" aria-expanded="false"
