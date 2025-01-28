@@ -42,7 +42,7 @@
             <div id="scrollspy-scrollable-parent-1 overflow-x-hidden">
                 <div class="card--rounded-none image-full  bg-blue-100/50 h-[100vh]">
                     <figure class="h-[100vh] w-full">
-                        <img src="{{ $trek->coverImage->url }}" alt="Trekking background image"
+                        <img src="{{ $trek->coverImage?->url ?? '/photos/logo.png' }}" alt="Trekking background image"
                             class="h-[100vh] w-full object-cover" />
                     </figure>
                     <div class="card-body relative">
