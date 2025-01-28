@@ -476,7 +476,7 @@
                                     {{-- destinations --}}
                                     @if (!empty($trek->destinations))
                                         <div id="destination"
-                                            class="card 2xl:max-w-full rounded-none bg-blue-100/30 h-[40rem] overflow-scroll vertical-scrollbar">
+                                            class="card 2xl:max-w-full rounded-none bg-blue-100/30 ">
                                             <div class="h-6">
 
                                             </div>
@@ -486,45 +486,89 @@
                                                 </h5>
                                             </div>
 
-                                            <div class=" ">
-                                                <div id="snap"
-                                                    data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "lg": 3 }, "isCentered": true, "isSnap": true }'
-                                                    class="relative w-full">
-                                                    <div
-                                                        class="carousel h-80 flex vertical-scrollbar snap-x snap-mandatory overflow-x-auto">
-                                                            <div class="carousel-body h-full gap-2 opacity-0">
-                                                                <!-- Slide 1 -->
-                                                                <div class="carousel-slide snap-center">
-                                                                    <div
-                                                                        class="bg-base-200/50 flex h-full justify-center p-6">
-                                                                        <span class="self-center text-lg">First
-                                                                            slide</span>
+
+
+
+                                            <div id="snap"
+                                                data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "lg": 3 }, "isCentered": true, "isSnap": true }'
+                                                class="relative w-full">
+                                                <div
+                                                    class="carousel h-80 flex vertical-scrollbar snap-x snap-mandatory overflow-x-auto">
+                                                    <div class="carousel-body h-full gap-2 opacity-0">
+                                                        <!-- Slide 1 -->
+                                                        <div class="carousel-slide snap-center">
+                                                            <div class="card sm:max-w-sm">
+                                                                <figure><img
+                                                                        src="https://cdn.flyonui.com/fy-assets/components/card/image-9.png"
+                                                                        alt="Watch" /></figure>
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title mb-2.5">Apple Smart Watch
+                                                                    </h5>
+                                                                    <p class="mb-4">Stay connected, motivated, and
+                                                                        healthy with the latest Apple Watch.</p>
+                                                                    <div class="card-actions">
+                                                                        <button class="btn btn-primary">Buy
+                                                                            Now</button>
+                                                                        <button class="btn btn-secondary btn-soft">Add
+                                                                            to cart</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        {{-- @endforeach --}}
-
+                                                        </div>
+                                                        <!-- Slide 2 -->
+                                                        <div class="carousel-slide snap-center">
+                                                            <div class="bg-base-200 flex h-full justify-center p-6">
+                                                                <span class="self-center text-lg">Second slide</span>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Slide 3 -->
+                                                        <div class="carousel-slide snap-center">
+                                                            <div class="bg-base-300 flex h-full justify-center p-6">
+                                                                <span class="self-center text-lg">Third slide</span>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Slide 4 -->
+                                                        <div class="carousel-slide snap-center">
+                                                            <div class="bg-base-200/50 flex h-full justify-center p-6">
+                                                                <span class="self-center text-lg">Fourth slide</span>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Slide 5 -->
+                                                        <div class="carousel-slide snap-center">
+                                                            <div class="bg-base-200 flex h-full justify-center p-6">
+                                                                <span class="self-center text-lg">Fifth slide</span>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Slide 6 -->
+                                                        <div class="carousel-slide snap-center">
+                                                            <div class="bg-base-300 flex h-full justify-center p-6">
+                                                                <span class="self-center text-lg">Sixth slide</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <!-- Previous Slide -->
-                                                    <button type="button" class="carousel-prev">
-                                                        <span
-                                                            class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
-                                                            <span
-                                                                class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
-                                                        </span>
-                                                        <span class="sr-only">Previous</span>
-                                                    </button>
-                                                    <!-- Next Slide -->
-                                                    <button type="button" class="carousel-next">
-                                                        <span class="sr-only">Next</span>
-                                                        <span
-                                                            class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
-                                                            <span
-                                                                class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
-                                                        </span>
-                                                    </button>
                                                 </div>
+
+                                                <!-- Previous Slide -->
+                                                <button type="button" class="carousel-prev">
+                                                    <span
+                                                        class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
+                                                        <span
+                                                            class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                    </span>
+                                                    <span class="sr-only">Previous</span>
+                                                </button>
+                                                <!-- Next Slide -->
+                                                <button type="button" class="carousel-next">
+                                                    <span class="sr-only">Next</span>
+                                                    <span
+                                                        class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
+                                                        <span
+                                                            class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                    </span>
+                                                </button>
                                             </div>
+
+
                                             <div class="h-6">
 
                                             </div>
