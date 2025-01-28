@@ -7,6 +7,7 @@ use App\Models\Tour;
 use App\Models\Trek;
 use Illuminate\Support\Facades\Route;
 
+Route::redirect('/', '/home');
 
 Route::get('/home', function () {
     return view('website.home');
