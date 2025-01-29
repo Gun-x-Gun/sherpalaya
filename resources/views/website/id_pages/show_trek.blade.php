@@ -1,6 +1,5 @@
 <x-website-layout>
-
-    <script type="module">
+    <script type="module" defer>
         let {
             element
         } = HSCollapse.getInstance('#trek-description-collapse-button', true);
@@ -16,148 +15,243 @@
         });
     </script>
 
+    <style>
+        @media (min-width: 768px) {
+            @media (max-width: 1280px) {
+                .at-a-glimpse:nth-child(n+4) {
+                    display: none;
+                }
+            }
+
+            @media (min-width: 1280px) {
+                at-a-glimpse:nth-child(4) {
+                    display: flex;
+                }
+
+                at-a-glimpse:nth-child(n+5) {
+                    display: none;
+                }
+            }
+        }
+    </style>
+
+
 
     {{-- top section --}}
-    {{-- <div class="bg-blue-100/50">
-        <div class="h-28 "></div>
-        <div class="2xl:mx-44 mx-4 text-left">
-            <h1
-                class="text-2xl lg:text-5xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty"
-            >
-                {{ $trek->title }}
-            </h1>
-            <p
-                class="text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light max-h-64 overflow-y-auto vertical-scrollbar">
-                {{ $trek->description }}
-            </p>
-        </div>
-        <div class="h-12 "></div>
-    </div> --}}
-    {{-- top section end --}}
 
+    {{-- top section end --}}
 
 
     <div class="bg-white">
         <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1">
             <div id="scrollspy-scrollable-parent-1 overflow-x-hidden">
-                <div class="card--rounded-none image-full  bg-blue-100/50 h-[100vh]">
-                    <figure class="h-[100vh] w-full">
-                        <img src="{{ $trek->coverImage?->url ?? '/images/swisnl/filament-backgrounds/curated-by-swis/03.jpg' }}"
-                            alt="Trekking background image" class="h-[100vh] w-full object-cover" />
-                    </figure>
-                    <div class="card-body relative">
-
-                        <div
-                            class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4 max-w-full overflow-hidden border-none backdrop-blur-sm">
-
-                            <h2
-                                class="card-title mb-2.5 text-4xl md:tet-6xl  text-white  uppercase font-bold sticky top-0">
-                                {{ $trek->title }}
-                            </h2>
-                            <div class=" max-w-[92%] 2xl:max-w-[70%] max-h-96 overflow-y-scroll vertical-scrollbar">
-
-                                <p class="mb-4 2xl:text-xl text-white font-bold glass">
-                                <p class="inline text-base-content/80" id="short-trek-description">
-                                    {{ Str::words(strip_tags($trek->description), 30) }}
-                                </p>
-
-                                <div id="trek-description-collapse-heading"
-                                    class="collapse hidden w-full overflow-hidden transition-[height] duration-300"
-                                    aria-labelledby="trek-description-collapse">
-                                    {!! $trek->description !!}
+                <div class="bg-blue-100/50">
+                    <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
+                        <figure class="h-[80vh] w-full">
+                            <img src="{{ $trek->coverImage?->url ?? '/images/swisnl/filament-backgrounds/curated-by-swis/03.jpg' }}"
+                                alt="Trekking background image" class="h-[80vh] w-full object-cover brightness-50" />
+                        </figure>
+                        <div class="card-body relative">
+                            <div
+                                class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                                <div class=" max-w-[92%] 2xl:max-w-[100%]">
+                                    <h5
+                                        class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                                        Explore
+                                    </h5>
+                                    <h2 class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-bold">
+                                        {{ $trek->title }}
+                                    </h2>
+                                    <h5
+                                        class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                                        With Sherpalaya
+                                    </h5>
+                                    {{-- <p class="mb-4 2xl:text-xl text-white font-bold backdrop-blur-sm">A high-quality
+                                        trek experience.</p> --}}
                                 </div>
+                            </div>
+                        </div>
+                    </div>
 
-                                <button type="button" class="collapse-toggle link text-white inline-flex items-center"
-                                    id="trek-description-collapse-button" aria-expanded="false"
-                                    aria-controls="trek-description-collapse-heading"
-                                    data-collapse="#trek-description-collapse-heading">
-                                    <span class="collapse-open:hidden">Read more</span>
-                                    <span class="collapse-open:block hidden">Read less</span>
+
+                    <div class="h-2  "></div>
+                    <div class="2xl:mx-44 mx-4 text-left">
+
+                        <div class="">
+
+                            <p class="mb-4 2xl:text-xl text-white font-bold ">
+                            <p class="inline text-base-content/80" id="short-trek-description ">
+                                {{ Str::words(strip_tags($trek->description), 30) }}
+                            </p>
+
+                            <div id="trek-description-collapse-heading"
+                                class="collapse hidden w-full overflow-hidden transition-[height] duration-300 "
+                                aria-labelledby="trek-description-collapse">
+                                {!! $trek->description !!}
+                            </div>
+
+                            <button type="button" class="collapse-toggle link link-accent inline-flex items-center"
+                                id="trek-description-collapse-button" aria-expanded="false"
+                                aria-controls="trek-description-collapse-heading"
+                                data-collapse="#trek-description-collapse-heading">
+                                <span class="collapse-open:hidden">Read more</span>
+                                <span class="collapse-open:block hidden">Read less</span>
+                                <span class="icon-[tabler--chevron-down] collapse-open:rotate-180 ms-2 size-4"></span>
+                            </button>
+                            </p>
+                        </div>
+
+                        <div class="card-header  pb-4  px-0">
+                            <h5 class="card-title text-secondary uppercase font-normal text-2xl">
+                                At a glimpse
+                            </h5>
+                        </div>
+
+
+                        {{-- At a glimpse --}}
+                        <div class="md:grid xl:grid-cols-4 md:grid-cols-3 grid-rows-1 overflow-x-hidden  gap-4">
+                            @foreach ($trek->destinations->slice(0, 4) as $destination)
+                                <div class="card w-full bg-blue-100/30 at-a-glimpse my-4">
+                                    {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}
+                                    <div>
+                                        <div id="limited-destiinations-images"
+                                            data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true, "slidesQty": 1 }'
+                                            class="relative w-full">
+                                            <div class="carousel h-44 rounded-none rounded-t-md">
+                                                <div class="carousel-body h-full opacity-0">
+                                                    @foreach ($destination->destinationImages as $destinationImage)
+                                                        <div class="carousel-slide">
+                                                            <div class="bg-base-200/50 flex h-full justify-center">
+                                                                <span class="self-start w-full">
+                                                                    <figure>
+                                                                        <img src="{{ $destinationImage?->url ?? asset('/images/swisnl/filament-backgrounds/curated-by-swis/03.jpg') }}"
+                                                                            alt="{{ $destination->name }} Cover Image"
+                                                                            class="h-44 object-cover" />
+                                                                    </figure>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                            <!-- Previous and Next buttons -->
+                                            <div
+                                                class="carousel-info absolute bottom-3 start-[90%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-4">
+                                                <span class="carousel-info-current me-1">0</span>
+                                                /
+                                                <span class="carousel-info-total ms-1">0</span>
+                                                <button type="button" class="carousel-prev">
+                                                    <span
+                                                        class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
+                                                        <span
+                                                            class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                    </span>
+                                                    <span class="sr-only">Previous</span>
+                                                </button>
+                                                <button type="button" class="carousel-next">
+                                                    <span class="sr-only">Next</span>
+                                                    <span
+                                                        class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
+                                                        <span
+                                                            class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{-- @endif --}}
+
+                                    <div class="card-body px-2 pt-2 bg-transparent">
+                                        <h5
+                                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
+                                            {{ $destination->name }}
+                                        </h5>
+
+                                        <div class="justify-start flex flex-col items-start gap-2">
+
+                                            <p
+                                                class="text-slate-700 uppercase items-center badge badge-outline badge-primary">
+                                                {{ $destination->region->name }} Region
+                                            </p>
+                                            {{-- @if (!empty($destination->location['lat']) && !empty($destination->location['lng']))
+                                                <a href="https://maps.google.com/?q={{ $destination->location['lat'] }},{{ $destination->location['lng'] }}"
+                                                    target="_blank" rel="noopener noreferrer">
+                                                    <p class="text-primary">
+                                                        Location: {{ $destination->location['lat'] }},
+                                                        {{ $destination->location['lng'] }}
+                                                    </p>
+                                                </a>
+                                            @else
+                                                <p class="text-slate-500 italic">Location not available
+                                                </p>
+                                            @endif --}}
+                                            <p class="text-slate-700 ">
+                                                {{ Str::words($destination->description, 50) }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+
+                        {{-- See more destinations --}}
+                        <div class="w-full flex flex-row justify-center items-center mt-6">
+
+                            <a class="flex-none btn btn-outline btn-error" href="">See more destinations</a>
+                        </div>
+
+                    </div>
+                    <div class="h-12 "></div>
+                </div>
+
+                <div class="md:hidden w-full mb-4">
+                    <div class="stats stats-vertical bg-blue-100/20 w-full rounded-none">
+                        <div class="stat">
+                            <div class="stat-title">Duration</div>
+                            <div class="stat-value">
+                                {{ $trek->duration ? $trek->duration . ' Days' : 'N/A' }}
+                            </div>
+                            <div class="stat-value">
+                                <span class="badge badge-outline badge-success text-wrap h-full">
+                                    @if (!empty($trek->best_time_for_trek))
+                                        Best Time: {{ $trek->best_time_for_trek }}
+                                    @endif
+                                </span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-title">Difficulty</div>
+                            <div class="stat-value">
+                                @if ($trek->grade)
+                                    <span class="badge badge-outline badge-primary">Grade:
+                                        {{ $trek->grade }}</span>
+                                @endif
+                                @if ($trek->trek_difficulty)
                                     <span
-                                        class="icon-[tabler--chevron-down] collapse-open:rotate-180 ms-2 size-4"></span>
-                                </button>
+                                        class="badge badge-outline badge-error">{{ $trek->trek_difficulty->getLabel() }}</span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-title">Altitude</div>
+                            <div class="stat-value">
 
+                                @if (!empty($trek->starting_altitude))
+                                    <span class="badge badge-outline">
+                                        Start: {{ $trek->starting_altitude }}
+                                    </span>
+                                @endif
 
-                                </p>
+                                @if (!empty($trek->highest_altitude))
+                                    <span class="badge badge-outline">
+                                        Highest: {{ $trek->highest_altitude }}
+                                    </span>
+                                @endif
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {{-- stat --}}
-                <div class="w-full my-4">
-
-                    <div class="2xl:mx-44 mx-4">
-
-                        <div class="stats max-md:stats-vertical bg-blue-100/50 w-full">
-                            <div class="stat">
-                                <div class="stat-title">Duration</div>
-                                <div class="stat-value">{{ $trek->duration ? $trek->duration . ' Days' : 'N/A' }}
-                                </div>
-                                <div class="stat-value">
-                                    <span class="badge badge-outline badge-success">
-                                        @if (!empty($trek->best_time_for_trek))
-                                            Best Time: {{ $trek->best_time_for_trek }}
-                                        @endif
-                                    </span>
-                                </div>
-
-
-                                {{-- <div class="stat-actions">
-                                    <button class="btn btn-sm btn-primary">Upgrade Plan</button>
-                                </div> --}}
-                            </div>
-
-                            <div class="stat">
-                                <div class="stat-title">Difficulty</div>
-                                <div class="stat-value">
-                                    @if ($trek->grade)
-                                        <span class="badge badge-outline badge-primary">Grade:
-                                            {{ $trek->grade }}</span>
-                                    @endif
-                                    @if ($trek->trek_difficulty)
-                                        <span
-                                            class="badge badge-outline badge-error">{{ $trek->trek_difficulty->getLabel() }}</span>
-                                    @endif
-                                </div>
-                                {{-- <div class="stat-actions flex flex-wrap gap-2">
-                                    <button class="btn btn-sm btn-soft">View Details</button>
-                                    <button class="btn btn-sm btn-warning btn-soft">Change Payment Method</button>
-                                </div> --}}
-                            </div>
-
-                            <div class="stat">
-                                <div class="stat-title">Altitude</div>
-                                <div class="stat-value">
-
-                                    @if (!empty($trek->starting_altitude))
-                                        <span class="badge badge-outline">
-                                            Start: {{ $trek->starting_altitude }}
-                                        </span>
-                                    @endif
-
-                                    @if (!empty($trek->highest_altitude))
-                                        <span class="badge badge-outline">
-                                            Highest: {{ $trek->highest_altitude }}
-                                        </span>
-                                    @endif
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
 
                 {{-- tabs --}}
                 {{-- scrollspy --}}
@@ -235,9 +329,10 @@
                 <div class="bg-blue-100/10">
 
                     <div class="mx-4 2xl:mx-44 gap-2 max-w-full ">
-                        <div class="grid grid-cols-5 md:grid-cols-3 gap-2">
 
-                            <div class="col-span-4 md:col-span-2 ">
+                        <div class="xl:grid grid-cols-3  gap-6">
+
+                            <div class=" xl:col-span-2 ">
 
                                 {{-- key_highlights --}}
                                 @if (!empty($trek->key_highlights))
@@ -246,7 +341,7 @@
                                         <div class="h-6">
                                         </div>
                                         <div class="card-header  px-2 pb-2">
-                                            <h5 class="card-title text-primary uppercase font-extralight">Key
+                                            <h5 class="card-title text-primary uppercase font-normal text-3xl">Key
                                                 Highlights
                                             </h5>
                                         </div>
@@ -270,10 +365,11 @@
 
                                         </div>
                                         <div class="card-header px-2">
-                                            <h5 class="card-title text-primary uppercase font-extralight">Itineraries
+                                            <h5 class="card-title text-primary uppercase font-normal text-3xl">
+                                                Itineraries
                                             </h5>
                                         </div>
-                                        <div class="card-body mx-0 px-2">
+                                        <div class="card-body mx-0 px-0">
                                             <div class="accordion">
                                                 @foreach ($trek->itineraries as $itinerary)
                                                     <div class="accordion-item " id="itinerary-{{ $itinerary->id }}">
@@ -294,10 +390,9 @@
                                                                 aria-labelledby="itinerary-{{ $itinerary->id }}"
                                                                 role="region">
                                                                 <div class=" ">
-                                                                    <div
-                                                                        class="card  bg-blue-50 rounded-none mx-0 px-0">
+                                                                    <div class="cardbg-blue-50 rounded-none mx-0 px-0">
                                                                         <div
-                                                                            class="card-body justify-center items-start px-0">
+                                                                            class="card-body justify-center items-start py-2 px-0">
                                                                             @foreach ($itinerary->itineraryDetails as $detail)
                                                                                 @php
                                                                                     // Map icons to types
@@ -333,7 +428,7 @@
                                                                                         class="{{ $icon }} accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
                                                                                     {{ $detail->type->getLabel() }}
                                                                                 </h5>
-                                                                                <p class="mb-4 ">
+                                                                                <p class="mb-4 px-8">
                                                                                     {{ $detail->description }}</p>
                                                                             @endforeach
                                                                         </div>
@@ -341,29 +436,80 @@
                                                                     <div class="">
                                                                         @if (!empty($itinerary->destinations))
                                                                             <div
-                                                                                class="card-body  bg-blue-100/20 w-full px-0 ">
-                                                                                <h5
-                                                                                    class="card-title mb-2.5 text-accent uppercase font-thin text-lg md:text-2xl underline">
-                                                                                    Highlighted Places
-                                                                                </h5>
-                                                                                @foreach ($itinerary->destinations->take(2) as $destination)
+                                                                                class="card-body  bg-blue-100/20 w-full p-0">
+                                                                                <div class="flex">
+                                                                                    <span
+                                                                                        class="icon-[tabler--arrow-right] size-5 rtl:rotate-180"></span>
+                                                                                    <h5
+                                                                                        class="card-title mb-2 px-2 text-success uppercase font-thin text-2xl underline">
+                                                                                        Highlighted Places
+                                                                                    </h5>
+                                                                                </div>
+
+                                                                                @foreach ($itinerary->destinations->take(3) as $destination)
+                                                                                    <h5
+                                                                                        class="card-title pt-0 px-8 text-primary uppercase font-thin text-xl">
+                                                                                        {{ $destination->name }}
+                                                                                    </h5>
                                                                                     <div
-                                                                                        class="md:grid grid-cols-2 flex flex-col gap-1">
+                                                                                        class="hidden px-8 md:grid grid-cols-3 gap-2 ">
                                                                                         @foreach ($destination->destinationImages as $destinationImage)
-                                                                                            @if ($loop->index < 2)
+                                                                                            @if ($loop->index < 3)
                                                                                                 <figure>
                                                                                                     <img src="{{ $destinationImage->url }}"
                                                                                                         alt="{{ $destination->title }} Cover Image"
-                                                                                                        class="h-80 w-full object-cover flex" />
+                                                                                                        class="h-48 w-full object-cover flex" />
                                                                                                 </figure>
                                                                                             @endif
                                                                                         @endforeach
                                                                                     </div>
-                                                                                    <h5
-                                                                                        class="card-title mt-2 text-primary uppercase font-thin text-lg md:text-xl">
-                                                                                        {{ $destination->name }}
-                                                                                    </h5>
-                                                                                    <p class="mb-4 text-gray-600 ">
+                                                                                    <div id="infinite-loop-itinerary"
+                                                                                        data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true,  }'
+                                                                                        class="relative w-full md:hidden">
+                                                                                        <div
+                                                                                            class="carousel h-48 rounded-none">
+                                                                                            <div
+                                                                                                class="carousel-body h-full opacity-0 ">
+                                                                                                <!-- Slide 1 -->
+                                                                                                @foreach ($destination->destinationImages as $destinationImage)
+                                                                                                    <div
+                                                                                                        class="carousel-slide  px-8">
+                                                                                                        @if ($loop->index < 3)
+                                                                                                            <figure>
+                                                                                                                <img src="{{ $destinationImage->url }}"
+                                                                                                                    alt="{{ $destination->title }} Cover Image"
+                                                                                                                    class="h-48  object-cover" />
+                                                                                                            </figure>
+                                                                                                        @endif
+                                                                                                    </div>
+                                                                                                @endforeach
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <!-- Previous Slide -->
+                                                                                        <button type="button"
+                                                                                            class="carousel-prev">
+                                                                                            <span
+                                                                                                class="size-9.5 bg-base-100 hidden items-center justify-center rounded-full shadow">
+                                                                                                <span
+                                                                                                    class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                                                            </span>
+                                                                                            <span
+                                                                                                class="sr-only">Previous</span>
+                                                                                        </button>
+                                                                                        <!-- Next Slide -->
+                                                                                        <button type="button"
+                                                                                            class="carousel-next">
+                                                                                            <span
+                                                                                                class="sr-only">Next</span>
+                                                                                            <span
+                                                                                                class="size-9.5 bg-base-100 hidden items-center justify-center rounded-full shadow">
+                                                                                                <span
+                                                                                                    class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                                                            </span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <p
+                                                                                        class="mb-4 px-8  text-gray-600 ">
                                                                                         {{ $destination->description }}
                                                                                     </p>
                                                                                 @endforeach
@@ -386,70 +532,74 @@
 
                                 {{-- cost include --}}
 
-                                @if (!empty($trek->costs_include))
+                                <div class="md:grid grid-cols-2 gap-4">
+                                    @if (!empty($trek->costs_include))
 
-                                    <div id="costs_include" class="card 2xl:max-w-full   rounded-none bg-blue-100/10">
-                                        <div class="h-6">
+                                        <div id="costs_include"
+                                            class="card 2xl:max-w-full rounded-none bg-blue-100/10">
+                                            <div class="h-6">
 
-                                        </div>
-                                        <div class="card-header p-2">
-                                            <h5 class="card-title text-primary uppercase font-extralight">Cost Includes
-                                            </h5>
-                                        </div>
-                                        <div class="card-body p-2 mt-4">
-                                            <ul class="space-y-5 ">
-                                                @foreach ($trek->costs_include as $cost_include)
-                                                    <li class="flex items-center space-x-3 rtl:space-x-reverse  ">
-                                                        <span
-                                                            class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+                                            </div>
+                                            <div class="card-header p-2">
+                                                <h5 class="card-title text-primary uppercase font-normal text-3xl">Cost
+                                                    Includes
+                                                </h5>
+                                            </div>
+                                            <div class="card-body p-2 mt-4">
+                                                <ul class="space-y-5 ">
+                                                    @foreach ($trek->costs_include as $cost_include)
+                                                        <li class="flex items-center space-x-3 rtl:space-x-reverse  ">
                                                             <span
-                                                                class="icon-[tabler--arrow-right] size-4 rtl:rotate-180"></span>
-                                                        </span>
-                                                        <p class="text-blue-800  md:text-justify text-preety">
-                                                            {{ $cost_include }}
-                                                        </p>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                        <div class="h-6">
+                                                                class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
+                                                                <span
+                                                                    class="icon-[tabler--arrow-right] size-4 rtl:rotate-180"></span>
+                                                            </span>
+                                                            <p class="text-blue-800  md:text-justify text-preety">
+                                                                {{ $cost_include }}
+                                                            </p>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                            <div class="h-6">
 
+                                            </div>
                                         </div>
-                                    </div>
-                                @endif
+                                    @endif
 
-                                @if (!empty($trek->costs_exclude))
+                                    @if (!empty($trek->costs_exclude))
+                                        {{-- cost exclude --}}
+                                        <div id="costs_exclude"
+                                            class="card 2xl:max-w-full  rounded-none bg-red-100/10">
+                                            <div class="h-6">
 
-                                    {{-- cost exclude --}}
-                                    <div id="costs_exclude" class="card 2xl:max-w-full  rounded-none bg-red-100/10">
-                                        <div class="h-6">
-
-                                        </div>
-                                        <div class="card-header p-2">
-                                            <h5 class="card-title text-primary uppercase font-extralight">Cost Excludes
-                                            </h5>
-                                        </div>
-                                        <div class="card-body p-2 mt-4">
-                                            <ul class="space-y-5">
-                                                @foreach ($trek->costs_exclude as $cost_exclude)
-                                                    <li class="flex items-center space-x-3 rtl:space-x-reverse">
-                                                        <span
-                                                            class="bg-primary/20 text-slate-700 flex items-center justify-center rounded-full ">
+                                            </div>
+                                            <div class="card-header p-2">
+                                                <h5 class="card-title text-primary uppercase font-normal text-3xl">Cost
+                                                    Excludes
+                                                </h5>
+                                            </div>
+                                            <div class="card-body p-2 mt-4">
+                                                <ul class="space-y-5">
+                                                    @foreach ($trek->costs_exclude as $cost_exclude)
+                                                        <li class="flex items-center space-x-3 rtl:space-x-reverse">
                                                             <span
-                                                                class="icon-[tabler--arrow-right] size-5 rtl:rotate-180"></span>
-                                                        </span>
-                                                        <p class="text-slate-700 md:text-justify text-preety ">
-                                                            {{ $cost_exclude }} </p>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                        <div class="h-6">
+                                                                class="bg-primary/20 text-slate-700 flex items-center justify-center rounded-full ">
+                                                                <span
+                                                                    class="icon-[tabler--arrow-right] size-5 rtl:rotate-180"></span>
+                                                            </span>
+                                                            <p class="text-slate-700 md:text-justify text-preety ">
+                                                                {{ $cost_exclude }} </p>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                            <div class="h-6">
 
+                                            </div>
                                         </div>
-                                    </div>
-                                @endif
-
+                                    @endif
+                                </div>
                                 {{-- essential_tips --}}
                                 @if (!empty($trek->essential_tips))
 
@@ -458,7 +608,8 @@
 
                                         </div>
                                         <div class="card-header px-2 pb-2">
-                                            <h5 class="card-title text-primary uppercase font-extralight">Essential
+                                            <h5 class="card-title text-primary uppercase font-normal text-3xl">
+                                                Essential
                                                 Tips
                                             </h5>
                                         </div>
@@ -474,91 +625,187 @@
                                         </div>
                                     </div>
                                 @endif
+                                {{-- destinations --}}
+                                @if (!empty($trek->destinations))
+                                    <div id="destination" class="card 2xl:max-w-full rounded-none bg-transparent ">
+                                        <div class="h-6">
 
+                                        </div>
+                                        <div class="card-header  pb-4  px-0">
+                                            <h5 class="card-title text-secondary uppercase font-normal text-3xl">
+                                                Destinations
+                                            </h5>
+                                        </div>
+
+                                        <div class="md:grid md:grid-cols-3 flex flex-col gap-4 w-full">
+                                            @foreach ($trek->destinations as $destination)
+                                                <div class="card w-full bg-blue-100/30 overflow-hidden">
+                                                    {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}
+                                                    <div>
+                                                        <div id="all-destinations-images"
+                                                            data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true, "slidesQty": 1 }'
+                                                            class="relative w-full">
+                                                            <div class="carousel h-44 rounded-none rounded-t-md">
+                                                                <div class="carousel-body h-full opacity-0">
+                                                                    @foreach ($destination->destinationImages as $destinationImage)
+                                                                        <div class="carousel-slide">
+                                                                            <div
+                                                                                class="bg-base-200/50 flex h-full justify-center">
+                                                                                <span class="self-start w-full">
+                                                                                    <figure>
+                                                                                        <x-curator-glider
+                                                                                            class="h-44 object-cover"
+                                                                                            :media="$destinationImage"
+                                                                                            :fallback="asset('/images/swisnl/filament-backgrounds/curated-by-swis/03.jpg')"
+                                                                                            loading="lazy"
+                                                                                         />
+                                                                                            {{-- :width="$preset->getWidth()"
+                                                                                            :height="$preset->getHeight()" /> --}}
+                                                                                        {{-- <img src="{{ $destinationImage?->url ?? asset('/images/swisnl/filament-backgrounds/curated-by-swis/03.jpg') }}"
+                                                                                            alt="{{ $destination->name }} Cover Image"
+                                                                                            class="h-44 object-cover" /> --}}
+                                                                                    </figure>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    @endforeach
+                                                                </div>
+                                                            </div>
+                                                            <!-- Previous and Next buttons -->
+                                                            <div
+                                                                class="carousel-info absolute bottom-3 start-[90%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-4">
+                                                                <span class="carousel-info-current me-1">0</span>
+                                                                /
+                                                                <span class="carousel-info-total ms-1">0</span>
+                                                                <button type="button" class="carousel-prev">
+                                                                    <span
+                                                                        class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
+                                                                        <span
+                                                                            class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                                    </span>
+                                                                    <span class="sr-only">Previous</span>
+                                                                </button>
+                                                                <button type="button" class="carousel-next">
+                                                                    <span class="sr-only">Next</span>
+                                                                    <span
+                                                                        class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
+                                                                        <span
+                                                                            class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    {{-- @endif --}}
+
+                                                    <div class="card-body px-2 pt-2 bg-transparent">
+                                                        <h5
+                                                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
+                                                            {{ $destination->name }}
+                                                        </h5>
+
+                                                        <div class="justify-start flex flex-col items-start gap-2">
+
+                                                            <p
+                                                                class="text-slate-700 uppercase items-center badge badge-outline badge-primary">
+                                                                {{ $destination->region->name }} Region
+                                                            </p>
+                                                            {{-- @if (!empty($destination->location['lat']) && !empty($destination->location['lng']))
+                                                            <a href="https://maps.google.com/?q={{ $destination->location['lat'] }},{{ $destination->location['lng'] }}"
+                                                                target="_blank" rel="noopener noreferrer">
+                                                                <p class="text-primary">
+                                                                    Location: {{ $destination->location['lat'] }},
+                                                                    {{ $destination->location['lng'] }}
+                                                                </p>
+                                                            </a>
+                                                        @else
+                                                            <p class="text-slate-500 italic">Location not available
+                                                            </p>
+                                                        @endif --}}
+                                                            <p class="text-slate-700 ">
+                                                                {{ Str::words($destination->description, 50) }}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                        <div class="h-6">
+
+                                        </div>
+                                    </div>
+                                @endif
 
                                 <div class="h-96"></div>
                             </div>
                             <div class=" ">
-                                <div class="h-16"></div>
-                                <div class="sticky top-12">
-                                    {{-- destinations --}}
-                                    @if (!empty($trek->destinations))
-                                        <div id="destination" class="card 2xl:max-w-full rounded-none  ">
-                                            <div class="h-6">
-
-                                            </div>
-                                            {{-- <div class="card-header p-2 pb-4">
-                                            <h5 class="card-title text-primary uppercase font-extralight">
-                                                Destinations
-                                            </h5>
-                                        </div> --}}
-
-                                            <!-- Slider -->
-                                            <div data-carousel='{
-                                            "loadingClasses": "opacity-0",
-                                            "isInfiniteLoop": true,
-                                            "isAutoPlay": true, "speed": 10000
-                                            }'
-                                                class="relative w-full rounded-none">
-                                                <div class="carousel h-80 rounded-none">
-                                                    <div class="carousel-body h-full opacity-0 rounded-none">
-                                                        @foreach ($trek->destinations as $destination)
-                                                            @foreach ($destination->destinationImages as $destinationImage)
-                                                                <div class="carousel-slide rounded-none">
-                                                                    <div
-                                                                        class="bg-base-300/60 flex h-full justify-center rounded-none">
-                                                                        <span class="self-center text-2xl sm:text-4xl rounded-none">
-                                                                            <div
-                                                                                class="card image-full sm:max-w-sm h-80 rounded-none">
-                                                                                <figure class="rounded-none"><img
-                                                                                        src= "{{ $destinationImage->url ?? '/images/swisnl/filament-backgrounds/curated-by-swis/03.jpg' }}"
-                                                                                        class="rounded-none"
-                                                                                        alt="overlay image" /></figure>
-                                                                                <div class="card-body justify-end">
-                                                                                    <h2
-                                                                                        class="card-title mb-2.5 text-white">
-                                                                                        {{ $destination->name }}</h2>
-                                                                                </div>
-                                                                            </div>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            @endforeach
-                                                        @endforeach
-                                                    </div>
+                                <div class="h-8"></div>
+                                <div class="sticky top-32 hidden lg:block">
+                                    {{-- stat --}}
+                                    <div class="w-full my-4">
+                                        <div class="stats stats-vertical bg-blue-100/50 w-full rounded-none">
+                                            <div class="stat">
+                                                <div class="stat-title">Duration</div>
+                                                <div class="stat-value">
+                                                    {{ $trek->duration ? $trek->duration . ' Days' : 'N/A' }}
                                                 </div>
-                                                <button type="button" class="carousel-prev">
-                                                    <span
-                                                        class="icon-[tabler--chevron-left] size-8 text-white cursor-pointer rtl:rotate-180"></span>
-                                                    <span class="sr-only">Previous</span>
-                                                </button>
-                                                <button type="button" class="carousel-next">
-                                                    <span class="sr-only">Next</span>
-                                                    <span
-                                                        class="icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
-                                                </button>
-
-                                                {{-- <div
-                                                    class="carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3 text-white">
-                                                </div> --}}
+                                                <div class="stat-value">
+                                                    <span class="badge badge-outline badge-success text-wrap h-full">
+                                                        @if (!empty($trek->best_time_for_trek))
+                                                            Best Time: {{ $trek->best_time_for_trek }}
+                                                        @endif
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <!-- End Slider -->
-                                    @endif
+                                            <div class="stat">
+                                                <div class="stat-title">Difficulty</div>
+                                                <div class="stat-value">
+                                                    @if ($trek->grade)
+                                                        <span class="badge badge-outline badge-primary">Grade:
+                                                            {{ $trek->grade }}</span>
+                                                    @endif
+                                                    @if ($trek->trek_difficulty)
+                                                        <span
+                                                            class="badge badge-outline badge-error">{{ $trek->trek_difficulty->getLabel() }}</span>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="stat">
+                                                <div class="stat-title">Altitude</div>
+                                                <div class="stat-value">
 
-                                    <div class="card-body bg-blue-200 mt-4">
-                                        {{-- <p class="mb-4">Discover the features and benefits that our service offers.
-                                            Enhance your experience with our user-friendly platform designed to meet all
-                                            your needs.</p> --}}
+                                                    @if (!empty($trek->starting_altitude))
+                                                        <span class="badge badge-outline">
+                                                            Start: {{ $trek->starting_altitude }}
+                                                        </span>
+                                                    @endif
+
+                                                    @if (!empty($trek->highest_altitude))
+                                                        <span class="badge badge-outline">
+                                                            Highest: {{ $trek->highest_altitude }}
+                                                        </span>
+                                                    @endif
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" card-body bg-blue-200 mt-4">
                                         <div class="card-actions justify-center">
                                             <button class="btn btn-primary btn-wide uppercase">Book this trip</button>
                                             <button class="btn btn-info  btn-wide uppercase">Inquiry</button>
                                         </div>
                                     </div>
+                                    <div class="h-10"></div>
                                 </div>
+
+
                             </div>
+
                         </div>
                     </div>
                 </div>
+
                 {{-- scrollspy-body -end --}}
 
             </div>
