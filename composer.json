@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.2",
         "awcodes/filament-curator": "^3.6",
+        "awcodes/filament-tiptap-editor": "^3.0",
         "awcodes/overlook": "^2.2",
         "bezhansalleh/filament-shield": "^3.3",
         "dotswan/filament-map-picker": "^1.6",
