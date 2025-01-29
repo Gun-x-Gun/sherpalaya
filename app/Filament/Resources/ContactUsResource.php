@@ -27,11 +27,18 @@ class ContactUsResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-phone';
 
+
     protected static ?string $navigationGroup = 'Site';
     protected static ?string $pluralModelLabel = 'Contact Us';
 
     protected static ?string $navigationLabel = 'Contact Us';
 
+    protected static ?int $navigationSort = 2;
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -49,7 +56,8 @@ class ContactUsResource extends Resource
                             ->prefix('+977 ')
                             ->numeric()
                             ->startsWith([
-                                '97','98'
+                                '97',
+                                '98'
                             ])
                             ->minLength(10)
                             ->maxLength(10),

@@ -31,9 +31,9 @@ class RegionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-map';
 
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 5;
 
-    protected static ?string $navigationGroup = 'Info';
+    protected static ?string $navigationGroup = 'Content';
 
     public static function form(Form $form): Form
     {

@@ -31,6 +31,12 @@ class FaqResource extends Resource
 
     protected static ?string $navigationLabel = 'FAQ';
 
+    protected static ?int $navigationSort = 3;
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {
