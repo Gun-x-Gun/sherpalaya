@@ -39,9 +39,11 @@ class FaqResource extends Resource
                 Section::make()
                     ->schema([
                         Textarea::make('question')
-                            ->rows(1),
+                            ->rows(1)
+                            ->required(),
                         RichEditor::make('answer')
                             ->columnSpan(3)
+                            ->required()
                             ->toolbarButtons([
                                 // 'attachFiles',
                                 'blockquote',
@@ -68,11 +70,11 @@ class FaqResource extends Resource
             ->columns([
                 Stack::make([
                     TextColumn::make('question')
-                    ->size(TextColumn\TextColumnSize::Large)
-                    ->weight(FontWeight::Bold),
+                        ->size(TextColumn\TextColumnSize::Large)
+                        ->weight(FontWeight::Bold),
                     TextColumn::make('answer')
-                    ->lineClamp(2)
-                    ->html(),
+                        ->lineClamp(2)
+                        ->html(),
                 ]),
             ])
             ->filters([

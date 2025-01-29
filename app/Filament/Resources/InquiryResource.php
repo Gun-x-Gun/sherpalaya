@@ -34,29 +34,34 @@ class InquiryResource extends Resource
         return $form
             ->schema([
                 Section::make()
-                ->columns(2)
-                ->schema([
-                    TextInput::make('full_name'),
-                    TextInput::make('email'),
-                    RichEditor::make('message')
-                        ->columnSpan(3)
-                        ->toolbarButtons([
-                            // 'attachFiles',
-                            'blockquote',
-                            'bold',
-                            'bulletList',
-                            // 'codeBlock',
-                            'h2',
-                            'h3',
-                            'italic',
-                            'link',
-                            'orderedList',
-                            'redo',
-                            // 'strike',
-                            'underline',
-                            'undo',
-                        ]),
-                ]),
+                    ->columns(2)
+                    ->schema([
+                        TextInput::make('full_name')
+                            ->required(),
+                        TextInput::make('email')
+                            ->required()
+                            ->email()
+                            ->prefixIcon('heroicon-m-envelope'),
+                        RichEditor::make('message')
+                            ->required()
+                            ->columnSpan(3)
+                            ->toolbarButtons([
+                                // 'attachFiles',
+                                'blockquote',
+                                'bold',
+                                'bulletList',
+                                // 'codeBlock',
+                                'h2',
+                                'h3',
+                                'italic',
+                                'link',
+                                'orderedList',
+                                'redo',
+                                // 'strike',
+                                'underline',
+                                'undo',
+                            ]),
+                    ]),
             ]);
     }
 
@@ -66,16 +71,16 @@ class InquiryResource extends Resource
             ->columns([
                 Split::make([
                     TextColumn::make('full_name')
-                    ->size(TextColumn\TextColumnSize::Large)
-                    ->weight(FontWeight::Bold),
+                        ->size(TextColumn\TextColumnSize::Large)
+                        ->weight(FontWeight::Bold),
                     TextColumn::make('email')
-                    ->size(TextColumn\TextColumnSize::Large),
+                        ->size(TextColumn\TextColumnSize::Large),
                 ])->from('md'),
                 Panel::make([
                     Stack::make([
                         TextColumn::make('message')
-                        ->html()
-                        ->words(25),
+                            ->html()
+                            ->words(25),
                     ]),
                 ])->collapsible()
             ])
