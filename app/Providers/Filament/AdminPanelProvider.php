@@ -9,6 +9,7 @@ use App\Filament\Resources\RegionResource;
 use App\Filament\Resources\ServiceResource;
 use App\Filament\Resources\TrekResource;
 use App\Filament\Resources\TourResource;
+use App\Filament\Resources\UserResource;
 use Awcodes\Curator\Resources\MediaResource;
 use Awcodes\Overlook\OverlookPlugin;
 use Awcodes\Overlook\Widgets\OverlookWidget;
@@ -16,6 +17,7 @@ use Filament\Http\Middleware\Authenticate;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\MenuItem;
 use Filament\Navigation\NavigationItem;
 use Filament\Pages;
 use Filament\Panel;
@@ -96,26 +98,39 @@ class AdminPanelProvider extends PanelProvider
                 ->label('Media')
                 ->pluralLabel('Media')
                 ->navigationIcon('heroicon-o-photo')
-                ->navigationGroup('Control')
-                ->navigationSort(3)
-                ->navigationCountBadge()
+                ->navigationGroup('Content')
+                ->navigationSort(8)
+                // ->navigationCountBadge()
                 ->registerNavigation(true)
 
             ])
             ->navigationItems([
-                NavigationItem::make('Roles')
-                    ->url('/admin/shield/roles')
-                    ->icon('heroicon-o-cog')
-                    ->group('Control')
-                    ->isActiveWhen(function(){
-                        return request()->is('admin/shield/roles');
-                    })
+                // NavigationItem::make('Roles')
+                //     ->url('/admin/shield/roles')
+                //     ->icon('heroicon-o-cog')
+                //     ->group('Control')
+                //     ->isActiveWhen(function(){
+                //         return request()->is('admin/shield/roles');
+                //     }),
+                NavigationItem::make('Sherpalaya Home')
+                    ->url('http://127.0.0.1:8000', shouldOpenInNewTab: true)
+                    ->icon('heroicon-o-chevron-double-up'),
             ])
             ->navigationGroups([
                 'Content',
                 'Info',
                 'Site',
                 'Control',
+            ])
+            ->userMenuItems([
+                MenuItem::make()
+                    ->label('Users')
+                    ->url(fn (): string => UserResource::getUrl())
+                    ->icon('heroicon-o-users'),
+                MenuItem::make()
+                    ->label('Roles')
+                    ->url('/admin/shield/roles')
+                    ->icon('heroicon-o-cog'),
             ]);
     }
 }
