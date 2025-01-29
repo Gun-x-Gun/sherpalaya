@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('inquiries', function (Blueprint $table) {
             $table->id();
+            $table->string('full_name')
+                ->required();
+            $table->string('email')
+                ->required();
+            $table->longText('message')
+                ->required();
             $table->timestamps();
         });
     }
