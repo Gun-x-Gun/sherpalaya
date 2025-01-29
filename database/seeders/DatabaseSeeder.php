@@ -21,12 +21,15 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             RegionSeeder::class,
             DestinationSeeder::class,
-            // ExpeditionSeeder::class,
-            // PeakSeeder::class,
-            // TrekSeeder::class,
-            // TourSeeder::class,
-            // ItinerarySeeder::class,
+            ExpeditionSeeder::class,
+            PeakSeeder::class,
+            TrekSeeder::class,
+            TourSeeder::class,
+            ItinerarySeeder::class,
             ServiceSeeder::class,
+            ContactUsSeeder::class,
+            InquirySeeder::class,
+            FaqSeeder::class,
         ]);
     }
 }
