@@ -1,5 +1,13 @@
 <x-website-layout>
-    <x-search.search-form :query="$query" :type="$type" />
+    <div class="w-full min-h-96 flex flex-col justify-center items-center bg-slate-200">
+        <div class="min-w-80">
+            <p class="text-2xl font-semibold mb-2 text-center">
+                Find your adventure
+            </p>
+            <x-search.search-input :query="$query" :type="$type" />
+        </div>
+
+    </div>
 
     <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
         Search Results for: {{ $query }}
@@ -19,7 +27,7 @@
                                             <div class="bg-base-200/50 flex h-full justify-center">
                                                 <span class="self-start w-full ">
                                                     <figure>
-                                                        <img src="{{ $image->url ?? asset('photos/P1030127.JPG') }}"
+                                                        <img src="{{ $image->url ?? asset('/photos/banner.jpg') }}"
                                                             alt="{{ $trek->title }} Cover Image"
                                                             class="h-80 object-cover" />
                                                     </figure>
