@@ -11,18 +11,12 @@ Route::redirect('/', '/home');
 
 // Search route
 
-Route::resource('search', SearchController::class)
-    ->only([
-        'index'
-    ]);
-
-
-Route::get('/search/query', [
-    SearchController::class, 'query'
-]);
-
-
-
+Route::prefix('/search')
+    ->controller(SearchController::class)
+    ->group(function () {
+        Route::get('/', 'index');
+        Route::get('/query', 'query');
+    });
 
 // Subin Route
 
