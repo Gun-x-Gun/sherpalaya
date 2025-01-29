@@ -20,11 +20,10 @@
 {{-- text-center md:text-left md:pl-48 pt-[20rem] --}}
 
 <div class="bg-blue-100/50">
-
     <div class="card--rounded-none image-full h-full">
         <figure class="h-[100vh] w-full">
             <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="Trekking background image"
-                class="h-[100vh] w-full object-cover" />
+                class="h-[100vh] w-full object-cover brightness-90" />
         </figure>
         <div class="card-body relative">
             <div

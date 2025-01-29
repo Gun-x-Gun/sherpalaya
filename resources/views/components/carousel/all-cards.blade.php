@@ -132,9 +132,9 @@
         <a href="/expeditions" class=" col-span-2">
             <div
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
-                <figure class="h-full w-full brightness-90">
+                <figure class="h-full w-full ">
                     <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-90" />
                 </figure>
                 <div class="card-body absolute bottom-0 ">
                     <div class="text-left ">
@@ -150,9 +150,9 @@
             <div
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
 
-                <figure class="h-full w-full brightness-90">
+                <figure class="h-full w-full ">
                     <img src="{{ asset('photos/DSCF2600.JPG') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-90" />
                 </figure>
                 <div class="card-body absolute inset-0 ">
                     <div class="text-left ">
@@ -172,9 +172,9 @@
         <a href="/tours" class="">
             <div
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
-                <figure class="h-full w-full brightness-90">
+                <figure class="h-full w-full ">
                     <img src="{{ asset('photos/DSCF2632.JPG') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-90" />
                 </figure>
                 <div class="card-body absolute inset-0 ">
                     <div class="text-left ">
@@ -192,7 +192,7 @@
 
                 <figure class="h-full w-full brightness-90">
                     <img src="{{ asset('photos/DSCF4092.JPG') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-90" />
                 </figure>
                 <div class="card-body absolute inset-0 ">
                     <div class="text-left ">

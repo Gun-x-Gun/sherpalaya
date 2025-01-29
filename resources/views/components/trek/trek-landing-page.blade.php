@@ -160,7 +160,7 @@
     <div class="card--rounded-none image-full h-[80vh] bg-blue-100/50">
         <figure class="h-[80vh] w-full">
             <img src="{{ $trek->coverImage->url ?? asset('photos/P1030127.JPG') }}" alt="Trekking background image"
-                class="h-[80vh] w-full object-cover" />
+                class="h-[80vh] w-full object-cover brightness-75" />
         </figure>
 
         <div class="card-body relative ">
