@@ -37,11 +37,24 @@ class ContactUsResource extends Resource
         return $form
             ->schema([
                 Section::make()
-                    ->columns(2)
+                    ->columns(3)
                     ->schema([
-                        TextInput::make('full_name'),
-                        TextInput::make('email'),
+                        TextInput::make('full_name')
+                            ->required(),
+                        TextInput::make('email')
+                            ->required()
+                            ->email()
+                            ->prefixIcon('heroicon-m-envelope'),
+                        TextInput::make('mobile_number')
+                            ->prefix('+977 ')
+                            ->numeric()
+                            ->startsWith([
+                                '97','98'
+                            ])
+                            ->minLength(10)
+                            ->maxLength(10),
                         RichEditor::make('message')
+                            ->required()
                             ->columnSpan(3)
                             ->toolbarButtons([
                                 // 'attachFiles',
@@ -69,19 +82,23 @@ class ContactUsResource extends Resource
             ->columns([
                 Split::make([
                     TextColumn::make('full_name')
-                    ->size(TextColumn\TextColumnSize::Large)
-                    ->weight(FontWeight::Bold),
+                        ->size(TextColumn\TextColumnSize::Large)
+                        ->weight(FontWeight::Bold),
                     TextColumn::make('email')
-                    ->size(TextColumn\TextColumnSize::Large),
+                        ->size(TextColumn\TextColumnSize::Large),
+                    TextColumn::make('mobile_number')
+                        ->size(TextColumn\TextColumnSize::Large)
+                        ->prefix('+977'),
                 ])->from('md'),
                 Panel::make([
                     Stack::make([
                         TextColumn::make('message')
-                        ->html()
-                        ->words(25),
+                            ->html()
+                            ->words(25),
                     ]),
-                ])->collapsible()
+                ])->collapsible(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])

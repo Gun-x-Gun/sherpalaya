@@ -17,6 +17,9 @@ return new class extends Migration
                 ->required();
             $table->string('email')
                 ->required();
+            $table->string('mobile_number')
+                ->nullable()
+                ->default(null);
             $table->longText('message')
                 ->required();
             $table->timestamps();
