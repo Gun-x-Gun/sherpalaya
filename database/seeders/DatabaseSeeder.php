@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
             ContactUsSeeder::class,
             InquirySeeder::class,
             FaqSeeder::class,
+            WebsiteSettingSeeder::class,
         ]);
     }
 }
