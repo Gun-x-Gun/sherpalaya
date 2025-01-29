@@ -21,7 +21,9 @@
 
     {{-- stop --}}
 
-    <x-partials.footer />
+    @if ($showFooter)
+        <x-partials.footer />
+    @endif
     {{-- bottom --}}
 
 
@@ -32,16 +34,16 @@
 </html>
 
 
-{{-- 
-Home 
+{{--
+Home
 About Us
-Trekking 
-Peaks 
+Trekking
+Peaks
 Expeditions
-Tour 
-Sightseeing Tours (Helicopter/Vehicle) 
+Tour
+Sightseeing Tours (Helicopter/Vehicle)
 Photography Tours
 Cycling Tours
 Running Tours
-Cultural Tours/Meditation 
+Cultural Tours/Meditation
 Contact Us  --}}
