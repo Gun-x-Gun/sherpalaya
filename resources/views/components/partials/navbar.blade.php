@@ -16,6 +16,9 @@
                 </div> --}}
 
                 <div class="xl:hidden">
+                    <a href="/search" class="btn btn-transparent border-none">
+                        <span class="icon-[tabler--search] size-5"></span>
+                    </a>
                     <button type="button" class="btn btn-transparent border-none" aria-haspopup="dialog"
                         aria-expanded="false" aria-controls="overlay-end-example" data-overlay="#overlay-end-example">
                         <span class="icon-[tabler--menu-2] collapse-open:hidden size-5"></span>
@@ -388,10 +391,11 @@
                                         request()->route()->getName() == 'website.contact',
                                 ])>Contact</a>
                         </li>
-                        <li class="text-slate-900 hover:bg-accent rounded-lg text-md "><a href="/search">
-                            <span class="icon-[tabler--search] size-5 cursor-pointer rtl:rotate-180"></span>
-                        </a>
-                    </li>
+                        <li class="text-slate-900 hover:bg-accent rounded-lg text-md">
+                            <a href="/search">
+                                <span class="icon-[tabler--search] size-5"></span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -405,10 +409,14 @@
     <div class="drawer-body px-2 uppercase">
         <div class="drawer-header px-2">
             <h3 class="drawer-title">Sherpalaya</h3>
+            <a href="/search" class="btn btn-text btn-circle btn-sm absolute end-12 top-3">
+                <span class="icon-[tabler--search] size-5 "></span>
+            </a>
             <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close"
                 data-overlay="#overlay-end-example">
                 <span class="icon-[tabler--x] size-4 "></span>
             </button>
+
         </div>
         <div class="drawer-body justify-start pb-6 px-0">
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
@@ -552,7 +560,7 @@
                         Contact
                     </a>
                 </li>
-                <li>
+                </li>
             </ul>
         </div>
     </div>
