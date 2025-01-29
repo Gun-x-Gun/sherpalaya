@@ -18,13 +18,14 @@
                 detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
                 Trek into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
 
-            <div id="multi-slide" data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1.1,"md":3, "lg": 4 } }'
+            <div id="multi-slide"
+                data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1.1,"md": {{ max(1.1, min(3, count($featuredTreks))) }}, "lg": {{ max(1.1, min(4, count($featuredTreks))) }} } }'
                 class="relative w-full mt-2">
-                <div class="carousel h-[28rem] rounded-none ">
+                <div class="carousel h-[28rem] rounded-none">
                     <div class="carousel-body h-[28rem] opacity-0 gap-4">
                         <!-- Slide 1 -->
                         @foreach ($featuredTreks as $featuredTrek)
-                            <div class="carousel-slide" >
+                            <div class="carousel-slide">
                                 <div class="bg-base-200/50 flex h-[28rem] justify-start items-start">
                                     <span class="self-center text-lg">
                                         <div class="bg-base-300/60 flex h-[28rem] justify-start " dir="rtl">
