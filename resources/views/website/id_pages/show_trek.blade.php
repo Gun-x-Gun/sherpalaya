@@ -42,8 +42,8 @@
             <div id="scrollspy-scrollable-parent-1 overflow-x-hidden">
                 <div class="card--rounded-none image-full  bg-blue-100/50 h-[100vh]">
                     <figure class="h-[100vh] w-full">
-                        <img src="{{ $trek->coverImage?->url ?? '/photos/logo.png' }}" alt="Trekking background image"
-                            class="h-[100vh] w-full object-cover" />
+                        <img src="{{ $trek->coverImage?->url ?? '/images/swisnl/filament-backgrounds/curated-by-swis/03.jpg' }}"
+                            alt="Trekking background image" class="h-[100vh] w-full object-cover" />
                     </figure>
                     <div class="card-body relative">
 
@@ -478,11 +478,74 @@
 
                                 <div class="h-96"></div>
                             </div>
-                            <div class="">
+                            <div class=" ">
                                 <div class="h-16"></div>
+                                <div class="sticky top-12">
+                                    {{-- destinations --}}
+                                    @if (!empty($trek->destinations))
+                                        <div id="destination" class="card 2xl:max-w-full rounded-none  ">
+                                            <div class="h-6">
 
-                                <div class="hidden md:card sm:max-w-sm md:sticky md:top-20">
-                                    <div class="card-body bg-blue-200">
+                                            </div>
+                                            {{-- <div class="card-header p-2 pb-4">
+                                            <h5 class="card-title text-primary uppercase font-extralight">
+                                                Destinations
+                                            </h5>
+                                        </div> --}}
+
+                                            <!-- Slider -->
+                                            <div data-carousel='{
+                                            "loadingClasses": "opacity-0",
+                                            "isInfiniteLoop": true,
+                                            "isAutoPlay": true, "speed": 10000
+                                            }'
+                                                class="relative w-full rounded-none">
+                                                <div class="carousel h-80 rounded-none">
+                                                    <div class="carousel-body h-full opacity-0 rounded-none">
+                                                        @foreach ($trek->destinations as $destination)
+                                                            @foreach ($destination->destinationImages as $destinationImage)
+                                                                <div class="carousel-slide rounded-none">
+                                                                    <div
+                                                                        class="bg-base-300/60 flex h-full justify-center rounded-none">
+                                                                        <span class="self-center text-2xl sm:text-4xl rounded-none">
+                                                                            <div
+                                                                                class="card image-full sm:max-w-sm h-80 rounded-none">
+                                                                                <figure class="rounded-none"><img
+                                                                                        src= "{{ $destinationImage->url ?? '/images/swisnl/filament-backgrounds/curated-by-swis/03.jpg' }}"
+                                                                                        class="rounded-none"
+                                                                                        alt="overlay image" /></figure>
+                                                                                <div class="card-body justify-end">
+                                                                                    <h2
+                                                                                        class="card-title mb-2.5 text-white">
+                                                                                        {{ $destination->name }}</h2>
+                                                                                </div>
+                                                                            </div>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            @endforeach
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="carousel-prev">
+                                                    <span
+                                                        class="icon-[tabler--chevron-left] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                                                    <span class="sr-only">Previous</span>
+                                                </button>
+                                                <button type="button" class="carousel-next">
+                                                    <span class="sr-only">Next</span>
+                                                    <span
+                                                        class="icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                                                </button>
+
+                                                {{-- <div
+                                                    class="carousel-pagination absolute bottom-3 end-0 start-0 flex justify-center gap-3 text-white">
+                                                </div> --}}
+                                            </div>
+                                            <!-- End Slider -->
+                                    @endif
+
+                                    <div class="card-body bg-blue-200 mt-4">
                                         {{-- <p class="mb-4">Discover the features and benefits that our service offers.
                                             Enhance your experience with our user-friendly platform designed to meet all
                                             your needs.</p> --}}
@@ -491,108 +554,6 @@
                                             <button class="btn btn-info  btn-wide uppercase">Inquiry</button>
                                         </div>
                                     </div>
-
-                                    {{-- destinations --}}
-                                    @if (!empty($trek->destinations))
-                                        <div id="destination"
-                                            class="card 2xl:max-w-full rounded-none bg-blue-100/30 ">
-                                            <div class="h-6">
-
-                                            </div>
-                                            <div class="card-header p-2 pb-4">
-                                                <h5 class="card-title text-primary uppercase font-extralight">
-                                                    Destinations
-                                                </h5>
-                                            </div>
-
-
-
-
-                                            <div id="snap"
-                                                data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "lg": 3 }, "isCentered": true, "isSnap": true }'
-                                                class="relative w-full">
-                                                <div
-                                                    class="carousel h-80 flex vertical-scrollbar snap-x snap-mandatory overflow-x-auto">
-                                                    <div class="carousel-body h-full gap-2 opacity-0">
-                                                        <!-- Slide 1 -->
-                                                        <div class="carousel-slide snap-center">
-                                                            <div class="card sm:max-w-sm">
-                                                                <figure><img
-                                                                        src="https://cdn.flyonui.com/fy-assets/components/card/image-9.png"
-                                                                        alt="Watch" /></figure>
-                                                                <div class="card-body">
-                                                                    <h5 class="card-title mb-2.5">Apple Smart Watch
-                                                                    </h5>
-                                                                    <p class="mb-4">Stay connected, motivated, and
-                                                                        healthy with the latest Apple Watch.</p>
-                                                                    <div class="card-actions">
-                                                                        <button class="btn btn-primary">Buy
-                                                                            Now</button>
-                                                                        <button class="btn btn-secondary btn-soft">Add
-                                                                            to cart</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Slide 2 -->
-                                                        <div class="carousel-slide snap-center">
-                                                            <div class="bg-base-200 flex h-full justify-center p-6">
-                                                                <span class="self-center text-lg">Second slide</span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Slide 3 -->
-                                                        <div class="carousel-slide snap-center">
-                                                            <div class="bg-base-300 flex h-full justify-center p-6">
-                                                                <span class="self-center text-lg">Third slide</span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Slide 4 -->
-                                                        <div class="carousel-slide snap-center">
-                                                            <div class="bg-base-200/50 flex h-full justify-center p-6">
-                                                                <span class="self-center text-lg">Fourth slide</span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Slide 5 -->
-                                                        <div class="carousel-slide snap-center">
-                                                            <div class="bg-base-200 flex h-full justify-center p-6">
-                                                                <span class="self-center text-lg">Fifth slide</span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- Slide 6 -->
-                                                        <div class="carousel-slide snap-center">
-                                                            <div class="bg-base-300 flex h-full justify-center p-6">
-                                                                <span class="self-center text-lg">Sixth slide</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Previous Slide -->
-                                                <button type="button" class="carousel-prev">
-                                                    <span
-                                                        class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
-                                                        <span
-                                                            class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
-                                                    </span>
-                                                    <span class="sr-only">Previous</span>
-                                                </button>
-                                                <!-- Next Slide -->
-                                                <button type="button" class="carousel-next">
-                                                    <span class="sr-only">Next</span>
-                                                    <span
-                                                        class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
-                                                        <span
-                                                            class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
-                                                    </span>
-                                                </button>
-                                            </div>
-
-
-                                            <div class="h-6">
-
-                                            </div>
-                                        </div>
-                                    @endif
                                 </div>
                             </div>
                         </div>

@@ -314,25 +314,26 @@
                                                                             class="card-title mb-2.5 text-accent uppercase font-thin text-lg md:text-2xl underline">
                                                                             Highlighted Places
                                                                         </h5>
-                                                                        @foreach ($itinerary->destinations->take(2) as $destination)
-                                                                            <div
-                                                                                class="md:grid grid-cols-2 flex flex-col gap-1">
-                                                                                @foreach ($destination->destinationImages as $destinationImage)
-                                                                                    @if ($loop->index < 2)
-                                                                                        <figure>
-                                                                                            <img src="{{ $destinationImage->url }}"
-                                                                                                alt="{{ $destination->title }} Cover Image"
-                                                                                                class="h-80 w-full object-cover flex" />
-                                                                                        </figure>
-                                                                                    @endif
-                                                                                @endforeach
-                                                                            </div>
+                                                                        @foreach ($itinerary->destinations->take(3) as $destination)
                                                                             <h5
                                                                                 class="card-title mt-2 text-primary uppercase font-thin text-lg md:text-xl">
                                                                                 {{ $destination->name }}
                                                                             </h5>
-                                                                            <p class="mb-4 text-gray-600 ">
-                                                                                {{ $destination->description }}</p>
+                                                                            <div
+                                                                                class="md:grid grid-cols-3  flex flex-col gap-1">
+                                                                                @foreach ($destination->destinationImages as $destinationImage)
+                                                                                    @if ($loop->index < 3)
+                                                                                        <figure>
+                                                                                            <img src="{{ $destinationImage->url }}"
+                                                                                                alt="{{ $destination->title }} Cover Image"
+                                                                                                class="h-42 w-full object-cover flex" />
+                                                                                        </figure>
+                                                                                    @endif
+                                                                                @endforeach
+                                                                            </div>
+                                                                            <p class="my-4 text-gray-600 ">
+                                                                                {{ $destination->description }}
+                                                                            </p>
                                                                         @endforeach
                                                                     </div>
                                                                 @endif
