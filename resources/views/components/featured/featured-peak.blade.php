@@ -1,125 +1,135 @@
-<div class="bg-blue-100/30">
+@php
+    $featuredPeaks = $peaks->where('is_featured', true);
+@endphp
 
-    <div class="h-8 md:h-20 "></div>
-    <div class="2xl:mx-44 mx-4 ">
-        <h3 class="text-5xl  tracking-widest text-slate-700 md:text-left ">Peaks</h3>
+@if ($featuredPeaks->isNotEmpty())
+
+    <div class="bg-blue-100/30">
+        <div class="2xl:mx-44 mx-4 ">
+
+        </div>
+
+        <div class="h-8 md:h-20 "></div>
+        <h3 class="text-5xl  tracking-widest text-slate-700 text-right ">Peaks</h3>
         <p
             class="text-md mt-2 text-slate-600 text-preety text-balance md:text-wrap md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light ">
             For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support and
             expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks, Sherpalaya handles every
             detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
             Trek into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
-    </div>
-</div>
 
 
-@if ($peaks->where('is_featured', true)->count() > 1)
-    <div class="bg-blue-100/30">
-        <div class="h-6">
+        @if ($peaks->where('is_featured', true)->count() > 1)
+            <div class="bg-blue-100/30">
+                <div class="h-6">
 
-        </div>
-        <div class="2xl:mx-44 mx-4">
-            <div id="horizontal-thumbnails" data-carousel='{ "loadingClasses": "opacity-0" }' class="relative w-full ">
-                <div class="carousel rounded-none">
-                    <div class="carousel-body h-[75vh] opacity-0 rounded-none">
+                </div>
+                <div class="2xl:mx-44 mx-4">
+                    <div id="horizontal-thumbnails" data-carousel='{ "loadingClasses": "opacity-0" }'
+                        class="relative w-full ">
+                        <div class="carousel rounded-none">
+                            <div class="carousel-body h-[75vh] opacity-0 rounded-none">
 
-                        @foreach ($peaks->where('is_featured', true) as $featuredPeak)
-                            <!-- Slide 1 -->
-                            <div class="carousel-slide rounded-none">
-                                <div
-                                    class="card--rounded-none image-full h-3/4 w-full relative flex items-center justify-end card-side group hover:shadow border">
-                                    <figure class="h-full w-full">
-                                        <img src="{{ $featuredPeak->featureImage->url ?? asset('photos/DSCF4385.JPG') }}"
-                                            alt="{{ $featuredPeak->title }} Cover Image"
-                                            class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
-                                    </figure>
-                                    <a href="{{ route('show_peak', $featuredPeak->id) }}">
-                                        <div class="card-body absolute inset-0 flex items-center justify-center ">
-                                            <div class="text-center">
-                                                <h2
-                                                    class="font-bold text-white bg-gradient-to-r from-white to-white bg-clip-text text-4xl">
-                                                    {{ $featuredPeak->title }}
-                                                </h2>
-                                                <h2
-                                                    class=" tracking-normal text-white line-clamp-2 bg-gradient-to-r from-white to-white bg-clip-text text-transparent font-black text-4xl">
-                                                    {{ $featuredPeak->highest_altitude }}m
-                                                </h2>
-                                            </div>
+                                @foreach ($peaks->where('is_featured', true) as $featuredPeak)
+                                    <!-- Slide 1 -->
+                                    <div class="carousel-slide rounded-none">
+                                        <div
+                                            class="card--rounded-none image-full h-3/4 w-full relative flex items-center justify-end card-side group hover:shadow border">
+                                            <figure class="h-full w-full">
+                                                <img src="{{ $featuredPeak->featureImage->url ?? asset('photos/DSCF4385.JPG') }}"
+                                                    alt="{{ $featuredPeak->title }} Cover Image"
+                                                    class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                            </figure>
+                                            <a href="{{ route('show_peak', $featuredPeak->id) }}">
+                                                <div
+                                                    class="card-body absolute inset-0 flex items-center justify-center ">
+                                                    <div class="text-center">
+                                                        <h2
+                                                            class="font-bold text-white bg-gradient-to-r from-white to-white bg-clip-text text-4xl">
+                                                            {{ $featuredPeak->title }}
+                                                        </h2>
+                                                        <h2
+                                                            class=" tracking-normal text-white line-clamp-2 bg-gradient-to-r from-white to-white bg-clip-text text-transparent font-black text-4xl">
+                                                            {{ $featuredPeak->highest_altitude }}m
+                                                        </h2>
+                                                    </div>
+                                                </div>
+                                            </a>
                                         </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                @endforeach
                             </div>
-                        @endforeach
-                    </div>
-                    <div
-                        class="carousel-pagination bg-transparent absolute bottom-0 end-0 start-0 z-[1] h-1/4 flex justify-center gap-0 overflow-x-auto ">
-                        @foreach ($peaks->where('is_featured', true) as $featuredPeak)
-                            <img src="{{ $featuredPeak->featureImage->url ?? asset('photos/DSCF4385.JPG') }}"
-                                alt="{{ $featuredPeak->title }} Cover Image"
-                                class="carousel-pagination-item carousel-active:opacity-100 object-cover object-top opacity-50">
-                        @endforeach
-                    </div>
-                    <!-- Previous Slide -->
-                    <button type="button" class="carousel-prev">
-                        <span class="mb-15" aria-hidden="true">
-                            <span
-                                class="size-9.5 bg-base-100  items-center justify-center rounded-full shadow hidden md:flex">
-                                <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180 "></span>
-                            </span>
-                        </span>
-                        <span class="sr-only">Previous</span>
-                    </button>
-                    <!-- Next Slide -->
-                    <button type="button" class="carousel-next">
-                        <span class="sr-only">Next</span>
-                        <span class="mb-15" aria-hidden="true">
-                            <span
-                                class="size-9.5 bg-base-100  items-center justify-center rounded-full shadow hidden md:flex">
-                                <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180 "></span>
-                            </span>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="h-8 md:h-20">
-
-        </div>
-    </div>
-@elseif($peaks->where('is_featured', true)->count() === 1)
-    <div class="bg-blue-100/30">
-        <div class="h-8 md:h-20">
-
-        </div>
-        @foreach ($peaks->where('is_featured', true) as $featuredPeak)
-            <div class="2xl:mx-44 mx-4 ">
-                <div
-                    class="card--rounded-none image-full h-[30rem] w-full relative flex items-center justify-end card-side group hover:shadow border">
-                    <figure class="h-full w-full">
-                        <img src="{{ $featuredPeak->featureImage->url ?? asset('photos/DSCF4385.JPG') }}"
-                            alt="{{ $featuredPeak->title }} Cover Image"
-                            class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
-                    </figure>
-                    <a href="{{ route('show_peak', $featuredPeak->id) }}">
-                        <div class="card-body absolute inset-0 flex items-center justify-center ">
-                            <div class="text-center">
-                                <h2
-                                    class="font-bold text-white bg-gradient-to-r from-white to-white bg-clip-text text-4xl">
-                                    {{ $featuredPeak->title }}
-                                </h2>
-                                <h2
-                                    class=" tracking-normal text-white line-clamp-2 bg-gradient-to-r from-white to-white bg-clip-text text-transparent font-black text-4xl">
-                                    {{ $featuredPeak->highest_altitude }}m
-                                </h2>
+                            <div
+                                class="carousel-pagination bg-transparent absolute bottom-0 end-0 start-0 z-[1] h-1/4 flex justify-center gap-0 overflow-x-auto ">
+                                @foreach ($peaks->where('is_featured', true) as $featuredPeak)
+                                    <img src="{{ $featuredPeak->featureImage->url ?? asset('photos/DSCF4385.JPG') }}"
+                                        alt="{{ $featuredPeak->title }} Cover Image"
+                                        class="carousel-pagination-item carousel-active:opacity-100 object-cover object-top opacity-50">
+                                @endforeach
                             </div>
+                            <!-- Previous Slide -->
+                            <button type="button" class="carousel-prev">
+                                <span class="mb-15" aria-hidden="true">
+                                    <span
+                                        class="size-9.5 bg-base-100  items-center justify-center rounded-full shadow hidden md:flex">
+                                        <span
+                                            class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180 "></span>
+                                    </span>
+                                </span>
+                                <span class="sr-only">Previous</span>
+                            </button>
+                            <!-- Next Slide -->
+                            <button type="button" class="carousel-next">
+                                <span class="sr-only">Next</span>
+                                <span class="mb-15" aria-hidden="true">
+                                    <span
+                                        class="size-9.5 bg-base-100  items-center justify-center rounded-full shadow hidden md:flex">
+                                        <span
+                                            class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180 "></span>
+                                    </span>
+                                </span>
+                            </button>
                         </div>
-                    </a>
+                    </div>
+                </div>
+                <div class="h-8 md:h-20">
+
                 </div>
             </div>
-        @endforeach
-        <div class="h-8 md:h-20">
+        @elseif($peaks->where('is_featured', true)->count() === 1)
+            <div class="bg-blue-100/30">
+                <div class="h-8 md:h-20">
 
-        </div>
+                </div>
+                @foreach ($peaks->where('is_featured', true) as $featuredPeak)
+                    <div class="2xl:mx-44 mx-4 ">
+                        <div
+                            class="card--rounded-none image-full h-[30rem] w-full relative flex items-center justify-end card-side group hover:shadow border">
+                            <figure class="h-full w-full">
+                                <img src="{{ $featuredPeak->featureImage->url ?? asset('photos/DSCF4385.JPG') }}"
+                                    alt="{{ $featuredPeak->title }} Cover Image"
+                                    class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                            </figure>
+                            <a href="{{ route('show_peak', $featuredPeak->id) }}">
+                                <div class="card-body absolute inset-0 flex items-center justify-center ">
+                                    <div class="text-center">
+                                        <h2
+                                            class="font-bold text-white bg-gradient-to-r from-white to-white bg-clip-text text-4xl">
+                                            {{ $featuredPeak->title }}
+                                        </h2>
+                                        <h2
+                                            class=" tracking-normal text-white line-clamp-2 bg-gradient-to-r from-white to-white bg-clip-text text-transparent font-black text-4xl">
+                                            {{ $featuredPeak->highest_altitude }}m
+                                        </h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+                <div class="h-8 md:h-20">
+                </div>
+            </div>
+        @endif
     </div>
-
 @endif
