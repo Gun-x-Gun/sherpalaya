@@ -148,7 +148,7 @@ class TourResource extends Resource
                                 Section::make()
                                     ->columns(2)
                                     ->schema([
-                                        TextInput::make('best_time_for_tour')
+                                        TextArea::make('best_time_for_tour')
                                                 ->columnSpanFull()
                                                 ->required()
                                                 ->label('Best Time For Tour'),
@@ -290,9 +290,9 @@ class TourResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                // Tables\Actions\BulkActionGroup::make([
+                //     Tables\Actions\DeleteBulkAction::make(),
+                // ]),
             ]);
     }
 

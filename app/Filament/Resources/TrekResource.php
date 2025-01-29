@@ -154,7 +154,7 @@ class TrekResource extends Resource
                                     Section::make()
                                         ->columns(2)
                                         ->schema([
-                                            TextInput::make('best_time_for_trek')
+                                            TextArea::make('best_time_for_trek')
                                                 ->columnSpanFull()
                                                 ->required()
                                                 ->label('Best Time For Trek'),
@@ -316,9 +316,9 @@ class TrekResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                // Tables\Actions\BulkActionGroup::make([
+                //     Tables\Actions\DeleteBulkAction::make(),
+                // ]),
             ]);
     }
 

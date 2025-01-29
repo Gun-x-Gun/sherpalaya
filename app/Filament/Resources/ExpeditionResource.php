@@ -147,7 +147,7 @@ class ExpeditionResource extends Resource
                                     Section::make()
                                         ->columns(2)
                                         ->schema([
-                                            TextInput::make('best_time_for_expedition')
+                                            TextArea::make('best_time_for_expedition')
                                             ->columnSpanFull()
                                             ->required()
                                             ->label('Best Time For Expedition'),
@@ -300,9 +300,9 @@ class ExpeditionResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                // Tables\Actions\BulkActionGroup::make([
+                //     Tables\Actions\DeleteBulkAction::make(),
+                // ]),
             ]);
     }
 

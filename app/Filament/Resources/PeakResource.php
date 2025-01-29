@@ -152,7 +152,7 @@ class PeakResource extends Resource
                                 Section::make()
                                     ->columns(2)
                                     ->schema([
-                                        TextInput::make('best_time_for_peak')
+                                        TextArea::make('best_time_for_peak')
                                             ->columnSpanFull()
                                             ->required()
                                             ->label('Best Time For Peak'),
@@ -317,9 +317,9 @@ class PeakResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                // Tables\Actions\BulkActionGroup::make([
+                //     Tables\Actions\DeleteBulkAction::make(),
+                // ]),
             ]);
     }
 
