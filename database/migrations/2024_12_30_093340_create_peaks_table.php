@@ -5,8 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -18,13 +17,15 @@ return new class extends Migration
                 ->required();
             $table->longText('description')
                 ->required();
-                $table->string('duration')
+            $table->string('duration')
                 ->required();
             $table->string('grade')
                 ->nullable()
                 ->default(null);
             $table->boolean('is_featured');
-            $table->string('starting_ending_point')
+            $table->string('starting_point')
+                ->required();
+            $table->string('ending_point')
                 ->required();
             $table->string('best_time_for_peak')
                 ->required();

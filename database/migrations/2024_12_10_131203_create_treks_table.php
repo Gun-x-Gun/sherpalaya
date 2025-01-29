@@ -28,7 +28,9 @@ return new class extends Migration {
             // $table->longText('destinations')
             //     ->required();
             $table->boolean('is_featured');
-            $table->string('starting_ending_point')
+            $table->string('starting_point')
+                ->required();
+            $table->string('ending_point')
                 ->required();
             $table->string('best_time_for_trek')
                 ->required();
@@ -39,14 +41,10 @@ return new class extends Migration {
             $table->string('trek_difficulty')
                 ->nullable()
                 ->default(null);
-            $table->longText('key_highlights')
-                ->required();
-            $table->longText('costs_include')
-                ->required();
-            $table->longText('costs_exclude')
-                ->required();
-            $table->longText('essential_tips')
-                ->required();
+            $table->longText('key_highlights');
+            $table->longText('costs_include');
+            $table->longText('costs_exclude');
+            $table->longText('essential_tips');
             $table->timestamps();
         });
 

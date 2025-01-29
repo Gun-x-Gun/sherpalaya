@@ -24,7 +24,9 @@ return new class extends Migration
             $table->string('grade')
                 ->nullable()
                 ->default(null);
-            $table->string('starting_ending_point')
+            $table->string('starting_point')
+                ->required();
+            $table->string('ending_point')
                 ->required();
             $table->string('best_time_for_expedition')
                 ->required();

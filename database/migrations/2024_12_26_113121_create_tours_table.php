@@ -20,23 +20,21 @@ return new class extends Migration
                 ->required();
             $table->longText('description')
                 ->required();
-                $table->string('duration')
+            $table->string('duration')
                 ->required();
             $table->string('grade')
                 ->nullable()
                 ->default(null);
-            $table->string('starting_ending_point')
+            $table->string('starting_point')
+                ->required();
+            $table->string('ending_point')
                 ->required();
             $table->string('best_time_for_tour')
                 ->required();
-            $table->longText('key_highlights')
-                ->required();
-            $table->longText('costs_include')
-                ->required();
-            $table->longText('costs_exclude')
-                ->required();
-            $table->longText('essential_tips')
-                ->required();
+            $table->longText('key_highlights');
+            $table->longText('costs_include');
+            $table->longText('costs_exclude');
+            $table->longText('essential_tips');
             $table->boolean('is_featured');
             $table->timestamps();
         });
