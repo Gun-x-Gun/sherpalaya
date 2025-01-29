@@ -388,6 +388,10 @@
                                         request()->route()->getName() == 'website.contact',
                                 ])>Contact</a>
                         </li>
+                        <li class="text-slate-900 hover:bg-accent rounded-lg text-md "><a href="/search">
+                            <span class="icon-[tabler--search] size-5 cursor-pointer rtl:rotate-180"></span>
+                        </a>
+                    </li>
                     </ul>
                 </div>
             </div>
