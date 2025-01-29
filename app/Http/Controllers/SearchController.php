@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Enums\SearchType;
-use App\Models\Trek;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -54,13 +53,21 @@ class SearchController extends Controller
             ]
         );
 
-
         $validatedData = $validator->validate();
 
-        $results = [
-            'trek' => [],
-            'expedition' => [],
-        ];
+        $searchTypes = collect(SearchType::cases())
+            ->mapWithKeys(function (SearchType $searchType) {
+                return [
+                    $searchType->value => $searchType
+                ];
+            });
+
+        $results = collect($searchTypes)
+            ->mapWithKeys(function (SearchType $searchType, $key) {
+                return [
+                    $key => []
+                ];
+            });
 
         $type = null;
 
@@ -69,25 +76,42 @@ class SearchController extends Controller
             !is_null($validatedData['type']) &&
             !is_null(SearchType::tryFrom($validatedData['type']))
         ) {
-            $results[$validatedData['type']] = SearchType::from($validatedData['type'])
-                ->search($validatedData['query'])
-                ->get();
-            $type = $validatedData['type'];
+            $type = SearchType::from($validatedData['type']);
+            $results->put(
+                $type->value,
+                $type->search($validatedData['query'])
+                    ->get()
+            );
+
+            $unsortedResults = $results;
+
+            $results = $unsortedResults->filter(function ($resultData, $resultKey) use ($type) {
+                return $resultKey == $type->value;
+            })->concat(
+                $unsortedResults->filter(function ($resultData, $resultKey) use ($type) {
+                    return $resultKey != $type->value;
+                })
+            );
         } else {
-            foreach (SearchType::cases() as $searchType) {
-                $results[$searchType->value] = $searchType
-                    ->search($validatedData['query'])
-                    ->get();
+            foreach ($searchTypes as $searchType) {
+                $results->put(
+                    $searchType->value,
+                    $searchType
+                        ->search($validatedData['query'])
+                        ->get()
+                );
             }
         }
 
-
-
+        $results = $results->filter(function($resultData, $resultKey){
+            return count($resultData)> 0;
+        });
 
         return view('website.search.query', [
             'results' => $results,
             'query' => $validatedData['query'],
             'type' => $type,
+            'searchTypes' => $searchTypes,
         ]);
     }
 
