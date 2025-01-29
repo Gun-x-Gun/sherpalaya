@@ -62,6 +62,7 @@ class PeakResource extends Resource
                                             ->label('Region')
                                             ->relationship('region', 'name')
                                             ->native(false)
+                                            ->required()
                                             ->columnSpan(2),
                                         RichEditor::make('description')
                                             ->columnSpanFull()
@@ -95,13 +96,13 @@ class PeakResource extends Resource
                                     ]),
                                 Section::make()
                                     ->schema([
+                                        Toggle::make('is_featured')
+                                            ->default(false),
                                         CuratorPicker::make('feature_image_id')
                                             ->color('primary')
                                             ->label('Feature Image')
                                             ->hint('for homepage')
                                             ->relationship('featureImage', 'id'),
-                                        Toggle::make('is_featured')
-                                            ->default(false),
                                     ]),
 
                             ]),
@@ -125,6 +126,7 @@ class PeakResource extends Resource
                                     Section::make('Key Highlights')
                                     ->schema([
                                         Repeater::make('key_highlights')
+                                            ->required()
                                             ->hiddenLabel()
                                             ->simple(
                                                 TextArea::make('key_highlights')
@@ -150,16 +152,19 @@ class PeakResource extends Resource
                                 Section::make()
                                     ->columns(2)
                                     ->schema([
+                                        TextInput::make('best_time_for_peak')
+                                            ->columnSpanFull()
+                                            ->required()
+                                            ->label('Best Time For Peak'),
                                         Select::make('peak_difficulty')
+                                            ->label(label: 'Peak Difficulty')
                                             ->options(TrekDifficulty::class)
+                                            ->default(state: TrekDifficulty::HARD)
                                             ->native(false)
                                             ->columnSpanFull(),
-                                        // Select::make('region_id')
-                                        //     ->relationship('regions','name')
-                                        //     ->native(false)
-                                        //     ->columnSpanFull(),
                                         TextInput::make('duration')
                                             ->numeric()
+                                            ->required()
                                             ->minValue(1)
                                             ->maxValue(999)
                                             ->suffix('days'),
@@ -170,20 +175,21 @@ class PeakResource extends Resource
                                             ->suffix('/10'),
                                         TextInput::make('starting_altitude')
                                             ->numeric()
-                                            ->minValue(0)
-                                            ->maxValue(3000)
+                                            ->required()
                                             ->suffix("m"),
                                         TextInput::make('highest_altitude')
                                             ->numeric()
-                                            ->minValue(1000)
-                                            ->maxValue(8849)
+                                            ->required()
                                             ->suffix("m"),
                                     ]),
                                 Section::make()
                                     ->schema([
-                                        TextInput::make('best_time_for_peak'),
-                                        TextInput::make('starting_ending_point')
-                                            ->label('Starting/Ending Point')
+                                        TextInput::make('starting_point')
+                                                ->label('Starting Point')
+                                                ->required(),
+                                            TextInput::make('ending_point')
+                                                ->label('Ending Point')
+                                                ->required(),
                                     ]),
                             ]),
                         ]),
@@ -241,7 +247,8 @@ class PeakResource extends Resource
                                         ->columns(7)
                                         ->schema([
                                             TextInput::make('title')
-                                                ->columnSpan(3),
+                                                ->columnSpan(3)
+                                                ->required(),
                                             Select::make('destinations')
                                                 ->relationship('destinations', 'name')
                                                 ->multiple()

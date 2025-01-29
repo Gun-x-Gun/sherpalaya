@@ -56,8 +56,10 @@ class TourResource extends Resource
                                     ->columns(2)
                                     ->schema([
                                         TextInput::make('title')
-                                        ->hiddenOn('view'),
+                                        ->hiddenOn('view')
+                                        ->required(),
                                         Select::make('type')
+                                        ->required()
                                             ->options(TourType::class)
                                             ->native(false),
                                         RichEditor::make('description')
@@ -108,12 +110,6 @@ class TourResource extends Resource
 
                         ->schema([
                             Sidebar::make([
-                                // Section::make('Destinations')
-                                //     ->schema([
-                                //         RichEditor::make('destinations')
-                                //         ->hiddenLabel()
-                                //         ->columnSpanFull(),
-                                //     ]),
                                 Section::make('Destinations')
                                     ->schema([
                                         Select::make('destinations')
@@ -152,7 +148,12 @@ class TourResource extends Resource
                                 Section::make()
                                     ->columns(2)
                                     ->schema([
-                                        TextInput::make('duration'),
+                                        TextInput::make('best_time_for_tour')
+                                                ->columnSpanFull()
+                                                ->required()
+                                                ->label('Best Time For Tour'),
+                                        TextInput::make('duration')
+                                        ->required(),
                                         TextInput::make('grade')
                                             ->numeric()
                                             ->minValue(1)
@@ -161,9 +162,12 @@ class TourResource extends Resource
                                     ]),
                                 Section::make()
                                     ->schema([
-                                        TextInput::make('best_time_for_tour'),
-                                        TextInput::make('starting_ending_point')
-                                            ->label('Starting/Ending Point')
+                                        TextInput::make('starting_point')
+                                                ->label('Starting Point')
+                                                ->required(),
+                                            TextInput::make('ending_point')
+                                                ->label('Ending Point')
+                                                ->required(),
                                     ]),
                             ]),
                         ]),
@@ -222,7 +226,8 @@ class TourResource extends Resource
                                         ->columns(7)
                                         ->schema([
                                             TextInput::make('title')
-                                                ->columnSpan(3),
+                                                ->columnSpan(3)
+                                                ->required(),
                                             Select::make('destinations')
                                                 ->relationship('destinations', 'name')
                                                 ->multiple()

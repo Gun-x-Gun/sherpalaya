@@ -50,15 +50,18 @@ class DestinationResource extends Resource
                         ->columns(5)
                         ->schema([
                             TextInput::make('name')
-                                ->columnSpan(3),
+                                ->columnSpan(3)
+                                ->required(),
                             Select::make('region_id')
                             ->relationship('region','name')
                             ->native(false)
                             ->preload()
                             ->columnSpan(2)
-                            ->searchable(),
+                            ->searchable()
+                            ->required(),
                             RichEditor::make('description')
                             ->columnSpan(3)
+                            ->required()
                             ->toolbarButtons([
                                 // 'attachFiles',
                                 'blockquote',
@@ -78,7 +81,7 @@ class DestinationResource extends Resource
                             Map::make('location')
                                 ->label('Location')
                                 ->columnSpan(2)
-                                ->defaultLocation(latitude: 40.4168, longitude: -3.7038)
+                                ->defaultLocation(latitude: 27.700769, longitude: 85.300140)
                                 ->extraStyles([
                                     'min-height: 50vh',
                                     'border-radius: 50px'
@@ -98,7 +101,7 @@ class DestinationResource extends Resource
                                 ->geoManPosition('bottomright')
                                 ->drawCircleMarker()
                                 // ->rotateMode()
-                                // ->clickable() //click to move marker
+                                ->clickable(true) //click to move marker
                                 // ->drawMarker()
                                 // ->drawPolygon()
                                 // ->drawPolyline()

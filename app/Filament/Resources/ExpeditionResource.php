@@ -61,6 +61,7 @@ class ExpeditionResource extends Resource
                                                 ->label('Region')
                                                 ->relationship('region', 'name')
                                                 ->native(false)
+                                                ->required()
                                                 ->columnSpan(2),
                                             RichEditor::make('description')
                                                 ->columnSpanFull()
@@ -146,11 +147,18 @@ class ExpeditionResource extends Resource
                                     Section::make()
                                         ->columns(2)
                                         ->schema([
+                                            TextInput::make('best_time_for_expedition')
+                                            ->columnSpanFull()
+                                            ->required()
+                                            ->label('Best Time For Expedition'),
                                             Select::make('expedition_difficulty')
+                                                ->label(label: 'Expedition Difficulty')
                                                 ->options(TrekDifficulty::class)
                                                 ->native(false)
+                                                ->default(state: TrekDifficulty::CHALLENGING)
                                                 ->columnSpanFull(),
                                             TextInput::make('duration')
+                                                ->required()
                                                 ->numeric()
                                                 ->minValue(1)
                                                 ->maxValue(999)
@@ -162,20 +170,21 @@ class ExpeditionResource extends Resource
                                                 ->suffix('/10'),
                                             TextInput::make('starting_altitude')
                                                 ->numeric()
-                                                ->minValue(0)
-                                                ->maxValue(3000)
+                                                ->required()
                                                 ->suffix("m"),
                                             TextInput::make('highest_altitude')
                                                 ->numeric()
-                                                ->minValue(1000)
-                                                ->maxValue(8849)
+                                                ->required()
                                                 ->suffix("m"),
                                         ]),
                                     Section::make()
                                         ->schema([
-                                            TextInput::make('best_time_for_expedition'),
-                                            TextInput::make('starting_ending_point')
-                                                ->label('Starting/Ending Point')
+                                            TextInput::make('starting_point')
+                                                ->label('Starting Point')
+                                                ->required(),
+                                            TextInput::make('ending_point')
+                                                ->label('Ending Point')
+                                                ->required(),
                                         ]),
 
                                 ]),
@@ -227,7 +236,8 @@ class ExpeditionResource extends Resource
                                             ->columns(7)
                                             ->schema([
                                                 TextInput::make('title')
-                                                    ->columnSpan(3),
+                                                    ->columnSpan(3)
+                                                    ->required(),
                                                 Select::make('destinations')
                                                     ->relationship('destinations', 'name')
                                                     ->multiple()
