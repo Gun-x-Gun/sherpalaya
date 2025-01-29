@@ -44,7 +44,8 @@ class RegionResource extends Resource
                     ->schema([
                         TextInput::make('name')
                             ->hiddenOn('view')
-                            ->hiddenLabel(),
+                            ->hiddenLabel()
+                            ->required(),
                     ]),
             ]);
     }

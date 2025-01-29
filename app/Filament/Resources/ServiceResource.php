@@ -42,9 +42,9 @@ class ServiceResource extends Resource
                 Sidebar::make([
                     Section::make('')
                     ->schema([
-
                         TextInput::make('title')
-                        ->columnSpanFull(),
+                        ->columnSpanFull()
+                        ->required(),
                     RichEditor::make('description')
                         ->columnSpanFull()
                         ->required()
@@ -64,22 +64,11 @@ class ServiceResource extends Resource
                             'underline',
                             'undo',
                         ]),
-                        Section::make('Destinations')
-                                    ->schema([
-                                        Select::make('destinations')
-                                            ->hiddenLabel()
-                                            ->multiple()
-                                            ->relationship(titleAttribute: 'name')
-                                            ->preload()
-                                            ->searchable(['name', 'location'])
-                                            ->native(false),
-                                    ]),
-
 
                         Map::make('location')
                             ->label('Location')
                             ->columnSpanFull()
-                            ->defaultLocation(latitude: 40.4168, longitude: -3.7038)
+                            ->defaultLocation(latitude: 27.700769, longitude: 85.300140)
                             ->extraStyles([
                                 'min-height: 50vh',
                                 'border-radius: 50px'
@@ -99,7 +88,7 @@ class ServiceResource extends Resource
                             ->geoManPosition('bottomright')
                             ->drawCircleMarker()
                             // ->rotateMode()
-                            // ->clickable() //click to move marker
+                            ->clickable(true) //click to move marker
                             // ->drawMarker()
                             // ->drawPolygon()
                             // ->drawPolyline()
@@ -126,6 +115,16 @@ class ServiceResource extends Resource
                             ->hint('any other relevant images')
                             ->relationship('images', 'id'),
                         ]),
+                        Section::make('Destinations')
+                                    ->schema([
+                                        Select::make('destinations')
+                                            ->hiddenLabel()
+                                            ->multiple()
+                                            ->relationship(titleAttribute: 'name')
+                                            ->preload()
+                                            ->searchable(['name', 'location'])
+                                            ->native(false),
+                                    ]),
                 ]),
             ]);
     }
