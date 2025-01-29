@@ -106,7 +106,7 @@ class AdminPanelProvider extends PanelProvider
                 NavigationItem::make('Roles')
                     ->url('/admin/shield/roles')
                     ->icon('heroicon-o-cog')
-                    ->group('Users')
+                    ->group('Control')
                     ->isActiveWhen(function(){
                         return request()->is('admin/shield/roles');
                     })
@@ -114,7 +114,7 @@ class AdminPanelProvider extends PanelProvider
             ->navigationGroups([
                 'Content',
                 'Info',
-                'Users',
+                'Site',
                 'Control',
             ]);
     }
