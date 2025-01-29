@@ -1,6 +1,4 @@
 <x-website-layout>
-    <div class="h-6"></div>
-
     <x-search.search-form :query="$query" :type="$type" />
 
     <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-normal">
@@ -84,6 +82,6 @@
         @endforelse
     </div>
 
-    @dd($results)
+    {{-- @dd($results) --}}
 
 </x-website-layout>

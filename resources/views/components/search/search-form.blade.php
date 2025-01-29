@@ -1,19 +1,12 @@
-<div class="card min-h-60 w-full">
-    <div class="card-body items-center justify-center">
-        <div class="card sm:card-side max-w-sm sm:max-w-full">
-            <figure><img src="https://cdn.flyonui.com/fy-assets/components/card/image-7.png" alt="headphone" />
-            </figure>
+<div class="card--rounded-none image-full">
+    <figure><img src="{{ asset('/photos/banner.jpg') }}" alt="overlay image" class="backdrop w-full" /></figure>
+    <div class="card-body lg:absolute top-0 left-0 w-full lg:h-full">
+        <div class="lg:absolute 2xl:top-60 lg:top-40 lg:right-1/4 2xl:right-1/3 card bg-slate-200 lg:bg-opacity-50 lg:bg-white p-4 w-full lg:max-w-2xl">
+            <div class="card-header text-black">
+                <h5 class="card-title font-extrabold">Find your adventure</h5>
+              </div>
             <div class="card-body">
-                <h5 class="card-title mb-2.5">Airpods Max</h5>
-                <p class="mb-3">This is a wider card with supporting text below as a natural lead-in to additional
-                    content.</p>
-                <div class="card-actions">
-                    <x-search.search-input
-                        :query="$query"
-                        :type="$type"
-                    />
-
-                </div>
+                <x-search.search-input :query="$query" :type="$type" />
             </div>
         </div>
     </div>

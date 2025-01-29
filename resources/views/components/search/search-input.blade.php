@@ -1,7 +1,7 @@
 <div>
     <form action="/search/query" method="GET">
 
-        <div class="flex flex-row w-full gap-2">
+        <div class="flex flex-col sm:flex-row w-full gap-2">
             <div class="flex-none input-group max-w-md">
                 <input class="input" placeholder="Search" name="query" required
                     value={{ isset($query) ? $query : '' }} />
@@ -10,15 +10,15 @@
                     <option disabled selected>Filter</option>
                     @foreach ($searchFilters as $searchFilter)
 
-                        <option value="{{ $searchFilter['value'] }}" @selected($searchFilter['value'] == $type)>
-                            {{ $searchFilter['option'] }}
+                        <option value="{{ $searchFilter->value }}" @selected($searchFilter->value == $type)>
+                            {{ $searchFilter->getLabel() }}
                         </option>
                     @endforeach
 
                 </select>
             </div>
 
-            <button class="flex-none btn btn-outline btn-secondary join-item" type="submit">Search</button>
+            <button class="flex-none btn btn-secondary join-item" type="submit">Search</button>
 
 
         </div>

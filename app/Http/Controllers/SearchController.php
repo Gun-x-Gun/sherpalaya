@@ -47,6 +47,7 @@ class SearchController extends Controller
                     'min:3'
                 ],
                 'type' => [
+                    'sometimes',
                     'nullable',
                     'string'
                 ]
@@ -61,13 +62,17 @@ class SearchController extends Controller
             'expedition' => [],
         ];
 
+        $type = null;
+
         if (
+            isset($validatedData['type']) &&
             !is_null($validatedData['type']) &&
             !is_null(SearchType::tryFrom($validatedData['type']))
         ) {
             $results[$validatedData['type']] = SearchType::from($validatedData['type'])
                 ->search($validatedData['query'])
                 ->get();
+            $type = $validatedData['type'];
         } else {
             foreach (SearchType::cases() as $searchType) {
                 $results[$searchType->value] = $searchType
@@ -82,7 +87,7 @@ class SearchController extends Controller
         return view('website.search.query', [
             'results' => $results,
             'query' => $validatedData['query'],
-            'type' => $validatedData['type'],
+            'type' => $type,
         ]);
     }
 
