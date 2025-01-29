@@ -26,7 +26,8 @@ The best season for this trip starts from beginning of March to May and  Septemb
 ',
             'duration' => '10',
             'grade' => '7',
-            'starting_ending_point' => 'Lukla',
+            'starting_point' => 'Lukla',
+            'ending_point' => 'Kathmandu',
             'best_time_for_trek' => 'Autumn (Sep-Oct-Nov) and Spring        (March-April-May)',
             'starting_altitude' => 2610,
             'highest_altitude' => 5545,
@@ -73,7 +74,7 @@ The best season for this trip starts from beginning of March to May and  Septemb
                 'Travel Insurance: Purchase comprehensive travel insurance to cover medical emergencies and trip cancellations.',
                 'Permits: Obtain necessary permits (TIMS card, local authority entrance fee, and Sagarmatha National Park Permit) before starting the trek.',
             ],
-            'is_featured' => false,
+            'is_featured' => true,
         ]);
 
         $trek2 = Trek::create([
@@ -81,7 +82,8 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'description' => 'The Annapurna Base Camp (ABC) Trek is one of the most popular trekking routes in Nepal, offering breathtaking views of the Annapurna massif and other Himalayan peaks.',
             'duration' => '7', // Assuming duration
             'grade' => '6', // Moderate to Challenging
-            'starting_ending_point' => 'Nayapul',
+            'starting_point' => 'Nayapul',
+            'ending_point' => 'Nayapul',
             'best_time_for_trek' => 'Spring (March-May) and Autumn (September-November)',
             'starting_altitude' => 1070,
             'highest_altitude' => 4130,
@@ -128,7 +130,7 @@ The best season for this trip starts from beginning of March to May and  Septemb
                 'Travel Insurance: Purchase comprehensive travel insurance to cover medical emergencies and trip cancellations.',
                 'Permits: Obtain necessary permits (TIMS card and Annapurna Conservation Area Permit) before starting the trek.',
             ],
-            'is_featured' => false,
+            'is_featured' => true,
         ]);
 
         $trek->destinations()->sync(

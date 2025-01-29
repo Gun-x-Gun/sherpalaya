@@ -25,7 +25,8 @@ While climbing Mt. Everest is the opportunity of a lifetime, expeditions encount
             'duration' => '72',
             'region_id' => Region::first()->id,
             'grade' => '9',
-            'starting_ending_point' => 'Kathmandu',
+            'starting_point' => 'Kathmandu',
+            'ending_point' => 'Kathmandu',
             'best_time_for_expedition' => 'Autumn (Sep-Oct-Nov) and Spring        (March-April-May)',
             'starting_altitude' => 2610,
             'highest_altitude' => 8848,
@@ -54,7 +55,7 @@ While climbing Mt. Everest is the opportunity of a lifetime, expeditions encount
                 'Grab Some money',
                 'Prepare by walking regularly',
             ],
-            'is_featured' => false,
+            'is_featured' => true,
         ]);
 
         $expedition->destinations()->sync(
