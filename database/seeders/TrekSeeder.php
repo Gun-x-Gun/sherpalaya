@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Enums\TrekDifficulty;
+use App\Helpers\CuratorSeederHelper;
 use App\Models\Destination;
 use App\Models\Region;
 use App\Models\Trek;
@@ -76,6 +77,12 @@ The best season for this trip starts from beginning of March to May and  Septemb
             ],
             'is_featured' => true,
         ]);
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $trek,
+            'images',
+            public_path('photos/banner.jpg')
+        );
 
         $trek2 = Trek::create([
             'title' => 'Annapurna Base Camp Trek',
