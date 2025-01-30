@@ -81,6 +81,7 @@ class SearchController extends Controller
                 $type->value,
                 $type->search($validatedData['query'])
                     ->get()
+                    ->slice(0, 13)
             );
 
             $unsortedResults = $results;
@@ -99,12 +100,13 @@ class SearchController extends Controller
                     $searchType
                         ->search($validatedData['query'])
                         ->get()
+                        ->slice(0, 13)
                 );
             }
         }
 
-        $results = $results->filter(function($resultData, $resultKey){
-            return count($resultData)> 0;
+        $results = $results->filter(function ($resultData, $resultKey) {
+            return count($resultData) > 0;
         });
 
         return view('website.search.query', [

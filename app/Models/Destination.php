@@ -2,20 +2,21 @@
 
 namespace App\Models;
 
-use App\Filament\Resources\DestinationResource\Widgets\DestinationServiceTable;
+use App\Contracts\CanBeEasySearched;
+use App\Enums\SearchType;
 use App\Helpers\CuratorModelHelper;
+use App\Traits\EasySearch;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Laravel\Scout\Searchable;
+use Illuminate\Support\Collection;
 
-class Destination extends Model
+class Destination extends Model implements CanBeEasySearched
 {
+    use EasySearch;
     use HasFactory;
-    use Searchable;
 
-    protected $fillable =[
+    protected $fillable = [
         'name',
         'description',
         'region_id',
@@ -26,7 +27,27 @@ class Destination extends Model
         'location' => 'array',
     ];
 
-// RELATIONSHIPS
+    // Easy Search
+
+    public function searchType(): SearchType{
+        return SearchType::DESTINATION;
+    }
+
+
+    public function searchResultTitle(): string{
+        return $this->name;
+    }
+
+    public function searchResultUrl(): string{
+        return $this->name;
+    }
+
+    public function searchResultImages(): Collection{
+        $this->loadMissing('destinationImages');
+        return $this->destinationImages;
+    }
+
+    // RELATIONSHIPS
     public function region()
     {
         return $this->belongsTo(Region::class);
@@ -41,11 +62,11 @@ class Destination extends Model
     {
         return $this->belongsToMany(
             Service::class,
-        'destination_service'
+            'destination_service'
         )->using(DestinationService::class)
-        ->withPivot([
-            'order'
-        ]);
+            ->withPivot([
+                'order'
+            ]);
     }
 
     public function treks()
@@ -54,9 +75,9 @@ class Destination extends Model
             Trek::class,
             'destination_trek'
         )->using(DestinationTrek::class)
-        ->withPivot([
-            'order'
-        ]);
+            ->withPivot([
+                'order'
+            ]);
     }
     public function tours()
     {
@@ -64,9 +85,9 @@ class Destination extends Model
             Tour::class,
             'destination_tour'
         )->using(DestinationTour::class)
-        ->withPivot([
-            'order'
-        ]);
+            ->withPivot([
+                'order'
+            ]);
     }
 
     public function destinationImages(): BelongsToMany

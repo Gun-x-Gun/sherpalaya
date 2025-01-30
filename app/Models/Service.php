@@ -2,15 +2,18 @@
 
 namespace App\Models;
 
+use App\Contracts\CanBeEasySearched;
+use App\Enums\SearchType;
 use App\Helpers\CuratorModelHelper;
+use App\Traits\EasySearch;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Laravel\Scout\Searchable;
+use Illuminate\Support\Collection;
 
-class Service extends Model
+class Service extends Model implements CanBeEasySearched
 {
-    use Searchable;
+    use EasySearch;
 
     protected $fillable=[
         'title',
@@ -21,6 +24,28 @@ class Service extends Model
     protected $casts = [
         'location' => 'array',
     ];
+
+    // Easy Search
+
+    public function searchType(): SearchType{
+        return SearchType::SERVICE;
+    }
+
+
+    public function searchResultTitle(): string{
+        return $this->title;
+    }
+
+    public function searchResultUrl(): string{
+        return $this->title;
+    }
+
+    public function searchResultImages(): Collection{
+        $this->loadMissing('images');
+        return $this->images;
+    }
+
+    // RELATIONSHIPS
 
     public function destinations()
     {

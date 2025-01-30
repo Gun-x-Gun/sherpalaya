@@ -1,4 +1,4 @@
-<div class="w-full">
+<div class="w-full h-full">
     <form action="/search/query" method="GET">
         <div class="flex flex-col sm:flex-row items-center sm:items-end w-full gap-3">
 

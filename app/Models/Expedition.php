@@ -2,19 +2,22 @@
 
 namespace App\Models;
 
+use App\Contracts\CanBeEasySearched;
+use App\Enums\SearchType;
 use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorModelHelper;
+use App\Traits\EasySearch;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Laravel\Scout\Searchable;
+use Illuminate\Support\Collection;
 
-class Expedition extends Model
+class Expedition extends Model implements CanBeEasySearched
 {
+    use EasySearch;
     use HasFactory;
-    use Searchable;
 
 
     protected $fillable = [
@@ -45,6 +48,28 @@ class Expedition extends Model
         'key_highlights' => 'array',
         'essential_tips' => 'array',
     ];
+
+    // Easy Search
+
+    public function searchType(): SearchType{
+        return SearchType::EXPEDITION;
+    }
+
+
+    public function searchResultTitle(): string{
+        return $this->title;
+    }
+
+    public function searchResultUrl(): string{
+        return $this->title;
+    }
+
+    public function searchResultImages(): Collection{
+        $this->loadMissing('images');
+        return $this->images;
+    }
+
+    // RELATIONSHIPS
 
     public function itineraries(): MorphMany
     {
