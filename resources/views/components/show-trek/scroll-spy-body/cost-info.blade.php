@@ -2,7 +2,7 @@
     @if (!empty($trek->costs_include))
 
         <div id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/10">
-            <div class="h-6">
+            <div class="h-10">
 
             </div>
             <div class="card-header p-2">
@@ -33,7 +33,7 @@
     @if (!empty($trek->costs_exclude))
         {{-- cost exclude --}}
         <div id="costs_exclude" class="card 2xl:max-w-full  rounded-none bg-red-100/10">
-            <div class="h-6">
+            <div class="h-10">
 
             </div>
             <div class="card-header p-2">

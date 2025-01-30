@@ -2,15 +2,7 @@
     <nav id="dropdown-navbar-collapse" data-scrollspy="#scrollspy-1"
         class="tabs  horizontal-scrollbar  lg:gap-4 2xl:mx-44 mx-4" aria-label="Scrollspy navbar" role="tablist"
         aria-orientation="horizontal">
-        {{-- <button href="#description" type="button"
-        class="tab active-tab:tab-active active scrollspy-active:text-bg-soft-primary "
-        id="tabs-scroll-item-1" data-tab="#tabs-scroll-1" aria-controls="#tabs-scroll-1" role="tab"
-        aria-selected="true">
-        <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
-            <span class="icon-[tdesign--assignment-filled] size-5"></span>
-            Description
-        </div>
-    </button> --}}
+        
         <button href="#key_highlights" type="button"
             class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary " id="tabs-scroll-item-5"
             data-tab="#tabs-scroll-5" aria-controls="#tabs-scroll-5" role="tab" aria-selected="false">
@@ -48,6 +40,14 @@
             <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
                 <span class="icon-[eva--info-fill] size-5"></span>
                 Essential Tips
+            </div>
+        </button>
+        <button href="#gallery" type="button"
+            class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary " id="tabs-scroll-item-5"
+            data-tab="#tabs-scroll-5" aria-controls="#tabs-scroll-5" role="tab" aria-selected="false">
+            <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
+                <span class="icon-[eva--bulb-outline] size-5"></span>
+                Gallery
             </div>
         </button>
         <button href="#destination" type="button"

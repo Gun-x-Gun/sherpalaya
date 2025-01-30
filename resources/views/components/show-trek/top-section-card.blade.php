@@ -1,6 +1,6 @@
 <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
     <figure class="h-[80vh] w-full">
-        <img src="{{ $trek->coverImage?->url ?? '/images/swisnl/filament-backgrounds/curated-by-swis/03.jpg' }}"
+        <img src="{{ $trek->coverImage?->url ?? '/photos/banner.jpg' }}"
             alt="Trekking background image" class="h-[80vh] w-full object-cover brightness-50" />
     </figure>
     <div class="card-body relative">

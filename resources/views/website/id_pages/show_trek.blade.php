@@ -36,7 +36,7 @@
                 {{-- scrollspy navigation --}}
                 <x-show-trek.scroll-spy-navigation />
                 {{-- end scrollspy navigation --}}
-                
+
 
 
                 {{-- scrollspy body --}}
@@ -45,89 +45,34 @@
                         <div class="xl:grid grid-cols-3  gap-6">
                             <div class="xl:col-span-2 ">
                                 {{-- key_highlights --}}
-                                <x-show-trek.scroll-spy-body.key-highlight :trek="$trek"/>
+                                <x-show-trek.scroll-spy-body.key-highlight :trek="$trek" />
                                 {{-- end_key_highlights --}}
 
                                 {{-- itineraries --}}
-                                <x-show-trek.scroll-spy-body.itinerary :trek="$trek"/>
-                                
+                                <x-show-trek.scroll-spy-body.itinerary :trek="$trek" />
 
                                 {{-- cost-info --}}
-                                <x-show-trek.scroll-spy-body.cost-info :trek="$trek"/>
-
+                                <x-show-trek.scroll-spy-body.cost-info :trek="$trek" />
 
                                 {{-- essential_tips --}}
-                                <x-show-trek.scroll-spy-body.essential-tip :trek="$trek"/>
-                                
+                                <x-show-trek.scroll-spy-body.essential-tip :trek="$trek" />
+
+                                {{-- gallery --}}
+                                <x-show-trek.gallery :trek="$trek" />
 
                                 {{-- destinations --}}
-                                <x-show-trek.scroll-spy-body.destination :trek="$trek"/>
-                                
-                                
-
+                                <x-show-trek.scroll-spy-body.destination :trek="$trek" />
                                 <div class="h-96"></div>
-
                             </div>
-
 
                             <div class=" ">
                                 <div class="h-8"></div>
                                 <div class="sticky top-32 hidden lg:block">
                                     {{-- stat --}}
-                                    <div class="w-full my-4">
-                                        <div class="stats stats-vertical bg-blue-100/50 w-full rounded-none">
-                                            <div class="stat">
-                                                <div class="stat-title">Duration</div>
-                                                <div class="stat-value">
-                                                    {{ $trek->duration ? $trek->duration . ' Days' : 'N/A' }}
-                                                </div>
-                                                <div class="stat-value">
-                                                    <span class="badge badge-outline badge-success text-wrap h-full">
-                                                        @if (!empty($trek->best_time_for_trek))
-                                                            Best Time: {{ $trek->best_time_for_trek }}
-                                                        @endif
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="stat">
-                                                <div class="stat-title">Difficulty</div>
-                                                <div class="stat-value">
-                                                    @if ($trek->grade)
-                                                        <span class="badge badge-outline badge-primary">Grade:
-                                                            {{ $trek->grade }}</span>
-                                                    @endif
-                                                    @if ($trek->trek_difficulty)
-                                                        <span
-                                                            class="badge badge-outline badge-error">{{ $trek->trek_difficulty->getLabel() }}</span>
-                                                    @endif
-                                                </div>
-                                            </div>
-                                            <div class="stat">
-                                                <div class="stat-title">Altitude</div>
-                                                <div class="stat-value">
+                                    <x-show-trek.stat-section :trek="$trek" />
 
-                                                    @if (!empty($trek->starting_altitude))
-                                                        <span class="badge badge-outline">
-                                                            Start: {{ $trek->starting_altitude }}
-                                                        </span>
-                                                    @endif
-
-                                                    @if (!empty($trek->highest_altitude))
-                                                        <span class="badge badge-outline">
-                                                            Highest: {{ $trek->highest_altitude }}
-                                                        </span>
-                                                    @endif
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=" card-body bg-blue-200 mt-4">
-                                        <div class="card-actions justify-center">
-                                            <button class="btn btn-primary btn-wide uppercase">Book this trip</button>
-                                            <button class="btn btn-info  btn-wide uppercase">Inquiry</button>
-                                        </div>
-                                    </div>
+                                    {{-- booking-section --}}
+                                    <x-show-trek.booking-section />
                                     <div class="h-10"></div>
                                 </div>
                             </div>

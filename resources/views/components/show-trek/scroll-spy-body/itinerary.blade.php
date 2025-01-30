@@ -7,7 +7,7 @@
                 Itineraries
             </h5>
         </div>
-        <div class="card-body mx-0 px-0">
+        <div class="card-body mx-0 px-2">
             <div class="accordion">
                 @foreach ($trek->itineraries as $itinerary)
                     <div class="accordion-item " id="itinerary-{{ $itinerary->id }}">
@@ -57,74 +57,90 @@
                                             @endforeach
                                         </div>
                                     </div>
-                                    <div class="">
+                                    <div>
                                         @if (!empty($itinerary->destinations))
-                                            <div class="card-body  bg-blue-100/20 w-full p-0">
-                                                <div class="flex">
+                                            <div class="card-body bg-blue-100/20 w-full p-0">
+                                                <div class="flex items-center justify-start">
                                                     <span
                                                         class="icon-[tabler--arrow-right] size-5 rtl:rotate-180"></span>
                                                     <h5
-                                                        class="card-title mb-2 px-2 text-success uppercase font-thin text-2xl underline">
+                                                        class="card-title mb-2 px-2 text-success uppercase font-thin text-xl  underline">
                                                         Highlighted Places
                                                     </h5>
                                                 </div>
 
-                                                @foreach ($itinerary->destinations->take(3) as $destination)
+                                                @foreach ($itinerary->destinations->take(3) as $itineraryDestination)
+                                                    @php
+                                                        $destinationImages = $itineraryDestination->destinationImages->take(
+                                                            3,
+                                                        );
+                                                    @endphp
+
                                                     <h5
                                                         class="card-title pt-0 px-8 text-primary uppercase font-thin text-xl">
-                                                        {{ $destination->name }}
+                                                        {{ $itineraryDestination->name }}
                                                     </h5>
-                                                    <div class="hidden px-8 md:grid grid-cols-3 gap-2 ">
-                                                        @foreach ($destination->destinationImages as $destinationImage)
-                                                            @if ($loop->index < 3)
+
+                                                    <!-- Grid Layout for Larger Screens -->
+                                                    @if ($destinationImages->isNotEmpty())
+                                                        <div
+                                                            class="px-8 sm:grid sm:grid-cols-2 md:grid-cols-3 gap-2">
+                                                            @foreach ($destinationImages as $image)
                                                                 <figure>
-                                                                    <img src="{{ $destinationImage->url }}"
-                                                                        alt="{{ $destination->title }} Cover Image"
-                                                                        class="h-48 w-full object-cover flex" />
+                                                                    <img src="{{ $image->url }}"
+                                                                        alt="{{ $itineraryDestination->name }} Cover Image"
+                                                                        class="h-48 w-full object-cover" />
+                                                                
                                                                 </figure>
-                                                            @endif
-                                                        @endforeach
-                                                    </div>
-                                                    {{-- <div id="infinite-loop-itinerary"
-                                                        data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true,  }'
-                                                        class="relative w-full md:hidden">
-                                                        <div class="carousel h-48 rounded-none">
-                                                            <div class="carousel-body h-full opacity-0 ">
-                                                                <!-- Slide 1 -->
-                                                                @foreach ($destination->destinationImages as $destinationImage)
-                                                                    <div class="carousel-slide  px-8">
-                                                                        @if ($loop->index < 3)
-                                                                            <figure>
-                                                                                <img src="{{ $destinationImage->url }}"
-                                                                                    alt="{{ $destination->title }} Cover Image"
-                                                                                    class="h-48  object-cover" />
-                                                                            </figure>
-                                                                        @endif
-                                                                    </div>
-                                                                @endforeach
-                                                            </div>
+                                                            @endforeach
                                                         </div>
-                                                        <!-- Previous Slide -->
-                                                        <button type="button" class="carousel-prev">
-                                                            <span
-                                                                class="size-9.5 bg-base-100 hidden items-center justify-center rounded-full shadow">
+
+                                                        <!-- Carousel for Mobile -->
+                                                        {{-- <div id="infinite-loop-{{ $itineraryDestination->name }}"
+                                                            data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true, "slidesQty": { "xs": 1.1 } }'
+                                                            class="flex  relative w-full ">
+
+                                                            <div class="carousel h-64 rounded-none opacity-0">
+                                                                <div class="carousel-body h-full ">
+                                                                    @foreach ($destinationImages as $image)
+                                                                        <div class="carousel-slide">
+                                                                            <div
+                                                                                class="bg-base-300/60 flex h-full justify-center p-6">
+                                                                                <figure>
+                                                                                    <img src="{{ $image->url }}"
+                                                                                        alt="{{ $itineraryDestination->name }} Cover Image"
+                                                                                        class="h-64 object-cover " />
+                                                                                </figure>
+                                                                            </div>
+                                                                        </div>
+                                                                    @endforeach
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Previous Slide -->
+                                                            <button type="button" class="carousel-prev"
+                                                                aria-label="Previous">
                                                                 <span
-                                                                    class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
-                                                            </span>
-                                                            <span class="sr-only">Previous</span>
-                                                        </button>
-                                                        <!-- Next Slide -->
-                                                        <button type="button" class="carousel-next">
-                                                            <span class="sr-only">Next</span>
-                                                            <span
-                                                                class="size-9.5 bg-base-100 hidden items-center justify-center rounded-full shadow">
+                                                                    class="size-9.5 bg-base-100 hidden items-center justify-center rounded-full shadow">
+                                                                    <span
+                                                                        class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                                </span>
+                                                            </button>
+
+                                                            <!-- Next Slide -->
+                                                            <button type="button" class="carousel-next"
+                                                                aria-label="Next">
                                                                 <span
-                                                                    class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
-                                                            </span>
-                                                        </button>
-                                                    </div> --}}
-                                                    <p class="mb-4 px-8  text-gray-600 ">
-                                                        {{ $destination->description }}
+                                                                    class="size-9.5 bg-base-100 hidden items-center justify-center rounded-full shadow">
+                                                                    <span
+                                                                        class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                                                                </span>
+                                                            </button>
+                                                        </div> --}}
+                                                    @endif
+
+                                                    <p class="mb-4 mt-2 px-8 text-gray-600">
+                                                        {{ $itineraryDestination->description }}
                                                     </p>
                                                 @endforeach
                                             </div>
