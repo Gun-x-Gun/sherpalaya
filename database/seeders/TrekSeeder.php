@@ -78,6 +78,12 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'is_featured' => true,
         ]);
 
+        CuratorSeederHelper::seedBelongsTo(
+            $trek,
+            'cover_image_id',
+            public_path('photos/banner.jpg')
+        );
+
         CuratorSeederHelper::seedBelongsToMany(
             $trek,
             'images',

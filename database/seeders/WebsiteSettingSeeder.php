@@ -158,6 +158,7 @@ class WebsiteSettingSeeder extends Seeder
 
                 CuratorSeederHelper::seedBelongsTo(
                     $model,
+                    // cover_image_id
                     'value',
                     $websiteSetting['image']
                 );
