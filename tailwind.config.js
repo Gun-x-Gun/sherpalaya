@@ -13,7 +13,6 @@ export default {
         './resources/**/*.vue',
         './node_modules/flyonui/dist/js/*.js',
         "./src/*.html",
-
     ],
     plugins: [
         require('flyonui'),

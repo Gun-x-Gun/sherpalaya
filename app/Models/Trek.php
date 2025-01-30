@@ -2,21 +2,24 @@
 
 namespace App\Models;
 
+use App\Contracts\CanBeEasySearched;
+use App\Enums\SearchType;
 use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorModelHelper;
+use App\Traits\EasySearch;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
-use Laravel\Scout\Searchable;
+use Illuminate\Support\Collection;
 
-class Trek extends Model
+class Trek extends Model implements CanBeEasySearched
 {
+    use EasySearch;
     use HasFactory;
 
-    use Searchable;
 
     protected $fillable = [
         'title',
@@ -47,7 +50,27 @@ class Trek extends Model
         'essential_tips' => 'array',
     ];
 
-    // Relationships
+    // Easy Search
+
+    public function searchType(): SearchType{
+        return SearchType::TREK;
+    }
+
+
+    public function searchResultTitle(): string{
+        return $this->title;
+    }
+
+    public function searchResultUrl(): string{
+        return $this->title;
+    }
+
+    public function searchResultImages(): Collection{
+        $this->loadMissing('images');
+        return $this->images;
+    }
+
+    // RELATIONSHIPS
 
     public function itineraries():MorphMany
     {
