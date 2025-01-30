@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 // use App\Filament\Resources\WebsiteSettingResource\Actions\ResetAction;
 // use App\Filament\Resources\WebsiteSettingResource\Actions\ResetBulkAction;
 use Closure;
+use Filament\Forms\Components\RichEditor;
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
@@ -68,7 +69,7 @@ class WebsiteSettingResource extends Resource
                             ($get('type') == WebsiteSettingType::TEXT->value)
                         );
                     }),
-                TiptapEditor::make($fieldName)
+                RichEditor::make($fieldName)
                     ->hidden(function (\Filament\Forms\Get $get) {
                         return !(
                             ($get('type') == WebsiteSettingType::HTML->value)
