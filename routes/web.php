@@ -85,7 +85,10 @@ Route::get('/tour/sight_seeing', function () {
 //trek
 Route::get('/trek/{id}', function ($id) {
     $trek = Trek::with([
-        'coverImage'
+        'coverImage',
+        'itineraries',
+        'destinations',
+        'images'
     ])
         ->where('id', $id)
         ->firstOrFail();
