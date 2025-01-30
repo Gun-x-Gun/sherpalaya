@@ -27,7 +27,7 @@
 
 
 {{-- At a glimpse --}}
-<div class="md:grid xl:grid-cols-4 md:grid-cols-3 grid-rows-1 overflow-x-hidden  gap-4">
+<div class="sm:grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-rows-1 overflow-x-hidden  gap-4">
     @foreach ($trek->destinations->slice(0, 4) as $destination)
         <div class="card w-full bg-blue-100/30 at-a-glimpse my-4">
             {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}
@@ -54,10 +54,10 @@
                     </div>
                     <!-- Previous and Next buttons -->
                     <div
-                        class="carousel-info absolute bottom-3 start-[90%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-3">
-                        <span class="carousel-info-current me-1">0</span>
+                        class="carousel-info absolute bottom-3 start-[88%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-3">
+                        <span class="carousel-info-current me-0">0</span>
                         /
-                        <span class="carousel-info-total ms-1">0</span>
+                        <span class="carousel-info-total ms-0">0</span>
                         <button type="button" class="carousel-prev">
                             <span class="size-9.5 text-white flex items-center justify-center rounded-full shadow">
                                 <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
