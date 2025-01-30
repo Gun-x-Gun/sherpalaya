@@ -81,13 +81,18 @@ Route::get('/trek/{id}', function ($id) {
     $trek = Trek::with([
         'coverImage',
         'itineraries',
-        'destinations',
-        'images'
+        // 'destinations',
+        'destinations.destinationImages',
+        'images',
+        // 'destinationImages'
     ])
         ->where('id', $id)
         ->firstOrFail();
     return view('website.id_pages.show_trek', compact('trek'));
 })->name('show_trek');
+
+
+
 
 //expedition
 Route::get('/expedition/{id}', function ($id) {
