@@ -7,35 +7,36 @@
         <div class="stats  gap-2 w-full">
             <div class="stat">
                 <div class="stat-figure text-base-content size-8">
-                    <span class="icon-[tabler--world] size-8"></span>
+                    <span class="icon-[hugeicons--angle] size-14"></span>
                 </div>
                 <div class="stat-title">Expeditions </div>
                 <div class="stat-value text-success">50 +</div>
             </div>
-
             <div class="stat">
                 <div class="stat-figure text-base-content size-8">
-                    <span class="icon-[tabler--users-group] size-8"></span>
+                    <span class="icon-[hugeicons--gem] size-14"></span>
                 </div>
-                <div class="stat-title">Treks </div>
+                <div class="stat-title">Peaks</div>
                 <div class="stat-value text-success">100 + </div>
             </div>
 
             <div class="stat">
                 <div class="stat-figure text-base-content size-8">
-                    <span class="icon-[tabler--users-group] size-8"></span>
+                    <span class="icon-[lucide--mountain] size-14"></span>
+                </div>
+                <div class="stat-title">Treks </div>
+                <div class="stat-value text-success">200 + </div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-figure text-base-content size-8">
+                    <span class="icon-[hugeicons--bus-01] size-14"></span>
                 </div>
                 <div class="stat-title">Tours </div>
                 <div class="stat-value text-success">1000 + </div>
             </div>
 
-            <div class="stat">
-                <div class="stat-figure text-base-content size-8">
-                    <span class="icon-[tabler--users-group] size-8"></span>
-                </div>
-                <div class="stat-title">Peaks</div>
-                <div class="stat-value text-success">1000 + </div>
-            </div>
+
         </div>
     </div>
     <div class="h-20">
