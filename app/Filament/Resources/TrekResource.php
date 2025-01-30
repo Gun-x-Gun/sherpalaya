@@ -4,10 +4,10 @@ namespace App\Filament\Resources;
 
 use App\Enums\ItineraryTypes;
 use App\Enums\TrekDifficulty;
+use App\Filament\Fields\CuratorPicker;
 use App\Filament\Resources\TrekResource\Pages;
 use App\Filament\Resources\TrekResource\RelationManagers;
 use App\Models\Trek;
-use Awcodes\Curator\Components\Forms\CuratorPicker;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;

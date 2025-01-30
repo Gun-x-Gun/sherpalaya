@@ -7,7 +7,7 @@ use App\Enums\TrekDifficulty;
 use App\Filament\Resources\ExpeditionResource\Pages;
 use App\Filament\Resources\ExpeditionResource\RelationManagers;
 use App\Models\Expedition;
-use Awcodes\Curator\Components\Forms\CuratorPicker;
+use App\Filament\Fields\CuratorPicker;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\Repeater;

@@ -10,7 +10,7 @@ use App\Filament\Resources\DestinationResource\Widgets\DestinationServiceTable;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationToursTable;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationTrekTable;
 use App\Models\Destination;
-use Awcodes\Curator\Components\Forms\CuratorPicker;
+use App\Filament\Fields\CuratorPicker;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Dotswan\MapPicker\Fields\Map;
 use Filament\Forms;

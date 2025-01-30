@@ -22,7 +22,7 @@ use Filament\Forms\Components\TextInput;
 use FilamentTiptapEditor\Enums\TiptapOutput;
 use Illuminate\Database\Eloquent\Collection;
 use App\Storages\WebsiteSettingPathGenerator;
-use Awcodes\Curator\Components\Forms\CuratorPicker;
+use App\Filament\Fields\CuratorPicker;
 use App\Filament\Resources\WebsiteSettingResource\Pages;
 use App\Filament\Resources\WebsiteSettingResource\RelationManagers;
 

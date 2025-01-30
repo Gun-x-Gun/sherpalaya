@@ -5,7 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ServiceResource\Pages;
 use App\Filament\Resources\ServiceResource\RelationManagers;
 use App\Models\Service;
-use Awcodes\Curator\Components\Forms\CuratorPicker;
+use App\Filament\Fields\CuratorPicker;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Dotswan\MapPicker\Fields\Map;
 use Filament\Forms;
