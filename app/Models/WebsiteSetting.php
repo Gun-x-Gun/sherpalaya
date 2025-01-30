@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use App\Enums\WebsiteSettingType;
+use App\Helpers\CuratorModelHelper;
 use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class WebsiteSetting extends Model
 {
@@ -16,7 +19,7 @@ class WebsiteSetting extends Model
         'identifier',
         'description',
         'type',
-        'value',
+        'file_id',
         'default_value'
     ];
 
@@ -24,8 +27,8 @@ class WebsiteSetting extends Model
         'type' => WebsiteSettingType::class
     ];
 
-    public function file()
+    public function file(): BelongsTo
     {
-        return $this->hasOne(Media::class, 'id', 'value');
+        return CuratorModelHelper::belongsTo($this, 'value');
     }
 }
