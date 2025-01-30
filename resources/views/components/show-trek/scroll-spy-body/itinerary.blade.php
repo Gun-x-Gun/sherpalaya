@@ -85,7 +85,7 @@
                                                             @endif
                                                         @endforeach
                                                     </div>
-                                                    <div id="infinite-loop-itinerary"
+                                                    {{-- <div id="infinite-loop-itinerary"
                                                         data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true,  }'
                                                         class="relative w-full md:hidden">
                                                         <div class="carousel h-48 rounded-none">
@@ -122,7 +122,7 @@
                                                                     class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
                                                             </span>
                                                         </button>
-                                                    </div>
+                                                    </div> --}}
                                                     <p class="mb-4 px-8  text-gray-600 ">
                                                         {{ $destination->description }}
                                                     </p>
@@ -138,7 +138,6 @@
             </div>
         </div>
         <div class="h-6">
-
         </div>
     </div>
 @endif
