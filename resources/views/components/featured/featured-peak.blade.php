@@ -5,18 +5,20 @@
 @if ($featuredPeaks->isNotEmpty())
 
     <div class="bg-blue-100/30">
-        <div class="2xl:mx-44 mx-4 ">
-
-        </div>
-
         <div class="h-8 md:h-20 "></div>
-        <h3 class="text-5xl  tracking-widest text-slate-700 text-right ">Peaks</h3>
-        <p
-            class="text-md mt-2 text-slate-600 text-preety text-balance md:text-wrap md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light ">
-            For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support and
-            expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks, Sherpalaya handles every
-            detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
-            Trek into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
+
+        <div class="2xl:mx-44 mx-4">
+            <h3 class="text-5xl  tracking-widest text-slate-700 text-right ">Peaks</h3>
+            <p
+                class="text-md mt-2 text-slate-600 text-preety text-balance md:text-wrap md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light ">
+                For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support
+                and
+                expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks, Sherpalaya handles
+                every
+                detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
+                Trek into achievable milestones, ensuring a fulfilling and transformative adventure.
+            </p>
+        </div>
 
 
         @if ($peaks->where('is_featured', true)->count() > 1)
@@ -131,5 +133,6 @@
                 </div>
             </div>
         @endif
+
     </div>
 @endif
