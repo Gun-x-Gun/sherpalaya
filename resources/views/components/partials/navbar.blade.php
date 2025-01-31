@@ -267,43 +267,7 @@
                     {{-- expeditionend --}}
 
 
-                    {{-- trek-start --}}
-                    <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
-                        <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase max-xl:px-3 "
-                            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                            Treks
-                            <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
-                        </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
-                            role="menu" aria-orientation="vertical">
-                            <ul class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
-                                <div class="2xl:grid grid-cols-3">
-                                    @foreach ($navRegions as $navRegion)
-                                        @if ($navRegion->treks->isNotEmpty())
-                                            <li class="uppercase">
-                                                <a href="#"
-                                                    class="menu font-bold text-primary">{{ $navRegion->name }}
-                                                    Region</p></a>
-                                                <ul class="menu">
-                                                    @foreach ($navRegion->treks as $trek)
-                                                        <li
-                                                            class="text-slate-500  hover:text-primary hover:underline decoration-wavy">
-                                                            <a href="{{ route('show_trek', $trek->id) }}">
-                                                                {{ $trek->title }}
-                                                            </a>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    {{-- trekend --}}
+
 
                     {{-- peakstart --}}
                     <div
@@ -343,7 +307,43 @@
                         </div>
                     </div>
                     {{-- peakend --}}
-
+                    {{-- trek-start --}}
+                    <div
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
+                        <button type="button"
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase max-xl:px-3 "
+                            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                            Treks
+                            <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
+                            role="menu" aria-orientation="vertical">
+                            <ul class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
+                                <div class="2xl:grid grid-cols-3">
+                                    @foreach ($navRegions as $navRegion)
+                                        @if ($navRegion->treks->isNotEmpty())
+                                            <li class="uppercase">
+                                                <a href="#"
+                                                    class="menu font-bold text-primary">{{ $navRegion->name }}
+                                                    Region</p></a>
+                                                <ul class="menu">
+                                                    @foreach ($navRegion->treks as $trek)
+                                                        <li
+                                                            class="text-slate-500  hover:text-primary hover:underline decoration-wavy">
+                                                            <a href="{{ route('show_trek', $trek->id) }}">
+                                                                {{ $trek->title }}
+                                                            </a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    {{-- trekend --}}
                     {{-- tours --}}
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
