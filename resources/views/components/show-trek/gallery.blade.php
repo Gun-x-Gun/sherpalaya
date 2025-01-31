@@ -6,6 +6,8 @@
             <h5 class="card-title text-secondary uppercase font-normal text-3xl px-2">
                 Gallery
             </h5>
+            <div class="h-4">
+            </div>
             <div class="md:grid grid-cols-3 gap-1 px-2">
                 @foreach ($trek->images->slice(0, 8) as $galleryImage)
                     <div
