@@ -33,7 +33,7 @@
                                                     $icons = [
                                                         'flight' => 'icon-[tabler--plane]',
                                                         'drive' => 'icon-[tabler--car]',
-                                                        'peak' => 'icon-[tabler--hiking]',
+                                                        'peak' => 'icon-[tabler--trekking]',
                                                         'peak-hours' => 'icon-[tabler--clock]',
                                                         'rest' => 'icon-[tabler--bed]',
                                                         'helicopter' => 'icon-[tabler--helicopter]',
