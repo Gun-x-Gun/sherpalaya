@@ -1,100 +1,52 @@
 <div class="bg-blue-100/50">
     <div class="h-20"></div>
     <div
-        class="accordion accordion-shadow max-w-full grid grid-cols-1mx-4 gap-2 2xl:mx-44 mx-4 text-justify bg-blue-100/10">
-        <div class="accordion-item active rounded-none bg-transparent" id="payment-arrow-right">
-            <button class="accordion-toggle inline-flex items-center justify-between text-start"
-                aria-controls="payment-arrow-right-collapse" aria-expanded="true">
-                <div class="flex gap-4">
-                    <div class="avatar">
-                        <div class="size-12 rounded-md">
-                            <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png" alt="avatar" />
-                        </div>
-                    </div>
-                    <div>
-                        <p class="mb-0.5 text-primary">Richard Payne</p>
-                        <p class="text-sm text-accent font-normal">pwright@yahoo.com</p>
-                    </div>
-                </div>
-                <span
-                    class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180"></span>
-            </button>
-            <div id="payment-arrow-right-collapse"
-                class="accordion-content w-full overflow-hidden transition-[height] duration-300 "
-                aria-labelledby="payment-arrow-right" role="region">
-                <div class="px-5 pb-4">
-                    <p class="text-secondary font-normal">
-                        Richard Payne is a remarkable individual known for his exceptional skills and expertise in
-                        various
-                        fields. With a strong background in technology and a passion for innovation, Richard has made
-                        significant contributions to the industry.
-                    </p>
-                </div>
-            </div>
-        </div>
+        class="accordion accordion-shadow max-w-full 2xl:mx-44 mx-4">
+        {{-- First review --}}
+        @foreach ($allReviews as $review)
+            <div class="accordion-item accordion-item-active:scale-[1.05] transition-transform ease-in duration-300 delay-[1ms] {{ $loop->index == 0 ? 'accordion-item-active:mb-3 active' : 'accordion-item-active:my-3' }}"
+                id="review-{{ $review->id }}">
 
-        <div class="accordion-item rounded-none bg-transparent" id="delivery-arrow-right">
-            <button class="accordion-toggle inline-flex items-center justify-between text-start"
-                aria-controls="delivery-arrow-right-collapse" aria-expanded="false">
-                <div class="flex gap-4 ">
-                    <div class="avatar">
-                        <div class="size-12 rounded-md">
-                            <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-7.png" alt="avatar" />
+                <button class="accordion-toggle inline-flex items-center justify-between text-start"
+                    aria-controls="review-{{ $review->id }}-collapse" aria-expanded="{{ $loop->index == 0 ? 'true' : 'false' }}">
+                    <div class="flex gap-4">
+                        <div class="avatar">
+                            <div class="size-12 rounded-full">
+                                <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png" alt="avatar" />
+                            </div>
+                        </div>
+                        <div>
+                            <p class="mb-0.5 text-primary">{{ $review->name }}</p>
+                            <p class="text-sm text-accent font-normal">{{ $review->title }}</p>
                         </div>
                     </div>
-                    <div class="">
-                        <p class="mb-0.5 text-primary">Jordan Stevenson</p>
-                        <p class="text-sm text-accent font-normal">wramirez@outlook.com</p>
-                    </div>
-                </div>
-                <span
-                    class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180"></span>
-            </button>
-            <div id="delivery-arrow-right-collapse"
-                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="delivery-arrow-right" role="region">
-                <div class="px-5 pb-4">
-                    <p class="text-secondary font-normal">
-                        Jordan Stevenson is a talented individual with a passion for technology and innovation. Jordan
-                        has
-                        made significant contributions to various projects and has a deep understanding of programming
-                        languages and frameworks.
-                    </p>
-                </div>
-            </div>
-        </div>
+                    <span
+                        class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180"></span>
+                </button>
+                <div id="review-{{ $review->id }}-collapse"
+                    class="accordion-content w-full overflow-hidden transition-[height] duration-300 {{ $loop->index != 0 ? 'hidden' : '' }}"
+                    aria-labelledby="review-{{ $review->id }}" role="region">
+                    <div class="px-5 pb-4">
+                        <p class="text-secondary font-normal ">
+                            <blockquote class="relative ml-10 p-4">
+                                <span class="icon-[tabler--quote] text-base-300/80 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0 opacity-25"></span>
 
-        <div class="accordion-item rounded-none bg-transparent" id="cancel-arrow-right">
-            <button class="accordion-toggle inline-flex items-center justify-between text-start"
-                aria-controls="cancel-arrow-right-collapse" aria-expanded="false">
-                <div class="flex gap-4">
-                    <div class="avatar">
-                        <div class="size-12 rounded-md">
-                            <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png" alt="avatar" />
-                        </div>
+                                <div class="relative z-[1]">
+                                  <p class="text-base-content text-lg">
+                                    <em>
+                                        {{ $review->description }}
+                                    </em>
+                                  </p>
+                                </div>
+                            </blockquote>
+
+                        </p>
                     </div>
-                    <div>
-                        <p class="mb-0.5 text-primary">Nicholas Tanner</p>
-                        <p class="text-sm text-accent font-normal">snguyen@icloud.com</p>
-                    </div>
-                </div>
-                <span
-                    class="icon-[tabler--chevron-left] accordion-item-active:-rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:-rotate-180"></span>
-            </button>
-            <div id="cancel-arrow-right-collapse"
-                class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
-                aria-labelledby="cancel-arrow-right" role="region">
-                <div class="px-5 pb-4">
-                    <p class="text-secondary font-normal">
-                        Nicholas Tanner is a highly skilled individual with a strong passion for technology and
-                        innovation.
-                        Nicholas has made significant contributions to numerous projects and possesses a deep
-                        understanding
-                        of various programming languages and frameworks.
-                    </p>
                 </div>
             </div>
-        </div>
+        @endforeach
+
+
     </div>
     <div class="h-20"></div>
 

@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
             WebsiteSettingSeeder::class,
             KeyHighlightSeeder::class,
             EssentialTipsSeeder::class,
+            ReviewSeeder::class,
         ]);
     }
 }
