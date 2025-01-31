@@ -36,7 +36,7 @@
                                         <div
                                             class="card--rounded-none image-full h-3/4 w-full relative flex items-center justify-end card-side group hover:shadow border">
                                             <figure class="h-full w-full">
-                                                <img src="{{ $featuredPeak->featureImage->url ?? asset('photos/DSCF4385.JPG') }}"
+                                                <img src="{{ $featuredPeak->featureImage->url ?? asset('photos/mountain1.jpg') }}"
                                                     alt="{{ $featuredPeak->title }} Cover Image"
                                                     class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                             </figure>

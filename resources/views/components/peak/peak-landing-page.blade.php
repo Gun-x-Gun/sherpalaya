@@ -21,7 +21,7 @@
 <div class="bg-blue-100/50">
     <div class="card--rounded-none image-full h-[80vh] bg-blue-100/50">
         <figure class="h-[80vh] w-full">
-            <img src="{{ $peak->coverImage->url ?? asset('photos/P1030127.JPG') }}" alt="peak background image"
+            <img src="{{ $peak->coverImage->url ?? asset('photos/lobuche.jpg') }}" alt="peak background image"
                 class="h-[80vh] w-full object-cover" />
         </figure>
 

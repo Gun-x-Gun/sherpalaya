@@ -31,7 +31,7 @@
 
     </div>
     <div class="mx-0 ">
-        <div style="background-image: url('{{ asset('photos/DSCF4385.JPG') }}');"
+        <div style="background-image: url('{{ asset('photos/mountain4.jpg') }}');"
             class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed">
         </div>
     </div>

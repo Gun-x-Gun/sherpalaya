@@ -9,7 +9,7 @@
         <div class="card card-side group hover:shadow border border-gray-200 rounded-none overflow-hidden border-none shadow-none bg-transparent"
             dir="ltr">
             <figure class="w-1/2">
-                <img src="{{ asset('photos/62017703_2502887636410934_2901252517276942336_n.jpg') }}" alt="Shoes"
+                <img src="{{ asset('photos/mountain1.jpg') }}" alt="Shoes"
                     class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
             </figure>
             <div class="card-body w-1/2 p-4 flex flex-col justify-between">
@@ -32,7 +32,7 @@
         <div class="card card-side group hover:shadow border border-gray-200 rounded-none overflow-hidden border-none shadow-none bg-transparent"
             dir="rtl">
             <figure class="w-1/2">
-                <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="Shoes"
+                <img src="{{ asset('photos/mountain2.jpg') }}" alt="Shoes"
                     class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
             </figure>
             <div class="card-body w-1/2 p-4 flex flex-col justify-between">
@@ -57,7 +57,7 @@
         <div
             class="card--rounded-none image-full h-full w-full relative flex items-center justify-center card-side group hover:shadow border bg-transparent">
             <figure class="h-full w-full">
-                <img src="{{ asset('photos/DSCF2969.JPG') }}" alt="overlay image"
+                <img src="{{ asset('photos/mountain3.jpg') }}" alt="overlay image"
                     class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-center">
@@ -74,7 +74,7 @@
         <div
             class="card--rounded-none image-full h-full w-full relative flex items-center justify-center card-side group hover:shadow border bg-transparent">
             <figure class="h-full w-full">
-                <img src="{{ asset('photos/DSCF2969.JPG') }}" alt="overlay image"
+                <img src="{{ asset('photos/mountain4.jpg') }}" alt="overlay image"
                     class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-center">
@@ -91,7 +91,7 @@
         <div
             class="card--rounded-none image-full h-full w-full relative flex items-center justify-center card-side group hover:shadow border bg-transparent">
             <figure class="h-full w-full">
-                <img src="{{ asset('photos/DSCF2969.JPG') }}" alt="overlay image"
+                <img src="{{ asset('photos/mountain5.jpg') }}" alt="overlay image"
                     class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-center">

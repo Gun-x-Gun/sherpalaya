@@ -1,4 +1,4 @@
-  <div style="background-image: url('{{ asset('/photos/banner.jpg') }}');" class="bg-cover bg-center h-full w-full opacity-70">
+  <div style="background-image: url('{{ asset('/photos/mountain6.jpg') }}');" class="bg-cover bg-center h-full w-full opacity-70">
       <footer class="footer footer-center text-white rounded-none p-6 opacity-100 sticky bottom-0" >
           <nav class="grid grid-flow-col gap-4 text-white">
               <a href="#" class="link link-hover">About</a>

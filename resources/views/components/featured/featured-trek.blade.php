@@ -33,7 +33,7 @@
                                                 <div
                                                     class="card rounded-none  image-full  w-full relative flex items-center  card-side group hover:shadow border ">
                                                     <figure class="h-[28rem] w-full">
-                                                        <img src="{{ $featuredTrek->featureImage->url ?? asset('photos/DSCF2600.JPG') }}"
+                                                        <img src="{{ $featuredTrek->featureImage->url ?? asset('photos/mountain1.jpg') }}"
                                                             alt="{{ $featuredTrek->title }} Cover Image"
                                                             class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                     </figure>

@@ -22,7 +22,7 @@
 <div class="bg-blue-100/50">
     <div class="card--rounded-none image-full h-full">
         <figure class="h-[100vh] w-full">
-            <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="Trekking background image"
+            <img src="{{ asset('photos/mountain2.jpg') }}" alt="Trekking background image"
                 class="h-[100vh] w-full object-cover brightness-90" />
         </figure>
         <div class="card-body relative">
@@ -30,9 +30,9 @@
                 class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class=" max-w-[92%] 2xl:max-w-[70%]">
 
-                    <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">Explore</h2>
-                    <h5 class="card-title mb-2.5 text-primary text-3xl md:text-7xl uppercase font-extrabold">Mt
-                        Kanchunjunga
+                    <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">Expedition</h2>
+                    <h5 class="card-title mb-2.5 text-primary text-3xl md:text-7xl uppercase font-extrabold">
+                        Everest
                     </h5>
                     <p class="mb-4 2xl:text-xl text-white font-bold backdrop-blur-sm">A high-quality smartphone with the
                         latest
