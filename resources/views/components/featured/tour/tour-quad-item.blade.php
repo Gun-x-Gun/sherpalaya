@@ -5,7 +5,8 @@
             <div class="h-14"></div>
 
             <div class="col-span-1 ">
-                <h5 class="text-4xl font-light line-clamp-2 tracking-wider text-black text-left md:text-center ">Tours</h5>
+                <h5 class="text-4xl font-light line-clamp-2 tracking-wider text-black text-left md:text-center ">Tours
+                </h5>
                 <h3 class="text-3xl tracking-widest text-accent text-left md:text-center  ">With Sherpalaya</h3>
                 <p
                     class="text-md mt-2 text-preety text-slate-800 text-balance md:text-wrap 
@@ -38,7 +39,7 @@
                                         {{ $featuredTour->title }}
                                     </h2>
                                     <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
-                                        {{ $featuredTour->highest_altitude }} 
+                                        {{ $featuredTour->highest_altitude }}
                                     </h2>
                                 </div>
                             </div>
@@ -54,31 +55,26 @@
                     <div class="carousel-body  h-full opacity-0">
                         <!-- Slide 1 -->
                         @foreach ($featuredTours as $featuredTour)
-                            <div class="carousel-slide">
-                                <div class="bg-base-200/50 flex h-full justify-center p-1">
-                                    <span class="self-center text-lg">
-                                        <div
-                                            class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
-                                            <figure class="h-[28rem] w-full">
-                                                <img src="{{ optional($featuredTour->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
-                                                    alt="{{ $featuredTour->title }} Cover Image"
-                                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
-                                            </figure>
-                                            <a href="{{ route('show_tour', $featuredTour->id) }}">
-                                                <div class="card-body absolute inset-0 justify-end">
-                                                    <div class="text-center">
-                                                        <h2 class="font-bold text-white text-2xl uppercase">
-                                                            {{ $featuredTour->title }}
-                                                        </h2>
-                                                        <h2
-                                                            class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
-                                                            {{ $featuredTour->highest_altitude }} m
-                                                        </h2>
-                                                    </div>
-                                                </div>
-                                            </a>
+                            <div class="carousel-slide px-1 max-w-sm">
+                                <div
+                                    class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
+                                    <figure class="h-[28rem] max-w-sm">
+                                        <img src="{{ optional($featuredTour->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
+                                            alt="{{ $featuredTour->title }} Cover Image"
+                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
+                                    </figure>
+                                    <a href="{{ route('show_tour', $featuredTour->id) }}">
+                                        <div class="card-body absolute inset-0 justify-end">
+                                            <div class="text-center">
+                                                <h2 class="font-bold text-white text-2xl uppercase">
+                                                    {{ $featuredTour->title }}
+                                                </h2>
+                                                <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                                    {{ $featuredTour->highest_altitude }} m
+                                                </h2>
+                                            </div>
                                         </div>
-                                    </span>
+                                    </a>
                                 </div>
                             </div>
                         @endforeach
