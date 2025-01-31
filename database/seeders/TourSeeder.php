@@ -136,6 +136,12 @@ class TourSeeder extends Seeder
                 ],
             ],
         ];
+        $images = [
+            'photos/culture.jpg',
+            'photos/culture2.jpg',
+            'photos/culture3.jpg',
+            'photos/temple.jpg',
+        ];
 
         foreach ($tours as $tourData) {
             $tour = Tour::create($tourData);
@@ -148,16 +154,21 @@ class TourSeeder extends Seeder
                     ->pluck('id')
                     ->toArray()
             );
-            CuratorSeederHelper::seedBelongsTo(
-                $tour,
-                'cover_image_id',
-                public_path('photos/logo.png')
-            );
-            CuratorSeederHelper::seedBelongsTo(
-                $tour,
-                'feature_image_id',
-                public_path('photos/logo.png')
-            );
+            shuffle($images); // Randomize the images
+            
+            foreach (array_slice($images, 0, rand(2, 3)) as $image) {
+                CuratorSeederHelper::seedBelongsTo(
+                    $tour,
+                    'cover_image_id',
+                    public_path($image)
+                );
+                CuratorSeederHelper::seedBelongsTo(
+                    $tour,
+                    'feature_image_id',
+                    public_path($image)
+                );
+            }
+            
         }
     }
 }
