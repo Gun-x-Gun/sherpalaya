@@ -121,36 +121,32 @@ class ExpeditionResource extends Resource
                                         ]),
                                         Section::make('Key Highlights')
                                         ->schema([
-                                            Repeater::make('key_highlights')
-                                                ->hiddenLabel()
-                                                ->simple(
-                                                    TextArea::make('key_highlights')
-                                                        ->rows(1)
-                                                        ->autosize()
-                                                        ->hiddenLabel()
-                                                        ->columnSpanFull(),
-                                                )
+                                            TableRepeater::make('key_highlights')
+                                                ->label('Key Highlights')
+                                                ->relationship('keyHighlights')
+                                                ->schema([
+                                                    TextInput::make('title')->label('Title')->required(),
+                                                    TextArea::make('description')->label('Description')->autosize()->required(),
+                                                ])->reorderable()
                                         ]),
                                     Section::make('Essential Tips')
                                         ->schema([
-                                            Repeater::make('essential_tips')
-                                                ->hiddenLabel()
-                                                ->simple(
-                                                    TextArea::make('essential_tips')
-                                                        ->rows(1)
-                                                        ->autosize()
-                                                        ->hiddenLabel()
-                                                        ->columnSpanFull(),
-                                                )
+                                            TableRepeater::make('essential_tips')
+                                                ->label('Essential Tips')
+                                                ->relationship('essentialTips')
+                                                ->schema([
+                                                    TextInput::make('title')->label('Title')->required(),
+                                                    TextArea::make('description')->label('Description')->autosize()->required(),
+                                                ])->reorderable()
                                         ]),
                                 ], [
                                     Section::make()
                                         ->columns(2)
                                         ->schema([
                                             TextArea::make('best_time_for_expedition')
-                                            ->columnSpanFull()
-                                            ->required()
-                                            ->label('Best Time For Expedition'),
+                                                ->columnSpanFull()
+                                                ->required()
+                                                ->label('Best Time For Expedition'),
                                             Select::make('expedition_difficulty')
                                                 ->label(label: 'Expedition Difficulty')
                                                 ->options(TrekDifficulty::class)
@@ -253,7 +249,8 @@ class ExpeditionResource extends Resource
                                                             ->native(false),
                                                         Textarea::make('description')
                                                             ->rows(1)
-                                                            ->autosize(),                                                    ])
+                                                            ->autosize(),
+                                                    ])
                                                     ->reorderable()
                                                     ->cloneable()
                                             ])
