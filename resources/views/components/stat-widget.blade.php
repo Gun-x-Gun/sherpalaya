@@ -22,7 +22,7 @@
 
             <div class="stat">
                 <div class="stat-figure text-base-content size-8">
-                    <span class="icon-[lucide--mountain] size-14"></span>
+                    <span class="icon-[mingcute--mountain-2-line] size-14"></span>
                 </div>
                 <div class="stat-title">Treks </div>
                 <div class="stat-value text-success">200 + </div>
