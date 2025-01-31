@@ -112,11 +112,11 @@
 
 {{-- <span class="icon-[weui--arrow-filled]" style="width: 24px; height: 48px; color: #6a4ca4;"></span> --}}
 <div class="bg-blue-100/50">
-    <div class="h-8 md:h-20 "></div>
+    <div class="h-8  "></div>
     <div class="2xl:mx-44 mx-4 ">
         {{-- <h5 class="text-3xl  font-extralight text-left line-clamp-2 tracking-wider text-secondary"> Sherpalaya
         </h5> --}}
-        <h3 class="text-4xl tracking-widest text-blue-700 ">Activities </h3>
+        <h3 class="text-4xl tracking-normal text-black uppercase text-center">Activities ...</h3>
         {{-- <p
             class="text-md mt-2 text-preety text-balance text-slate-500 md:text-wrap md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light ">
             For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support and
@@ -126,19 +126,19 @@
     </div>
 </div>
 <div class="bg-blue-100/50 max-w-full">
-    <div class="h-4"></div>
+    <div class="h-8"></div>
 
     <div class="md:grid grid-cols-3 gap-4 2xl:mx-44 mx-4 flex flex-col">
         <a href="/expeditions" class=" col-span-2">
             <div
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
                 <figure class="h-full w-full ">
-                    <img src="{{ asset('photos/mountain1.jpg') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-90" />
+                    <img src="{{ asset('photos/DSCF2513.JPG') }}" alt="overlay image"
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" />
                 </figure>
                 <div class="card-body absolute bottom-0 ">
                     <div class="text-left ">
-                        <h2 class="font-extrabold text-white text-4xl ">
+                        <h2 class="font-extrabold text-white text-4xl uppercase">
                             Expeditions
                         </h2>
                     </div>
@@ -151,10 +151,10 @@
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
 
                 <figure class="h-full w-full ">
-                    <img src="{{ asset('photos/mountain2.jpg') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-90" />
+                    <img src="{{ asset('photos/DSCF2600.JPG') }}" alt="overlay image"
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" />
                 </figure>
-                <div class="card-body absolute inset-0 ">
+                <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">
                         <h2 class="font-bold text-white text-4xl ">
                             Treks
@@ -173,10 +173,10 @@
             <div
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
                 <figure class="h-full w-full ">
-                    <img src="{{ asset('photos/mountain4.jpg') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-90" />
+                    <img src="{{ asset('photos/DSCF2632.JPG') }}" alt="overlay image"
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" />
                 </figure>
-                <div class="card-body absolute inset-0 ">
+                <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">
                         <h2 class="font-bold text-white text-4xl ">
                             Tours
@@ -190,11 +190,11 @@
             <div
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
 
-                <figure class="h-full w-full brightness-90">
-                    <img src="{{ asset('photos/lobuche.jpg') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-90" />
+                <figure class="h-full w-full brightness-75">
+                    <img src="{{ asset('photos/DSCF4092.JPG') }}" alt="overlay image"
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" />
                 </figure>
-                <div class="card-body absolute inset-0 ">
+                <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">
                         <h2 class="font-bold text-white  text-4xl ">
                             Peaks

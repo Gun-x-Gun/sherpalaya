@@ -19,34 +19,25 @@
 {{-- md:mx-44 md:mt-72 max-w-[50%] w-full mt-72 ml-15  --}}
 {{-- text-center md:text-left md:pl-48 pt-[20rem] --}}
 
-<div class="bg-blue-100/50">
-    <div class="card--rounded-none image-full h-full">
-        <figure class="h-[100vh] w-full">
-            <img src="{{ asset('photos/mountain2.jpg') }}" alt="Trekking background image"
-                class="h-[100vh] w-full object-cover brightness-90" />
-        </figure>
-        <div class="card-body relative">
-            <div
-                class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                <div class=" max-w-[92%] 2xl:max-w-[70%]">
-
-                    <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">Expedition</h2>
-                    <h5 class="card-title mb-2.5 text-primary text-3xl md:text-7xl uppercase font-extrabold">
-                        Everest
-                    </h5>
-                    <p class="mb-4 2xl:text-xl text-white font-bold backdrop-blur-sm">A high-quality smartphone with the
-                        latest
-                        features for a premium user experience.</p>
-                    <div class="card-actions items-center mt-4">
-                        <a href="/treks">
-                            <button class="btn btn-accent hover:btn-primary">
-                                Let's Go
-                                <span class="icon-[line-md--chevron-right-circle] size-5">
-                                </span>
-                            </button>
-                        </a>
-                    </div>
-                </div>
+<div class="card--rounded-none image-full  bg-blue-100/50 h-[100vh]">
+    <figure class="h-[100vh] w-full">
+        <img src="{{  asset('/photos/banner.jpg') }}" alt="Trekking background image"
+            class="h-[100vh] w-full object-cover brightness-50" />
+    </figure>
+    <div class="card-body relative">
+        <div
+            class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+            <div class=" max-w-[92%] 2xl:max-w-[100%]">
+                <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                    Explore
+                </h5>
+                <h2 class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-bold">
+                    {{-- {{ $trek->title }} --}}
+                    Thrill
+                </h2>
+                <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                    With Sherpalaya
+                </h5>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-@php
+{{-- @php
     $featuredExpeditions = $expeditions->where('is_featured', true);
 @endphp
 
@@ -79,4 +79,12 @@
 
         <div class="h-10 "></div>
     </div>
-@endif
+@endif --}}
+
+
+
+<x-featured.expedition.one-item />
+<x-featured.expedition.two-item />
+<x-featured.expedition.three-item />
+<x-featured.expedition.four-item />
+<x-featured.expedition.more-item />

@@ -1,23 +1,12 @@
-@php
-    $featuredTreks = $treks->where('is_featured', true);
-@endphp
 
-@if ($featuredTreks->isNotEmpty())
-    <div class="bg-blue-100/50">
-        <div class="h-10 "></div>
-        <div class="2xl:mx-44 mx-4 ">
-            <h5 class="text-5xl font-light text-left line-clamp-2 tracking-wider text-black">Trek
-            </h5>
-            <h3 class="text-3xl tracking-widest text-accent "> With Sherpalaya</h3>
-            <p
-                class="text-md  mt-2 text-preety text-slate-800 text-balance md:text-wrap md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light ">
-                For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support
-                and
-                expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks, Sherpalaya handles
-                every
-                detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
-                Trek into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
+<x-featured.trek.trek-single-item />
+<x-featured.trek.trek-double-item />
+<x-featured.trek.trek-triple-item />
+<x-featured.trek.trek-quad-item />
+<x-featured.trek.trek-more-item />
 
+
+<<<<<<< Updated upstream
             <div id="multi-slide"
                 data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1.1,"md": {{ max(1.1, min(3, count($featuredTreks))) }}, "lg": {{ max(1.1, min(4, count($featuredTreks))) }} } }'
                 class="relative w-full mt-2">
@@ -77,7 +66,6 @@
                 @endif
             </div>
         </div>
+=======
+>>>>>>> Stashed changes
 
-        <div class="h-10 "></div>
-    </div>
-@endif

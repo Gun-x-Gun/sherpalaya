@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 @php
     $featuredTours = $tours->where('is_featured', true);
 @endphp
@@ -76,3 +77,10 @@
         <div class="h-10 "></div>
     </div>
 @endif
+=======
+<x-featured.tour.tour-single-item />
+<x-featured.tour.tour-double-item />
+<x-featured.tour.tour-triple-item />
+<x-featured.tour.tour-quad-item />
+<x-featured.tour.tour-more-item />
+>>>>>>> Stashed changes
