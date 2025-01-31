@@ -9,58 +9,11 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class CuratorSeederHelper
 {
-
-    public static function seedBelongsTo(Model $related, string $relatedField, string $filePath): Media
-    {
-        if (!is_file($filePath)) {
-            throw new Exception("No file found in path: " . $filePath);
-        }
-
-        // Extract file extension safely
-        $extension = pathinfo($filePath, PATHINFO_EXTENSION);
-        if (!$extension) {
-            throw new Exception("File extension could not be identified: " . $filePath);
-        }
-
-        // Generate unique filename
-        $uuid = Str::uuid();
-        $filename = "{$uuid}.{$extension}";
-        $storagePath = "media/{$filename}";
-
-        // Store the file in Laravel's storage (ensures correct permissions)
-        Storage::disk('public')->put($storagePath, file_get_contents($filePath));
-
-        // Get file details efficiently
-        $mimeType = mime_content_type($filePath) ?: null;
-        $fileSize = filesize($filePath) ?: null;
-        $imageData = @getimagesize($filePath);
-        $exifData = (stripos($mimeType, 'image') === 0) ? (@exif_read_data($filePath) ?: null) : null;
-
-        $media = Media::create([
-            'name' => $uuid,
-            'path' => $storagePath,
-            'disk' => 'public',
-            'size' => $fileSize,
-            'type' => $mimeType,
-            'ext' => $extension,
-            // 'directory' => 'media',
-            // 'visibility' => 'public',
-            // 'width' => $imageData[0] ?? null,
-            // 'height' => $imageData[1] ?? null,
-            // 'exif' => $exifData,
-        ]);
-
-        $related->update([
-            $relatedField => $media->id
-        ]);
-
-
-        return $media;
-    }
 
     protected static function resolveFileData(string $filePath): array
     {
@@ -103,14 +56,41 @@ class CuratorSeederHelper
         ];
     }
 
-    public static function seedBelongsToMany(Model $related, string $relatedName, string $filePath, array $attributes = []): Media
+    public static function seedBelongsTo(Model $related, string $relatedField, string|Media $filePath): Media
     {
-        $mediaData = self::resolveFileData($filePath);
 
-        $media = Media::create($mediaData);
+        if ($filePath instanceof Media) {
+            $media = $filePath;
+        } else {
+            $mediaData = self::resolveFileData($filePath);
+            $media = Media::create($mediaData);
+        }
+
+        $related->update([
+            $relatedField => $media->id
+        ]);
+
+
+        return $media;
+    }
+
+    public static function seedBelongsToMany(Model $related, string $relatedName, string|Media $filePath, array $attributes = []): Media
+    {
+        $media = null;
+        if ($filePath instanceof Media) {
+            $media = $filePath;
+        } else {
+            $mediaData = self::resolveFileData($filePath);
+            $media = Media::create($mediaData);
+        }
 
         $related->{$relatedName}()->attach($media, $attributes);
 
         return $media;
+    }
+
+    public static function clearStorage()
+    {
+        File::deleteDirectory(storage_path('media'), false);
     }
 }
