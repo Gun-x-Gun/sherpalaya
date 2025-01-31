@@ -58,5 +58,13 @@
                 Destinations
             </div>
         </button>
+        <button href="#recommended" type="button"
+            class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary " id="tabs-scroll-item-7"
+            data-tab="#tabs-scroll-7" aria-controls="#tabs-scroll-7" role="tab" aria-selected="false">
+            <div class="gap-1 lg:gap-3.5 text-sm flex text-nowrap">
+                <span class="icon-[tdesign--activity-filled] size-5"></span>
+                Recommended
+            </div>
+        </button>
     </nav>
 </div>
