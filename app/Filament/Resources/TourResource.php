@@ -56,10 +56,10 @@ class TourResource extends Resource
                                     ->columns(2)
                                     ->schema([
                                         TextInput::make('title')
-                                        ->hiddenOn('view')
-                                        ->required(),
+                                            ->hiddenOn('view')
+                                            ->required(),
                                         Select::make('type')
-                                        ->required()
+                                            ->required()
                                             ->options(TourType::class)
                                             ->native(false),
                                         RichEditor::make('description')
@@ -120,40 +120,36 @@ class TourResource extends Resource
                                             ->searchable(['name', 'location'])
                                             ->native(false),
                                     ]),
-                                Section::make('Key Highlights')
+                                    Section::make('Key Highlights')
                                     ->schema([
-                                        Repeater::make('key_highlights')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextArea::make('key_highlights')
-                                                    ->rows(1)
-                                                    ->autosize()
-                                                    ->hiddenLabel()
-                                                    ->columnSpanFull(),
-                                            )
+                                        TableRepeater::make('key_highlights')
+                                            ->label('Key Highlights')
+                                            ->relationship('keyHighlights')
+                                            ->schema([
+                                                TextInput::make('title')->label('Title')->required(),
+                                                TextArea::make('description')->label('Description')->autosize()->required(),
+                                            ])->reorderable()
                                     ]),
                                 Section::make('Essential Tips')
                                     ->schema([
-                                        Repeater::make('essential_tips')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextArea::make('essential_tips')
-                                                    ->rows(1)
-                                                    ->autosize()
-                                                    ->hiddenLabel()
-                                                    ->columnSpanFull(),
-                                            )
+                                        TableRepeater::make('essential_tips')
+                                            ->label('Essential Tips')
+                                            ->relationship('essentialTips')
+                                            ->schema([
+                                                TextInput::make('title')->label('Title')->required(),
+                                                TextArea::make('description')->label('Description')->autosize()->required(),
+                                            ])->reorderable()
                                     ]),
                             ], [
                                 Section::make()
                                     ->columns(2)
                                     ->schema([
                                         TextArea::make('best_time_for_tour')
-                                                ->columnSpanFull()
-                                                ->required()
-                                                ->label('Best Time For Tour'),
+                                            ->columnSpanFull()
+                                            ->required()
+                                            ->label('Best Time For Tour'),
                                         TextInput::make('duration')
-                                        ->required(),
+                                            ->required(),
                                         TextInput::make('grade')
                                             ->numeric()
                                             ->minValue(1)
@@ -163,11 +159,11 @@ class TourResource extends Resource
                                 Section::make()
                                     ->schema([
                                         TextInput::make('starting_point')
-                                                ->label('Starting Point')
-                                                ->required(),
-                                            TextInput::make('ending_point')
-                                                ->label('Ending Point')
-                                                ->required(),
+                                            ->label('Starting Point')
+                                            ->required(),
+                                        TextInput::make('ending_point')
+                                            ->label('Ending Point')
+                                            ->required(),
                                     ]),
                             ]),
                         ]),
@@ -267,9 +263,9 @@ class TourResource extends Resource
                         TextColumn::make('title')
                             ->size(TextColumn\TextColumnSize::Large)
                             ->weight(FontWeight::Bold),
-                            TextColumn::make('duration')
+                        TextColumn::make('duration')
                             ->icon('heroicon-m-clock')
-                                ->size(TextColumn\TextColumnSize::Small),
+                            ->size(TextColumn\TextColumnSize::Small),
                         TextColumn::make('type')
                             ->badge(),
 
