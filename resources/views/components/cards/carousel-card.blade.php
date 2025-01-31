@@ -21,7 +21,7 @@
 
 <div class="card--rounded-none image-full  bg-blue-100/50 h-[100vh]">
     <figure class="h-[100vh] w-full">
-        <img src="{{  asset('/photos/banner.jpg') }}" alt="Trekking background image"
+        <img src="{{  asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
             class="h-[100vh] w-full object-cover brightness-50" />
     </figure>
     <div class="card-body relative">
