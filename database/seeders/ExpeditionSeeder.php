@@ -68,6 +68,26 @@ While climbing Mt. Everest is the opportunity of a lifetime, expeditions encount
         CuratorSeederHelper::seedBelongsToMany(
             $expedition,
             'images',
+            public_path('photos/mountain2.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $expedition,
+            'images',
+            public_path('photos/mountain3.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $expedition,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $expedition,
+            'images',
+            public_path('photos/mountain5.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $expedition,
+            'images',
             public_path('photos/mountain1.jpg')
         );
     }
