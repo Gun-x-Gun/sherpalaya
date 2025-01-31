@@ -27,11 +27,6 @@ class TourSeeder extends Seeder
                 'starting_point' => 'Kathmandu',
                 'ending_point' => 'Kathmandu',
                 'best_time_for_tour' => 'All Year Round',
-                'key_highlights' => [
-                    'UNESCO World Heritage Sites',
-                    'Rich Cultural Heritage',
-                    'Historical Monuments',
-                ],
                 'costs_include' => [
                     'Tour Guide',
                     'Transportation',
@@ -40,11 +35,6 @@ class TourSeeder extends Seeder
                 'costs_exclude' => [
                     'Personal Expenses',
                     'Lunch',
-                ],
-                'essential_tips' => [
-                    'Carry a Water Bottle',
-                    'Wear Comfortable Shoes',
-                    'Bring a Camera',
                 ],
             ],
             [
@@ -57,11 +47,6 @@ class TourSeeder extends Seeder
                 'starting_point' => 'Kathmandu',
                 'ending_point' => 'Kathmandu',
                 'best_time_for_tour' => 'Autumn and Spring',
-                'key_highlights' => [
-                    'Off-road Trails',
-                    'Panoramic Views',
-                    'Rural Villages',
-                ],
                 'costs_include' => [
                     'Mountain Bike',
                     'Guide',
@@ -70,11 +55,6 @@ class TourSeeder extends Seeder
                 'costs_exclude' => [
                     'Personal Insurance',
                     'Snacks',
-                ],
-                'essential_tips' => [
-                    'Wear a Helmet',
-                    'Stay Hydrated',
-                    'Bring a Repair Kit',
                 ],
             ],
             [
@@ -87,11 +67,6 @@ class TourSeeder extends Seeder
                 'starting_point' => 'Kathmandu',
                 'ending_point' => 'Kathmandu',
                 'best_time_for_tour' => 'All Year Round',
-                'key_highlights' => [
-                    'Historic Sites',
-                    'Local Markets',
-                    'Traditional Neighborhoods',
-                ],
                 'costs_include' => [
                     'Running Guide',
                     'Snacks and Water',
@@ -99,11 +74,6 @@ class TourSeeder extends Seeder
                 'costs_exclude' => [
                     'Personal Running Gear',
                     'Transportation to Start Point',
-                ],
-                'essential_tips' => [
-                    'Wear Proper Running Shoes',
-                    'Stretch Before Running',
-                    'Carry a Small Water Bottle',
                 ],
             ],
             [
@@ -116,11 +86,6 @@ class TourSeeder extends Seeder
                 'starting_point' => 'Pokhara',
                 'ending_point' => 'Pokhara',
                 'best_time_for_tour' => 'Autumn and Spring',
-                'key_highlights' => [
-                    'Phewa Lake Sunrise',
-                    'Sarangkot Viewpoint',
-                    'Local Villages',
-                ],
                 'costs_include' => [
                     'Photography Guide',
                     'Transportation',
@@ -128,11 +93,6 @@ class TourSeeder extends Seeder
                 'costs_exclude' => [
                     'Camera Equipment',
                     'Meals',
-                ],
-                'essential_tips' => [
-                    'Bring a Tripod',
-                    'Use Filters for Landscapes',
-                    'Carry Extra Batteries',
                 ],
             ],
             [
@@ -145,11 +105,6 @@ class TourSeeder extends Seeder
                 'starting_point' => 'Bhaktapur',
                 'ending_point' => 'Bhaktapur',
                 'best_time_for_tour' => 'All Year Round',
-                'key_highlights' => [
-                    'Ancient Temples',
-                    'Durbar Square',
-                    'Newari Culture',
-                ],
                 'costs_include' => [
                     'Guide',
                     'Entry Fees',
@@ -157,11 +112,6 @@ class TourSeeder extends Seeder
                 'costs_exclude' => [
                     'Personal Expenses',
                     'Meals',
-                ],
-                'essential_tips' => [
-                    'Wear Modest Clothing',
-                    'Carry a Camera',
-                    'Learn a Few Nepali Phrases',
                 ],
             ],
             [
@@ -174,11 +124,6 @@ class TourSeeder extends Seeder
                 'starting_point' => 'Kathmandu',
                 'ending_point' => 'Kathmandu',
                 'best_time_for_tour' => 'Autumn and Spring',
-                'key_highlights' => [
-                    'Aerial Views of Everest',
-                    'Landing at Kala Patthar',
-                    'Panoramic Mountain Views',
-                ],
                 'costs_include' => [
                     'Helicopter Ride',
                     'Guide',
@@ -187,11 +132,6 @@ class TourSeeder extends Seeder
                 'costs_exclude' => [
                     'Personal Insurance',
                     'Meals',
-                ],
-                'essential_tips' => [
-                    'Carry Warm Clothing',
-                    'Bring a Camera',
-                    'Avoid Heavy Meals Before Flight',
                 ],
             ],
         ];

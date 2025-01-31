@@ -34,12 +34,6 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'highest_altitude' => 5545,
             'region_id' => Region::first()->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING,
-            'key_highlights' => [
-                'Breathtaking Mountain Views: Witness the majestic Mount Everest, along with other towering peaks like Lhotse, Nuptse, Ama Dablam, and Pumori.',
-                'Sherpa Culture: Immerse yourself in the unique Sherpa culture and learn about their way of life.',
-                'High-Altitude Experience: Trek through the Khumbu Valley, crossing high passes and experiencing the thin air.',
-                'Iconic Landmarks: Visit iconic places like Namche Bazaar, Tengboche Monastery, and Khumbu Icefall.',
-            ],
             'costs_include' => [
                 'Transfer from airport to your hotel during both arrival and departure.',
                 'Stay three nights in Kathmandu with a BB plan.',
@@ -66,14 +60,6 @@ The best season for this trip starts from beginning of March to May and  Septemb
                 'Tips for the guide, porters, and driver as a token of appreciation.',
                 'Any other expenses or charges that are not mentioned in the "costs include" list.',
                 'Nepal arrival visa.',
-            ],
-            'essential_tips' => [
-                'Physical Fitness: Train rigorously for the trek, focusing on cardio and strength training.',
-                'Acclimatization: Prioritize acclimatization to avoid altitude sickness.',
-                'Proper Gear: Pack warm clothing, waterproof gear, sturdy hiking boots, and other essential items.',
-                'Hiring a Guide and Porter: Consider hiring a local guide and porter to enhance your experience and ensure safety with the insurance of the local staff.',
-                'Travel Insurance: Purchase comprehensive travel insurance to cover medical emergencies and trip cancellations.',
-                'Permits: Obtain necessary permits (TIMS card, local authority entrance fee, and Sagarmatha National Park Permit) before starting the trek.',
             ],
             'is_featured' => true,
         ]);
@@ -102,12 +88,6 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'highest_altitude' => 4130,
             'region_id' => 3,
             'trek_difficulty' => TrekDifficulty::MODERATE,
-            'key_highlights' => [
-                'Stunning Mountain Views: The trek offers panoramic views of Annapurna I, Annapurna South, Machhapuchhre (Fishtail Peak), and other majestic peaks.',
-                'Diverse Landscapes: Experience a variety of landscapes, from lush rhododendron forests to alpine meadows and glacial valleys.',
-                'Cultural Immersion: Trek through traditional Gurung and Magar villages, experiencing their unique culture, customs, and hospitality.',
-                'Wildlife: Encounter diverse wildlife, including Himalayan tahr, langur monkeys, and various bird species.',
-            ],
             'costs_include' => [
                 'Transfer from airport to your hotel during both arrival and departure.',
                 'Stay two nights in Kathmandu and two nights in Pokhara with a BB plan.',
@@ -134,14 +114,6 @@ The best season for this trip starts from beginning of March to May and  Septemb
                 'Tips for the guide, porters, and driver as a token of appreciation.',
                 'Any other expenses or charges that are not mentioned in the "costs include" list.',
                 'Nepal arrival visa.',
-            ],
-            'essential_tips' => [
-                'Physical Fitness: Train regularly to improve your cardiovascular health and leg strength.',
-                'Acclimatization: Prioritize acclimatization to avoid altitude sickness.',
-                'Proper Gear: Pack warm clothing, waterproof gear, sturdy hiking boots, and other essential items.',
-                'Hiring a Guide and Porter: Consider hiring a local guide and porter to enhance your experience and ensure safety.',
-                'Travel Insurance: Purchase comprehensive travel insurance to cover medical emergencies and trip cancellations.',
-                'Permits: Obtain necessary permits (TIMS card and Annapurna Conservation Area Permit) before starting the trek.',
             ],
             'is_featured' => true,
         ]);

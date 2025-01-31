@@ -31,12 +31,6 @@ While climbing Mt. Everest is the opportunity of a lifetime, expeditions encount
             'starting_altitude' => 2610,
             'highest_altitude' => 8848,
             'expedition_difficulty' => TrekDifficulty::CHALLENGING,
-            'key_highlights' => [
-                'Breathtaking Views',
-                'High Altitude',
-                'Remote',
-                'Challenging'
-            ],
             'costs_include' => [
                 'Travel Guides',
                 'Any Pass and Permits',
@@ -48,12 +42,6 @@ While climbing Mt. Everest is the opportunity of a lifetime, expeditions encount
                 'Wifi/Charging/Hot Water',
                 'Extra Curricular stuff',
                 'Personal Expenses'
-            ],
-            'essential_tips' => [
-                'Pack Your Gear',
-                'Take Some food',
-                'Grab Some money',
-                'Prepare by walking regularly',
             ],
             'is_featured' => true,
         ]);

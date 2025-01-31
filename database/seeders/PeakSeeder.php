@@ -18,24 +18,18 @@ class PeakSeeder extends Seeder
     {
         $peak = Peak::create([
             'title' => 'Lobuche Peak',
-        'description' => 'Lobuche Peak is one the best peak in Everest region as it’s best view is seen from the summit. Summit is sourounded by panoramic view including Mt. Everest.
+            'description' => 'Lobuche Peak is one the best peak in Everest region as it’s best view is seen from the summit. Summit is sourounded by panoramic view including Mt. Everest.
 We approach Lobuche via completing Everest Base Camp and Kalapattar trip which helps you with proper acclimatization and return to Lukla along the famous Khumbu Valley, with its diverse wildlife and vegetation, as well as its rich culture, where villages and rustic dwellings have seemingly scrambled up to perch atop rocky outcrops and vertiginous ledges. A truly memorable experience closely following the footsteps of legendary mountaineers.',
-        'duration' => '17',
-        'region_id' => Region::first()->id,
-        'grade' => '5',
-        'is_featured' => true,
-        'starting_point' => 'Kathmandu',
-        'ending_point' => 'Kathmandu',
-        'best_time_for_peak' => 'March-May October-November',
-        'starting_altitude' => 2640,
-        'highest_altitude' => 6119,
-        'peak_difficulty' => TrekDifficulty::HARD,
-        'key_highlights' => [
-                'Breathtaking Views',
-                'High Altitude',
-                'Remote',
-                'Challenging'
-            ],
+            'duration' => '17',
+            'region_id' => Region::first()->id,
+            'grade' => '5',
+            'is_featured' => true,
+            'starting_point' => 'Kathmandu',
+            'ending_point' => 'Kathmandu',
+            'best_time_for_peak' => 'March-May October-November',
+            'starting_altitude' => 2640,
+            'highest_altitude' => 6119,
+            'peak_difficulty' => TrekDifficulty::HARD,
             'costs_include' => [
                 'Travel Guides',
                 'Any Pass and Permits',
@@ -47,12 +41,6 @@ We approach Lobuche via completing Everest Base Camp and Kalapattar trip which h
                 'Wifi/Charging/Hot Water',
                 'Extra Curricular stuff',
                 'Personal Expenses'
-            ],
-            'essential_tips' => [
-                'Pack Your Gear',
-                'Take Some food',
-                'Grab Some money',
-                'Prepare by walking regularly',
             ],
         ]);
 
