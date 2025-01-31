@@ -15,7 +15,7 @@ class Service extends Model implements CanBeEasySearched
 {
     use EasySearch;
 
-    protected $fillable=[
+    protected $fillable = [
         'title',
         'description',
         'cover_image_id',
@@ -27,20 +27,24 @@ class Service extends Model implements CanBeEasySearched
 
     // Easy Search
 
-    public function searchType(): SearchType{
+    public function searchType(): SearchType
+    {
         return SearchType::SERVICE;
     }
 
 
-    public function searchResultTitle(): string{
+    public function searchResultTitle(): string
+    {
         return $this->title;
     }
 
-    public function searchResultUrl(): string{
+    public function searchResultUrl(): string
+    {
         return $this->title;
     }
 
-    public function searchResultImages(): Collection{
+    public function searchResultImages(): Collection
+    {
         $this->loadMissing('images');
         return $this->images;
     }
