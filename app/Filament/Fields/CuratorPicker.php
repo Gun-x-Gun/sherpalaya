@@ -12,6 +12,9 @@ class CuratorPicker extends FormsCuratorPicker
             ->visible(function(string $operation){
                 // dd($operation);
                 return $operation != 'view';
+            })
+            ->disabled(function(string $operation){
+                return $operation == 'view';
             });
     }
 }
