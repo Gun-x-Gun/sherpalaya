@@ -125,28 +125,23 @@ class PeakResource extends Resource
                                     ]),
                                     Section::make('Key Highlights')
                                     ->schema([
-                                        Repeater::make('key_highlights')
-                                            ->required()
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextArea::make('key_highlights')
-                                                    ->rows(1)
-                                                    ->autosize()
-                                                    ->hiddenLabel()
-                                                    ->columnSpanFull(),
-                                            )
+                                        TableRepeater::make('key_highlights')
+                                            ->label('Key Highlights')
+                                            ->relationship('keyHighlights')
+                                            ->schema([
+                                                TextInput::make('title')->label('Title')->required(),
+                                                TextArea::make('description')->label('Description')->autosize()->required(),
+                                            ])->reorderable()
                                     ]),
                                 Section::make('Essential Tips')
                                     ->schema([
-                                        Repeater::make('essential_tips')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextArea::make('essential_tips')
-                                                    ->rows(1)
-                                                    ->autosize()
-                                                    ->hiddenLabel()
-                                                    ->columnSpanFull(),
-                                            )
+                                        TableRepeater::make('essential_tips')
+                                            ->label('Essential Tips')
+                                            ->relationship('essentialTips')
+                                            ->schema([
+                                                TextInput::make('title')->label('Title')->required(),
+                                                TextArea::make('description')->label('Description')->autosize()->required(),
+                                            ])->reorderable()
                                     ]),
                             ], [
                                 Section::make()
@@ -185,11 +180,11 @@ class PeakResource extends Resource
                                 Section::make()
                                     ->schema([
                                         TextInput::make('starting_point')
-                                                ->label('Starting Point')
-                                                ->required(),
-                                            TextInput::make('ending_point')
-                                                ->label('Ending Point')
-                                                ->required(),
+                                            ->label('Starting Point')
+                                            ->required(),
+                                        TextInput::make('ending_point')
+                                            ->label('Ending Point')
+                                            ->required(),
                                     ]),
                             ]),
                         ]),
@@ -263,7 +258,7 @@ class PeakResource extends Resource
                                                         ->options(ItineraryTypes::class)
                                                         ->native(false),
                                                     Textarea::make('description')
-                                                    ->rows(1)
+                                                        ->rows(1)
                                                         ->autosize(),
                                                 ])
                                                 ->reorderable()
