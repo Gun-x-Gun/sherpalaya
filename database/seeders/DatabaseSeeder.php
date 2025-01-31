@@ -31,6 +31,8 @@ class DatabaseSeeder extends Seeder
             InquirySeeder::class,
             FaqSeeder::class,
             WebsiteSettingSeeder::class,
+            KeyHighlightSeeder::class,
+            EssentialTipsSeeder::class,
         ]);
     }
 }
