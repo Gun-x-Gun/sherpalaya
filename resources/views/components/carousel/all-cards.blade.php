@@ -146,7 +146,7 @@
             </div>
         </a>
 
-        <a href="/trekking" class="">
+        <a href="/treks" class="">
             <div
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
 

@@ -8,7 +8,7 @@
         <p class="font-normal tracking-widest">Boost your brand's visibility and engagement
             through targeted
             marketing strategies.</p>
-        <a href="/trekking">
+        <a href="/treks">
             <div class="pt-10  hover:link-primary ">
                 <span class="icon-[line-md--chevron-right-circle]" style="width: 48px; height: 48px;">
                 </span>
@@ -38,7 +38,7 @@
                         latest
                         features for a premium user experience.</p>
                     <div class="card-actions items-center mt-4">
-                        <a href="/trekking">
+                        <a href="/treks">
                             <button class="btn btn-accent hover:btn-primary">
                                 Let's Go
                                 <span class="icon-[line-md--chevron-right-circle] size-5">
@@ -60,7 +60,7 @@
 
             <a href="/home">
                 <h1
-                    class="text-5xl md:text-5xl lg:text-8xl normal-case  text-primary  tracking-tight font-bold rounded-none 
+                    class="text-5xl md:text-5xl lg:text-8xl normal-case  text-primary  tracking-tight font-bold rounded-none
                  px-0 line-clamp-2  ">
                     Mt-kanchanjunga
                 </h1>
@@ -88,7 +88,7 @@
                 <strong class="mb-4 2xl:text-xl font-bold backdrop-blur-sm">A high-quality smartphone with the latest
                     features for a premium user experience.</strong>
                 <div class="card-actions items-center">
-                    <a href="/trekking">
+                    <a href="/treks">
                         <button class="btn btn-accent hover:btn-primary">
                             Let's Go
                             <span class="icon-[line-md--chevron-right-circle] size-5">
