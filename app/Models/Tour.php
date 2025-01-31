@@ -75,6 +75,7 @@ class Tour extends Model implements CanBeEasySearched
     {
         return $this->morphMany(KeyHighlights::class,'highlightable');
     }
+    
     public function essentialTips():MorphMany
     {
         return $this->morphMany(EssentialTips::class,'tippable');
