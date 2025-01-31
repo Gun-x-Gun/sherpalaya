@@ -13,7 +13,6 @@ use App\Models\WebsiteSetting;
 use Filament\Resources\Resource;
 use App\Enums\WebsiteSettingType;
 use Filament\Forms\Components\Section;
-use FilamentTiptapEditor\TiptapEditor;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Actions\BulkAction;
 use Filament\Tables\Columns\TextColumn;
@@ -21,7 +20,6 @@ use Illuminate\Database\Eloquent\Model;
 use Filament\Forms\Components\TextInput;
 use FilamentTiptapEditor\Enums\TiptapOutput;
 use Illuminate\Database\Eloquent\Collection;
-use App\Storages\WebsiteSettingPathGenerator;
 use App\Filament\Fields\CuratorPicker;
 use App\Filament\Resources\WebsiteSettingResource\Pages;
 use App\Filament\Resources\WebsiteSettingResource\RelationManagers;
@@ -44,13 +42,13 @@ class WebsiteSettingResource extends Resource
                     ->required()
             ],
             WebsiteSettingType::HTML => [
-                TiptapEditor::make($fieldName)
+                RichEditor::make($fieldName)
                     ->required()
             ],
             WebsiteSettingType::IMAGE,
             WebsiteSettingType::FILE => [
                 CuratorPicker::make($fieldName)
-                    ->pathGenerator(WebsiteSettingPathGenerator::class)
+                    ->required(),
             ],
             default => [
                 Textarea::make($fieldName)
@@ -97,8 +95,7 @@ class WebsiteSettingResource extends Resource
                             ($get('type') == WebsiteSettingType::IMAGE->value)
                             || ($get('type') == WebsiteSettingType::FILE->value)
                         );
-                    })
-                    ->pathGenerator(WebsiteSettingPathGenerator::class),
+                    }),
             ]
         };
     }
