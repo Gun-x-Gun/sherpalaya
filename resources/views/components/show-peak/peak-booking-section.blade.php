@@ -1,3 +1,6 @@
-<div>
-    <!-- I have not failed. I've just found 10,000 ways that won't work. - Thomas Edison -->
+<div class=" card-body bg-blue-200 mt-4">
+    <div class="card-actions justify-center">
+        <button class="btn btn-primary btn-wide uppercase">Book this trip</button>
+        <button class="btn btn-info  btn-wide uppercase">Inquiry</button>
+    </div>
 </div>

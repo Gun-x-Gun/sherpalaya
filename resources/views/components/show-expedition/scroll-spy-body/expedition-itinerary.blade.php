@@ -1,5 +1,5 @@
 <div id="itineraries" class="card 2xl:max-w-full rounded-none bg-blue-100/20">
-    @if (!empty($expedition->itineraries))
+    @if ($expedition->itineraries->isNotEmpty())
         <div class="h-6">
         </div>
         <div class="card-header px-2">

@@ -1,7 +1,6 @@
-<div class="bg-blue-100/70">
-    @if (!empty($expedition->images))
+@if ($expedition->images->isNotEmpty())
+    <div class="bg-blue-100/70">
         <div id="gallery" class="card-header  pb-4  px-0">
-
             <div class="h-6">
             </div>
             <h5 class="card-title text-secondary uppercase font-normal text-3xl px-2">
@@ -15,7 +14,6 @@
                             <img src="{{ $galleryImage->url }}" alt="overlay image"
                                 class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-95 contrast-120" />
                         </figure>
-
                     </div>
                 @endforeach
             </div>
@@ -28,5 +26,5 @@
 
             </div>
         </div>
-    @endif
-</div>
+    </div>
+@endif

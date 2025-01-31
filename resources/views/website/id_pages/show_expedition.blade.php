@@ -1,28 +1,25 @@
 <x-website-layout>
-
-
-    {{-- top section --}}
-
-    {{-- top section end --}}
-
-
-
     <div class="bg-white">
         <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1" class="">
             <div id="scrollspy-scrollable-parent-1" class="">
                 {{-- topsection --}}
                 <div class="bg-blue-100/50">
                     {{-- top section card --}}
+
                     <x-show-expedition.expedition-top-section-card :expedition="$expedition" />
+
                     {{-- end-section-card --}}
 
                     <div class="h-2  "></div>
 
                     <div class="2xl:mx-44 mx-4 text-left">
+
                         {{-- description --}}
                         <x-show-expedition.expedition-description :expedition="$expedition" />
                         {{-- end description --}}
+
                         <div class="h-4  "></div>
+
                         {{-- top section destination --}}
                         <x-show-expedition.expedition-top-section-destination :expedition="$expedition" />
                         {{-- end top section destination --}}
@@ -36,6 +33,7 @@
 
 
                 {{-- stat-mobile --}}
+   
                 <x-show-expedition.expedition-mobile-stat :expedition="$expedition" />
                 {{-- end-stat-section --}}
 
@@ -52,6 +50,9 @@
                                 {{-- key_highlights --}}
                                 <x-show-expedition.scroll-spy-body.expedition-key-highlight :expedition="$expedition" />
                                 {{-- end_key_highlights --}}
+
+                                {{-- mobile-booking-section --}}
+                                <x-show-expedition.expedition-mobile-booking-section :expedition="$expedition" />
 
                                 {{-- itineraries --}}
                                 <x-show-expedition.scroll-spy-body.expedition-itinerary :expedition="$expedition" />

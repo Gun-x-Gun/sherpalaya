@@ -48,6 +48,9 @@
                                 <x-show-trek.scroll-spy-body.key-highlight :trek="$trek" />
                                 {{-- end_key_highlights --}}
 
+                                {{-- mobile-booking-section --}}
+                                <x-show-trek.trek-mobile-booking-section :trek="$trek" />
+
                                 {{-- itineraries --}}
                                 <x-show-trek.scroll-spy-body.itinerary :trek="$trek" />
 

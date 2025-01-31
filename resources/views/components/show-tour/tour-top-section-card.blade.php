@@ -1,6 +1,6 @@
 <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
     <figure class="h-[80vh] w-full">
-        <img src="{{ $peak->coverImage?->url ?? asset('/photos/banner.jpg') }}" alt="Trekking background image"
+        <img src="{{ $tour->coverImage?->url ?? asset('/photos/banner.jpg') }}" alt="Trekking background image"
             class="h-[80vh] w-full object-cover brightness-50" />
     </figure>
     <div class="card-body relative">
@@ -11,7 +11,7 @@
                     Explore
                 </h5>
                 <h2 class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-bold">
-                    {{ $peak->title }}
+                    {{ $tour->title }}
                 </h2>
                 <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                     With Sherpalaya

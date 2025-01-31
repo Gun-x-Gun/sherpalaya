@@ -2,18 +2,18 @@
 
 namespace App\View\Components\ShowTour;
 
-use App\Models\Tour;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class TourSectionCard extends Component
+class TourMobileBookingSection extends Component
 {
-    public Tour $tour;
-    
-    public function __construct(Tour $tour)
+    /**
+     * Create a new component instance.
+     */
+    public function __construct()
     {
-        $this->tour = $tour;
+        //
     }
 
     /**
@@ -21,6 +21,6 @@ class TourSectionCard extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.show-tour.tour-section-card');
+        return view('components.show-tour.tour-mobile-booking-section');
     }
 }
