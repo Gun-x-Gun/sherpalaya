@@ -31,14 +31,14 @@
                                                 @php
                                                     // Map icons to types
                                                     $icons = [
-                                                        'flight' => 'icon-[tabler--plane]',
-                                                        'drive' => 'icon-[tabler--car]',
-                                                        'peak' => 'icon-[tabler--trekking]',
-                                                        'peak-hours' => 'icon-[tabler--clock]',
-                                                        'rest' => 'icon-[tabler--bed]',
-                                                        'helicopter' => 'icon-[tabler--helicopter]',
-                                                        'accomodation' => 'icon-[tabler--building]',
-                                                        'himalaya' => 'icon-[tabler--mountain]',
+                                                        'flight' => 'icon-[material-symbols-light--flight-takeoff]',
+                                                        'drive' => 'icon-[material-symbols-light--directions-bus-outline]',
+                                                        'trek' => 'icon-[material-symbols-light--hiking-rounded]',
+                                                        'trek-hours' => 'icon-[tabler--clock]',
+                                                        'rest' => 'icon-[material-symbols-light--airline-seat-flat]',
+                                                        'helicopter' => 'icon-[material-symbols-light--helicopter-outline]',
+                                                        'accomodation' => 'icon-[material-symbols-light--king-bed-outline-sharp]',
+                                                        'himalaya' => 'icon-[mingcute--mountain-2-line]',
                                                         'altitude' => 'icon-[tabler--arrow-up]',
                                                         'others' => 'icon-[tabler--dots]',
                                                     ];
