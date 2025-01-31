@@ -37,14 +37,8 @@ return new class extends Migration
             $table->string('expedition_difficulty')
                 ->nullable()
                 ->default(null);
-            $table->longText('key_highlights')
-                ->required();
-            $table->longText('costs_include')
-                ->required();
-            $table->longText('costs_exclude')
-                ->required();
-            $table->longText('essential_tips')
-                ->required();
+            $table->longText('costs_include');
+            $table->longText('costs_exclude');
             $table->boolean('is_featured');
             $table->timestamps();
         });

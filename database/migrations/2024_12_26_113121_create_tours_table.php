@@ -31,10 +31,8 @@ return new class extends Migration
                 ->required();
             $table->string('best_time_for_tour')
                 ->required();
-            $table->longText('key_highlights');
             $table->longText('costs_include');
             $table->longText('costs_exclude');
-            $table->longText('essential_tips');
             $table->boolean('is_featured');
             $table->timestamps();
         });

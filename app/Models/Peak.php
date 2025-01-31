@@ -36,18 +36,14 @@ class Peak extends Model implements CanBeEasySearched
         'starting_altitude',
         'highest_altitude',
         'peak_difficulty',
-        'key_highlights',
         'costs_include',
         'costs_exclude',
-        'essential_tips',
     ];
 
     protected $casts = [
         'peak_difficulty' => TrekDifficulty::class,
         'costs_exclude' => 'array',
         'costs_include' => 'array',
-        'key_highlights' => 'array',
-        'essential_tips' => 'array',
     ];
 
     // Easy Search
@@ -75,6 +71,14 @@ class Peak extends Model implements CanBeEasySearched
     public function itineraries(): MorphMany
     {
         return $this->morphMany(Itinerary::class, 'itinerable');
+    }
+    public function keyHighlights():MorphMany
+    {
+        return $this->morphMany(KeyHighlights::class,'highlightable');
+    }
+    public function essentialTips():MorphMany
+    {
+        return $this->morphMany(EssentialTips::class,'tippable');
     }
     public function destinations()
     {

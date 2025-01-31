@@ -41,10 +41,8 @@ return new class extends Migration {
             $table->string('trek_difficulty')
                 ->nullable()
                 ->default(null);
-            $table->longText('key_highlights');
             $table->longText('costs_include');
             $table->longText('costs_exclude');
-            $table->longText('essential_tips');
             $table->timestamps();
         });
 

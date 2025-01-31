@@ -37,14 +37,8 @@ return new class extends Migration {
             $table->string('peak_difficulty')
                 ->nullable()
                 ->default(null);
-            $table->longText('key_highlights')
-                ->required();
-            $table->longText('costs_include')
-                ->required();
-            $table->longText('costs_exclude')
-                ->required();
-            $table->longText('essential_tips')
-                ->required();
+            $table->longText('costs_include');
+            $table->longText('costs_exclude');
             $table->timestamps();
         });
         CuratorMigrationHelper::migrateMediaField('peaks', 'cover_image_id');

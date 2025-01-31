@@ -34,10 +34,8 @@ class Expedition extends Model implements CanBeEasySearched
         'starting_altitude',
         'highest_altitude',
         'expedition_difficulty',
-        'key_highlights',
         'costs_include',
         'costs_exclude',
-        'essential_tips',
         'is_featured',
     ];
 
@@ -45,8 +43,6 @@ class Expedition extends Model implements CanBeEasySearched
         'expedition_difficulty' => TrekDifficulty::class,
         'costs_exclude' => 'array',
         'costs_include' => 'array',
-        'key_highlights' => 'array',
-        'essential_tips' => 'array',
     ];
 
     // Easy Search
@@ -76,6 +72,14 @@ class Expedition extends Model implements CanBeEasySearched
         return $this->morphMany(Itinerary::class, 'itinerable');
     }
 
+    public function keyHighlights():MorphMany
+    {
+        return $this->morphMany(KeyHighlights::class,'highlightable');
+    }
+    public function essentialTips():MorphMany
+    {
+        return $this->morphMany(EssentialTips::class,'tippable');
+    }
     public function destinations()
     {
         return $this->belongsToMany(

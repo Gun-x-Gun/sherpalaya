@@ -33,35 +33,35 @@ class Tour extends Model implements CanBeEasySearched
         'starting_point',
         'ending_point',
         'best_time_for_tour',
-        'key_highlights',
         'costs_include',
         'costs_exclude',
-        'essential_tips',
     ];
     protected $casts = [
         'type' => TourType::class,
         'costs_exclude' => 'array',
         'costs_include' => 'array',
-        'key_highlights' => 'array',
-        'essential_tips' => 'array',
     ];
 
     // Easy Search
 
-    public function searchType(): SearchType{
+    public function searchType(): SearchType
+    {
         return SearchType::TOUR;
     }
 
 
-    public function searchResultTitle(): string{
+    public function searchResultTitle(): string
+    {
         return $this->title;
     }
 
-    public function searchResultUrl(): string{
+    public function searchResultUrl(): string
+    {
         return $this->title;
     }
 
-    public function searchResultImages(): Collection{
+    public function searchResultImages(): Collection
+    {
         $this->loadMissing('images');
         return $this->images;
     }
@@ -70,6 +70,14 @@ class Tour extends Model implements CanBeEasySearched
     public function itineraries(): MorphMany
     {
         return $this->morphMany(Itinerary::class, 'itinerable');
+    }
+    public function keyHighlights():MorphMany
+    {
+        return $this->morphMany(KeyHighlights::class,'highlightable');
+    }
+    public function essentialTips():MorphMany
+    {
+        return $this->morphMany(EssentialTips::class,'tippable');
     }
 
     public function destinations()
