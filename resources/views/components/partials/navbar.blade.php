@@ -46,7 +46,7 @@
                             Company
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase" role="menu"
+                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase rounded-none" role="menu"
                             aria-orientation="vertical" aria-labelledby="nested-dropdown">
                             <li class="hover:text-primary hover:underline decoration-wavy"><a class="dropdown-item"
                                     href="about_us">About Us</a></li>
@@ -345,44 +345,43 @@
                     </div>
                     {{-- trekend --}}
                     {{-- tours --}}
-                    <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
-                        <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content max-xl:px-3 text-lg uppercase "
+
+                    <div class="dropdown relative inline-flex rtl:[--placement:bottom-end] ">
+                        <button id="tours-dropdown" type="button"
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase max-xl:px-3 "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Tours
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-lg p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
-                            role="menu" aria-orientation="vertical">
-                            <ul
-                                class="menu xl:menu-horizontal rounded-none w-full max-xl:gap-4 max-xl:border xl:shadow">
-                                <div class="2xl:grid grid-cols-3">
-                                    @foreach ($navTours as $type => $tours)
-                                        @php
-                                            $typeLabel = \App\Enums\TourType::tryFrom($type)?->getLabel() ?? 'Unknown';
-                                        @endphp
-                                        @if ($tours->isNotEmpty())
-                                            <li class="items-start">
-                                                <a href="#"
-                                                    class="menu font-bold text-primary">{{ $typeLabel }}</a>
-                                                @foreach ($tours as $tour)
-                                                    <ul class="menu pl-4">
-                                                        <li
-                                                            class="text-slate-500 hover:text-primary text-wrap hover:underline decoration-wavy">
-                                                            <a
-                                                                href="{{ route('show_tour', $tour->id) }}">{{ $tour->title }}</a>
-                                                        </li>
-                                                    </ul>
-                                                @endforeach
-                                            </li>
-                                        @endif
-                                    @endforeach
-                                </div>
+                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase rounded-none"
+                            role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown">
+                            @foreach ($navTours as $type => $tours)
+                                @php
+                                    $typeLabel = \App\Enums\TourType::tryFrom($type)?->getLabel() ?? 'Unknown';
+                                @endphp
+                                @if ($tours->isNotEmpty())
+                                    <li class="items-start">
+                                        <div class="flex flex-row gap-2 items-center">
+                                            <a href="#" class="menu font-bold text-primary">{{ $typeLabel }}
 
-                            </ul>
-                        </div>
+                                            </a>
+                                            @if ($tours->count() > 0)
+                                                <p class="text-xs badge badge-outline badge-warning text-nowrap">
+                                                    {{ $tours->count() }} packages
+                                                </p>
+                                            @else
+                                                <p class="text-xs badge badge-outline badge-warning p-1">
+                                                    0 packages
+                                                </p>
+                                            @endif
+
+                                        </div>
+                                    </li>
+                                @endif
+                            @endforeach
+                        </ul>
                     </div>
+
                     {{-- tourend --}}
                     <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent  uppercase ">
                         <li class="text-slate-900 hover:bg-accent rounded-lg text-md "><a href="/contact"
@@ -537,15 +536,21 @@
                             @endphp
                             @if ($tours->isNotEmpty())
                                 <li class="items-start">
-                                    <a href="#" class="menu font-bold text-primary">{{ $typeLabel }}</a>
-                                    @foreach ($tours as $tour)
-                                        <ul class="menu py-0">
-                                            <li
-                                                class="text-slate-500 hover:text-primary  hover:underline decoration-wavy">
-                                                <a href="{{ route('show_tour', $tour->id) }}">{{ $tour->title }}</a>
-                                            </li>
-                                        </ul>
-                                    @endforeach
+                                    <div class="flex flex-row">
+                                        <a href="#" class="menu font-bold text-primary">{{ $typeLabel }}
+
+                                        </a>
+                                        @if ($tours->count() > 0)
+                                            <p class="text-xs badge badge-outline badge-warning text-nowrap">
+                                                {{ $tours->count() }} packages
+                                            </p>
+                                        @else
+                                            <p class="text-xs badge badge-outline badge-warning p-1">
+                                                0 packages
+                                            </p>
+                                        @endif
+
+                                    </div>
                                 </li>
                             @endif
                         @endforeach
