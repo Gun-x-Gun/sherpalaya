@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Storage;
 class CuratorSeederHelper
 {
 
-    protected static function resolveFileData(string $filePath): array
+    protected static function resolveFileData(string $filePath): Media
     {
         if (!is_file($filePath)) {
             throw new Exception("No file found in path: " . $filePath);
@@ -23,6 +23,16 @@ class CuratorSeederHelper
 
         // Extract file extension safely
         $extension = pathinfo($filePath, PATHINFO_EXTENSION);
+        $originalFilename = pathinfo($filePath, PATHINFO_BASENAME);
+
+        $media = Media::where('title', $originalFilename)
+            ->where('description', $filePath)
+            ->first();
+
+            if(!is_null($media)){
+                return $media;
+            }
+
         if (!$extension) {
             throw new Exception("File extension could not be identified: " . $filePath);
         }
@@ -41,11 +51,13 @@ class CuratorSeederHelper
         $imageData = @getimagesize($filePath);
         $exifData = (stripos($mimeType, 'image') === 0) ? (@exif_read_data($filePath) ?: null) : null;
 
-        return [
+        $mediaData = [
             'disk' => 'public',
             'directory' => 'media',
             'visibility' => 'public',
             'name' => $uuid,
+            'title' => $originalFilename,
+            'description' => $filePath,
             'path' => $storagePath,
             'width' => $imageData[0] ?? null,
             'height' => $imageData[1] ?? null,
@@ -54,6 +66,8 @@ class CuratorSeederHelper
             'ext' => $extension,
             'exif' => $exifData,
         ];
+
+        return Media::create($mediaData);
     }
 
     public static function seedBelongsTo(Model $related, string $relatedField, string|Media $filePath): Media
@@ -62,8 +76,7 @@ class CuratorSeederHelper
         if ($filePath instanceof Media) {
             $media = $filePath;
         } else {
-            $mediaData = self::resolveFileData($filePath);
-            $media = Media::create($mediaData);
+            $media = self::resolveFileData($filePath);
         }
 
         $related->update([
@@ -80,8 +93,7 @@ class CuratorSeederHelper
         if ($filePath instanceof Media) {
             $media = $filePath;
         } else {
-            $mediaData = self::resolveFileData($filePath);
-            $media = Media::create($mediaData);
+            $media = self::resolveFileData($filePath);
         }
 
         $related->{$relatedName}()->attach($media, $attributes);

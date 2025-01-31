@@ -59,6 +59,16 @@ We approach Lobuche via completing Everest Base Camp and Kalapattar trip which h
         CuratorSeederHelper::seedBelongsToMany(
             $peak,
             'images',
+            public_path('photos/lobuche.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $peak,
+            'images',
+            public_path('photos/mountain7.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $peak,
+            'images',
             public_path('photos/mountain1.jpg')
         );
 
