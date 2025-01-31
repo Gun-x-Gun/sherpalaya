@@ -19,7 +19,7 @@
                     adventure.
                 </p>
             </div>
-            <div class="h-2"></div>
+            <div class="h-4"></div>
             <div id="multi-slide"
                 data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8, "md": 2.5, "lg": 3.8 } }'
                 class="relative w-full">
