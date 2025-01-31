@@ -30,7 +30,7 @@
                                     <!-- Slide 1 -->
                                     <div class="carousel-slide rounded-none">
                                         <div
-                                            class="card--rounded-none image-full h-3/4 w-full relative flex items-center justify-end card-side group hover:shadow border">
+                                            class="card--rounded-none image-full h-4/5 w-full relative flex items-center justify-end card-side group hover:shadow border">
                                             <figure class="h-full w-full">
                                                 <img src="{{ $featuredPeak->featureImage->url ?? asset('photos/mountain1.jpg') }}"
                                                     alt="{{ $featuredPeak->title }} Cover Image"
@@ -55,7 +55,7 @@
                                 @endforeach
                             </div>
                             <div
-                                class="carousel-pagination  absolute bottom-0 end-0 start-0 z-[1] h-1/4 flex justify-center gap-0 overflow-x-auto ">
+                                class="carousel-pagination  absolute bottom-0 end-0 start-0 z-[1] h-1/5 flex justify-center gap-0 overflow-x-auto ">
                                 @foreach ($peaks->where('is_featured', true) as $featuredPeak)
                                     <img src="{{ $featuredPeak->featureImage->url ?? asset('photos/DSCF4385.JPG') }}"
                                         alt="{{ $featuredPeak->title }} Cover Image"
@@ -66,10 +66,7 @@
                             <button type="button" class="carousel-prev">
                                 <span class="mb-15" aria-hidden="true">
                                     <span
-                                        class="size-9.5 bg-base-100  items-center justify-center rounded-full shadow hidden md:flex">
-                                        <span
-                                            class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180 "></span>
-                                    </span>
+                                        class="icon-[tabler--chevron-left] size-8 text-white cursor-pointer rtl:rotate-180 hidden md:flex"></span>
                                 </span>
                                 <span class="sr-only">Previous</span>
                             </button>
@@ -78,10 +75,7 @@
                                 <span class="sr-only">Next</span>
                                 <span class="mb-15" aria-hidden="true">
                                     <span
-                                        class="size-9.5 bg-base-100  items-center justify-center rounded-full shadow hidden md:flex">
-                                        <span
-                                            class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180 "></span>
-                                    </span>
+                                        class="icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180 hidden md:flex "></span>
                                 </span>
                             </button>
                         </div>

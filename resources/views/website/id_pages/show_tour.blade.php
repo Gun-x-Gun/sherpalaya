@@ -47,7 +47,7 @@
                                 {{-- key_highlights --}}
                                 <x-show-tour.scroll-spy-body.tour-key-highlight :tour="$tour" />
                                 {{-- end_key_highlights --}}
-                                
+
                                 {{-- mobile section tour --}}
                                 <x-show-tour.tour-mobile-booking-section :tour="$tour" />
 
@@ -65,7 +65,11 @@
 
                                 {{-- destinations --}}
                                 <x-show-tour.scroll-spy-body.tour-destination :tour="$tour" />
-                                <div class="h-96"></div>
+
+                                {{-- region wise recommendation --}}
+                                <x-show-tour.scroll-spy-body.tour-region-wise-recommendation :tour="$tour" />
+
+                                <div class="h-10 "></div>
                             </div>
 
                             <div class=" ">

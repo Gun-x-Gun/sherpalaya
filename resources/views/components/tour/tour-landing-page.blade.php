@@ -136,7 +136,7 @@
                                         class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
                                     {{-- <span class="text-primary font-font-extralight	 uppercase items-center px-2"> Duration : </span> --}}
                                     <span class="text-primary uppercase items-center font-normal ">
-                                        {{ $tour->duration . ' days' }}
+                                        {{ $tour->duration }}
                                     </span>
                                 </div>
                             </div>

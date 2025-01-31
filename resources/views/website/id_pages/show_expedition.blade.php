@@ -68,7 +68,10 @@
 
                                 {{-- destinations --}}
                                 <x-show-expedition.scroll-spy-body.expedition-destination :expedition="$expedition" />
-                                <div class="h-96"></div>
+
+                                {{-- recommended --}}
+                                <x-show-expedition.scroll-spy-body.expedition-region-wise-recommendation :expedition="$expedition" />
+                                <div class="h-10"></div>
                             </div>
 
                             <div class=" ">

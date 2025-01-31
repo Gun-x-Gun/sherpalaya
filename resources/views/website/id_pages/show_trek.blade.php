@@ -65,7 +65,10 @@
 
                                 {{-- destinations --}}
                                 <x-show-trek.scroll-spy-body.destination :trek="$trek" />
-                                <div class="h-96"></div>
+
+                                {{-- recommendation --}}
+                                <x-show-trek.scroll-spy-body.trek-region-wise-recommendation :trek="$trek" />
+                                <div class="h-10"></div>
                             </div>
 
                             <div class=" ">
