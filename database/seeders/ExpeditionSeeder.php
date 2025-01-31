@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Enums\TrekDifficulty;
+use App\Helpers\CuratorSeederHelper;
 use App\Models\Destination;
 use App\Models\Expedition;
 use App\Models\Region;
@@ -52,6 +53,22 @@ While climbing Mt. Everest is the opportunity of a lifetime, expeditions encount
                 ->get()
                 ->pluck('id')
                 ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $expedition,
+            'cover_image_id',
+            public_path('photos/mountain3.jpg')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $expedition,
+            'feature_image_id',
+            public_path('photos/mountain4.jpg')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $expedition,
+            'images',
+            public_path('photos/mountain1.jpg')
         );
     }
 }

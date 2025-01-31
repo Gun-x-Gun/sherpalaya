@@ -67,13 +67,18 @@ The best season for this trip starts from beginning of March to May and  Septemb
         CuratorSeederHelper::seedBelongsTo(
             $trek,
             'cover_image_id',
-            public_path('photos/banner.jpg')
+            public_path('photos/mountain6.jpg')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $trek,
+            'feature_image_id',
+            public_path('photos/mountain7.jpg')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
             $trek,
             'images',
-            public_path('photos/banner.jpg')
+            public_path('photos/mountain1.jpg')
         );
 
         $trek2 = Trek::create([
@@ -133,6 +138,22 @@ The best season for this trip starts from beginning of March to May and  Septemb
                 ->get()
                 ->pluck('id')
                 ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $trek2,
+            'cover_image_id',
+            public_path('photos/mountain7.jpg')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $trek2,
+            'feature_image_id',
+            public_path('photos/mountain6.jpg')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $trek2,
+            'images',
+            public_path('photos/mountain2.jpg')
         );
     }
 }

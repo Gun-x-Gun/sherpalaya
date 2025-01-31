@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Enums\TourType;
+use App\Helpers\CuratorSeederHelper;
 use App\Models\Destination;
 use App\Models\Region;
 use App\Models\Tour;
@@ -146,6 +147,16 @@ class TourSeeder extends Seeder
                     ->get()
                     ->pluck('id')
                     ->toArray()
+            );
+            CuratorSeederHelper::seedBelongsTo(
+                $tour,
+                'cover_image_id',
+                public_path('photos/logo.png')
+            );
+            CuratorSeederHelper::seedBelongsTo(
+                $tour,
+                'feature_image_id',
+                public_path('photos/logo.png')
             );
         }
     }

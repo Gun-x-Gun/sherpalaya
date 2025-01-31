@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Helpers\CuratorSeederHelper;
 use App\Models\Destination;
 use App\Models\Service;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -85,6 +86,11 @@ class ServiceSeeder extends Seeder
                 ->get()
                 ->pluck('id')
                 ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $serv,
+            'cover_image_id',
+            public_path('photos/Chor.jpg')
         );
         }
     }

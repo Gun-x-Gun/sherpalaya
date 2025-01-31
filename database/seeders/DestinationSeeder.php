@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Helpers\CuratorSeederHelper;
 use App\Models\Destination;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,19 +16,40 @@ class DestinationSeeder extends Seeder
     {
 
 
-        Destination::create([
+       $lukla = Destination::create([
             'name' => 'Lukla',
             'region_id' => 1,
             'description' => 'Lukla is a town in the Solukhumbu District, home to the Tenzing-Hillary Airport and a popular starting point for Everest trekkers.',
             'location' => ['lat' => 27.6869, 'lng' => 86.7278],
         ]);
 
-        Destination::create([
+        CuratorSeederHelper::seedBelongsToMany(
+            $lukla,
+            'destinationImages',
+            public_path('photos/mountain1.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $lukla,
+            'destinationImages',
+            public_path('photos/mountain2.jpg')
+        );
+        $kalapathhar = Destination::create([
             'name' => 'Kala Patthar',
             'region_id' => 1,
             'description' => 'Kala Patthar offers one of the best panoramic views of Mount Everest and surrounding peaks, at an altitude of 5,545 meters.',
             'location' => ['lat' => 27.9886, 'lng' => 86.8282],
         ]);
+        CuratorSeederHelper::seedBelongsToMany(
+            $kalapathhar,
+            'destinationImages',
+            public_path('photos/mountain3.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $kalapathhar,
+            'destinationImages',
+            public_path('photos/mountain4.jpg')
+        );
+        
 
         Destination::create([
             'name' => 'TIA Tribhuwan International Airport',

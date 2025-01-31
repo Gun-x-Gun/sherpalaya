@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Enums\TrekDifficulty;
+use App\Helpers\CuratorSeederHelper;
 use App\Models\Destination;
 use App\Models\Peak;
 use App\Models\Region;
@@ -43,6 +44,23 @@ We approach Lobuche via completing Everest Base Camp and Kalapattar trip which h
                 'Personal Expenses'
             ],
         ]);
+
+        CuratorSeederHelper::seedBelongsTo(
+            $peak,
+            'cover_image_id',
+            public_path('photos/lobuche.jpg')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $peak,
+            'feature_image_id',
+            public_path('photos/lobuche.jpg')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $peak,
+            'images',
+            public_path('photos/mountain1.jpg')
+        );
 
         $peak->destinations()->sync(
             Destination::inRandomOrder()
