@@ -91,6 +91,6 @@ class CuratorSeederHelper
 
     public static function clearStorage()
     {
-        File::deleteDirectory(storage_path('media'), false);
+        File::deleteDirectory(public_path('storage/media'), false);
     }
 }
