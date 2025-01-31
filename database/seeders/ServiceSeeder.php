@@ -92,6 +92,31 @@ class ServiceSeeder extends Seeder
             'cover_image_id',
             public_path('photos/Chor.jpg')
         );
+        CuratorSeederHelper::seedBelongsToMany(
+            $serv,
+            'images',
+            public_path('photos/mountain1.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $serv,
+            'images',
+            public_path('photos/mountain2.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $serv,
+            'images',
+            public_path('photos/mountain3.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $serv,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $serv,
+            'images',
+            public_path('photos/mountain5.jpg')
+        );
         }
     }
     }
