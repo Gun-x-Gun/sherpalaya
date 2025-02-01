@@ -80,7 +80,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="h-8">
+                    <div class="h-16">
 
                     </div>
                 @elseif($peaks->where('is_featured', true)->count() === 1)
