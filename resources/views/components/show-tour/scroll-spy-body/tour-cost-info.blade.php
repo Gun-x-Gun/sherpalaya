@@ -1,4 +1,4 @@
-<div class="md:grid grid-cols-2 gap-4">
+<div class="md:grid grid-cols-2 ">
     @if (!empty($tour->costs_include))
 
         <div id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/10">
@@ -14,8 +14,8 @@
                 <ul class="space-y-5 ">
                     @foreach ($tour->costs_include as $cost_include)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse  ">
-                            <span class="bg-primary/20 text-primary flex items-center justify-center rounded-full p-1">
-                                <span class="icon-[tabler--arrow-right] size-4 rtl:rotate-180"></span>
+                            <span class="bg-transparent text-success flex items-center justify-center rounded-full p-1">
+                                <span class="icon-[eva--done-all-fill] size-5"></span>
                             </span>
                             <p class="text-blue-800  md:text-justify text-preety">
                                 {{ $cost_include }}
@@ -45,8 +45,8 @@
                 <ul class="space-y-5">
                     @foreach ($tour->costs_exclude as $cost_exclude)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse">
-                            <span class="bg-primary/20 text-slate-700 flex items-center justify-center rounded-full ">
-                                <span class="icon-[tabler--arrow-right] size-5 rtl:rotate-180"></span>
+                            <span class="bg-transparent text-warning flex items-center justify-center rounded-full ">
+                                <span class="icon-[tabler--exclamation-circle] size-5"></span>
                             </span>
                             <p class="text-slate-700 md:text-justify text-preety ">
                                 {{ $cost_exclude }} </p>

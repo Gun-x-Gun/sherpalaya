@@ -33,12 +33,15 @@
                                                     // Map icons to types
                                                     $icons = [
                                                         'flight' => 'icon-[material-symbols-light--flight-takeoff]',
-                                                        'drive' => 'icon-[material-symbols-light--directions-bus-outline]',
+                                                        'drive' =>
+                                                            'icon-[material-symbols-light--directions-bus-outline]',
                                                         'trek' => 'icon-[material-symbols-light--hiking-rounded]',
                                                         'trek-hours' => 'icon-[tabler--clock]',
                                                         'rest' => 'icon-[material-symbols-light--airline-seat-flat]',
-                                                        'helicopter' => 'icon-[material-symbols-light--helicopter-outline]',
-                                                        'accomodation' => 'icon-[material-symbols-light--king-bed-outline-sharp]',
+                                                        'helicopter' =>
+                                                            'icon-[material-symbols-light--helicopter-outline]',
+                                                        'accomodation' =>
+                                                            'icon-[material-symbols-light--king-bed-outline-sharp]',
                                                         'himalaya' => 'icon-[mingcute--mountain-2-line]',
                                                         'altitude' => 'icon-[tabler--arrow-up]',
                                                         'others' => 'icon-[tabler--dots]',
@@ -61,13 +64,13 @@
                                     <div>
                                         @if (!empty($itinerary->destinations))
                                             <div class="card-body bg-blue-100/20 w-full p-0">
-                                                <div class="flex items-center justify-start">
-                                                    <span
-                                                        class="icon-[tabler--arrow-right] size-5 rtl:rotate-180"></span>
-                                                    <h5
-                                                        class="card-title mb-2 px-2 text-success uppercase font-thin text-xl  underline">
-                                                        Highlighted Places
-                                                    </h5>
+                                                <div class="flex items-center justify-start my-2 text-xl ">
+                                                    <span class="icon-[tabler--sun-high] size-5"></span>
+                                                    <div>
+                                                        <h5 class="card-title px-2 text-black uppercase font-thin ">
+                                                            Highlighted Places
+                                                        </h5>
+                                                    </div>
                                                 </div>
 
                                                 @foreach ($itinerary->destinations->take(3) as $itineraryDestination)
@@ -84,14 +87,13 @@
 
                                                     <!-- Grid Layout for Larger Screens -->
                                                     @if ($destinationImages->isNotEmpty())
-                                                        <div
-                                                            class="px-8 sm:grid sm:grid-cols-2 md:grid-cols-3 gap-2">
+                                                        <div class="px-8 sm:grid sm:grid-cols-2 md:grid-cols-3 gap-2">
                                                             @foreach ($destinationImages as $image)
                                                                 <figure>
                                                                     <img src="{{ $image->url }}"
                                                                         alt="{{ $itineraryDestination->name }} Cover Image"
                                                                         class="h-48 w-full object-cover" />
-                                                                
+
                                                                 </figure>
                                                             @endforeach
                                                         </div>

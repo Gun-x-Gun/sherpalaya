@@ -60,13 +60,14 @@
                                     <div>
                                         @if (!empty($itinerary->destinations))
                                             <div class="card-body bg-blue-100/20 w-full p-0">
-                                                <div class="flex items-center justify-start">
-                                                    <span
-                                                        class="icon-[tabler--arrow-right] size-5 rtl:rotate-180"></span>
-                                                    <h5
-                                                        class="card-title mb-2 px-2 text-success uppercase font-thin text-xl  underline">
-                                                        Highlighted Places
-                                                    </h5>
+                                                <div class="flex items-center justify-start my-2 text-xl ">
+                                                    <span class="icon-[tabler--sun-high] size-5"></span>
+                                                    <div>
+                                                        <h5
+                                                            class="card-title px-2 text-black uppercase font-thin ">
+                                                            Highlighted Places
+                                                        </h5>
+                                                    </div>
                                                 </div>
 
                                                 @foreach ($itinerary->destinations->take(3) as $itineraryDestination)

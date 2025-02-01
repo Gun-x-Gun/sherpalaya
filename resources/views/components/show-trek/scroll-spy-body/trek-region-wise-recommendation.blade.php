@@ -38,8 +38,6 @@
             @endforeach
         </div>
         <div class="h-8"></div>
-    @else
-        <p>No recommendations available.</p>
     @endif
 
 </div>

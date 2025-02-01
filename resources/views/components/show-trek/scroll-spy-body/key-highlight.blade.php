@@ -10,13 +10,17 @@
         </div>
         <div class="card-body justify-center items-start px-2  ">
             @foreach ($trek->keyHighlights as $highlight)
-                <div class="flex flex-row gap-4 items-center" >
-                    <p class="my-4 uppercase  md:text-justify text-primary font-bold  ">
-                        {{ $highlight->title }} :
-                    </p>
-                    <p class="my-4 capitalize  md:text-justify text-slate-700 ">
-                        {{ $highlight->description }}
-                    </p>
+                <div class="flex flex-col gap-0 items-start">
+                    <div class="mt-4 uppercase  md:text-justify text-primary font-normal  text-lg">
+                        <p>
+                            {{ $highlight->title }} :
+                        </p>
+                    </div>
+                    <div class="col-span-2">
+                        <p class="my-2 capitalize  md:text-justify text-slate-700 ">
+                            {{ $highlight->description }}
+                        </p>
+                    </div>
                 </div>
             @endforeach
         </div>

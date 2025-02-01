@@ -48,7 +48,7 @@
 
 
 
-<div class="md:hidden w-full mb-4">
+{{-- <div class="xl:hidden w-full mb-4">
     <div class="stats stats-vertical bg-blue-100/20 w-full rounded-none">
         <div class="stat ">
             <div class="stat-title">Duration</div>
@@ -94,4 +94,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}

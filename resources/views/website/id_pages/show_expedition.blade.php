@@ -76,7 +76,7 @@
 
                             <div class=" ">
                                 <div class="h-8"></div>
-                                <div class="sticky top-32 hidden lg:block">
+                                <div class="sticky top-32 hidden xl:block">
                                     {{-- stat --}}
                                     <x-show-expedition.expedition-stat-section :expedition="$expedition" />
 
