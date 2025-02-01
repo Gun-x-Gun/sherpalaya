@@ -6,7 +6,7 @@
     <div class="card-body relative">
         <div
             class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-            <div class=" max-w-[92%] 2xl:max-w-[100%]">
+            <div class="">
                 <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                     Explore
                 </h5>

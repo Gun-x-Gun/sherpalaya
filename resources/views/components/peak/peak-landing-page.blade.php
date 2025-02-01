@@ -7,10 +7,10 @@
         <div class="card-body relative">
             <div
                 class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                <div class=" max-w-[92%] 2xl:max-w-[100%]">
-                    <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
+                <div class="">
+                    {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
                         Explore
-                    </h5>
+                    </h5> --}}
                     <h2 class="card-title mb-2.5  text-white text-3xl md:text-6xl uppercase font-bold">
                         {{-- {{ $peak->title }} --}}
                         Peaks

@@ -1,24 +1,23 @@
 <div class="bg-blue-100/50">
-    <div class="card--rounded-none image-full h-[80vh] bg-blue-100/50">
+    <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
         <figure class="h-[80vh] w-full">
-            <img src="{{ $tour->coverImage->url ?? asset('photos/P1030127.JPG') }}" alt="tour background image"
-                class="h-[80vh] w-full object-cover" />
+            <img src="{{ $tour->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
+                class="h-[80vh] w-full object-cover brightness-50" />
         </figure>
-
-        <div class="card-body relative ">
+        <div class="card-body relative">
             <div
                 class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                <div class=" max-w-[92%] 2xl:max-w-[70%]">
-
-                    <h2 class="card-title mb-2.5  text-white text-xl md:text-6xl uppercase font-bold">Explore
-                        tours With
-                    </h2>
-                    <h5 class="card-title mb-2.5 text-primary text-3xl md:text-7xl uppercase font-extrabold ">
+                <div class="">
+                    <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                         Sherpalaya
                     </h5>
-                    <p class="mb-4 2xl:text-xl text-white font-bold backdrop-blur-sm">A high-quality smartphone with the
-                        latest
-                        features for a premium user experience.</p>
+                    <h2 class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-bold">
+                        {{-- {{ $trek->title }} --}}
+                        Tours
+                    </h2>
+                    {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                        With 
+                    </h5> --}}
                 </div>
             </div>
         </div>
@@ -63,7 +62,6 @@
             <div>
                 <div class="h-8"></div>
                 @if ($tours->isNotEmpty())
-
                     <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-bold">
                         {{ $type }} Tours Packages
                     </h5>
@@ -77,19 +75,19 @@
                                         <div class="carousel h-60 rounded-none rounded-t-md">
                                             <div class="carousel-body h-full opacity-0">
                                                 {{-- @foreach ($tour->images as $image) --}}
-                                                    <div class="carousel-slide">
-                                                        <a href="{{ route('show_tour', $tour->id) }}">
-                                                            <div class="bg-base-200/50 flex h-full justify-center">
-                                                                <span class="self-start w-full ">
-                                                                    <figure>
-                                                                        <img src="{{ $tour->coverImage->url ?? asset('photos/P1030127.JPG') }}"
-                                                                            alt="{{ $tour->title }} Cover Image"
-                                                                            class="h-60 object-cover" />
-                                                                    </figure>
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </div>
+                                                <div class="carousel-slide">
+                                                    <a href="{{ route('show_tour', $tour->id) }}">
+                                                        <div class="bg-base-200/50 flex h-full justify-center">
+                                                            <span class="self-start w-full ">
+                                                                <figure>
+                                                                    <img src="{{ $tour->coverImage->url ?? asset('photos/P1030127.JPG') }}"
+                                                                        alt="{{ $tour->title }} Cover Image"
+                                                                        class="h-60 object-cover" />
+                                                                </figure>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </div>
                                                 {{-- @endforeach --}}
                                             </div>
                                         </div>
@@ -121,7 +119,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
 
                                 <div class="card-body px-2 pt-2 bg-blue-100/30 ">
@@ -141,7 +139,7 @@
                                 </div>
                             </div>
                         @endforeach
-                        
+
                     </div>
 
                     <div class="bg-blue-100/60 md:hidden">
