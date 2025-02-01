@@ -50,12 +50,9 @@
             'url' => url('/home'),
         ],
         [
-            'name' => 'tours',
+            'name' => 'Tours',
         ],
     ]" />
-
-    <div class="h-12"></div>
-
 
     {{-- Showing <strong>{{ $tourRegion->tours->count() }}</strong> --}}
     <div class="2xl:mx-44 mx-4">
@@ -64,7 +61,7 @@
                 $typeLabel = \App\Enums\TourType::tryFrom($type)?->getLabel() ?? 'Unknown';
             @endphp
             <div>
-                <div class="h-10"></div>
+                <div class="h-8"></div>
                 @if ($tours->isNotEmpty())
 
                     <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-bold">
@@ -79,13 +76,13 @@
                                         class="relative w-full">
                                         <div class="carousel h-60 rounded-none rounded-t-md">
                                             <div class="carousel-body h-full opacity-0">
-                                                @foreach ($tour->images as $image)
+                                                {{-- @foreach ($tour->images as $image) --}}
                                                     <div class="carousel-slide">
                                                         <a href="{{ route('show_tour', $tour->id) }}">
                                                             <div class="bg-base-200/50 flex h-full justify-center">
                                                                 <span class="self-start w-full ">
                                                                     <figure>
-                                                                        <img src="{{ $image->url ?? asset('photos/P1030127.JPG') }}"
+                                                                        <img src="{{ $tour->coverImage->url ?? asset('photos/P1030127.JPG') }}"
                                                                             alt="{{ $tour->title }} Cover Image"
                                                                             class="h-60 object-cover" />
                                                                     </figure>
@@ -93,14 +90,14 @@
                                                             </div>
                                                         </a>
                                                     </div>
-                                                @endforeach
+                                                {{-- @endforeach --}}
                                             </div>
                                         </div>
 
                                         <!-- Previous Slide -->
 
                                         <div
-                                            class="carousel-info absolute bottom-3 start-[90%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-4">
+                                            class="carousel-info absolute bottom-3 start-[85%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-4">
                                             <span class="carousel-info-current me-1">0</span>
                                             /
                                             <span class="carousel-info-total ms-1">0</span>

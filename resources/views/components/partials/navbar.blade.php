@@ -1,30 +1,21 @@
 <header id="navbar"
-    class="fixed top-0 z-50  flex w-full flex-wrap py-2 text-lg xl:flex-nowrap xl:justify-start xl:py-0 bg-transparent">
+    class="fixed top-0 z-50  w-full flex  flex-wrap py-2 text-lg xl:flex-nowrap xl:justify-start xl:py-0 bg-transparent ">
     <nav class="w-full  2xl:mx-44 mx-4 " aria-label="Global">
         <div class=" relative xl:flex xl:items-center ">
             <div class="flex items-center justify-between">
-                <a class="link text-base-content link-neutral texl-2xl font-semibold no-underline" href="/home">
-                    Sherpalaya
-                </a>
-                {{-- <div class="xl:hidden">
-                    <button type="button" class="collapse-toggle btn btn-outline btn-secondary btn-sm btn-square"
-                        data-collapse="#navbar-mega-menu-click" aria-controls="navbar-mega-menu-click"
-                        aria-label="Toggle navigation">
-                        <span class="icon-[tabler--menu-2] collapse-open:hidden size-4"></span>
-                        <span class="icon-[tabler--x] collapse-open:block hidden size-4"></span>
-                    </button>
-                </div> --}}
-
-                <div class="xl:hidden">
-                    <a href="/search" class="btn btn-transparent border-none">
-                        <span class="icon-[tabler--search] size-5"></span>
+                    <a class="link text-base-content link-neutral texl-2xl font-semibold no-underline" href="/home">
+                        Sherpalaya
                     </a>
-                    <button type="button" class="btn btn-transparent border-none" aria-haspopup="dialog"
-                        aria-expanded="false" aria-controls="overlay-end-example" data-overlay="#overlay-end-example">
-                        <span class="icon-[tabler--menu-2] collapse-open:hidden size-5"></span>
-                        <span class="icon-[tabler--x] collapse-open:block hidden size-5"></span>
-                    </button>
-                </div>
+                    <div class="xl:hidden">
+                        <a href="/search" class="btn btn-transparent border-none">
+                            <span class="icon-[tabler--search] size-5"></span>
+                        </a>
+                        <button type="button" class="btn btn-transparent border-none" aria-haspopup="dialog"
+                            aria-expanded="false" aria-controls="overlay-end-example" data-overlay="#overlay-end-example">
+                            <span class="icon-[tabler--menu-2] collapse-open:hidden size-5"></span>
+                            <span class="icon-[tabler--x] collapse-open:block hidden size-5"></span>
+                        </button>
+                    </div>
             </div>
 
             <div id="navbar-mega-menu-click"
@@ -46,187 +37,22 @@
                             Company
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase rounded-none" role="menu"
-                            aria-orientation="vertical" aria-labelledby="nested-dropdown">
-                            <li class="hover:text-primary hover:underline decoration-wavy"><a class="dropdown-item"
-                                    href="about_us">About Us</a></li>
-                            <li class="hover:text-primary hover:underline decoration-wavy"><a class="dropdown-item"
+                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase rounded-none"
+                            role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown">
+                            <li class="text-primary hover:underline"><a class="dropdown-item" href="about_us">About
+                                    Us</a></li>
+                            <li class="text-primary hover:underline"><a class="dropdown-item"
                                     href="services">Services</a></li>
-                            <li class="hover:text-primary hover:underline decoration-wavy"><a class="dropdown-item"
-                                    href="why_sherpalaya">Why Sherpalaya??</a></li>
-                            <li class="hover:text-primary hover:underline decoration-wavy"><a class="dropdown-item"
-                                    href="#">Our Sherpaas</a></li>
-                            <li class="hover:text-primary hover:underline decoration-wavy"><a class="dropdown-item"
-                                    href="#">FAQs</a></li>
+                            <li class="text-primary hover:underline"><a class="dropdown-item" href="why_sherpalaya">Why
+                                    Sherpalaya??</a></li>
+                            <li class="text-primary hover:underline"><a class="dropdown-item" href="#">Our
+                                    Sherpaas</a></li>
+                            <li class="text-primary hover:underline"><a class="dropdown-item" href="#">FAQs</a>
+                            </li>
                         </ul>
                     </div>
 
-                    {{-- <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]  ">
-                        <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase max-xl:px-3"
-                            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                            Adventures
-                            <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
-                        </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none
-                        transition-[opacity,margin] duration-[0.1ms] before:absolute h-96 overflow-y-auto"
-                            role="menu" aria-orientation="vertical">
-                            <ul
-                                class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow ">
-                                <div class="grid grid-cols-4 gap-0 ">
-                                    <div class="card px-0 mx-0 rounded-none ">
-                                        <p class="card-title  text-primary text-lg font-bold uppercase mx-2 mt-4">
-                                            Expedition
-                                        </p>
-                                        @foreach ($navRegions as $navRegion)
-                                            @if ($navRegion->expeditions->isNotEmpty())
-                                                <div class="card sm:max-w-sm px-0 mx-0 rounded-none">
-                                                    <div class="card-body px-2 rounded-none ">
-                                                        <p
-                                                            class="card-title mb-2.5 text-primary text-sm font-normal capitalize">
-                                                            {{ $navRegion->name }} region
-                                                        </p>
-                                                        @foreach ($navRegion->expeditions as $expedition)
-                                                            <a href="{{ route('show_expedition', $expedition->id) }}">
-                                                                <div class="card-body px-2 pt-2 bg-blue-100/30 ">
-                                                                    <h5
-                                                                        class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-accent font-normal hover:text-primary hover:underline ">
-                                                                        {{ $expedition->title }}</h5>
-                                                                    <div
-                                                                        class="justify-start flex flex-row items-start  gap-4">
-                                                                        <span
-                                                                            class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
-                                                                        <span
-                                                                            class="text-primary lowercase items-center font-normal ">
-                                                                            {{ $expedition->duration . ' days' }}
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                    <div class="card rounded-none bg-blue-100/10">
-                                        <p class="card-title text-primary text-lg font-bold uppercase mx-2 mt-4">
-                                            Treks
-                                        </p>
-                                        @foreach ($navRegions as $navRegion)
-                                            @if ($navRegion->treks->isNotEmpty())
-                                                <div class="card sm:max-w-sm my-0 py-0 rounded-none ">
-                                                    <div class="card-body px-2 ">
-                                                        <p
-                                                            class="card-title mb-2.5 text-primary text-sm font-normal capitalize">
-                                                            {{ $navRegion->name }} region
-                                                        </p>
-                                                        @foreach ($navRegion->treks as $expedition)
-                                                            <a href="{{ route('show_trek', $expedition->id) }}">
-                                                                <div class="card-body px-2 pt-2 bg-blue-200/10 mb-2 ">
-                                                                    <h5
-                                                                        class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-accent font-normal hover:text-primary hover:underline text-wrap">
-                                                                        {{ $expedition->title }}</h5>
 
-                                                                    <div
-                                                                        class="justify-start flex flex-row items-start  gap-4">
-
-                                                                        <span
-                                                                            class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
-                                                                        <span
-                                                                            class="text-primary lowercase items-center font-normal ">
-                                                                            {{ $expedition->duration . ' days' }}
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                    <div class="card rounded-none bg-blue-100/10">
-                                        <p class="card-title text-primary text-lg font-bold uppercase mx-2 mt-4">
-                                            Peaks
-                                        </p>
-                                        @foreach ($navRegions as $navRegion)
-                                            @if ($navRegion->peaks->isNotEmpty())
-                                                <div class="card sm:max-w-sm my-0 py-0 ">
-                                                    <div class="card-body px-2">
-                                                        <p
-                                                            class="card-title mb-2.5 text-primary text-sm font-normal capitalize">
-                                                            {{ $navRegion->name }} region
-                                                        </p>
-                                                        @foreach ($navRegion->peaks as $peak)
-                                                            <a href="{{ route('show_peak', $peak->id) }}">
-                                                                <div class="card-body px-2 pt-2 bg-blue-200/10 mb-2 ">
-                                                                    <h5
-                                                                        class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-accent font-normal hover:text-primary hover:underline text-wrap">
-                                                                        {{ $peak->title }}</h5>
-
-                                                                    <div
-                                                                        class="justify-start flex flex-row items-start  gap-4">
-
-                                                                        <span
-                                                                            class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
-                                                                        <span
-                                                                            class="text-primary lowercase items-center font-normal ">
-                                                                            {{ $peak->duration . ' days' }}
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                    <div class="card rounded-none bg-blue-100/10">
-                                        <p class="card-title text-primary text-lg font-bold uppercase mx-2 mt-4">
-                                            Tours
-                                        </p>
-                                        @foreach ($navTours as $type => $tours)
-                                            @php
-                                                $typeLabel =
-                                                    \App\Enums\TourType::tryFrom($type)?->getLabel() ?? 'Unknown';
-                                            @endphp
-                                            @if ($tours->isNotEmpty())
-                                                <div class="card-body px-2">
-                                                    <p
-                                                        class="card-title mb-2.5 text-primary text-sm font-normal capitalize">
-                                                        type: {{ $typeLabel }}
-                                                    </p>
-                                                    @foreach ($tours as $tour)
-                                                        <a href="{{ route('show_tour', $tour->id) }}">
-                                                            <div class="card-body px-2 pt-2 bg-blue-200/10 mb-2 ">
-                                                                <h5
-                                                                    class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-accent font-normal hover:text-primary hover:underline text-wrap">
-                                                                    {{ $tour->title }}</h5>
-
-                                                                <div
-                                                                    class="justify-start flex flex-row items-start  gap-4">
-
-                                                                    <span
-                                                                        class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
-                                                                    <span
-                                                                        class="text-primary lowercase items-center font-normal ">
-                                                                        {{ $tour->duration . ' days' }}
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    @endforeach
-                                                </div>
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </ul>
-                        </div>
-                    </div> --}}
 
                     {{-- expeditionstart --}}
                     <div
@@ -240,21 +66,31 @@
                         <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
                             role="menu" aria-orientation="vertical">
                             <ul class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
-                                <div class="2xl:grid grid-cols-3">
+                                <div class="2xl:grid grid-cols-4 gap-2">
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->expeditions->isNotEmpty())
-                                            <li class="uppercase">
-                                                <a href="#"
-                                                    class="menu font-bold text-primary">{{ $navRegion->name }}
+                                            <li class="uppercase ">
+                                                <a href="/expeditions"
+                                                    class="menu font-bold text-black">{{ $navRegion->name }}
                                                     Region</p></a>
-                                                <ul class="menu">
+                                                <ul class="menu px-2">
                                                     @foreach ($navRegion->expeditions as $expedition)
-                                                        <li
-                                                            class="text-slate-500  hover:text-primary hover:underline decoration-wavy">
-                                                            <a href="{{ route('show_expedition', $expedition->id) }}">
-                                                                {{ $expedition->title }}
-                                                            </a>
-                                                        </li>
+                                                        <div class="flex flex-col  ">
+                                                            <div class="flex flex-row gap-2 items-center">
+                                                                <div class="text-primary hover:underline  py-2">
+                                                                    <a
+                                                                        href="{{ route('show_expedition', $expedition->id) }}">
+                                                                        {{ $expedition->title }}
+                                                                    </a>
+                                                                </div>
+                                                                <div>
+                                                                    <p
+                                                                        class="text-xs rounded-full badge-warning text-nowrap px-1">
+                                                                        {{ $expedition->duration }} days
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     @endforeach
                                                 </ul>
                                             </li>
@@ -282,21 +118,30 @@
                             role="menu" aria-orientation="vertical">
                             <ul
                                 class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow ">
-                                <div class="2xl:grid grid-cols-3">
-
+                                <div class="2xl:grid grid-cols-4 ">
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->peaks->isNotEmpty())
-                                            <li class="uppercase">
-                                                <a href="#"
-                                                    class="menu font-bold text-primary">{{ $navRegion->name }}
-                                                    Region</a>
-                                                <ul class="menu">
+                                            <li class="uppercase ">
+                                                <a href="/peaks"
+                                                    class="menu font-bold text-black">{{ $navRegion->name }}
+                                                    Region</p></a>
+                                                <ul class="menu px-2">
                                                     @foreach ($navRegion->peaks as $peak)
-                                                        <li
-                                                            class="text-slate-500 hover:text-primary hover:underline decoration-wavy">
-                                                            <a
-                                                                href="{{ route('show_peak', $peak->id) }}">{{ $peak->title }}</a>
-                                                        </li>
+                                                        <div class="flex flex-col  ">
+                                                            <div class="flex flex-row gap-2 items-center">
+                                                                <div class="text-primary hover:underline  py-2">
+                                                                    <a href="{{ route('show_peak', $peak->id) }}">
+                                                                        {{ $peak->title }}
+                                                                    </a>
+                                                                </div>
+                                                                <div>
+                                                                    <p
+                                                                        class="text-xs rounded-full badge-warning text-nowrap px-1">
+                                                                        {{ $peak->duration }} days
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     @endforeach
                                                 </ul>
                                             </li>
@@ -318,22 +163,32 @@
                         </button>
                         <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
                             role="menu" aria-orientation="vertical">
-                            <ul class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
-                                <div class="2xl:grid grid-cols-3">
+                            <ul
+                                class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
+                                <div class="2xl:grid grid-cols-4 ">
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->treks->isNotEmpty())
-                                            <li class="uppercase">
-                                                <a href="#"
-                                                    class="menu font-bold text-primary">{{ $navRegion->name }}
+                                            <li class="uppercase ">
+                                                <a href="/treks"
+                                                    class="menu font-bold text-black">{{ $navRegion->name }}
                                                     Region</p></a>
-                                                <ul class="menu">
+                                                <ul class="menu px-2">
                                                     @foreach ($navRegion->treks as $trek)
-                                                        <li
-                                                            class="text-slate-500  hover:text-primary hover:underline decoration-wavy">
-                                                            <a href="{{ route('show_trek', $trek->id) }}">
-                                                                {{ $trek->title }}
-                                                            </a>
-                                                        </li>
+                                                        <div class="flex flex-col  ">
+                                                            <div class="flex flex-row gap-2 items-center">
+                                                                <div class="text-primary hover:underline  py-2">
+                                                                    <a href="{{ route('show_trek', $trek->id) }}">
+                                                                        {{ $trek->title }}
+                                                                    </a>
+                                                                </div>
+                                                                <div>
+                                                                    <p
+                                                                        class="text-xs rounded-full badge-warning text-nowrap px-1">
+                                                                        {{ $trek->duration }} days
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     @endforeach
                                                 </ul>
                                             </li>
@@ -361,16 +216,17 @@
                                 @endphp
                                 @if ($tours->isNotEmpty())
                                     <li class="items-start">
-                                        <div class="flex flex-row gap-2 items-center">
-                                            <a href="#" class="menu font-bold text-primary">{{ $typeLabel }}
-
-                                            </a>
+                                        <div class="flex flex-row gap-0 items-center">
+                                            <div class="menu font-normal hover:underline text-primary">
+                                                <a href="/tours">{{ $typeLabel }}
+                                                </a>
+                                            </div>
                                             @if ($tours->count() > 0)
-                                                <p class="text-xs badge badge-outline badge-warning text-nowrap">
+                                                <p class="text-xs rounded-full badge-warning text-nowrap px-1">
                                                     {{ $tours->count() }} packages
                                                 </p>
                                             @else
-                                                <p class="text-xs badge badge-outline badge-warning p-1">
+                                                <p class="text-xs rounded-full badge-warning px-1">
                                                     0 packages
                                                 </p>
                                             @endif
@@ -384,13 +240,13 @@
 
                     {{-- tourend --}}
                     <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent  uppercase ">
-                        <li class="text-slate-900 hover:bg-accent rounded-lg text-md "><a href="/contact"
+                        <li class=" hover:bg-accent rounded-lg text-md "><a href="/contact"
                                 @class([
                                     'underline decoration-wavy text-primary' =>
                                         request()->route()->getName() == 'website.contact',
                                 ])>Contact</a>
                         </li>
-                        <li class="text-slate-900 hover:bg-accent rounded-lg text-md">
+                        <li class=" hover:bg-accent rounded-lg text-md">
                             <a href="/search">
                                 <span class="icon-[tabler--search] size-5"></span>
                             </a>
@@ -400,8 +256,6 @@
             </div>
         </div>
     </nav>
-
-
 </header>
 <div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden xl:hidden "
     role="dialog" tabindex="-1">
@@ -587,8 +441,11 @@
         // Change background based on position
         if (currentScroll === 0) {
             navbar.style.background = "transparent"; // At the top
+            navbar.style.color = "white"; // At the top
         } else {
             navbar.style.background = "rgba(255, 255, 255, 1)"; // bg-slate-100
+            navbar.style.color = "black"; // At the top
+
         }
 
         // Show or hide the navbar based on scroll direction

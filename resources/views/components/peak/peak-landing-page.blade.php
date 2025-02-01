@@ -74,7 +74,7 @@
                                 <figure class="h-[25rem] max-w-sm">
                                     <img src="{{ optional($peak->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                         alt="{{ $peak->title }} Cover Image"
-                                        class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
+                                        class="transition-transform brightness-75 h-[25rem] duration-500 group-hover:scale-110  max-w-sm object-cover" />
                                 </figure>
                                 <a href="{{ route('show_peak', $peak->id) }}">
                                     <div class="card-body absolute inset-0 justify-end">
