@@ -3,19 +3,19 @@
     <nav class="w-full  2xl:mx-44 mx-4 " aria-label="Global">
         <div class=" relative xl:flex xl:items-center ">
             <div class="flex items-center justify-between">
-                    <a class="link text-base-content link-neutral texl-2xl font-semibold no-underline" href="/home">
-                        Sherpalaya
+                <a class="link text-base-content link-neutral texl-2xl font-semibold no-underline" href="/home">
+                    Sherpalaya
+                </a>
+                <div class="xl:hidden">
+                    <a href="/search" class="btn btn-transparent border-none">
+                        <span class="icon-[tabler--search] size-5"></span>
                     </a>
-                    <div class="xl:hidden">
-                        <a href="/search" class="btn btn-transparent border-none">
-                            <span class="icon-[tabler--search] size-5"></span>
-                        </a>
-                        <button type="button" class="btn btn-transparent border-none" aria-haspopup="dialog"
-                            aria-expanded="false" aria-controls="overlay-end-example" data-overlay="#overlay-end-example">
-                            <span class="icon-[tabler--menu-2] collapse-open:hidden size-5"></span>
-                            <span class="icon-[tabler--x] collapse-open:block hidden size-5"></span>
-                        </button>
-                    </div>
+                    <button type="button" class="btn btn-transparent border-none" aria-haspopup="dialog"
+                        aria-expanded="false" aria-controls="overlay-end-example" data-overlay="#overlay-end-example">
+                        <span class="icon-[tabler--menu-2] collapse-open:hidden size-5"></span>
+                        <span class="icon-[tabler--x] collapse-open:block hidden size-5"></span>
+                    </button>
+                </div>
             </div>
 
             <div id="navbar-mega-menu-click"
@@ -152,6 +152,7 @@
                         </div>
                     </div>
                     {{-- peakend --}}
+
                     {{-- trek-start --}}
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
@@ -199,8 +200,8 @@
                         </div>
                     </div>
                     {{-- trekend --}}
-                    {{-- tours --}}
 
+                    {{-- tours --}}
                     <div class="dropdown relative inline-flex rtl:[--placement:bottom-end] ">
                         <button id="tours-dropdown" type="button"
                             class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase max-xl:px-3 "
@@ -237,7 +238,6 @@
                             @endforeach
                         </ul>
                     </div>
-
                     {{-- tourend --}}
                     <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent  uppercase ">
                         <li class=" hover:bg-accent rounded-lg text-md "><a href="/contact"
@@ -275,12 +275,12 @@
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
                 <li class=" hover:bg-accent rounded-lg "><a href="/home" @class([
                     'underline decoration-wavy text-primary' =>
-                        request()->route()->getName() == 'website.home',
-                ])>
+                        request()->route()->getName() == 'website.home',])>
                         <span class="icon-[tabler--layout-navbar] size-5"></span>
                         Home
                     </a>
                 </li>
+                
                 <li class=" hover:bg-accent rounded-lg "><a href="/about" @class([
                     'underline decoration-wavy text-primary' =>
                         request()->route()->getName() == 'website.about',
@@ -289,6 +289,8 @@
                         Company
                     </a>
                 </li>
+
+                {{-- expeditions --}}
                 <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="expedition-collapse"
                         data-collapse="#expedition-collapse-menu">
@@ -301,16 +303,25 @@
                         aria-labelledby="expedition-collapse">
                         @foreach ($navRegions as $navRegion)
                             @if ($navRegion->expeditions->isNotEmpty())
-                                <li class="px-0">
-                                    <a href="#" class="menu font-bold text-primary">{{ $navRegion->name }}
-                                        Region</a>
-                                    <ul class="menu ">
+                                <li class="uppercase ">
+                                    <a href="/expeditions" class="menu font-bold text-black">{{ $navRegion->name }}
+                                        Region</p></a>
+                                    <ul class="menu px-2">
                                         @foreach ($navRegion->expeditions as $expedition)
-                                            <li
-                                                class=" text-slate-500  hover:text-primary hover:underline decoration-wavy">
-                                                <a
-                                                    href="{{ route('show_expedition', $expedition->id) }}">{{ $expedition->title }}</a>
-                                            </li>
+                                            <div class="flex flex-col  ">
+                                                <div class="flex flex-row gap-2 items-center">
+                                                    <div class="text-primary hover:underline  py-2">
+                                                        <a href="{{ route('show_expedition', $expedition->id) }}">
+                                                            {{ $expedition->title }}
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <p class="text-xs rounded-full badge-warning text-nowrap px-1">
+                                                            {{ $expedition->duration }} days
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         @endforeach
                                     </ul>
                                 </li>
@@ -318,6 +329,9 @@
                         @endforeach
                     </ul>
                 </li>
+                {{-- expedition end  --}}
+
+                {{-- treks --}}
                 <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="trek-page-collapse"
                         data-collapse="#trek-page-collapse-menu">
@@ -330,15 +344,25 @@
                         aria-labelledby="trek-page-collapse">
                         @foreach ($navRegions as $navRegion)
                             @if ($navRegion->treks->isNotEmpty())
-                                <li>
-                                    <a href="#" class="menu font-bold text-primary">{{ $navRegion->name }}
-                                        Region</a>
-                                    <ul class="menu">
+                                <li class="uppercase ">
+                                    <a href="/treks" class="menu font-bold text-black">{{ $navRegion->name }}
+                                        Region</p></a>
+                                    <ul class="menu px-2">
                                         @foreach ($navRegion->treks as $trek)
-                                            <li
-                                                class="text-slate-500  hover:text-primary hover:underline decoration-wavy">
-                                                <a href="{{ route('show_trek', $trek->id) }}">{{ $trek->title }}</a>
-                                            </li>
+                                            <div class="flex flex-col  ">
+                                                <div class="flex flex-row gap-2 items-center">
+                                                    <div class="text-primary hover:underline  py-2">
+                                                        <a href="{{ route('show_trek', $trek->id) }}">
+                                                            {{ $trek->title }}
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <p class="text-xs rounded-full badge-warning text-nowrap px-1">
+                                                            {{ $trek->duration }} days
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         @endforeach
                                     </ul>
                                 </li>
@@ -346,6 +370,9 @@
                         @endforeach
                     </ul>
                 </li>
+                {{-- treks end --}}
+
+                {{-- peaks  --}}
                 <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="peak-page-collapse"
                         data-collapse="#peak-page-collapse-menu">
@@ -358,15 +385,25 @@
                         aria-labelledby="peak-page-collapse">
                         @foreach ($navRegions as $navRegion)
                             @if ($navRegion->peaks->isNotEmpty())
-                                <li>
-                                    <a href="#" class="menu font-bold text-primary">{{ $navRegion->name }}
-                                        Region</a>
-                                    <ul class="menu">
+                                <li class="uppercase ">
+                                    <a href="/peaks" class="menu font-bold text-black">{{ $navRegion->name }}
+                                        Region</p></a>
+                                    <ul class="menu px-2">
                                         @foreach ($navRegion->peaks as $peak)
-                                            <li
-                                                class="text-slate-500 hover:text-primary hover:underline decoration-wavy">
-                                                <a href="{{ route('show_peak', $peak->id) }}">{{ $peak->title }}</a>
-                                            </li>
+                                            <div class="flex flex-col  ">
+                                                <div class="flex flex-row gap-2 items-center">
+                                                    <div class="text-primary hover:underline  py-2">
+                                                        <a href="{{ route('show_peak', $peak->id) }}">
+                                                            {{ $peak->title }}
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <p class="text-xs rounded-full badge-warning text-nowrap px-1">
+                                                            {{ $peak->duration }} days
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         @endforeach
                                     </ul>
                                 </li>
@@ -374,6 +411,9 @@
                         @endforeach
                     </ul>
                 </li>
+                {{-- peaks end  --}}
+
+                {{-- tours  --}}
                 <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="tour-page-collapse"
                         data-collapse="#tour-page-collapse-menu">
@@ -390,16 +430,17 @@
                             @endphp
                             @if ($tours->isNotEmpty())
                                 <li class="items-start">
-                                    <div class="flex flex-row">
-                                        <a href="#" class="menu font-bold text-primary">{{ $typeLabel }}
-
-                                        </a>
+                                    <div class="flex flex-row gap-0 items-center">
+                                        <div class="menu font-normal hover:underline text-primary">
+                                            <a href="/tours">{{ $typeLabel }}
+                                            </a>
+                                        </div>
                                         @if ($tours->count() > 0)
-                                            <p class="text-xs badge badge-outline badge-warning text-nowrap">
+                                            <p class="text-xs rounded-full badge-warning text-nowrap px-1">
                                                 {{ $tours->count() }} packages
                                             </p>
                                         @else
-                                            <p class="text-xs badge badge-outline badge-warning p-1">
+                                            <p class="text-xs rounded-full badge-warning px-1">
                                                 0 packages
                                             </p>
                                         @endif
@@ -410,7 +451,11 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="text-slate-900 hover:bg-accent rounded-lg text-md uppercase"><a href="/contact"
+                {{-- tours end  --}}
+
+                {{-- contact  --}}
+                <li class="text-slate-900 hover:bg-accent rounded-lg text-md uppercase">
+                    <a href="/contact"
                         @class([
                             'underline decoration-wavy text-primary' =>
                                 request()->route()->getName() == 'website.contact',
@@ -419,7 +464,8 @@
                         Contact
                     </a>
                 </li>
-                </li>
+            
+                {{-- contact end  --}}
             </ul>
         </div>
     </div>
@@ -441,10 +487,10 @@
         // Change background based on position
         if (currentScroll === 0) {
             navbar.style.background = "transparent"; // At the top
-            navbar.style.color = "white"; // At the top
+            // navbar.style.color = "white"; // At the top
         } else {
             navbar.style.background = "rgba(255, 255, 255, 1)"; // bg-slate-100
-            navbar.style.color = "black"; // At the top
+            // navbar.style.color = "black"; // At the top
 
         }
 
