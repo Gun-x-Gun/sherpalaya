@@ -75,7 +75,7 @@
                                     <!-- Previous Slide -->
 
                                     <div
-                                        class="carousel-info absolute bottom-3 start-[90%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-4">
+                                        class="carousel-info absolute bottom-3 start-[85%] inline-flex -translate-x-[50%] justify-center rounded-lg text-white px-4">
                                         <span class="carousel-info-current me-1">0</span>
                                         /
                                         <span class="carousel-info-total ms-1">0</span>
