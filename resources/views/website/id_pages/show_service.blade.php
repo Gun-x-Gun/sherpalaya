@@ -100,7 +100,7 @@
                         </div>
                     @endif
                 </div>
-                <div class=" card-body bg-blue-200 mt-4 h-40">
+                <div class=" card-body bg-blue-200  h-40">
                     <div class="card-actions justify-center">
                         <a href="">
                             <button class="btn btn-primary btn-wide uppercase">Book this trip</button>
@@ -109,6 +109,7 @@
                     </div>
                 </div>
             </div>
+            <div class="h-10"></div>
         </div>
     </div>
 </x-website-layout>
