@@ -3,6 +3,7 @@
 use App\Http\Controllers\ExpeditionController;
 use App\Http\Controllers\PeakController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TrekController;
 use App\Http\Controllers\WebsiteController;
@@ -29,6 +30,14 @@ Route::controller(WebsiteController::class)
         Route::get('/about_us', 'aboutUs')->name('website.company.about_us');
         Route::get('/services', 'services')->name('website.company.our_services');
         Route::get('/why_sherpalaya', 'whySherpalaya')->name('website.company.why_sherpalaya');
+    });
+
+// Service Route
+Route::controller(ServiceController::class)
+    ->prefix('/services')
+    ->group(function () {
+        Route::get('/', 'index')->name('website.company.our_service');
+        Route::get('/{id}', 'show')->name('show_service');
     });
 
 // Trek Route
