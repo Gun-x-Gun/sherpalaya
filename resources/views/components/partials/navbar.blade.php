@@ -54,7 +54,7 @@
 
 
 
-                    {{-- expeditionstart --}}
+                    {{-- expedition start --}}
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
@@ -100,10 +100,7 @@
                             </ul>
                         </div>
                     </div>
-                    {{-- expeditionend --}}
-
-
-
+                    {{-- expedition end --}}
 
                     {{-- peakstart --}}
                     <div
@@ -239,6 +236,8 @@
                         </ul>
                     </div>
                     {{-- tourend --}}
+
+                    {{-- contact  --}}
                     <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent  uppercase ">
                         <li class=" hover:bg-accent rounded-lg text-md "><a href="/contact"
                                 @class([
@@ -252,11 +251,15 @@
                             </a>
                         </li>
                     </ul>
+                    {{-- contact end  --}}
+
                 </div>
             </div>
         </div>
     </nav>
 </header>
+
+{{-- drawer --}}
 <div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden xl:hidden "
     role="dialog" tabindex="-1">
     <div class="drawer-body px-2 uppercase">
@@ -275,19 +278,54 @@
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
                 <li class=" hover:bg-accent rounded-lg "><a href="/home" @class([
                     'underline decoration-wavy text-primary' =>
-                        request()->route()->getName() == 'website.home',])>
+                        request()->route()->getName() == 'website.home',
+                ])>
                         <span class="icon-[tabler--layout-navbar] size-5"></span>
                         Home
                     </a>
                 </li>
-                
-                <li class=" hover:bg-accent rounded-lg "><a href="/about" @class([
+
+                {{-- <li class=" hover:bg-accent rounded-lg ">
+                    <a href="/about" @class([
                     'underline decoration-wavy text-primary' =>
                         request()->route()->getName() == 'website.about',
-                ])>
-                        <span class="icon-[tabler--layout-navbar] size-5"></span>
+                        ])>
+                    <span class="icon-[tabler--layout-navbar] size-5"></span>
                         Company
                     </a>
+                    
+                </li> --}}
+
+
+                <li class="nested-collapse-wrapper">
+                    <a class="collapse-toggle nested-collapse" id="company-collapse"
+                        data-collapse="#company-collapse-menu">
+                        <span class="icon-[tabler--layout-navbar] size-5"></span>
+                        Company
+                        <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
+                    </a>
+                    <ul id="company-collapse-menu"
+                        class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
+                        aria-labelledby="company-collapse">
+                        <li class="uppercase">
+                            <ul class="menu px-0">
+                                <li class="text-primary hover:underline"><a class="dropdown-item"
+                                        href="about_us">About
+                                        Us</a></li>
+                                <li class="text-primary hover:underline"><a class="dropdown-item"
+                                        href="services">Services</a></li>
+                                <li class="text-primary hover:underline"><a class="dropdown-item"
+                                        href="why_sherpalaya">Why
+                                        Sherpalaya??</a></li>
+                                <li class="text-primary hover:underline"><a class="dropdown-item" href="#">Our
+                                        Sherpaas</a></li>
+                                <li class="text-primary hover:underline"><a class="dropdown-item"
+                                        href="#">FAQs</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
                 </li>
 
                 {{-- expeditions --}}
@@ -455,21 +493,21 @@
 
                 {{-- contact  --}}
                 <li class="text-slate-900 hover:bg-accent rounded-lg text-md uppercase">
-                    <a href="/contact"
-                        @class([
-                            'underline decoration-wavy text-primary' =>
-                                request()->route()->getName() == 'website.contact',
-                        ])>
+                    <a href="/contact" @class([
+                        'underline decoration-wavy text-primary' =>
+                            request()->route()->getName() == 'website.contact',
+                    ])>
                         <span class="icon-[tabler--layout-navbar] size-5"></span>
                         Contact
                     </a>
                 </li>
-            
+
                 {{-- contact end  --}}
             </ul>
         </div>
     </div>
 </div>
+{{-- drawer end --}}
 
 
 <script>
