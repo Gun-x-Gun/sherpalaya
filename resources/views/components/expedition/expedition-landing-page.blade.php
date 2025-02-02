@@ -63,7 +63,7 @@
     <div class="2xl:mx-44 mx-4">
         @foreach ($expeditionsRegion as $expeditionRegion)
             @if ($expeditionRegion->expeditions->isNotEmpty())
-                <div>
+                <div id="region-{{ $expeditionRegion->id }}">
                     <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-normal">
                         {{ $expeditionRegion->name }} Region Expeditions
                     </h5>
