@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ContactUs;
+use App\Settings\ContactUsSetting;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
@@ -11,8 +12,12 @@ class WebsiteController extends Controller
         return view('website.home');
     }
 
-    public function contactUs(Request $request){
-        return view('website.contact_us');
+    public function contactUs(Request $request, bool $contactUsSubmitted = false){
+        $contactUsSetting = app(ContactUsSetting::class);
+        return view('website.contact_us', [
+            'contactUsSubmitted' => $contactUsSubmitted,
+            'contactUsSetting' => $contactUsSetting,
+        ]);
     }
 
     public function contactUsSubmit(Request $request){
@@ -32,9 +37,10 @@ class WebsiteController extends Controller
         ]);
 
         ContactUs::create($validatedData);
-        return view('website.contact_us', [
-            'submitted' => true
-        ]);
+        return $this->contactUs(
+            $request,
+            true
+        );
     }
 
     public function aboutUs(Request $request){
