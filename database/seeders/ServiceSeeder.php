@@ -17,58 +17,34 @@ class ServiceSeeder extends Seeder
     {
         $services = [
             [
-                'title' => 'Laundry Services in Kathmandu',
-                'description' => 'Quick and reliable laundry services for travelers in Kathmandu. Ideal for those who need fresh clothes after a long trek.',
-                'cover_image_id' => null, // Replace with an actual image ID if available
-                'location' => ['lat' => 27.7000, 'lng' => 85.3000], // Kathmandu coordinates
-            ],
-            [
-                'title' => 'Art Exhibition at Patan Museum',
+                'title' => 'Emergency Helicopter Rescue Service',
                 'description' => 'Explore traditional and contemporary Nepali art at the Patan Museum. A must-visit event for art lovers.',
                 'cover_image_id' => null,
                 'location' => ['lat' => 27.6622, 'lng' => 85.3240], // Patan coordinates
             ],
             [
-                'title' => 'Live Music at Thamel',
+                'title' => 'Laundry Services',
+                'description' => 'Quick and reliable laundry services for travelers in Kathmandu. Ideal for those who need fresh clothes after a long trek.',
+                'cover_image_id' => null, // Replace with an actual image ID if available
+                'location' => ['lat' => 27.7000, 'lng' => 85.3000], // Kathmandu coordinates
+            ],
+            [
+                'title' => 'Accomodation',
                 'description' => 'Enjoy live music events featuring local Nepali bands at popular venues in Thamel. Perfect for relaxing evenings.',
                 'cover_image_id' => null,
                 'location' => ['lat' => 27.7109, 'lng' => 85.3000], // Thamel coordinates
             ],
             [
-                'title' => 'Recommended Trekking Gear Shop in Thamel',
+                'title' => 'Recommended Trekking Gear Shops',
                 'description' => 'Get high-quality trekking gear at our recommended shop in Thamel. Trusted by seasoned trekkers.',
                 'cover_image_id' => null,
                 'location' => ['lat' => 27.7109, 'lng' => 85.3000], // Thamel coordinates
             ],
             [
-                'title' => 'Local Handicraft Stores in Bhaktapur',
-                'description' => 'Support local artisans by visiting handicraft stores in Bhaktapur. Find unique souvenirs like pottery, wood carvings, and paintings.',
-                'cover_image_id' => null,
-                'location' => ['lat' => 27.6665, 'lng' => 85.4277], // Bhaktapur coordinates
-            ],
-            [
-                'title' => 'Yoga and Wellness Center in Pokhara',
-                'description' => 'Rejuvenate your body and mind with yoga sessions and wellness therapies at a serene center in Pokhara.',
-                'cover_image_id' => null,
-                'location' => ['lat' => 28.2090, 'lng' => 83.9856], // Pokhara coordinates
-            ],
-            [
-                'title' => 'Nepali Cooking Classes in Kathmandu',
-                'description' => 'Learn how to cook authentic Nepali dishes like momo, dal bhat, and gundruk in this hands-on cooking class.',
-                'cover_image_id' => null,
-                'location' => ['lat' => 27.7000, 'lng' => 85.3000], // Kathmandu coordinates
-            ],
-            [
-                'title' => 'Adventure Gear Rentals in Pokhara',
+                'title' => 'Adventure Gear Rentals',
                 'description' => 'Rent adventure gear like paragliding equipment, bikes, and kayaks for your Pokhara adventures.',
                 'cover_image_id' => null,
                 'location' => ['lat' => 28.2090, 'lng' => 83.9856], // Pokhara coordinates
-            ],
-            [
-                'title' => 'Cultural Dance Performances in Bhaktapur',
-                'description' => 'Enjoy traditional Nepali dance performances in Bhaktapur. A perfect way to learn about Nepal’s cultural heritage.',
-                'cover_image_id' => null,
-                'location' => ['lat' => 27.6665, 'lng' => 85.4277], // Bhaktapur coordinates
             ],
             [
                 'title' => 'Photography Workshops in Annapurna Region',
