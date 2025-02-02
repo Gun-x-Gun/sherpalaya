@@ -12,15 +12,14 @@ class ServiceController extends Controller
     {
 
         $services = Service::with([
-            'destinations.region',
+            'destinations',
             'images',
         ])->get()
             ->map(function (Service $service) {
                 return
                     (object) [
                         'service' => $service,
-                        'regions' => $service->destinations
-                            ->pluck('region')
+                        'destinations' => $service->destinations
                             ->pluck('name')
                             ->unique()
                             ->toArray()

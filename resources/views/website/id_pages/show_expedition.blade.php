@@ -28,12 +28,13 @@
                     <div class="h-12 "></div>
 
                 </div>
-
+                {{-- mobile-booking-section --}}
+                <x-show-expedition.expedition-mobile-booking-section :expedition="$expedition" />
 
 
 
                 {{-- stat-mobile --}}
-   
+
                 <x-show-expedition.expedition-mobile-stat :expedition="$expedition" />
                 {{-- end-stat-section --}}
 
@@ -51,8 +52,7 @@
                                 <x-show-expedition.scroll-spy-body.expedition-key-highlight :expedition="$expedition" />
                                 {{-- end_key_highlights --}}
 
-                                {{-- mobile-booking-section --}}
-                                <x-show-expedition.expedition-mobile-booking-section :expedition="$expedition" />
+
 
                                 {{-- itineraries --}}
                                 <x-show-expedition.scroll-spy-body.expedition-itinerary :expedition="$expedition" />
@@ -70,7 +70,8 @@
                                 <x-show-expedition.scroll-spy-body.expedition-destination :expedition="$expedition" />
 
                                 {{-- recommended --}}
-                                <x-show-expedition.scroll-spy-body.expedition-region-wise-recommendation :expedition="$expedition" />
+                                <x-show-expedition.scroll-spy-body.expedition-region-wise-recommendation
+                                    :expedition="$expedition" />
                                 <div class="h-10"></div>
                             </div>
 

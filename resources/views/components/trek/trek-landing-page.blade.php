@@ -66,7 +66,7 @@
                     <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-normal">
                         {{ $trekRegion->name }} Region Packages
                     </h5>
-                    <div class="hidden md:grid md:grid-cols-3 lg:grid-cols-4   flex-col gap-4">
+                    <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4   flex-col gap-4">
                         @foreach ($trekRegion->treks as $trek)
                             <div class="card w-full ">
                                 <div>
