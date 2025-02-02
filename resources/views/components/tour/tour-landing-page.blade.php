@@ -16,7 +16,7 @@
                         Tours
                     </h2>
                     {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
-                        With 
+                        With
                     </h5> --}}
                 </div>
             </div>
@@ -41,7 +41,7 @@
         </div>
         <div class="h-4"></div>
     </div>
-    <x-home-page.searchbar />
+
 
     <x-breadcrumb :breadcrumbs="[
         [

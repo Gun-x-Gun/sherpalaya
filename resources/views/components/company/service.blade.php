@@ -39,7 +39,7 @@
 
 
 
-    <x-home-page.searchbar />
+
 
     <x-breadcrumb :breadcrumbs="[
         [

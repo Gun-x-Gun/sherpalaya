@@ -42,7 +42,7 @@
 
 
 
-        <x-home-page.searchbar />
+
 
         <x-breadcrumb :breadcrumbs="[
             [
@@ -126,7 +126,7 @@
                                                     <a href="https://maps.google.com/?q={{ $serviceData->service->location['lat'] }},{{ $serviceData->service->location['lng'] }}"
                                                         target="_blank" rel="noopener noreferrer">
                                                         <p class="">
-                                                            @foreach ($serviceData->regions as $region)   
+                                                            @foreach ($serviceData->regions as $region)
                                                             <span class="badge badge-warning my-1">{{ $region }}</span>
                                                             @endforeach
                                                         </p>
