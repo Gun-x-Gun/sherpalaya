@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Settings\PageSetting;
 use Illuminate\Http\Request;
 use stdClass;
 
@@ -10,6 +11,7 @@ class ServiceController extends Controller
 {
     public function index()
     {
+        $pageSetting = app(PageSetting::class);
 
         $services = Service::with([
             'destinations',
