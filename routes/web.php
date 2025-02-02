@@ -40,6 +40,7 @@ Route::controller(ServiceController::class)
         Route::get('/{id}', 'show')->name('show_service');
     });
 
+    
 // Trek Route
 Route::controller(TrekController::class)
     ->prefix('/treks')

@@ -20,9 +20,11 @@ class Service extends Model implements CanBeEasySearched
         'description',
         'cover_image_id',
         'location',
+        // is_active
     ];
     protected $casts = [
         'location' => 'array',
+        'is_active' => 'boolean',
     ];
 
     // Easy Search

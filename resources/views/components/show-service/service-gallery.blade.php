@@ -1,0 +1,33 @@
+{{-- gallery  --}}
+@if ($service->images->isNotEmpty())
+    <div class="bg-blue-100/70">
+        <div class="card-header   px-0">
+            <h5 class="card-title text-secondary uppercase font-normal text-3xl px-2">
+                Gallery
+            </h5>
+            <div class="h-4">
+            </div>
+            <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1 px-2">
+                @foreach ($service->images->slice(0, 8) as $galleryImage)
+                    <div
+                        class="card rounded-none image-full h-52 w-full relative flex items-end  card-side group hover:shadow border">
+                        <figure class="h-full w-full brightness-90">
+                            <img src="{{ $galleryImage->url }}" alt="overlay image"
+                                class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-95 contrast-120" />
+                        </figure>
+                    </div>
+                @endforeach
+            </div>
+            @if ($service->images->count() > 9)
+                <div class="w-full flex flex-row justify-center items-center mt-6">
+                    <a class="flex-none btn btn-outline btn-error" href="">See all
+                        Images</a>
+                </div>
+            @endif
+            <div class="h-6">
+
+            </div>
+        </div>
+    </div>
+@endif
+
