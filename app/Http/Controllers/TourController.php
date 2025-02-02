@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tour;
+use App\Settings\PageSetting;
 use Illuminate\Http\Request;
 
 class TourController extends Controller
@@ -12,7 +13,14 @@ class TourController extends Controller
      */
     public function index()
     {
-        return view('website.tours');
+        $tourTypes = Tour::all()->groupBy('type');
+
+        $pageSetting = app(PageSetting::class);
+
+        return view('website.tours',[
+            'tourTypes' => $tourTypes,
+            'pageSetting' => $pageSetting,
+        ]);
     }
 
     /**
