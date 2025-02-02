@@ -47,7 +47,7 @@ class ServiceSeeder extends Seeder
                 'location' => ['lat' => 28.2090, 'lng' => 83.9856], // Pokhara coordinates
             ],
             [
-                'title' => 'Photography Workshops in Annapurna Region',
+                'title' => 'Photography Workshops',
                 'description' => 'Join photography workshops that teach you how to capture the stunning landscapes and culture of the Annapurna region.',
                 'cover_image_id' => null,
                 'location' => ['lat' => 28.4581, 'lng' => 83.8389], // Annapurna coordinates
