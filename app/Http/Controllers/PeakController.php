@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Peak;
+use App\Models\Region;
+use App\Settings\PageSetting;
 use Illuminate\Http\Request;
 
 class PeakController extends Controller
@@ -12,7 +14,15 @@ class PeakController extends Controller
      */
     public function index()
     {
-        return view('website.peaks');
+        $pageSetting = app(PageSetting::class);
+        $peaksRegion = Region::with([
+            'peaks'
+        ])->get();
+
+        return view('website.peaks', [
+            'pageSetting' => $pageSetting,
+            'peaksRegion' => $peaksRegion,
+        ]);
     }
 
 
