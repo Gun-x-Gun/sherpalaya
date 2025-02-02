@@ -70,7 +70,7 @@
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->expeditions->isNotEmpty())
                                             <li class="uppercase ">
-                                                <a href="/expeditions"
+                                                <a href="/expeditions#region-{{ $navRegion->id }}"
                                                     class="menu font-bold text-black">{{ $navRegion->name }}
                                                     Region</p></a>
                                                 <ul class="menu px-2">
@@ -293,7 +293,7 @@
                     <span class="icon-[tabler--layout-navbar] size-5"></span>
                         Company
                     </a>
-                    
+
                 </li> --}}
 
 
