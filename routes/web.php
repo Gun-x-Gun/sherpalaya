@@ -28,8 +28,6 @@ Route::controller(WebsiteController::class)
         Route::get('/contact', 'contactUs')->name('website.contact');
         Route::post('/contact', 'contactUsSubmit');
         Route::get('/about_us', 'aboutUs')->name('website.company.about_us');
-        // Route::get('/services', 'services')->name('website.company.our_services');
-        Route::get('/why_sherpalaya', 'whySherpalaya')->name('website.company.why_sherpalaya');
     });
 
 // Service Route

@@ -43,10 +43,6 @@
                                     Us</a></li>
                             <li class="text-primary hover:underline"><a class="dropdown-item"
                                     href="/services">Services</a></li>
-                            <li class="text-primary hover:underline"><a class="dropdown-item" href="why_sherpalaya">Why
-                                    Sherpalaya??</a></li>
-                            <li class="text-primary hover:underline"><a class="dropdown-item" href="#">Our
-                                    Sherpaas</a></li>
                             <li class="text-primary hover:underline"><a class="dropdown-item" href="#">FAQs</a>
                             </li>
                         </ul>
@@ -314,11 +310,6 @@
                                         Us</a></li>
                                 <li class="text-primary hover:underline"><a class="dropdown-item"
                                         href="/services">Services</a></li>
-                                <li class="text-primary hover:underline"><a class="dropdown-item"
-                                        href="why_sherpalaya">Why
-                                        Sherpalaya??</a></li>
-                                <li class="text-primary hover:underline"><a class="dropdown-item" href="#">Our
-                                        Sherpaas</a></li>
                                 <li class="text-primary hover:underline"><a class="dropdown-item"
                                         href="#">FAQs</a>
                                 </li>
