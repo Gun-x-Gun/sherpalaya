@@ -10,15 +10,10 @@
                     <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black text-left ">Expedition</h5>
                     <h3 class="text-3xl tracking-widest text-accent text-left ">With Sherpalaya</h3>
                     <p
-                        class="text-md mt-2 text-preety text-slate-800 text-balance md:text-wrap 
+                        class="text-md mt-2 text-preety text-slate-800 text-balance md:text-wrap
                         md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light">
-                        For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled
-                        support and expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks,
-                        Sherpalaya
-                        handles every detail, from permits to logistics. With our experienced Sherpa team by your side,
-                        we
-                        transform daunting treks into achievable milestones, ensuring a fulfilling and transformative
-                        adventure.
+                        {{ $landingPageSetting->trek_activity_content }}
+
                     </p>
                 </div>
                 @foreach ($featuredTreks as $featuredTrek)

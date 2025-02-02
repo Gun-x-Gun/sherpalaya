@@ -46,14 +46,18 @@
                     <span class="icon-[mingcute--group-3-line] size-14"></span>
                 </div>
                 <div class="stat-title">Travellers </div>
-                <div class="stat-value text-success">500 +</div>
+                <div class="stat-value text-success">
+                    {{ $landingPageSetting->traveller_count }}
+                </div>
             </div>
             <div class="stat">
                 <div class="stat-figure text-base-content size-8">
                     <span class="icon-[mingcute--building-6-line] size-14"></span>
                 </div>
                 <div class="stat-title">Associations</div>
-                <div class="stat-value text-success">100 + </div>
+                <div class="stat-value text-success">
+                    {{ $landingPageSetting->association_count }}
+                </div>
             </div>
 
             <div class="stat">
@@ -61,7 +65,9 @@
                     <span class="icon-[mingcute--star-line] size-14"></span>
                 </div>
                 <div class="stat-title">Customer Feedback </div>
-                <div class="stat-value text-success">8.9/10 </div>
+                <div class="stat-value text-success">
+                    {{ $landingPageSetting->customer_feedback }}/10
+                </div>
             </div>
 
             <div class="stat">
@@ -69,7 +75,9 @@
                     <span class="icon-[mingcute--certificate-line] size-14"></span>
                 </div>
                 <div class="stat-title">Success Rate </div>
-                <div class="stat-value text-success">90% </div>
+                <div class="stat-value text-success">
+                    {{ $landingPageSetting->success_rate }} %
+                     </div>
             </div>
 
 

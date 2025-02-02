@@ -12,8 +12,8 @@
             <div
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border expedition-activity-card">
                 <figure class="h-full w-full">
-                    <img src="{{ asset('photos/mountain1.jpg') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" />
+                    {{-- expedition_activity_image_id --}}
+                    <x-curator-glider class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" :media="$landingPageSetting->expedition_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
                 <div class="card-body absolute bottom-0 inset-0 uppercase">
                     <div class="text-left ">
@@ -29,7 +29,7 @@
 
                         </div>
                         <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
-                            50+
+                            {{ $landingPageSetting->expedition_activity_count }}
                         </div>
                     </div>
                 </div>
@@ -41,8 +41,8 @@
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
 
                 <figure class="h-full w-full ">
-                    <img src="{{ asset('photos/mountain6.jpg') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" />
+                    <x-curator-glider class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" :media="$landingPageSetting->trek_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
+
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">
@@ -59,7 +59,7 @@
 
                         </div>
                         <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
-                            200+
+                            {{ $landingPageSetting->trek_activity_count }}
                         </div>
                     </div>
                 </div>
@@ -75,8 +75,7 @@
             <div
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
                 <figure class="h-full w-full ">
-                    <img src="{{ asset('photos/culture.jpg') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" />
+                    <x-curator-glider class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" :media="$landingPageSetting->tour_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">
@@ -92,7 +91,7 @@
 
                         </div>
                         <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
-                            1000+
+                            {{ $landingPageSetting->tour_activity_count }}
                         </div>
                     </div>
                 </div>
@@ -104,8 +103,7 @@
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
 
                 <figure class="h-full w-full brightness-75">
-                    <img src="{{ asset('photos/mountain4.jpg') }}" alt="overlay image"
-                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" />
+                    <x-curator-glider class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" :media="$landingPageSetting->peak_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">
@@ -121,7 +119,7 @@
 
                         </div>
                         <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
-                            100+
+                            {{ $landingPageSetting->peak_activity_count }}
                         </div>
                     </div>
                 </div>

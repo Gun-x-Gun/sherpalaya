@@ -39,6 +39,12 @@ class WebsiteSettingSeeder extends Seeder
         $landingPageSetting->trek_activity_content = "Discover the magic of Nepal’s breathtaking trails with our immersive treks. From the legendary Everest Base Camp to the serene Annapurna Circuit, we take you through diverse landscapes, rich cultures, and unforgettable moments. Let each step lead you to a new adventure!";
         $landingPageSetting->tour_activity_content = "Unveil the wonders of Nepal with our expertly curated tours. Explore ancient heritage, vibrant cities, and stunning natural beauty with our knowledgeable guides. Whether cultural, spiritual, or scenic, every tour is crafted for an enriching and unforgettable experience.";
         $landingPageSetting->peak_activity_content = "Reach new heights with our exhilarating peak climbing adventures. Designed for both seasoned climbers and ambitious beginners, we provide expert guidance, safety assurance, and unmatched Himalayan views. Conquer your dreams, one summit at a time!";
+
+        $landingPageSetting->expedition_activity_count = '50+';
+        $landingPageSetting->trek_activity_count = '200+';
+        $landingPageSetting->tour_activity_count = '1000+';
+        $landingPageSetting->peak_activity_count = '100+';
+
         $landingPageSetting->traveller_count = '500+';
         $landingPageSetting->association_count = '100+';
         $landingPageSetting->customer_feedback = '9.3';

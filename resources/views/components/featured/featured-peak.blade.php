@@ -9,14 +9,8 @@
                 <h3 class="text-5xl  tracking-widest text-center ">Peaks</h3>
                 <p
                     class="text-md mt-2 text-slate-600 text-preety text-balance md:text-wrap md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light ">
-                    For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled
-                    support
-                    and
-                    expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks, Sherpalaya handles
-                    every
-                    detail, from permits to logistics. With our experienced Sherpa team by your side, we transform
-                    daunting
-                    Trek into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
+                    {{ $landingPageSetting->peak_activity_content }}
+                </p>
             </div>
             <div class="">
                 @if ($peaks->where('is_featured', true)->count() > 1)
