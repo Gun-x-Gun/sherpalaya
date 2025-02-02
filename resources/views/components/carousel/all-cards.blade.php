@@ -15,9 +15,9 @@
                     <img src="{{ asset('photos/mountain1.jpg') }}" alt="overlay image"
                         class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" />
                 </figure>
-                <div class="card-body absolute bottom-0 ">
+                <div class="card-body absolute bottom-0 inset-0 uppercase">
                     <div class="text-left ">
-                        <h2 class="font-extrabold text-white text-4xl uppercase">
+                        <h2 class="font-extrabold text-white text-2xl lg:text-4xl">
                             Expeditions
                         </h2>
                     </div>
@@ -28,7 +28,7 @@
                             <span class="icon-[hugeicons--angle] size-44 rotate-12 text-black opacity-35"></span>
 
                         </div>
-                        <div class="flex-none text-yellow-200 font-extrabold text-[6rem] opacity-60">
+                        <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
                             50+
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">
-                        <h2 class="font-bold text-white text-4xl ">
+                        <h2 class="font-bold text-white text-2xl lg:text-4xl ">
                             Treks
                         </h2>
                     </div>
@@ -58,7 +58,7 @@
                                 class="icon-[mingcute--mountain-2-line] size-44 rotate-12 text-black opacity-35"></span>
 
                         </div>
-                        <div class="flex-none text-yellow-200 font-extrabold text-[6rem] opacity-60">
+                        <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
                             200+
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">
-                        <h2 class="font-bold text-white text-4xl ">
+                        <h2 class="font-bold text-white text-2xl lg:text-4xl ">
                             Tours
                         </h2>
                     </div>
@@ -91,7 +91,7 @@
                             <span class="icon-[hugeicons--bus-01] size-44 rotate-12 text-black opacity-35"></span>
 
                         </div>
-                        <div class="flex-none text-yellow-200 font-extrabold text-[6rem] opacity-60">
+                        <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
                             1000+
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">
-                        <h2 class="font-bold text-white  text-4xl ">
+                        <h2 class="font-bold text-white  text-2xl lg:text-4xl ">
                             Peaks
                         </h2>
                     </div>
@@ -120,7 +120,7 @@
                             <span class="icon-[hugeicons--gem] size-44 rotate-12 text-black opacity-35"></span>
 
                         </div>
-                        <div class="flex-none text-yellow-200 font-extrabold text-[6rem] opacity-60">
+                        <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
                             100+
                         </div>
                     </div>
