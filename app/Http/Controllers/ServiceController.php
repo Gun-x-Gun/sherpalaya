@@ -30,6 +30,7 @@ class ServiceController extends Controller
 
         return view('website.company.our_services', [
             'services' => $services,
+            'pageSetting' => $pageSetting,
         ]);
     }
 

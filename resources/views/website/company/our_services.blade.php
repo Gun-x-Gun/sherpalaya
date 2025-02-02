@@ -4,9 +4,6 @@
             <figure class="h-[80vh] w-full">
                 <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
-
-                <img src="/photos/banner.jpg" alt="Trekking background image"
-                    class="h-[80vh] w-full object-cover brightness-50" />
             </figure>
             <div class="card-body relative">
                 <div
