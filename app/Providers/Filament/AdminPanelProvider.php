@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\Settings\ManageLangingPage;
 use App\Filament\Resources\DestinationResource;
 use App\Filament\Resources\ExpeditionResource;
 use App\Filament\Resources\PeakResource;
@@ -10,7 +11,6 @@ use App\Filament\Resources\ServiceResource;
 use App\Filament\Resources\TrekResource;
 use App\Filament\Resources\TourResource;
 use App\Filament\Resources\UserResource;
-use App\Filament\Resources\WebsiteSettingResource;
 use Awcodes\Curator\Resources\MediaResource;
 use Awcodes\Overlook\OverlookPlugin;
 use Awcodes\Overlook\Widgets\OverlookWidget;
@@ -134,7 +134,7 @@ class AdminPanelProvider extends PanelProvider
                     ->icon('heroicon-o-tag'),
                 MenuItem::make()
                     ->label('Settings')
-                    ->url(fn (): string => WebsiteSettingResource::getUrl())
+                    ->url(fn (): string => ManageLangingPage::getUrl())
                     ->icon('heroicon-o-cog'),
             ]);
     }
