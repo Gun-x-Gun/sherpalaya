@@ -36,30 +36,24 @@
                 </div>
             </div>
         </div>
-        <div class="mx-4 2xl:mx-44">
+        <div class="mx-4 2xl:mx-44 mt-4">
             {{-- description  --}}
-            <div class="">
-                <p class="mb-4 2xl:text-xl text-white font-bold ">
-                <p class="inline text-base-content/80" id="short-service-description">
-                    {{ Str::words(strip_tags($service->description), 30) }}
-                </p>
 
-                <div id="service-description-collapse-heading"
-                    class="collapse hidden w-full overflow-hidden transition-[height] duration-300 "
-                    aria-labelledby="service-description-collapse">
-                    {!! $service->description !!}
+            <div class="card sm:w-full shadow-2xl shadow-slate-300">
+                <div class="card-header">
+                    <h5 class="card-title">{{ $service->title }}</h5>
                 </div>
-
-                <button type="button" class="collapse-toggle link link-accent inline-flex items-center"
-                    id="service-description-collapse-button" aria-expanded="false"
-                    aria-controls="service-description-collapse-heading"
-                    data-collapse="#service-description-collapse-heading" onclick="toggleReadMore()">
-                    <span class="collapse-open:hidden">Read more</span>
-                    <span class="collapse-open:block hidden">Read less</span>
-                    <span class="icon-[tabler--chevron-down] collapse-open:rotate-180 ms-2 size-4"></span>
-                </button>
-                </p>
+                <div class="card-body">
+                    <p>
+                        {{ $service->description }}
+                    </p>
+                </div>
             </div>
+            {{-- <div class="">
+                <p class="mb-4 2xl:text-xl font-semi ">
+                    {{ $service->description }}
+                </p>
+            </div> --}}
 
             <div class="h-10"></div>
             <div class="flex flex-col md:grid grid-cols-3 gap-4">
