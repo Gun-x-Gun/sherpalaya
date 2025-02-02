@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Expedition;
+use App\Models\Region;
+use App\Settings\PageSetting;
 use Illuminate\Http\Request;
 
 class ExpeditionController extends Controller
@@ -12,7 +14,15 @@ class ExpeditionController extends Controller
      */
     public function index()
     {
-        return view('website.expeditions');
+        $pageSetting = app(PageSetting::class);
+        $expeditionsRegion = Region::with([
+            'expeditions'
+        ])->get();
+
+        return view('website.expeditions',[
+            'pageSetting' => $pageSetting,
+            'expeditionsRegion' => $expeditionsRegion
+        ]);
     }
 
 
