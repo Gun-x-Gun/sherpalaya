@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Storage;
 class CuratorSeederHelper
 {
 
-    protected static function resolveFileData(string $filePath): Media
+    public static function resolveFileData(string $filePath): Media
     {
         if (!is_file($filePath)) {
             throw new Exception("No file found in path: " . $filePath);
