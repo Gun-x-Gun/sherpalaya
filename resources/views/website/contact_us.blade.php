@@ -3,13 +3,15 @@
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
             <div class="mb-4">
                 <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-                    <p class="text-base font-semibold uppercase tracking-wide text-blue-600">
+                    <p class="text-xl font-semibold uppercase tracking-wide text-blue-600">
                         Contact
                     </p>
                     <h2 class="font-heading mb-4 font-bold tracking-tight text-gray-900 text-3xl sm:text-5xl">
                         Get in Touch
                     </h2>
-                    <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600">In hac habitasse platea dictumst</p>
+                    <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600">
+                        {{-- Subtitle --}}
+                    </p>
                 </div>
             </div>
             <div class="flex items-stretch justify-center">
