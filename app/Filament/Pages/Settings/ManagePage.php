@@ -65,6 +65,14 @@ class ManagePage extends SettingsPage
                                 Textarea::make('service_page_content')
                                     ->required()
                             ]),
+
+                        Tabs\Tab::make('About Us')
+                            ->schema([
+                                CuratorPicker::make('about_us_page_cover_image_id')
+                                    ->required(),
+                                Textarea::make('about_us_page_content')
+                                    ->required()
+                            ]),
                     ])
             ]);
     }

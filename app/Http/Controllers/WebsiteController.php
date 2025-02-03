@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\ContactUs;
+use App\Models\Faq;
 use App\Settings\ContactUsSetting;
+use App\Settings\PageSetting;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
@@ -44,7 +46,14 @@ class WebsiteController extends Controller
     }
 
     public function aboutUs(Request $request){
-        return view('website.company.about_us');
+        $pageSetting = app(PageSetting::class);
+
+        $faqs = Faq::all();
+
+        return view('website.company.about_us',[
+            'pageSetting' => $pageSetting,
+            'faqs' => $faqs
+        ]);
     }
 
     public function services(Request $request){
