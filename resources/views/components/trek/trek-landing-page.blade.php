@@ -1,4 +1,4 @@
-<div class="bg-blue-100/50">
+<div class="bg-blue-100/10">
     <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
         <figure class="h-[80vh] w-full">
             <img src="{{ $trek->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
@@ -62,11 +62,12 @@
     <div class="2xl:mx-44 mx-4">
         @foreach ($treksRegion as $trekRegion)
             @if ($trekRegion->treks->isNotEmpty())
-                <div>
-                    <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-normal">
-                        {{ $trekRegion->name }} Region Packages
+                <div id="region-{{ $trekRegion->id }}">
+                    <h5 class="card-title mb-2.5 line-clamp-2 uppercase tracking-wider text-2xl text-primary font-bold">
+                        {{ $trekRegion->name }} Region
                     </h5>
-                    <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4   flex-col gap-4">
+                    <div class="h-3"></div>
+                    <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 flex-col gap-4">
                         @foreach ($trekRegion->treks as $trek)
                             <div class="card w-full ">
                                 <div>
@@ -83,7 +84,7 @@
                                                                     <figure>
                                                                         <img src="{{ $image->url ?? asset('photos/P1030127.JPG') }}"
                                                                             alt="{{ $trek->title }} Cover Image"
-                                                                            class="h-60 object-cover" />
+                                                                            class="h-72 object-cover" />
                                                                     </figure>
                                                                 </span>
                                                             </div>
@@ -125,7 +126,7 @@
                                 <div class="card-body px-2 pt-2 bg-blue-100/30 ">
                                     <a href="{{ route('show_trek', $trek->id) }}">
                                         <h5
-                                            class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-primary font-normal">
+                                            class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-primary font-semibold">
                                             {{ $trek->title }}</h5>
                                     </a>
                                     <div class="justify-start flex flex-row items-center  gap-2">
@@ -142,7 +143,10 @@
                     </div>
                     <div class="h-4"></div>
                 </div>
-                <div class="bg-blue-100/60 md:hidden">
+
+
+                {{-- @if ($trekRegion->treks->count() > 1) --}}
+                <div class="bg-blue-100/20 md:hidden">
                     <div id="multi-slide"
                         data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1 } }'
                         class="relative w-full ">
@@ -150,14 +154,12 @@
                             <div class="carousel-body h-full opacity-0 ">
                                 <!-- Slide 1 -->
                                 @foreach ($trekRegion->treks as $trek)
-                                    <div class="carousel-slide max-w-sm px-1">
+                                    <div class="carousel-slide  bg-blue-100">
                                         <div class="card w-full ">
                                             <a href="{{ route('show_trek', $trek->id) }}">
-                                                <figure>
-                                                    <img src="{{ $trek->coverImage->url ?? asset('photos/P1030127.JPG') }}"
-                                                        alt="{{ $trek->title }} Cover Image"
-                                                        class="h-[20rem] object-cover" />
-                                                </figure>
+                                                <img src="{{ $trek->coverImage->url ?? asset('photos/P1030127.JPG') }}"
+                                                    alt="{{ $trek->title }} Cover Image"
+                                                    class="h-[20rem] object-cover" />
                                             </a>
                                         </div>
                                         <div class="card-body bg-blue-100/30 ">
@@ -194,6 +196,7 @@
                             class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
                     </button>
                 </div>
+                {{-- @endif --}}
                 <div class="h-14"></div>
             @endif
         @endforeach

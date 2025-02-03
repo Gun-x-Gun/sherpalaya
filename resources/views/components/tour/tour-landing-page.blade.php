@@ -59,9 +59,10 @@
             @php
                 $typeLabel = \App\Enums\TourType::tryFrom($type)?->getLabel() ?? 'Unknown';
             @endphp
-            <div>
-                <div class="h-8"></div>
-                @if ($tours->isNotEmpty())
+
+            <div class="h-8"></div>
+            @if ($tours->isNotEmpty())
+                <div id="type-{{ $type }}" class="">
                     <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-bold">
                         {{ $type }} Tours Packages
                     </h5>
@@ -195,8 +196,8 @@
                                 class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
                         </button>
                     </div>
-                @endif
-            </div>
+                </div>
+            @endif
         @endforeach
     </div>
     <div class="h-10"></div>

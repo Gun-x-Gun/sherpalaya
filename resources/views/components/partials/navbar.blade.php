@@ -115,7 +115,7 @@
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->peaks->isNotEmpty())
                                             <li class="uppercase ">
-                                                <a href="/peaks"
+                                                <a href="/peaks#region-{{ $navRegion->id}}"
                                                     class="menu font-bold text-black">{{ $navRegion->name }}
                                                     Region</p></a>
                                                 <ul class="menu px-2">
@@ -163,7 +163,7 @@
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->treks->isNotEmpty())
                                             <li class="uppercase ">
-                                                <a href="/treks"
+                                                <a href="/treks#region-{{ $navRegion->id }}"
                                                     class="menu font-bold text-black">{{ $navRegion->name }}
                                                     Region</p></a>
                                                 <ul class="menu px-2">
@@ -212,7 +212,8 @@
                                     <li class="items-start">
                                         <div class="flex flex-row gap-0 items-center">
                                             <div class="menu font-normal hover:underline text-primary">
-                                                <a href="/tours">{{ $typeLabel }}
+                                                <a href="/tours#type-{{ $type }}">
+                                                    {{ $typeLabel }}
                                                 </a>
                                             </div>
                                             @if ($tours->count() > 0)
@@ -333,7 +334,8 @@
                         @foreach ($navRegions as $navRegion)
                             @if ($navRegion->expeditions->isNotEmpty())
                                 <li class="uppercase ">
-                                    <a href="/expeditions" class="menu font-bold text-black">{{ $navRegion->name }}
+                                    <a href="/expeditions#region-{{ $navRegion->id }}" class="menu font-bold text-black">{{ $navRegion->name }}
+                                        
                                         Region</p></a>
                                     <ul class="menu px-2">
                                         @foreach ($navRegion->expeditions as $expedition)
@@ -374,7 +376,7 @@
                         @foreach ($navRegions as $navRegion)
                             @if ($navRegion->treks->isNotEmpty())
                                 <li class="uppercase ">
-                                    <a href="/treks" class="menu font-bold text-black">{{ $navRegion->name }}
+                                    <a href="/treks#region-{{ $navRegion->id }}" class="menu font-bold text-black">{{ $navRegion->name }}
                                         Region</p></a>
                                     <ul class="menu px-2">
                                         @foreach ($navRegion->treks as $trek)
@@ -415,7 +417,7 @@
                         @foreach ($navRegions as $navRegion)
                             @if ($navRegion->peaks->isNotEmpty())
                                 <li class="uppercase ">
-                                    <a href="/peaks" class="menu font-bold text-black">{{ $navRegion->name }}
+                                    <a href="/peaks#region-{{ $navRegion->id }}" class="menu font-bold text-black">{{ $navRegion->name }}
                                         Region</p></a>
                                     <ul class="menu px-2">
                                         @foreach ($navRegion->peaks as $peak)
@@ -461,7 +463,8 @@
                                 <li class="items-start">
                                     <div class="flex flex-row gap-0 items-center">
                                         <div class="menu font-normal hover:underline text-primary">
-                                            <a href="/tours">{{ $typeLabel }}
+                                            <a href="/tours#type-{{ $type }}">
+                                                {{ $typeLabel }}
                                             </a>
                                         </div>
                                         @if ($tours->count() > 0)

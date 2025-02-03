@@ -56,17 +56,18 @@
         ],
     ]" />
 
-    <div class="h-12"></div>
+    <div class="h-8"></div>
 
 
     {{-- Showing <strong>{{ $peakRegion->peaks->count() }}</strong> --}}
     <div class="2xl:mx-44 mx-4">
         @foreach ($peaksRegion as $peakRegion)
             @if ($peakRegion->peaks->isNotEmpty())
-                <div>
-                    <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-normal">
+                <div id="region-{{ $peakRegion->id }}">
+                    <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-bold">
                         {{ $peakRegion->name }} Region Peaks
                     </h5>
+                    <div class="h-4"></div>
                     <div class="hidden md:grid md:grid-cols-3 lg:grid-cols-4  gap-3">
                         @foreach ($peakRegion->peaks as $peak)
                             <div

@@ -64,9 +64,10 @@
         @foreach ($expeditionsRegion as $expeditionRegion)
             @if ($expeditionRegion->expeditions->isNotEmpty())
                 <div id="region-{{ $expeditionRegion->id }}">
-                    <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-normal">
-                        {{ $expeditionRegion->name }} Region Expeditions
+                    <h5 class="card-title mb-2.5 line-clamp-2 uppercase tracking-wider text-2xl text-primary font-bold">
+                        {{ $expeditionRegion->name }} Region 
                     </h5>
+                    <div class="h-3"></div>
                     <div class="hidden md:grid md:grid-cols-3 lg:grid-cols-4  gap-3">
                         @foreach ($expeditionRegion->expeditions as $expedition)
                             <div

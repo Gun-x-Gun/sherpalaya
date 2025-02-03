@@ -20,29 +20,7 @@
                 </div>
             </div>
         </div>
-        <div class="h-8 "></div>
-        <div class="2xl:mx-44 mx-4 text-left">
-            <h1
-                class="text-2xl lg:text-5xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
-                Our Services In Nepal
-            </h1>
-            {{-- <h3 class="text-3xl tracking-widest text-primary "> With Sherpalaya</h3> --}}
-            <p
-                class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
-                For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support
-                and
-                expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks, Sherpalaya handles
-                every
-                detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
-                service into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
-        </div>
-        <div class="h-12 "></div>
-
-
-
-
-
-
+        
         <x-breadcrumb :breadcrumbs="[
             [
                 'name' => 'Home',
@@ -53,7 +31,7 @@
             ],
         ]" />
 
-        <div class="h-4"></div>
+        <div class="h-8"></div>
 
         <div class="2xl:mx-44 mx-4 text-left">
             <h1
@@ -74,7 +52,7 @@
 
         {{-- Showing <strong>{{ $serviceDestination->services->count() }}</strong> --}}
         <div class="2xl:mx-44 mx-4">
-            <div class="flex flex-col  md:grid md:grid-cols-1 lg:grid-cols-2  md:gap-8 gap-4">
+            <div class="flex flex-col  md:grid md:grid-cols-1 lg:grid-cols-2  gap-4 ">
                 @foreach ($services as $serviceData)
                     <div class="card w-full h-full">
                         <a href="{{ route('show_service', $serviceData->service->id) }}">
@@ -106,6 +84,7 @@
                 @endforeach
             </div>
         </div>
+        <div class="h-20"></div>
 
     </div>
 
