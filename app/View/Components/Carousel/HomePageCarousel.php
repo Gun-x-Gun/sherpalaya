@@ -71,10 +71,10 @@ class HomePageCarousel extends Component
             })->unique();
 
         $this->featuredData = collect([
-            ...$treks->toArray(),
-            ...$peaks->toArray(),
             ...$expeditions->toArray(),
-            ...$tours->toArray(),
+            ...$peaks->toArray(),
+            ...$treks->toArray(),
+            // ...$tours->toArray(),
         ])->filter(function ($data) {
             return !is_null($data->image);
         });
