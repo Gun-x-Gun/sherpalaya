@@ -2,18 +2,77 @@
 
 namespace App\View\Components\Carousel;
 
+use App\Models\Expedition;
+use App\Models\Peak;
+use App\Models\Tour;
+use App\Models\Trek;
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Collection;
 use Illuminate\View\Component;
 
 class HomePageCarousel extends Component
 {
+
+    public Collection $featuredData;
+
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        //
+        $treks = Trek::with('featureImage')
+            ->where('is_featured', true)
+            ->get()
+            ->map(function (Trek $trek) {
+                return (object)[
+                    'id' => $trek->id,
+                    'title' => $trek->title,
+                    'image' => $trek->featureImage
+                ];
+            })->unique();
+
+        $peaks = Peak::with('featureImage')
+            ->where('is_featured', true)
+            ->get()
+            ->map(function (Peak $peak) {
+                return (object)[
+                    'id' => $peak->id,
+                    'title' => $peak->title,
+                    'image' => $peak->featureImage
+                ];
+            })->unique();
+
+        $expeditions = Expedition::with('featureImage')
+            ->where('is_featured', true)
+            ->get()
+            ->map(function (Expedition $expedition) {
+                return (object)[
+                    'id' => $expedition->id,
+                    'title' => $expedition->title,
+                    'image' => $expedition->featureImage
+                ];
+            })->unique();
+
+        $tours = Tour::with('featureImage')
+            ->where('is_featured', true)
+            ->get()
+            ->map(function (Tour $tour) {
+                return (object)[
+                    'id' => $tour->id,
+                    'title' => $tour->title,
+                    'image' => $tour->featureImage
+                ];
+            })->unique();
+
+        $this->featuredData = collect([
+            ...$treks->toArray(),
+            ...$peaks->toArray(),
+            ...$expeditions->toArray(),
+            ...$tours->toArray(),
+        ])->filter(function ($data) {
+            return !is_null($data->image);
+        });
     }
 
     /**
