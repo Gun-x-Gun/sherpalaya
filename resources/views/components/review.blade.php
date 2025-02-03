@@ -1,13 +1,13 @@
 <div class="bg-blue-100/50">
     <div class="h-8"></div>
-    <div class="h-10"></div>
+  
     <div class="2xl:mx-44 mx-4">
         <h2 class="text-base-content text-3xl">Testimonials</h2>
         <div class="h-4"></div>
         <div class="accordion accordion-shadow max-w-full ">
             {{-- First review --}}
             @foreach ($allReviews as $review)
-                <div class="accordion-item accordion-item-active:scale-[1.05] transition-transform ease-in duration-300 delay-[1ms] {{ $loop->index == 0 ? 'accordion-item-active:mb-3 active' : 'accordion-item-active:my-3' }}"
+                <div class="accordion-item accordion-item-active:scale-[1] transition-transform ease-in duration-300 delay-[1ms] {{ $loop->index == 0 ? 'accordion-item-active:mb-3 active' : 'accordion-item-active:my-3' }}"
                     id="review-{{ $review->id }}">
 
                     <button class="accordion-toggle inline-flex items-center justify-between text-start bg-blue-100/60"
@@ -50,8 +50,6 @@
                     </div>
                 </div>
             @endforeach
-
-
         </div>
     </div>
     <div class="h-20"></div>

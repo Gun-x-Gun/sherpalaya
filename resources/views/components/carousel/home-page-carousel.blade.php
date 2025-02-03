@@ -38,16 +38,16 @@
              {{-- <span
                  class="size-9.5 bg-base-200 hover:bg-primary items-center justify-center rounded-full shadow bg-transparent hidden md:flex "> --}}
                  <span
-                     class="icon-[tabler--chevron-left] size-10 cursor-pointer rtl:rotate-180 hover:text-primary text-white hidden md:flex"></span>
+                     class="icon-[tabler--chevron-left] size-10 cursor-pointer rtl:rotate-180 hover:text-primary text-white hidden md:block"></span>
              {{-- </span> --}}
              <span class="sr-only">Previous</span>
          </button>
          <!-- Next Slide -->
-         <button type="button" class=" carousel-next ">
+         <button type="button" class=" carousel-next  ">
              {{-- <span
                  class="size-9.5 bg-base-200 hover:bg-primary  items-center justify-center rounded-full shadow bg-transparent hidden md:flex "> --}}
                  <span
-                     class="icon-[tabler--chevron-right] size-10 cursor-pointer rtl:rotate-180 hover:text-primary text-white hidden md:flex"></span>
+                     class="icon-[tabler--chevron-right] size-10 cursor-pointer rtl:rotate-180 hover:text-primary text-white  hidden md:block"></span>
              {{-- </span> --}}
              <span class="sr-only">Next</span>
          </button>
