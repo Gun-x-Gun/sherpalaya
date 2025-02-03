@@ -11,13 +11,28 @@
             <div id="scrollspy-scrollable-parent-1" class="">
                 {{-- topsection --}}
                 <div class="bg-blue-100/50">
+
                     {{-- top section card --}}
                     <x-show-peak.peak-top-section-card :peak="$peak" />
                     {{-- end-section-card --}}
 
-                    <div class="h-2  "></div>
+                    <x-breadcrumb :breadcrumbs="[
+                        [
+                            'name' => 'Home',
+                            'url' => url('/home'),
+                        ],
+                        [
+                            'name' => 'Peaks',
+                            'url' => url('/peaks'),
+                        ],
+                        [
+                            'name' => $peak->title,
+                        ],
+                    ]" />
+
 
                     <div class="2xl:mx-44 mx-4 text-left">
+
                         {{-- description --}}
                         <x-show-peak.peak-description :peak="$peak" />
                         {{-- end description --}}

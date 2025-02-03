@@ -6,9 +6,9 @@
                     loading="lazy" />
 
             </figure>
-            <div class="card-body relative">
+            <div class="card-body">
                 <div
-                    class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute 2xl:bottom-52 2xl:left-44  bottom-52 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class="">
                         {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Explore
@@ -26,19 +26,20 @@
         </div>
 
         <div class="bg-blue-100/50">
-            <div class="h-8 "></div>
-
             <x-breadcrumb :breadcrumbs="[
                 [
                     'name' => 'Home',
                     'url' => url('/home'),
                 ],
                 [
-                    'name' => 'About Us',
+                    'name' => 'AboutUs',
                 ],
-            ]" />
+            ]"/>
 
+
+            <div class="h-4"></div>
             <div class="2xl:mx-44 mx-4 text-left">
+
                 <h1
                     class="text-2xl lg:text-4xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
                     About Us

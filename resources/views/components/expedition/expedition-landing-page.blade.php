@@ -1,27 +1,36 @@
 <div class="bg-blue-100/50">
     <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
         <figure class="h-[80vh] w-full">
-            <img src="{{ $expedition->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
-                class="h-[80vh] w-full object-cover brightness-50" />
+            <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->expedition_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
+                loading="lazy" />
         </figure>
-        <div class="card-body relative">
+        <div class="card-body ">
             <div
-                class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                class="absolute 2xl:bottom-52 2xl:left-44  bottom-52 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class="">
-                    {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                    {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
                         Explore
                     </h5> --}}
-                    <h2 class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-bold">
+                    <h2 class="card-title mb-2.5  text-white text-3xl md:text-6xl uppercase font-bold">
                         {{-- {{ $expedition->title }} --}}
-                        Expeditions
+                        Peaks
                     </h2>
-                    <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                    <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
                         With Sherpalaya
                     </h5>
                 </div>
             </div>
         </div>
     </div>
+    <x-breadcrumb :breadcrumbs="[
+        [
+            'name' => 'Home',
+            'url' => url('/home'),
+        ],
+        [
+            'name' => 'Expedition',
+        ],
+    ]" />
 
     <div class="bg-blue-100/50">
         <div class="h-8 "></div>
@@ -46,15 +55,7 @@
 
 
 
-    <x-breadcrumb :breadcrumbs="[
-        [
-            'name' => 'Home',
-            'url' => url('/home'),
-        ],
-        [
-            'name' => 'Expedition',
-        ],
-    ]" />
+
 
     <div class="h-12"></div>
 
@@ -65,7 +66,7 @@
             @if ($expeditionRegion->expeditions->isNotEmpty())
                 <div id="region-{{ $expeditionRegion->id }}">
                     <h5 class="card-title mb-2.5 line-clamp-2 uppercase tracking-wider text-2xl text-primary font-bold">
-                        {{ $expeditionRegion->name }} Region 
+                        {{ $expeditionRegion->name }} Region
                     </h5>
                     <div class="h-3"></div>
                     <div class="hidden md:grid md:grid-cols-3 lg:grid-cols-4  gap-3">

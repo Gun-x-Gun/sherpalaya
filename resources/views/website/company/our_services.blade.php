@@ -5,9 +5,9 @@
                 <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
             </figure>
-            <div class="card-body relative">
+            <div class="card-body">
                 <div
-                    class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute 2xl:bottom-52 2xl:left-44  bottom-52 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class=" max-w-[92%] 2xl:max-w-[100%]">
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Our
@@ -31,7 +31,7 @@
             ],
         ]" />
 
-        <div class="h-8"></div>
+        <div class="h-4"></div>
 
         <div class="2xl:mx-44 mx-4 text-left">
             <h1

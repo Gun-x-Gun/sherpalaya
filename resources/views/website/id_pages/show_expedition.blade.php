@@ -10,7 +10,20 @@
 
                     {{-- end-section-card --}}
 
-                    <div class="h-2  "></div>
+
+                    <x-breadcrumb :breadcrumbs="[
+                        [
+                            'name' => 'Home',
+                            'url' => url('/home'),
+                        ],
+                        [
+                            'name' => 'Expeditions',
+                            'url' => url('/expeditions'),
+                        ],
+                        [
+                            'name' => $expedition->title,
+                        ],
+                    ]" />
 
                     <div class="2xl:mx-44 mx-4 text-left">
 

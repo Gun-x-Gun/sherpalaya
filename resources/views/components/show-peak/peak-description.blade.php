@@ -15,7 +15,9 @@
 </script>
 
 
+
 <div class="">
+    
     <p class="mb-4 2xl:text-xl text-white font-bold ">
     <p class="inline text-base-content/80" id="short-peak-description ">
         {{ Str::words(strip_tags($peak->description), 30) }}

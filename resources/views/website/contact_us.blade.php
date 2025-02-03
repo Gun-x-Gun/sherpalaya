@@ -1,35 +1,41 @@
 <x-website-layout>
     <section class="bg-blue-50" id="contact">
-        <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
-            <figure class="h-[60vh] w-full">
+        <div class="card--rounded-none image-full  bg-blue-100/50 h-[70vh]">
+            <figure class="h-[70vh] w-full">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
-                    class="h-[60vh] w-full object-cover brightness-50" />
+                    class="h-[70vh] w-full object-cover brightness-50" />
             </figure>
-            <div class="card-body relative">
+            <div class="card-body">
                 <div
-                    class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute 2xl:bottom-52 2xl:left-44  bottom-52 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class="">
                         {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Explore
                         </h5> --}}
-                        <h2 class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-bold">
-                            {{-- {{ $expedition->title }} --}}
-                            Contact
-                        </h2>
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
-                            With Sherpalaya
+                            Contact Us
                         </h5>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+
+        <x-breadcrumb :breadcrumbs="[
+            [
+                'name' => 'Home',
+                'url' => url('/home'),
+            ],
+            [
+                'name' => 'Contact',
+            ],
+        ]" />
+        <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 ">
             <div class="mb-4">
                 <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-                    <p class="text-xl font-semibold uppercase tracking-wide text-blue-600">
+                    {{-- <p class="text-xl font-semibold uppercase tracking-wide text-blue-600">
                         Contact
-                    </p>
-                    <h2 class="font-heading mb-4 font-bold tracking-tight text-gray-900 text-3xl sm:text-5xl">
+                    </p> --}}
+                    <h2 class="font-heading mb-4 font-bold tracking-tight text-primary text-3xl sm:text-5xl">
                         Get in Touch
                     </h2>
                     <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600">
@@ -40,7 +46,7 @@
             <div class="flex items-stretch justify-center">
                 <div class="grid md:grid-cols-2">
                     <div class="h-full pr-6">
-                        <p class="mt-3 mb-12 text-lg text-gray-600">
+                        <p class="mt-3 mb-12 text-lg text-blue-600">
                             {{ $contactUsSetting->content }}
                         </p>
                         <ul class="mb-6 md:mb-0">

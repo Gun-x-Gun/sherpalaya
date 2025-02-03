@@ -9,7 +9,20 @@
                     <x-show-trek.top-section-card :trek="$trek" />
                     {{-- end-section-card --}}
 
-                    <div class="h-2  "></div>
+
+                    <x-breadcrumb :breadcrumbs="[
+                        [
+                            'name' => 'Home',
+                            'url' => url('/home'),
+                        ],
+                        [
+                            'name' => 'Treks',
+                            'url' => url('/treks'),
+                        ],
+                        [
+                            'name' => $trek->title,
+                        ],
+                    ]" />
 
                     <div class="2xl:mx-44 mx-4 text-left">
                         {{-- description --}}
@@ -30,7 +43,7 @@
 
                 {{-- mobile-booking-section --}}
                 <x-show-trek.trek-mobile-booking-section :trek="$trek" />
-                
+
                 {{-- stat-mobile --}}
                 <x-show-trek.mobile-stat :trek="$trek" />
                 {{-- end-stat-section --}}

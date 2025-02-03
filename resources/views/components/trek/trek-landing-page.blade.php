@@ -1,29 +1,38 @@
 <div class="bg-blue-100/10">
     <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
         <figure class="h-[80vh] w-full">
-            <img src="{{ $trek->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
-                class="h-[80vh] w-full object-cover brightness-50" />
+            <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->trek_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
+                loading="lazy" />
         </figure>
-        <div class="card-body relative">
+        <div class="card-body ">
             <div
-                class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                class="absolute 2xl:bottom-52 2xl:left-44  bottom-52 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class="">
-                    <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                    {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
                         Explore
-                    </h5>
-                    <h2 class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-bold">
+                    </h5> --}}
+                    <h2 class="card-title mb-2.5  text-white text-3xl md:text-6xl uppercase font-bold">
                         {{-- {{ $trek->title }} --}}
-                        Treks
+                        Peaks
                     </h2>
-                    <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                    <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
                         With Sherpalaya
                     </h5>
                 </div>
             </div>
         </div>
     </div>
-
+    <x-breadcrumb :breadcrumbs="[
+        [
+            'name' => 'Home',
+            'url' => url('/home'),
+        ],
+        [
+            'name' => 'Trekking',
+        ],
+    ]" />
     <div class="bg-blue-100/50">
+        
         <div class="h-8 "></div>
         <div class="2xl:mx-44 mx-4 text-left">
             <h1
@@ -34,7 +43,7 @@
                 class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
                 For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support
                 and
-                expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks, Sherpalaya handles
+                expertise. Whether it’s climbing Everest or venturing to the lesser-known treks, Sherpalaya handles
                 every
                 detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
                 Trek into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
@@ -45,15 +54,7 @@
 
 
 
-    <x-breadcrumb :breadcrumbs="[
-        [
-            'name' => 'Home',
-            'url' => url('/home'),
-        ],
-        [
-            'name' => 'Trekking',
-        ],
-    ]" />
+
 
     <div class="h-12"></div>
 

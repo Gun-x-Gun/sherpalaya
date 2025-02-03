@@ -8,7 +8,19 @@
                     <x-show-tour.tour-top-section-card :tour="$tour" />
                     {{-- end-section-card --}}
 
-                    <div class="h-2  "></div>
+                   <x-breadcrumb :breadcrumbs="[
+                        [
+                            'name' => 'Home',
+                            'url' => url('/home'),
+                        ],
+                        [
+                            'name' => 'Tours',
+                            'url' => url('/tours'),
+                        ],
+                        [
+                            'name' => $tour->title,
+                        ],
+                    ]" />
 
                     <div class="2xl:mx-44 mx-4 text-left">
                         {{-- description --}}

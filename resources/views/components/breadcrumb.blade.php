@@ -1,6 +1,4 @@
 <div class="bg-transparent">
-
-
     <div class="breadcrumbs 2xl:mx-44 mx-4 text-accent  ">
         <ul >
             @foreach ($breadcrumbs as $breadcrumb)
