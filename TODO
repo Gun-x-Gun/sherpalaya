@@ -3,6 +3,7 @@ Neema Dai:
     ☐ destination page
     ☐ Translation
     ☐ Sound in home page carousel
+    ☐ Whatsapp
 
 
 Umanga:
@@ -15,15 +16,13 @@ Umanga:
         - expedition
         - peak
         - service
-    ☐ Booking and Inquiry
+    ☐ Booking and Inquiry + Whatsapp
         - tour
         - trek
         - expedition
         - peak
         - service
-
-        - whatsapp
-    ☐ About Us
+    ✔ About Us @done(25-02-03 15:36)
     ☐ Breadcrumb and description card
     ✔ Website setting frontend @done(25-02-03 00:22)
     ✔ Navbar: Tour [Counters] @done(25-02-02 23:43)
