@@ -1,8 +1,8 @@
 <div class="bg-blue-100/50">
-    <div class="h-8"></div>
+    <div class="h-12"></div>
   
     <div class="2xl:mx-44 mx-4">
-        <h2 class="text-base-content text-3xl">Testimonials</h2>
+        <h2 class="text-slate-700 text-center text-3xl uppercase">Testimonials</h2>
         <div class="h-4"></div>
         <div class="accordion accordion-shadow max-w-full ">
             {{-- First review --}}
@@ -37,7 +37,7 @@
                                     class="icon-[tabler--quote] text-base-300/80 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0 opacity-25"></span>
 
                                 <div class="relative z-[1]">
-                                    <p class="text-base-content  ">
+                                    <p class="text-slate-700  ">
                                         <em>
                                             {{ $review->description }}
                                         </em>

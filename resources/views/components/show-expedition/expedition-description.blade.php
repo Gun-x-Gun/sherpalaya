@@ -1,4 +1,4 @@
-<script type="module" defer>
+{{-- <script type="module" defer>
     let {
         element
     } = HSCollapse.getInstance('#expedition-description-collapse-button', true);
@@ -35,4 +35,12 @@
         <span class="icon-[tabler--chevron-down] collapse-open:rotate-180 ms-2 size-4"></span>
     </button>
     </p>
+</div> --}}
+
+<div class="card sm:w-full shadow-sm shadow-slate-300 bg-blue-50/10">
+    <div class="card-body gap-2 text-blue-700  px-2 capitalize  text-preety lg:text-justify">
+        <p class="first-line:uppercase">
+            {!! $expedition->description !!}
+        </p>
+    </div>
 </div>

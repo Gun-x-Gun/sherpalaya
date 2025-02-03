@@ -55,21 +55,14 @@
         <div class="mx-4 2xl:mx-44 mt-4">
             {{-- description  --}}
 
-            <div class="card sm:w-full shadow-2xl shadow-slate-300">
-                <div class="card-header">
-                    <h5 class="card-title">{{ $service->title }}</h5>
-                </div>
-                <div class="card-body">
+            <div class="card sm:w-full shadow-md shadow-slate-300 bg-blue-50/10">
+                <div class="card-body text-slate-800 px-2 capitalize text-lg">
                     <p>
                         {{ $service->description }}
                     </p>
                 </div>
             </div>
-            {{-- <div class="">
-                <p class="mb-4 2xl:text-xl font-semi ">
-                    {{ $service->description }}
-                </p>
-            </div> --}}
+           
 
             <div class="h-10"></div>
             <div class="flex flex-col md:grid grid-cols-3 gap-4">

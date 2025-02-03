@@ -1,4 +1,4 @@
-<script type="module" defer>
+{{-- <script type="module" defer>
     let {
         element
     } = HSCollapse.getInstance('#tour-description-collapse-button', true);
@@ -35,4 +35,14 @@
         <span class="icon-[tabler--chevron-down] collapse-open:rotate-180 ms-2 size-4"></span>
     </button>
     </p>
+</div> --}}
+
+
+
+<div class="card sm:w-full shadow-sm shadow-slate-400 bg-blue-100/30">
+    <div class="card-body text-blue-800 px-2 capitalize  text-preety lg:text-justify">
+        <p class="first-line:uppercase">
+            {!! $tour->description !!}
+        </p>
+    </div>
 </div>

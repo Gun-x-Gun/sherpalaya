@@ -1,4 +1,4 @@
-<script type="module" defer>
+{{-- <script type="module" defer>
     let {
         element
     } = HSCollapse.getInstance('#peak-description-collapse-button', true);
@@ -37,4 +37,13 @@
         <span class="icon-[tabler--chevron-down] collapse-open:rotate-180 ms-2 size-4"></span>
     </button>
     </p>
+</div> --}}
+
+
+<div class="card sm:w-full shadow-sm shadow-blue-100 bg-blue-50/10">
+    <div class="card-body text-slate-700  px-2 capitalize  text-preety lg:text-justify">
+        <p class="first-line:uppercase">
+            {!! $peak->description !!}
+        </p>
+    </div>
 </div>
