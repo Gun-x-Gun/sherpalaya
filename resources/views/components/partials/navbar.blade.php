@@ -23,9 +23,9 @@
                 <div
                     class="flex flex-col rounded-lg max-xl:mt-3 max-xl:border max-xl:p-2 xl:flex-row xl:items-center xl:justify-end gap-2 xl:ps-5 xl:pe-0.5 xl:py-0.5">
                     <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent ">
-                        <li class=" hover:bg-accent rounded-lg uppercase"><a href="/home"
+                        <li class=" hover:bg-primary rounded-lg uppercase"><a href="/home"
                                 @class([
-                                    'underline decoration-wavy text-primary' =>
+                                    'underline decoration-wavy text-warning' =>
                                         request()->route()->getName() == 'website.home',
                                 ])>Home</a>
                         </li>
@@ -236,13 +236,13 @@
 
                     {{-- contact  --}}
                     <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent  uppercase ">
-                        <li class=" hover:bg-accent rounded-lg text-md "><a href="/contact"
+                        <li class=" hover:bg-primary rounded-lg text-md "><a href="/contact"
                                 @class([
-                                    'underline decoration-wavy text-primary' =>
+                                    'underline decoration-wavy text-warning' =>
                                         request()->route()->getName() == 'website.contact',
                                 ])>Contact</a>
                         </li>
-                        <li class=" hover:bg-accent rounded-lg text-md">
+                        <li class=" hover:bg-primary rounded-lg text-md">
                             <a href="/search">
                                 <span class="icon-[tabler--search] size-5"></span>
                             </a>
@@ -273,7 +273,7 @@
         </div>
         <div class="drawer-body justify-start pb-6 px-0">
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
-                <li class=" hover:bg-accent rounded-lg "><a href="/home" @class([
+                <li class=" hover:bg-primary rounded-lg "><a href="/home" @class([
                     'underline decoration-wavy text-primary' =>
                         request()->route()->getName() == 'website.home',
                 ])>
@@ -282,7 +282,7 @@
                     </a>
                 </li>
 
-                {{-- <li class=" hover:bg-accent rounded-lg ">
+                {{-- <li class=" hover:bg-primary rounded-lg ">
                     <a href="/about" @class([
                     'underline decoration-wavy text-primary' =>
                         request()->route()->getName() == 'website.about',
@@ -486,7 +486,7 @@
                 {{-- tours end  --}}
 
                 {{-- contact  --}}
-                <li class="text-slate-900 hover:bg-accent rounded-lg text-md uppercase">
+                <li class="text-slate-900 hover:bg-primary rounded-lg text-md uppercase">
                     <a href="/contact" @class([
                         'underline decoration-wavy text-primary' =>
                             request()->route()->getName() == 'website.contact',
