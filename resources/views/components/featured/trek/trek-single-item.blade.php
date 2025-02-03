@@ -7,14 +7,14 @@
             <div class="h-14"></div>
             <div class="lg:grid grid-cols-3 md:gap-8 flex flex-col gap-2 bg-blue-100/10">
                 <div class="col-span-1">
-                    <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black text-left ">Expedition</h5>
-                    <h3 class="text-3xl tracking-widest text-accent text-left ">With Sherpalaya</h3>
+                    <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black lg:text-right ">Expedition</h5>
+                    <h3 class="text-3xl tracking-wider text-accent lg:text-right ">With Sherpalaya</h3>
                     <p
-                        class="text-md mt-2 text-preety text-slate-800 text-balance md:text-wrap
-                        md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light">
-                        {{ $landingPageSetting->trek_activity_content }}
-
+                        class="text-md mt-2 text-preety text-slate-800 lg:text-right lg:text-wrap
+                         first-line:uppercase first-line:font-light">
+                        {{ $landingPageSetting->expedition_activity_content }}
                     </p>
+                    <div class="h-4"></div>
                 </div>
                 @foreach ($featuredTreks as $featuredTrek)
                     <div

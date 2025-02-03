@@ -1,5 +1,5 @@
 <div class="bg-blue-100/50">
-    <div class="h-8  "></div>
+    <div class="h-20"></div>
     <div class="2xl:mx-44 mx-4 ">
         <h3 class="text-4xl tracking-normal text-black uppercase text-center">Activities ...</h3>
     </div>

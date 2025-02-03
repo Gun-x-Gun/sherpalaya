@@ -21,6 +21,7 @@
                             'name' => $tour->title,
                         ],
                     ]" />
+                    <div class="h-4"></div>
 
                     <div class="2xl:mx-44 mx-4 text-left">
                         {{-- description --}}
