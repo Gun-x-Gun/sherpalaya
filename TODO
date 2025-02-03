@@ -10,11 +10,59 @@ Todo:
 
 
 Umanga:
-    ☐ Website Setting Seeder:
-        - home page images
-    ☐ Testimonial
-    ☐ Home page carousel (Featured)
-    ☐ URL and redirects for trek
+    ✔ Website Setting Seeder: @done(25-02-02 23:43)
+    ✔ Testimonial @done(25-01-31 19:48)
+    ✔ Home page carousel (Featured) @done(25-02-03 08:08)
+    ☐ URL and redirects for trek, expedition ...
+    ☐ Booking and Inquiry
+    ☐ About Us
+    ☐ Breadcrumb
+    ✔ Website setting frontend @done(25-02-03 00:22)
+    ✔ Navbar: Tour [Counters] @done(25-02-02 23:43)
+    ☐ Translation
+
+Website Setting:
+
+Landing Page Setting:
+    // Activity
+    ☐ Expedition Activity Image
+    ☐ Expedition Activity Content
+    ☐ Trek Activity Image
+    ☐ Trek Activity Content
+    ☐ Tour Activity Image
+    ☐ Tour Activity Content
+    ☐ Peak Activity Image
+    ☐ Peak Activity Content
+
+    // Stat
+    ☐ Traveller Count
+    ☐ Association Count
+    ☐ Customer Feedback
+    ☐ Success Rate
+
+    ☐ Parallax Mountain Image
+
+Page Setting:
+    ☐ Expedition Page Cover Image
+    ☐ Expedition Page Content
+    ☐ Trek Page Cover Image
+    ☐ Trek Page Content
+    ☐ Tour Page Cover Image
+    ☐ Tour Page Content
+    ☐ Peak Page Cover Image
+    ☐ Peak Page Content
+    ☐ Service Page Cover Image
+    ☐ Service Page Content
+
+Contact Us Setting:
+    ☐ Content
+    ☐ Address
+    ☐ Contact
+    ☐ Working Hours
+
+
+About Us Setting:
+    ☐
 
 Subin:
     ☐ Internal link
@@ -24,4 +72,5 @@ Subin:
     ☐ contact ma image
     ☐ searchbar remove
     ☐ mobile booking section
-    ☐ infinite homepage carousel
+    ☐ Book trip and inquiry position to bottom
+☐ infinite homepage carousel

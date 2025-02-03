@@ -2,8 +2,8 @@
     <div class="bg-blue-100/50">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
             <figure class="h-[80vh] w-full">
-                <img src="/photos/banner.jpg" alt="Trekking background image"
-                    class="h-[80vh] w-full object-cover brightness-50" />
+                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
+                    loading="lazy" />
             </figure>
             <div class="card-body relative">
                 <div
@@ -41,12 +41,8 @@
             {{-- <h3 class="text-3xl tracking-widest text-primary "> With Sherpalaya</h3> --}}
             <p
                 class="text-md text-left  mt-2  text-slate-700 first-line:uppercase first-line:tracking-widest first-line:font-light ">
-                For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support
-                and
-                expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks, Sherpalaya handles
-                every
-                detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
-                service into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
+                {{ $pageSetting->service_page_content }}
+            </p>
         </div>
         <div class="h-8 "></div>
 

@@ -11,12 +11,8 @@
             <h3 class="text-3xl tracking-widest text-accent "> With Sherpalaya</h3>
             <p
                 class="text-md  mt-2 text-preety text-slate-800 text-balance md:text-wrap md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light ">
-                For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support
-                and
-                expertise. Whether it’s climbing Everest or venturing to the lesser-known peaks, Sherpalaya handles
-                every
-                detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
-                Trek into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
+                    {{ $landingPageSetting->expedition_activity_content }}
+            </p>
 
             <div id="multi-slide" data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1.1, "lg": 4 } }'
                 class="relative w-full mt-2">

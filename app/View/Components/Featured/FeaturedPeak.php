@@ -3,6 +3,7 @@
 namespace App\View\Components\Featured;
 
 use App\Models\Peak;
+use App\Settings\LandingPageSetting;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -10,6 +11,7 @@ use Illuminate\View\Component;
 class FeaturedPeak extends Component
 {
     public $peaks;
+    public LandingPageSetting $landingPageSetting;
 
     /**
      * Create a new component instance.
@@ -17,6 +19,7 @@ class FeaturedPeak extends Component
     public function __construct()
     {
         $this->peaks = Peak::all();
+        $this->landingPageSetting = app(LandingPageSetting::class);
     }
 
     /**
@@ -24,7 +27,7 @@ class FeaturedPeak extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.featured.featured-peak',[
+        return view('components.featured.featured-peak', [
             'peaks' => $this->peaks,
         ]);
     }

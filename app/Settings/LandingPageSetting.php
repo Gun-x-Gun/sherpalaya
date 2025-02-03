@@ -11,15 +11,19 @@ class LandingPageSetting extends Settings
 
     public ?string $expedition_activity_image_id;
     public ?string $expedition_activity_content;
+    public ?string $expedition_activity_count;
 
     public ?string $trek_activity_image_id;
     public ?string $trek_activity_content;
+    public ?string $trek_activity_count;
 
     public ?string $tour_activity_image_id;
     public ?string $tour_activity_content;
+    public ?string $tour_activity_count;
 
     public ?string $peak_activity_image_id;
     public ?string $peak_activity_content;
+    public ?string $peak_activity_count;
 
     // Stat
     public ?string $traveller_count;

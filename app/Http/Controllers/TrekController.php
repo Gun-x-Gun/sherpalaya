@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Region;
 use App\Models\Trek;
+use App\Settings\PageSetting;
 use Illuminate\Http\Request;
 
 class TrekController extends Controller
@@ -12,7 +14,15 @@ class TrekController extends Controller
      */
     public function index()
     {
-        return view('website.trekking');
+        $pageSetting = app(PageSetting::class);
+
+        $treksRegion = Region::with([
+            'treks'
+        ])->get();
+        return view('website.trekking', [
+            'treksRegion' => $treksRegion,
+            'pageSetting' => $pageSetting,
+        ]);
     }
 
     /**

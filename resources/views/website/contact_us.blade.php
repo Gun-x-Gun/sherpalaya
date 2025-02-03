@@ -3,23 +3,22 @@
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
             <div class="mb-4">
                 <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-                    <p class="text-base font-semibold uppercase tracking-wide text-blue-600">
+                    <p class="text-xl font-semibold uppercase tracking-wide text-blue-600">
                         Contact
                     </p>
                     <h2 class="font-heading mb-4 font-bold tracking-tight text-gray-900 text-3xl sm:text-5xl">
                         Get in Touch
                     </h2>
-                    <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600">In hac habitasse platea dictumst</p>
+                    <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600">
+                        {{-- Subtitle --}}
+                    </p>
                 </div>
             </div>
             <div class="flex items-stretch justify-center">
                 <div class="grid md:grid-cols-2">
                     <div class="h-full pr-6">
                         <p class="mt-3 mb-12 text-lg text-gray-600">
-                            Class aptent taciti sociosqu ad
-                            litora torquent per conubia nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut
-                            scelerisque
-                            sagittis ante, ac tincidunt sem venenatis ut.
+                            {{ $contactUsSetting->content }}
                         </p>
                         <ul class="mb-6 md:mb-0">
                             <li class="flex">
@@ -36,8 +35,10 @@
                                 </div>
                                 <div class="ml-4 mb-4">
                                     <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900">Our Address</h3>
-                                    <p class="text-gray-600">1230 Maecenas Street Donec Road</p>
-                                    <p class="text-gray-600">New York, EEUU</p>
+                                    <p class="text-gray-600">
+                                        {{ $contactUsSetting->address }}
+                                    </p>
+                                    {{-- <p class="text-gray-600">New York, EEUU</p> --}}
                                 </div>
                             </li>
                             <li class="flex">
@@ -55,8 +56,10 @@
                                 </div>
                                 <div class="ml-4 mb-4">
                                     <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900">Contact</h3>
-                                    <p class="text-gray-600">Mobile: +1 (123) 456-7890</p>
-                                    <p class="text-gray-600">Mail: tailnext@gmail.com</p>
+                                    <p class="text-gray-600">
+                                        {{ $contactUsSetting->contact }}
+                                    </p>
+                                    {{-- <p class="text-gray-600">Mail: tailnext@gmail.com</p> --}}
                                 </div>
                             </li>
                             <li class="flex">
@@ -71,16 +74,17 @@
                                 </div>
                                 <div class="ml-4 mb-4">
                                     <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900">Working hours</h3>
-                                    <p class="text-gray-600">Monday - Friday: 08:00 - 17:00</p>
-                                    <p class="text-gray-600">Saturday &amp; Sunday: 08:00 - 12:00</p>
+                                    <p class="text-gray-600">{{ $contactUsSetting->working_hour }}
+                                    </p>
+                                    {{-- <p class="text-gray-600">Saturday &amp; Sunday: 08:00 - 12:00</p> --}}
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="card h-fit max-w-6xl p-5 md:p-12" id="form">
                         <h2 class="mb-2 text-2xl font-bold">Ready to Get Started?</h2>
-                        @if (isset($submitted))
-                            @if ($submitted === true)
+                        @if (isset($contactUsSubmitted))
+                            @if ($contactUsSubmitted === true)
                                 <div class="alert alert-outline alert-success mb-2" role="alert">
                                     Your message is submitted. Thank you for contacting us!
                                 </div>
