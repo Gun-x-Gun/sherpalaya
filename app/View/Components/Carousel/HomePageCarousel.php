@@ -28,7 +28,8 @@ class HomePageCarousel extends Component
                 return (object)[
                     'id' => $trek->id,
                     'title' => $trek->title,
-                    'image' => $trek->featureImage
+                    'image' => $trek->featureImage,
+                    'url' => "/treks/" . $trek->id,
                 ];
             })->unique();
 
@@ -39,7 +40,8 @@ class HomePageCarousel extends Component
                 return (object)[
                     'id' => $peak->id,
                     'title' => $peak->title,
-                    'image' => $peak->featureImage
+                    'image' => $peak->featureImage,
+                    'url' => "/peaks/" . $peak->id,
                 ];
             })->unique();
 
@@ -50,7 +52,8 @@ class HomePageCarousel extends Component
                 return (object)[
                     'id' => $expedition->id,
                     'title' => $expedition->title,
-                    'image' => $expedition->featureImage
+                    'image' => $expedition->featureImage,
+                    'url' => "/expeditions/" . $expedition->id,
                 ];
             })->unique();
 
@@ -61,7 +64,9 @@ class HomePageCarousel extends Component
                 return (object)[
                     'id' => $tour->id,
                     'title' => $tour->title,
-                    'image' => $tour->featureImage
+                    'image' => $tour->featureImage,
+                    'url' => "/tours/" . $tour->id,
+
                 ];
             })->unique();
 

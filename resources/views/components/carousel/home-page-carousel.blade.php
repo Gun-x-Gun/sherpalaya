@@ -11,6 +11,7 @@
                     <x-cards.carousel-card
                         :id="$featured->id"
                         :title="$featured->title"
+                        :url="$featured->url"
                         :image="$featured->image"
                     />
                 </div>

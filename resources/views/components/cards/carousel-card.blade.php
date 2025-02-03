@@ -17,6 +17,10 @@
                 <h5 class="card-title mb-2.5 text-warning text-3xl md:text-4xl uppercase font-extrabold ">
                     With Sherpalaya
                 </h5>
+
+                <a href="{{ $url }}" class="btn btn-soft btn-primary btn-lg">
+                    Explore Now
+                </a>
             </div>
         </div>
     </div>

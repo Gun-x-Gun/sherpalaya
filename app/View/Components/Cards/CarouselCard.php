@@ -15,6 +15,7 @@ class CarouselCard extends Component
     public function __construct(
         public string $id,
         public string $title,
+        public string $url,
         public ?Media $image,
     )
     {
