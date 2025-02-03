@@ -58,7 +58,7 @@
                                 class="icon-[mingcute--mountain-2-line] size-44 rotate-12 text-black opacity-35"></span>
 
                         </div>
-                        <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
+                        <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[4rem] opacity-60">
                             {{ $landingPageSetting->trek_activity_count }}
                         </div>
                     </div>
@@ -87,10 +87,10 @@
                 <div class="absolute bottom-0 opacity-0 group-hover:opacity-100 w-min">
                     <div class="flex flex-row">
                         <div class="flex-none">
-                            <span class="icon-[hugeicons--bus-01] size-44 rotate-12 text-black opacity-35"></span>
+                            <span class="icon-[hugeicons--bus-01] size-40 rotate-12 text-black opacity-35"></span>
 
                         </div>
-                        <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
+                        <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[4rem] opacity-60">
                             {{ $landingPageSetting->tour_activity_count }}
                         </div>
                     </div>
