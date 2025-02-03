@@ -43,7 +43,8 @@
                                     Us</a></li>
                             <li class="text-primary hover:underline"><a class="dropdown-item"
                                     href="/services">Services</a></li>
-                            <li class="text-primary hover:underline"><a class="dropdown-item" href="#">FAQs</a>
+                            <li class="text-primary hover:underline"><a class="dropdown-item" href="/our_team">Our
+                                    Team</a>
                             </li>
                         </ul>
                     </div>
@@ -62,7 +63,7 @@
                         <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
                             role="menu" aria-orientation="vertical">
                             <ul class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
-                                <div class="2xl:grid grid-cols-4 gap-2">
+                                <div class="grid grid-cols-4 gap-1">
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->expeditions->isNotEmpty())
                                             <li class="uppercase ">
@@ -111,11 +112,11 @@
                             role="menu" aria-orientation="vertical">
                             <ul
                                 class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow ">
-                                <div class="2xl:grid grid-cols-4 ">
+                                <div class="grid grid-cols-4 gap-1">
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->peaks->isNotEmpty())
                                             <li class="uppercase ">
-                                                <a href="/peaks#region-{{ $navRegion->id}}"
+                                                <a href="/peaks#region-{{ $navRegion->id }}"
                                                     class="menu font-bold text-black">{{ $navRegion->name }}
                                                     Region</p></a>
                                                 <ul class="menu px-2">
@@ -157,9 +158,8 @@
                         </button>
                         <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
                             role="menu" aria-orientation="vertical">
-                            <ul
-                                class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
-                                <div class="2xl:grid grid-cols-4 ">
+                            <ul class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
+                                <div class="grid grid-cols-4 gap-1">
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->treks->isNotEmpty())
                                             <li class="uppercase ">
@@ -167,8 +167,8 @@
                                                     class="menu font-bold text-black">{{ $navRegion->name }}
                                                     Region</p></a>
                                                 <ul class="menu px-2">
-                                                    @foreach ($navRegion->treks as $trek)
-                                                        <div class="flex flex-col  ">
+                                                    <div class="flex flex-row  ">
+                                                        @foreach ($navRegion->treks as $trek)
                                                             <div class="flex flex-row gap-2 items-center">
                                                                 <div class="text-primary hover:underline  py-2">
                                                                     <a href="{{ route('show_trek', $trek->id) }}">
@@ -182,8 +182,8 @@
                                                                     </p>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    @endforeach
+                                                        @endforeach
+                                                    </div>
                                                 </ul>
                                             </li>
                                         @endif
@@ -273,11 +273,12 @@
         </div>
         <div class="drawer-body justify-start pb-6 px-0">
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
-                <li class=" hover:bg-primary rounded-lg "><a href="/home" @class([
+                <li class=" hover:bg-primary rounded-lg items-start"><a href="/home" @class([
                     'underline decoration-wavy text-primary' =>
                         request()->route()->getName() == 'website.home',
                 ])>
-                        <span class="icon-[tabler--layout-navbar] size-5"></span>
+                        <span class="icon-[solar--home-outline] size-5">
+                        </span>
                         Home
                     </a>
                 </li>
@@ -297,22 +298,30 @@
                 <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="company-collapse"
                         data-collapse="#company-collapse-menu">
-                        <span class="icon-[tabler--layout-navbar] size-5"></span>
-                        Company
+                        <span class="icon-[ep--office-building] size-5"></span> Company
                         <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
                     </a>
                     <ul id="company-collapse-menu"
                         class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
                         aria-labelledby="company-collapse">
                         <li class="uppercase">
-                            <ul class="menu px-0">
-                                <li class="text-primary hover:underline"><a class="dropdown-item"
-                                        href="about_us">About
-                                        Us</a></li>
-                                <li class="text-primary hover:underline"><a class="dropdown-item"
-                                        href="/services">Services</a></li>
-                                <li class="text-primary hover:underline"><a class="dropdown-item"
-                                        href="#">FAQs</a>
+                            <ul class="menu px-0 mx-0">
+                                <li class="text-primary hover:underline px-0"><a class="dropdown-item"
+                                        href="/about_us">
+                                        <span class="icon-[majesticons--tooltip-text-line]"></span>
+                                        About Us
+                                    </a>
+                                </li>
+                                <li class="text-primary hover:underline"><a class="dropdown-item" href="/services">
+                                        <span class="icon-[stash--integrations-duotone]">
+                                        </span>
+                                        Services
+                                    </a>
+                                </li>
+                                <li class="text-primary hover:underline"><a class="dropdown-item" href="/our_team">
+                                        <span class="icon-[stash--people-group-duotone]"></span>
+                                        Our Team
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -324,8 +333,7 @@
                 <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="expedition-collapse"
                         data-collapse="#expedition-collapse-menu">
-                        <span class="icon-[tabler--layout-navbar] size-5"></span>
-                        Expeditions
+                        <span class="icon-[majesticons--flag-line] size-5"></span> Expeditions
                         <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
                     </a>
                     <ul id="expedition-collapse-menu"
@@ -334,8 +342,9 @@
                         @foreach ($navRegions as $navRegion)
                             @if ($navRegion->expeditions->isNotEmpty())
                                 <li class="uppercase ">
-                                    <a href="/expeditions#region-{{ $navRegion->id }}" class="menu font-bold text-black">{{ $navRegion->name }}
-                                        
+                                    <a href="/expeditions#region-{{ $navRegion->id }}"
+                                        class="menu font-bold text-black">{{ $navRegion->name }}
+
                                         Region</p></a>
                                     <ul class="menu px-2">
                                         @foreach ($navRegion->expeditions as $expedition)
@@ -366,7 +375,7 @@
                 <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="trek-page-collapse"
                         data-collapse="#trek-page-collapse-menu">
-                        <span class="icon-[tabler--box-multiple] size-5"></span>
+                        <span class="icon-[material-symbols-light--hiking] size-5"></span>
                         Treks
                         <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
                     </a>
@@ -376,7 +385,8 @@
                         @foreach ($navRegions as $navRegion)
                             @if ($navRegion->treks->isNotEmpty())
                                 <li class="uppercase ">
-                                    <a href="/treks#region-{{ $navRegion->id }}" class="menu font-bold text-black">{{ $navRegion->name }}
+                                    <a href="/treks#region-{{ $navRegion->id }}"
+                                        class="menu font-bold text-black">{{ $navRegion->name }}
                                         Region</p></a>
                                     <ul class="menu px-2">
                                         @foreach ($navRegion->treks as $trek)
@@ -407,7 +417,7 @@
                 <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="peak-page-collapse"
                         data-collapse="#peak-page-collapse-menu">
-                        <span class="icon-[tabler--box-multiple] size-5"></span>
+                        <span class="icon-[mingcute--mountain-2-line] size-5"></span>
                         Peaks
                         <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
                     </a>
@@ -417,7 +427,8 @@
                         @foreach ($navRegions as $navRegion)
                             @if ($navRegion->peaks->isNotEmpty())
                                 <li class="uppercase ">
-                                    <a href="/peaks#region-{{ $navRegion->id }}" class="menu font-bold text-black">{{ $navRegion->name }}
+                                    <a href="/peaks#region-{{ $navRegion->id }}"
+                                        class="menu font-bold text-black">{{ $navRegion->name }}
                                         Region</p></a>
                                     <ul class="menu px-2">
                                         @foreach ($navRegion->peaks as $peak)
@@ -448,8 +459,7 @@
                 <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="tour-page-collapse"
                         data-collapse="#tour-page-collapse-menu">
-                        <span class="icon-[tabler--box-multiple] size-5"></span>
-                        Tours
+                        <span class="icon-[majesticons--map-marker-path-line] size-5""></span> Tours
                         <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
                     </a>
                     <ul id="tour-page-collapse-menu"
@@ -491,7 +501,7 @@
                         'underline decoration-wavy text-primary' =>
                             request()->route()->getName() == 'website.contact',
                     ])>
-                        <span class="icon-[tabler--layout-navbar] size-5"></span>
+                        <span class="icon-[majesticons--phone-line] size-5"></span>
                         Contact
                     </a>
                 </li>
