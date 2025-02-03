@@ -17,9 +17,9 @@
                 <h5 class="card-title mb-2.5 text-warning text-3xl md:text-4xl uppercase font-extrabold ">
                     With Sherpalaya
                 </h5>
-
-                <a href="{{ $url }}" class="btn btn-soft btn-primary btn-lg">
-                    Explore Now
+                <a href="{{ $url }}" class="btn btn-primary btn-md text-white">
+                    Explore
+                    <span class="icon-[tabler--circle-arrow-right-filled] size-4"></span>
                 </a>
             </div>
         </div>
