@@ -16,7 +16,7 @@
         <div class="carousel-pagination absolute bottom-8 end-0 start-0 flex justify-center gap-3 "></div>
 
         <!-- Previous Slide -->
-        <button type="button" class="carousel-prev h-[5%] lg:absolute top-1/2 xl:-left-10">
+        <button type="button" class="carousel-prev h-[5%] lg:absolute top-1/2 ">
             <span
                 class="icon-[tabler--chevron-left] size-10 cursor-pointer rtl:rotate-180 hover:text-primary text-white hidden md:flex justicy-center "></span>
             <span class="sr-only">Previous</span>

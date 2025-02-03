@@ -56,8 +56,8 @@ class WebsiteController extends Controller
         ]);
     }
 
-    public function services(Request $request){
-        return view('website.company.our_services');
+    public function ourTeam(Request $request){
+        return view('website.company.our_team');
     }
 
     public function whySherpalaya(Request $request){

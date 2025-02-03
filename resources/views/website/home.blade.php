@@ -1,6 +1,5 @@
 <x-website-layout>
     <x-carousel.home-page-carousel />
-
     <x-carousel.all-cards />
     <x-stat-widget />
     <x-featured.featured-expedition />

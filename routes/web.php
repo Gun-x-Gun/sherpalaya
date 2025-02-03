@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ExpeditionController;
+use App\Http\Controllers\OurTeamController;
 use App\Http\Controllers\PeakController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ServiceController;
@@ -28,6 +29,7 @@ Route::controller(WebsiteController::class)
         Route::get('/contact', 'contactUs')->name('website.contact');
         Route::post('/contact', 'contactUsSubmit');
         Route::get('/about_us', 'aboutUs')->name('website.company.about_us');
+        Route::get('/our_team', 'ourTeam')->name('website.company.our_team');
     });
 
 // Service Route
@@ -38,7 +40,16 @@ Route::controller(ServiceController::class)
         Route::get('/{id}', 'show')->name('show_service');
     });
 
-    
+
+// Our Team Route
+Route::controller(OurTeamController::class)
+    ->prefix('/teams')
+    ->group(function () {
+        Route::get('/', 'index')->name('website.company.our_team');
+        Route::get('/{id}', 'show')->name('show_team_member');
+    });
+
+
 // Trek Route
 Route::controller(TrekController::class)
     ->prefix('/treks')
