@@ -1,5 +1,5 @@
 
- <div id="carousel-container" class="relative top-0 m-0 w-full ">
+ <div id="carousel-container" class=" top-0 m-0 w-full ">
      <div id="snap"
          data-carousel='{ "loadingClasses": "opacity-0", "isAutoPlay": true, "speed": 100000, "isCentered": true, "dotsItemClasses": "carousel-box","isInfiniteLoop": true}'
          class="relative h-full w-full">

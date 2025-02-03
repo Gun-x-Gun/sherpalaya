@@ -4,4 +4,5 @@
             {!! $trek->description !!}
         </p>
     </div>
+
 </div>

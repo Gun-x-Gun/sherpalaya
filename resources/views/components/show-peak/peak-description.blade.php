@@ -40,7 +40,7 @@
 </div> --}}
 
 
-<div class="card sm:w-full shadow-sm shadow-blue-100 bg-blue-50/10">
+<div class="card sm:w-full shadow-sm shadow-blue-100 bg-blue-100/60">
     <div class="card-body text-slate-700 tracking-wider px-2 capitalize  text-preety lg:text-justify">
         <p class="first-line:uppercase">
             {!! $peak->description !!}

@@ -31,7 +31,12 @@ class PeakController extends Controller
      */
     public function show(Request $request, string $id)
     {
+        $pageSetting = app(PageSetting::class);
+
         $peak = Peak::findOrFail($id);
-        return view('website.id_pages.show_peak', compact('peak'));
+        return view('website.id_pages.show_peak', [
+            'peak' => $peak,
+            'pageSetting' => $pageSetting,
+        ]);
     }
 }
