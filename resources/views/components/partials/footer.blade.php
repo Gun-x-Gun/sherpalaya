@@ -1,9 +1,9 @@
    
-   <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');" class="bg-cover bg-center w-full  object-top h-full">
+   <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');" class="bg-cover bg-center w-full  object-top h-96">
    
    {{-- <div class="bg-black"> --}}
     <footer class="footer footer-center text-white rounded-none p-6 opacity-100 sticky bottom-0 " >
-          <nav class="grid grid-flow-col gap-8 text-white font-bold uppercase">
+          <nav class="grid grid-flow-col gap-4 text-white font-bold uppercase">
               <a href="/about_us" class="link link-hover  ">About</a>
               <a href="/contact" class="link link-hover">Contact</a>
               <a href="/services" class="link link-hover">Services</a>
