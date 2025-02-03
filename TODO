@@ -10,16 +10,16 @@ Todo:
 
 
 Umanga:
-    ☐ Website Setting Seeder:
-        - home page images
+    ✔ Website Setting Seeder: @done(25-02-02 23:43)
     ✔ Testimonial @done(25-01-31 19:48)
-    ☐ Home page carousel (Featured)
+    ✔ Home page carousel (Featured) @done(25-02-03 08:08)
     ☐ URL and redirects for trek, expedition ...
     ☐ Booking and Inquiry
     ☐ About Us
-    ☐ Website setting frontend
-    ☐ Navbar:
-        - Tour [Counters]
+    ☐ Breadcrumb
+    ✔ Website setting frontend @done(25-02-03 00:22)
+    ✔ Navbar: Tour [Counters] @done(25-02-02 23:43)
+    ☐ Translation
 
 Website Setting:
 
@@ -72,3 +72,4 @@ Subin:
     ☐ contact ma image
     ☐ searchbar remove
     ☐ mobile booking section
+    ☐ Book trip and inquiry position to bottom
