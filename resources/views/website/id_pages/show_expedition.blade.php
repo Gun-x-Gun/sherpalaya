@@ -42,9 +42,7 @@
 
                 </div>
                 {{-- mobile-booking-section --}}
-                <x-show-expedition.expedition-mobile-booking-section :expedition="$expedition" />
-
-
+                @livewire('booking.mobile-booking-section', ['bookingFor' => $expedition])
 
                 {{-- stat-mobile --}}
 
@@ -95,7 +93,8 @@
                                     <x-show-expedition.expedition-stat-section :expedition="$expedition" />
 
                                     {{-- booking-section --}}
-                                    <x-show-expedition.expedition-booking-section />
+                                    @livewire('booking.booking-section', ['bookingFor' => $expedition])
+
                                     <div class="h-10"></div>
                                 </div>
                             </div>

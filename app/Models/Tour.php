@@ -7,6 +7,7 @@ use App\Enums\SearchType;
 use App\Enums\TourType;
 use App\Helpers\CuratorModelHelper;
 use App\Traits\EasySearch;
+use App\Traits\HasInquiries;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -19,6 +20,8 @@ class Tour extends Model implements CanBeEasySearched
 {
     use EasySearch;
     use HasFactory;
+    use HasInquiries;
+
 
 
     protected $fillable = [
@@ -75,7 +78,7 @@ class Tour extends Model implements CanBeEasySearched
     {
         return $this->morphMany(KeyHighlights::class,'highlightable');
     }
-    
+
     public function essentialTips():MorphMany
     {
         return $this->morphMany(EssentialTips::class,'tippable');

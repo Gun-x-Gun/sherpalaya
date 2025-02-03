@@ -6,6 +6,7 @@ use App\Contracts\CanBeEasySearched;
 use App\Enums\SearchType;
 use App\Helpers\CuratorModelHelper;
 use App\Traits\EasySearch;
+use App\Traits\HasInquiries;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -14,6 +15,7 @@ use Illuminate\Support\Collection;
 class Service extends Model implements CanBeEasySearched
 {
     use EasySearch;
+    use HasInquiries;
 
     protected $fillable = [
         'title',

@@ -17,6 +17,9 @@ return new class extends Migration
                 ->required();
             $table->string('email')
                 ->required();
+            $table->string('type');
+            $table->unsignedBigInteger('inquiriable_id');
+            $table->string('inquiriable_type');
             $table->longText('message')
                 ->required();
             $table->timestamps();

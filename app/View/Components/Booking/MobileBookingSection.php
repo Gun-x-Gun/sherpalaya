@@ -1,19 +1,19 @@
 <?php
 
-namespace App\View\Components\ShowTrek;
+namespace App\View\Components\Booking;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\View\Component;
 
-class BookingSection extends Component
+class MobileBookingSection extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public string $bookingType,
-        public string $bookingId
+        public Model $bookingFor,
     )
     {
         //
@@ -24,6 +24,6 @@ class BookingSection extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.show-trek.booking-section');
+        return view('components.booking.mobile-booking-section');
     }
 }

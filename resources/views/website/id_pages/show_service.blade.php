@@ -50,7 +50,7 @@
                 'name' => $service->title,
             ],
         ]" />
-        <x-show-service.service-mobile-booking-section />
+        @livewire('booking.mobile-booking-section', ['bookingFor' => $service])
 
         <div class="mx-4 2xl:mx-44 mt-4">
             {{-- description  --}}
@@ -62,7 +62,7 @@
                     </p>
                 </div>
             </div>
-           
+
 
             <div class="h-10"></div>
             <div class="flex flex-col md:grid grid-cols-3 gap-4">
@@ -85,14 +85,9 @@
                             </div>
                         </div>
                     @endif
-                    <div class="hidden card-body bg-blue-200  h-40 md:grid">
-                        <div class="card-actions justify-center overflow-hidden">
-                            <a href="">
-                                <button class="btn btn-primary btn-wide uppercase">Book Service</button>
-                            </a>
-                            <button class="btn btn-info  btn-wide uppercase">Inquiry</button>
-                        </div>
-                    </div>
+                    @livewire('booking.booking-section', ['bookingFor' => $service])
+
+
                 </div>
             </div>
 
