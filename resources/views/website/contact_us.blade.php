@@ -1,5 +1,28 @@
 <x-website-layout>
     <section class="bg-blue-50" id="contact">
+        <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
+            <figure class="h-[60vh] w-full">
+                <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
+                    class="h-[60vh] w-full object-cover brightness-50" />
+            </figure>
+            <div class="card-body relative">
+                <div
+                    class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    <div class="">
+                        {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                            Explore
+                        </h5> --}}
+                        <h2 class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-bold">
+                            {{-- {{ $expedition->title }} --}}
+                            Contact
+                        </h2>
+                        <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                            With Sherpalaya
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
             <div class="mb-4">
                 <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">

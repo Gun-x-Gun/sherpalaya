@@ -36,6 +36,8 @@
                 </div>
             </div>
         </div>
+        <x-show-service.service-mobile-booking-section />
+
         <div class="mx-4 2xl:mx-44 mt-4">
             {{-- description  --}}
 
@@ -76,10 +78,10 @@
                             </div>
                         </div>
                     @endif
-                    <div class=" card-body bg-blue-200  h-40">
-                        <div class="card-actions justify-center ">
+                    <div class="hidden card-body bg-blue-200  h-40 md:grid">
+                        <div class="card-actions justify-center overflow-hidden">
                             <a href="">
-                                <button class="btn btn-primary btn-wide uppercase">Book this Service</button>
+                                <button class="btn btn-primary btn-wide uppercase">Book Service</button>
                             </a>
                             <button class="btn btn-info  btn-wide uppercase">Inquiry</button>
                         </div>

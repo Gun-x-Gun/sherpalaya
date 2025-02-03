@@ -1,5 +1,5 @@
    
-   <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');" class="bg-cover bg-center w-full  object-top h-96">
+   <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');" class="bg-cover bg-center w-full  object-top h-60">
    
    {{-- <div class="bg-black"> --}}
     <footer class="footer footer-center text-white rounded-none p-6 opacity-100 sticky bottom-0 " >

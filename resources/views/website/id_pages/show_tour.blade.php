@@ -26,11 +26,11 @@
 
 
 
-
+                {{-- mobile section tour --}}
+                <x-show-tour.tour-mobile-booking-section :tour="$tour" />
+               
                 {{-- stat-mobile --}}
-                {{-- top section --}}
-
-                {{-- top section end --}}
+              
                 <x-show-tour.tour-mobile-stat :tour="$tour" />
                 {{-- end-stat-section --}}
 
@@ -48,8 +48,7 @@
                                 <x-show-tour.scroll-spy-body.tour-key-highlight :tour="$tour" />
                                 {{-- end_key_highlights --}}
 
-                                {{-- mobile section tour --}}
-                                <x-show-tour.tour-mobile-booking-section :tour="$tour" />
+
 
                                 {{-- itineraries --}}
                                 <x-show-tour.scroll-spy-body.tour-itinerary :tour="$tour" />

@@ -32,7 +32,8 @@
                 </div>
 
 
-
+                {{-- mobile-booking-section --}}
+                <x-show-peak.peak-mobile-booking-section :peak="$peak" />
 
                 {{-- stat-mobile --}}
                 <x-show-peak.peak-mobile-stat :peak="$peak" />
@@ -52,8 +53,7 @@
                                 <x-show-peak.scroll-spy-body.peak-key-highlight :peak="$peak" />
                                 {{-- end_key_highlights --}}
 
-                                 {{-- mobile-booking-section --}}
-                                 <x-show-peak.peak-mobile-booking-section :peak="$peak" />
+
 
                                 {{-- itineraries --}}
                                 <x-show-peak.scroll-spy-body.peak-itinerary :peak="$peak" />
