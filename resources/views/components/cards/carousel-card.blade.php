@@ -5,7 +5,7 @@
     </figure>
     <div class="card-body relative">
         <div
-            class="absolute 2xl:bottom-52 2xl:left-44  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+            class="absolute 2xl:bottom-52 xl:left-44  bottom-40 lg:left-44  left-10  max-w-full  2xl:max-w-full overflow-hidden border-none ">
             <div class="">
                 <h5 class="card-title mb-2.5 text-warning text-3xl md:text-4xl uppercase font-extrabold ">
                     Explore
@@ -17,9 +17,11 @@
                 <h5 class="card-title mb-2.5 text-warning text-3xl md:text-4xl uppercase font-extrabold ">
                     With Sherpalaya
                 </h5>
-                <a href="{{ $url }}" class="btn btn-primary btn-md text-white">
-                    Explore
-                    <span class="icon-[tabler--circle-arrow-right-filled] size-4"></span>
+                <a href="{{ $url }}">
+                    <button class="btn btn-primary  text-white">
+                        Explore
+                        <span class="icon-[tabler--circle-arrow-right-filled] size-4"></span>
+                    </button>
                 </a>
             </div>
         </div>
