@@ -519,10 +519,10 @@
         // Change background based on position
         if (currentScroll === 0) {
             navbar.style.background = "transparent"; // At the top
-            // navbar.style.color = "white"; // At the top
+            navbar.style.color = "white"; // At the top
         } else {
             navbar.style.background = "rgba(255, 255, 255, 1)"; // bg-slate-100
-            // navbar.style.color = "black"; // At the top
+            navbar.style.color = "black"; // At the top
 
         }
 
