@@ -9,14 +9,16 @@ use Illuminate\View\Component;
 
 class BookingSection extends Component
 {
+    public Model $bookingFor;
+
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public Model $bookingFor,
+        Model $bookingFor,
     )
     {
-        //
+        $this->bookingFor = $bookingFor;
     }
 
     /**
