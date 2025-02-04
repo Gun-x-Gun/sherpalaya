@@ -57,88 +57,91 @@
         {{-- Showing <strong>{{ $peakRegion->peaks->count() }}</strong> --}}
         <div class="2xl:mx-44 mx-4">
             @foreach ($peaksRegion as $peakRegion)
-                @if ($peakRegion->peaks->isNotEmpty())
-                    <div>
-                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-normal">
-                            {{ $peakRegion->name }} Region Peaks
-                        </h5>
-                        <div class="hidden md:grid md:grid-cols-3 lg:grid-cols-4  gap-3">
-                            @foreach ($peakRegion->peaks as $peak)
-                                <div
-                                    class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
-                                    <figure class="h-[25rem] max-w-sm">
-                                        <img src="{{ optional($peak->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
-                                            alt="{{ $peak->title }} Cover Image"
-                                            class="transition-transform brightness-75 h-[25rem] duration-500 group-hover:scale-110  max-w-sm object-cover" />
-                                    </figure>
-                                    <a href="{{ route('show_peak', $peak->id) }}">
-                                        <div class="card-body absolute inset-0 justify-end">
-                                            <div class="text-center">
-                                                <h2 class="font-bold text-white text-2xl uppercase">
-                                                    {{ $peak->title }}
-                                                </h2>
-                                                <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
-                                                    {{ $peak->highest_altitude }} m
-                                                </h2>
+                <div id="region-{{ $loop->index + 1 }}">
+                    @if ($peakRegion->peaks->isNotEmpty())
+                        <div>
+                            <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-normal">
+                                {{ $peakRegion->name }} Region Peaks
+                            </h5>
+                            <div class="hidden md:grid md:grid-cols-3 lg:grid-cols-4  gap-3">
+                                @foreach ($peakRegion->peaks as $peak)
+                                    <div
+                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
+                                        <figure class="h-[25rem] max-w-sm">
+                                            <img src="{{ optional($peak->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
+                                                alt="{{ $peak->title }} Cover Image"
+                                                class="transition-transform brightness-75 h-[25rem] duration-500 group-hover:scale-110  max-w-sm object-cover" />
+                                        </figure>
+                                        <a href="{{ route('show_peak', $peak->id) }}">
+                                            <div class="card-body absolute inset-0 justify-end">
+                                                <div class="text-center">
+                                                    <h2 class="font-bold text-white text-2xl uppercase">
+                                                        {{ $peak->title }}
+                                                    </h2>
+                                                    <h2
+                                                        class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                                        {{ $peak->highest_altitude }} m
+                                                    </h2>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            @endforeach
+                                        </a>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="h-4"></div>
                         </div>
-                        <div class="h-4"></div>
-                    </div>
-                    <div class="bg-blue-100/60 md:hidden">
-                        <div id="multi-slide"
-                            data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1 } }'
-                            class="relative w-full ">
-                            <div class="carousel h-full rounded-none ">
-                                <div class="carousel-body h-full opacity-0 ">
-                                    <!-- Slide 1 -->
-                                    @foreach ($peakRegion->peaks as $peak)
-                                        <div class="carousel-slide max-w-sm px-1">
-                                            <div
-                                                class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
-                                                <figure class="h-[28rem] max-w-sm">
-                                                    <img src="{{ optional($peak->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
-                                                        alt="{{ $peak->title }} Cover Image"
-                                                        class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
-                                                </figure>
-                                                <a href="{{ route('show_peak', $peak->id) }}">
-                                                    <div class="card-body absolute inset-0 justify-end">
-                                                        <div class="text-center">
-                                                            <h2 class="font-bold text-white text-2xl uppercase">
-                                                                {{ $peak->title }}
-                                                            </h2>
-                                                            <h2
-                                                                class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
-                                                                {{ $peak->highest_altitude }} m
-                                                            </h2>
+                        <div class="bg-blue-100/60 md:hidden">
+                            <div id="multi-slide"
+                                data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1 } }'
+                                class="relative w-full ">
+                                <div class="carousel h-full rounded-none ">
+                                    <div class="carousel-body h-full opacity-0 ">
+                                        <!-- Slide 1 -->
+                                        @foreach ($peakRegion->peaks as $peak)
+                                            <div class="carousel-slide max-w-sm px-1">
+                                                <div
+                                                    class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
+                                                    <figure class="h-[28rem] max-w-sm">
+                                                        <img src="{{ optional($peak->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
+                                                            alt="{{ $peak->title }} Cover Image"
+                                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
+                                                    </figure>
+                                                    <a href="{{ route('show_peak', $peak->id) }}">
+                                                        <div class="card-body absolute inset-0 justify-end">
+                                                            <div class="text-center">
+                                                                <h2 class="font-bold text-white text-2xl uppercase">
+                                                                    {{ $peak->title }}
+                                                                </h2>
+                                                                <h2
+                                                                    class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                                                    {{ $peak->highest_altitude }} m
+                                                                </h2>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </a>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    @endforeach
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Previous Slide -->
-                        <button type="button" class="carousel-prev">
-                            <span
-                                class="hidden md:flex icon-[tabler--chevron-left] size-8 text-white cursor-pointer rtl:rotate-180"></span>
-                            <span class="sr-only">Previous</span>
-                        </button>
-                        <!-- Next Slide -->
-                        <button type="button" class="carousel-next">
-                            <span class="sr-only">Next</span>
-                            <span
-                                class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
-                        </button>
-                    </div>
-                    <div class="h-14"></div>
-                @endif
+                            <!-- Previous Slide -->
+                            <button type="button" class="carousel-prev">
+                                <span
+                                    class="hidden md:flex icon-[tabler--chevron-left] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                                <span class="sr-only">Previous</span>
+                            </button>
+                            <!-- Next Slide -->
+                            <button type="button" class="carousel-next">
+                                <span class="sr-only">Next</span>
+                                <span
+                                    class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                            </button>
+                        </div>
+                        <div class="h-14"></div>
+                    @endif
+                </div>
             @endforeach
         </div>
         <div class="h-12"></div>
