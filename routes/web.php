@@ -30,7 +30,7 @@ Route::controller(WebsiteController::class)
         Route::get('/contact', 'contactUs')->name('website.contact');
         Route::post('/contact', 'contactUsSubmit');
         Route::get('/about_us', 'aboutUs')->name('website.company.about_us');
-        Route::get('/our_team', 'ourTeam')->name('website.company.our_team');
+        // Route::get('/our_team', 'ourTeam')->name('website.company.our_team');
     });
 
 // Service Route
@@ -44,7 +44,7 @@ Route::controller(ServiceController::class)
 
 // Our Team Route
 Route::controller(OurTeamController::class)
-    ->prefix('/teams')
+    ->prefix('/sherpas')
     ->group(function () {
         Route::get('/', 'index')->name('website.company.our_team');
         Route::get('/{id}', 'show')->name('show_team_member');

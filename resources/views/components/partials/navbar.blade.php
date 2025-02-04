@@ -43,8 +43,8 @@
                                     Us</a></li>
                             <li class="text-primary hover:underline"><a class="dropdown-item"
                                     href="/services">Services</a></li>
-                            <li class="text-primary hover:underline"><a class="dropdown-item" href="/our_team">Our
-                                    Team</a>
+                            <li class="text-primary hover:underline"><a class="dropdown-item" href="/sherpas">
+                                Our Sherpas</a>
                             </li>
                         </ul>
                     </div>
@@ -318,9 +318,9 @@
                                         Services
                                     </a>
                                 </li>
-                                <li class="text-primary hover:underline"><a class="dropdown-item" href="/our_team">
+                                <li class="text-primary hover:underline"><a class="dropdown-item" href="/sherpas">
                                         <span class="icon-[stash--people-group-duotone]"></span>
-                                        Our Team
+                                        Our Sherpas
                                     </a>
                                 </li>
                             </ul>

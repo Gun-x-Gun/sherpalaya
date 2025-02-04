@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\OurSherpa;
 use App\Settings\PageSetting;
 use Illuminate\Http\Request;
 
@@ -10,20 +11,25 @@ class OurTeamController extends Controller
     public function index()
     {
         $pageSetting = app(PageSetting::class);
-        // $expeditionsRegion = Region::with([
-        //     'expeditions'
-        // ])->get();
+        $ourSherpas = OurSherpa::with([
+            'profilePicture',
+            'awardsAndCertificates',
+            'treks',
+            'expeditions',
+            'peaks',
+            'tours'
+        ])->get();
 
         return view('website.company.our_team', [
             'pageSetting' => $pageSetting,
-            // 'expeditionsRegion' => $expeditionsRegion
+            'ourSherpas' => $ourSherpas
         ]);
     }
 
 
     public function show(Request $request, string $id)
     {
-        // $expedition = OurTeam::findOrFail($id);
-        return view('website.id_pages.show_team_member', compact('expedition'));
+        $sherpa = OurSherpa::findOrFail($id);
+        return view('website.id_pages.show_team_member', compact('sherpa'));
     }
 }
