@@ -16,7 +16,7 @@ trait HasInquiries
 
     public function getWhatsappUrl(): string
     {
-        return "https://wa.me/9779860435510?" . http_build_query([
+        return "https://wa.me/" . config('services.whatsapp.number') . "?" . http_build_query([
             'text' => "Hey there! I am contacting for a package listed on your website at: " . $this->getUrl(),
         ]);
     }
