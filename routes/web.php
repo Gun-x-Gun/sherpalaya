@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ExpeditionController;
 use App\Http\Controllers\OurTeamController;
 use App\Http\Controllers\PeakController;
@@ -81,4 +82,13 @@ Route::controller(TourController::class)
     ->group(function () {
         Route::get('/', 'index')->name('website.tours');
         Route::get('/{id}', 'show')->name('show_tour');
+    });
+
+// Booking route
+
+Route::controller(BookingController::class)
+    ->prefix('/bookings')
+    ->group(function(){
+        Route::post('/booking', 'addBooking');
+        Route::post('/inquiry', 'addInquiry');
     });
