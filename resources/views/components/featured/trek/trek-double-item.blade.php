@@ -7,12 +7,12 @@
 
             <div class="hidden lg:grid grid-cols-3  gap-2 bg-blue-100/10">
                 <div class="col-span-1 ">
-                    <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black lg:text-right ">Expedition</h5>
+                    <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black lg:text-right ">Trek</h5>
                     <h3 class="text-3xl tracking-wider text-accent lg:text-right ">With Sherpalaya</h3>
                     <p
                         class="text-md mt-2 text-preety text-slate-800 lg:text-right lg:text-wrap
                          first-line:uppercase first-line:font-light">
-                        {{ $landingPageSetting->expedition_activity_content }}
+                        {{ $landingPageSetting->trek_activity_content }}
                     </p>
                     <div class="h-4"></div>
 
