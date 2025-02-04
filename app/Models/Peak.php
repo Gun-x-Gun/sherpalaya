@@ -94,6 +94,16 @@ class Peak extends Model implements CanBeEasySearched
             ]);
     }
 
+    public function sherpas()
+    {
+        return $this->belongsToMany(
+            OurSherpa::class,
+            'our_sherpa_peak'
+        )->using(OurSherpaPeak::class)
+            ->withPivot([
+                'order'
+            ]);
+    }
     public function region(): BelongsTo
     {
         return $this->belongsTo(Region::class);

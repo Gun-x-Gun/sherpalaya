@@ -93,6 +93,16 @@ class Expedition extends Model implements CanBeEasySearched
                 'order'
             ]);
     }
+    public function sherpas()
+    {
+        return $this->belongsToMany(
+            OurSherpa::class,
+            'our_sherpa_expedition'
+        )->using(OurSherpaExpedition::class)
+            ->withPivot([
+                'order'
+            ]);
+    }
 
     public function region(): BelongsTo
     {

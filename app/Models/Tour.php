@@ -21,9 +21,6 @@ class Tour extends Model implements CanBeEasySearched
     use EasySearch;
     use HasFactory;
     use HasInquiries;
-
-
-
     protected $fillable = [
         'cover_image_id',
         'feature_image_id',
@@ -90,6 +87,16 @@ class Tour extends Model implements CanBeEasySearched
             Destination::class,
             'destination_tour'
         )->using(DestinationTour::class)
+            ->withPivot([
+                'order'
+            ]);
+    }
+    public function sherpas()
+    {
+        return $this->belongsToMany(
+            OurSherpa::class,
+            'our_sherpa_tour'
+        )->using(OurSherpaTour::class)
             ->withPivot([
                 'order'
             ]);

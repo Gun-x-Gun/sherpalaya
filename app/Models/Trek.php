@@ -97,6 +97,16 @@ class Trek extends Model implements CanBeEasySearched
                 'order'
             ]);
     }
+    public function sherpas()
+    {
+        return $this->belongsToMany(
+            OurSherpa::class,
+            'our_sherpa_trek'
+        )->using(OurSherpaTrek::class)
+            ->withPivot([
+                'order'
+            ]);
+    }
 
     public function coverImage(): BelongsTo
     {
