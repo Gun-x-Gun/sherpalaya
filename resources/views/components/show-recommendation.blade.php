@@ -1,9 +1,8 @@
-<div class="bg-blue-100/60">
-    <div class="h-4"></div>
+<div class="bg-transparent">
+    {{-- <div class="h-4"></div> --}}
     <h5 class="card-title text-left">
-        <span
-            class=" uppercase tracking-wider font-light text-4xl text-primary rounded-full p-4">
-            mentioned ...
+        <span class=" uppercase tracking-wider font-light text-4xl text-primary rounded-full">
+            REcommended
         </span>
     </h5>
     <div class="h-4"></div>
@@ -12,7 +11,7 @@
             @if ($recommendationDatas->isNotEmpty())
                 @if ($recommendationDatas->count() === 1)
                     <div>
-                        <div class=" md:gap-8 flex flex-col gap-2 bg-blue-100/10 mx-4">
+                        <div class=" md:gap-8 flex flex-col gap-2 bg-blue-100/10 ">
                             @foreach ($recommendationDatas as $recommendation)
                                 <div
                                     class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
@@ -24,11 +23,11 @@
                                     <a href="{{ $recommendation->url }}">
                                         <div class="card-body absolute inset-0 justify-end">
                                             <div class="text-center">
-                                                <h2 class="font-normal text-white text-2xl uppercase">
+                                                <h2 class="font-black text-white text-2xl uppercase">
                                                     {{ $recommendation->title }}
                                                 </h2>
                                                 <h2
-                                                    class="font-normal tracking-normal text-white line-clamp-2 text-2xl">
+                                                    class="font-black tracking-normal text-white line-clamp-2 text-2xl">
                                                     {{ $recommendation->duration }}
                                                 </h2>
                                             </div>
@@ -37,12 +36,11 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="h-14"></div>
+                        <div class="h-4"></div>
                     </div>
                 @elseif ($recommendationDatas->count() === 2)
                     <div class="bg-blue-100/60">
-
-                        <div class="lg:grid grid-cols-2  flex flex-col gap-2 bg-blue-100/10 mx-4">
+                        <div class="lg:grid grid-cols-2  flex flex-col gap-2 bg-blue-100/10 ">
                             @foreach ($recommendationDatas as $recommendation)
                                 <div
                                     class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
@@ -54,11 +52,11 @@
                                     <a href="{{ $recommendation->url }}">
                                         <div class="card-body absolute inset-0 justify-end">
                                             <div class="text-center">
-                                                <h2 class="font-normal text-white text-2xl uppercase">
+                                                <h2 class="font-black text-white text-2xl uppercase">
                                                     {{ $recommendation->title }}
                                                 </h2>
                                                 <h2
-                                                    class="font-normal tracking-normal text-white line-clamp-2 text-2xl">
+                                                    class="font-black tracking-normal text-white line-clamp-2 text-2xl">
                                                     {{ $recommendation->duration }}
                                                 </h2>
                                             </div>
@@ -67,12 +65,12 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="h-14"></div>
+                        <div class="h-4"></div>
                     </div>
                 @elseif ($recommendationDatas->count() === 3)
                     <div class="bg-blue-100/60">
 
-                        <div class="hidden lg:grid grid-cols-3  gap-2 bg-blue-100/10 lg:mx-4">
+                        <div class="hidden lg:grid grid-cols-3  gap-2 bg-blue-100/10 lg:">
                             @foreach ($recommendationDatas as $recommendation)
                                 <div
                                     class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
@@ -115,11 +113,11 @@
                                                 <a href="{{ $recommendation->url }}">
                                                     <div class="card-body absolute inset-0 justify-end max-w-sm">
                                                         <div class="text-center">
-                                                            <h2 class="font-normal text-white text-2xl uppercase">
+                                                            <h2 class="font-black text-white text-2xl uppercase">
                                                                 {{ $recommendation->title }}
                                                             </h2>
                                                             <h2
-                                                                class="font-normal tracking-normal text-white line-clamp-2 text-2xl">
+                                                                class="font-black tracking-normal text-white line-clamp-2 text-2xl">
                                                                 {{ $recommendation->duration }}
                                                             </h2>
                                                         </div>
@@ -144,7 +142,7 @@
                                     class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
                             </button>
                         </div>
-                        <div class="h-14"></div>
+                        <div class="h-4"></div>
                     </div>
 
                     {{-- >4 --}}
@@ -168,11 +166,11 @@
                                                 <a href="{{ $recommendation->url }}">
                                                     <div class="card-body absolute inset-0 justify-end max-w-sm">
                                                         <div class="text-center">
-                                                            <h2 class="font-normal text-white text-2xl uppercase">
+                                                            <h2 class="font-black text-white text-2xl uppercase">
                                                                 {{ $recommendation->title }}
                                                             </h2>
                                                             <h2
-                                                                class="font-normal tracking-normal text-white line-clamp-2 text-2xl">
+                                                                class="font-black tracking-normal text-white line-clamp-2 text-2xl">
                                                                 {{ $recommendation->duration }}
                                                             </h2>
                                                         </div>
@@ -197,7 +195,7 @@
                                     class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
                             </button>
                         </div>
-                        <div class="h-14"></div>
+                        <div class="h-4"></div>
                     </div>
                 @endif
             @endif
