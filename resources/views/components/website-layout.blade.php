@@ -7,6 +7,9 @@
     <title>{{ config('app.name') }}</title>
 
     @vite('resources/css/app.css')
+    @livewireStyles
+
+    @stack('styles')
 
 </head>
 
@@ -28,7 +31,9 @@
 
 
     @vite('resources/js/app.js')
-
+    @livewireScripts
+    @stack('modals')
+    @stack('scripts')
 </body>
 
 </html>
