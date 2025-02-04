@@ -40,7 +40,8 @@
 
 
                 {{-- mobile section tour --}}
-                @livewire('booking.mobile-booking-section', ['bookingFor' => $tour])
+                <x-booking.mobile-booking-section :bookingFor="$tour"/>
+
 
                 {{-- stat-mobile --}}
 
@@ -91,7 +92,7 @@
                                     <x-show-tour.tour-stat-section :tour="$tour" />
 
                                     {{-- booking-section --}}
-                @livewire('booking.booking-section', ['bookingFor' => $tour])
+                                    <x-booking.booking-section :bookingFor="$tour"/>
 
                                     <div class="h-10"></div>
                                 </div>

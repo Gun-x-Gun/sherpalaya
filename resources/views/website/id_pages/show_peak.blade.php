@@ -48,7 +48,7 @@
 
 
                 {{-- mobile-booking-section --}}
-                @livewire('booking.mobile-booking-section', ['bookingFor' => $peak])
+                <x-booking.mobile-booking-section :bookingFor="$peak"/>
 
                 {{-- stat-mobile --}}
                 <x-show-peak.peak-mobile-stat :peak="$peak" />
@@ -97,7 +97,7 @@
                                     <x-show-peak.peak-stat-section :peak="$peak" />
 
                                     {{-- booking-section --}}
-                @livewire('booking.booking-section', ['bookingFor' => $peak])
+                                    <x-booking.booking-section :bookingFor="$peak"/>
 
 
                                     <div class="h-10"></div>

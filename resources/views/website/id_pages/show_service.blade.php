@@ -50,7 +50,9 @@
                 'name' => $service->title,
             ],
         ]" />
-        @livewire('booking.mobile-booking-section', ['bookingFor' => $service])
+
+        <x-booking.mobile-booking-section :bookingFor="$service" />
+
 
         <div class="mx-4 2xl:mx-44 mt-4">
             {{-- description  --}}
@@ -85,7 +87,8 @@
                             </div>
                         </div>
                     @endif
-                    @livewire('booking.booking-section', ['bookingFor' => $service])
+                    <x-booking.booking-section :bookingFor="$service"/>
+
 
 
                 </div>
