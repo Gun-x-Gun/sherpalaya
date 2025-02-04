@@ -97,13 +97,15 @@
                                     <x-show-peak.peak-stat-section :peak="$peak" />
 
                                     {{-- booking-section --}}
-                                    <x-booking.booking-section :bookingFor="$peak"/>
+                                                        <x-booking.booking-section :bookingFor="$peak"/>
 
 
                                     <div class="h-10"></div>
                                 </div>
                             </div>
+
                         </div>
+                        <x-show-recommendation :recommendFor="$peak" />
                     </div>
                 </div>
                 {{-- scrollspy-body -end --}}
