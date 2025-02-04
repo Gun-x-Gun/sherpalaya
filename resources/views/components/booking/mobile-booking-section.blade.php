@@ -5,7 +5,7 @@
     <button class="btn btn-info  uppercase" aria-haspopup="dialog" aria-expanded="false"
         aria-controls="mobile-booking-section-inquiry-modal"
         data-overlay="#mobile-booking-section-inquiry-modal">Inquiry</button>
-    <a href="{{ $bookingFor->getWhatsappUrl() }}" class="btn btn-success uppercase" target="_blank">
+    <a href="{{ $bookingFor->getWhatsappUrl() }}" class="btn btn-success uppercase text-white" target="_blank">
         Whatsapp
     </a>
     @push('modals')
