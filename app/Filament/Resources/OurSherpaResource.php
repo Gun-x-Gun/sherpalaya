@@ -50,6 +50,15 @@ class OurSherpaResource extends Resource
                     ->columns(2)
                     ->schema([
                         Section::make('')
+                        ->columnSpan(1)
+                            ->schema([
+                                CuratorPicker::make('profile_picture_id')
+                                    ->color('primary')
+                                    ->label('Cover Image')
+                                    ->hint('for tour page')
+                                    ->relationship('profilePicture', 'id'),
+                            ]),
+                        Section::make('')
                             ->columnSpan(1)
                             ->schema([
                                 TextInput::make('name')
@@ -75,15 +84,6 @@ class OurSherpaResource extends Resource
                                     'underline',
                                     'undo',
                                 ]),
-                            ]),
-                        Section::make('')
-                        ->columnSpan(1)
-                            ->schema([
-                                CuratorPicker::make('profile_picture_id')
-                                    ->color('primary')
-                                    ->label('Cover Image')
-                                    ->hint('for tour page')
-                                    ->relationship('profilePicture', 'id'),
                             ]),
                     ]),
                 Section::make()
