@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
             KeyHighlightSeeder::class,
             EssentialTipsSeeder::class,
             ReviewSeeder::class,
+            OurSherpasSeeder::class,
         ]);
     }
 }
