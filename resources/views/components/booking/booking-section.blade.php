@@ -13,6 +13,10 @@
             aria-controls="booking-section-inquiry-modal" data-overlay="#booking-section-inquiry-modal"> Inquiry
         </button>
 
+        <a href="{{ $bookingFor->getWhatsappUrl() }}" class="btn btn-success btn-wide uppercase" target="_blank">
+            Whatsapp
+        </a>
+
     </div>
 
     @push('modals')
@@ -39,7 +43,8 @@
                             </div>
                             <div class="w-full my-2">
                                 <label class="label label-text" for="email"> Email </label>
-                                <input type="email" placeholder="john@doe.com" class="input" id="email" name="email" />
+                                <input type="email" placeholder="john@doe.com" class="input" id="email"
+                                    name="email" />
                             </div>
 
                             <div class="w-full my-2">
@@ -50,7 +55,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-soft btn-secondary"
                                 data-overlay="#booking-section-booking-modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Request Booking</button>
                         </div>
                     </form>
                 </div>
@@ -79,7 +84,8 @@
                             </div>
                             <div class="w-full my-2">
                                 <label class="label label-text" for="email"> Email </label>
-                                <input type="email" placeholder="john@doe.com" class="input" id="email"  name="email" />
+                                <input type="email" placeholder="john@doe.com" class="input" id="email"
+                                    name="email" />
                             </div>
 
                             <div class="w-full my-2">
@@ -90,7 +96,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-soft btn-secondary"
                                 data-overlay="#booking-section-inquiry-modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Inquire Nows</button>
                         </div>
                     </form>
                 </div>

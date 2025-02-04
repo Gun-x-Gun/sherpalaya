@@ -1,9 +1,13 @@
 <div class="fixed bottom-0 w-full card-actions justify-center pt-2 pb-2 bg-white z-10  xl:hidden">
     <button class="btn btn-primary  uppercase" aria-haspopup="dialog" aria-expanded="false"
-    aria-controls="mobile-booking-section-booking-modal" data-overlay="#mobile-booking-section-booking-modal">Book Trip</button>
+        aria-controls="mobile-booking-section-booking-modal" data-overlay="#mobile-booking-section-booking-modal">Book
+        Trip</button>
     <button class="btn btn-info  uppercase" aria-haspopup="dialog" aria-expanded="false"
-    aria-controls="mobile-booking-section-inquiry-modal" data-overlay="#mobile-booking-section-inquiry-modal">Inquiry</button>
-
+        aria-controls="mobile-booking-section-inquiry-modal"
+        data-overlay="#mobile-booking-section-inquiry-modal">Inquiry</button>
+    <a href="{{ $bookingFor->getWhatsappUrl() }}" class="btn btn-success uppercase" target="_blank">
+        Whatsapp
+    </a>
     @push('modals')
         {{-- Booking form modal --}}
         <div id="mobile-booking-section-booking-modal" class="overlay modal overlay-open:opacity-100 hidden" role="dialog"
@@ -28,7 +32,8 @@
                             </div>
                             <div class="w-full my-2">
                                 <label class="label label-text" for="email"> Email </label>
-                                <input type="email" placeholder="john@doe.com" class="input" id="email" name="email" />
+                                <input type="email" placeholder="john@doe.com" class="input" id="email"
+                                    name="email" />
                             </div>
 
                             <div class="w-full my-2">
@@ -39,7 +44,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-soft btn-secondary"
                                 data-overlay="#mobile-booking-section-booking-modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Request Booking</button>
                         </div>
                     </form>
                 </div>
@@ -68,7 +73,8 @@
                             </div>
                             <div class="w-full my-2">
                                 <label class="label label-text" for="email"> Email </label>
-                                <input type="email" placeholder="john@doe.com" class="input" id="email" name="email" />
+                                <input type="email" placeholder="john@doe.com" class="input" id="email"
+                                    name="email" />
                             </div>
 
                             <div class="w-full my-2">
@@ -79,7 +85,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-soft btn-secondary"
                                 data-overlay="#mobile-booking-section-inquiry-modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Inquire Now</button>
                         </div>
                     </form>
                 </div>

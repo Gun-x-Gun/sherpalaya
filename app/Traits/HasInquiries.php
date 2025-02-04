@@ -16,10 +16,12 @@ trait HasInquiries
 
     public function getWhatsappUrl(): string
     {
-        return "https://wa.me/" . config('services.whatsapp.number') . "?" . http_build_query([
-            'text' => "Hey there! I am contacting for a package listed on your website at: " . $this->getUrl(),
-        ]);
+        $siteUrl = $this->getUrl(); // Get the actual URL
+        $message = "Hey there! I am contacting for a package listed on your website at: " . $siteUrl;
+
+        return "https://wa.me/" . config('services.whatsapp.number') . "?text=" . urlencode($message);
     }
+
 
     public function getUrl(): string
     {
