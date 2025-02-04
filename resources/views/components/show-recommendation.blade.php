@@ -1,28 +1,22 @@
 <div class="bg-blue-100/60">
     <div class="h-4"></div>
-
+    <h5 class="card-title text-left">
+        <span
+            class=" uppercase tracking-wider font-light text-4xl text-primary rounded-full p-4">
+            mentioned ...
+        </span>
+    </h5>
+    <div class="h-4"></div>
     @foreach ($recommendations as $key => $recommendationDatas)
         <div class="bg-blue-100/20">
             @if ($recommendationDatas->isNotEmpty())
                 @if ($recommendationDatas->count() === 1)
                     <div>
-                        <div class="h-4"></div>
-                        <h5 class="card-title text-secondary uppercase font-normal text-3xl text-center">
-                            <h5 class="card-title text-center">
-                                <span
-                                    class=" uppercase tracking-wider font-bold text-xl badge  badge-outline badge-primary rounded-full p-4">
-                                    mentioned {{ $key }}
-                                </span>
-                            </h5>
-                        </h5>
-                        <div class="h-4"></div>
-                        <div class="lg:grid grid-cols-6 md:gap-8 flex flex-col gap-2 bg-blue-100/10">
-                            <div>
-                            </div>
+                        <div class=" md:gap-8 flex flex-col gap-2 bg-blue-100/10 mx-4">
                             @foreach ($recommendationDatas as $recommendation)
                                 <div
-                                    class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-4">
-                                    <figure class="h-[20rem] w-full">
+                                    class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
+                                    <figure class="h-[30rem] w-full">
                                         <img src="{{ $recommendation->coverImage }}"
                                             alt="{{ $recommendation->title }} Cover Image"
                                             class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
@@ -30,10 +24,11 @@
                                     <a href="{{ $recommendation->url }}">
                                         <div class="card-body absolute inset-0 justify-end">
                                             <div class="text-center">
-                                                <h2 class="font-bold text-white text-2xl uppercase">
+                                                <h2 class="font-normal text-white text-2xl uppercase">
                                                     {{ $recommendation->title }}
                                                 </h2>
-                                                <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                                <h2
+                                                    class="font-normal tracking-normal text-white line-clamp-2 text-2xl">
                                                     {{ $recommendation->duration }}
                                                 </h2>
                                             </div>
@@ -46,16 +41,7 @@
                     </div>
                 @elseif ($recommendationDatas->count() === 2)
                     <div class="bg-blue-100/60">
-                        <div class="h-4"></div>
-                        <h5 class="card-title text-secondary uppercase font-normal text-3xl text-center">
-                            <h5 class="card-title text-center">
-                                <span
-                                    class=" uppercase tracking-wider font-bold text-xl badge  badge-outline badge-primary rounded-full p-4">
-                                    mentioned {{ $key }}
-                                </span>
-                            </h5>
-                        </h5>
-                        <div class="h-4"></div>
+
                         <div class="lg:grid grid-cols-2  flex flex-col gap-2 bg-blue-100/10 mx-4">
                             @foreach ($recommendationDatas as $recommendation)
                                 <div
@@ -68,10 +54,11 @@
                                     <a href="{{ $recommendation->url }}">
                                         <div class="card-body absolute inset-0 justify-end">
                                             <div class="text-center">
-                                                <h2 class="font-bold text-white text-2xl uppercase">
+                                                <h2 class="font-normal text-white text-2xl uppercase">
                                                     {{ $recommendation->title }}
                                                 </h2>
-                                                <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                                <h2
+                                                    class="font-normal tracking-normal text-white line-clamp-2 text-2xl">
                                                     {{ $recommendation->duration }}
                                                 </h2>
                                             </div>
@@ -84,14 +71,7 @@
                     </div>
                 @elseif ($recommendationDatas->count() === 3)
                     <div class="bg-blue-100/60">
-                        <div class="h-4"></div>
-                        <h5 class="card-title text-center">
-                            <span
-                                class=" uppercase tracking-wider font-bold text-xl badge  badge-outline badge-primary rounded-full p-4">
-                                mentioned {{ $key }}
-                            </span>
-                        </h5>
-                        <div class="h-4"></div>
+
                         <div class="hidden lg:grid grid-cols-3  gap-2 bg-blue-100/10 lg:mx-4">
                             @foreach ($recommendationDatas as $recommendation)
                                 <div
@@ -104,10 +84,11 @@
                                     <a href="{{ $recommendation->url }}">
                                         <div class="card-body absolute inset-0 justify-end">
                                             <div class="text-center">
-                                                <h2 class="font-bold text-white text-2xl uppercase">
+                                                <h2 class="font-normal text-white text-2xl uppercase">
                                                     {{ $recommendation->title }}
                                                 </h2>
-                                                <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                                <h2
+                                                    class="font-normal tracking-normal text-white line-clamp-2 text-2xl">
                                                     {{ $recommendation->duration }}
                                                 </h2>
                                             </div>
@@ -134,11 +115,11 @@
                                                 <a href="{{ $recommendation->url }}">
                                                     <div class="card-body absolute inset-0 justify-end max-w-sm">
                                                         <div class="text-center">
-                                                            <h2 class="font-bold text-white text-2xl uppercase">
+                                                            <h2 class="font-normal text-white text-2xl uppercase">
                                                                 {{ $recommendation->title }}
                                                             </h2>
                                                             <h2
-                                                                class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                                                class="font-normal tracking-normal text-white line-clamp-2 text-2xl">
                                                                 {{ $recommendation->duration }}
                                                             </h2>
                                                         </div>
@@ -169,14 +150,6 @@
                     {{-- >4 --}}
                 @elseif ($recommendationDatas->count() > 3)
                     <div class="bg-blue-100/10">
-                        <div class="h-4"></div>
-                        <h5 class="card-title text-center">
-                            <span
-                                class=" uppercase tracking-wider font-bold text-xl badge  badge-outline badge-primary rounded-full p-4">
-                                mentioned {{ $key }}
-                            </span>
-                        </h5>
-                        <div class="h-4"></div>
                         <div id="multi-slide"
                             data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8, "md": 2.5, "lg": 3.8 } }'
                             class="relative w-full">
@@ -195,11 +168,11 @@
                                                 <a href="{{ $recommendation->url }}">
                                                     <div class="card-body absolute inset-0 justify-end max-w-sm">
                                                         <div class="text-center">
-                                                            <h2 class="font-bold text-white text-2xl uppercase">
+                                                            <h2 class="font-normal text-white text-2xl uppercase">
                                                                 {{ $recommendation->title }}
                                                             </h2>
                                                             <h2
-                                                                class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                                                class="font-normal tracking-normal text-white line-clamp-2 text-2xl">
                                                                 {{ $recommendation->duration }}
                                                             </h2>
                                                         </div>
@@ -231,3 +204,4 @@
         </div>
     @endforeach
 </div>
+<div class="h-2"></div>
