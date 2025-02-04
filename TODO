@@ -1,12 +1,14 @@
 Neema Dai:
     ☐ our sherpas
-    ☐ destination page
+    ✘ destination page @cancelled(25-02-04 19:42)
     ☐ Translation
     ☐ Sound in home page carousel
-    ☐ Whatsapp @started(25-02-04 18:56)
+    ✔ Whatsapp @done(25-02-04 19:42)
 
 
 Umanga:
+    ☐ Booking / Inquiry success and error handling
+    ✔ Whatsapp @done(25-02-04 19:42)
     ✔ Website Setting Seeder: @done(25-02-02 23:43)
     ✔ Testimonial @done(25-01-31 19:48)
     ✔ Home page carousel (Featured) @done(25-02-03 08:08)
@@ -16,7 +18,7 @@ Umanga:
         - expedition
         - peak
         - service
-    ☐ Booking and Inquiry + Whatsapp
+    ✔ Booking and Inquiry @done(25-02-04 19:05)
         - tour
         - trek
         - expedition
@@ -28,9 +30,11 @@ Umanga:
     ✔ Navbar: Tour [Counters] @done(25-02-02 23:43)
 
 Subin:
+    ✔ Recommendation @done(25-02-04 19:43)
     ☐ Internal link
     ☐ gallery clickable modal
     ☐ overall design
+    ☐ Our sherpas
     ✔ icons in sm nav @done(25-02-04 00:20)
     ✔ contact ma image @done(25-02-04 00:20)
     ✔ searchbar remove @done(25-02-04 00:20)
