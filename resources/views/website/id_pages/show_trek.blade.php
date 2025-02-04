@@ -43,7 +43,7 @@
 
                 {{-- mobile-booking-section --}}
 
-                <x-booking.mobile-booking-section :bookingFor="$trek"/>
+                <x-booking.mobile-booking-section :bookingFor="$trek" />
 
 
 
@@ -86,7 +86,6 @@
                                 <x-show-trek.scroll-spy-body.destination :trek="$trek" />
 
                                 {{-- recommendation --}}
-                                <x-show-trek.scroll-spy-body.trek-region-wise-recommendation :trek="$trek" />
                                 <div class="h-10"></div>
                             </div>
 
@@ -97,12 +96,14 @@
                                     <x-show-trek.stat-section :trek="$trek" />
 
                                     {{-- booking-section --}}
-                                    <x-booking.booking-section :bookingFor="$trek"/>
+                                    <x-booking.booking-section :bookingFor="$trek" />
 
                                     <div class="h-10"></div>
                                 </div>
                             </div>
                         </div>
+                        <x-show-recommendation :recommendFor="$trek" />
+
                     </div>
                 </div>
                 {{-- scrollspy-body -end --}}

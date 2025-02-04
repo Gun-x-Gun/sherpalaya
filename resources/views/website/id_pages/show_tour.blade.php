@@ -79,8 +79,7 @@
                                 {{-- destinations --}}
                                 <x-show-tour.scroll-spy-body.tour-destination :tour="$tour" />
 
-                                {{-- region wise recommendation --}}
-                                <x-show-tour.scroll-spy-body.tour-region-wise-recommendation :tour="$tour" />
+                                
 
                                 <div class="h-10 "></div>
                             </div>
@@ -98,6 +97,8 @@
                                 </div>
                             </div>
                         </div>
+                        <x-show-recommendation :recommendFor="$tour" />
+
                     </div>
                 </div>
                 {{-- scrollspy-body -end --}}

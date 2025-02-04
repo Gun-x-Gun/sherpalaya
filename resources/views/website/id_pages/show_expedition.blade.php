@@ -80,9 +80,6 @@
                                 {{-- destinations --}}
                                 <x-show-expedition.scroll-spy-body.expedition-destination :expedition="$expedition" />
 
-                                {{-- recommended --}}
-                                <x-show-expedition.scroll-spy-body.expedition-region-wise-recommendation
-                                    :expedition="$expedition" />
                                 <div class="h-10"></div>
                             </div>
 
@@ -99,6 +96,8 @@
                                 </div>
                             </div>
                         </div>
+                        <x-show-recommendation :recommendFor="$expedition" />
+
                     </div>
                 </div>
                 {{-- scrollspy-body -end --}}

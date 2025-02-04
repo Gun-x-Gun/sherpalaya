@@ -85,8 +85,6 @@
                                 {{-- destinations --}}
                                 <x-show-peak.scroll-spy-body.peak-destination :peak="$peak" />
 
-                                {{-- recommendation --}}
-                                <x-show-peak.scroll-spy-body.peak-region-wise-recommendation :peak="$peak" />
                                 <div class="h-10"></div>
                             </div>
 

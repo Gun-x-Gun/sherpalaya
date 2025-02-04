@@ -88,15 +88,10 @@
                         </div>
                     @endif
                     <x-booking.booking-section :bookingFor="$service"/>
-
-
-
                 </div>
             </div>
             <x-show-recommendation :recommendFor="$service" />
-
             <div class="h-10"></div>
         </div>
     </div>
-
 </x-website-layout>
