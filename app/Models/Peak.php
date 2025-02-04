@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Contracts\CanBeEasySearched;
+use App\Contracts\CanBeInquiried;
 use App\Enums\SearchType;
 use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorModelHelper;
@@ -16,7 +17,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Collection;
 
 
-class Peak extends Model implements CanBeEasySearched
+class Peak extends Model implements CanBeEasySearched, CanBeInquiried
 {
     use EasySearch;
     use HasFactory;

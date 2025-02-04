@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Booking;
 
+use App\Contracts\CanBeInquiried;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
@@ -13,7 +14,7 @@ class MobileBookingSection extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public Model $bookingFor,
+        public CanBeInquiried $bookingFor,
     )
     {
         //

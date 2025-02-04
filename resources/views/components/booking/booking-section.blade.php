@@ -29,7 +29,7 @@
                     </div>
                     <form action="/bookings/booking" method="POST">
                         @csrf
-                        <input type="hidden" name="inquiriable_id" value="{{ $bookingFor->id }}">
+                        <input type="hidden" name="inquiriable_id" value="{{ $bookingFor->getKey() }}">
                         <input type="hidden" name="inquiriable_type" value="{{ get_class($bookingFor) }}">
                         <div class="modal-body pt-0">
                             <div class="w-full my-2">
@@ -69,7 +69,7 @@
                     </div>
                     <form action="/bookings/inquiry" method="POST">
                         @csrf
-                        <input type="hidden" name="inquiriable_id" value="{{ $bookingFor->id }}">
+                        <input type="hidden" name="inquiriable_id" value="{{ $bookingFor->getKey() }}">
                         <input type="hidden" name="inquiriable_type" value="{{ get_class($bookingFor) }}">
                         <div class="modal-body pt-0">
                             <div class="w-full my-2">

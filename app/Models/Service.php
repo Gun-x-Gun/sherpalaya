@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Contracts\CanBeEasySearched;
+use App\Contracts\CanBeInquiried;
 use App\Enums\SearchType;
 use App\Helpers\CuratorModelHelper;
 use App\Traits\EasySearch;
@@ -12,7 +13,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 
-class Service extends Model implements CanBeEasySearched
+class Service extends Model implements CanBeEasySearched, CanBeInquiried
 {
     use EasySearch;
     use HasInquiries;

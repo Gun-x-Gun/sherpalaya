@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Contracts\CanBeEasySearched;
+use App\Contracts\CanBeInquiried;
 use App\Enums\SearchType;
 use App\Enums\TourType;
 use App\Helpers\CuratorModelHelper;
@@ -16,7 +17,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Collection;
 
 
-class Tour extends Model implements CanBeEasySearched
+class Tour extends Model implements CanBeEasySearched, CanBeInquiried
 {
     use EasySearch;
     use HasFactory;

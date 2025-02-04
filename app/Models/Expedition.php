@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Contracts\CanBeEasySearched;
+use App\Contracts\CanBeInquiried;
 use App\Enums\SearchType;
 use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorModelHelper;
@@ -15,7 +16,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Collection;
 
-class Expedition extends Model implements CanBeEasySearched
+class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
 {
     use EasySearch;
     use HasFactory;
