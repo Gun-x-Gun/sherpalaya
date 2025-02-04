@@ -14,6 +14,7 @@
         </button>
 
         <a href="{{ $bookingFor->getWhatsappUrl() }}" class="btn btn-success btn-wide uppercase text-white" target="_blank">
+            <span class="icon-[tabler--brand-whatsapp]"></span>
             Whatsapp
         </a>
 
