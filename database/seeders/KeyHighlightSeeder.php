@@ -61,7 +61,7 @@ class KeyHighlightSeeder extends Seeder
                 'description' => 'Surrounded by towering snow-covered peaks at Annapurna Base Camp, feeling small yet deeply connected to nature.',
             ]
         ];
-        
+
         $lobuche_peak_climbing = [
             [
                 'title' => 'The Rush of Ice Climbing Practice',
@@ -84,7 +84,7 @@ class KeyHighlightSeeder extends Seeder
                 'description' => 'Looking back at the towering peak you just climbed, realizing you’ve conquered both nature and personal limits.',
             ]
         ];
-        
+
         $everest_expedition = [
             [
                 'title' => 'The Thrill of Stepping into the Khumbu Icefall',
@@ -107,7 +107,7 @@ class KeyHighlightSeeder extends Seeder
                 'description' => 'Every step down feels surreal as the realization sinks in: you have climbed the highest mountain on Earth.',
             ]
         ];
-        
+
         $kathmandu_cultural_tour = [
             [
                 'title' => 'Watching Sunrise at Swayambhunath Stupa',
@@ -131,6 +131,82 @@ class KeyHighlightSeeder extends Seeder
             ]
         ];
 
+        $manaslu_circuit_trek = [
+            [
+                'title' => 'Walking Through Remote Himalayan Villages',
+                'description' => 'Experience the untouched beauty of Nubri and Tsum Valley, home to Tibetan-influenced cultures and monasteries.',
+            ],
+            [
+                'title' => 'Crossing the Thrilling Larkya La Pass (5,160m)',
+                'description' => 'The highest point of the trek offers breathtaking views of Himlung, Cheo, and Annapurna II, making the challenge worth it.',
+            ],
+            [
+                'title' => 'Exploring the Ancient Monasteries',
+                'description' => 'Visit centuries-old monasteries like Mu Gompa and Rachen Gompa, where monks chant amidst peaceful Himalayan surroundings.',
+            ],
+            [
+                'title' => 'Trekking Along the Budhi Gandaki River Gorge',
+                'description' => 'Follow the roaring Budhi Gandaki River through deep gorges, suspension bridges, and cascading waterfalls.',
+            ],
+            [
+                'title' => 'Spectacular Views of Manaslu (8,163m), the 8th Highest Peak',
+                'description' => 'Enjoy panoramic views of Manaslu and its surrounding peaks, standing majestically above the rugged terrain.',
+            ],
+            [
+                'title' => 'Walking Through Dense Rhododendron & Bamboo Forests',
+                'description' => 'The lower sections of the trek are filled with lush forests, turning vibrant red and pink in spring.',
+            ],
+            [
+                'title' => 'Staying in Traditional Tea Houses',
+                'description' => 'Enjoy warm hospitality in local teahouses, where simple yet hearty meals provide comfort after long trekking days.',
+            ],
+            [
+                'title' => 'A Less Crowded Alternative to the Annapurna Circuit',
+                'description' => 'Experience a more peaceful trekking route with pristine landscapes and fewer trekkers compared to the more commercialized Annapurna Circuit.',
+            ],
+            [
+                'title' => 'Encountering Unique Wildlife',
+                'description' => 'The Manaslu region is home to snow leopards, blue sheep, and Himalayan Thars, adding an adventurous touch to your journey.',
+            ],
+            [
+                'title' => 'Reaching the Isolated Tsum Valley (Optional Side Trip)',
+                'description' => 'A hidden gem with breathtaking landscapes, ancient monasteries, and a strong Tibetan Buddhist culture.',
+            ]
+        ];
+
+
+$langtang_highlights = [
+    [
+        'title' => 'A Challenging and Rewarding Trek',
+        'description' => 'Experience an adventurous and challenging trek near Kathmandu, offering stunning landscapes and cultural immersion.'
+    ],
+    [
+        'title' => 'Explore Valleys and Peaks',
+        'description' => 'Trek through the "Valley of Glaciers" (Langtang Valley), hike to viewpoints like Kyanjin Ri and Cherukuri Ri, and witness breathtaking mountain vistas, including Langtang Lirung, Naya Kanga, and Dorje Lakpa.'
+    ],
+    [
+        'title' => 'Sacred Lakes and High Passes',
+        'description' => 'Visit the sacred Gosainkunda Lake, a pilgrimage site for Hindus, and cross the challenging Lauribina La pass (4,610m).'
+    ],
+    [
+        'title' => 'Cultural Immersion',
+        'description' => 'Interact with the Tamang and Sherpa communities, experience their warm hospitality, and learn about their unique culture and traditions. Visit ancient monasteries and explore local markets and yak cheese factories.'
+    ],
+    [
+        'title' => 'Diverse Landscapes',
+        'description' => 'Traverse remote settlements, lush meadows, dense forests (including rhododendron forests), and rugged terrain, experiencing a variety of landscapes.'
+    ],
+    [
+        'title' => 'Wildlife Encounters',
+        'description' => 'Keep an eye out for potential wildlife sightings, including langur monkeys, especially in the lower sections of the trek near Shivapuri National Park.'
+    ],
+    [
+        'title' => 'Getaway from Kathmandu',
+        'description' => 'Explore the Chisapani region and the area around Sundarijal, popular destinations for those seeking a quick escape from the city.'
+    ],
+];
+
+
         $this->createKeyHighlights(
             Trek::first(),
             $everest_base_camp_trek
@@ -138,6 +214,14 @@ class KeyHighlightSeeder extends Seeder
         $this->createKeyHighlights(
             Trek::find(2),
             $annapurna_base_camp_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(3),
+            $manaslu_circuit_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(4),
+            $langtang_highlights
         );
         $this->createKeyHighlights(
             Peak::first(),

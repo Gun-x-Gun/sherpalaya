@@ -63,27 +63,34 @@ The best season for this trip starts from beginning of March to May and  Septemb
             ],
             'is_featured' => true,
         ]);
-
-        $mountain5  = CuratorSeederHelper::seedBelongsToMany(
-            $trek,
-            'images',
-            public_path('photos/mountain5.jpg')
+        $trek->destinations()->sync(
+            Destination::where('region_id', 1)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
         );
 
-        $mountain6  = CuratorSeederHelper::seedBelongsTo(
+        CuratorSeederHelper::seedBelongsTo(
             $trek,
             'cover_image_id',
             public_path('photos/mountain6.jpg')
         );
-        $mountain7  = CuratorSeederHelper::seedBelongsTo(
+        CuratorSeederHelper::seedBelongsTo(
             $trek,
             'feature_image_id',
             public_path('photos/mountain7.jpg')
         );
 
-        
-        
-        
+        CuratorSeederHelper::seedBelongsToMany(
+            $trek,
+            'images',
+            public_path('photos/mountain5.jpg')
+        );
+
+
+
 
         $trek2 = Trek::create([
             'title' => 'Annapurna Base Camp Trek',
@@ -127,14 +134,7 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'is_featured' => true,
         ]);
 
-        $trek->destinations()->sync(
-            Destination::where('region_id', 1)
-                ->inRandomOrder()
-                ->limit(5)
-                ->get()
-                ->pluck('id')
-                ->toArray()
-        );
+
         $trek2->destinations()->sync(
             Destination::where('region_id', 3)
                 ->inRandomOrder()
@@ -146,12 +146,12 @@ The best season for this trip starts from beginning of March to May and  Septemb
         CuratorSeederHelper::seedBelongsTo(
             $trek2,
             'cover_image_id',
-            $mountain7
+            public_path('photos/mountain7.jpg')
         );
         CuratorSeederHelper::seedBelongsTo(
             $trek2,
             'feature_image_id',
-            $mountain6
+            public_path('photos/mountain6.jpg')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -173,6 +173,157 @@ The best season for this trip starts from beginning of March to May and  Septemb
             $trek2,
             'images',
             public_path('photos/mountain4.jpg')
+        );
+
+
+        $trek3 = Trek::create([
+            'title' => 'Manaslu Circuit Trek',
+            'description' => 'The Manaslu Circuit Trek is a remote and stunning journey around the world’s eighth-highest peak, Mt. Manaslu (8,163m). This trek offers a spectacular blend of rich cultural heritage, breathtaking landscapes, and challenging high-altitude trekking.',
+            'duration' => '14',
+            'grade' => '8',
+            'starting_point' => 'Soti Khola',
+            'ending_point' => 'Besisahar',
+            'best_time_for_trek' => 'Spring (March-May) and Autumn (September-November)',
+            'starting_altitude' => 710,
+            'highest_altitude' => 5160,
+            'region_id' => 4,
+            'trek_difficulty' => TrekDifficulty::CHALLENGING,
+            'costs_include' => [
+                'Airport transfers upon arrival and departure.',
+                'Three nights in Kathmandu with a BB plan.',
+                'Sightseeing tour in Kathmandu on a private vehicle.',
+                'All necessary trekking permits (Manaslu Conservation Area, Annapurna Conservation Area, and Restricted Area Permit).',
+                'Tea house or lodge accommodation during the trek.',
+                'Three-course meals (breakfast, lunch, and dinner) during the trekking period.',
+                'A professional English-speaking trekking guide.',
+                'Porters to carry your luggage (1 porter for 2 trekkers).',
+                'Insurance for the guide and porters.',
+                'Ground transportation as per the itinerary.',
+                'All applicable government taxes and service charges.',
+            ],
+            'costs_exclude' => [
+                'Lunch and dinner in Kathmandu except for the farewell dinner.',
+                'Personal trekking gear and equipment.',
+                'Internet, battery charging, and hot showers at lodges.',
+                'Personal expenses such as laundry, drinks, and phone calls.',
+                'Travel insurance covering medical emergencies and helicopter evacuation.',
+                'Medical expenses and trip cancellations.',
+                'Any extra nights in Kathmandu due to early arrival or late departure.',
+                'Gratuities for guides, porters, and drivers.',
+                'Nepal entry visa fees.',
+            ],
+            'is_featured' => true,
+        ]);
+
+        $trek3->destinations()->sync(
+            Destination::where('region_id', 4)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+
+        // Adding images for Trek 3
+        CuratorSeederHelper::seedBelongsTo(
+            $trek3,
+            'cover_image_id',
+            public_path('photos/mountain9.jpg')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $trek3,
+            'feature_image_id',
+            public_path('photos/mountain9.jpg')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $trek3,
+            'images',
+            public_path('photos/mountain9.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $trek3,
+            'images',
+            public_path('photos/mountain8.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $trek3,
+            'images',
+            public_path('photos/mountain7.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $trek3,
+            'images',
+            public_path('photos/mountain6.jpg')
+        );
+
+        $trek4 = Trek::create([
+            'title' => 'Langtang Gosainkunda Trek',
+            'description' => 'The Langtang Gosainkunda trek is a popular trekking route in Nepal that combines the scenic beauty of the Langtang Valley with the spiritual significance of the Gosainkunda lakes. This trek offers diverse landscapes, ranging from lush green valleys and rhododendron forests to high-altitude alpine terrain and glacial lakes.  Its a culturally rich experience, allowing you to interact with the Tamang people and explore their unique traditions. The trek culminates at the sacred Gosainkunda lakes, a significant pilgrimage site for Hindus.  It is considered a moderate to challenging trek, suitable for those with some prior trekking experience.
+
+        The Langtang Gosainkunda trek offers a unique blend of natural beauty, cultural immersion, and spiritual significance. Its a great alternative to the more crowded Everest Base Camp trek, offering a more peaceful and intimate trekking experience. The best time to undertake this trek is during the pre-monsoon (March-May) and post-monsoon (September-November) seasons.',
+            'duration' => '17',
+            'grade' => '6', // Adjust grade as needed
+            'starting_point' => 'Syabrubesi',
+            'ending_point' => 'Kathmandu',
+            'best_time_for_trek' => 'Autumn (Sep-Oct-Nov) and Spring (March-April-May)',
+            'starting_altitude' => 1462, // Approximate starting altitude, adjust if needed
+            'highest_altitude' => 4609,
+            'region_id' => Region::find(5)->id, // Ensure you have Region data seeded
+            'trek_difficulty' => TrekDifficulty::CHALLENGING, // Or appropriate difficulty
+            'costs_include' => [
+                'Arrival and Departure Transport.',
+                'Accommodation in Kathmandu (Twin sharing) with breakfast.',
+                'Trekking Duffle Bag.',
+                'Breakfast, Lunch and Dinner during the Trekking.',
+                'Accommodation in Tea house (mountain lodge) during trekking.',
+                'Kathmandu - Syabrubesi and Sundarijal - Kathmandu transport.',
+                'Trekking Porter with Insurance (1 porter for 2 pax).',
+                'Trekking Guide with insurance.',
+                'Trekking Guide and Porters food and accommodation, wages etc.',
+                'Langtang Gosainkunda Trekking map.',
+                'First Aid kit.',
+                'Trekker’s Information Management system (TIMS).',
+                'Langtang National park entry fees.',
+                'Water purification tablets.',
+                'Farewell dinner with cultural program.',
+                'Government taxes.',
+                'Office service charge.',
+            ],
+            'costs_exclude' => [
+                'International Airfare.',
+                'Travel insurance.',
+                'Nepal entry Visa fee (US$ 50 for 30 days ad US$ 30 for 15 days).',
+                'Drinks, Dessert, Juice, Mineral Water, Heater charge, Hot Shower during the Trekking and main meals in cities.',
+                'Tips for Guide, Porter and driver.',
+            ],
+            'is_featured' => true,
+        ]);
+
+        $trek4->destinations()->sync(
+            Destination::where('region_id', 5) // Or appropriate region ID
+                ->inRandomOrder()
+                ->limit(5) // Adjust the number of destinations as needed
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $trek4,
+            'cover_image_id',
+            public_path('photos/qualitymount1.png') // Replace with actual image path
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $trek4,
+            'feature_image_id',
+            public_path('photos/mountain2.jpg') // Replace with actual image path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $trek4,
+            'images',
+            public_path('photos/mountain3.jpg') // Replace with actual image path, can be an array of paths
         );
     }
 }

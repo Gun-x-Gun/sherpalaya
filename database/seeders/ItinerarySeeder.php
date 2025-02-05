@@ -890,167 +890,889 @@ class ItinerarySeeder extends Seeder
             ],
         ];
 
-            $annapurnaItineraries = [
-                [
-                    'title' => 'Day 1: Arrival in Kathmandu',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::FLIGHT,
-                            'description' => "Arrive at Tribhuvan International Airport, transfer to your hotel. Rest and acclimatize to the altitude, prepare gears, and obtain necessary permits.",
-                        ],
+        $annapurnaItineraries = [
+            [
+                'title' => 'Day 1: Arrival in Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "Arrive at Tribhuvan International Airport, transfer to your hotel. Rest and acclimatize to the altitude, prepare gears, and obtain necessary permits.",
                     ],
                 ],
-                [
-                    'title' => 'Day 2: Fly to Pokhara and Drive to Nayapul',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::FLIGHT,
-                            'description' => "Take an early morning flight from Kathmandu to Pokhara, offering breathtaking views of the Annapurna and Dhaulagiri ranges.",
-                        ],
-                        [
-                            'type' => ItineraryTypes::TREK,
-                            'description' => "Drive to Nayapul and begin trekking to Tikhedhunga (1540m), passing terraced fields and rhododendron forests.",
-                        ],
+            ],
+            [
+                'title' => 'Day 2: Fly to Pokhara and Drive to Nayapul',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "Take an early morning flight from Kathmandu to Pokhara, offering breathtaking views of the Annapurna and Dhaulagiri ranges.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Drive to Nayapul and begin trekking to Tikhedhunga (1540m), passing terraced fields and rhododendron forests.",
                     ],
                 ],
-                [
-                    'title' => 'Day 3: Trek to Ghorepani',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::TREK,
-                            'description' => "Trek to Ghorepani (2850m) via Ulleri and Banthanti. Enjoy panoramic views of Machhapuchhre (Fishtail Peak) and Annapurna South.",
-                        ],
-                        [
-                            'type' => ItineraryTypes::ALTITUDE,
-                            'description' => "2,850 m",
-                        ],
-                        [
-                            'type' => ItineraryTypes::TREK_HOURS,
-                            'description' => "6-7 hours",
-                        ],
+            ],
+            [
+                'title' => 'Day 3: Trek to Ghorepani',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trek to Ghorepani (2850m) via Ulleri and Banthanti. Enjoy panoramic views of Machhapuchhre (Fishtail Peak) and Annapurna South.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,850 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
                     ],
                 ],
-                [
-                    'title' => 'Day 4: Hike to Poon Hill and Trek to Tadapani',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::TREK,
-                            'description' => "Hike early morning to Poon Hill (3210m) to witness breathtaking sunrise views over the Annapurna and Dhaulagiri ranges. Then descend to Ghorepani and trek to Tadapani (2630m).",
-                        ],
-                        [
-                            'type' => ItineraryTypes::ALTITUDE,
-                            'description' => "3,210 m (Poon Hill) and 2,630 m (Tadapani)",
-                        ],
-                        [
-                            'type' => ItineraryTypes::TREK_HOURS,
-                            'description' => "6-7 hours",
-                        ],
+            ],
+            [
+                'title' => 'Day 4: Hike to Poon Hill and Trek to Tadapani',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Hike early morning to Poon Hill (3210m) to witness breathtaking sunrise views over the Annapurna and Dhaulagiri ranges. Then descend to Ghorepani and trek to Tadapani (2630m).",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,210 m (Poon Hill) and 2,630 m (Tadapani)",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
                     ],
                 ],
-                [
-                    'title' => 'Day 5: Trek to Chhomrong',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::TREK,
-                            'description' => "Trek to Chhomrong (2170m), passing through rhododendron forests and Gurung villages. Immerse yourself in the local culture and enjoy stunning mountain views.",
-                        ],
-                        [
-                            'type' => ItineraryTypes::ALTITUDE,
-                            'description' => "2,170 m",
-                        ],
-                        [
-                            'type' => ItineraryTypes::TREK_HOURS,
-                            'description' => "5-6 hours",
-                        ],
+            ],
+            [
+                'title' => 'Day 5: Trek to Chhomrong',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trek to Chhomrong (2170m), passing through rhododendron forests and Gurung villages. Immerse yourself in the local culture and enjoy stunning mountain views.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,170 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "5-6 hours",
                     ],
                 ],
-                [
-                    'title' => 'Day 6: Trek to Himalaya',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::TREK,
-                            'description' => "Descend through rhododendron forests, cross suspension bridges, and ascend gradually to Himalaya (2600m).",
-                        ],
-                        [
-                            'type' => ItineraryTypes::ALTITUDE,
-                            'description' => "2,600 m",
-                        ],
-                        [
-                            'type' => ItineraryTypes::TREK_HOURS,
-                            'description' => "6-7 hours",
-                        ],
+            ],
+            [
+                'title' => 'Day 6: Trek to Himalaya',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Descend through rhododendron forests, cross suspension bridges, and ascend gradually to Himalaya (2600m).",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,600 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
                     ],
                 ],
-                [
-                    'title' => 'Day 7: Trek to Annapurna Base Camp via Machhapuchhre Base Camp',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::TREK,
-                            'description' => "Ascend to Machhapuchhre Base Camp (3700m), offering panoramic views of the Annapurna range, and then to Annapurna Base Camp (4130m), the highlight of the trek.",
-                        ],
-                        [
-                            'type' => ItineraryTypes::ALTITUDE,
-                            'description' => "4,130 m",
-                        ],
-                        [
-                            'type' => ItineraryTypes::TREK_HOURS,
-                            'description' => "6-7 hours",
-                        ],
+            ],
+            [
+                'title' => 'Day 7: Trek to Annapurna Base Camp via Machhapuchhre Base Camp',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Ascend to Machhapuchhre Base Camp (3700m), offering panoramic views of the Annapurna range, and then to Annapurna Base Camp (4130m), the highlight of the trek.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "4,130 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
                     ],
                 ],
-                [
-                    'title' => 'Day 8: Trek to Bamboo',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::TREK,
-                            'description' => "Descend to Bamboo (2310m), retracing your route through rhododendron forests and terraced fields.",
-                        ],
-                        [
-                            'type' => ItineraryTypes::ALTITUDE,
-                            'description' => "2,310 m",
-                        ],
-                        [
-                            'type' => ItineraryTypes::TREK_HOURS,
-                            'description' => "6-7 hours",
-                        ],
+            ],
+            [
+                'title' => 'Day 8: Trek to Bamboo',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Descend to Bamboo (2310m), retracing your route through rhododendron forests and terraced fields.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,310 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
                     ],
                 ],
-                [
-                    'title' => 'Day 9: Trek to Jhinu Danda and Drive to Pokhara',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::TREK,
-                            'description' => "Trek to Jhinu Danda (1940m), known for its hot springs. Relax and rejuvenate before driving back to Pokhara.",
-                        ],
-                        [
-                            'type' => ItineraryTypes::ALTITUDE,
-                            'description' => "1,940 m",
-                        ],
-                        [
-                            'type' => ItineraryTypes::TREK_HOURS,
-                            'description' => "5-6 hours",
-                        ],
+            ],
+            [
+                'title' => 'Day 9: Trek to Jhinu Danda and Drive to Pokhara',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trek to Jhinu Danda (1940m), known for its hot springs. Relax and rejuvenate before driving back to Pokhara.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "1,940 m",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "5-6 hours",
                     ],
                 ],
-                [
-                    'title' => 'Day 10: Drive or Fly Back to Kathmandu',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::FLIGHT,
-                            'description' => "Fly back to Kathmandu, bidding farewell to the mountains. Alternatively, take a scenic drive back to the capital.",
-                        ],
+            ],
+            [
+                'title' => 'Day 10: Drive or Fly Back to Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "Fly back to Kathmandu, bidding farewell to the mountains. Alternatively, take a scenic drive back to the capital.",
                     ],
                 ],
-                [
-                    'title' => 'Day 11: Departure',
-                    'details' => [
-                        [
-                            'type' => ItineraryTypes::FLIGHT,
-                            'description' => "Transfer to Tribhuvan International Airport for your departure flight.",
-                        ],
+            ],
+            [
+                'title' => 'Day 11: Departure',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "Transfer to Tribhuvan International Airport for your departure flight.",
                     ],
                 ],
-            ];
+            ],
+        ];
+
+        $manasluItineraries = [
+            [
+                'title' => 'Day 1: Welcome to Kathmandu and transfer to the hotel',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "We will welcome you at the Kathmandu airport upon landing. We will provide a seamless transfer to the hotel and help with your luggage. Take your time to rest and explore your surroundings. We have not planned anything on this day apart from a welcome dinner in the late evening with our company's core team.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Hotel",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 2: Full-day sightseeing tour of Swayambhunath Temple, Pashupatinath Temple, Bouddhanath Stupa, and Kathmandu Durbar Square',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "We have divided this day into two parts—some sightseeing and then trek preparation. You will be accompanied by a professional guide who can communicate well in English for sightseeing. You will visit tourist sites like Swayambhunath Temple, Pashupatinath Temple, Bouddhanath Stupa, and Kathmandu Durbar Square.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "After exploring these monuments, the guide will drop you at your hotel. We will then obtain the restricted area permit. You can spend some time resting and later join the trek briefing. Do any last-minute shopping and pack your duffle bags.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Hotel",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 3: Drive from Kathmandu to Machha Khola',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => "The ride from Kathmandu to Machha Khola is long and scenic. For the first few hours, you will follow a pitched highway, which gets bumpy from Arughat onwards. On the way, you will enjoy beautiful views of lush hills, terraces, waterfalls, rivers, and snow-capped mountains.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "890 m/2,965 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Teahouse",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Duration: 8-9 hours, Distance: 170 km/105 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 4: Trek from Machha Khola to Jagat',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Leaving Machha Khola, walk following the Budhi Gandaki river within forests. You may get to see butterflies, birds, and langur monkeys on the way. The trekking route is covered with lush vegetation. Passing by Khorla Besi and Tatopani, you will ascend to Doban. Cross a suspension bridge and trek past a landslide area to Yaruphant. From here, the trail climbs to Jagat.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "1,410 m/4,625 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Teahouse",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Distance: 22.2 km/13.7 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 5: Trek from Jagat to Deng',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Jagat onward, you will walk on a flat track and cross a suspension bridge over the Budhi Gandaki River. The trail then leads you to Philim and continues through dense rhododendrons and pine forests to Deng.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "1,804 m/5,917 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Teahouse",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "7 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Distance: 19.9 km/12.3 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 6: Trek from Deng to Namrung',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "From Deng, you will trek to Namrung village. Crossing a suspension bridge, ascend uphill to a settlement called Rana. From here, the trail goes west to the Budhi Gandaki Valley. Pass by dense forests and mani stones. On the way, you will come across Ghap and Prok villages. Further, ascend to Namrung, enjoying stunning views of Shringi Himal.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,630 m/8,626 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Teahouse",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Distance: 19.5 km/12.1 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 7: Trek from Namrung to Sama Gaon',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "As you trek from Namrung, the trail gets steep and rocky. Walk up to Lihi village and cross a stream. The trail then takes you to Sho village and continues to Lho village. The view of Simnang Himal along the way is fantastic. From here onwards, pass by bushes and rhododendron groves to Shyala village. Further, trek past terraced fields and landslide debris to Sama Gaun.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,530 m/11,581 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Teahouse",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "7-8 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Distance: 24.7 km/15.3 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 8: Acclimatization day - hike to Manaslu Base Camp or Pun Gyen Gompa',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => "You will spend a rest day in Sama Gaon. You have multiple hiking options, like Pun Gyen Gompa and Manaslu Base Camp. Both hikes are fantastic and offer a jaw-dropping mountain panorama. On the way to Manaslu Base Camp, you will also explore the hidden Birendra Lake. Likewise, on the way to Pun Gyen Gompa, you will come across PunGyen Glacier.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Teahouse",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Duration: 4-5 hours",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 9: Trek from Sama Gaon to Samdo',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "The trail ascends from Sama Gaon to a Tibetan refugee village called Samdo. You will walk up to pastures. The trail is steep. Witness towering Himalayan mountains around you as you go above the treeline. Further, cross a small wooden bridge and trek past Kani, a small settlement. From here, you will walk to Samdo, which offers a beautiful view of Mt. Manaslu, Ngadi Chuli, and Simnang Himal.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,875 m/12,713 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Teahouse",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "3-4 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Distance: 8.2 km/5 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 10: Trek from Samdo to Larke Phedi (Dharamsala)',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "From Samdo, you will hike to Larke Phedi. The trail goes along barren hills, offering mesmerizing snow-capped mountain views. You will trek following the Larke River and ascend to Larke Glacier. The final stretch of the way goes around the Salkha Khola Valley and uphill to Larke Phedi.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "4,480 m/14,698 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Teahouse",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "4-5 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Distance: 11.7 km/7.2 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 11: Trek from Dharamsala to Bimthang by crossing Larkya La Pass',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Wake up early and gradually ascend to the top of Larkya La pass. First, you will descend and walk via a moraine. The trail then goes downhill to a small alley and follows an unclear route. Further, cross the steep grass slope south and descend to four frozen lakes. From here, uphill climbing starts. You may have to walk in the snow. The view from the top of the pass is unreal. Now, you descend from the pass to Bimthang.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,720 m/12,205 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Teahouse",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "8-9 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Distance: 24.7 km/15.3 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 12: Trek from Bimthang to Dharapani',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trekking from Bimthang, you will ascend and descend along the Budhi Gandaki River. The trail goes through lush rhododendron forests. Karche onwards, the trail gets out of the forest. You will then follow a river bank to Gho. Further, descend through forests and small villages to Dharapani.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "1,910 m/6,266 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Teahouse",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Distance: 16 km/10 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 13: Trek to Chamje and drive to Besisahar',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Following lush hillsides and small settlements, you trek to Chamje village. The walking part ends here.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => "Further, you will use a local jeep and drive to Besisahar.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "760 m/2,493 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Lodge",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Duration: 3-4 hours trek & 4-5 hours drive, Distance: 15.5 km/9.6 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 14: Drive from Besisahar to Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => "Leaving Besisahar early in the morning and driving to Kathmandu. The road is bumpy in the first 2 hours of the ride. From Dumre onwards, you will enjoy a comfortable ride along a winding road across lush hills. Enjoy your remaining day relaxing in Kathmandu.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "1,400 m/4,593 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Hotel",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Duration: 6-7 hours, Distance: 176 km/109 miles",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 15: Free day in Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => "You have a free day in Kathmandu. Spend as you visit. Rest, explore tourist sites, and do window shopping in Thamel. In the late evening, we will meet and hand over the trek completion certificate.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Hotel",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 16: Trip ends! Fly back home with memories to cherish forever',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "Our team will drop you off at the international airport for your flight. Get ready on time and double-check your room before leaving.",
+                    ],
+                ],
+            ],
+        ];
+
+
+        $langtang_itinerary = [
+            [
+                'title' => 'Day 01: Arrival at Kathmandu and transfer to hotel',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "We will provide a seamless transfer to the hotel upon your arrival at the Kathmandu airport and help with your luggage. Take your time to rest and explore your surroundings. Later in the day, join the trek briefing and pack your duffle bags. Buy any missing trek gear or essentials.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Hotel",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 02: Drive from Kathmandu to Syabrubesi',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => "You will leave Kathmandu early in the morning and drive to Syabrubesi with your guide. The ride will be comfortable and scenic. The highway goes northwest of Kathmandu, offering beautiful views of lush hills, mountains, rivers, and terraced fields.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "1,503 m/4,655 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "8-9 hours drive, 122 km/75.8 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 03: Trek from Syabrubesi to Sherpagaon',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "After a delicious breakfast, start trekking from Syabrubesi. The trail gradually ascends and takes you across a suspension bridge. Follow a steep route across the bridge to Khanjim. From here, hike to Sherpagaon, savoring jaw-dropping views of Ganesh Himal on the way.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,563 m/8,408 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "4-5 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "9.8 km/6 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 04: Trek from Sherpagaon to Ghoda Tabela/Thangshyap',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Descend following a narrow trail to Rimche. From here, you will join the main Langtang Valley trail. Expect to see other fellow trekkers on the way. From Rimche, ascend to Thangshyap following a steep trail.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,190 m/10,466 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "4-5 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "11.4 km/7 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 05: Trek from Thangshyap to Langtang Village',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "After breakfast, you will leave Thangshyap and start trekking to Langtang village. You will see a significant change in scenery as the trail ascends to Langtang village. Mountains are much more prominent. You will pass a few small settlements and cross a landslide area.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,430 m/11,255 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "4-5 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "4 km/2.4 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 06: Trek to Kyanjin Gompa & Side Hike to Kyanjin Ri',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "From Langtang village, walk along hillsides and gradually ascend via meadows to Kyanjin Gompa. The views of Langtang Lirung and Ganesh Himal are stunning. The final ascend is steep. Kyanjin Gompa is the highest settlement in the Langtang Valley.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,865 m/12,675 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "3-4 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "6.8 km/4.2 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 07: Acclimatization Day: Hike to Cherukuri Ri',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Today, you will spend an acclimatization day in Kyanjin Gompa. In the morning, hike to Cherukuri Ri. It will be an adventurous hike. From here, you will see an incredible sunrise and breathtaking mountain views. Later in the day, visit the local cheese factory and explore the surrounding area.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "4,984 m/16,352 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "7-8 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 08: Trek from Kyanjin Gompa to Lama Hotel',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "After exploring the Langtang Valley, it is time to trek back to the Lama Hotel. From Kyanjin Gompa, you will follow the same trail and descend to Langtang Village. Cross a bridge and trek through forests to the Lama Hotel.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,470 m/8,103 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "21 km/13 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 09: Trek from Lama Hotel to Thulo Syabru',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "From Lama Hotel, descend along the Langtang Khola and pass by a small waterfall. The trail then goes through rhododendrons and bamboo forests to Thulo Sybrubesi. On the way, you will cross a suspension bridge and see superb views of Ganesh Himal.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,210 m/8,500 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "5-6 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "13 km/8 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 10: Trek from Thulo Syabru to Shin Gompa',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "The trail ascends to Dimsa village. From here, you will gradually walk to Foprang Danda. The views are fantastic from here. Further, you will trek via lush forests to Shi Gompa. Visit a cheese factory and an old monastery.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,330 m/10,925 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "5 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 11: Trek from Shin Gumba to Gosainkunda',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "After breakfast, you will continue trekking to Gosaikunda Lake. This part of the trail is mostly steep and rocky. You will trek through forests and slowly ascend to the holy Gosaikunda Lake.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "4,380 m/14,620 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6-7 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "11 km/6.8 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 12: Trek from Gosainkunda to Ghopte via Lauribina Pass',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "On this day, you will cross a mountain pass called Lauribina La. Descend along the lake's northern shore and soon follow an uphill route leading to the top of the pass. The view from the pass will be stunning. Crossing the pass, you will descend on a steep, rugged trail to Ghopte village.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "4,610 m/15,115 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "7-8 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 13: Trek from Ghopte to Tharepati',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "While trekking from Ghopte to Tharepati, you will enjoy a tranquil route. The trail descends to a beautiful stream and continues along a flat trail. Soon, the trail ascends along a barren hill, presenting stunning views of Dorje Lakpa, Gauri Shankar, Jugal Himal, and other mountains.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,640 m/11,942 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "5-6 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "8.5 km/5.2 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 14: Trek from Tharepati to Kutumsang',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "The trail from Tharepati continues through small villages of the Hyolmo community. Trek through a dense forest to Magengoth and continue to Panghu. You may take a lunch break here. The trail then descends via fir and rhododendron forests to Kutumsang.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,450 m/8,038 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "11 km/6.8 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 15: Trek from Kutumsang to Chisapani',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Leaving Kutumsang, you will ascend for a bit, then follow a downhill route to Gul Bhanjyang. From here, trek on a dusty road that soon gets steep and rocky and gradually descends to Chisapni.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,295 m/7,655 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "4 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Guesthouse",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 16: Trek from Chisapani to Sundarijal and Drive to Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "From Chisapani, you will walk downhill to Sundarijal. The trail is within the Shivapuri National Park. You will trek through lush forests. At Sundarijal, you will take a car and drive to Kathmandu. The remaining day is free in the city. Rest and shop.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "1,350 m/4,450 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "4 hours trek",
+                    ],
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => "1-hour drive",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "9.8 km/6 miles trek",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Hotel",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 17: Final Departure',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Hotel",
+                    ],
+
+                ],
+            ],
+        ];
+
 
 
         $this->createItinerariesWithDetails(
@@ -1060,6 +1782,14 @@ class ItinerarySeeder extends Seeder
         $this->createItinerariesWithDetails(
             Trek::find(2),
             $annapurnaItineraries
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(3),
+            $manasluItineraries
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(4),
+            $langtang_itinerary
         );
         $this->createItinerariesWithDetails(
             Peak::first(),

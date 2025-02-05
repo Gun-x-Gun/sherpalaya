@@ -39,7 +39,7 @@ class EssentialTipsSeeder extends Seeder
                 'description' => 'Respect local customs, greet with "Namaste," and take time to connect with Sherpa guides and fellow trekkers.',
             ]
         ];
-        
+
         $annapurna_base_camp_trek_tips = [
             [
                 'title' => 'Choose the Right Season',
@@ -62,7 +62,7 @@ class EssentialTipsSeeder extends Seeder
                 'description' => 'Annapurna is home to Gurung and Magar communities—learn a few Nepali phrases and enjoy their hospitality.',
             ]
         ];
-        
+
         $lobuche_peak_climbing_tips = [
             [
                 'title' => 'Gain Prior Trekking Experience',
@@ -85,7 +85,7 @@ class EssentialTipsSeeder extends Seeder
                 'description' => 'The high-altitude climb is exhausting—stay positive, take one step at a time, and trust your preparation.',
             ]
         ];
-        
+
         $everest_expedition_tips = [
             [
                 'title' => 'Build Years of Climbing Experience',
@@ -108,7 +108,7 @@ class EssentialTipsSeeder extends Seeder
                 'description' => 'An Everest expedition takes 6-8 weeks—mentally prepare for waiting, weather delays, and harsh conditions.',
             ]
         ];
-        
+
         $kathmandu_cultural_tour_tips = [
             [
                 'title' => 'Dress Modestly for Temples',
@@ -131,6 +131,87 @@ class EssentialTipsSeeder extends Seeder
                 'description' => 'Kathmandu is chaotic yet spiritual—embrace the honking, street cows, and bustling markets as part of the experience.',
             ]
         ];
+        $manaslu_circuit_trek_tips = [
+            [
+                'title' => 'Obtain the Right Permits',
+                'description' => 'You need the Manaslu Restricted Area Permit (RAP), Manaslu Conservation Area Permit (MCAP), and Annapurna Conservation Area Permit (ACAP).',
+            ],
+            [
+                'title' => 'Trek with a Licensed Guide & in a Group',
+                'description' => 'Independent trekking is not allowed; you must hire a licensed guide and trek with at least one other person.',
+            ],
+            [
+                'title' => 'Train for High-Altitude Trekking',
+                'description' => 'The trek involves long ascents, steep descents, and high altitudes—prepare with endurance training and regular hikes.',
+            ],
+            [
+                'title' => 'Acclimatize Properly to Avoid Altitude Sickness',
+                'description' => 'Take rest days in Samagaon or Samdo before crossing Larkya La Pass to prevent Acute Mountain Sickness (AMS).',
+            ],
+            [
+                'title' => 'Pack Smart & Dress in Layers',
+                'description' => 'Weather varies greatly; carry thermal layers, a down jacket, rain gear, and comfortable trekking shoes.',
+            ],
+            [
+                'title' => 'Start Early for Larkya La Pass',
+                'description' => 'The pass is long and challenging; start before dawn to avoid strong afternoon winds.',
+            ],
+            [
+                'title' => 'Carry Enough Cash',
+                'description' => 'ATMs are not available beyond Soti Khola—bring enough cash for accommodation, food, and any extra expenses.',
+            ],
+            [
+                'title' => 'Be Ready for Basic Accommodation & Limited Facilities',
+                'description' => 'The trek is remote, and teahouses offer simple food and accommodation—bring a sleeping bag for extra warmth.',
+            ],
+            [
+                'title' => 'Respect Local Culture & Traditions',
+                'description' => 'Manaslu is home to Tibetan-influenced communities; be respectful, ask before taking photos, and follow local customs.',
+            ],
+            [
+                'title' => 'Bring a Good Pair of Trekking Poles',
+                'description' => 'The rugged terrain, river crossings, and steep descents make trekking poles a valuable tool for stability and endurance.',
+            ]
+        ];
+        $langtang_tips = [
+            [
+                'title' => 'Permits',
+                'description' => 'Obtain the necessary permits: Langtang National Park Permit (USD 30) and TIMS Card (USD 20). Booking a package often simplifies this process.'
+            ],
+            [
+                'title' => 'Trek Difficulty',
+                'description' => 'This is a challenging trek due to high altitude (reaching 4,610m at Lauribina La pass), rugged terrain, and daily ascents and descents of around 6 hours. Prepare physically with regular exercise and hiking.'
+            ],
+            [
+                'title' => 'Altitude Sickness',
+                'description' => 'Acclimatization is crucial. Trek slowly, stay hydrated, avoid alcohol and smoking, and be aware of altitude sickness symptoms (headache, vomiting, difficulty breathing, etc.). Inform your guide immediately if you experience any symptoms.'
+            ],
+            [
+                'title' => 'Best Time to Trek',
+                'description' => 'Spring (March-May) and Autumn (late September-November) offer the most stable weather and moderate climate.'
+            ],
+            [
+                'title' => 'Travel Insurance',
+                'description' => 'Essential for emergency helicopter evacuation and medical expenses due to the remote location. Ensure your policy covers high-altitude trekking.'
+            ],
+            [
+                'title' => 'Accommodation and Food',
+                'description' => 'Expect basic guesthouse accommodations (twin sharing, shared toilets). Three meals a day are provided (Dal Bhat, Thukpa, Momo, Noodles are common), but pack extra snacks. Consider a single room for an additional cost if desired.'
+            ],
+            [
+                'title' => 'Packing',
+                'description' => 'Pack light but in layers. Essentials include comfortable underwear, trekking clothes, base/thermal layers, windproof/waterproof jacket/pants, fleece/down jacket, gloves, socks, scarf, beanie, sun hat, trekking boots, casual shoes, duffel bag, daypack, trekking pole, map, water bottle, sleeping bag, toiletries, first aid kit, snacks, camera, charger, journal, cash, and documents.'
+            ],
+            [
+                'title' => 'Physical Preparation',
+                'description' => 'Improve stamina, strength, and endurance through regular exercise, including strength training, aerobic exercises (swimming, cycling, running), and hiking. Practice breathing techniques.'
+            ],
+            [
+                'title' => 'Respect Local Culture',
+                'description' => 'Be mindful of local customs and traditions. Ask before taking photos and show respect for the Tamang and Sherpa communities.'
+            ],
+        ];
+
 
         $this->createEssentialTips(
             Trek::first(),
@@ -139,6 +220,14 @@ class EssentialTipsSeeder extends Seeder
         $this->createEssentialTips(
             Trek::find(2),
             $annapurna_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(3),
+            $manaslu_circuit_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(4),
+            $langtang_tips
         );
         $this->createEssentialTips(
             Peak::first(),

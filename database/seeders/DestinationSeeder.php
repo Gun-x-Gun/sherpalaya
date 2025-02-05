@@ -32,8 +32,38 @@ class DestinationSeeder extends Seeder
             ['name' => 'Nayapul', 'region_id' => 3, 'description' => 'The starting point of the Annapurna Base Camp trek, a small village located near Pokhara.', 'location' => ['lat' => 28.3646, 'lng' => 83.7785]],
             ['name' => 'Ghorepani', 'region_id' => 3, 'description' => 'A popular stop on the trek known for its stunning sunrise views from Poon Hill.', 'location' => ['lat' => 28.4007, 'lng' => 83.6985]],
             ['name' => 'Annapurna Base Camp', 'region_id' => 3, 'description' => 'The highlight of the trek, situated at 4130m with breathtaking views of the Annapurna massif.', 'location' => ['lat' => 28.5382, 'lng' => 83.8844]],
+            ['name' => 'Soti Khola', 'region_id' => 4, 'description' => 'The starting point of the Manaslu Circuit Trek, located at the banks of the Budhi Gandaki River.', 'location' => ['lat' => 28.1382, 'lng' => 84.8565]],
+            ['name' => 'Machha Khola', 'region_id' => 4, 'description' => 'A small Gurung village on the way to Manaslu Circuit, known for its riverside trails and tea houses.', 'location' => ['lat' => 28.2125, 'lng' => 84.8816]],
+            ['name' => 'Jagat', 'region_id' => 4, 'description' => 'A picturesque village marking the entrance to the Manaslu Conservation Area, requiring permits for further trekking.', 'location' => ['lat' => 28.3090, 'lng' => 84.8819]],
+            ['name' => 'Deng', 'region_id' => 4, 'description' => 'A small settlement with views of Shringi Himal, offering a cultural experience of Tibetan-influenced lifestyles.', 'location' => ['lat' => 28.4245, 'lng' => 84.8537]],
+            ['name' => 'Namrung', 'region_id' => 4, 'description' => 'A traditional Tibetan village in the Manaslu region, offering panoramic views of Mt. Manaslu and surrounding peaks.', 'location' => ['lat' => 28.5097, 'lng' => 84.7829]],
+            ['name' => 'Lho', 'region_id' => 4, 'description' => 'A beautiful village with a large monastery and breathtaking views of Mt. Manaslu.', 'location' => ['lat' => 28.5533, 'lng' => 84.7267]],
+            ['name' => 'Samagaon', 'region_id' => 4, 'description' => 'A high-altitude village offering spectacular views of Mt. Manaslu and a gateway to Manaslu Base Camp.', 'location' => ['lat' => 28.6076, 'lng' => 84.6733]],
+            ['name' => 'Manaslu Base Camp', 'region_id' => 4, 'description' => 'The base camp for climbers attempting Mt. Manaslu, located at 4,800 meters.', 'location' => ['lat' => 28.6334, 'lng' => 84.6721]],
+            ['name' => 'Samdo', 'region_id' => 4, 'description' => 'A remote village near the Tibetan border, offering spectacular mountain views and acclimatization opportunities.', 'location' => ['lat' => 28.6556, 'lng' => 84.6262]],
+            ['name' => 'Dharamsala (Larkya Phedi)', 'region_id' => 4, 'description' => 'A resting point before crossing the Larkya La Pass, featuring basic lodges and campsites.', 'location' => ['lat' => 28.6689, 'lng' => 84.5934]],
+            ['name' => 'Larkya La Pass', 'region_id' => 4, 'description' => 'The highest point of the Manaslu Circuit Trek at 5,160 meters, offering stunning views of Himlung Himal, Cheo Himal, and Annapurna II.', 'location' => ['lat' => 28.6753, 'lng' => 84.5692]],
+            ['name' => 'Bhimthang', 'region_id' => 4, 'description' => 'A beautiful valley after descending from Larkya La Pass, surrounded by mountains and glaciers.', 'location' => ['lat' => 28.6334, 'lng' => 84.4947]],
+            ['name' => 'Tilije', 'region_id' => 4, 'description' => 'A Gurung village marking the transition from the Manaslu region to the Annapurna region.', 'location' => ['lat' => 28.5823, 'lng' => 84.4678]],
+            ['name' => 'Dharapani', 'region_id' => 4, 'description' => 'The meeting point of the Manaslu Circuit and Annapurna Circuit Treks, from where trekkers exit towards Besisahar.', 'location' => ['lat' => 28.5402, 'lng' => 84.3714]],
+            ['name' => 'Besisahar', 'region_id' => 4, 'description' => 'The endpoint of the trek, a town that serves as the gateway to both the Manaslu and Annapurna trekking regions.', 'location' => ['lat' => 28.2346, 'lng' => 84.3760]],
+            ['name' => 'Syabrubesi', 'region_id' => 5, 'description' => 'The starting point of the Langtang Gosainkunda trek, a bustling town with lodges, shops, and access to the Langtang National Park.', 'location' => ['lat' => 28.0333, 'lng' => 85.4167]],
+            ['name' => 'Lama Hotel', 'region_id' => 5, 'description' => 'A basic lodge nestled in the forest, offering a first taste of the Langtang Valley\'s natural beauty.', 'location' => ['lat' => 28.0806, 'lng' => 85.4583]],
+            ['name' => 'Langtang Village', 'region_id' => 5, 'description' => 'A traditional Tamang village with stunning views of Langtang Lirung, offering cultural immersion and acclimatization.', 'location' => ['lat' => 28.1667, 'lng' => 85.5500]],
+            ['name' => 'Kyanjin Gompa', 'region_id' => 5, 'description' => 'The last permanent settlement in the Langtang Valley, featuring a monastery, cheese factory, and breathtaking mountain vistas.', 'location' => ['lat' => 28.2500, 'lng' => 85.5833]],
+            ['name' => 'Tserko Ri', 'region_id' => 5, 'description' => 'A popular viewpoint near Kyanjin Gompa, offering panoramic views of the Langtang range, including Langtang Lirung and Gang Chhenpo.', 'location' => ['lat' => 28.2667, 'lng' => 85.6000]],
+            ['name' => 'Yala Peak Base Camp', 'region_id' => 5, 'description' => 'Base camp for climbing Yala Peak, a trekking peak offering stunning views of the Langtang range.', 'location' => ['lat' => 28.2833, 'lng' => 85.6167]],
+            ['name' => 'Gosainkunda Lake', 'region_id' => 5, 'description' => 'The main lake in the Gosainkunda basin, a sacred pilgrimage site for Hindus and Buddhists, known for its stunning turquoise waters.', 'location' => ['lat' => 28.0833, 'lng' => 85.4167]],
+            ['name' => 'Saraswati Kunda', 'region_id' => 5, 'description' => 'One of the smaller lakes in the Gosainkunda basin, known for its clear waters and scenic beauty.', 'location' => ['lat' => 28.0750, 'lng' => 85.4250]],
+            ['name' => 'Bhairav Kunda', 'region_id' => 5, 'description' => 'Another lake in the Gosainkunda basin, offering panoramic views of the surrounding mountains.', 'location' => ['lat' => 28.0917, 'lng' => 85.4083]],
+            ['name' => 'Lauribinayak La Pass', 'region_id' => 5, 'description' => 'A high pass on the Langtang Gosainkunda trek, offering stunning views of the Langtang and Ganesh Himal ranges.', 'location' => ['lat' => 28.1167, 'lng' => 85.3833]],
+            ['name' => 'Sing Gompa', 'region_id' => 5, 'description' => 'A small village with a cheese factory and a monastery, offering a peaceful retreat with beautiful views.', 'location' => ['lat' => 28.1333, 'lng' => 85.3667]],
+            ['name' => 'Chandanbari', 'region_id' => 5, 'description' => 'A village on the Helambu trek, known for its apple orchards and traditional Tamang culture.', 'location' => ['lat' => 27.9833, 'lng' => 85.3167]],
+            ['name' => 'Melamchi Gaon', 'region_id' => 5, 'description' => 'A village in the Helambu region, offering a glimpse into rural life and beautiful mountain scenery.', 'location' => ['lat' => 27.9167, 'lng' => 85.2833]],
+            ['name' => 'Tarke Ghyang', 'region_id' => 5, 'description' => 'A picturesque village with a large Buddhist monastery, known for its peaceful atmosphere and stunning views.', 'location' => ['lat' => 27.8500, 'lng' => 85.2500]],
+            ['name' => 'Sundarijal', 'region_id' => 5, 'description' => 'The end point of the trek, a small town near Kathmandu with a beautiful waterfall and access to the Shivapuri Nagarjun National Park.', 'location' => ['lat' => 27.7500, 'lng' => 85.3333]],
         ];
-        
+
 
         $images = [
             'photos/mountain1.jpg',
@@ -47,9 +77,9 @@ class DestinationSeeder extends Seeder
 
         foreach ($destinations as $destinationData) {
             $destination = Destination::create($destinationData);
-            
+
             shuffle($images); // Randomize the images
-            
+
             foreach (array_slice($images, 0, rand(2, 3)) as $image) {
                 CuratorSeederHelper::seedBelongsToMany(
                     $destination,

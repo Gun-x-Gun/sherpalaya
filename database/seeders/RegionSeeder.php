@@ -22,5 +22,11 @@ class RegionSeeder extends Seeder
         Region::create([
             'name' => 'Annapurna',
         ]);
+        Region::create([
+            'name' => 'Manaslu',
+        ]);
+        Region::create([
+            'name' => 'Langtang',
+        ]);
     }
 }
