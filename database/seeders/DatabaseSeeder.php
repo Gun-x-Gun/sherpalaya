@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         CuratorSeederHelper::clearStorage();
 
         $this->call([
+            CategorySeeder::class,
             // KeyPointSeeder::class,
             ShieldSeeder::class,
             UserSeeder::class,
