@@ -132,19 +132,19 @@
         <div class="h-4"></div>
 
         @push('modals')
-            <div id="award-modal" class="overlay modal overlay-open:opacity-100 modal-middle hidden" role="dialog"
+            {{-- <div id="award-modal" class="overlay modal overlay-open:opacity-100 modal-middle hidden backdrop-blur-sm" role="dialog"
                 tabindex="-1">
                 <div
-                    class="modal-dialog overlay-open:opacity-100  h-full  modal-dialog-sm md:modal-dialog-lg xl:modal-dialog-xl">
-                    <div class="modal-content">
+                    class="modal-dialog overlay-open:opacity-100  h-full  modal-dialog-sm md:modal-dialog-lg xl:modal-dialog-xl ">
+                    <div class="modal-content backdrop-blur-sm">
                         <div class="modal-header">
-                            {{-- <h3 class="modal-title">Awards and Certificates</h3> --}}
+                            <h3 class="modal-title">Awards and Certificates</h3>
                             <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3"
                                 aria-label="Close" data-overlay="#award-modal">
                                 <span class="icon-[tabler--x] size-4"></span>
                             </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body ">
                             <div id="image-carousel"
                                 data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true }'
                                 class="relative w-full">
@@ -180,11 +180,66 @@
                                 </button>
                             </div>
                         </div>
-                        {{-- <div class="modal-footer">
+                        <div class="modal-footer">
                             <button type="button" class="btn btn-soft btn-secondary"
                                 data-overlay="#award-modal">Close</button>
                             <button type="button" class="btn btn-primary">Save changes</button>
-                        </div> --}}
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+
+            <div id="award-modal" class="overlay modal overlay-open:opacity-100 hidden p-0" role="dialog" tabindex="-1">
+                <div class="modal-dialog overlay-open:opacity-100 max-w-[100vw] ">
+                    <div class="modal-content h-full max-h-[100vh] justify-center  bg-transparent backdrop-blur-sm">
+                        <div class="modal-header">
+                            <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3"
+                                aria-label="Close" data-overlay="#award-modal">
+                                <span class="icon-[tabler--x] size-6 p-0 m-0"></span>
+                            </button>
+                        </div>
+                        <div class="modal-body ">
+                            <div id="image-carousel"
+                                data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true }'
+                                class="relative w-full">
+                                <div class="carousel">
+                                    <div class="carousel-body h-full opacity-0">
+                                        <!-- Slide 1 -->
+                                        @foreach ($sherpa->awardsAndCertificates as $award)
+                                            <div class="carousel-slide">
+                                                <div class="flex h-full justify-center ">
+                                                    <img src="{{ $award->url }}" class="h-[90vh] w-full object-contain  "
+                                                        alt="game" />
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <!-- Previous Slide -->
+                                <button type="button" class="carousel-prev">
+                                    <span
+                                        class="size-9.5 bg-blue-200 hidden lg:flex items-center justify-center rounded-full shadow">
+                                        <span
+                                            class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                                    </span>
+                                    <span class="sr-only">Previous</span>
+                                </button>
+                                <!-- Next Slide -->
+                                <button type="button" class="carousel-next">
+                                    <span class="sr-only">Next</span>
+                                    <span
+                                        class="size-9.5 bg-blue-200 hidden lg:flex items-center justify-center rounded-full shadow">
+                                        <span
+                                            class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            {{-- <button type="button" class="btn btn-soft btn-secondary"
+                                    data-overlay="#award-modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button> --}}
+                        </div>
                     </div>
                 </div>
             </div>

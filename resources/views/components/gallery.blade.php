@@ -46,8 +46,7 @@
 
 
 
-<div id="image-carousel" data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true }'
-    class="relative w-full">
+<div id="image-carousel" data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true }' class="relative w-full">
     <div class="carousel">
         <div class="carousel-body h-full opacity-0">
             <!-- Slide 1 -->
