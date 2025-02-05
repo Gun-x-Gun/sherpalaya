@@ -96,11 +96,4 @@
         @endforeach
     </div>
 
-
-    {{-- See more destinations --}}
-    @if ($peak->destinations->count() > 4)
-        <div class="w-full flex flex-row justify-center items-center mt-6">
-            <a class="flex-none btn btn-outline btn-error" href="">See more destinations</a>
-        </div>
-    @endif
 </div>
