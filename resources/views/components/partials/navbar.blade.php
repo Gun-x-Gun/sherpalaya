@@ -166,11 +166,11 @@
                                                 <a href="/treks#region-{{ $navRegion->id }}"
                                                     class="menu font-bold text-black">{{ $navRegion->name }}
                                                     Region</p></a>
-                                                <ul class="menu px-2">
+                                                <ul class="menu px-0">
                                                     <div class="flex flex-row  ">
                                                         @foreach ($navRegion->treks as $trek)
-                                                            <div class="flex flex-row gap-2 items-center">
-                                                                <div class="text-primary hover:underline  py-2">
+                                                            <div class="flex flex-col gap-0 items-start">
+                                                                <div class="text-primary hover:underline">
                                                                     <a href="{{ route('show_trek', $trek->id) }}">
                                                                         {{ $trek->title }}
                                                                     </a>
