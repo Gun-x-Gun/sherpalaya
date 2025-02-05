@@ -1773,11 +1773,282 @@ class ItinerarySeeder extends Seeder
             ],
         ];
 
+        $everest_panorama_itinerary = [
+            [
+                'title' => 'Day 01: Welcome to Kathmandu and transfer to the hotel',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "You will arrive in Kathmandu on this day. Our team will take care of your airport-to-hotel commute. They will pick you up in a private four-wheeler and help you with luggage.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Hotel",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 02: Full-day sightseeing tour of Bhaktapur, Pashupatinath, and Boudhanath',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Start the day with a guided sightseeing of some of the tourist sites in Kathmandu. Visit Bouddhanath Stupa, Pashupatinath Temple, and Bhaktapur Durbar Square with our friendly guide. These monuments present a glimpse of Nepali art, architecture, and culture. After the tour, the guide will drop you back at the hotel. On the remaining day, you will prepare for the trek. Meet with your mountain guide and learn about the trek plan. Purchase any last-minute trekking gear and pack your duffle bags.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Meals: Breakfast only",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Hotel",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 03: Fly to Lukla and trek to Phakding',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "You will fly from Kathmandu/Ramechhap to Lukla. The flight is about 35 minutes.  The specific airport depends on the season.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "From Lukla, trek downhill to Phakding village via rhododendron forests, crossing suspension bridges. The trail follows the Dudh Koshi River. Enjoy views of Mt. Khumbila and Kongde Ri.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "Lukla: 2,846 m/9,337 ft, Phakding: 2,610 m/8,563 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "3 hours trek",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "6.2 km/3.8 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Lodge",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 04: Trek from Phakding to Namche Bazaar',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trek from Phakding to Namche Bazaar through rhododendron and magnolia forests.  Cross suspension bridges, including the Hillary Suspension Bridge. Register permits at Monjo. The trail ascends steeply to Namche Bazaar.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,440 m/11,290 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "6 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "7.4 km/4.6 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Lodge",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 05: Acclimatization day - hike to the Hotel Everest View',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Hike to the Everest View Hotel for views of Everest, Lhotse, Nuptse, and Ama Dablam. Return to Namche Bazaar.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,962 m/13,000 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "5-6 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "9.6 km/5.9 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Lodge",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 06: Trek from Namche Bazaar to Tengboche',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trek from Namche Bazaar to Tengboche via Kyangjuma and Phungi Thanga. Visit Tengboche monastery and enjoy views of Everest and Ama Dablam.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,860 m/12,660 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "5-6 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "9.6 km/5.9 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Lodge",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 07: Trek from Tengboche to Khumjung village',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trek to Khumjung village. Visit the Khumjung monastery and the Tenzing Hillary School. Interact with locals.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "3,790 m/12,434 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "4-5 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "8 km/5 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Lodge",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 08: Trek from Khumjung village to Phakding',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "Trek back to Phakding via Namche Bazaar. Descend through forests.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,610 m/8,563 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "5-6 hours",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "15 km/9.3 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Lodge",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 09: Trek from Phakding to Lukla',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => "From Phakding, the trail ascends along the Dudh Koshi River to Lukla. You will cross many suspension bridges on the way and also trek via small settlements. The entire route goes through lush rhododendrons and magnolia forests.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "2,846 m/9,337 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "Variable, typically 4-6 hours", // Add realistic duration
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "6.2 km/3.8 miles",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Lodge",
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 10: Morning flight back to Kathmandu & Farewell Dinner',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => "Morning flight back to Kathmandu from Lukla. Upon landing, transfer to your hotel. Leisure time in the afternoon.",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => "1,400 m/4,593 ft",
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => "35 minutes flight",
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => "Farewell dinner in the evening",
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => "Hotel",
+                    ],
+                ],
+            ],
+            [
+                    'title' => 'Day 11: Free day in Kathmandu',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::OTHERS,
+                            'description' => "Full day free in Kathmandu for sightseeing, shopping, and exploring the city.",
+                        ],
+                        [
+                            'type' => ItineraryTypes::OTHERS,
+                            'description' => "Meals: Breakfast only",
+                        ],
+                        [
+                            'type' => ItineraryTypes::ACCOMODATION,
+                            'description' => "Hotel",
+                        ],
+                    ],
+            ],
+            [
+                    'title' => 'Day 12: Trip ends! Fly back home',
+                    'details' => [
+                        [
+                            'type' => ItineraryTypes::OTHERS,
+                            'description' => "Departure from Kathmandu. Transfer to the airport for your flight home.",
+                        ],
+                        [
+                            'type' => ItineraryTypes::OTHERS,
+                            'description' => "Meals: Breakfast only",
+                        ],
+                    ],
+            ],
+        ];
+
 
 
         $this->createItinerariesWithDetails(
             Trek::first(),
             $trekItineraries
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(5),
+            $everest_panorama_itinerary
         );
         $this->createItinerariesWithDetails(
             Trek::find(2),

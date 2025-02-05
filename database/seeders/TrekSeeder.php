@@ -325,5 +325,73 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'images',
             public_path('photos/mountain3.jpg') // Replace with actual image path, can be an array of paths
         );
+
+        $everest_panorama_trek_data = Trek::create([
+            'title' => 'Everest Panorama Trek',
+            'description' => 'The Everest Panorama Trek is a short and relatively easy trek in the Everest region, perfect for those wanting stunning views of Everest without the challenges of high-altitude treks.  It offers a blend of natural beauty, Sherpa culture, and breathtaking mountain scenery, including Everest, Lhotse, Nuptse, and Ama Dablam. Trekkers experience the unique lifestyle of the Sherpa people, explore charming villages like Namche Bazaar and Khumjung, and hike to viewpoints like Hotel Everest View for unforgettable panoramic vistas.',
+            'duration' => '12',
+            'grade' => '5', // Adjust grade as needed (Moderate)
+            'starting_point' => 'Kathmandu',
+            'ending_point' => 'Kathmandu',
+            'best_time_for_trek' => 'September to May',
+            'starting_altitude' => 1400, // Kathmandu's altitude
+            'highest_altitude' => 3962, // Hotel Everest View
+            'region_id' => Region::first()->id, // Assuming Region::first() gets the Everest region.  Make sure your regions table is seeded.
+            'trek_difficulty' => TrekDifficulty::MODERATE, // Or appropriate enum value
+            'costs_include' => [
+                // ... (Add your costs include details here -  get from your site)
+                'Airport transfers',
+                'Kathmandu accommodation',
+                'Sightseeing tour in Kathmandu',
+                'Flight to/from Lukla',
+                'Accommodation in teahouses during trek',
+                'Meals (breakfast, lunch, dinner) during trek',
+                'Experienced trekking guide',
+                'Porters to carry luggage',
+                'Sagarmatha National Park entry permit',
+                'TIMS card (Trekker\'s Information Management System)',
+                // ...
+            ],
+            'costs_exclude' => [
+                // ... (Add your costs exclude details here - get from your site)
+                'Personal expenses (drinks, snacks, souvenirs)',
+                'Lunch and dinner in Kathmandu',
+                'Tips for guide and porters',
+                'Travel insurance',
+                'Visa fees',
+                // ...
+            ],
+            'is_featured' => true,
+        ]);
+
+        // Associate destinations (replace with actual logic to select relevant destinations)
+        $everest_panorama_trek_data->destinations()->sync(
+            Destination::where('region_id', 1) // Assuming region_id 1 is Everest region
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+
+
+        // Seed Curator Images (replace with your actual paths and logic)
+        CuratorSeederHelper::seedBelongsTo(
+            $everest_panorama_trek_data,
+            'cover_image_id',
+            public_path('photos/mountain2.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $everest_panorama_trek_data,
+            'feature_image_id',
+            public_path('photos/mountain3.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $everest_panorama_trek_data,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
     }
 }

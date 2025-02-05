@@ -218,6 +218,10 @@ class EssentialTipsSeeder extends Seeder
             $everest_base_camp_trek_tips
         );
         $this->createEssentialTips(
+            Trek::find(5),
+            $everest_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
             Trek::find(2),
             $annapurna_base_camp_trek_tips
         );

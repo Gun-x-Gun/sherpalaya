@@ -212,6 +212,10 @@ $langtang_highlights = [
             $everest_base_camp_trek
         );
         $this->createKeyHighlights(
+            Trek::find(5),
+            $everest_base_camp_trek
+        );
+        $this->createKeyHighlights(
             Trek::find(2),
             $annapurna_base_camp_trek
         );
