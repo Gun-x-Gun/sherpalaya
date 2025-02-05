@@ -5,8 +5,10 @@ namespace App\Filament\Resources;
 use App\Enums\CategoryTypes;
 use App\Filament\Resources\CategoryResource\Pages;
 use App\Filament\Resources\CategoryResource\RelationManagers;
+use App\Helpers\FilamentEnumFieldHelper;
 use App\Models\Category;
 use App\Traits\Filament\TranslatableResource;
+use BackedEnum;
 use Filament\Forms;
 use Filament\Forms\Components\Component;
 use Filament\Forms\Components\Section;
@@ -37,20 +39,8 @@ class CategoryResource extends Resource
                     ->schema([
                         TextInput::make('name')
                             ->required(),
-                        Select::make('type')
-                            ->options(CategoryTypes::class)
-                            ->options(function (\Livewire\Component $livewire) {
-                                return CategoryTypes::getTranslatedOptions($livewire->activeLocale);
-
-
-                                foreach ($livewire->otherLocaleData as $locale => $data) {
-                                    $otherLocaleData[$locale] = [
-                                        ...$data,
-                                        'type' => CategoryTypes::tryFrom($state)?->getTranslatedLabel($locale)
-                                    ];
-                                }
-                                $livewire->otherLocaleData = $otherLocaleData;
-                            }),
+                            FilamentEnumFieldHelper::makeSelectField('type', CategoryTypes::class)
+                                ->required(),
                     ])
             ]);
     }
@@ -60,7 +50,7 @@ class CategoryResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name'),
-                TextColumn::make('type'),
+                FilamentEnumFieldHelper::makeTextColumn('type', CategoryTypes::class),
             ])
             ->filters([
                 //
