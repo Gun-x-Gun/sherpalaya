@@ -32,8 +32,8 @@
 
     @vite('resources/js/app.js')
     @livewireScripts
-    @stack('modals')
     @stack('scripts')
+    @stack('modals')
 </body>
 
 </html>

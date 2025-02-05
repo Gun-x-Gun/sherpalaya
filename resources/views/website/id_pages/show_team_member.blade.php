@@ -67,70 +67,19 @@
                                     Awards & Certificates
                                 </h5>
                                 <div class="h-4"></div>
-                                <div class="card-actions sm:grid grid-cols-3 flex flex-col gap-2 mb-0">
+                                <div class="card-actions sm:grid grid-cols-3 flex flex-col gap-2 mb-0 skeleton animate-pulse min-h-52"
+                                    id="all-awards">
                                     @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
                                         {{-- <button type="button"> --}}
-                                        <button type="button" class="w-full h-full uppercase" aria-haspopup="dialog"
-                                            aria-expanded="false" aria-controls="fullscreen-modal"
-                                            data-overlay="#award-modal">
+                                        <button type="button" class="w-full h-full uppercase single-award hidden"
+                                            aria-haspopup="dialog" aria-expanded="false" aria-controls="award-modal"
+                                            data-overlay="#award-modal"
+                                            onclick="changeCarouselSlide({{ $loop->index }})">
                                             <img class="h-52 w-full object-cover" src="{{ $awardAndCertificate->url }}"
                                                 alt="headphone" />
                                             {{-- </figure> --}}
                                         </button>
                                     @endforeach
-                                    @push('modals')
-                                        <div id="award-modal" class="overlay modal overlay-open:opacity-100 hidden "
-                                            role="dialog" tabindex="-1">
-                                            <div class="modal-dialog overlay-open:opacity-100 w-full max-w-[90vw]">
-                                                <div class="modal-content  h-full max-h-[95vh] justify-between">
-                                                    <div class="modal-header">
-                                                        <h3 class="modal-title">Certificates</h3>
-                                                        <button type="button"
-                                                            class="btn btn-text btn-circle btn-sm absolute end-3 top-3"
-                                                            aria-label="Close" data-overlay="#award-modal">
-                                                            <span class="icon-[tabler--x] size-4"></span>
-                                                        </button>
-                                                    </div>
-
-                                                    <div id="image" data-carousel='{ "loadingClasses": "opacity-0" }'
-                                                        class="relative w-[90vw] h-[90vh]">
-                                                        <div class="carousel">
-                                                            <div class="carousel-body h-full opacity-0">
-                                                                <!-- Slide 1 -->
-                                                                @foreach ($sherpa->awardsAndCertificates as $award)
-                                                                    <div class="carousel-slide">
-                                                                        <div class="flex h-full justify-center">
-                                                                            <img src="{{ $award->url }}"
-                                                                                class="w-full h-full object-cover"
-                                                                                alt="game" />
-                                                                        </div>
-                                                                    </div>
-                                                                @endforeach
-                                                            </div>
-                                                        </div>
-                                                        <!-- Previous Slide -->
-                                                        <button type="button" class="carousel-prev">
-                                                            <span
-                                                                class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
-                                                                <span
-                                                                    class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
-                                                            </span>
-                                                            <span class="sr-only">Previous</span>
-                                                        </button>
-                                                        <!-- Next Slide -->
-                                                        <button type="button" class="carousel-next">
-                                                            <span class="sr-only">Next</span>
-                                                            <span
-                                                                class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
-                                                                <span
-                                                                    class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endpush
                                 </div>
                             @endif
                         </div>
@@ -138,26 +87,11 @@
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div class="h-8"></div>
-            @if ($sherpa->treks->isNotEmpty())
+            @if ($sherpa->awardsAndCertificates->isNotEmpty())
                 <div class="card md:max-w-full bg-transparent">
                     <nav class="tabs tabs-bordered card-header" aria-label="Tabs" role="tablist">
-                        @foreach ($sherpa->treks as $itinerary)
+                        @foreach ($sherpa->awardsAndCertificates as $award)
                             <button type="button" class="tab active-tab:tab-active active w-full" id="tabs-card-item-1"
                                 data-tab="#tabs-card-1" aria-controls="tabs-card-1" role="tab" aria-selected="true">
                                 Home
@@ -198,6 +132,85 @@
 
 
         <div class="h-4"></div>
+
+        @push('modals')
+            <div id="award-modal" class="overlay modal overlay-open:opacity-100 modal-middle hidden" role="dialog"
+                tabindex="-1">
+                <div
+                    class="modal-dialog overlay-open:opacity-100  h-full  modal-dialog-sm md:modal-dialog-lg xl:modal-dialog-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            {{-- <h3 class="modal-title">Awards and Certificates</h3> --}}
+                            <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3"
+                                aria-label="Close" data-overlay="#award-modal">
+                                <span class="icon-[tabler--x] size-4"></span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="image-carousel"
+                                data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true }'
+                                class="relative w-full">
+                                <div class="carousel">
+                                    <div class="carousel-body h-full opacity-0">
+                                        <!-- Slide 1 -->
+                                        @foreach ($sherpa->awardsAndCertificates as $award)
+                                            <div class="carousel-slide">
+                                                <div class="flex h-full justify-center">
+                                                    <img src="{{ $award->url }}" class="h-[80vh]  object-contain"
+                                                        alt="game" />
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <!-- Previous Slide -->
+                                <button type="button" class="carousel-prev">
+                                    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
+                                        <span
+                                            class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                                    </span>
+                                    <span class="sr-only">Previous</span>
+                                </button>
+                                <!-- Next Slide -->
+                                <button type="button" class="carousel-next">
+                                    <span class="sr-only">Next</span>
+                                    <span
+                                        class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
+                                        <span
+                                            class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        {{-- <div class="modal-footer">
+                            <button type="button" class="btn btn-soft btn-secondary"
+                                data-overlay="#award-modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div> --}}
+                    </div>
+                </div>
+            </div>
+        @endpush
+
+        @push('scripts')
+            <script>
+                window.addEventListener('load', function() {
+                    const awardsAndCertificatesDiv = document.querySelector('#all-awards');
+                    const singleAwardCollection = document.querySelectorAll('.single-award');
+                    awardsAndCertificatesDiv.classList.remove('skeleton');
+                    awardsAndCertificatesDiv.classList.remove('animate-pulse');
+
+                    singleAwardCollection.forEach(singleAward => {
+                        singleAward.classList.remove('hidden');
+                    });
+                });
+
+                function changeCarouselSlide(index) {
+                    const carousel = new HSCarousel(document.querySelector('#image-carousel'))
+                    carousel.goTo(index)
+                }
+            </script>
+        @endpush
 
     </div>
 </x-website-layout>
