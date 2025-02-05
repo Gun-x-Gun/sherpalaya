@@ -30,29 +30,50 @@
             ],
         ]" />
 
-
         <div class="h-4"></div>
         <div class="mx-4 2xl:mx-44">
-            <div class="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-2 gap-4 ">
+            <div class="sm:grid sm:grid-cols-1 lg:grid-cols-2  md:gap-2 lg:gap-4 flex flex-col gap-4">
                 @foreach ($ourSherpas as $sherpa)
                     <a href="{{ route('show_team_member', $sherpa->id) }}">
-                        <div class="card card-side max-w-full sm:max-w-full bg-blue-50 rounded-sm h-[40vh]">
-                            <figure class="w-1/2 h-full p-1 ">
-                                <img class="h-full object-cover" src="{{ $sherpa->profilePicture->url }}" alt="headphone" />
+                        <div class="card md:card-side max-w-full sm:max-w-full bg-blue-50 rounded-sm h-full">
+                            <figure class="md:w-1/2 h-full p-1 ">
+                                <img class="h-[20rem] object-cover" src="{{ $sherpa->profilePicture->url }}"
+                                    alt="headphone" />
                             </figure>
-                            <div class="card-body w-1/2 p-2 ">
-                                <span
-                                    class=" rounded-full p-0 text-slate-600 capitalize tracking-tighter font-bold">{{ $sherpa->title }}</span>
-                                <h5 class="card-title mb-1 uppercase  text-primary tracking-tighter">{{ $sherpa->name }}</h5>
-                                {{-- <span class="badge badge-outline badge-primary">Primary</span> --}}
-                                <p class="my-1 tracking-tighter text-pretty text-slate-800 text-sm">{{ $sherpa->description }}</p>
+                            <div class="card-body w-full md:w-1/2 p-2 ">
+                                <span class="rounded-full mb-1 p-0 text-slate-600 capitalize tracking-tighter font-light">
+                                    {{ $sherpa->title }}
+                                </span>
+                                <h5 class="card-title mb-0 uppercase text-xl text-primary tracking-wider font-bold">
+                                    {{ $sherpa->name }}
+                                </h5>
+                                <p class="mb-2.5 text-pretty text-slate-800 text-sm line-clamp-4">{{ $sherpa->description }}</p>
+
+                                <p class="text-primary text-nowrap uppercase pb-1 mb-1 font-semibold tracking-wider">Experiences :</p>
+
+
+                                @php
+                                    $sherpaExperienceData = [
+                                        'treks' => $sherpa->treks->pluck('title')->take(1),
+                                        'expeditions' => $sherpa->expeditions->pluck('title')->take(1),
+                                        'peaks' => $sherpa->peaks->pluck('title')->take(1),
+                                        'tours' => $sherpa->tours->pluck('title')->take(1),
+                                    ];
+                                @endphp
+                                <div class="md:flex flex-col gap-3 text-preety overflow-hidden">
+                                    @foreach ($sherpaExperienceData as $category => $experiences)
+                                        @foreach ($experiences as $experience)
+                                            <span
+                                                class="badge badge-warning my-1 md:my-0 py-0 text-nowrap tracking-tighter text-preety">{{ $experience }}</span>
+                                        @endforeach
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
                     </a>
                 @endforeach
             </div>
         </div>
-        <div class="h-4"></div>
-
+        <div class="h-10"></div>
     </div>
 </x-website-layout>

@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-        
+
         <x-breadcrumb :breadcrumbs="[
             [
                 'name' => 'Home',
@@ -60,7 +60,7 @@
                         <div class="card-body px-2 py-4  bg-blue-100">
                             <a href="{{ route('show_service', $serviceData->service->id) }}">
                                 <h5
-                                    class="card-title line-clamp-2 mb-2.5 capitalize text-lg text-primary font-semibold tex-center">
+                                    class="card-title line-clamp-2 mb-2.5 capitalize text-xl text-primary font-semibold tex-center">
                                     {{ $serviceData->service->title }}</h5>
                             </a>
                             <div class="justify-start flex flex-col  gap-2 pb-0">
@@ -68,11 +68,12 @@
                                     {{ $serviceData->service->description }}
                                 </span>
                             </div>
-                            <div class="mt-2 ">
+                            <div class="mt-2 flex flex-col gap-1">
+                                <p class="text-primary text-nowrap uppercase font-semibold">Service Station :</p>
                                 <p class="w-full text-preety">
-                                    @foreach ($serviceData->destinations as $destination)
-                                        <span class="badge badge-warning  py-1 my-1">{{ $destination }}</span>
-                                    @endforeach
+                                @foreach ($serviceData->destinations as $destination)
+                                    <span class="badge badge-warning my-1">{{ $destination }}</span>
+                                @endforeach
                                 </p>
                             </div>
                         </div>

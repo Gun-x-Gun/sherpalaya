@@ -67,27 +67,30 @@
 
 
             <div class="h-10"></div>
-            <div class="flex flex-col md:grid grid-cols-3 gap-4">
+            <div class="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-4">
                 <div class="col-span-2">
                     <x-show-service.service-gallery :service="$service" />
                 </div>
-                <div class="w-full">
-                    @if (!empty($service->location['lat']) && !empty($service->location['lng']))
-                        <div class="stats stats-vertical bg-blue-100/50 w-full rounded-none">
-                            <div class="stat">
-                                <div class="flex">
-                                    <a href="https://maps.google.com/?q={{ $service->location['lat'] }},{{ $service->location['lng'] }}"
-                                        target="_blank" rel="noopener noreferrer">
-                                        <p class="text-primary">
-                                            Location: {{ $service->location['lat'] }},
-                                            {{ $service->location['lng'] }}
-                                        </p>
-                                    </a>
+
+                <div class="w-full hidden xl:block">
+                    <div class="sticky top-32">
+                        @if (!empty($service->location['lat']) && !empty($service->location['lng']))
+                            <div class="stats stats-vertical bg-blue-100/50 w-full rounded-none">
+                                <div class="stat">
+                                    <div class="flex">
+                                        <a href="https://maps.google.com/?q={{ $service->location['lat'] }},{{ $service->location['lng'] }}"
+                                            target="_blank" rel="noopener noreferrer">
+                                            <p class="text-primary">
+                                                Location: {{ $service->location['lat'] }},
+                                                {{ $service->location['lng'] }}
+                                            </p>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endif
-                    <x-booking.booking-section :bookingFor="$service"/>
+                        @endif
+                        <x-booking.booking-section :bookingFor="$service" />
+                    </div>
                 </div>
             </div>
             <x-show-recommendation :recommendFor="$service" />

@@ -19,6 +19,7 @@ class OurTeamController extends Controller
             'peaks',
             'tours'
         ])->get();
+        
 
         return view('website.company.our_team', [
             'pageSetting' => $pageSetting,

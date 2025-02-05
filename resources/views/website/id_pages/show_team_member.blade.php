@@ -56,8 +56,24 @@
 
                 <div class="card sm:card-side max-w-full sm:max-w-full bg-blue-100/10 rounded-sm col-span-2">
                     <div class="card-body w-full pt-2 pl-2 flex justify-evenly">
-                        <p class="my-1 tracking-tighter text-pretty text-slate-800 ">{{ $sherpa->description }}
-                        </p>
+
+                        @php
+                            $sherpaExperienceData = [
+                                'treks' => $sherpa->treks->pluck('title')->take(4),
+                                'expeditions' => $sherpa->expeditions->pluck('title')->take(4),
+                                'peaks' => $sherpa->peaks->pluck('title')->take(4),
+                                'tours' => $sherpa->tours->pluck('title')->take(4),
+                            ];
+                        @endphp
+                        <div class="text-preety overflow-hidden">
+                            @foreach ($sherpaExperienceData as $category => $experiences)
+                                @foreach ($experiences as $experience)
+                                    <span
+                                        class="badge badge-warning my-1 py-0 text-nowrap tracking-tighter text-preety">{{ $experience }}
+                                    </span>
+                                @endforeach
+                            @endforeach
+                        </div>
                         <div class="h-2"></div>
                         <div class="w-full">
                             @if ($sherpa->awardsAndCertificates->count() < 4)
@@ -67,65 +83,74 @@
                                     Awards & Certificates
                                 </h5>
                                 <div class="h-4"></div>
-                                <div class="card-actions sm:grid grid-cols-3 flex flex-col gap-2 mb-0 skeleton animate-pulse min-h-52"
+                                <div class="card-actions  sm:grid grid-cols-3 flex flex-col gap-2 mb-0 skeleton animate-pulse min-h-52"
                                     id="all-awards">
                                     @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
-                                        <button type="button" class="w-full h-full uppercase single-award hidden"
+                                        <button type="button"
+                                            class="w-full h-full uppercase single-award hidden group hover:shadow"
                                             aria-haspopup="dialog" aria-expanded="false" aria-controls="award-modal"
                                             data-overlay="#award-modal"
                                             onclick="changeCarouselSlide({{ $loop->index }})">
-                                            <img class="h-52 w-full object-cover" src="{{ $awardAndCertificate->url }}"
-                                                alt="headphone" />
+                                            <img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-90"
+                                                src="{{ $awardAndCertificate->url }}" alt="headphone" />
                                         </button>
                                     @endforeach
+                                </div>
+                            @else
+                                <div class="h-4"></div>
+                                <h5
+                                    class="card-title font-normal uppercase text-3xl text-primary tracking-tighter mx-0">
+                                    Awards & Certificates
+                                </h5>
+                                <div class="h-4"></div>
+                                <div class="card-actions  mb-0 skeleton animate-pulse min-h-52" id="all-awards">
+                                    <div id="multi-slide"
+                                        data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8, "md": 2.5, "lg": 3.1, "xl": 3.5 } }'
+                                        class="relative w-full">
+                                        <div class="carousel h-full rounded-none">
+                                            <div class="carousel-body h-full opacity-0">
+                                                <!-- Slide 1 -->
+                                                @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
+                                                    <div class="carousel-slide max-w-sm px-1">
+                                                        <button type="button"
+                                                            class="w-full h-full uppercase single-award hidden group hover:shadow"
+                                                            aria-haspopup="dialog" aria-expanded="false"
+                                                            aria-controls="award-modal" data-overlay="#award-modal"
+                                                            onclick="changeCarouselSlide({{ $loop->index }})">
+                                                            <img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                                src="{{ $awardAndCertificate->url }}" alt="headphone" />
+                                                        </button>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+
+                                        <!-- Previous Slide -->
+                                        <button type="button" class="carousel-prev">
+                                            <span
+                                                class="hidden md:flex icon-[tabler--chevron-left] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </button>
+                                        <!-- Next Slide -->
+                                        <button type="button" class="carousel-next">
+                                            <span class="sr-only">Next</span>
+                                            <span
+                                                class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                                        </button>
+                                    </div>
+
                                 </div>
                             @endif
                         </div>
                     </div>
                 </div>
             </div>
-
+            
+            <div class="h-4"></div>
+            <p class="my-1 tracking-normal text-pretty text-slate-900 ">{{ $sherpa->description }}
+            </p>
             <div class="h-8"></div>
-            @if ($sherpa->awardsAndCertificates->isNotEmpty())
-                <div class="card md:max-w-full bg-transparent">
-                    <nav class="tabs tabs-bordered card-header" aria-label="Tabs" role="tablist">
-                        @foreach ($sherpa->awardsAndCertificates as $award)
-                            <button type="button" class="tab active-tab:tab-active active w-full" id="tabs-card-item-1"
-                                data-tab="#tabs-card-1" aria-controls="tabs-card-1" role="tab" aria-selected="true">
-                                Home
-                            </button>
-                        @endforeach
-                    </nav>
-                    <div class="card-body">
-                        <div id="tabs-card-1" role="tabpanel" aria-labelledby="tabs-card-item-1">
-                            <p class="text-base-content/80">
-                                Welcome to the
-                                <span class="text-base-content font-semibold">Home tab!</span>
-                                Here, you can explore the latest updates, news, and highlights. Stay
-                                informed
-                                about what's happening and never miss out on important announcements.
-                            </p>
-                        </div>
-                        <div id="tabs-card-2" class="hidden" role="tabpanel" aria-labelledby="tabs-card-item-2">
-                            <p class="text-base-content/80">
-                                This is your
-                                <span class="text-base-content font-semibold ">Profile</span>
-                                tab. Manage your personal information, update your account details, and
-                                customize your settings to make your experience unique.
-                            </p>
-                        </div>
-                        <div id="tabs-card-3" class="hidden" role="tabpanel" aria-labelledby="tabs-card-item-3">
-                            <p class="text-base-content/80">
-                                <span class="text-base-content font-semibold">Messages:</span>
-                                Check your recent messages, start new conversations, and stay connected with
-                                your friends and contacts. Manage your chat history and keep the
-                                communication
-                                flowing.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            @endif
+
         </div>
 
 
