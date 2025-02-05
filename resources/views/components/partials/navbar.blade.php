@@ -72,8 +72,8 @@
                                                     Region</p></a>
                                                 <ul class="menu px-2">
                                                     @foreach ($navRegion->expeditions as $expedition)
-                                                        <div class="flex flex-col  ">
-                                                            <div class="flex flex-row gap-2 items-center">
+                                                        <div class="flex flex-col  gap-2">
+                                                            <div class="flex flex-col gap-0 items-center">
                                                                 <div class="text-primary hover:underline  py-2">
                                                                     <a
                                                                         href="{{ route('show_expedition', $expedition->id) }}">
@@ -121,8 +121,8 @@
                                                     Region</p></a>
                                                 <ul class="menu px-2">
                                                     @foreach ($navRegion->peaks as $peak)
-                                                        <div class="flex flex-col  ">
-                                                            <div class="flex flex-row gap-2 items-center">
+                                                        <div class="flex flex-col gap-2">
+                                                            <div class="flex flex-col gap-0 items-center">
                                                                 <div class="text-primary hover:underline  py-2">
                                                                     <a href="{{ route('show_peak', $peak->id) }}">
                                                                         {{ $peak->title }}
@@ -167,7 +167,7 @@
                                                     class="menu font-bold text-black">{{ $navRegion->name }}
                                                     Region</p></a>
                                                 <ul class="menu px-0">
-                                                    <div class="flex flex-row  ">
+                                                    <div class="flex flex-col gap-2">
                                                         @foreach ($navRegion->treks as $trek)
                                                             <div class="flex flex-col gap-0 items-start">
                                                                 <div class="text-primary hover:underline">
