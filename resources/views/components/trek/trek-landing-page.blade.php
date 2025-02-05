@@ -59,7 +59,6 @@
     <div class="h-12"></div>
 
 
-    {{-- Showing <strong>{{ $trekRegion->treks->count() }}</strong> --}}
     <div class="2xl:mx-44 mx-4">
         @foreach ($treksRegion as $trekRegion)
             @if ($trekRegion->treks->isNotEmpty())

@@ -54,13 +54,13 @@
                 @php
                     $typeLabel = \App\Enums\TourType::tryFrom($type)?->getLabel() ?? 'Unknown';
                 @endphp
-                <div>
+                <div >
                     <div class="h-8"></div>
                     @if ($tours->isNotEmpty())
                         <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-bold">
                             {{ $type }} Tours Packages
                         </h5>
-                        <div class="hidden md:grid md:grid-cols-3 lg:grid-cols-4  gap-4">
+                        <div id="type-{{$type}}" class="hidden md:grid md:grid-cols-3 lg:grid-cols-4  gap-4">
                             @foreach ($tours as $tour)
                                 <div class="card w-full ">
                                     <div>

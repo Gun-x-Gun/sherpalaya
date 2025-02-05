@@ -52,7 +52,7 @@
         <div class="2xl:mx-44 mx-4">
             @foreach ($treksRegion as $trekRegion)
                 @if ($trekRegion->treks->isNotEmpty())
-                    <div>
+                    <div id="region-{{ $trekRegion->id }}">
                         <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-normal">
                             {{ $trekRegion->name }} Region Packages
                         </h5>
