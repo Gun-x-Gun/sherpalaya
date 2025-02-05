@@ -1,3 +1,4 @@
+@if (!empty($recommendations))
 <div class="bg-transparent">
     <div class="h-8"></div>
     <h5 class="card-title text-left">
@@ -203,3 +204,4 @@
     @endforeach
 </div>
 <div class="h-2"></div>
+@endif

@@ -1,5 +1,5 @@
 {{-- <x-show-tour.scroll-spy-navigation /> --}}
-@if (!empty($tour->keyHighlights))
+@if (!empty($tour->keyHighlights) && count($tour->keyHighlights) > 0)
     <div id="key_highlights" class="card 2xl:max-w-full rounded-none bg-blue-100/40 ">
         <div class="h-6">
         </div>

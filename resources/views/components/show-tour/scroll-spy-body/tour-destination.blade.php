@@ -1,5 +1,5 @@
 <div class="bg-blue-100/50">
-    @if (!empty($tour->destinations))
+    @if (!empty($tour->destinations) && count($tour->destinations) > 0)
         <div id="destination" class="card 2xl:max-w-full rounded-none bg-transparent ">
             <div class="h-6">
 
