@@ -16,6 +16,15 @@ class OurSherpa extends Model
         'title',
         'description',
     ];
+
+    protected static function booted()
+    {
+        static::creating(function ($sherpa){
+            if(is_null($sherpa->description)){
+                $sherpa->description = '';
+            }
+        });
+    }
     public function treks()
     {
         return $this->belongsToMany(

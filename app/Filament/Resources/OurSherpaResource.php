@@ -15,6 +15,7 @@ use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -34,6 +35,10 @@ class OurSherpaResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
+    protected static ?string $modelLabel = 'Sherpa';
+    protected static ?string $navigationLabel = 'Our Sherpas';
+
+
     protected static ?string $navigationGroup = 'Site';
 
     protected static ?int $navigationSort = 4;
@@ -46,16 +51,16 @@ class OurSherpaResource extends Resource
     {
         return $form
             ->schema([
-                Section::make('')
+                Section::make('General')
                     ->columns(2)
                     ->schema([
                         Section::make('')
-                        ->columnSpan(1)
+                            ->columnSpan(1)
                             ->schema([
                                 CuratorPicker::make('profile_picture_id')
                                     ->color('primary')
-                                    ->label('Cover Image')
-                                    ->hint('for tour page')
+                                    ->label('Profile Picture')
+                                    ->hint('for profile page')
                                     ->relationship('profilePicture', 'id'),
                             ]),
                         Section::make('')
@@ -68,32 +73,64 @@ class OurSherpaResource extends Resource
                                     ->columnSpan(2)
                                     ->required(),
                                 RichEditor::make('description')
-                                ->toolbarButtons([
-                                    // 'attachFiles',
-                                    'blockquote',
-                                    'bold',
-                                    'bulletList',
-                                    // 'codeBlock',
-                                    'h2',
-                                    'h3',
-                                    'italic',
-                                    'link',
-                                    'orderedList',
-                                    'redo',
-                                    // 'strike',
-                                    'underline',
-                                    'undo',
-                                ]),
+                                    ->toolbarButtons([
+                                        // 'attachFiles',
+                                        'blockquote',
+                                        'bold',
+                                        'bulletList',
+                                        // 'codeBlock',
+                                        'h2',
+                                        'h3',
+                                        'italic',
+                                        'link',
+                                        'orderedList',
+                                        'redo',
+                                        // 'strike',
+                                        'underline',
+                                        'undo',
+                                    ]),
                             ]),
                     ]),
-                Section::make()
+                    Section::make('Sherpa Experience')
+                    ->hiddenOn('view')
+                    ->columns(2)
+                    ->schema([
+                        Select::make('expeditions')
+                            ->relationship(titleAttribute: 'title')
+                            ->multiple()
+                            ->preload()
+                            ->native(false),
+                        Select::make('peaks')
+                            // ->hiddenLabel()
+                            ->multiple()
+                            ->relationship(titleAttribute: 'title')
+                            ->preload()
+                            ->searchable(['title', 'region'])
+                            ->native(false),
+                        Select::make('treks')
+                            // ->hiddenLabel()
+                            ->multiple()
+                            ->relationship(titleAttribute: 'title')
+                            ->preload()
+                            ->searchable(['title', 'region'])
+                            ->native(false),
+                        Select::make('tours')
+                            // ->hiddenLabel()
+                            ->multiple()
+                            ->relationship(titleAttribute: 'title')
+                            ->preload()
+                            ->searchable(['title', 'region'])
+                            ->native(false),
+                    ]),
+                Section::make('Recognition')
                     ->schema([
                         CuratorPicker::make('awardsAndCertificates')
                             ->multiple()
-                            ->label('Images')
-                            ->hint('any other relevant images')
+                            ->label('Awards and Certificates')
+                            ->hint('rewarded to Sherpa')
                             ->relationship('awardsAndCertificates', 'id'),
                     ]),
+
             ]);
     }
 
