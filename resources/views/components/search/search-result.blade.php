@@ -13,7 +13,7 @@
                                         <span class="self-start w-full ">
                                             <figure>
                                                 <img src="{{ $image->url ?? asset('/photos/banner.jpg') }}"
-                                                    alt="{{ $resultData->title }} Cover Image" class="h-80 object-cover" />
+                                                    alt="{{ $result->title }} Cover Image" class="h-80 object-cover" />
                                             </figure>
                                         </span>
                                     </div>
