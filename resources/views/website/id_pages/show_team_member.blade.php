@@ -70,14 +70,12 @@
                                 <div class="card-actions sm:grid grid-cols-3 flex flex-col gap-2 mb-0 skeleton animate-pulse min-h-52"
                                     id="all-awards">
                                     @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
-                                        {{-- <button type="button"> --}}
                                         <button type="button" class="w-full h-full uppercase single-award hidden"
                                             aria-haspopup="dialog" aria-expanded="false" aria-controls="award-modal"
                                             data-overlay="#award-modal"
                                             onclick="changeCarouselSlide({{ $loop->index }})">
                                             <img class="h-52 w-full object-cover" src="{{ $awardAndCertificate->url }}"
                                                 alt="headphone" />
-                                            {{-- </figure> --}}
                                         </button>
                                     @endforeach
                                 </div>
@@ -111,7 +109,7 @@
                         <div id="tabs-card-2" class="hidden" role="tabpanel" aria-labelledby="tabs-card-item-2">
                             <p class="text-base-content/80">
                                 This is your
-                                <span class="text-base-content font-semibold">Profile</span>
+                                <span class="text-base-content font-semibold ">Profile</span>
                                 tab. Manage your personal information, update your account details, and
                                 customize your settings to make your experience unique.
                             </p>

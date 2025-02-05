@@ -1,7 +1,7 @@
 <div class="bg-transparent">
-    {{-- <div class="h-4"></div> --}}
+    <div class="h-8"></div>
     <h5 class="card-title text-left">
-        <span class=" uppercase tracking-wider font-light text-4xl text-primary rounded-full">
+        <span class=" uppercase tracking-wider font-light text-3xl text-primary rounded-full">
             REcommended
         </span>
     </h5>
