@@ -342,6 +342,7 @@
                         @foreach ($navRegions as $navRegion)
                             @if ($navRegion->expeditions->isNotEmpty())
                                 <li class="uppercase ">
+
                                     <a href="/expeditions#region-{{ $navRegion->id }}"
                                         class="menu font-bold text-black">{{ $navRegion->name }}
 
