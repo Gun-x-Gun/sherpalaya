@@ -1,37 +1,39 @@
-{{-- <div class="group bg-gray-300">
-    <div class="h-20"></div>
-    <div style="background-image: url('{{ asset('photos/DSCF4385.JPG') }}');"
-        class="bg-cover object-center bg-center h-[90vh] w-full">
-        <div
-            class="card transform transition-transform duration-300 group-hover:-translate-y-2 sm:max-w-screen text-center text-white rounded-none lg:px-64 lg:h-full bg-transparent">
-            <div class="group md:mt-32 lg:mt-80">
-                <div
-                    class="card 2xl:hidden 2xl:group-hover:block hover:text-primary transition-all duration-300 bg-transparent ">
-                    <header class="card-header">
-                        <h5 class="card-title font-extrabold text-primary capitalize tracking-widest mt-2 text-3xl">
-                            Sherpalaya Offers More Than...
-                        </h5>
-                    </header>
-                    <div class="card-body font-light text-white tracking-widest text-xl 2xl:mx-44">
-                        <p>
-                            Discover a range of delightful treats, including lemon drops, tiramisu, chocolate cake, and
-                            cotton candy.
-                            Our collection offers a variety of flavors to satisfy every craving.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="h-20"></div>
-
-</div> --}}
 <div class="bg-blue-100/10">
-    
-    <div class="mx-0 ">
-        <div style="background-image: url('{{ asset('photos/mountain8.jpg') }}');"
+    <div class="mx-0">
+        <div id="audio-section" style="background-image: url('{{ asset('photos/mountain8.jpg') }}');"
             class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed">
         </div>
     </div>
-    
+
+    <!-- Hidden Audio Player -->
+    <audio id="background-audio" loop>
+        <source src="{{ asset('audio/background-music.mp3') }}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 </div>
+
+<!-- JavaScript to Play Audio When Section is in View -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("background-audio");
+        let section = document.getElementById("audio-section");
+
+        function checkVisibility() {
+            let rect = section.getBoundingClientRect();
+            let inView = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (inView) {
+                if (audio.paused) {
+                    audio.play().catch(() => console.log("Autoplay blocked"));
+                }
+            } else {
+                audio.pause();
+            }
+        }
+
+        // Check visibility when scrolling
+        window.addEventListener("scroll", checkVisibility);
+        // Initial check in case the section is already visible on load
+        checkVisibility();
+    });
+</script>
