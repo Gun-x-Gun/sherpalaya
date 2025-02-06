@@ -1,4 +1,4 @@
-<div class="bg-blue-100/50">
+<div class="bg-blue-100/20">
     <div class="h-12"></div>
   
     <div class="2xl:mx-44 mx-4">

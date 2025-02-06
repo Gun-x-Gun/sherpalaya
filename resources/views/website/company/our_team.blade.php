@@ -47,7 +47,7 @@
                                 <h5 class="card-title mb-0 uppercase text-xl text-primary tracking-wider font-bold">
                                     {{ $sherpa->name }}
                                 </h5>
-                                <p class="mb-2.5 text-pretty text-slate-800 text-sm line-clamp-4">{{ $sherpa->description }}</p>
+                                <p class="mb-2.5 text-pretty text-slate-800 text-sm line-clamp-5">{{ $sherpa->description }}</p>
 
                                 <p class="text-blue-800 text-nowrap uppercase pb-1 text-lg font-semibold tracking-wider">Experiences :</p>
 
@@ -60,7 +60,7 @@
                                         'tours' => $sherpa->tours->pluck('title')->take(1),
                                     ];
                                 @endphp
-                                <div class="md:flex flex-col gap-3 text-preety overflow-hidden ">
+                                <div class="md:flex flex-col gap-1 text-preety overflow-hidden ">
                                     @foreach ($sherpaExperienceData as $category => $experiences)
                                         @foreach ($experiences as $experience)
                                             <span

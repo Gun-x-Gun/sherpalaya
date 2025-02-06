@@ -1,6 +1,6 @@
 <x-website-layout>
-    <div class="bg-blue-100/50">
-        <div class="card--rounded-none image-full  bg-blue-100/50 h-[50vh]">
+    <div class="bg-blue-100/10">
+        <div class="card--rounded-none image-full  h-[50vh]">
             <figure class="h-[50vh] w-full">
                 <x-curator-glider class="h-[50vh] w-full object-cover brightness-50" :media="$pageSetting->about_us_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
@@ -38,16 +38,12 @@
 
 
             <div class="h-4"></div>
-            <div class="2xl:mx-44 mx-4 text-left">
-                {{-- <h1
-                    class="text-2xl lg:text-4xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
-                    About Us
-                </h1> --}}
+            <div class="2xl:mx-44 mx-4 text-left ">
                 <p class="text-md text-left  mt-2  text-slate-800 first-line:uppercase first-line:font-light ">
                     {{ $pageSetting->about_us_page_content }}
                 </p>
             </div>
-            <div class="h-4 "></div>
+            <div class="h-8 "></div>
         </div>
 
         <x-stat-widget />
@@ -64,7 +60,7 @@
                 @foreach ($faqs as $index => $faq)
                     <div class="accordion-item {{ $index == 0 ? 'active' : '' }}" id="faq-{{ $faq->id }}">
                         <button
-                            class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start bg-blue-100"
+                            class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start bg-blue-100/40"
                             aria-controls="faq-{{ $faq->id }}-collapse" aria-expanded="true">
                             <span
                                 class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
@@ -73,9 +69,9 @@
                             {{ $faq->question }}
                         </button>
                         <div id="faq-{{ $faq->id }}-collapse"
-                            class="accordion-content w-full overflow-hidden transition-[height] duration-300 bg-blue-100"
+                            class="accordion-content w-full overflow-hidden transition-[height] duration-300 bg-blue-100/40"
                             aria-labelledby="faq-{{ $faq->id }}" role="region">
-                            <div class="px-5 pb-4 bg-blue-100/20">
+                            <div class="px-5 pb-4 ">
                                 <p class="text-base-content/80 font-normal ">
                                     {{ $faq->answer }}
                                     {!! $faq->answer !!}

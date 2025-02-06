@@ -33,10 +33,6 @@
             ]" />
             <div class="h-4 "></div>
             <div class="2xl:mx-44 mx-4 text-left">
-                <h1
-                    class="text-2xl lg:text-4xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
-                    Trekking Adventure In Nepal
-                </h1>
                 <p
                     class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
                     {{ $pageSetting->trek_page_content }}
@@ -53,10 +49,12 @@
             @foreach ($treksRegion as $trekRegion)
                 @if ($trekRegion->treks->isNotEmpty())
                     <div id="region-{{ $trekRegion->id }}">
-                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-normal">
+                        <h5
+                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl md:text-2xl text-primary  lg:text-center font-semibold">
                             {{ $trekRegion->name }} Region Packages
                         </h5>
-                        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4   flex-col gap-4">
+                        <div class="h-2"></div>
+                        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3  flex-col gap-4">
                             @foreach ($trekRegion->treks as $trek)
                                 <div class="card w-full ">
                                     <div>
@@ -112,17 +110,16 @@
                                         </div>
                                     </div>
 
-                                    <div class="card-body px-2 pt-2 bg-blue-100/30 ">
+                                    <div class="card-body px-2 pt-2 bg-blue-100 ">
                                         <a href="{{ route('show_trek', $trek->id) }}">
                                             <h5
-                                                class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-primary font-normal">
+                                                class="card-title mb-1 line-clamp-2 uppercase text-lg tracking-wider text-blue-800 font-semibold">
                                                 {{ $trek->title }}</h5>
                                         </a>
                                         <div class="justify-start flex flex-row items-center  gap-2">
                                             <span
-                                                class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
-                                            {{-- <span class="text-primary font-font-extralight	 uppercase items-center px-2"> Duration : </span> --}}
-                                            <span class="text-primary uppercase items-center font-extrabold ">
+                                                class="icon-[solar--calendar-outline] size-5 font-extrabold text-slate-800"></span>
+                                            <span class="text-slate-800 uppercase items-center font-semibold ">
                                                 {{ $trek->duration . ' days' }}
                                             </span>
                                         </div>
@@ -140,7 +137,7 @@
                                 <div class="carousel-body h-full opacity-0 ">
                                     <!-- Slide 1 -->
                                     @foreach ($trekRegion->treks as $trek)
-                                        <div class="carousel-slide max-w-sm px-1">
+                                        <div class="carousel-slide full ">
                                             <div class="card w-full ">
                                                 <a href="{{ route('show_trek', $trek->id) }}">
                                                     <figure>
@@ -150,17 +147,16 @@
                                                     </figure>
                                                 </a>
                                             </div>
-                                            <div class="card-body bg-blue-100/30 ">
+                                            <div class="card-body bg-blue-100 px-2">
                                                 <a href="{{ route('show_trek', $trek->id) }}">
                                                     <h5
-                                                        class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-primary font-normal">
+                                                        class="card-title mb-1 line-clamp-2 uppercase text-lg text-blue-800 font-semibold">
                                                         {{ $trek->title }}</h5>
                                                 </a>
                                                 <div class="justify-start flex flex-row items-center  gap-2">
                                                     <span
-                                                        class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
-                                                    {{-- <span class="text-primary font-font-extralight	 uppercase items-center px-2"> Duration : </span> --}}
-                                                    <span class="text-primary uppercase items-center font-extrabold ">
+                                                        class="icon-[solar--calendar-outline] size-5 font-extrabold text-slate-800"></span>
+                                                    <span class="text-slate-800 uppercase font-semibold ">
                                                         {{ $trek->duration . ' days' }}
                                                     </span>
                                                 </div>

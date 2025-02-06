@@ -10,7 +10,7 @@
                 </h5>
             </div>
 
-            <div class="sm:grid sm:grid-cols-2 md:grid-cols-3 flex flex-col gap-2 w-full md:px-2">
+            <div class="sm:grid sm:grid-cols-2 md:grid-cols-2 flex flex-col gap-2 w-full md:px-2">
                 @foreach ($expedition->destinations as $destination)
                     <div class="card w-full bg-blue-100/60 at-a-glimpse my-2 ">
                         {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}

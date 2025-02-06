@@ -8,12 +8,8 @@
             <div
                 class="absolute 2xl:bottom-52 2xl:left-44  bottom-52 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class="">
-                    {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
-                        Explore
-                    </h5> --}}
                     <h2 class="card-title mb-2.5  text-white text-3xl md:text-6xl uppercase font-bold">
-                        {{-- {{ $expedition->title }} --}}
-                        Peaks
+                        Expeditions
                     </h2>
                     <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
                         With Sherpalaya
@@ -60,7 +56,6 @@
     <div class="h-12"></div>
 
 
-    {{-- Showing <strong>{{ $expeditionRegion->expeditions->count() }}</strong> --}}
     <div class="2xl:mx-44 mx-4">
         @foreach ($expeditionsRegion as $expeditionRegion)
             @if ($expeditionRegion->expeditions->isNotEmpty())

@@ -32,17 +32,12 @@
             ]" />
             <div class="h-4 "></div>
             <div class="2xl:mx-44 mx-4 text-left">
-                <h1
-                    class="text-2xl lg:text-5xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
-                    tour Adventure In Nepal
-                </h1>
-                {{-- <h3 class="text-3xl tracking-widest text-primary "> With Sherpalaya</h3> --}}
                 <p
-                    class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
+                    class="text-base text-left  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
                     {{ $pageSetting->tour_page_content }}
                 </p>
             </div>
-            <div class="h-4"></div>
+            <div class="h-8"></div>
         </div>
 
 
@@ -57,10 +52,11 @@
                 <div >
                     <div class="h-8"></div>
                     @if ($tours->isNotEmpty())
-                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl text-primary font-bold">
+                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl md:text-2xl lg:text-center text-primary font-bold">
                             {{ $type }} Tours Packages
                         </h5>
-                        <div id="type-{{$type}}" class="hidden md:grid md:grid-cols-3 lg:grid-cols-4  gap-4">
+                        <div class="h-2"></div>
+                        <div id="type-{{$type}}" class="hidden md:grid md:grid-cols-2 lg:grid-cols-3  gap-4">
                             @foreach ($tours as $tour)
                                 <div class="card w-full ">
                                     <div>
@@ -69,13 +65,13 @@
                                             class="relative w-full">
                                             <div class="carousel h-60 rounded-none rounded-t-md">
                                                 <div class="carousel-body h-full opacity-0">
-                                                    {{-- @foreach ($tour->images as $image) --}}
+                                                    @foreach ($tour->images as $image)
                                                     <div class="carousel-slide">
                                                         <a href="{{ route('show_tour', $tour->id) }}">
                                                             <div class="bg-base-200/50 flex h-full justify-center">
                                                                 <span class="self-start w-full ">
                                                                     <figure>
-                                                                        <img src="{{ $tour->coverImage->url ?? asset('photos/P1030127.JPG') }}"
+                                                                        <img src="{{ $image->url ?? asset('photos/P1030127.JPG') }}"
                                                                             alt="{{ $tour->title }} Cover Image"
                                                                             class="h-60 object-cover" />
                                                                     </figure>
@@ -83,7 +79,7 @@
                                                             </div>
                                                         </a>
                                                     </div>
-                                                    {{-- @endforeach --}}
+                                                    @endforeach
                                                 </div>
                                             </div>
 
@@ -155,18 +151,17 @@
                                                         </figure>
                                                     </a>
                                                 </div>
-                                                <div class="card-body bg-blue-100/30 ">
+                                                <div class="card-body bg-blue-100 px-2 pt-2">
                                                     <a href="{{ route('show_tour', $tour->id) }}">
                                                         <h5
-                                                            class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-primary font-normal">
+                                                            class="card-title mb-1 line-clamp-2 uppercase text-lg text-blue-700 font-semibold">
                                                             {{ $tour->title }}</h5>
                                                     </a>
                                                     <div class="justify-start flex flex-row items-center  gap-2">
                                                         <span
-                                                            class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
-                                                        {{-- <span class="text-primary font-font-extralight	 uppercase items-center px-2"> Duration : </span> --}}
+                                                            class="icon-[solar--calendar-outline] size-5 font-extrabold text-slate-800"></span>
                                                         <span
-                                                            class="text-primary uppercase items-center font-extrabold ">
+                                                            class="text-slate-800 uppercase items-center font-semibold ">
                                                             {{ $tour->duration }}
                                                         </span>
                                                     </div>

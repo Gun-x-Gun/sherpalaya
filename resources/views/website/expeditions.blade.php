@@ -1,6 +1,4 @@
 <x-website-layout>
-    {{-- <x-expedition.expedition-landing-page /> --}}
-
     <div class="bg-blue-100/50">
         <div class="card--rounded-none image-full bg-blue-100/50 h-[80vh] relative">
             <figure class="h-[80vh] w-full">
@@ -8,13 +6,13 @@
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
-                <div class="absolute bottom-1/4 left-4 lg:left-4 2xl:left-44 transform translate-y-1/2 overflow-hidden">
-                    <h2 class="card-title mb-2.5 text-white text-3xl md:text-6xl uppercase font-bold">
-                        Tours
-                    </h2>
+                <div class="absolute bottom-1/4 left-4 2xl:left-44 transform translate-y-1/2 overflow-hidden">
                     <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold">
-                        With Sherpalaya
+                        Sherpalaya
                     </h5>
+                    <h2 class="card-title mb-2.5 text-white text-3xl md:text-6xl uppercase font-bold">
+                        Expeditions
+                    </h2>
                 </div>
             </div>
         </div>
@@ -33,42 +31,33 @@
 
             </div>
             <div class="2xl:mx-44 mx-4 text-left">
-                <h1
-                    class="text-2xl lg:text-4xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
-                    Expedition In Nepal
-                </h1>
                 <p
                     class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
                     {{ $pageSetting->expedition_page_content }}
                 </p>
             </div>
-            <div class="h-12 "></div>
+            <div class="h-8 "></div>
         </div>
 
+        <div class="h-8"></div>
 
 
-
-
-
-        <div class="h-12"></div>
-
-
-        {{-- Showing <strong>{{ $expeditionRegion->expeditions->count() }}</strong> --}}
         <div class="2xl:mx-44 mx-4">
             @foreach ($expeditionsRegion as $expeditionRegion)
                 @if ($expeditionRegion->expeditions->isNotEmpty())
                     <div id="region-{{ $expeditionRegion->id }}">
-                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary font-normal">
-                            {{ $expeditionRegion->name }} Region Expeditions
+                        <h5
+                            class="card-title mb-2.5 line-clamp-2 uppercase text-2xl text-primary text-center font-semibold">
+                            {{ $expeditionRegion->name }} Region
                         </h5>
-                        <div class="hidden md:grid md:grid-cols-3 lg:grid-cols-4  gap-3">
+                        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-2  gap-3">
                             @foreach ($expeditionRegion->expeditions as $expedition)
                                 <div
-                                    class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
-                                    <figure class="h-[25rem] max-w-sm">
+                                    class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
+                                    <figure class="h-[25rem] w-full">
                                         <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $expedition->title }} Cover Image"
-                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
+                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
                                     <a href="{{ route('show_expedition', $expedition->id) }}">
                                         <div class="card-body absolute inset-0 justify-end">
@@ -140,6 +129,8 @@
                 @endif
             @endforeach
         </div>
+
+
         <div class="h-12"></div>
     </div>
 
