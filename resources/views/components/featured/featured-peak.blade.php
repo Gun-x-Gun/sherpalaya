@@ -8,7 +8,7 @@
                 <div class="h-8 "></div>
                 <h3 class="text-5xl  tracking-widest text-center ">Peaks</h3>
                 <p
-                    class="text-md mt-2 text-slate-600 text-preety text-balance md:text-wrap md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light ">
+                    class="text-md mt-2 text-slate-600 text-preety text-balance md:text-wrap md:text-center first-line:uppercase first-line:tracking-widest first-line:font-light ">
                     {{ $landingPageSetting->peak_activity_content }}
                 </p>
             </div>

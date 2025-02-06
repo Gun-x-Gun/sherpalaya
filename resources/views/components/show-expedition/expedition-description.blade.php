@@ -37,9 +37,9 @@
     </p>
 </div> --}}
 
-<div class="card sm:w-full shadow-sm shadow-slate-300 bg-blue-50/10">
-    <div class="card-body gap-2 text-blue-700 tracking-wider  px-2 capitalize  text-preety lg:text-justify">
-        <p class="first-line:uppercase">
+<div class="card sm:w-full shadow-sm shadow-slate-300 bg-blue-100/10">
+    <div class="card-body gap-2 text-slate-700 tracking-wider  px-2 capitalize text-preety lg:text-justify">
+        <p class="first-line:uppercase text-balance">
             {!! $expedition->description !!}
         </p>
     </div>

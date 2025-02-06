@@ -5,11 +5,11 @@
             <div class="h-14"></div>
 
             <div class="col-span-1 ">
-                <h5 class="text-4xl font-light line-clamp-2 tracking-wider text-black text-left md:text-center  ">Tours</h5>
-                <h3 class="text-3xl tracking-widest text-accent text-left md:text-center  ">With Sherpalaya</h3>
+                <h5 class="text-4xl font-light line-clamp-2 tracking-wider text-black text-center md:text-center  ">Tours</h5>
+                <h3 class="text-3xl tracking-widest text-accent text-center md:text-center  ">With Sherpalaya</h3>
                 <p
                     class="text-md mt-2 text-left text-preety text-slate-800 text-balance md:text-wrap
-                        md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light">
+                        md:text-center first-line:uppercase first-line:tracking-widest first-line:font-light">
                         {{ $landingPageSetting->tour_activity_content }}
                 </p>
             </div>

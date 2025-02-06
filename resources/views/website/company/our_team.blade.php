@@ -49,7 +49,7 @@
                                 </h5>
                                 <p class="mb-2.5 text-pretty text-slate-800 text-sm line-clamp-4">{{ $sherpa->description }}</p>
 
-                                <p class="text-primary text-nowrap uppercase pb-1 mb-1 font-semibold tracking-wider">Experiences :</p>
+                                <p class="text-blue-800 text-nowrap uppercase pb-1 text-lg font-semibold tracking-wider">Experiences :</p>
 
 
                                 @php
@@ -60,11 +60,11 @@
                                         'tours' => $sherpa->tours->pluck('title')->take(1),
                                     ];
                                 @endphp
-                                <div class="md:flex flex-col gap-3 text-preety overflow-hidden">
+                                <div class="md:flex flex-col gap-3 text-preety overflow-hidden ">
                                     @foreach ($sherpaExperienceData as $category => $experiences)
                                         @foreach ($experiences as $experience)
                                             <span
-                                                class="badge badge-warning my-1 md:my-0 py-0 text-nowrap tracking-tighter text-preety">{{ $experience }}</span>
+                                                class="badge badge-warning my-0.5 md:my-0 py-0 text-sm text-nowrap tracking-tighter text-preety">{{ $experience }}</span>
                                         @endforeach
                                     @endforeach
                                 </div>

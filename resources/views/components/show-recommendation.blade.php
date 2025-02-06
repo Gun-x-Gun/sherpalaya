@@ -1,8 +1,8 @@
-@if (!empty($recommendations))
+@if (!empty($recommendations) && collect($recommendations)->flatten()->isNotEmpty())
 <div class="bg-transparent">
     <div class="h-8"></div>
     <h5 class="card-title text-left">
-        <span class=" uppercase tracking-wider font-light text-3xl text-primary rounded-full">
+        <span class=" uppercase font-semibold text-2xl text-primary rounded-full">
             REcommended
         </span>
     </h5>

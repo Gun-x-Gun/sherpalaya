@@ -1,6 +1,6 @@
 <div class="bg-blue-100/40">
 
-    <div class="h-16 ">
+    <div class="h-10 ">
 
     </div>
     {{-- <div class="2xl:mx-44 mx-4">
@@ -83,7 +83,7 @@
 
         </div>
     </div>
-    <div class="h-20">
+    <div class="h-10">
 
     </div>
 </div>

@@ -8,7 +8,7 @@
                 </h5>
                 <h3 class="text-3xl tracking-widest text-accent text-left md:text-center ">With Sherpalaya</h3>
                 <p
-                    class="text-md mt-2 text-preety text-left md:text-justify text-preety text-slate-800 text-balance md:text-wrap
+                    class="text-md mt-2 text-preety text-left md:text-center text-preety text-slate-800 text-balance md:text-wrap
                          first-line:uppercase first-line:tracking-widest first-line:font-light">
                          {{ $landingPageSetting->tour_activity_content }}
                 </p>

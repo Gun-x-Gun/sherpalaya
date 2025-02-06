@@ -10,7 +10,7 @@
                 <h3 class="text-3xl tracking-widest text-accent text-left md:text-center  ">With Sherpalaya</h3>
                 <p
                     class="text-md mt-2 text-preety text-slate-800 text-balance md:text-wrap
-                    text-left md:text-justify  first-line:uppercase first-line:tracking-widest first-line:font-light">
+                    text-left md:text-center  first-line:uppercase first-line:tracking-widest first-line:font-light">
                     {{ $landingPageSetting->tour_activity_content }}
                 </p>
             </div>
