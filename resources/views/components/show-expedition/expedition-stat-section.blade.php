@@ -1,7 +1,7 @@
 <div class="w-full my-4">
     <div class="stats stats-vertical bg-blue-100/50 w-full rounded-none">
         <div class="stat">
-            <div class="stat-title">Duration</div>
+            <div class="stat-title text-primary uppercase font-semibold">Duration</div>
             <div class="stat-value">
                 {{ $expedition->duration ? $expedition->duration . ' Days' : 'N/A' }}
             </div>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="stat">
-            <div class="stat-title">Difficulty</div>
+            <div class="stat-title text-primary uppercase font-semibold">Difficulty</div>
             <div class="stat-value">
                 @if ($expedition->grade)
                     <span class="badge badge-outline badge-primary">Grade:
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="stat">
-            <div class="stat-title">Altitude</div>
+            <div class="stat-title text-primary uppercase font-semibold">Altitude</div>
             <div class="stat-value">
 
                 @if (!empty($expedition->starting_altitude))
