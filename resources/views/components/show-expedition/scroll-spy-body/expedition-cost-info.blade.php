@@ -17,7 +17,7 @@
                             <span class="bg-transparent text-success flex items-center justify-center rounded-full p-1">
                                 <span class="icon-[eva--done-all-fill] size-5"></span>
                             </span>
-                            <p class="text-slate-900  md:text-justify text-preety text-base">
+                            <p class="text-slate-900  md:text-balance text-preety text-base">
                                 {{ $cost_include }}
                             </p>
                         </li>
@@ -32,7 +32,7 @@
 
     @if (!empty($expedition->costs_exclude))
         {{-- cost exclude --}}
-        <div id="costs_exclude" class="card 2xl:max-w-full  rounded-none bg-red-100/60">
+        <div id="costs_exclude" class="card 2xl:max-w-full  rounded-none bg-red-100/40">
             <div class="h-8">
 
             </div>
@@ -48,7 +48,7 @@
                             <span class="bg-transparent text-red-300 flex items-center justify-center rounded-full ">
                                 <span class="icon-[tabler--exclamation-circle] size-5"></span>
                             </span>
-                            <p class="text-slate-900 md:text-justify text-preety text-base">
+                            <p class="text-slate-900 md:text-balance text-preety text-base">
                                 {{ $cost_exclude }} </p>
                         </li>
                     @endforeach

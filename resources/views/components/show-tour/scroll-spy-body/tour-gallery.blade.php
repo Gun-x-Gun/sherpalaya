@@ -1,5 +1,5 @@
 @if ($tour->images->isNotEmpty())
-    <div class="bg-blue-100/70">
+    <div class="bg-blue-100/30">
         <div id="gallery" class="card-header  pb-4  px-0">
             <div class="h-6">
             </div>

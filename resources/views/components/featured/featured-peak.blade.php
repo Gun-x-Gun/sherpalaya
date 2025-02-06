@@ -5,8 +5,8 @@
     @if ($featuredPeaks->isNotEmpty())
         <div class="2xl:mx-44 mx-4 ">
             <div>
-                <div class="h-8 "></div>
-                <h3 class="text-5xl  tracking-widest text-center ">Peaks</h3>
+                <div class="h-10"></div>
+                <h3 class="text-4xl  tracking-widest text-center ">Peaks</h3>
                 <p
                     class="text-md mt-2 text-slate-600 text-preety text-balance md:text-wrap md:text-center first-line:uppercase first-line:tracking-widest first-line:font-light ">
                     {{ $landingPageSetting->peak_activity_content }}
@@ -78,7 +78,7 @@
 
                     </div>
                 @elseif($peaks->where('is_featured', true)->count() === 1)
-                    <div class="h-4">
+                    <div class="h-8">
                     </div>
                     @foreach ($peaks->where('is_featured', true) as $featuredPeak)
                         <div

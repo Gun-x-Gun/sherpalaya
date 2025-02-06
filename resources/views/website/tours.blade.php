@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/50">
+    <div class="bg-blue-100/30">
         <div class="card--rounded-none image-full bg-blue-100/50 h-[80vh] relative">
             <figure class="h-[80vh] w-full">
                 <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->tour_page_cover_image_id ?? null" :fallback="asset('/photos/banner.jpg')"
@@ -116,14 +116,14 @@
                                     <div class="card-body px-2 pt-2 bg-blue-100/30 ">
                                         <a href="{{ route('show_tour', $tour->id) }}">
                                             <h5
-                                                class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-primary font-normal">
+                                                class="card-title mb-1 line-clamp-2 uppercase text-lg text-blue-700 font-semibold">
                                                 {{ $tour->title }}</h5>
                                         </a>
                                         <div class="justify-start flex flex-row items-center  gap-2">
                                             <span
                                                 class="icon-[solar--calendar-outline] size-5 font-extrabold text-primary"></span>
                                             {{-- <span class="text-primary font-font-extralight	 uppercase items-center px-2"> Duration : </span> --}}
-                                            <span class="text-primary uppercase items-center font-normal ">
+                                            <span class="text-slate-800 uppercase items-center font-semibold ">
                                                 {{ $tour->duration }}
                                             </span>
                                         </div>

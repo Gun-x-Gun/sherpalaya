@@ -1,9 +1,9 @@
 <x-website-layout>
-    <div class="bg-white">
+    <div class="bg-blue-100/10">
         <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1" class="">
             <div id="scrollspy-scrollable-parent-1" class="">
                 {{-- topsection --}}
-                <div class="bg-blue-100/50">
+                <div class="bg-blue-100/30">
                     {{-- top section card --}}
                     <x-show-tour.tour-top-section-card :tour="$tour" />
                     {{-- end-section-card --}}

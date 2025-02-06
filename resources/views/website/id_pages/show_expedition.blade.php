@@ -1,9 +1,9 @@
 <x-website-layout>
-    <div class="bg-white">
+    <div class="bg-blue-100/10">
         <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1" class="">
             <div id="scrollspy-scrollable-parent-1" class="">
                 {{-- topsection --}}
-                <div class="bg-blue-100/50">
+                <div class="bg-blue-100/20">
                     {{-- top section card --}}
 
                     <x-show-expedition.expedition-top-section-card :expedition="$expedition" />
@@ -55,7 +55,7 @@
 
                 {{-- scrollspy body --}}
 
-                <div class="bg-blue-100/10">
+                <div class="bg-transparent">
                     <div class=" mx-4 2xl:mx-44 gap-2 max-w-full ">
                         <div class="xl:grid grid-cols-3  gap-6">
                             <div class="xl:col-span-2 ">

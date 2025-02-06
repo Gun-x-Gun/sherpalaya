@@ -1,6 +1,6 @@
 {{-- <x-show-expedition.scroll-spy-navigation /> --}}
 @if (!empty($expedition->keyHighlights))
-    <div id="key_highlights" class="card 2xl:max-w-full rounded-none bg-blue-100/60 ">
+    <div id="key_highlights" class="card 2xl:max-w-full rounded-none bg-blue-100/20 ">
         <div class="h-6">
         </div>
         <div class="card-header  px-2 pb-2">

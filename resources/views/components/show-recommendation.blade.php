@@ -37,7 +37,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="h-4"></div>
+                        <div class="h-2"></div>
                     </div>
                 @elseif ($recommendationDatas->count() === 2)
                     <div class="bg-blue-100/60">
@@ -66,7 +66,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="h-4"></div>
+                        <div class="h-2"></div>
                     </div>
                 @elseif ($recommendationDatas->count() === 3)
                     <div class="bg-blue-100/60">
@@ -143,7 +143,7 @@
                                     class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
                             </button>
                         </div>
-                        <div class="h-4"></div>
+                        <div class="h-2"></div>
                     </div>
 
                     {{-- >4 --}}
@@ -196,7 +196,7 @@
                                     class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
                             </button>
                         </div>
-                        <div class="h-4"></div>
+                        <div class="h-2"></div>
                     </div>
                 @endif
             @endif

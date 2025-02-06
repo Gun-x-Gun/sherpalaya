@@ -15,7 +15,7 @@
                             <button
                                 class="accordion-toggle inline-flex items-center gap-x-4 text-start text-black font-medium  uppercase px-0"
                                 aria-controls="itinerary-{{ $itinerary->id }}-collapse" aria-expanded="false">
-                                <div class="card  flex flex-row gap-2 bg-blue-100/90 m-0 p-2 text-base text-slate-900">
+                                <div class="card  flex flex-row gap-2 bg-blue-100/40 m-0 p-2 text-base text-slate-900">
                                     <span
                                         class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
                                     {{ $itinerary->title }}

@@ -126,7 +126,7 @@
                                 <div class="card-body px-2 pt-2 bg-blue-100/30 ">
                                     <a href="{{ route('show_tour', $tour->id) }}">
                                         <h5
-                                            class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-primary font-normal">
+                                            class="card-title mb-1 line-clamp-2 uppercase text-lg text-blue-700 font-semibold">
                                             {{ $tour->title }}</h5>
                                     </a>
                                     <div class="justify-start flex flex-row items-center  gap-2">

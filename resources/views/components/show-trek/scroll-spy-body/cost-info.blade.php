@@ -1,7 +1,7 @@
 <div class="md:grid grid-cols-2 ">
     @if (!empty($trek->costs_include))
 
-        <div id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/60">
+        <div id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/40">
             <div class="h-8">
 
             </div>
