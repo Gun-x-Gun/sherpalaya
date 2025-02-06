@@ -2041,6 +2041,759 @@ class ItinerarySeeder extends Seeder
         ];
 
 
+        $kanchanjunga_exped_itinerary = [
+            [
+                'title' => 'Day 01: Arrival in Kathmandu and Transfer to Hotel',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => 'Arrive in Kathmandu. Transfer to hotel.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 02: Full-day sightseeing tour of Bhaktapur, Pashupatinath, and Boudhanath',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => 'Start the day with a guided sightseeing of some of the tourist sites in Kathmandu. Visit Bouddhanath Stupa, Pashupatinath Temple, and Bhaktapur Durbar Square with our friendly guide. These monuments present a glimpse of Nepali art, architecture, and culture. After the tour, the guide will drop you back at the hotel. On the remaining day, you will prepare for the trek. Meet with your mountain guide and learn about the trek plan. Purchase any last-minute trekking gear and pack your duffle bags.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => 'Meals: Breakfast only',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 03: Fly to Bhadrapur and drive to Taplejung',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => 'Fly from Kathmandu to Bhadrapur. The flight is about 35 minutes.  The specific airport depends on the season.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => 'Drive from Bhadrapur to Taplejung. The drive is about 8 hours.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 04: Trek from Taplejung to Sekathum',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Taplejung to Sekathum. The trail passes through lush green forests and small villages.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Sekathum: 1,576m/5,170ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 05: Trek from Sekathum to Amjilossa',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Sekathum to Amjilossa. The trail continues uphill through forests and small villages before descending to the Ghunsa Khola River.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Amjilosa: 2,308m/7,542ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '6-7 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 06: Trek from Amjilossa to Yamphudin',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Amjilossa to Yamphudin. The trail follows the Ghunsa Khola River, passing through lush forests and waterfalls.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Yamphudin: 3,300m/10,826ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '6-7 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 07: Trek from Yamphudin to Tortong',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Yamphudin to Tortong. The trail ascends gradually through rhododendron forests, offering stunning views of the surrounding peaks.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Tortong: 4,250m/13,943ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 08: Trek from Tortong to Tseram',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Tortong to Tseram. The trail climbs steeply through rocky terrain, offering breathtaking views of the Kanchenjunga massif.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Tseram: 4,870m/15,977ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 09: Acclimatization Day in Tseram',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,  # Or perhaps a short acclimatization hike could be TREK
+                        'description' => 'Rest and acclimatization day in Tseram.  Perhaps a short hike to a viewpoint.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Tseram: 4,870m/15,977ft',
+                    ],
+                     [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 10: Trek from Tseram to Ramche',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Tseram to Ramche. The trail continues through high-altitude terrain, with stunning views of glaciers and snow-capped peaks.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Ramche: 5,013m/16,447ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '4-5 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 11: Trek from Ramche to Glacier Camp',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Ramche to Glacier Camp. The trail gets closer to the Kanchenjunga Glacier, offering spectacular views of the icefall and surrounding peaks.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Glacier Camp: 5,140m/16,863ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '4-5 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 12: Trek from Glacier Camp to Kanchenjunga Base Camp',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Glacier Camp to Kanchenjunga Base Camp. The final stretch to base camp, offering an immersive experience in the heart of the Himalayas.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Kanchenjunga Base Camp: 5,500m/18,044ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '3-4 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 13: Rest Day at Kanchenjunga Base Camp',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => 'Rest and acclimatization day at Kanchenjunga Base Camp.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Kanchenjunga Base Camp: 5,500m/18,044ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel/Tea House',
+                    ],
+                ],
+            ],
+                [
+                'title' => 'Day 14-41: Climbing Period (Base Camp - Kanchenjunga Summit - Base Camp)',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK, # Or a more specific type if you have it.
+                        'description' => 'Climbing period. Ascend to high camps, attempt summit, and return to Base Camp.  This period is highly variable due to weather and climbing conditions.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::HIMALAYA, # If you want to emphasize the mountain views during the climb.
+                        'description' => 'Spectacular views throughout the climbing period.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'High Camps / Base Camp',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 42: Cleaning Up Base Camp',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => 'Cleaning up base camp and preparing for the descent.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Base Camp',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 43: Trek from Base Camp to Ramche',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Base Camp to Ramche.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Ramche: 5,013m/16,447ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '4-5 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House/Lodge',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 44: Trek from Ramche to Tortong',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Ramche to Tortong.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Tortong: 4,250m/13,943ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House/Lodge',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 45: Trek from Tortong to Yamphudin',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Tortong to Yamphudin.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Yamphudin: 3,300m/10,826ft',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '6-7 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House/Lodge',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 46: Trek from Yamphudin to Khewang',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Yamphudin to Khewang.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Khewang:  (Check altitude)', // Add Altitude if known
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '6-7 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House/Lodge',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 47: Trek from Khewang to Khandenba',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek from Khewang to Khandenba.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Khandenba: (Check altitude)', // Add Altitude if known
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House/Lodge',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 48: Drive from Khandenba to Bhadrapur',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => 'Drive from Khandenba to Bhadrapur.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel in Bhadrapur', // Or appropriate ACCOMODATION
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 49: Fly from Bhadrapur to Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => 'Fly from Bhadrapur to Kathmandu.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel in Kathmandu',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 50: Leisure Day in Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST, // Or OTHERS if they are doing sightseeing
+                        'description' => 'Leisure day in Kathmandu.  Optional sightseeing.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel in Kathmandu',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 51: Final Departure',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => 'Transfer to the airport for final departure.',
+                    ],
+                ],
+            ],
+        ];
+
+        $lhotse_exped_itinerary = [
+            [
+                'title' => 'Day 01: Arrival in Kathmandu & transfer to the hotel',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => 'Arrive in Kathmandu. Transfer to hotel.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 02: Welcome brief, Gear check and Official formalities in Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => 'Expedition briefing, gear check, permit formalities.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 03: Fly to Lukla & trek to Phakding',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => 'Fly to Lukla.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek to Phakding.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Lukla: 2,860m, Phakding: 2,610m',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '3-4 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 04: Trek to Namche Bazaar',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek to Namche Bazaar.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Namche Bazaar: 3,440m',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 05: Rest in Namche Bazaar (Acclimatization hike)',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST, // Could be TREK for the hike
+                        'description' => 'Rest and acclimatization. Hike to Everest viewpoint (or similar).',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 06: Trek to Debuche via Tengboche Monastery',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek to Debuche via Tengboche.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Debuche: (Add Altitude)', // Find and add altitude
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 07: Trek to Dingboche',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek to Dingboche.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Dingboche: (Add Altitude)', // Find and add altitude
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 08: Acclimatize day in Dingboche (Nagarjun Hill hike)',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST, // Or TREK for the hike
+                        'description' => 'Acclimatization. Hike to Nagarjun Hill.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 09: Trek to Lobuche',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek to Lobuche.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Lobuche: (Add Altitude)', // Find and add altitude
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 10: Trek to Everest Base Camp',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek to Everest Base Camp.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Everest Base Camp: 5,364m', // Corrected Altitude
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House/Tents',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 11-45: Lhotse Climbing Period',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK, // Or more specific types if you have them
+                        'description' => 'Climbing period on Lhotse. This includes acclimatization climbs, establishing high camps, summit attempt(s), and descent.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => 'Stunning views during the climb.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tents at High Camps / Base Camp',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 46: Clearing up base camp',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => 'Clearing up base camp and preparing for the descent.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Base Camp',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 47: Trek back to Pheriche',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek back to Pheriche.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Pheriche: (Add Altitude)', // Find and add altitude
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 48: Trek back to Namche',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek back to Namche Bazaar.',
+                    ],
+                     [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Namche Bazaar: 3,440m',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 49: Trek back to Lukla',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => 'Trek back to Lukla.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => 'Lukla: 2,860m',
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => '5-6 hours',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Tea House',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 50: Back to Kathmandu & transfer to hotel/dinner',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => 'Fly from Lukla to Kathmandu.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel',
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => 'Farewell Dinner', // Or mention transfer to hotel if separate
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 51: Free day in Kathmandu',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST, // Or OTHERS for sightseeing
+                        'description' => 'Free day in Kathmandu. Optional sightseeing.',
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => 'Hotel',
+                    ],
+                ],
+            ],
+            [
+                'title' => 'Day 52: Depart to the home country',
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => 'Transfer to the airport for departure.',
+                    ],
+                ],
+            ],
+
+        ];
+
 
         $this->createItinerariesWithDetails(
             Trek::first(),
@@ -2069,6 +2822,14 @@ class ItinerarySeeder extends Seeder
         $this->createItinerariesWithDetails(
             Expedition::first(),
             $expeditionItineraries
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(2),
+            $kanchanjunga_exped_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(3),
+            $lhotse_exped_itinerary
         );
     }
 

@@ -175,36 +175,59 @@ class KeyHighlightSeeder extends Seeder
         ];
 
 
-$langtang_highlights = [
-    [
-        'title' => 'A Challenging and Rewarding Trek',
-        'description' => 'Experience an adventurous and challenging trek near Kathmandu, offering stunning landscapes and cultural immersion.'
-    ],
-    [
-        'title' => 'Explore Valleys and Peaks',
-        'description' => 'Trek through the "Valley of Glaciers" (Langtang Valley), hike to viewpoints like Kyanjin Ri and Cherukuri Ri, and witness breathtaking mountain vistas, including Langtang Lirung, Naya Kanga, and Dorje Lakpa.'
-    ],
-    [
-        'title' => 'Sacred Lakes and High Passes',
-        'description' => 'Visit the sacred Gosainkunda Lake, a pilgrimage site for Hindus, and cross the challenging Lauribina La pass (4,610m).'
-    ],
-    [
-        'title' => 'Cultural Immersion',
-        'description' => 'Interact with the Tamang and Sherpa communities, experience their warm hospitality, and learn about their unique culture and traditions. Visit ancient monasteries and explore local markets and yak cheese factories.'
-    ],
-    [
-        'title' => 'Diverse Landscapes',
-        'description' => 'Traverse remote settlements, lush meadows, dense forests (including rhododendron forests), and rugged terrain, experiencing a variety of landscapes.'
-    ],
-    [
-        'title' => 'Wildlife Encounters',
-        'description' => 'Keep an eye out for potential wildlife sightings, including langur monkeys, especially in the lower sections of the trek near Shivapuri National Park.'
-    ],
-    [
-        'title' => 'Getaway from Kathmandu',
-        'description' => 'Explore the Chisapani region and the area around Sundarijal, popular destinations for those seeking a quick escape from the city.'
-    ],
-];
+        $langtang_highlights = [
+            [
+                'title' => 'A Challenging and Rewarding Trek',
+                'description' => 'Experience an adventurous and challenging trek near Kathmandu, offering stunning landscapes and cultural immersion.'
+            ],
+            [
+                'title' => 'Explore Valleys and Peaks',
+                'description' => 'Trek through the "Valley of Glaciers" (Langtang Valley), hike to viewpoints like Kyanjin Ri and Cherukuri Ri, and witness breathtaking mountain vistas, including Langtang Lirung, Naya Kanga, and Dorje Lakpa.'
+            ],
+            [
+                'title' => 'Sacred Lakes and High Passes',
+                'description' => 'Visit the sacred Gosainkunda Lake, a pilgrimage site for Hindus, and cross the challenging Lauribina La pass (4,610m).'
+            ],
+            [
+                'title' => 'Cultural Immersion',
+                'description' => 'Interact with the Tamang and Sherpa communities, experience their warm hospitality, and learn about their unique culture and traditions. Visit ancient monasteries and explore local markets and yak cheese factories.'
+            ],
+            [
+                'title' => 'Diverse Landscapes',
+                'description' => 'Traverse remote settlements, lush meadows, dense forests (including rhododendron forests), and rugged terrain, experiencing a variety of landscapes.'
+            ],
+            [
+                'title' => 'Wildlife Encounters',
+                'description' => 'Keep an eye out for potential wildlife sightings, including langur monkeys, especially in the lower sections of the trek near Shivapuri National Park.'
+            ],
+            [
+                'title' => 'Getaway from Kathmandu',
+                'description' => 'Explore the Chisapani region and the area around Sundarijal, popular destinations for those seeking a quick escape from the city.'
+            ],
+        ];
+
+        $kanchanjunga_highlights = [
+            [
+                'title' => 'Summiting the Third Highest Peak',
+                'description' => 'Experience the ultimate thrill of standing atop the world\'s third highest mountain.',
+            ],
+            [
+                'title' => 'Remote and Pristine Wilderness',
+                'description' => 'Trek through untouched landscapes and experience the raw beauty of the Kanchenjunga region.',
+            ],
+            [
+                'title' => 'Cultural Immersion',
+                'description' => 'Interact with local communities and experience the unique culture of the region.',
+            ],
+            [
+                'title' => 'Challenging Climb',
+                'description' => 'Test your mountaineering skills with a technically challenging climb.',
+            ],
+            [
+                'title' => 'Expert Guidance',
+                'description' => 'Climb with experienced guides and Sherpas who prioritize safety and success.',
+            ],
+        ];
 
 
         $this->createKeyHighlights(
@@ -233,6 +256,14 @@ $langtang_highlights = [
         );
         $this->createKeyHighlights(
             Expedition::first(),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(2),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Expedition::find(3),
             $everest_expedition
         );
         $this->createKeyHighlights(

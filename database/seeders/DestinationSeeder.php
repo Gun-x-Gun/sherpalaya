@@ -62,6 +62,22 @@ class DestinationSeeder extends Seeder
             ['name' => 'Melamchi Gaon', 'region_id' => 5, 'description' => 'A village in the Helambu region, offering a glimpse into rural life and beautiful mountain scenery.', 'location' => ['lat' => 27.9167, 'lng' => 85.2833]],
             ['name' => 'Tarke Ghyang', 'region_id' => 5, 'description' => 'A picturesque village with a large Buddhist monastery, known for its peaceful atmosphere and stunning views.', 'location' => ['lat' => 27.8500, 'lng' => 85.2500]],
             ['name' => 'Sundarijal', 'region_id' => 5, 'description' => 'The end point of the trek, a small town near Kathmandu with a beautiful waterfall and access to the Shivapuri Nagarjun National Park.', 'location' => ['lat' => 27.7500, 'lng' => 85.3333]],
+
+            ['name' => 'Kanchenjunga Base Camp', 'region_id' => 6, 'description' => 'The base camp for Kanchenjunga expeditions, offering stunning views of the mountain and surrounding peaks.', 'location' => ['lat' => 27.7025, 'lng' => 88.1469]],
+            ['name' => 'Khewang', 'region_id' => 6, 'description' => 'A small village on the Kanchenjunga Base Camp trek, known for its traditional Limbu culture and beautiful scenery.', 'location' => ['lat' => 27.6167, 'lng' => 88.0833]],
+            ['name' => 'Yamphudin', 'region_id' => 6, 'description' => 'A picturesque village with a monastery, offering a peaceful rest stop on the trek.', 'location' => ['lat' => 27.6500, 'lng' => 88.0500]],
+            ['name' => 'Tortong', 'region_id' => 6, 'description' => 'A high-altitude campsite with panoramic views of the Himalayas.', 'location' => ['lat' => 27.6833, 'lng' => 88.0167]],
+            ['name' => 'Tseram', 'region_id' => 6, 'description' => 'A village with a unique cultural heritage and stunning views of Kanchenjunga.', 'location' => ['lat' => 27.7167, 'lng' => 87.9833]],
+            ['name' => 'Ramche', 'region_id' => 6, 'description' => 'A high-altitude grazing area with breathtaking views of the surrounding mountains.', 'location' => ['lat' => 27.7500, 'lng' => 87.9500]],
+            ['name' => 'Glacier Camp', 'region_id' => 6, 'description' => 'A campsite near the Kanchenjunga Glacier, offering a close-up view of the icy landscape.', 'location' => ['lat' => 27.7833, 'lng' => 87.9167]],
+            ['name' => 'Simbuwa', 'region_id' => 6, 'description' => 'A small village with a rich cultural heritage and stunning views of the Himalayas.', 'location' => ['lat' => 27.7667, 'lng' => 87.9333]],
+            ['name' => 'Labrang', 'region_id' => 6, 'description' => 'A small village with a monastery, offering a peaceful retreat and panoramic views.', 'location' => ['lat' => 27.7333, 'lng' => 87.9667]],
+            ['name' => 'Thukla', 'region_id' => 6, 'description' => 'The last village before the base camp, offering stunning views of the surrounding peaks.', 'location' => ['lat' => 27.7833, 'lng' => 88.0167]],
+            ['name' => 'Lhonak', 'region_id' => 6, 'description' => 'A small village near the base camp, known for its friendly locals and unique culture.', 'location' => ['lat' => 27.8000, 'lng' => 88.0333]],
+            ['name' => 'Oktang', 'region_id' => 6, 'description' => 'A small village with a beautiful monastery and stunning views of the Himalayas.', 'location' => ['lat' => 27.8167, 'lng' => 88.0500]],
+            ['name' => 'Thangpe', 'region_id' => 6, 'description' => 'A small village with a view of the Kangchenjunga massif and the surrounding peaks.', 'location' => ['lat' => 27.8333, 'lng' => 88.0667]],
+            ['name' => 'Sherpa Land', 'region_id' => 6, 'description' => 'A small region inhabited by the Sherpa people, known for their hospitality and mountaineering skills.', 'location' => ['lat' => 27.8500, 'lng' => 88.0833]],
+            ['name' => 'Pangpema', 'region_id' => 6, 'description' => 'A high-altitude pass with stunning views of the Himalayas, often used as an acclimatization hike.', 'location' => ['lat' => 27.8667, 'lng' => 88.1000]],
         ];
 
 

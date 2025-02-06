@@ -211,6 +211,28 @@ class EssentialTipsSeeder extends Seeder
                 'description' => 'Be mindful of local customs and traditions. Ask before taking photos and show respect for the Tamang and Sherpa communities.'
             ],
         ];
+        $kanchanjunga_exped_essential_tips = [
+            [
+                'title' => 'Prior Mountaineering Experience',
+                'description' => 'Kanchenjunga is a serious undertaking. You must have prior experience climbing 8000m peaks.',
+            ],
+            [
+                'title' => 'Physical Fitness',
+                'description' => 'Be in excellent physical condition, with rigorous training and endurance.',
+            ],
+            [
+                'title' => 'Proper Gear',
+                'description' => 'Invest in high-quality mountaineering gear suitable for extreme conditions.',
+            ],
+                [
+                'title' => 'Acclimatization',
+                'description' => 'Understand the importance of acclimatization and follow the expedition\'s plan carefully.',
+            ],
+                [
+                'title' => 'Mental Preparation',
+                'description' => 'A strong mental attitude is essential for overcoming challenges and pushing through difficult moments.',
+            ],
+        ];
 
 
         $this->createEssentialTips(
@@ -239,6 +261,14 @@ class EssentialTipsSeeder extends Seeder
         );
         $this->createEssentialTips(
             Expedition::first(),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(2),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(3),
             $everest_expedition_tips
         );
         $this->createEssentialTips(
