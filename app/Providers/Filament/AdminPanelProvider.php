@@ -118,7 +118,7 @@ class AdminPanelProvider extends PanelProvider
                 //         return request()->is('admin/shield/roles');
                 //     }),
                 NavigationItem::make('Sherpalaya Home')
-                    ->url('http://127.0.0.1:8000', shouldOpenInNewTab: true)
+                    ->url('/', shouldOpenInNewTab: true)
                     ->icon('heroicon-o-chevron-double-up'),
             ])
             ->navigationGroups([
