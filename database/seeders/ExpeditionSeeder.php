@@ -96,7 +96,7 @@ While climbing Mt. Everest is the opportunity of a lifetime, expeditions encount
             'title' => 'Kanchenjunga Expedition',
             'description' => 'Towering 8,568m above sea-level, Kanchenjunga is more than just the world’s third-highest mountain. Its five peaks are shrouded in myth, considered so sacred that the first men to climb it, a British party from 1955, stopped short of the actual summit in deference to the deities of the mountain. Today, it represents one of the toughest of all the 8000ers and a must for any serious mountaineer’s bucket list.  A challenge for those who have scaled Everest, Kanchenjunga, which translates as “The Five Treasures of Snow” boasts no fewer than five peaks, four of which sit above 8,450m. Lying on the border between Nepal and India’s Sikkim state, it is not only one of the tallest mountains in the world, but also one of the most dangerous. Very few tourists venture into this area of the Himalayas, and even fewer attempt the peak - there are usually only around 25 successful summits a season. This remoteness is one of Kanchenjunga’s great appeals for serious climbers, but it also adds an element of risk. With a high percentage of avalanche and weather hazards, deciding who you climb with perhaps matters more here than anywhere else. Elite Exped’s guiding team - handpicked by our leaders Nimsdai and Mingma David Sherpa - have clocked up multiple ascents of Kanchenjunga. Several of our team - including Nim and Mingma David - have also been involved in high-profile, successful rescues above 8,000m. Simply put, you could not be in better hands when attempting this most tricky of mountains. Our tailored 51-day expedition plan includes plenty of rest and acclimatization days, plus an extensive climbing window. Because we always look after all our logistics and expedition planning - rather than relying on third party providers - we’re adept at all the setup processes and rope-rigging required to scale a more remote peak like Kanchenjunga. Not only that, our team’s Nepalese heritage - and ability to straddle the divide between Western and Himalayan climbing cultures, means we can be sure that every aspect of your expedition will run like clockwork, offering you the best possible opportunity to reach this majestic mountain. From the moment you sign up, to the summit, and safely back home again, Elite Exped’s expert team will be with you, every step of the way. At Elite Exped, we extensively vet our hotel, travel and accommodation partners, and operate using the very best mountaineering equipment available, to ensure the highest standards of safety possible. ',
             'duration' => '51',
-            'region_id' => Region::find(6)->id, // Make sure your regions table is seeded correctly
+            'region_id' => Region::find(5)->id, // Make sure your regions table is seeded correctly
             'grade' => '9',
             'starting_point' => 'Kathmandu',
             'ending_point' => 'Kathmandu',
@@ -131,7 +131,7 @@ While climbing Mt. Everest is the opportunity of a lifetime, expeditions encount
             'is_featured' => true,
         ]);
         $kanchenjunga_expedition_data->destinations()->sync(
-            Destination::where('region_id', 6)
+            Destination::where('region_id', 5)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()

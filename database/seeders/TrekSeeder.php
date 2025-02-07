@@ -186,7 +186,7 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'best_time_for_trek' => 'Spring (March-May) and Autumn (September-November)',
             'starting_altitude' => 710,
             'highest_altitude' => 5160,
-            'region_id' => 4,
+            'region_id' => 3,
             'trek_difficulty' => TrekDifficulty::CHALLENGING,
             'costs_include' => [
                 'Airport transfers upon arrival and departure.',
@@ -216,7 +216,7 @@ The best season for this trip starts from beginning of March to May and  Septemb
         ]);
 
         $trek3->destinations()->sync(
-            Destination::where('region_id', 4)
+            Destination::where('region_id', 3)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()
@@ -269,7 +269,7 @@ The best season for this trip starts from beginning of March to May and  Septemb
             'best_time_for_trek' => 'Autumn (Sep-Oct-Nov) and Spring (March-April-May)',
             'starting_altitude' => 1462, // Approximate starting altitude, adjust if needed
             'highest_altitude' => 4609,
-            'region_id' => Region::find(5)->id, // Ensure you have Region data seeded
+            'region_id' => Region::find(4)->id, // Ensure you have Region data seeded
             'trek_difficulty' => TrekDifficulty::CHALLENGING, // Or appropriate difficulty
             'costs_include' => [
                 'Arrival and Departure Transport.',
@@ -301,7 +301,7 @@ The best season for this trip starts from beginning of March to May and  Septemb
         ]);
 
         $trek4->destinations()->sync(
-            Destination::where('region_id', 5) // Or appropriate region ID
+            Destination::where('region_id', 4) // Or appropriate region ID
                 ->inRandomOrder()
                 ->limit(5) // Adjust the number of destinations as needed
                 ->get()
