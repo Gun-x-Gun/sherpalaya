@@ -11,6 +11,7 @@ use App\Filament\Resources\DestinationResource\Widgets\DestinationToursTable;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationTrekTable;
 use App\Models\Destination;
 use App\Filament\Fields\CuratorPicker;
+use App\Traits\Filament\TranslatableResource;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Dotswan\MapPicker\Fields\Map;
 use Filament\Forms;
@@ -33,6 +34,8 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 
 class DestinationResource extends Resource
 {
+    use TranslatableResource;
+
     protected static ?string $model = Destination::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-map-pin';

@@ -8,6 +8,7 @@ use App\Filament\Resources\ExpeditionResource\Pages;
 use App\Filament\Resources\ExpeditionResource\RelationManagers;
 use App\Models\Expedition;
 use App\Filament\Fields\CuratorPicker;
+use App\Traits\Filament\TranslatableResource;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\Repeater;
@@ -33,6 +34,8 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 
 class ExpeditionResource extends Resource
 {
+    use TranslatableResource;
+
     protected static ?string $model = Expedition::class;
     protected static ?string $navigationGroup = 'Content';
     protected static ?int $navigationSort = 1;
