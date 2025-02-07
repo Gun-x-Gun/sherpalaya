@@ -4,7 +4,7 @@
         <div class=" relative xl:flex xl:items-center ">
             <div class="flex items-center justify-between">
                 <a class="link text-base-content link-neutral texl-2xl font-semibold no-underline" href="/home">
-                    Sherpalaya
+                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-8 w-12">
                 </a>
                 <div class="xl:hidden">
                     <a href="/search" class="btn btn-transparent border-none">
@@ -25,7 +25,7 @@
                     <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent ">
                         <li class=" hover:bg-primary rounded-lg uppercase"><a href="/home"
                                 @class([
-                                    'underline decoration-wavy text-warning' =>
+                                    'underline decoration-wavy text-primary' =>
                                         request()->route()->getName() == 'website.home',
                                 ])>Home</a>
                         </li>
@@ -44,7 +44,7 @@
                             <li class="text-primary hover:underline"><a class="dropdown-item"
                                     href="/services">Services</a></li>
                             <li class="text-primary hover:underline"><a class="dropdown-item" href="/sherpas">
-                                Our Sherpas</a>
+                                    Our Sherpas</a>
                             </li>
                         </ul>
                     </div>
@@ -158,7 +158,8 @@
                         </button>
                         <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
                             role="menu" aria-orientation="vertical">
-                            <ul class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
+                            <ul
+                                class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
                                 <div class="grid grid-cols-4 gap-1">
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->treks->isNotEmpty())
@@ -238,7 +239,7 @@
                     <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent  uppercase ">
                         <li class=" hover:bg-primary rounded-lg text-md "><a href="/contact"
                                 @class([
-                                    'underline decoration-wavy text-warning' =>
+                                    'underline decoration-wavy text-primary' =>
                                         request()->route()->getName() == 'website.contact',
                                 ])>Contact</a>
                         </li>
