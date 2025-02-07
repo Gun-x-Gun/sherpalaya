@@ -35,7 +35,7 @@
             {{-- bg-blue-100/20 --}}
 
             <div class="w-full">
-                <x-carousel.full-width-carousel :header="$searchTypes->get($resultType)->getLabel()">
+                <x-carousel.full-width-carousel :header="$searchTypes->get($resultType)->getLabel()" viewAllUrl="/{{ Str::plural($resultType) }}">
                     <div
                         class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 flex flex-col items-center carousel-slide">
                         @forelse ($resultDatas?->slice(0,8) ?? [] as $resultData)

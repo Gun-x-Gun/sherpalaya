@@ -4,12 +4,18 @@
         <!-- Carousel Container -->
         <div class="relative">
             @if ($header)
-                <div class="flex flex-row items-center mb-2.5 -full">
+                <div class="flex flex-row items-center pt-4 mb-2.5 w-full">
                     <div class="flex-1">
                         <h5 class="uppercase text-2xl text-primary font-normal">
                             {{ $header }}
                         </h5>
                     </div>
+                    @if (!is_null($viewAllUrl))
+                    <div class="flex-none mr-2">
+                        <a href="{{ $viewAllUrl }}" class="btn btn-sm btn-warning btn-outline">View All</a>
+                    </div>
+                    @endif
+                    
                     <div class="flex-none relative w-24 mr-2">
                         <!-- Previous Slide -->
                         <button type="button"

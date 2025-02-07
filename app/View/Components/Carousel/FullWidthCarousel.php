@@ -11,18 +11,21 @@ class FullWidthCarousel extends Component
 {
     public ?string $carouselId = null;
     public ?string $header = null;
+    public ?string $viewAllUrl = null;
     /**
      * Create a new component instance.
      */
     public function __construct(
         ?string $carouselId = null,
         ?string $header = null,
+        ?string $viewAllUrl = null,
     ) {
         if (is_null($carouselId)) {
             $carouselId = 'carousel-' . Str::random(14);
         }
         $this->carouselId = $carouselId;
         $this->header = $header;
+        $this->viewAllUrl = $viewAllUrl;
     }
 
     /**
