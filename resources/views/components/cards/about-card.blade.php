@@ -1,7 +1,7 @@
 <div class="bg-blue-100/10">
     <div class="mx-0">
         <div id="audio-section" style="background-image: url('{{ asset('photos/mountain8.jpg') }}');"
-            class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed">
+            class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed" data-aos="zoom-in" data-aos-duration="3000">
         </div>
     </div>
 
