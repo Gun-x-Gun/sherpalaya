@@ -1,7 +1,7 @@
 <div class="bg-blue-100/10">
-    <div class="mx-0">
+    <div class="mx-0 w-full overflow-hidden">
         <div id="audio-section" style="background-image: url('{{ asset('photos/mountain8.jpg') }}');"
-            class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed" data-aos="zoom-in" data-aos-duration="3000">
+            class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed scale-[.4]">
         </div>
     </div>
 
@@ -10,30 +10,37 @@
         <source src="{{ asset('audio/background-music.mp3') }}" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-</div>
 
-<!-- JavaScript to Play Audio When Section is in View -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let audio = document.getElementById("background-audio");
-        let section = document.getElementById("audio-section");
+    @push('scripts')
+        <script type="module">
+            let section = document.getElementById("audio-section");
+            let audio = document.getElementById("background-audio");
 
-        function checkVisibility() {
-            let rect = section.getBoundingClientRect();
-            let inView = rect.top < window.innerHeight && rect.bottom > 0;
+            document.addEventListener("DOMContentLoaded", function() {
 
-            if (inView) {
+
+                window.motion.inView(section, onInViewEvent);
+            });
+
+            function onInViewEvent(element) {
+                let animation = window.motion.animate(
+                    element, {
+                        scale: [1, 2]
+                    }, {
+                        duration: 25
+                    }
+                );
+
                 if (audio.paused) {
-                    audio.play().catch(() => console.log("Autoplay blocked"));
+                    audio.play().catch((error) => console.log("Autoplay blocked", error));
                 }
-            } else {
-                audio.pause();
+                return (leaveInfo) => offInViewEvent(animation, element, leaveInfo);
             }
-        }
 
-        // Check visibility when scrolling
-        window.addEventListener("scroll", checkVisibility);
-        // Initial check in case the section is already visible on load
-        checkVisibility();
-    });
-</script>
+            function offInViewEvent(animation, element, leaveInfo) {
+                audio.pause();
+                animation.stop();
+            }
+        </script>
+    @endpush
+</div>
