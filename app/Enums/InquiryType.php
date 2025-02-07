@@ -2,18 +2,17 @@
 
 namespace App\Enums;
 
-use Filament\Support\Contracts\HasLabel;
+use App\Contracts\EnumHasTranslation;
+use App\Traits\TranslatableEnum;
 
-enum InquiryType: string implements HasLabel
+enum InquiryType: string implements EnumHasTranslation
 {
+    use TranslatableEnum;
+
     case BOOKING = 'booking';
     case INQUIRY = 'inquiry';
 
-    public function getLabel(): ?string
-    {
-        return match($this){
-            self::BOOKING => 'Booking',
-            self::INQUIRY => 'Inquiry'
-        };
+    public static function getTranslationKey(): string {
+        return 'enums.inquiry-types';
     }
 }

@@ -2,23 +2,19 @@
 
 namespace App\Enums;
 
-use Filament\Support\Contracts\HasLabel;
+use App\Contracts\EnumHasTranslation;
+use App\Traits\TranslatableEnum;
 
-enum TrekDifficulty: string implements HasLabel
+
+enum TrekDifficulty: string implements EnumHasTranslation
 {
+    use TranslatableEnum;
+
     case EASY = 'easy';
     case MODERATE = 'moderate';
     case HARD = 'hard';
     case CHALLENGING = 'challenging';
-
-    public function getLabel(): string
-    {
-        return match ($this){
-            self::EASY => 'Easy',
-            self::MODERATE => 'Moderate',
-            self::HARD => 'Hard',
-            self::CHALLENGING => 'Challenging',
-        };
+    public static function getTranslationKey(): string {
+        return 'enums.trek-difficulty';
     }
-
 }

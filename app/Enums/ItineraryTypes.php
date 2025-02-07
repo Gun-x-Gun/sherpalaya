@@ -1,11 +1,14 @@
 <?php
 
 namespace App\Enums;
-use Filament\Support\Contracts\HasLabel;
+use App\Contracts\EnumHasTranslation;
+use App\Traits\TranslatableEnum;
 
 
-enum ItineraryTypes: string implements HasLabel
+
+enum ItineraryTypes: string implements EnumHasTranslation
 {
+    use TranslatableEnum;
     case FLIGHT = 'flight';
     case DRIVE = 'drive';
     case TREK = 'trek';
@@ -17,20 +20,8 @@ enum ItineraryTypes: string implements HasLabel
     case HELICOPTER = 'helicopter';
     case OTHERS = 'others';
 
-    public function getLabel(): string
-    {
-        return match ($this){
-            self::FLIGHT => 'Flight',
-            self::DRIVE => 'Drive',
-            self::TREK => 'Trek',
-            self::TREK_HOURS => 'Trek Hours',
-            self::REST => 'Rest',
-            self::HELICOPTER => 'Helicopter',
-            self::ACCOMODATION => 'Accomodation',
-            self::HIMALAYA => 'Himalaya',
-            self::ALTITUDE => 'Altitude',
-            self::OTHERS => 'Others',
-        };
+    public static function getTranslationKey(): string {
+        return 'enums.itinerary-types';
     }
 
 }

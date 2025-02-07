@@ -2,10 +2,12 @@
 
 namespace App\Enums;
 
-use Filament\Support\Contracts\HasLabel;
+use App\Traits\TranslatableEnum;
+use App\Contracts\EnumHasTranslation;
 
-enum TourType: string implements HasLabel
+enum TourType: string implements EnumHasTranslation
 {
+    use TranslatableEnum;
     case SIGHTSEEING = 'sightseeing';
     case CYCLING = 'cycling';
     case RUNNING = 'running';
@@ -13,15 +15,7 @@ enum TourType: string implements HasLabel
     case CULTURAL = 'cultural';
     case OTHERS = 'others';
 
-    public function getLabel(): string
-    {
-        return match ($this){
-            self::SIGHTSEEING => 'Sightseeing',
-            self::CYCLING => 'Cycling',
-            self::RUNNING => 'Running',
-            self::PHOTOGRAPHY => 'Photography',
-            self::CULTURAL => 'Cultural/Meditation',
-            self::OTHERS => 'Others',
-        };
+    public static function getTranslationKey(): string {
+        return 'enums.tour-type';
     }
 }
