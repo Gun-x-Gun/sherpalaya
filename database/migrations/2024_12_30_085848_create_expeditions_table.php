@@ -14,8 +14,7 @@ return new class extends Migration
     {
         Schema::create('expeditions', function (Blueprint $table) {
             $table->id();
-            $table->string('title')
-                ->required();
+            $table->longText('title');
             $table->longText('description')
                 ->required();
             $table->string('duration')
@@ -28,15 +27,12 @@ return new class extends Migration
                 ->required();
             $table->string('ending_point')
                 ->required();
-            $table->string('best_time_for_expedition')
-                ->required();
+            $table->longText('best_time_for_expedition');
             $table->unsignedSmallInteger('starting_altitude')
                 ->required();
             $table->unsignedSmallInteger('highest_altitude')
                 ->required();
-            $table->string('expedition_difficulty')
-                ->nullable()
-                ->default(null);
+            $table->longText('expedition_difficulty');
             $table->longText('costs_include');
             $table->longText('costs_exclude');
             $table->boolean('is_featured');

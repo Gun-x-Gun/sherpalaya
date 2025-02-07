@@ -14,8 +14,7 @@ return new class extends Migration
     {
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
-            $table->string('title')
-                ->required();
+            $table->longText('title');
             $table->string('type')
                 ->required();
             $table->longText('description')
@@ -29,8 +28,7 @@ return new class extends Migration
                 ->required();
             $table->string('ending_point')
                 ->required();
-            $table->string('best_time_for_tour')
-                ->required();
+            $table->longText('best_time_for_tour');
             $table->longText('costs_include');
             $table->longText('costs_exclude');
             $table->boolean('is_featured');

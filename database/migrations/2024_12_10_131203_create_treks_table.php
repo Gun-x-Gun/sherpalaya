@@ -13,27 +13,22 @@ return new class extends Migration {
     {
         Schema::create('treks', function (Blueprint $table) {
             $table->id();
-            $table->string('title')
-                ->required();
+            $table->longText('title');
             // $table->string('cover_image')
             //     ->required();
-            $table->longText('description')
-                ->required();
+            $table->longText('description');
             $table->string('duration')
                 ->required();
             $table->string('grade')
                 ->nullable()
                 ->default(null);
             $table->foreignId('region_id');
-            // $table->longText('destinations')
-            //     ->required();
             $table->boolean('is_featured');
             $table->string('starting_point')
                 ->required();
             $table->string('ending_point')
                 ->required();
-            $table->string('best_time_for_trek')
-                ->required();
+            $table->longText('best_time_for_trek');
             $table->unsignedSmallInteger('starting_altitude')
                 ->required();
             $table->unsignedSmallInteger('highest_altitude')

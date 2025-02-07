@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('itinerable_id');
             $table->string('itinerable_type');
-            $table->string('title')
-                ->required();
+            $table->longText('title');
             $table->timestamps();
         });
     }

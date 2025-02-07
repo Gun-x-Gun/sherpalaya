@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('tippable_id');
             $table->string('tippable_type');
-            $table->string('title');
+            $table->longText('title');
             $table->longText('description');
             $table->timestamps();
         });

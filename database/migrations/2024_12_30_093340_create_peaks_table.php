@@ -13,10 +13,8 @@ return new class extends Migration {
     {
         Schema::create('peaks', function (Blueprint $table) {
             $table->id();
-            $table->string('title')
-                ->required();
-            $table->longText('description')
-                ->required();
+            $table->longText('title');
+            $table->longText('description');
             $table->string('duration')
                 ->required();
             $table->string('grade')
@@ -27,16 +25,13 @@ return new class extends Migration {
                 ->required();
             $table->string('ending_point')
                 ->required();
-            $table->string('best_time_for_peak')
-                ->required();
+            $table->longText('best_time_for_peak');
             $table->unsignedSmallInteger('starting_altitude')
                 ->required();
             $table->unsignedSmallInteger('highest_altitude')
                 ->required();
             $table->foreignId('region_id');
-            $table->string('peak_difficulty')
-                ->nullable()
-                ->default(null);
+            $table->longText('peak_difficulty');
             $table->longText('costs_include');
             $table->longText('costs_exclude');
             $table->timestamps();
