@@ -15,9 +15,11 @@ class Navbar extends Component
 {
     public $navTours;
     public $navRegions;
-    
-    public function __construct()
-    {
+
+    public function __construct(
+        public ?string $query = null,
+        public ?string $type = null,
+    ) {
         $this->navRegions = Region::with([
             'treks',
             'peaks',

@@ -7,9 +7,11 @@
                     <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-8 w-12">
                 </a>
                 <div class="xl:hidden">
-                    <a href="/search" class="btn btn-transparent border-none">
+
+                    <button type="button" class="" aria-haspopup="dialog" aria-expanded="false"
+                        aria-controls="middle-center-modal" data-overlay="#middle-center-modal">
                         <span class="icon-[tabler--search] size-5"></span>
-                    </a>
+                    </button>
                     <button type="button" class="btn btn-transparent border-none" aria-haspopup="dialog"
                         aria-expanded="false" aria-controls="overlay-end-example" data-overlay="#overlay-end-example">
                         <span class="icon-[tabler--menu-2] collapse-open:hidden size-5"></span>
@@ -243,14 +245,22 @@
                                         request()->route()->getName() == 'website.contact',
                                 ])>Contact</a>
                         </li>
-                        <li class=" hover:bg-primary rounded-lg text-md">
-                            <a href="/search">
+                        {{-- <li class=" hover:bg-primary rounded-lg text-md">
+                        <a href="/search">
                                 <span class="icon-[tabler--search] size-5"></span>
                             </a>
+                        </li> --}}
+                        <li>
+                            <button type="button" class="" aria-haspopup="dialog" aria-expanded="false"
+                                aria-controls="middle-center-modal" data-overlay="#middle-center-modal">
+                                <span class="icon-[tabler--search] size-5"></span>
+                            </button>
                         </li>
                     </ul>
-                    {{-- contact end  --}}
+                    <ul>
 
+                    </ul>
+                    {{-- contact end  --}}
                 </div>
             </div>
         </div>
@@ -263,9 +273,12 @@
     <div class="drawer-body px-2 uppercase">
         <div class="drawer-header px-2">
             <h3 class="drawer-title">Sherpalaya</h3>
-            <a href="/search" class="btn btn-text btn-circle btn-sm absolute end-12 top-3">
-                <span class="icon-[tabler--search] size-5 "></span>
-            </a>
+
+            <button class="btn btn-text btn-circle btn-sm absolute end-12 top-3" type="button" class="" aria-haspopup="dialog" aria-expanded="false"
+                aria-controls="middle-center-modal" data-overlay="#middle-center-modal">
+                <span class="icon-[tabler--search] size-4"></span>
+            </button>
+
             <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close"
                 data-overlay="#overlay-end-example">
                 <span class="icon-[tabler--x] size-4 "></span>
@@ -507,14 +520,25 @@
                         Contact
                     </a>
                 </li>
-
                 {{-- contact end  --}}
             </ul>
         </div>
     </div>
+
 </div>
 {{-- drawer end --}}
-
+@push('modals')
+    <div id="middle-center-modal" class="overlay modal overlay-open:opacity-100 modal-middle hidden backdrop-blur-sm"
+        role="dialog" tabindex="-1">
+        <div class="modal-dialog overlay-open:opacity-100 ">
+            <div class="modal-content">
+                <div class="modal-body h-full bg-blue-50">
+                    <x-search.search-input :query="$query" :type="$type" />
+                </div>
+            </div>
+        </div>
+    </div>
+@endpush
 
 <script>
     const scrollableElement = document.body; // document.getElementById('scrollableElement');
