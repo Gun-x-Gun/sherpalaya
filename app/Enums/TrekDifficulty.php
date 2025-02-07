@@ -14,6 +14,8 @@ enum TrekDifficulty: string implements EnumHasTranslation
     case MODERATE = 'moderate';
     case HARD = 'hard';
     case CHALLENGING = 'challenging';
+
+
     public static function getTranslationKey(): string {
         return 'enums.trek-difficulty';
     }
