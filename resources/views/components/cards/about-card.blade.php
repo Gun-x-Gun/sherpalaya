@@ -31,6 +31,16 @@
                     }
                 );
 
+                animation.then(()=>{
+                    audio.pause();
+                    if(animation.animations.length > 0){
+                        let lastAnimation = animation.animations[animation.animations.length - 1];
+                        if(!lastAnimation.isStopped){
+                            audio.currentTime = 0;
+                        }
+                    }
+                });
+
                 if (audio.paused) {
                     audio.play().catch((error) => console.log("Autoplay blocked", error));
                 }
