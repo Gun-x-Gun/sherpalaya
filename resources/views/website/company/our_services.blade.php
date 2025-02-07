@@ -1,8 +1,8 @@
 <x-website-layout>
     <div class="bg-blue-100/50">
-        <div class="card--rounded-none image-full  bg-blue-100/50 h-[50vh]">
-            <figure class="h-[50vh] w-full">
-                <x-curator-glider class="h-[50vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
+        <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
+            <figure class="h-[60vh] w-full">
+                <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
             </figure>
             <div class="card-body">
