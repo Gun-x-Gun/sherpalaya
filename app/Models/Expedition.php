@@ -15,12 +15,14 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Collection;
+use Spatie\Translatable\HasTranslations;
 
 class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
 {
     use EasySearch;
     use HasFactory;
     use HasInquiries;
+    use HasTranslations;
 
 
 
@@ -41,6 +43,13 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
         'costs_include',
         'costs_exclude',
         'is_featured',
+    ];
+    public $translatable = [
+        'title',
+        'description',
+        'best_time_for_expedition',
+        'costs_include',
+        'costs_exclude',
     ];
 
     protected $casts = [
@@ -78,11 +87,11 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
 
     public function keyHighlights():MorphMany
     {
-        return $this->morphMany(KeyHighlights::class,'highlightable');
+        return $this->morphMany(KeyHighlight::class,'highlightable');
     }
     public function essentialTips():MorphMany
     {
-        return $this->morphMany(EssentialTips::class,'tippable');
+        return $this->morphMany(EssentialTip::class,'tippable');
     }
     public function destinations()
     {

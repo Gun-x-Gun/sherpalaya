@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Inquiry extends Model
 {
+    
     protected $fillable = [
         'full_name',
         'email',

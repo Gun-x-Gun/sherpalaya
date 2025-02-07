@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Collection;
+use Spatie\Translatable\HasTranslations;
 
 
 class Tour extends Model implements CanBeEasySearched, CanBeInquiried
@@ -22,13 +23,13 @@ class Tour extends Model implements CanBeEasySearched, CanBeInquiried
     use EasySearch;
     use HasFactory;
     use HasInquiries;
+    use HasTranslations;
     protected $fillable = [
         'cover_image_id',
         'feature_image_id',
-        'description',
         'title',
+        'description',
         'type',
-        'is_featured',
         'duration',
         'grade',
         'starting_point',
@@ -36,11 +37,20 @@ class Tour extends Model implements CanBeEasySearched, CanBeInquiried
         'best_time_for_tour',
         'costs_include',
         'costs_exclude',
+        'is_featured',
     ];
     protected $casts = [
         'type' => TourType::class,
         'costs_exclude' => 'array',
         'costs_include' => 'array',
+    ];
+
+    public $translatable = [
+        'title',
+        'description',
+        'best_time_for_tour',
+        'costs_include',
+        'costs_exclude',
     ];
 
     // Easy Search
@@ -74,12 +84,12 @@ class Tour extends Model implements CanBeEasySearched, CanBeInquiried
     }
     public function keyHighlights():MorphMany
     {
-        return $this->morphMany(KeyHighlights::class,'highlightable');
+        return $this->morphMany(KeyHighlight::class,'highlightable');
     }
 
     public function essentialTips():MorphMany
     {
-        return $this->morphMany(EssentialTips::class,'tippable');
+        return $this->morphMany(EssentialTip::class,'tippable');
     }
 
     public function destinations()

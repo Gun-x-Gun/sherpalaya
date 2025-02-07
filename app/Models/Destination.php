@@ -10,11 +10,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
+use Spatie\Translatable\HasTranslations;
 
 class Destination extends Model implements CanBeEasySearched
 {
     use EasySearch;
     use HasFactory;
+    use HasTranslations;
+
 
     protected $fillable = [
         'name',
@@ -25,6 +28,10 @@ class Destination extends Model implements CanBeEasySearched
 
     protected $casts = [
         'location' => 'array',
+    ];
+
+    public $translatable = [
+        'description',
     ];
 
     // Easy Search

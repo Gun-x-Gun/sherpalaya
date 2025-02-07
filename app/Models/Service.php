@@ -12,12 +12,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
+use Spatie\Translatable\HasTranslations;
 
 class Service extends Model implements CanBeEasySearched, CanBeInquiried
 {
     use EasySearch;
     use HasInquiries;
-
+    use HasTranslations;
     protected $fillable = [
         'title',
         'description',
@@ -30,6 +31,10 @@ class Service extends Model implements CanBeEasySearched, CanBeInquiried
         'is_active' => 'boolean',
     ];
 
+    public $translatable = [
+        'title',
+        'description',
+    ];
     // Easy Search
 
     public function searchType(): SearchType

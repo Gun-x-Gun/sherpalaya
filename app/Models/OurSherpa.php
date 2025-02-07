@@ -7,15 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Spatie\Translatable\HasTranslations;
 
 class OurSherpa extends Model
 {
+    use HasTranslations;
     protected $fillable = [
         'profile_picture_id',
         'name',
         'title',
         'description',
     ];
+
+    public $translatable = [
+        'title',
+        'description',
+    ];
+
 
     protected static function booted()
     {
