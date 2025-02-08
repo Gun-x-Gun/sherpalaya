@@ -11,19 +11,42 @@ class OurTeamController extends Controller
     public function index()
     {
         $pageSetting = app(PageSetting::class);
-        $ourSherpas = OurSherpa::with([
-            'profilePicture',
-            'awardsAndCertificates',
-            'treks',
-            'expeditions',
-            'peaks',
-            'tours'
-        ])->get();
-        
+        $expedSherpas = OurSherpa::whereHas('expeditions')
+            ->with([
+                'profilePicture',
+                'awardsAndCertificates',
+                'expeditions',
+            ])
+            ->get();
+        $peakSherpas = OurSherpa::whereHas('peaks')
+            ->with([
+                'profilePicture',
+                'awardsAndCertificates',
+                'peaks',
+            ])
+            ->get();
+        $trekSherpas = OurSherpa::whereHas('treks')
+            ->with([
+                'profilePicture',
+                'awardsAndCertificates',
+                'treks',
+            ])
+            ->get();
+        $tourSherpas = OurSherpa::whereHas('tours')
+            ->with([
+                'profilePicture',
+                'awardsAndCertificates',
+                'tours'
+            ])
+            ->get();
+
 
         return view('website.company.our_team', [
             'pageSetting' => $pageSetting,
-            'ourSherpas' => $ourSherpas
+            'expedSherpas' => $expedSherpas,
+            'trekSherpas' => $trekSherpas,
+            'peakSherpas' => $peakSherpas,
+            'tourSherpas' => $tourSherpas,
         ]);
     }
 
