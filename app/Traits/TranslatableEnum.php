@@ -25,7 +25,7 @@ trait TranslatableEnum
         $options = [];
 
         foreach (self::cases() as $case) {
-            $translatedLabelKey = 'enums.category-type.' . $case->value;
+            $translatedLabelKey = self::getTranslationKey() . '.' . $case->value;
             $translatedData =  __($translatedLabelKey, locale: $locale ?? 'en') ?? 'N/A';
 
             $options[$case->value] = $translatedData;
