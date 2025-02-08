@@ -8,6 +8,7 @@ use App\Filament\Resources\PeakResource\Pages;
 use App\Filament\Resources\PeakResource\RelationManagers;
 use App\Models\Peak;
 use App\Filament\Fields\CuratorPicker;
+use App\Traits\Filament\TranslatableResource;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\Repeater;
@@ -33,6 +34,8 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 
 class PeakResource extends Resource
 {
+    use TranslatableResource;
+
     protected static ?string $model = Peak::class;
     protected static ?int $navigationSort = 2;
 

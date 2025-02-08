@@ -6,6 +6,7 @@ use App\Filament\Resources\ServiceResource\Pages;
 use App\Filament\Resources\ServiceResource\RelationManagers;
 use App\Models\Service;
 use App\Filament\Fields\CuratorPicker;
+use App\Traits\Filament\TranslatableResource;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Dotswan\MapPicker\Fields\Map;
 use Filament\Forms;
@@ -27,6 +28,8 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 
 class ServiceResource extends Resource
 {
+    use TranslatableResource;
+
     protected static ?string $model = Service::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';

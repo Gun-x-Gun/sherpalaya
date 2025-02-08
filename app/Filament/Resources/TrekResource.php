@@ -8,6 +8,7 @@ use App\Filament\Fields\CuratorPicker;
 use App\Filament\Resources\TrekResource\Pages;
 use App\Filament\Resources\TrekResource\RelationManagers;
 use App\Models\Trek;
+use App\Traits\Filament\TranslatableResource;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
@@ -37,6 +38,8 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 
 class TrekResource extends Resource
 {
+    use TranslatableResource;
+
     protected static ?string $model = Trek::class;
 
     protected static ?int $navigationSort = 3;

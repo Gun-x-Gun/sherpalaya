@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\FaqResource\Pages;
 use App\Filament\Resources\FaqResource\RelationManagers;
 use App\Models\Faq;
+use App\Traits\Filament\TranslatableResource;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
@@ -22,6 +23,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class FaqResource extends Resource
 {
+    use TranslatableResource;
+
     protected static ?string $model = Faq::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-magnifying-glass-circle';

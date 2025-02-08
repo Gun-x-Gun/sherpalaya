@@ -11,6 +11,7 @@ use App\Filament\Resources\OurSherpaResource\Widgets\SherpaPeaksTableWidget;
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaToursTableWidget;
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaTreksTableWidget;
 use App\Models\OurSherpa;
+use App\Traits\Filament\TranslatableResource;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
@@ -31,6 +32,8 @@ use Illuminate\Support\HtmlString;
 
 class OurSherpaResource extends Resource
 {
+    use TranslatableResource;
+
     protected static ?string $model = OurSherpa::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-users';

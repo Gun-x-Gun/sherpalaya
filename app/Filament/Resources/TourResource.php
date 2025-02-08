@@ -9,6 +9,7 @@ use App\Filament\Resources\TourResource\Pages;
 use App\Filament\Resources\TourResource\RelationManagers;
 use App\Models\Tour;
 use App\Filament\Fields\CuratorPicker;
+use App\Traits\Filament\TranslatableResource;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
 use Filament\Forms\Components\Repeater;
@@ -34,6 +35,8 @@ use RalphJSmit\Filament\Components\Forms\Sidebar;
 
 class TourResource extends Resource
 {
+    use TranslatableResource;
+
     protected static ?string $model = Tour::class;
     protected static ?int $navigationSort = 4;
 
