@@ -49,9 +49,9 @@
                 </nav>
                 <nav class="text-base-content">
                     <h6 class="footer-title font-bold text-blue-50 uppercase">Legal</h6>
-                    <a href="#" class="link link-hover text-blue-100">Terms of use</a>
-                    <a href="#" class="link link-hover text-blue-100">Privacy policy</a>
-                    <a href="#" class="link link-hover text-blue-100">Cookie policy</a>
+                    <a href="/terms-and-conditions" class="link link-hover text-blue-100">Terms of use</a>
+                    <a href="/privacy-policy" class="link link-hover text-blue-100">Privacy policy</a>
+                    <a href="/cookie-policy" class="link link-hover text-blue-100">Cookie policy</a>
                 </nav>
                 <nav class="text-base-content">
                     <div class="flex items-center gap- text-base uppercase font-semibold text-blue-200  text-wrap">

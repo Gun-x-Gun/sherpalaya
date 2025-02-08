@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ExpeditionController;
+use App\Http\Controllers\LegalController;
 use App\Http\Controllers\OurTeamController;
 use App\Http\Controllers\PeakController;
 use App\Http\Controllers\SearchController;
@@ -31,6 +32,14 @@ Route::controller(WebsiteController::class)
         Route::post('/contact', 'contactUsSubmit');
         Route::get('/about_us', 'aboutUs')->name('website.company.about_us');
         // Route::get('/our_team', 'ourTeam')->name('website.company.our_team');
+    });
+
+//legal section controller
+Route::controller(LegalController::class)
+    ->group(function () {
+        Route::get('/cookie-policy', 'cookiePolicy')->name('website.legal.cookie_policy');
+        Route::get('/privacy-policy', 'privacyPolicy')->name('website.legal.privacy_policy');
+        Route::get('/terms-and-conditions', 'termsAndConditions')->name('website.legal.term_and_condition');
     });
 
 // Service Route
@@ -88,7 +97,7 @@ Route::controller(TourController::class)
 
 Route::controller(BookingController::class)
     ->prefix('/bookings')
-    ->group(function(){
+    ->group(function () {
         Route::post('/booking', 'addBooking');
         Route::post('/inquiry', 'addInquiry');
     });
