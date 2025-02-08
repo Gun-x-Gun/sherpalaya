@@ -5,7 +5,7 @@
 @if ($featuredExpeditions->isNotEmpty())
     <div class="bg-blue-100/50">
         <div class="h-10 "></div>
-        <div class="2xl:mx-44 mx-4 ">
+        <div class="xl:mx-32 mx-4 ">
             <h5 class="text-5xl font-light text-left line-clamp-2 tracking-wider text-black">Expeditions
             </h5>
             <h3 class="text-3xl tracking-widest text-accent "> With Sherpalaya</h3>

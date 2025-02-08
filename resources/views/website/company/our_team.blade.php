@@ -7,7 +7,7 @@
             </figure>
             <div class="card-body">
                 <div
-                    class="absolute bottom-1/2 2xl:left-44  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class="">
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Get to know
@@ -31,7 +31,7 @@
         ]" />
 
         <div class="h-4"></div>
-        <div class="mx-4 2xl:mx-44">
+        <div class="mx-4 xl:mx-32">
             <div class="sm:grid sm:grid-cols-1 lg:grid-cols-2  md:gap-2 lg:gap-4 flex flex-col gap-4">
                 @foreach ($ourSherpas as $sherpa)
                     <a href="{{ route('show_team_member', $sherpa->id) }}">

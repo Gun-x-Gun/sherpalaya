@@ -6,7 +6,7 @@
                     class="h-[60vh] w-full object-cover brightness-50" />
             </figure>
             <div class="card-body">
-                <div class="absolute bottom-1/2 2xl:left-44 left-4 max-w-full 2xl:max-w-full overflow-hidden border-none">
+                <div class="absolute bottom-1/2 xl:left-32 left-4 max-w-full 2xl:max-w-full overflow-hidden border-none">
                     <div class="">
                         <h5 class="card-title mb-8 text-white text-2xl md:text-4xl uppercase font-extrabold">
                             Sherpalaya's
@@ -28,7 +28,7 @@
             ],
         ]" />
         <div class="h-8"></div>
-        <div class="mx-4 2xl:mx-44">
+        <div class="mx-4 xl:mx-32">
             <div class="bg-blue-transparent">
                 <p class="text-md text-left mt-2 text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light">
                     This Privacy Policy explains how Sherpalaya collects, uses, and protects your personal information when you use our website and services. By using our website, you consent to the practices described herein.
@@ -53,13 +53,14 @@
                         <li class="mb-2">To comply with legal obligations.</li>
                     </ol>
                 </div>
-                <div class="card-body gap-2 text-slate-700 px-2 capitalize text-preety lg:text-justify text-base/6 bg-blue-100/40">
+                <div class="card-body gap-2 text-slate-700 px-2 capitalize text-preety lg:text-justify text-base/6 bg-blue-100/40 mx-2">
                     <h5 class="text-lg font-bold text-primary uppercase">Data Protection and Security</h5>
                     <ol class="list-inside list-decimal">
                         <li class="mb-2">We implement security measures to protect user data.</li>
                         <li class="mb-2">We do not sell or share your personal information with third parties without your consent.</li>
                         <li class="mb-2">Your data is stored securely and accessed only by authorized personnel.</li>
                     </ol>
+                    
                 </div>
                 <div class="card-body gap-2 text-slate-700 px-2 capitalize text-preety lg:text-justify text-base/6">
                     <h5 class="text-lg font-bold text-primary uppercase">Cookies and Tracking Technologies</h5>

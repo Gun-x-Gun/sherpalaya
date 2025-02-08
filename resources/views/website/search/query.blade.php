@@ -38,7 +38,7 @@
             </figure>
             <div class="card-body">
                 <div
-                    class="absolute bottom-1/2 2xl:left-44   left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute bottom-1/2 xl:left-32   left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class=" max-w-[92%] 2xl:max-w-[100%]">
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Search Result For
@@ -53,7 +53,7 @@
 
         {{-- <div class="h-8"></div> --}}
         @forelse ($results ?? [] as $resultType => $resultDatas)
-            <div class="2xl:mx-44 mx-4 ">
+            <div class="xl:mx-32 mx-4 ">
                 {{-- bg-blue-100/20 --}}
                 <div class="w-full ">
                     {{-- <x-carousel.full-width-carousel :header="$searchTypes->get($resultType)->getLabel()" viewAllUrl="/{{ Str::plural($resultType) }}"> --}}

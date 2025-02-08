@@ -3,7 +3,7 @@
 @endphp
 <div class="bg-blue-100/30">
     @if ($featuredPeaks->isNotEmpty())
-        <div class="2xl:mx-44 mx-4 ">
+        <div class="xl:mx-32 mx-4 ">
             <div>
                 <div class="h-10"></div>
                 <h3 class="text-4xl  tracking-widest text-center ">Peaks</h3>

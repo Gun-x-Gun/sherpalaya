@@ -7,7 +7,7 @@
             </figure>
             <div class="card-body">
                 <div
-                    class="absolute bottom-1/2 2xl:left-44  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class="">
                         {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                         Explore
@@ -28,7 +28,7 @@
                 'name' => 'Contact',
             ],
         ]" />
-        <div class="2xl:mx-44 mx-4">
+        <div class="xl:mx-32 mx-4">
             <div class="">
                 <div class="mb-6 text-center sm:text-center ">
                     <h2 class="font-heading  font-bold tracking-tight text-primary uppercase text-2xl md:text-4xl ">

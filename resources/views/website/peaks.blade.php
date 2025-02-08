@@ -6,7 +6,7 @@
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
-                <div class="absolute bottom-1/4 left-4 lg:left-4 2xl:left-44 transform translate-y-1/2 overflow-hidden">
+                <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden">
                     <h2 class="card-title mb-2.5 text-white text-3xl md:text-6xl uppercase font-bold">
                         Peaks
                     </h2>
@@ -30,7 +30,7 @@
                 ],
             ]" />
             <div class="h-4 "></div>
-            <div class="2xl:mx-44 mx-4 text-left">
+            <div class="xl:mx-32 mx-4 text-left">
                 <p
                     class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
                     {{ $pageSetting->peak_page_content }}
@@ -47,7 +47,7 @@
         <div class="h-12"></div>
 
 
-        <div class="2xl:mx-44 mx-4">
+        <div class="xl:mx-32 mx-4">
             @foreach ($peaksRegion as $peakRegion)
                 @if ($peakRegion->peaks->isNotEmpty())
                     <div id="region-{{ $peakRegion->id }}">

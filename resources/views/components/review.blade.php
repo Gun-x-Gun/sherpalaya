@@ -1,7 +1,7 @@
 <div class="bg-blue-100/20">
     <div class="h-12"></div>
   
-    <div class="2xl:mx-44 mx-4">
+    <div class="xl:mx-32 mx-4">
         <h2 class="text-slate-700 font-bold text-center text-2xl uppercase">Testimonials</h2>
         <div class="h-4"></div>
         <div class="accordion accordion-shadow max-w-full ">

@@ -8,7 +8,7 @@
             </figure>
             <div class="card-body">
                 <div
-                    class="absolute bottom-1/2 2xl:left-44  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class="">
                         {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Explore
@@ -38,7 +38,7 @@
 
 
             <div class="h-4"></div>
-            <div class="2xl:mx-44 mx-4 text-left ">
+            <div class="xl:mx-32 mx-4 text-left ">
                 <p class="text-md text-left  mt-2  text-slate-800 first-line:uppercase first-line:font-light ">
                     {{ $pageSetting->about_us_page_content }}
                 </p>
@@ -50,7 +50,7 @@
 
 
         {{-- Showing <strong>{{ $expeditionRegion->expeditions->count() }}</strong> --}}
-        <div class="2xl:mx-44 mx-4">
+        <div class="xl:mx-32 mx-4">
             <div class="h-10"></div>
             <h1 class="text-2xl  font-bold  text-center line-clamp-2 text-slate-600 uppercase wrap text-pretty">
                 Frequently Asked Questions

@@ -6,7 +6,7 @@
         </figure>
         <div class="card-body ">
             <div
-                class="absolute 2xl:bottom-52 2xl:left-44  bottom-52 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                class="absolute 2xl:bottom-52 xl:left-32  bottom-52 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class="">
                     <h2 class="card-title mb-2.5  text-white text-3xl md:text-6xl uppercase font-bold">
                         Expeditions
@@ -30,7 +30,7 @@
 
     <div class="bg-blue-100/50">
         <div class="h-8 "></div>
-        <div class="2xl:mx-44 mx-4 text-left">
+        <div class="xl:mx-32 mx-4 text-left">
             <h1
                 class="text-2xl lg:text-4xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
                 Expedition In Nepal
@@ -56,7 +56,7 @@
     <div class="h-12"></div>
 
 
-    <div class="2xl:mx-44 mx-4">
+    <div class="xl:mx-32 mx-4">
         @foreach ($expeditionsRegion as $expeditionRegion)
             @if ($expeditionRegion->expeditions->isNotEmpty())
                 <div id="region-{{ $expeditionRegion->id }}">

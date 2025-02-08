@@ -7,7 +7,7 @@
             </figure>
             <div class="card-body">
                 <div
-                    class="absolute bottom-1/2 2xl:left-44  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class="">
                         <h5 class="card-title mb-8 text-white text-2xl md:text-4xl uppercase font-extrabold ">
                             Sherpalaya's
@@ -33,7 +33,7 @@
             // ],
         ]" />
         <div class="h-8"></div>
-        <div class="mx-4 2xl:mx-44">
+        <div class="mx-4 xl:mx-32">
             <div class="bg-blue-transparent">
                 <p
                     class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">

@@ -23,7 +23,7 @@
                     ]" />
                     <div class="h-4"></div>
 
-                    <div class="2xl:mx-44 mx-4 text-left">
+                    <div class="xl:mx-32 mx-4 text-left">
                         {{-- description --}}
                         <x-show-tour.tour-description :tour="$tour" />
                         {{-- end description --}}
@@ -55,7 +55,7 @@
                 {{-- scrollspy body --}}
 
                 <div class="bg-blue-100/10">
-                    <div class=" mx-4 2xl:mx-44 gap-2 max-w-full ">
+                    <div class=" mx-4 xl:mx-32 gap-2 max-w-full ">
                         <div class="xl:grid grid-cols-3  gap-6">
                             <div class="xl:col-span-2 ">
                                 {{-- key_highlights --}}

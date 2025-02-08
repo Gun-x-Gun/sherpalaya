@@ -21,7 +21,7 @@
             </figure>
             <div class="card-body">
                 <div
-                    class="absolute bottom-1/4 2xl:left-44  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute bottom-1/4 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class=" max-w-[92%] 2xl:max-w-[100%]">
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Explore
@@ -54,7 +54,7 @@
         <x-booking.mobile-booking-section :bookingFor="$service" />
 
 
-        <div class="mx-4 2xl:mx-44 mt-4">
+        <div class="mx-4 xl:mx-32 mt-4">
             {{-- description  --}}
 
             <div class="card sm:w-full shadow-md shadow-slate-300 bg-blue-50/10">

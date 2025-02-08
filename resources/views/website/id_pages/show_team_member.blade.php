@@ -7,7 +7,7 @@
             </figure>
             <div class="card-body">
                 <div
-                    class="absolute bottom-1/2 2xl:left-44  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <h5 class="card-title mb-1 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                         About
                     </h5>
@@ -34,7 +34,7 @@
 
 
         <div class="h-4"></div>
-        <div class="mx-4 2xl:mx-44">
+        <div class="mx-4 xl:mx-32">
 
             <div class="h-8"></div>
             <div class="flex flex-col lg:grid grid-cols-3 gap-2">

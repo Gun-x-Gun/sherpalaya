@@ -3,7 +3,7 @@
     <div class="h-10 ">
 
     </div>
-    {{-- <div class="2xl:mx-44 mx-4">
+    {{-- <div class="xl:mx-32 mx-4">
         <div class="stats  gap-2 w-full">
             <div class="stat">
                 <div class="stat-figure text-base-content size-8">
@@ -39,7 +39,7 @@
 
         </div>
     </div> --}}
-    <div class="2xl:mx-44 mx-4">
+    <div class="xl:mx-32 mx-4">
         <div class="stats  gap-2 w-full">
             <div class="stat">
                 <div class="stat-figure text-base-content size-8">

@@ -1,6 +1,6 @@
 @if ($featuredTreks->count() > 4)
     <div class="bg-blue-100/60">
-        <div class="2xl:mx-44 mx-4 ">
+        <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
             <div class="">
                 <h5 class="text-4xl font-light line-clamp-2 tracking-wider text-black text-center ">Trek</h5>
