@@ -1,5 +1,6 @@
 <?php
 
+use App\Settings\CompanySetting;
 use App\Settings\ContactUsSetting;
 use App\Settings\LandingPageSetting;
 use App\Settings\PageSetting;
@@ -14,6 +15,7 @@ return [
         LandingPageSetting::class,
         ContactUsSetting::class,
         PageSetting::class,
+        CompanySetting::class,
     ],
 
     /*

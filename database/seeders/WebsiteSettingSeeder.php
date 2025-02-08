@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Enums\WebsiteSettingType;
 use App\Helpers\CuratorSeederHelper;
 use App\Models\WebsiteSetting;
+use App\Settings\CompanySetting;
 use App\Settings\ContactUsSetting;
 use App\Settings\LandingPageSetting;
 use App\Settings\PageSetting;
@@ -25,6 +26,7 @@ class WebsiteSettingSeeder extends Seeder
         $this->seedLandingPageSettings();
         $this->seedPageSettings();
         $this->seedContactUsSettings();
+        $this->seedCompanySettings();
     }
 
     public function seedLandingPageSettings()
@@ -81,9 +83,27 @@ class WebsiteSettingSeeder extends Seeder
 
         $contactUsSetting->content = "We’d love to hear from you! Whether you’re planning your next big adventure, have questions about our trips, or need expert guidance, our team is here to help. Reach out to us for personalized travel advice, booking inquiries, or any other assistance. Let’s make your Himalayan journey a reality—contact us today!";
         $contactUsSetting->address = 'Thamel, Kathmandu';
-        $contactUsSetting->contact = '+977- 981343434/+01- 55313536 ';
+        $contactUsSetting->contact = '+977- 981343434/+01- 55313536';
         $contactUsSetting->working_hour = 'Sun-Thurs: 11-5 / Fri: 12-3 / Sat: Closed';
 
         $contactUsSetting->save();
+    }
+
+    public function seedCompanySettings() {
+        $companySetting = app(CompanySetting::class);
+
+        $companySetting->company_logo_id = CuratorSeederHelper::resolveFileData(public_path('/photos/logo.png'))->id;
+        $companySetting->company_name = "Sherpalaya Pvt. Ltd.";
+        $companySetting->company_address = "Kathmandu, thamel, street no 6";
+        $companySetting->company_email = "sherpalaya@gmail.com";
+        $companySetting->company_contact_number = "+977 9800112233";
+
+        $companySetting->facebook_url = "https://www.facebook.com/sherpalaya.trek.1/";
+        $companySetting->instagram_url = "https://www.instagram.com/sherpalaya/";
+        $companySetting->youtube_url = "https://www.youtube.com/@sherpalaya";
+        $companySetting->tiktok_url = "https://www.tiktok.com/@sherpalaya";
+
+        $companySetting->save();
+
     }
 }

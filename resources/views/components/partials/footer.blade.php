@@ -8,25 +8,26 @@
                     <a class="link text-base-content link-neutral texl-lg font-semibold no-underline"
                         href="/home">
                         <div class="flex items-center gap-4 text-xl uppercase font-semibold text-blue-100  text-wrap">
-                            <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-6 w-6">
-                            <span>Sherpalaya pvt. ltd.</span>
+                            <x-curator-glider alt="Sherpalaya Logo" class="h-6 w-6" :media="$companySetting->company_logo_id" :fallback="asset('/photos/banner.jpg')"
+                                loading="lazy" />
+                            <span>{{ $companySetting->company_name }}</span>
                         </div>
                     </a>
                     <div class="flex items-center gap-4 text-base capitalize font-normal text-blue-100 text-wrap ">
                         <span class="icon-[iconoir--map-pin] size-6 text-blue-100"></span>
-                        <span>Kathmandu, thamel, street no 6</span>
+                        <span>{{ $companySetting->company_address }}</span>
                     </div>
                     <a class="link text-base-content link-neutral texl-lg font-semibold no-underline"
-                        href="mailto:sherpalaya@gmail.com">
+                        href="mailto:{{ $companySetting->company_email }}">
                         <div
                             class="flex items-center gap-4 text-lg lowercase font-normal text-blue-100 hover:underline">
                             <span class="icon-[iconoir--mail] size-6"></span>
-                            <span>Sherpalaya@gmail.com</span>
+                            <span>{{ $companySetting->company_email }}</span>
                         </div>
                     </a>
                     <div class="flex items-center gap-4 text-lg uppercase font-normal text-blue-100">
                         <span class="icon-[iconoir--phone-income] size-6"></span>
-                        <span>9800112233</span>
+                        <span>{{ $companySetting->company_contact_number }}</span>
                     </div>
                     {{-- <a class="link text-base-content link-neutral texl-lg font-semibold no-underline"> --}}
 
@@ -58,14 +59,17 @@
                         <span>Follow us</span>
                     </div>
                     <div class="flex gap-4 text-blue-300">
-                        <a href="#" class="link link-animated" aria-label="Facebook Link">
+                        <a href="{{ $companySetting->facebook_url }}" target="_blank" class="link link-animated" aria-label="Facebook Link">
                             <span class="icon-[tabler--brand-facebook] size-6"></span>
                         </a>
-                        <a href="#" class="link link-animated" aria-label="X Link">
-                            <span class="icon-[tabler--brand-x] size-6"></span>
+                        <a href="{{ $companySetting->instagram_url }}" target="_blank" class="link link-animated" aria-label="Instagram Link">
+                            <span class="icon-[tabler--brand-instagram] size-6"></span>
                         </a>
-                        <a href="#" class="link link-animated" aria-label="Linkedin Link">
-                            <span class="icon-[tabler--brand-linkedin] size-6"></span>
+                        <a href="{{ $companySetting->youtube_url }}" target="_blank" class="link link-animated" aria-label="Youtube Link">
+                            <span class="icon-[tabler--brand-youtube] size-6"></span>
+                        </a>
+                        <a href="{{ $companySetting->tiktok_url }}" target="_blank" class="link link-animated" aria-label="Tiktok Link">
+                            <span class="icon-[tabler--brand-tiktok] size-6"></span>
                         </a>
                     </div>
                     {{-- <div class="gap-4 hover:underline"> --}}
