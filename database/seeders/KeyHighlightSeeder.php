@@ -522,6 +522,26 @@ class KeyHighlightSeeder extends Seeder
             $everest_base_camp_trek
         );
         $this->createKeyHighlights(
+            Trek::find(6),
+            $everest_base_camp_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(7),
+            $everest_base_camp_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(8),
+            $everest_base_camp_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(9),
+            $annapurna_base_camp_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(10),
+            $annapurna_base_camp_trek
+        );
+        $this->createKeyHighlights(
             Trek::find(2),
             $annapurna_base_camp_trek
         );
@@ -530,8 +550,24 @@ class KeyHighlightSeeder extends Seeder
             $manaslu_circuit_trek
         );
         $this->createKeyHighlights(
+            Trek::find(11),
+            $manaslu_circuit_trek
+        );
+        $this->createKeyHighlights(
             Trek::find(4),
             $langtang_highlights
+        );
+        $this->createKeyHighlights(
+            Trek::find(12),
+            $langtang_highlights
+        );
+        $this->createKeyHighlights(
+            Trek::find(13),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Trek::find(14),
+            $kanchanjunga_highlights
         );
         $this->createKeyHighlights(
             Peak::first(),
@@ -545,6 +581,7 @@ class KeyHighlightSeeder extends Seeder
             Expedition::find(2),
             $kanchanjunga_highlights
         );
+
         $this->createKeyHighlights(
             Expedition::find(3),
             $everest_expedition

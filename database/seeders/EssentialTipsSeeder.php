@@ -539,8 +539,32 @@ class EssentialTipsSeeder extends Seeder
             $everest_base_camp_trek_tips
         );
         $this->createEssentialTips(
+            Trek::find(6),
+            $everest_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(7),
+            $everest_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(8),
+            $everest_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
             Trek::find(2),
             $annapurna_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(9),
+            $annapurna_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(10),
+            $annapurna_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(11),
+            $manaslu_circuit_trek_tips
         );
         $this->createEssentialTips(
             Trek::find(3),
@@ -548,6 +572,18 @@ class EssentialTipsSeeder extends Seeder
         );
         $this->createEssentialTips(
             Trek::find(4),
+            $langtang_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(12),
+            $langtang_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(13),
+            $langtang_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(14),
             $langtang_tips
         );
         $this->createEssentialTips(
