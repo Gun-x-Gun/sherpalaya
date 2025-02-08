@@ -1,6 +1,6 @@
 {{-- gallery  --}}
 @if ($service->images->isNotEmpty())
-    <div class="bg-blue-100/70">
+    <div class="bg-blue-100/30">
         <div class="card-header   px-0">
             <h5 class="card-title text-secondary uppercase font-semibold text-2xl px-2">
                 Gallery
