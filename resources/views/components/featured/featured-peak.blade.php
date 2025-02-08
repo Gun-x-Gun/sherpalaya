@@ -119,7 +119,7 @@
     <div class="xl:mx-32 mx-4 ">
         <div class="h-14"></div>
         <div class=" ">
-            <h5 class="text-4xl font-light uppercase line-clamp-2 tracking-wider text-black text-center ">Peaks
+            <h5 class="text-3xl md:text-4xl font-light uppercase line-clamp-2 tracking-wider text-black text-center ">Peaks
             </h5>
             {{-- <h3 class="text-3xl tracking-wider text-accent lg:text-center ">With Sherpalaya</h3> --}}
             {{-- <p

@@ -3,7 +3,7 @@
         <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
             <div class=" ">
-                <h5 class="text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">Expeditions</h5>
+                <h5 class="text-3xl md:text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">Expeditions</h5>
                 {{-- <h3 class="text-3xl tracking-wider text-accent lg:text-center ">With Sherpalaya</h3> --}}
                 {{-- <p
                     class="text-md mt-2 text-preety text-slate-800 lg:text-center 

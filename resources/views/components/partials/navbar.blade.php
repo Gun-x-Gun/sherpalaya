@@ -3,7 +3,7 @@
     <nav class="w-full  xl:mx-32 mx-4 " aria-label="Global">
         <div class=" relative xl:flex xl:items-center ">
             <div class="flex items-center justify-between">
-                <a class="link text-base-content link-neutral texl-2xl font-semibold no-underline" href="/home">
+                <a class="link text-base-content link-neutral texl-lg font-semibold no-underline" href="/home">
                     <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-8 w-12">
                 </a>
                 <div class="xl:hidden">
@@ -35,7 +35,7 @@
             <div id="navbar-mega-menu-click"
                 class="collapse hidden grow basis-full overflow-hidden rounded-lg transition-all duration-300  xl:block ">
                 <div
-                    class="flex flex-col rounded-lg max-xl:mt-3 max-xl:border max-xl:p-2 xl:flex-row xl:items-center xl:justify-end gap-2 xl:ps-5 xl:pe-0.5 xl:py-0.5">
+                    class="flex flex-col rounded-lg max-xl:mt-3 max-xl:border max-xl:p-2 xl:flex-row xl:items-center xl:justify-end gap-2z xl:ps-5 xl:pe-0.5 xl:py-0.5">
                     <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent ">
                         <li class=" hover:bg-primary rounded-lg uppercase"><a href="/home"
                                 @class([
@@ -46,7 +46,7 @@
                     </ul>
                     <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="nested-dropdown" type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase max-xl:px-3 "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Company
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -69,7 +69,7 @@
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase max-xl:px-3 "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Expedition
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -77,7 +77,7 @@
                         <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute"
                             role="menu" aria-orientation="vertical">
                             <ul class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
-                                <div class="grid grid-cols-4 gap-1">
+                                <div class="grid grid-cols-5 gap-4">
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->expeditions->isNotEmpty())
                                             <li class="uppercase ">
@@ -88,7 +88,7 @@
                                                     @foreach ($navRegion->expeditions as $expedition)
                                                         <div class="flex flex-col gap-3">
                                                             <div class="flex flex-col gap-0 items-start">
-                                                                <div class="text-primary hover:underline">
+                                                                <div class="text-primary hover:underline tracking-tighter">
                                                                     <a
                                                                         href="{{ route('show_expedition', $expedition->id) }}">
                                                                         {{ $expedition->title }}
@@ -117,7 +117,7 @@
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content max-xl:px-3 text-lg uppercase "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content  text-lg uppercase "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Peaks
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -126,7 +126,7 @@
                             role="menu" aria-orientation="vertical">
                             <ul
                                 class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow ">
-                                <div class="grid grid-cols-4 gap-1">
+                                <div class="grid grid-cols-5 gap-4">
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->peaks->isNotEmpty())
                                             <li class="uppercase ">
@@ -165,7 +165,7 @@
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase max-xl:px-3 "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Treks
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -174,7 +174,7 @@
                             role="menu" aria-orientation="vertical">
                             <ul
                                 class="menu xl:menu-horizontal rounded-box w-full max-xl:gap-4 max-xl:border xl:shadow">
-                                <div class="grid grid-cols-4 gap-1">
+                                <div class="grid grid-cols-5 gap-4">
                                     @foreach ($navRegions as $navRegion)
                                         @if ($navRegion->treks->isNotEmpty())
                                             <li class="uppercase ">
@@ -212,7 +212,7 @@
                     {{-- tours --}}
                     <div class="dropdown relative inline-flex rtl:[--placement:bottom-end] ">
                         <button id="tours-dropdown" type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase max-xl:px-3 "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Tours
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -250,8 +250,8 @@
                     {{-- tourend --}}
 
                     {{-- contact  --}}
-                    <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent  uppercase ">
-                        <li class=" hover:bg-primary rounded-lg text-md "><a href="/contact"
+                    <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit bg-transparent  uppercase ">
+                        <li class=" hover:bg-primary rounded-lg text-lg "><a href="/contact"
                                 @class([
                                     'underline decoration-wavy text-primary' =>
                                         request()->route()->getName() == 'website.contact',
