@@ -28,7 +28,7 @@
         </div>
     </div> --}}
 
-    <div class="bg-blue-100/10">
+    <div class="bg-blue-100/40">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[50vh] w-full">
             <figure class="h-[50vh] w-full">
                 {{-- <x-curator-glider class="h-[50vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
@@ -55,16 +55,16 @@
         @forelse ($results ?? [] as $resultType => $resultDatas)
             <div class="2xl:mx-44 mx-4 ">
                 {{-- bg-blue-100/20 --}}
-                <div class="w-full">
-                    <x-carousel.full-width-carousel :header="$searchTypes->get($resultType)->getLabel()" viewAllUrl="/{{ Str::plural($resultType) }}">
-                        <div
-                            class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 flex flex-col items-center carousel-slide">
+                <div class="w-full ">
+                    {{-- <x-carousel.full-width-carousel :header="$searchTypes->get($resultType)->getLabel()" viewAllUrl="/{{ Str::plural($resultType) }}"> --}}
+                        {{-- <div
+                            class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 flex flex-col items-center carousel-slide"> --}}
                             @forelse ($resultDatas?->slice(0,8) ?? [] as $resultData)
                                 <x-search.search-result :searchedResult="$resultData" />
                             @empty
                             @endforelse
-                        </div>
-                    </x-carousel.full-width-carousel>
+                        {{-- </div> --}}
+                    {{-- </x-carousel.full-width-carousel> --}}
                 </div>
             </div>
         @empty

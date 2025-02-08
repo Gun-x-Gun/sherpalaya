@@ -1,4 +1,4 @@
-<div class="px-2">
+{{-- <div class="px-2">
     <div class="card text-white sm:max-w-sm">
         <div>
             <div id="search-result-{{ $result->type->value }}-{{ $result->id }}"
@@ -67,4 +67,21 @@
         </div>
 
     </div>
+</div> --}}
+
+<div class="h-8"></div>
+<div class="md:grid md:grid-cols-3 xl:grid-cols-4">
+    <div class="card w-full h-full ">
+        <a href="{{ $result->url }}">
+            <img src="{{ $coverImage->url ?? asset('photos/P1030127.JPG') }}" alt="{{ $result->title }} Cover Image"
+                class="h-[20rem] object-cover" />
+        </a>
+        <div class="card-body bg-blue-100 px-2 pb-4">
+            <a href="{{ $result->url }}">
+                <h5 class="card-title line-clamp-2 uppercase text-xl text-primary font-semibold">
+                    {{ $result->title }}</h5>
+            </a>
+        </div>
+    </div>
 </div>
+<div class="h-8"></div>

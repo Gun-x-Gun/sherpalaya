@@ -16,7 +16,7 @@
                     </div>
                     @endif
                     
-                    <div class="flex-none relative w-24 mr-2">
+                    {{-- <div class="flex-none relative w-24 mr-2">
                         <!-- Previous Slide -->
                         <button type="button"
                             class="carousel-prev bg-green-300">
@@ -27,7 +27,7 @@
                             class="carousel-next bg-green-300/25 border-green-300">
                             <span class="icon-[tabler--chevron-right] size-8 cursor-pointer "></span>
                         </button>
-                    </div>
+                    </div> --}}
                 </div>
             @endif
 

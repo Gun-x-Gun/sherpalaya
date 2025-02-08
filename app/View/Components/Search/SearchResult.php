@@ -21,6 +21,7 @@ class SearchResult extends Component
      */
     public function __construct(
         CanBeEasySearched $searchedResult,
+        
     )
     {
         $this->searchedResult = $searchedResult;
