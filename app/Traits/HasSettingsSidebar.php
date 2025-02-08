@@ -2,6 +2,7 @@
 
 namespace App\Traits;
 
+use App\Filament\Pages\Settings\ManageCompany;
 use App\Filament\Pages\Settings\ManageContactUs;
 use App\Filament\Pages\Settings\ManageLangingPage;
 use App\Filament\Pages\Settings\ManagePage;
@@ -37,6 +38,13 @@ trait HasSettingsSidebar
                     ->icon('heroicon-o-cog-6-tooth')
                     ->isActiveWhen(function () {
                         return request()->routeIs(ManageContactUs::getRouteName());
+                    })
+                    ->visible(true),
+                PageNavigationItem::make('Company')
+                    ->url(ManageCompany::getUrl())
+                    ->icon('heroicon-o-cog-6-tooth')
+                    ->isActiveWhen(function () {
+                        return request()->routeIs(ManageCompany::getRouteName());
                     })
                     ->visible(true),
             ]);
