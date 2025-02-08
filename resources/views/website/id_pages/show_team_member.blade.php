@@ -1,9 +1,9 @@
 <x-website-layout>
     <div class="bg-blue-100/10">
-        <div class="card--rounded-none image-full  bg-blue-100/50 h-[50vh]">
-            <figure class="h-[50vh] w-full">
+        <div class="card--rounded-none image-full  bg-blue-100/50 h-[55vh]">
+            <figure class="h-[55vh] w-full">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
-                    class="h-[50vh] w-full object-cover brightness-50" />
+                    class="h-[55vh] w-full object-cover brightness-50" />
             </figure>
             <div class="card-body absolute bottom-1/2 xl:left-32 left-4 flex flex-row items-end gap-4">
                 <div class="overflow-hidden border-none ">

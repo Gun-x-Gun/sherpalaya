@@ -63,7 +63,7 @@
                                         alt="{{ $expedSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
                                     <div class="card-body bg-blue-100 px-2 py-2 text-center">
                                         <h5
-                                            class="card-title line-clamp-2 capitalize text-2xl text-primary font-normal tracking-tighter">
+                                            class="card-title line-clamp-2 capitalize text-xl text-primary font-normal tracking-tighter">
                                             {{ $expedSherpa->name }}
                                         </h5>
                                         <h5

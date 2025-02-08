@@ -1,47 +1,91 @@
-@if ($featuredExpeditions->count() === 2)
+@if ($featuredExpeditions->count() > 1)
     <div class="bg-blue-100/60">
         <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
-
-            <div class="hidden lg:grid grid-cols-3  gap-2 bg-blue-100/10">
-                <div class="col-span-1 ">
-                    <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black lg:text-right ">Expedition</h5>
-                    <h3 class="text-3xl tracking-wider text-accent lg:text-right ">With Sherpalaya</h3>
-                    <p
-                        class="text-md mt-2 text-preety text-slate-800 lg:text-right lg:text-wrap
-                         first-line:uppercase first-line:font-light">
-                        {{ $landingPageSetting->expedition_activity_content }}
-                    </p>
-                    <div class="h-4"></div>
-
-                </div>
-
+            <div class=" ">
+                <h5 class="text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">Expeditions</h5>
+                {{-- <h3 class="text-3xl tracking-wider text-accent lg:text-center ">With Sherpalaya</h3> --}}
+                {{-- <p
+                    class="text-md mt-2 text-preety text-slate-800 lg:text-center 
+                     first-line:uppercase first-line:font-light">
+                    {{ $landingPageSetting->expedition_activity_content }}
+                </p> --}}
+                <div class="h-8"></div>
+            </div>
+            <div class="flex flex-col md:grid grid-cols-3 gap-1 md:gap-2 bg-blue-100/10">
                 @foreach ($featuredExpeditions as $featuredExpedition)
-                    <div
-                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
-                        <figure class="h-[28rem] w-full">
-                            <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
-                                alt="{{ $featuredExpedition->title }} Cover Image"
-                                class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
-                        </figure>
-                        <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
-                            <div class="card-body absolute inset-0 justify-end">
-                                <div class="text-center">
-                                    <h2 class="font-bold text-white text-2xl uppercase">
-                                        {{ $featuredExpedition->title }}
-                                    </h2>
-                                    <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
-                                        {{ $featuredExpedition->highest_altitude }} m
-                                    </h2>
+                    @if ($loop->index % 2 === 0)
+                        {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
+                        <div class="col-span-1 mr-2 hidden md:block">
+                            <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-black md:text-left ">
+                                {{ $featuredExpedition->title }}</h5>
+                            <p
+                                class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light line-clamp-[14]">
+                                {{ $featuredExpedition->description }}
+                            </p>
+                        </div>
+                        <div
+                            class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-2">
+                            <figure class="h-[28rem] w-full">
+                                <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
+                                    alt="{{ $featuredExpedition->title }} Cover Image"
+                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                            </figure>
+                            <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                                <div class="card-body absolute inset-0 justify-end">
+                                    <div class="text-center">
+                                        <h2 class="font-bold text-white text-2xl uppercase">
+                                            {{ $featuredExpedition->title }}
+                                        </h2>
+                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                            {{ $featuredExpedition->highest_altitude }} m
+                                        </h2>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    @else
+                        {{-- Second Iteration: col-span-2 on the text and col-span-1 on the image --}}
+                        <div
+                            class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-2">
+                            <figure class="h-[28rem] w-full">
+                                <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
+                                    alt="{{ $featuredExpedition->title }} Cover Image"
+                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                            </figure>
+                            <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                                <div class="card-body absolute inset-0 justify-end">
+                                    <div class="text-center">
+                                        <h2 class="font-bold text-white text-2xl uppercase">
+                                            {{ $featuredExpedition->title }}
+                                        </h2>
+                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                            {{ $featuredExpedition->highest_altitude }} m
+                                        </h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-span-1 ml-2 hidden md:block">
+                            <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-black lg:text-left ">
+                                {{ $featuredExpedition->title }}
+                            </h5>
+                            <p
+                                class="text-md mt-2 text-preety text-slate-800 break-all  first-line:uppercase first-line:font-light line-clamp-[14]">
+                                {{ $featuredExpedition->description }}
+                            </p>
+                        </div>
+                    @endif
+
+                    {{-- Add height between iterations except for the last one --}}
+                    @unless ($loop->last)
+                        <div class=" h-2 col-span-3"></div>
+                    @endunless
                 @endforeach
             </div>
 
-
-            <div class="lg:hidden">
+            {{-- //smalldevices --}}
+            {{-- <div class="md:hidden">
                 <h5 class="text-4xl font-light line-clamp-2 tracking-wider text-black text-left ">Expedition</h5>
                 <h3 class="text-3xl tracking-widest text-accent text-left ">With Sherpalaya</h3>
                 <p
@@ -105,7 +149,7 @@
                         </span>
                     </button>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
         <div class="h-14"></div>

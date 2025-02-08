@@ -10,7 +10,7 @@ use Illuminate\View\Component;
 
 class FeaturedPeak extends Component
 {
-    public $peaks;
+    public $featuredPeaks;
     public LandingPageSetting $landingPageSetting;
 
     /**
@@ -18,7 +18,7 @@ class FeaturedPeak extends Component
      */
     public function __construct()
     {
-        $this->peaks = Peak::all();
+        $this->featuredPeaks = Peak::where('is_featured', true)->get();;
         $this->landingPageSetting = app(LandingPageSetting::class);
     }
 
@@ -28,7 +28,7 @@ class FeaturedPeak extends Component
     public function render(): View|Closure|string
     {
         return view('components.featured.featured-peak', [
-            'peaks' => $this->peaks,
+            'featuredPeaks' => $this->featuredPeaks,
         ]);
     }
 }

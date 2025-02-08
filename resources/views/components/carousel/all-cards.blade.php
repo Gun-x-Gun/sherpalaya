@@ -1,7 +1,7 @@
 <div class="bg-blue-100/50">
     <div class="h-20"></div>
     <div class="xl:mx-32 mx-4 ">
-        <h3 class="text-4xl tracking-normal text-black uppercase text-center">Activities ...</h3>
+        <h3 class="text-4xl tracking-normal text-black uppercase text-center">Activities</h3>
     </div>
 </div>
 <div class="bg-blue-100/50 max-w-full">
@@ -13,7 +13,9 @@
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border expedition-activity-card">
                 <figure class="h-full w-full">
                     {{-- expedition_activity_image_id --}}
-                    <x-curator-glider class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" :media="$landingPageSetting->expedition_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
+                    <x-curator-glider
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
+                        :media="$landingPageSetting->expedition_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
                 <div class="card-body absolute bottom-0 inset-0 uppercase">
                     <div class="text-left ">
@@ -41,7 +43,9 @@
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
 
                 <figure class="h-full w-full ">
-                    <x-curator-glider class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" :media="$landingPageSetting->trek_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
+                    <x-curator-glider
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
+                        :media="$landingPageSetting->trek_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
 
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
@@ -75,7 +79,9 @@
             <div
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
                 <figure class="h-full w-full ">
-                    <x-curator-glider class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" :media="$landingPageSetting->tour_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
+                    <x-curator-glider
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
+                        :media="$landingPageSetting->tour_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">
@@ -103,7 +109,9 @@
                 class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
 
                 <figure class="h-full w-full brightness-75">
-                    <x-curator-glider class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75" :media="$landingPageSetting->peak_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
+                    <x-curator-glider
+                        class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
+                        :media="$landingPageSetting->peak_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
                     <div class="text-left ">

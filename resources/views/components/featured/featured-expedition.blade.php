@@ -81,6 +81,6 @@
 
 <x-featured.expedition.one-item />
 <x-featured.expedition.two-item />
-<x-featured.expedition.three-item />
+{{-- <x-featured.expedition.three-item />
 <x-featured.expedition.four-item />
-<x-featured.expedition.more-item />
+<x-featured.expedition.more-item /> --}}

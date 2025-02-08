@@ -3,12 +3,10 @@
         <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
             <div class="">
-                <h5 class="text-4xl font-light line-clamp-2 tracking-wider text-black text-center ">Trek</h5>
-                <h3 class="text-3xl tracking-widest text-accent text-center ">With Sherpalaya</h3>
+                <h5 class="text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">Treks</h5>
                 <p
-                    class="text-md mt-2 text-preety text-slate-800 text-balance md:text-wrap
-                        md:text-center first-line:uppercase first-line:tracking-widest first-line:font-light">
-                    {{ $landingPageSetting->trek_activity_content }}
+                    class="text-md mt-4 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light">
+                        {{ $landingPageSetting->trek_activity_content }}
                 </p>
             </div>
             <div class="h-4"></div>
