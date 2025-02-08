@@ -12,9 +12,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Spatie\Translatable\HasTranslations;
 
-class Destination extends Model implements CanBeEasySearched
+class Destination extends Model
 {
-    use EasySearch;
     use HasFactory;
     use HasTranslations;
 
@@ -33,26 +32,6 @@ class Destination extends Model implements CanBeEasySearched
     public $translatable = [
         'description',
     ];
-
-    // Easy Search
-
-    public function searchType(): SearchType{
-        return SearchType::DESTINATION;
-    }
-
-
-    public function searchResultTitle(): string{
-        return $this->name;
-    }
-
-    public function searchResultUrl(): string{
-        return $this->name;
-    }
-
-    public function searchResultImages(): Collection{
-        $this->loadMissing('destinationImages');
-        return $this->destinationImages;
-    }
 
     // RELATIONSHIPS
     public function region()

@@ -9,6 +9,7 @@ use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorModelHelper;
 use App\Traits\EasySearch;
 use App\Traits\HasInquiries;
+use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -60,22 +61,26 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
 
     // Easy Search
 
-    public function searchType(): SearchType{
+    public function searchType(): SearchType
+    {
         return SearchType::EXPEDITION;
     }
 
 
-    public function searchResultTitle(): string{
+    public function searchResultTitle(): string
+    {
         return $this->title;
     }
 
-    public function searchResultUrl(): string{
-        return $this->title;
+    public function searchResultUrl(): string
+    {
+        return '/expeditions/' . $this->id;
     }
 
-    public function searchResultImages(): Collection{
-        $this->loadMissing('images');
-        return $this->images;
+    public function searchResultImage(): ?Media
+    {
+        $this->loadMissing('coverImage');
+        return $this->coverImage;
     }
 
     // RELATIONSHIPS
@@ -85,13 +90,13 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
         return $this->morphMany(Itinerary::class, 'itinerable');
     }
 
-    public function keyHighlights():MorphMany
+    public function keyHighlights(): MorphMany
     {
-        return $this->morphMany(KeyHighlight::class,'highlightable');
+        return $this->morphMany(KeyHighlight::class, 'highlightable');
     }
-    public function essentialTips():MorphMany
+    public function essentialTips(): MorphMany
     {
-        return $this->morphMany(EssentialTip::class,'tippable');
+        return $this->morphMany(EssentialTip::class, 'tippable');
     }
     public function destinations()
     {
@@ -133,5 +138,4 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
     {
         return CuratorModelHelper::belongsToMany($this, 'expedition_media', 'expedition_id');
     }
-
 }

@@ -13,10 +13,10 @@ use Filament\Support\Contracts\HasLabel;
 
 enum SearchType: string implements HasLabel
 {
-    case DESTINATION = 'destination';
+    // case DESTINATION = 'destination';
     case EXPEDITION = 'expedition';
     case PEAK = 'peak';
-    case REGION = 'region';
+    // case REGION = 'region';
     case SERVICE = 'service';
     case TOUR = 'tour';
     case TREK = 'trek';
@@ -24,10 +24,10 @@ enum SearchType: string implements HasLabel
     public function search(string $query)
     {
         return match ($this) {
-            self::DESTINATION => Destination::search($query),
+            // self::DESTINATION => Destination::search($query),
             self::EXPEDITION => Expedition::search($query),
             self::PEAK => Peak::search($query),
-            self::REGION => Region::search($query),
+            // self::REGION => Region::search($query),
             self::SERVICE => Service::search($query),
             self::TOUR => Tour::search($query),
             self::TREK => Trek::search($query),
@@ -37,10 +37,10 @@ enum SearchType: string implements HasLabel
     public function getLabel(): ?string
     {
         return match ($this) {
-            self::DESTINATION => "Destination",
+            // self::DESTINATION => "Destination",
             self::EXPEDITION => "Expedition",
             self::PEAK => "Peak",
-            self::REGION => "Region",
+            // self::REGION => "Region",
             self::SERVICE => "Service",
             self::TOUR => "Tour",
             self::TREK => "Trek",

@@ -16,7 +16,7 @@ trait EasySearch
             'type' => $this->searchType(),
             'title' => $this->searchResultTitle(),
             'url' => $this->searchResultUrl(),
-            'images' => $this->searchResultImages(),
+            'coverImage' => $this->searchResultImage(),
         ]);
     }
 }

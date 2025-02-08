@@ -9,6 +9,7 @@ use App\Enums\TourType;
 use App\Helpers\CuratorModelHelper;
 use App\Traits\EasySearch;
 use App\Traits\HasInquiries;
+use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -68,13 +69,13 @@ class Tour extends Model implements CanBeEasySearched, CanBeInquiried
 
     public function searchResultUrl(): string
     {
-        return $this->title;
+        return '/tours/' . $this->id;
     }
 
-    public function searchResultImages(): Collection
+    public function searchResultImage(): ?Media
     {
-        $this->loadMissing('images');
-        return $this->images;
+        $this->loadMissing('coverImage');
+        return $this->coverImage;
     }
 
     // RELATIONSHIPS

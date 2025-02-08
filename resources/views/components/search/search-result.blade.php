@@ -6,7 +6,7 @@
                 class="relative w-full">
                 <div class="carousel h-80 rounded-md">
                     <div class="carousel-body h-full opacity-0">
-                        @forelse ($result->images ?? [] as $image)
+                        @forelse ([$result->coverImage] ?? [] as $image)
                             <div class="carousel-slide">
                                 <a href="{{ $result->url }}">
                                     <div class="bg-base-200/50 flex h-full justify-center">

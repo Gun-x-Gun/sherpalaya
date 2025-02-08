@@ -5,39 +5,16 @@ namespace App\Models;
 use App\Contracts\CanBeEasySearched;
 use App\Enums\SearchType;
 use App\Traits\EasySearch;
+use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
-class Region extends Model implements CanBeEasySearched
+class Region extends Model
 {
-    use EasySearch;
 
     protected $fillable = [
         'name',
     ];
-
-    // Easy Search
-
-    public function searchType(): SearchType
-    {
-        return SearchType::REGION;
-    }
-
-
-    public function searchResultTitle(): string
-    {
-        return $this->name;
-    }
-
-    public function searchResultUrl(): string
-    {
-        return $this->name;
-    }
-
-    public function searchResultImages(): Collection
-    {
-        return collect();
-    }
 
     // RELATIONSHIPS
 

@@ -9,6 +9,7 @@ use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorModelHelper;
 use App\Traits\EasySearch;
 use App\Traits\HasInquiries;
+use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -70,13 +71,15 @@ class Peak extends Model implements CanBeEasySearched, CanBeInquiried
         return $this->title;
     }
 
-    public function searchResultUrl(): string{
-        return $this->title;
+    public function searchResultUrl(): string
+    {
+        return '/peaks/' . $this->id;
     }
 
-    public function searchResultImages(): Collection{
-        $this->loadMissing('images');
-        return $this->images;
+    public function searchResultImage(): ?Media
+    {
+        $this->loadMissing('coverImage');
+        return $this->coverImage;
     }
 
     // RELATIONSHIPS

@@ -3,6 +3,7 @@
 namespace App\Contracts;
 
 use App\Enums\SearchType;
+use Awcodes\Curator\Models\Media;
 use Illuminate\Support\Collection;
 
 interface CanBeEasySearched
@@ -15,7 +16,7 @@ interface CanBeEasySearched
 
     public function searchResultUrl(): string;
 
-    public function searchResultImages(): Collection;
+    public function searchResultImage(): ?Media;
 
     // Search Result
     public function toSearchResult(): Collection;

@@ -8,6 +8,7 @@ use App\Enums\SearchType;
 use App\Helpers\CuratorModelHelper;
 use App\Traits\EasySearch;
 use App\Traits\HasInquiries;
+use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -50,13 +51,13 @@ class Service extends Model implements CanBeEasySearched, CanBeInquiried
 
     public function searchResultUrl(): string
     {
-        return $this->title;
+        return '/services/' . $this->id;
     }
 
-    public function searchResultImages(): Collection
+    public function searchResultImage(): ?Media
     {
-        $this->loadMissing('images');
-        return $this->images;
+        $this->loadMissing('coverImage');
+        return $this->coverImage;
     }
 
     // RELATIONSHIPS
