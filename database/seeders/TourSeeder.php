@@ -19,120 +19,255 @@ class TourSeeder extends Seeder
     {
         $tours = [
             [
-                'title' => 'Kathmandu Valley Sightseeing Tour',
-                'description' => 'Explore the cultural and historical sites of Kathmandu, including UNESCO World Heritage Sites like Swayambhunath (Monkey Temple), Pashupatinath Temple, Boudhanath Stupa, and Patan Durbar Square.',
+                'title' => [
+                    'en' => 'Kathmandu Valley Sightseeing Tour',
+                    'fr' => 'Visite touristique de la vallée de Katmandou',
+                ],
+                'description' => [
+                    'en' => 'Explore the cultural and historical sites of Kathmandu, including UNESCO World Heritage Sites like Swayambhunath (Monkey Temple), Pashupatinath Temple, Boudhanath Stupa, and Patan Durbar Square.',
+                    'fr' => 'Explorez les sites culturels et historiques de Katmandou, notamment les sites classés au patrimoine mondial de l\'UNESCO tels que Swayambhunath (temple des singes), le temple de Pashupatinath, le stupa de Boudhanath et la place Durbar de Patan.',
+                ],
                 'duration' => '2 hours',
                 'type' => TourType::SIGHTSEEING,
                 'is_featured' => true,
                 'grade' => '6',
                 'starting_point' => 'Kathmandu',
                 'ending_point' => 'Kathmandu',
-                'best_time_for_tour' => 'All Year Round',
+                'best_time_for_tour' => [
+                    'en' => 'All Year Round',
+                    'fr' => 'Toute l\'année',
+                ],
                 'costs_include' => [
-                    'Tour Guide',
-                    'Transportation',
-                    'Entry Tickets',
+                    [
+                        'en' => 'Tour Guide',
+                        'fr' => 'Guide touristique',
+                    ],
+                    [
+                        'en' => 'Transportation',
+                        'fr' => 'Transport',
+                    ],
+                    [
+                        'en' => 'Entry Tickets',
+                        'fr' => 'Billets d\'entrée',
+                    ],
                 ],
                 'costs_exclude' => [
-                    'Personal Expenses',
-                    'Lunch',
+                    [
+                        'en' => 'Personal Expenses',
+                        'fr' => 'Dépenses personnelles',
+                    ],
+                    [
+                        'en' => 'Lunch',
+                        'fr' => 'Déjeuner',
+                    ],
                 ],
             ],
             [
-                'title' => 'Mountain Biking in Kathmandu Valley',
-                'description' => 'A thrilling cycling adventure through the rugged trails and lush forests of the Kathmandu Valley, passing traditional villages and terraced farmlands.',
+                'title' => [
+                    'en' => 'Mountain Biking in Kathmandu Valley',
+                    'fr' => 'VTT dans la vallée de Katmandou',
+                ],
+                'description' => [
+                    'en' => 'A thrilling cycling adventure through the rugged trails and lush forests of the Kathmandu Valley, passing traditional villages and terraced farmlands.',
+                    'fr' => 'Une aventure cycliste passionnante à travers les sentiers accidentés et les forêts luxuriantes de la vallée de Katmandou, en passant par des villages traditionnels et des terres agricoles en terrasses.',
+                ],
                 'duration' => '3 hours',
                 'type' => TourType::CYCLING,
                 'is_featured' => true,
                 'grade' => '7',
                 'starting_point' => 'Kathmandu',
                 'ending_point' => 'Kathmandu',
-                'best_time_for_tour' => 'Autumn and Spring',
+                'best_time_for_tour' => [
+                    'en' => 'Autumn and Spring',
+                    'fr' => 'Automne et printemps',
+                ],
                 'costs_include' => [
-                    'Mountain Bike',
-                    'Guide',
-                    'Safety Gear',
+                    [
+                        'en' => 'Mountain Bike',
+                        'fr' => 'VTT',
+                    ],
+                    [
+                        'en' => 'Guide',
+                        'fr' => 'Guide',
+                    ],
+                    [
+                        'en' => 'Safety Gear',
+                        'fr' => 'Équipement de sécurité',
+                    ],
                 ],
                 'costs_exclude' => [
-                    'Personal Insurance',
-                    'Snacks',
+                    [
+                        'en' => 'Personal Insurance',
+                        'fr' => 'Assurance personnelle',
+                    ],
+                    [
+                        'en' => 'Snacks',
+                        'fr' => 'Collations',
+                    ],
                 ],
             ],
             [
-                'title' => 'Kathmandu City Running Tour',
-                'description' => 'Experience the vibrant streets of Kathmandu while running through historic and cultural landmarks.',
+                'title' => [
+                    'en' => 'Kathmandu City Running Tour',
+                    'fr' => 'Visite de course à pied de la ville de Katmandou',
+                ],
+                'description' => [
+                    'en' => 'Experience the vibrant streets of Kathmandu while running through historic and cultural landmarks.',
+                    'fr' => 'Découvrez les rues animées de Katmandou tout en courant à travers des monuments historiques et culturels.',
+                ],
                 'duration' => '1 hour',
                 'type' => TourType::RUNNING,
                 'is_featured' => true,
                 'grade' => '6',
                 'starting_point' => 'Kathmandu',
                 'ending_point' => 'Kathmandu',
-                'best_time_for_tour' => 'All Year Round',
+                'best_time_for_tour' => [
+                    'en' => 'All Year Round',
+                    'fr' => 'Toute l\'année',
+                ],
                 'costs_include' => [
-                    'Running Guide',
-                    'Snacks and Water',
+                    [
+                        'en' => 'Running Guide',
+                        'fr' => 'Guide de course',
+                    ],
+                    [
+                        'en' => 'Snacks and Water',
+                        'fr' => 'Collations et eau',
+                    ],
                 ],
                 'costs_exclude' => [
-                    'Personal Running Gear',
-                    'Transportation to Start Point',
+                    [
+                        'en' => 'Personal Running Gear',
+                        'fr' => 'Équipement de course personnel',
+                    ],
+                    [
+                        'en' => 'Transportation to Start Point',
+                        'fr' => 'Transport jusqu\'au point de départ',
+                    ],
                 ],
             ],
             [
-                'title' => 'Photography Tour of Pokhara',
-                'description' => 'A photography-focused tour to capture the stunning beauty of Pokhara, including Phewa Lake, Sarangkot, and the Annapurna Range.',
+                'title' => [
+                    'en' => 'Photography Tour of Pokhara',
+                    'fr' => 'Visite photographique de Pokhara',
+                ],
+                'description' => [
+                    'en' => 'A photography-focused tour to capture the stunning beauty of Pokhara, including Phewa Lake, Sarangkot, and the Annapurna Range.',
+                    'fr' => 'Une visite axée sur la photographie pour capturer la beauté époustouflante de Pokhara, notamment le lac Phewa, Sarangkot et la chaîne de l\'Annapurna.',
+                ],
                 'duration' => '4 hours',
                 'type' => TourType::PHOTOGRAPHY,
                 'is_featured' => true,
                 'grade' => '8',
                 'starting_point' => 'Pokhara',
                 'ending_point' => 'Pokhara',
-                'best_time_for_tour' => 'Autumn and Spring',
+                'best_time_for_tour' => [
+                    'en' => 'Autumn and Spring',
+                    'fr' => 'Automne et printemps',
+                ],
                 'costs_include' => [
-                    'Photography Guide',
-                    'Transportation',
+                    [
+                        'en' => 'Photography Guide',
+                        'fr' => 'Guide photographe',
+                    ],
+                    [
+                        'en' => 'Transportation',
+                        'fr' => 'Transport',
+                    ],
                 ],
                 'costs_exclude' => [
-                    'Camera Equipment',
-                    'Meals',
+                    [
+                        'en' => 'Camera Equipment',
+                        'fr' => 'Matériel photo',
+                    ],
+                    [
+                        'en' => 'Meals',
+                        'fr' => 'Repas',
+                    ],
                 ],
             ],
             [
-                'title' => 'Cultural Tour of Bhaktapur',
-                'description' => 'Immerse yourself in the rich culture of Bhaktapur, visiting ancient temples, Durbar Square, and experiencing traditional Newari art and cuisine.',
+                'title' => [
+                    'en' => 'Cultural Tour of Bhaktapur',
+                    'fr' => 'Visite culturelle de Bhaktapur',
+                ],
+                'description' => [
+                    'en' => 'Immerse yourself in the rich culture of Bhaktapur, visiting ancient temples, Durbar Square, and experiencing traditional Newari art and cuisine.',
+                    'fr' => 'Imprégnez-vous de la riche culture de Bhaktapur, visitez des temples anciens, la place Durbar et découvrez l\'art et la cuisine traditionnels newari.',
+                ],
                 'duration' => '2 hours',
                 'type' => TourType::CULTURAL,
                 'is_featured' => true,
                 'grade' => '6',
                 'starting_point' => 'Bhaktapur',
                 'ending_point' => 'Bhaktapur',
-                'best_time_for_tour' => 'All Year Round',
+                'best_time_for_tour' => [
+                    'en' => 'All Year Round',
+                    'fr' => 'Toute l\'année',
+                ],
                 'costs_include' => [
-                    'Guide',
-                    'Entry Fees',
+                    [
+                        'en' => 'Guide',
+                        'fr' => 'Guide',
+                    ],
+                    [
+                        'en' => 'Entry Fees',
+                        'fr' => 'Frais d\'entrée',
+                    ],
                 ],
                 'costs_exclude' => [
-                    'Personal Expenses',
-                    'Meals',
+                    [
+                        'en' => 'Personal Expenses',
+                        'fr' => 'Dépenses personnelles',
+                    ],
+                    [
+                        'en' => 'Meals',
+                        'fr' => 'Repas',
+                    ],
                 ],
             ],
             [
-                'title' => 'Helicopter Tour to Everest Base Camp',
-                'description' => 'A luxury helicopter tour that takes you to Everest Base Camp and Kala Patthar for stunning views of Mount Everest and the surrounding peaks.',
+                'title' => [
+                    'en' => 'Helicopter Tour to Everest Base Camp',
+                    'fr' => 'Excursion en hélicoptère au camp de base de l\'Everest',
+                ],
+                'description' => [
+                    'en' => 'A luxury helicopter tour that takes you to Everest Base Camp and Kala Patthar for stunning views of Mount Everest and the surrounding peaks.',
+                    'fr' => 'Une excursion en hélicoptère de luxe qui vous emmène au camp de base de l\'Everest et à Kala Patthar pour des vues imprenables sur le mont Everest et les sommets environnants.',
+                ],
                 'duration' => '5 hours',
                 'type' => TourType::OTHERS,
                 'is_featured' => true,
                 'grade' => '9',
                 'starting_point' => 'Kathmandu',
                 'ending_point' => 'Kathmandu',
-                'best_time_for_tour' => 'Autumn and Spring',
+                'best_time_for_tour' => [
+                    'en' => 'Autumn and Spring',
+                    'fr' => 'Automne et printemps',
+                ],
                 'costs_include' => [
-                    'Helicopter Ride',
-                    'Guide',
-                    'Fuel Surcharge',
+                    [
+                        'en' => 'Helicopter Ride',
+                        'fr' => 'Vol en hélicoptère',
+                    ],
+                    [
+                        'en' => 'Guide',
+                        'fr' => 'Guide',
+                    ],
+                    [
+                        'en' => 'Fuel Surcharge',
+                        'fr' => 'Supplément carburant',
+                    ],
                 ],
                 'costs_exclude' => [
-                    'Personal Insurance',
-                    'Meals',
+                    [
+                        'en' => 'Personal Insurance',
+                        'fr' => 'Assurance personnelle',
+                    ],
+                    [
+                        'en' => 'Meals',
+                        'fr' => 'Repas',
+                    ],
                 ],
             ],
         ];
@@ -155,7 +290,7 @@ class TourSeeder extends Seeder
                     ->toArray()
             );
             shuffle($images); // Randomize the images
-            
+
             foreach (array_slice($images, 0, rand(2, 3)) as $image) {
                 CuratorSeederHelper::seedBelongsTo(
                     $tour,
@@ -168,7 +303,7 @@ class TourSeeder extends Seeder
                     public_path($image)
                 );
             }
-            
+
         }
     }
 }

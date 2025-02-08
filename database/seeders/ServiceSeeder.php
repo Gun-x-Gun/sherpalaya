@@ -17,44 +17,78 @@ class ServiceSeeder extends Seeder
     {
         $services = [
             [
-                'title' => 'Emergency Helicopter Rescue Service',
-                'description' => 'Explore traditional and contemporary Nepali art at the Patan Museum. A must-visit event for art lovers.',
+                'title' => [
+                    'en' => 'Emergency Helicopter Rescue Service',
+                    'fr' => 'Service de secours héliporté d\'urgence',
+                ],
+                'description' => [
+                    'en' => 'Explore traditional and contemporary Nepali art at the Patan Museum. A must-visit event for art lovers.',
+                    'fr' => 'Explorez l\'art népalais traditionnel et contemporain au musée de Patan. Un événement incontournable pour les amateurs d\'art.',
+                ],
                 'cover_image_id' => null,
-                'location' => ['lat' => 27.6622, 'lng' => 85.3240], // Patan coordinates
+                'location' => ['lat' => 27.6622, 'lng' => 85.3240],
             ],
             [
-                'title' => 'Laundry Services',
-                'description' => 'Quick and reliable laundry services for travelers in Kathmandu. Ideal for those who need fresh clothes after a long trek.',
-                'cover_image_id' => null, // Replace with an actual image ID if available
-                'location' => ['lat' => 27.7000, 'lng' => 85.3000], // Kathmandu coordinates
+                'title' => [
+                    'en' => 'Laundry Services',
+                    'fr' => 'Services de blanchisserie',
+                ],
+                'description' => [
+                    'en' => 'Quick and reliable laundry services for travelers in Kathmandu. Ideal for those who need fresh clothes after a long trek.',
+                    'fr' => 'Services de blanchisserie rapides et fiables pour les voyageurs à Katmandou. Idéal pour ceux qui ont besoin de vêtements frais après un long trek.',
+                ],
+                'cover_image_id' => null,
+                'location' => ['lat' => 27.7000, 'lng' => 85.3000],
             ],
             [
-                'title' => 'Accomodation',
-                'description' => 'Enjoy live music events featuring local Nepali bands at popular venues in Thamel. Perfect for relaxing evenings.',
+                'title' => [
+                    'en' => 'Accommodation', // Corrected spelling
+                    'fr' => 'Hébergement',
+                ],
+                'description' => [
+                    'en' => 'Enjoy live music events featuring local Nepali bands at popular venues in Thamel. Perfect for relaxing evenings.',
+                    'fr' => 'Profitez de concerts de musique live avec des groupes népalais locaux dans des lieux populaires de Thamel. Parfait pour des soirées de détente.',
+                ],
                 'cover_image_id' => null,
-                'location' => ['lat' => 27.7109, 'lng' => 85.3000], // Thamel coordinates
+                'location' => ['lat' => 27.7109, 'lng' => 85.3000],
             ],
             [
-                'title' => 'Recommended Trekking Gear Shops',
-                'description' => 'Get high-quality trekking gear at our recommended shop in Thamel. Trusted by seasoned trekkers.',
+                'title' => [
+                    'en' => 'Recommended Trekking Gear Shops',
+                    'fr' => 'Magasins de matériel de trekking recommandés',
+                ],
+                'description' => [
+                    'en' => 'Get high-quality trekking gear at our recommended shop in Thamel. Trusted by seasoned trekkers.',
+                    'fr' => 'Procurez-vous du matériel de trekking de haute qualité dans notre magasin recommandé à Thamel. Approuvé par des trekkeurs expérimentés.',
+                ],
                 'cover_image_id' => null,
-                'location' => ['lat' => 27.7109, 'lng' => 85.3000], // Thamel coordinates
+                'location' => ['lat' => 27.7109, 'lng' => 85.3000],
             ],
             [
-                'title' => 'Adventure Gear Rentals',
-                'description' => 'Rent adventure gear like paragliding equipment, bikes, and kayaks for your Pokhara adventures.',
+                'title' => [
+                    'en' => 'Adventure Gear Rentals',
+                    'fr' => 'Location de matériel d\'aventure',
+                ],
+                'description' => [
+                    'en' => 'Rent adventure gear like paragliding equipment, bikes, and kayaks for your Pokhara adventures.',
+                    'fr' => 'Louez du matériel d\'aventure comme de l\'équipement de parapente, des vélos et des kayaks pour vos aventures à Pokhara.',
+                ],
                 'cover_image_id' => null,
-                'location' => ['lat' => 28.2090, 'lng' => 83.9856], // Pokhara coordinates
+                'location' => ['lat' => 28.2090, 'lng' => 83.9856],
             ],
             [
-                'title' => 'Photography Workshops',
-                'description' => 'Join photography workshops that teach you how to capture the stunning landscapes and culture of the Annapurna region.',
+                'title' => [
+                    'en' => 'Photography Workshops',
+                    'fr' => 'Ateliers de photographie',
+                ],
+                'description' => [
+                    'en' => 'Join photography workshops that teach you how to capture the stunning landscapes and culture of the Annapurna region.',
+                    'fr' => 'Participez à des ateliers de photographie qui vous apprendront à capturer les paysages et la culture époustouflants de la région de l\'Annapurna.',
+                ],
                 'cover_image_id' => null,
-                'location' => ['lat' => 28.4581, 'lng' => 83.8389], // Annapurna coordinates
+                'location' => ['lat' => 28.4581, 'lng' => 83.8389],
             ],
         ];
-
-        $createdMedia = [];
 
         foreach ($services as $serviceData) {
             $serv = Service::create($serviceData);
@@ -65,7 +99,7 @@ class ServiceSeeder extends Seeder
                     ->pluck('id')
                     ->toArray()
             );
-            
+
             CuratorSeederHelper::seedBelongsTo(
                 $serv,
                 'cover_image_id',

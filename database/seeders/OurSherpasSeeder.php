@@ -18,10 +18,10 @@ class OurSherpasSeeder extends Seeder
         $expedition = Expedition::first();
         $peak = Peak::first();
         $treks = Trek::limit(2)->get();
-        $tours = Tour::limit(4)->get();
+        $tours = Tour::limit(1)->get();
 
         // Ensure related models exist
-        if (!$expedition || !$peak || $treks->count() < 2 || $tours->count() < 4) {
+        if (!$expedition || !$peak || $treks->count() < 2 || $tours->count() < 1) {
             return;
         }
 
@@ -30,14 +30,21 @@ class OurSherpasSeeder extends Seeder
             [
                 'name' => 'Tenzing Norgay',
                 'title' => 'Legendary Mountaineer',
-                'description' => 'One of the first climbers to reach the summit of Mount Everest.',
+                'description' => [
+                    'en' => 'One of the first climbers to reach the summit of Mount Everest.',
+                    'fr' => 'L\'un des premiers alpinistes à atteindre le sommet du mont Everest.',
+                ],
             ],
             [
                 'name' => 'Kami Rita Sherpa',
                 'title' => 'Everest Record Holder',
-                'description' => 'Holds the record for the most Everest summits.',
+                'description' => [
+                    'en' => 'Holds the record for the most Everest summits.',
+                    'fr' => 'Détient le record du plus grand nombre de sommets de l\'Everest.',
+                ],
             ],
         ];
+
 
         foreach ($sherpas as $sherpaData) {
             $sherpa = OurSherpa::create($sherpaData);

@@ -19,213 +19,496 @@ class KeyHighlightSeeder extends Seeder
     {
         $everest_base_camp_trek = [
             [
-                'title' => 'First Glimpse of Everest from Namche Bazaar',
-                'description' => 'The excitement of spotting Everest for the first time while sipping tea at a Namche Bazaar viewpoint is surreal.',
+                'title' => [
+                    'en' => 'First Glimpse of Everest from Namche Bazaar',
+                    'fr' => 'Premier aperçu de l\'Everest depuis Namche Bazaar',
+                ],
+                'description' => [
+                    'en' => 'The excitement of spotting Everest for the first time while sipping tea at a Namche Bazaar viewpoint is surreal.',
+                    'fr' => 'L\'excitation de repérer l\'Everest pour la première fois en sirotant un thé à un point de vue de Namche Bazaar est surréelle.',
+                ],
             ],
             [
-                'title' => 'Acclimatization Hike to Everest View Hotel',
-                'description' => 'A rewarding short hike offering one of the best panoramic views of Everest, Lhotse, and Ama Dablam.',
+                'title' => [
+                    'en' => 'Acclimatization Hike to Everest View Hotel',
+                    'fr' => 'Randonnée d\'acclimatation à l\'Everest View Hotel',
+                ],
+                'description' => [
+                    'en' => 'A rewarding short hike offering one of the best panoramic views of Everest, Lhotse, and Ama Dablam.',
+                    'fr' => 'Une courte randonnée enrichissante offrant l\'une des meilleures vues panoramiques sur l\'Everest, le Lhotse et l\'Ama Dablam.',
+                ],
             ],
             [
-                'title' => 'Crossing High Suspension Bridges',
-                'description' => 'Adrenaline rushes as you walk across swaying suspension bridges over deep gorges, prayer flags fluttering in the wind.',
+                'title' => [
+                    'en' => 'Crossing High Suspension Bridges',
+                    'fr' => 'Traversée de hauts ponts suspendus',
+                ],
+                'description' => [
+                    'en' => 'Adrenaline rushes as you walk across swaying suspension bridges over deep gorges, prayer flags fluttering in the wind.',
+                    'fr' => 'Montées d\'adrénaline en traversant des ponts suspendus oscillants au-dessus de gorges profondes, des drapeaux de prière flottant dans le vent.',
+                ],
             ],
             [
-                'title' => 'Reaching the Everest Base Camp',
-                'description' => 'The thrill of standing at the foot of Everest, surrounded by climbers, colorful tents, and the mighty Khumbu Icefall.',
+                'title' => [
+                    'en' => 'Reaching the Everest Base Camp',
+                    'fr' => 'Atteindre le camp de base de l\'Everest',
+                ],
+                'description' => [
+                    'en' => 'The thrill of standing at the foot of Everest, surrounded by climbers, colorful tents, and the mighty Khumbu Icefall.',
+                    'fr' => 'Le frisson de se tenir au pied de l\'Everest, entouré de grimpeurs, de tentes colorées et de la puissante cascade de glace de Khumbu.',
+                ],
             ],
             [
-                'title' => 'Sunrise at Kala Patthar',
-                'description' => 'The awesomeness will drive you next level'
+                'title' => [
+                    'en' => 'Sunrise at Kala Patthar',
+                    'fr' => 'Lever de soleil à Kala Patthar',
+                ],
+                'description' => [
+                    'en' => 'The awesomeness will drive you next level',
+                    'fr' => 'L\'incroyable vous mènera au niveau supérieur',
+                ],
             ],
         ];
+
         $annapurna_base_camp_trek = [
             [
-                'title' => 'Waking Up to the Sound of Roosters in Ghandruk',
-                'description' => 'Experiencing village life firsthand, waking up to mountain views and the smell of fresh Gurung bread.',
+                'title' => [
+                    'en' => 'Waking Up to the Sound of Roosters in Ghandruk',
+                    'fr' => 'Se réveiller au son des coqs à Ghandruk',
+                ],
+                'description' => [
+                    'en' => 'Experiencing village life firsthand, waking up to mountain views and the smell of fresh Gurung bread.',
+                    'fr' => 'Découvrir la vie du village de première main, se réveiller avec vue sur les montagnes et l\'odeur du pain frais Gurung.',
+                ],
             ],
             [
-                'title' => 'The Magical Sunrise from Poon Hill',
-                'description' => 'Watching the sun slowly illuminate the Annapurna and Dhaulagiri ranges, a moment of pure awe and silence.',
+                'title' => [
+                    'en' => 'The Magical Sunrise from Poon Hill',
+                    'fr' => 'Le lever de soleil magique depuis Poon Hill',
+                ],
+                'description' => [
+                    'en' => 'Watching the sun slowly illuminate the Annapurna and Dhaulagiri ranges, a moment of pure awe and silence.',
+                    'fr' => 'Regarder le soleil illuminer lentement les chaînes de l\'Annapurna et du Dhaulagiri, un moment de pur émerveillement et de silence.',
+                ],
             ],
             [
-                'title' => 'Feeling the Heat of Natural Hot Springs at Jhinu Danda',
-                'description' => 'Soaking in warm natural hot springs after long trekking days, feeling muscles relax while listening to the river flow.',
+                'title' => [
+                    'en' => 'Feeling the Heat of Natural Hot Springs at Jhinu Danda',
+                    'fr' => 'Sentir la chaleur des sources chaudes naturelles à Jhinu Danda',
+                ],
+                'description' => [
+                    'en' => 'Soaking in warm natural hot springs after long trekking days, feeling muscles relax while listening to the river flow.',
+                    'fr' => 'Se prélasser dans les sources chaudes naturelles après de longues journées de trek, sentir les muscles se détendre en écoutant le débit de la rivière.',
+                ],
             ],
             [
-                'title' => 'Walking Through a Rhododendron Forest',
-                'description' => 'A fairytale-like experience, with red, pink, and white rhododendrons blooming along the trail in spring.',
+                'title' => [
+                    'en' => 'Walking Through a Rhododendron Forest',
+                    'fr' => 'Se promener dans une forêt de rhododendrons',
+                ],
+                'description' => [
+                    'en' => 'A fairytale-like experience, with red, pink, and white rhododendrons blooming along the trail in spring.',
+                    'fr' => 'Une expérience féerique, avec des rhododendrons rouges, roses et blancs qui fleurissent le long du sentier au printemps.',
+                ],
             ],
             [
-                'title' => 'Standing in the Middle of the Annapurna Sanctuary',
-                'description' => 'Surrounded by towering snow-covered peaks at Annapurna Base Camp, feeling small yet deeply connected to nature.',
-            ]
+                'title' => [
+                    'en' => 'Standing in the Middle of the Annapurna Sanctuary',
+                    'fr' => 'Se tenir au milieu du sanctuaire de l\'Annapurna',
+                ],
+                'description' => [
+                    'en' => 'Surrounded by towering snow-covered peaks at Annapurna Base Camp, feeling small yet deeply connected to nature.',
+                    'fr' => 'Entouré de sommets imposants couverts de neige au camp de base de l\'Annapurna, se sentir petit mais profondément connecté à la nature.',
+                ],
+            ],
         ];
 
         $lobuche_peak_climbing = [
             [
-                'title' => 'The Rush of Ice Climbing Practice',
-                'description' => 'Strapping on crampons and learning how to navigate icy slopes, feeling like a true mountaineer.',
+                'title' => [
+                    'en' => 'The Rush of Ice Climbing Practice',
+                    'fr' => 'L\'excitation de la pratique de l\'escalade sur glace',
+                ],
+                'description' => [
+                    'en' => 'Strapping on crampons and learning how to navigate icy slopes, feeling like a true mountaineer.',
+                    'fr' => 'Chausser des crampons et apprendre à naviguer sur des pentes glacées, se sentir comme un véritable alpiniste.',
+                ],
             ],
             [
-                'title' => 'Sleeping Under the Stars at High Camp',
-                'description' => 'A night spent at high altitude, where the sky is ablaze with stars and the silence is absolute.',
+                'title' => [
+                    'en' => 'Sleeping Under the Stars at High Camp',
+                    'fr' => 'Dormir sous les étoiles au camp d\'altitude',
+                ],
+                'description' => [
+                    'en' => 'A night spent at high altitude, where the sky is ablaze with stars and the silence is absolute.',
+                    'fr' => 'Une nuit passée en haute altitude, où le ciel est illuminé d\'étoiles et le silence est absolu.',
+                ],
             ],
             [
-                'title' => 'The Final Push to the Summit',
-                'description' => 'Exhausted yet determined, each step towards the Lobuche summit feels like a victory over yourself.',
+                'title' => [
+                    'en' => 'The Final Push to the Summit',
+                    'fr' => 'La dernière poussée vers le sommet',
+                ],
+                'description' => [
+                    'en' => 'Exhausted yet determined, each step towards the Lobuche summit feels like a victory over yourself.',
+                    'fr' => 'Épuisé mais déterminé, chaque pas vers le sommet du Lobuche est ressenti comme une victoire sur soi-même.',
+                ],
             ],
             [
-                'title' => 'The First Rays of Sun from the Top',
-                'description' => 'Watching the sun rise over Everest, Lhotse, and Nuptse from the summit is an emotional, unforgettable sight.',
+                'title' => [
+                    'en' => 'The First Rays of Sun from the Top',
+                    'fr' => 'Les premiers rayons de soleil depuis le sommet',
+                ],
+                'description' => [
+                    'en' => 'Watching the sun rise over Everest, Lhotse, and Nuptse from the summit is an emotional, unforgettable sight.',
+                    'fr' => 'Regarder le soleil se lever sur l\'Everest, le Lhotse et le Nuptse depuis le sommet est un spectacle émotionnel et inoubliable.',
+                ],
             ],
             [
-                'title' => 'The Sense of Achievement Descending',
-                'description' => 'Looking back at the towering peak you just climbed, realizing you’ve conquered both nature and personal limits.',
-            ]
+                'title' => [
+                    'en' => 'The Sense of Achievement Descending',
+                    'fr' => 'Le sentiment d\'accomplissement en descendant',
+                ],
+                'description' => [
+                    'en' => 'Looking back at the towering peak you just climbed, realizing you’ve conquered both nature and personal limits.',
+                    'fr' => 'En regardant en arrière le sommet imposant que vous venez de gravir, vous réalisez que vous avez conquis à la fois la nature et vos limites personnelles.',
+                ],
+            ],
         ];
 
         $everest_expedition = [
             [
-                'title' => 'The Thrill of Stepping into the Khumbu Icefall',
-                'description' => 'Navigating the ever-shifting seracs and deep crevasses of the Khumbu Icefall is an experience like no other.',
+                'title' => [
+                    'en' => 'The Thrill of Stepping into the Khumbu Icefall',
+                    'fr' => 'Le frisson de pénétrer dans la cascade de glace de Khumbu',
+                ],
+                'description' => [
+                    'en' => 'Navigating the ever-shifting seracs and deep crevasses of the Khumbu Icefall is an experience like no other.',
+                    'fr' => 'Naviguer dans les séracs en constante évolution et les profondes crevasses de la cascade de glace de Khumbu est une expérience sans pareille.',
+                ],
             ],
             [
-                'title' => 'The Bond with Fellow Climbers',
-                'description' => 'Sharing stories, meals, and hardships with climbers from around the world creates lifelong friendships.',
+                'title' => [
+                    'en' => 'The Bond with Fellow Climbers',
+                    'fr' => 'Le lien avec les autres grimpeurs',
+                ],
+                'description' => [
+                    'en' => 'Sharing stories, meals, and hardships with climbers from around the world creates lifelong friendships.',
+                    'fr' => 'Partager des histoires, des repas et des difficultés avec des grimpeurs du monde entier crée des amitiés durables.',
+                ],
             ],
             [
-                'title' => 'The Eerie Beauty of the Death Zone',
-                'description' => 'At 8,000m, everything slows down—the air is thin, and each step is a battle between body and willpower.',
+                'title' => [
+                    'en' => 'The Eerie Beauty of the Death Zone',
+                    'fr' => 'L\'étrange beauté de la zone de la mort',
+                ],
+                'description' => [
+                    'en' => 'At 8,000m, everything slows down—the air is thin, and each step is a battle between body and willpower.',
+                    'fr' => 'À 8 000 m, tout ralentit : l\'air est raréfié et chaque pas est une bataille entre le corps et la volonté.',
+                ],
             ],
             [
-                'title' => 'The Moment You Step onto the Everest Summit',
-                'description' => 'Standing on top of the world, with a view that only a few have seen—it’s the ultimate dream turned reality.',
+                'title' => [
+                    'en' => 'The Moment You Step onto the Everest Summit',
+                    'fr' => 'Le moment où vous posez le pied sur le sommet de l\'Everest',
+                ],
+                'description' => [
+                    'en' => 'Standing on top of the world, with a view that only a few have seen—it’s the ultimate dream turned reality.',
+                    'fr' => 'Se tenir au sommet du monde, avec une vue que seuls quelques-uns ont pu contempler : c\'est le rêve ultime devenu réalité.',
+                ],
             ],
             [
-                'title' => 'The Emotional Descent',
-                'description' => 'Every step down feels surreal as the realization sinks in: you have climbed the highest mountain on Earth.',
-            ]
+                'title' => [
+                    'en' => 'The Emotional Descent',
+                    'fr' => 'La descente émotionnelle',
+                ],
+                'description' => [
+                    'en' => 'Every step down feels surreal as the realization sinks in: you have climbed the highest mountain on Earth.',
+                    'fr' => 'Chaque pas vers le bas semble surréel à mesure que la réalisation s\'impose : vous avez gravi la plus haute montagne de la Terre.',
+                ],
+            ],
         ];
 
         $kathmandu_cultural_tour = [
-            [
-                'title' => 'Watching Sunrise at Swayambhunath Stupa',
-                'description' => 'The golden light hitting the ancient stupa while prayer flags flutter and monks chant in the background.',
-            ],
-            [
-                'title' => 'Exploring the Hidden Courtyards of Patan Durbar Square',
-                'description' => 'Walking through centuries-old courtyards, admiring intricate Newari architecture and stone carvings.',
-            ],
-            [
-                'title' => 'Tasting Local Street Food in Ason Bazaar',
-                'description' => 'The spicy aroma of chatpate, freshly fried sel roti, and the bustle of Kathmandu’s oldest marketplace.',
-            ],
-            [
-                'title' => 'Witnessing the Evening Aarti at Pashupatinath',
-                'description' => 'A mesmerizing sight of priests performing fire rituals by the sacred Bagmati River as chants fill the air.',
-            ],
-            [
-                'title' => 'Getting Lost in the Alleyways of Thamel',
-                'description' => 'Discovering hidden bookshops, vibrant handicraft stores, and cozy cafés in Kathmandu’s famous backpacker hub.',
-            ]
-        ];
+    [
+        'title' => [
+            'en' => 'Watching Sunrise at Swayambhunath Stupa',
+            'fr' => 'Assister au lever du soleil au stupa de Swayambhunath',
+        ],
+        'description' => [
+            'en' => 'The golden light hitting the ancient stupa while prayer flags flutter and monks chant in the background.',
+            'fr' => 'La lumière dorée frappant l\'ancien stupa pendant que les drapeaux de prière flottent et que les moines chantent en arrière-plan.',
+        ],
+    ],
+    [
+        'title' => [
+            'en' => 'Exploring the Hidden Courtyards of Patan Durbar Square',
+            'fr' => 'Explorer les cours cachées de la place Durbar de Patan',
+        ],
+        'description' => [
+            'en' => 'Walking through centuries-old courtyards, admiring intricate Newari architecture and stone carvings.',
+            'fr' => 'Se promener dans des cours centenaires, admirer l\'architecture newari complexe et les sculptures sur pierre.',
+        ],
+    ],
+    [
+        'title' => [
+            'en' => 'Tasting Local Street Food in Ason Bazaar',
+            'fr' => 'Déguster la cuisine de rue locale au bazar d\'Ason',
+        ],
+        'description' => [
+            'en' => 'The spicy aroma of chatpate, freshly fried sel roti, and the bustle of Kathmandu’s oldest marketplace.',
+            'fr' => 'L\'arôme épicé du chatpate, du sel roti fraîchement frit et l\'agitation du plus ancien marché de Katmandou.',
+        ],
+    ],
+    [
+        'title' => [
+            'en' => 'Witnessing the Evening Aarti at Pashupatinath',
+            'fr' => 'Assister à l\'Aarti du soir à Pashupatinath',
+        ],
+        'description' => [
+            'en' => 'A mesmerizing sight of priests performing fire rituals by the sacred Bagmati River as chants fill the air.',
+            'fr' => 'Un spectacle envoûtant de prêtres accomplissant des rituels du feu au bord du fleuve sacré Bagmati pendant que les chants emplissent l\'air.',
+        ],
+    ],
+    [
+        'title' => [
+            'en' => 'Getting Lost in the Alleyways of Thamel',
+            'fr' => 'Se perdre dans les ruelles de Thamel',
+        ],
+        'description' => [
+            'en' => 'Discovering hidden bookshops, vibrant handicraft stores, and cozy cafés in Kathmandu’s famous backpacker hub.',
+            'fr' => 'Découvrir des librairies cachées, des boutiques d\'artisanat dynamiques et des cafés confortables dans le célèbre quartier des routards de Katmandou.',
+        ],
+    ],
+];
 
         $manaslu_circuit_trek = [
             [
-                'title' => 'Walking Through Remote Himalayan Villages',
-                'description' => 'Experience the untouched beauty of Nubri and Tsum Valley, home to Tibetan-influenced cultures and monasteries.',
+                'title' => [
+                    'en' => 'Walking Through Remote Himalayan Villages',
+                    'fr' => 'Randonnée à travers des villages himalayens isolés',
+                ],
+                'description' => [
+                    'en' => 'Experience the untouched beauty of Nubri and Tsum Valley, home to Tibetan-influenced cultures and monasteries.',
+                    'fr' => 'Découvrez la beauté intacte des vallées de Nubri et de Tsum, qui abritent des cultures et des monastères d\'influence tibétaine.',
+                ],
             ],
             [
-                'title' => 'Crossing the Thrilling Larkya La Pass (5,160m)',
-                'description' => 'The highest point of the trek offers breathtaking views of Himlung, Cheo, and Annapurna II, making the challenge worth it.',
+                'title' => [
+                    'en' => 'Crossing the Thrilling Larkya La Pass (5,160m)',
+                    'fr' => 'Traversée du passionnant col de Larkya La (5 160 m)',
+                ],
+                'description' => [
+                    'en' => 'The highest point of the trek offers breathtaking views of Himlung, Cheo, and Annapurna II, making the challenge worth it.',
+                    'fr' => 'Le point culminant du trek offre des vues à couper le souffle sur Himlung, Cheo et l\'Annapurna II, ce qui vaut la peine de relever le défi.',
+                ],
             ],
             [
-                'title' => 'Exploring the Ancient Monasteries',
-                'description' => 'Visit centuries-old monasteries like Mu Gompa and Rachen Gompa, where monks chant amidst peaceful Himalayan surroundings.',
+                'title' => [
+                    'en' => 'Exploring the Ancient Monasteries',
+                    'fr' => 'Exploration des anciens monastères',
+                ],
+                'description' => [
+                    'en' => 'Visit centuries-old monasteries like Mu Gompa and Rachen Gompa, where monks chant amidst peaceful Himalayan surroundings.',
+                    'fr' => 'Visitez des monastères centenaires comme Mu Gompa et Rachen Gompa, où les moines chantent dans un paisible environnement himalayen.',
+                ],
             ],
             [
-                'title' => 'Trekking Along the Budhi Gandaki River Gorge',
-                'description' => 'Follow the roaring Budhi Gandaki River through deep gorges, suspension bridges, and cascading waterfalls.',
+                'title' => [
+                    'en' => 'Trekking Along the Budhi Gandaki River Gorge',
+                    'fr' => 'Trek le long des gorges de la rivière Budhi Gandaki',
+                ],
+                'description' => [
+                    'en' => 'Follow the roaring Budhi Gandaki River through deep gorges, suspension bridges, and cascading waterfalls.',
+                    'fr' => 'Suivez la rivière Budhi Gandaki rugissante à travers des gorges profondes, des ponts suspendus et des cascades.',
+                ],
             ],
             [
-                'title' => 'Spectacular Views of Manaslu (8,163m), the 8th Highest Peak',
-                'description' => 'Enjoy panoramic views of Manaslu and its surrounding peaks, standing majestically above the rugged terrain.',
+                'title' => [
+                    'en' => 'Spectacular Views of Manaslu (8,163m), the 8th Highest Peak',
+                    'fr' => 'Vues spectaculaires sur le Manaslu (8 163 m), le 8e plus haut sommet',
+                ],
+                'description' => [
+                    'en' => 'Enjoy panoramic views of Manaslu and its surrounding peaks, standing majestically above the rugged terrain.',
+                    'fr' => 'Profitez de vues panoramiques sur le Manaslu et ses sommets environnants, se dressant majestueusement au-dessus du terrain accidenté.',
+                ],
             ],
             [
-                'title' => 'Walking Through Dense Rhododendron & Bamboo Forests',
-                'description' => 'The lower sections of the trek are filled with lush forests, turning vibrant red and pink in spring.',
+                'title' => [
+                    'en' => 'Walking Through Dense Rhododendron & Bamboo Forests',
+                    'fr' => 'Randonnée à travers des forêts denses de rhododendrons et de bambous',
+                ],
+                'description' => [
+                    'en' => 'The lower sections of the trek are filled with lush forests, turning vibrant red and pink in spring.',
+                    'fr' => 'Les parties inférieures du trek sont remplies de forêts luxuriantes, qui deviennent rouge et rose vifs au printemps.',
+                ],
             ],
             [
-                'title' => 'Staying in Traditional Tea Houses',
-                'description' => 'Enjoy warm hospitality in local teahouses, where simple yet hearty meals provide comfort after long trekking days.',
+                'title' => [
+                    'en' => 'Staying in Traditional Tea Houses',
+                    'fr' => 'Séjour dans des maisons de thé traditionnelles',
+                ],
+                'description' => [
+                    'en' => 'Enjoy warm hospitality in local teahouses, where simple yet hearty meals provide comfort after long trekking days.',
+                    'fr' => 'Profitez de la chaleureuse hospitalité des maisons de thé locales, où des repas simples mais copieux offrent du réconfort après de longues journées de trek.',
+                ],
             ],
             [
-                'title' => 'A Less Crowded Alternative to the Annapurna Circuit',
-                'description' => 'Experience a more peaceful trekking route with pristine landscapes and fewer trekkers compared to the more commercialized Annapurna Circuit.',
+                'title' => [
+                    'en' => 'A Less Crowded Alternative to the Annapurna Circuit',
+                    'fr' => 'Une alternative moins fréquentée au circuit de l\'Annapurna',
+                ],
+                'description' => [
+                    'en' => 'Experience a more peaceful trekking route with pristine landscapes and fewer trekkers compared to the more commercialized Annapurna Circuit.',
+                    'fr' => 'Découvrez un itinéraire de trek plus paisible avec des paysages immaculés et moins de trekkeurs que le circuit de l\'Annapurna plus commercialisé.',
+                ],
             ],
             [
-                'title' => 'Encountering Unique Wildlife',
-                'description' => 'The Manaslu region is home to snow leopards, blue sheep, and Himalayan Thars, adding an adventurous touch to your journey.',
+                'title' => [
+                    'en' => 'Encountering Unique Wildlife',
+                    'fr' => 'Rencontre avec une faune unique',
+                ],
+                'description' => [
+                    'en' => 'The Manaslu region is home to snow leopards, blue sheep, and Himalayan Thars, adding an adventurous touch to your journey.',
+                    'fr' => 'La région du Manaslu abrite des léopards des neiges, des moutons bleus et des thars de l\'Himalaya, ajoutant une touche d\'aventure à votre voyage.',
+                ],
             ],
             [
-                'title' => 'Reaching the Isolated Tsum Valley (Optional Side Trip)',
-                'description' => 'A hidden gem with breathtaking landscapes, ancient monasteries, and a strong Tibetan Buddhist culture.',
-            ]
+                'title' => [
+                    'en' => 'Reaching the Isolated Tsum Valley (Optional Side Trip)',
+                    'fr' => 'Atteindre la vallée isolée de Tsum (excursion facultative)',
+                ],
+                'description' => [
+                    'en' => 'A hidden gem with breathtaking landscapes, ancient monasteries, and a strong Tibetan Buddhist culture.',
+                    'fr' => 'Un joyau caché avec des paysages à couper le souffle, des monastères anciens et une forte culture bouddhiste tibétaine.',
+                ],
+            ],
         ];
 
 
         $langtang_highlights = [
             [
-                'title' => 'A Challenging and Rewarding Trek',
-                'description' => 'Experience an adventurous and challenging trek near Kathmandu, offering stunning landscapes and cultural immersion.'
+                'title' => [
+                    'en' => 'A Challenging and Rewarding Trek',
+                    'fr' => 'Un trek exigeant et gratifiant',
+                ],
+                'description' => [
+                    'en' => 'Experience an adventurous and challenging trek near Kathmandu, offering stunning landscapes and cultural immersion.',
+                    'fr' => 'Vivez un trek aventureux et exigeant près de Katmandou, offrant des paysages magnifiques et une immersion culturelle.',
+                ],
             ],
             [
-                'title' => 'Explore Valleys and Peaks',
-                'description' => 'Trek through the "Valley of Glaciers" (Langtang Valley), hike to viewpoints like Kyanjin Ri and Cherukuri Ri, and witness breathtaking mountain vistas, including Langtang Lirung, Naya Kanga, and Dorje Lakpa.'
+                'title' => [
+                    'en' => 'Explore Valleys and Peaks',
+                    'fr' => 'Explorez les vallées et les sommets',
+                ],
+                'description' => [
+                    'en' => 'Trek through the "Valley of Glaciers" (Langtang Valley), hike to viewpoints like Kyanjin Ri and Cherukuri Ri, and witness breathtaking mountain vistas, including Langtang Lirung, Naya Kanga, and Dorje Lakpa.',
+                    'fr' => 'Parcourez la "Vallée des Glaciers" (vallée de Langtang), randonnez jusqu\'à des points de vue comme Kyanjin Ri et Cherukuri Ri, et admirez des panoramas montagneux à couper le souffle, notamment Langtang Lirung, Naya Kanga et Dorje Lakpa.',
+                ],
             ],
             [
-                'title' => 'Sacred Lakes and High Passes',
-                'description' => 'Visit the sacred Gosainkunda Lake, a pilgrimage site for Hindus, and cross the challenging Lauribina La pass (4,610m).'
+                'title' => [
+                    'en' => 'Sacred Lakes and High Passes',
+                    'fr' => 'Lacs sacrés et cols élevés',
+                ],
+                'description' => [
+                    'en' => 'Visit the sacred Gosainkunda Lake, a pilgrimage site for Hindus, and cross the challenging Lauribina La pass (4,610m).',
+                    'fr' => 'Visitez le lac sacré de Gosainkunda, un lieu de pèlerinage pour les hindous, et traversez le col exigeant de Lauribina La (4 610 m).',
+                ],
             ],
             [
-                'title' => 'Cultural Immersion',
-                'description' => 'Interact with the Tamang and Sherpa communities, experience their warm hospitality, and learn about their unique culture and traditions. Visit ancient monasteries and explore local markets and yak cheese factories.'
+                'title' => [
+                    'en' => 'Cultural Immersion',
+                    'fr' => 'Immersion culturelle',
+                ],
+                'description' => [
+                    'en' => 'Interact with the Tamang and Sherpa communities, experience their warm hospitality, and learn about their unique culture and traditions. Visit ancient monasteries and explore local markets and yak cheese factories.',
+                    'fr' => 'Interagissez avec les communautés Tamang et Sherpa, découvrez leur hospitalité chaleureuse et apprenez-en plus sur leur culture et leurs traditions uniques. Visitez d\'anciens monastères et explorez les marchés locaux ainsi que les fabriques de fromage de yak.',
+                ],
             ],
             [
-                'title' => 'Diverse Landscapes',
-                'description' => 'Traverse remote settlements, lush meadows, dense forests (including rhododendron forests), and rugged terrain, experiencing a variety of landscapes.'
+                'title' => [
+                    'en' => 'Diverse Landscapes',
+                    'fr' => 'Des paysages variés',
+                ],
+                'description' => [
+                    'en' => 'Traverse remote settlements, lush meadows, dense forests (including rhododendron forests), and rugged terrain, experiencing a variety of landscapes.',
+                    'fr' => 'Traversez des villages isolés, des prairies verdoyantes, des forêts denses (y compris des forêts de rhododendrons) et des terrains accidentés, en découvrant une variété de paysages.',
+                ],
             ],
             [
-                'title' => 'Wildlife Encounters',
-                'description' => 'Keep an eye out for potential wildlife sightings, including langur monkeys, especially in the lower sections of the trek near Shivapuri National Park.'
+                'title' => [
+                    'en' => 'Wildlife Encounters',
+                    'fr' => 'Rencontres avec la faune',
+                ],
+                'description' => [
+                    'en' => 'Keep an eye out for potential wildlife sightings, including langur monkeys, especially in the lower sections of the trek near Shivapuri National Park.',
+                    'fr' => 'Soyez attentif aux éventuelles observations de la faune, notamment les singes langurs, en particulier dans les parties basses du trek près du parc national de Shivapuri.',
+                ],
             ],
             [
-                'title' => 'Getaway from Kathmandu',
-                'description' => 'Explore the Chisapani region and the area around Sundarijal, popular destinations for those seeking a quick escape from the city.'
+                'title' => [
+                    'en' => 'Getaway from Kathmandu',
+                    'fr' => 'Échappée belle depuis Katmandou',
+                ],
+                'description' => [
+                    'en' => 'Explore the Chisapani region and the area around Sundarijal, popular destinations for those seeking a quick escape from the city.',
+                    'fr' => 'Explorez la région de Chisapani et les environs de Sundarijal, des destinations populaires pour ceux qui cherchent une escapade rapide hors de la ville.',
+                ],
             ],
         ];
 
         $kanchanjunga_highlights = [
             [
-                'title' => 'Summiting the Third Highest Peak',
-                'description' => 'Experience the ultimate thrill of standing atop the world\'s third highest mountain.',
+                'title' => [
+                    'en' => 'Summiting the Third Highest Peak',
+                    'fr' => 'L\'ascension du troisième plus haut sommet',
+                ],
+                'description' => [
+                    'en' => 'Experience the ultimate thrill of standing atop the world\'s third highest mountain.',
+                    'fr' => 'Vivez l\'exaltation ultime de vous tenir au sommet de la troisième plus haute montagne du monde.',
+                ],
             ],
             [
-                'title' => 'Remote and Pristine Wilderness',
-                'description' => 'Trek through untouched landscapes and experience the raw beauty of the Kanchenjunga region.',
+                'title' => [
+                    'en' => 'Remote and Pristine Wilderness',
+                    'fr' => 'Une nature sauvage et préservée',
+                ],
+                'description' => [
+                    'en' => 'Trek through untouched landscapes and experience the raw beauty of the Kanchenjunga region.',
+                    'fr' => 'Randonnez à travers des paysages intacts et découvrez la beauté brute de la région du Kanchenjunga.',
+                ],
             ],
             [
-                'title' => 'Cultural Immersion',
-                'description' => 'Interact with local communities and experience the unique culture of the region.',
+                'title' => [
+                    'en' => 'Cultural Immersion',
+                    'fr' => 'Immersion culturelle',
+                ],
+                'description' => [
+                    'en' => 'Interact with local communities and experience the unique culture of the region.',
+                    'fr' => 'Interagissez avec les communautés locales et découvrez la culture unique de la région.',
+                ],
             ],
             [
-                'title' => 'Challenging Climb',
-                'description' => 'Test your mountaineering skills with a technically challenging climb.',
+                'title' => [
+                    'en' => 'Challenging Climb',
+                    'fr' => 'Une ascension exigeante',
+                ],
+                'description' => [
+                    'en' => 'Test your mountaineering skills with a technically challenging climb.',
+                    'fr' => 'Testez vos compétences en alpinisme avec une ascension techniquement exigeante.',
+                ],
             ],
             [
-                'title' => 'Expert Guidance',
-                'description' => 'Climb with experienced guides and Sherpas who prioritize safety and success.',
+                'title' => [
+                    'en' => 'Expert Guidance',
+                    'fr' => 'Encadrement par des experts',
+                ],
+                'description' => [
+                    'en' => 'Climb with experienced guides and Sherpas who prioritize safety and success.',
+                    'fr' => 'Grimpez avec des guides expérimentés et des Sherpas qui privilégient la sécurité et la réussite.',
+                ],
             ],
         ];
 
