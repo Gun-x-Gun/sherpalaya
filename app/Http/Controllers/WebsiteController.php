@@ -7,6 +7,8 @@ use App\Models\Faq;
 use App\Settings\ContactUsSetting;
 use App\Settings\PageSetting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class WebsiteController extends Controller
 {
@@ -62,5 +64,15 @@ class WebsiteController extends Controller
 
     public function whySherpalaya(Request $request){
         return view('website.company.why_sherpalaya');
+    }
+
+    public function changeLocale(Request $request, string $locale = 'en'){
+        if (! in_array($locale, ['en', 'fr'])) {
+            $locale = 'en';
+        }
+        App::setLocale($locale);
+        Session::put('current_locale', $locale);
+
+        return redirect()->back();
     }
 }

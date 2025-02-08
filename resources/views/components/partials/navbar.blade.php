@@ -8,6 +8,18 @@
                 </a>
                 <div class="xl:hidden">
 
+                    <div class="dropdown relative inline-flex [--placement:bottom-end]">
+                        <button id="language-select-dropdown-drawer" type="button" class="dropdown-toggle"
+                            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                            <span class="icon-[tabler--language-hiragana] size-5"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu"
+                            aria-orientation="vertical" aria-labelledby="language-select-dropdown-drawer">
+                            <li><a class="dropdown-item text-black" href="/change-locale/en"> English</a></li>
+                            <li><a class="dropdown-item text-black" href="/change-locale/fr"> French</a></li>
+                        </ul>
+                    </div>
+
                     <button type="button" class="" aria-haspopup="dialog" aria-expanded="false"
                         aria-controls="middle-center-modal" data-overlay="#middle-center-modal">
                         <span class="icon-[tabler--search] size-5"></span>
@@ -250,12 +262,30 @@
                                 <span class="icon-[tabler--search] size-5"></span>
                             </a>
                         </li> --}}
+
+                        {{-- Search --}}
                         <li>
                             <button type="button" class="" aria-haspopup="dialog" aria-expanded="false"
                                 aria-controls="middle-center-modal" data-overlay="#middle-center-modal">
                                 <span class="icon-[tabler--search] size-5"></span>
                             </button>
                         </li>
+
+                        {{-- Language Select --}}
+                        <li>
+                            <div class="dropdown relative inline-flex [--placement:bottom-end]">
+                                <button id="language-select-dropdown" type="button" class="dropdown-toggle"
+                                    aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                                    <span class="icon-[tabler--language-hiragana] size-5"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu"
+                                    aria-orientation="vertical" aria-labelledby="language-select-dropdown">
+                                    <li><a class="dropdown-item text-black" href="/change-locale/en"> English</a></li>
+                                    <li><a class="dropdown-item text-black" href="/change-locale/fr"> French</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        {{-- Language end --}}
                     </ul>
                     <ul>
 
@@ -274,8 +304,9 @@
         <div class="drawer-header px-2">
             <h3 class="drawer-title">Sherpalaya</h3>
 
-            <button class="btn btn-text btn-circle btn-sm absolute end-12 top-3" type="button" class="" aria-haspopup="dialog" aria-expanded="false"
-                aria-controls="middle-center-modal" data-overlay="#middle-center-modal">
+            <button class="btn btn-text btn-circle btn-sm absolute end-12 top-3" type="button" class=""
+                aria-haspopup="dialog" aria-expanded="false" aria-controls="middle-center-modal"
+                data-overlay="#middle-center-modal">
                 <span class="icon-[tabler--search] size-4"></span>
             </button>
 
