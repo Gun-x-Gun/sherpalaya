@@ -5,17 +5,13 @@
             <div class="h-10"></div>
             <footer class="footer">
                 <div class="gap-6">
-                    {{-- <div class="flex items-end gap-2 text-xl uppercase font-bold text-white">
-                        <a class="link text-base-content link-neutral  font-semibold no-underline" href="/home">
-                            <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-8 w-12">
-                        </a>
-                        <span>Sherpalaya</span>
-                    </div> --}}
-                    <div class="flex items-center gap-4 text-xl uppercase font-semibold text-blue-100  text-wrap">
-                        <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-6 w-6">
-                        <span>Sherpalaya pvt. ltd.</span>
-                    </div>
-
+                    <a class="link text-base-content link-neutral texl-lg font-semibold no-underline"
+                        href="/home">
+                        <div class="flex items-center gap-4 text-xl uppercase font-semibold text-blue-100  text-wrap">
+                            <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-6 w-6">
+                            <span>Sherpalaya pvt. ltd.</span>
+                        </div>
+                    </a>
                     <div class="flex items-center gap-4 text-base capitalize font-normal text-blue-100 text-wrap ">
                         <span class="icon-[iconoir--map-pin] size-6 text-blue-100"></span>
                         <span>Kathmandu, thamel, street no 6</span>
@@ -39,16 +35,16 @@
                 </div>
                 <nav class="text-base-content capitalize">
                     <h6 class="footer-title font-bold text-blue-50 uppercase">Activities</h6>
-                    <a href="#" class="link link-hover text-blue-100 capitalize">Expeditions</a>
-                    <a href="#" class="link link-hover text-blue-100">Peaks</a>
-                    <a href="#" class="link link-hover text-blue-100">treks</a>
-                    <a href="#" class="link link-hover text-blue-100">Tours</a>
+                    <a href="/expeditions" class="link link-hover text-blue-100 capitalize">Expeditions</a>
+                    <a href="/peaks" class="link link-hover text-blue-100">Peaks</a>
+                    <a href="/treks" class="link link-hover text-blue-100">treks</a>
+                    <a href="/tours" class="link link-hover text-blue-100">Tours</a>
                 </nav>
                 <nav class="text-base-content capitalize">
                     <h6 class="footer-title font-bold text-blue-50 uppercase">Company</h6>
-                    <a href="#" class="link link-hover text-blue-100">About</a>
-                    <a href="#" class="link link-hover text-blue-100">Our Sherpas</a>
-                    <a href="#" class="link link-hover text-blue-100">Services</a>
+                    <a href="/about_us" class="link link-hover text-blue-100">About</a>
+                    <a href="/sherpas" class="link link-hover text-blue-100">Our Sherpas</a>
+                    <a href="/sherpas" class="link link-hover text-blue-100">Services</a>
 
                 </nav>
                 <nav class="text-base-content">
@@ -74,7 +70,8 @@
                     </div>
                     {{-- <div class="gap-4 hover:underline"> --}}
                     <a href="https://wa.me/{{ config('services.whatsapp.number') }}">
-                        <div class="flex items-center gap-2 text-base uppercase font-semibold text-green-300  text-wrap">
+                        <div
+                            class="flex items-center gap-2 text-base uppercase font-semibold text-green-300  text-wrap">
                             <span>Reach Us Via</span>
                         </div>
                         <div class="flex items-center gap-2 text-base Capitalize font-normal text-green-300 mt-2">
