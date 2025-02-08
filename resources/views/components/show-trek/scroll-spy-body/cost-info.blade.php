@@ -18,7 +18,7 @@
                                 <span class="icon-[eva--done-all-fill] size-5"></span>
                             </span>
                             <p class="text-slate-900  md:text-balance text-preety text-base">
-                                {{ $cost_include }}
+                                {{ $cost_include[app()->currentLocale()] }}
                             </p>
                         </li>
                     @endforeach
@@ -49,7 +49,7 @@
                                 <span class="icon-[tabler--exclamation-circle] size-5"></span>
                             </span>
                             <p class="text-slate-900 md:text-balance text-preety text-base">
-                                {{ $cost_exclude }} </p>
+                                {{ $cost_exclude[app()->currentLocale()] }} </p>
                         </li>
                     @endforeach
                 </ul>
