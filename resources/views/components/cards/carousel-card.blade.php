@@ -34,7 +34,7 @@
         <x-curator-glider class="h-[100vh] w-full object-cover brightness-50" :media="$image" :fallback="asset('/photos/banner.jpg')"
             loading="lazy" />
     </figure>
-    <div class="card-body absolute inset-0 flex items-center justify-start" data-aos="fade-right" data-aos-duration="1500">
+    <div class="card-body absolute inset-0 flex items-center justify-start" data-aos="fade-down" data-aos-duration="1500">
         <div class="absolute bottom-1/2 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden ">
             <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold">
                 Explore
