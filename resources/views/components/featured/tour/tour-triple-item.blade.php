@@ -1,6 +1,6 @@
 @if ($featuredTours->count() === 3)
 
-    <div class="bg-blue-100/10">
+    <div class="bg-blue-100/10" data-aos="fade-down" data-aos-duration="1200">
         <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
 
@@ -14,7 +14,7 @@
 
             <div class="h-4"></div>
 
-            <div class="hidden lg:grid grid-cols-3  gap-2 bg-blue-100/10">
+            <div class="hidden lg:grid grid-cols-3  gap-2 bg-blue-100/10" data-aos="fade-down" data-aos-duration="1200">
                 @foreach ($featuredTours as $featuredTour)
                     <div
                         class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
@@ -43,7 +43,7 @@
                 data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.5, "md":2.5 } }'
                 class="relative w-full lg:hidden">
                 <div class="carousel h-[28rem] rounded-none">
-                    <div class="carousel-body  h-full opacity-0">
+                    <div class="carousel-body  h-full opacity-0" data-aos="fade-down" data-aos-duration="1200">
                         <!-- Slide 1 -->
                         @foreach ($featuredTours as $featuredTour)
                             <div class="carousel-slide">

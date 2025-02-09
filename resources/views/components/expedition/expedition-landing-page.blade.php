@@ -36,14 +36,10 @@
                 Expedition In Nepal
             </h1>
             <p
-                class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
-                For those seeking the ultimate challenge, Sherpalaya’s expedition services offer unparalleled support
-                and
-                expertise. Whether it’s climbing Everest or venturing to the lesser-known expeditions, Sherpalaya
-                handles
-                every
-                detail, from permits to logistics. With our experienced Sherpa team by your side, we transform daunting
-                Trek into achievable milestones, ensuring a fulfilling and transformative adventure. </p>
+                class="text-md mt-2 text-preety text-slate-800 lg:text-center 
+                 first-line:uppercase first-line:font-light">
+                {!! $landingPageSetting->expedition_activity_content !!}
+            </p>
         </div>
         <div class="h-12 "></div>
     </div>

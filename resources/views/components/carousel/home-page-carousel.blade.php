@@ -3,10 +3,10 @@
         data-carousel='{ "loadingClasses": "opacity-0", "isAutoPlay": true, "speed": 10000, "isCentered": true, "dotsItemClasses": "carousel-box","isInfiniteLoop": true}'
         class="relative h-full w-full">
         <div class="carousel rounded-none h-full w-full">
-            <div class="carousel-body opacity-0 h-full w-full rounded-none">
+            <div class="carousel-body opacity-0 h-full w-full rounded-none " data-aos="fade-right" data-aos-duration="1500">
                 <!-- Slide 1 -->
                 @foreach ($featuredData as $featured)
-                    <div class="carousel-slide snap-center rounded-none">
+                    <div class="carousel-slide snap-center rounded-none" >
                         <x-cards.carousel-card :id="$featured->id" :title="$featured->title" :url="$featured->url"
                             :image="$featured->image" />
                     </div>

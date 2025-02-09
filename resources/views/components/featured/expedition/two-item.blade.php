@@ -2,8 +2,10 @@
     <div class="bg-blue-100/60">
         <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
-            <div class=" ">
-                <h5 class="text-3xl md:text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">Expeditions</h5>
+            <div class=" "data-aos="fade-down" data-aos-duration="1200">
+                <h5
+                    class="text-3xl md:text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">
+                    Expeditions</h5>
                 {{-- <h3 class="text-3xl tracking-wider text-accent lg:text-center ">With Sherpalaya</h3> --}}
                 {{-- <p
                     class="text-md mt-2 text-preety text-slate-800 lg:text-center 
@@ -16,16 +18,16 @@
                 @foreach ($featuredExpeditions as $featuredExpedition)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
-                        <div class="col-span-1 mr-2 hidden md:block">
-                            <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-black md:text-left ">
+                        <div class="col-span-1 mr-2 hidden md:block " data-aos="fade-down" data-aos-duration="1200">
+                            <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-black md:text-left " >
                                 {{ $featuredExpedition->title }}</h5>
                             <p
                                 class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light line-clamp-[14]">
-                                {{ $featuredExpedition->description }}
+                                {{ strip_tags($featuredExpedition->description) }}
                             </p>
                         </div>
                         <div
-                            class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-2">
+                            class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-2" data-aos="fade-down" data-aos-duration="1200">
                             <figure class="h-[28rem] w-full">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
@@ -47,7 +49,7 @@
                     @else
                         {{-- Second Iteration: col-span-2 on the text and col-span-1 on the image --}}
                         <div
-                            class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-2">
+                            class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-2" data-aos="fade-down" data-aos-duration="1200">
                             <figure class="h-[28rem] w-full">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
@@ -66,13 +68,13 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-span-1 ml-2 hidden md:block">
+                        <div class="col-span-1 ml-2 hidden md:block" data-aos="fade-down" data-aos-duration="1200">
                             <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-black lg:text-left ">
                                 {{ $featuredExpedition->title }}
                             </h5>
                             <p
-                                class="text-md mt-2 text-preety text-slate-800 break-all  first-line:uppercase first-line:font-light line-clamp-[14]">
-                                {{ $featuredExpedition->description }}
+                                class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light line-clamp-[14]">
+                                {{ strip_tags($featuredExpedition->description) }}
                             </p>
                         </div>
                     @endif

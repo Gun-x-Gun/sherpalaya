@@ -1,5 +1,5 @@
 @if ($featuredTreks->count() > 4)
-    <div class="bg-blue-100/60">
+    <div class="bg-blue-100/60" data-aos="fade-down" data-aos-duration="1200">
         <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
             <div class="">
@@ -14,7 +14,7 @@
                 data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8, "md": 2.5, "lg": 3.1, "xl": 3.5 } }'
                 class="relative w-full">
                 <div class="carousel h-[28rem] rounded-none">
-                    <div class="carousel-body h-full opacity-0">
+                    <div class="carousel-body h-full opacity-0" >
                         <!-- Slide 1 -->
                         @foreach ($featuredTreks as $featuredTrek)
                             <div class="carousel-slide max-w-sm px-1">

@@ -1,4 +1,4 @@
-<div class="bg-blue-100/10">
+<div class="bg-blue-100/10" data-aos="fade-down" data-aos-duration="1200">
     <div class="mx-0 w-full overflow-hidden">
         <div id="audio-section" style="background-image: url('{{ $parallaxImageUrl }}');"
             class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed scale-[.4]">

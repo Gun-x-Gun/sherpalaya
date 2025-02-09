@@ -1,4 +1,4 @@
-<div class="bg-blue-100/20">
+<div class="bg-blue-100/20" data-aos="fade-up" data-aos-duration="1200">
     <div class="h-12"></div>
   
     <div class="xl:mx-32 mx-4">

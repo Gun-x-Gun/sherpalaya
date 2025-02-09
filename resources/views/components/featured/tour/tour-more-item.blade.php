@@ -1,6 +1,6 @@
 @if ($featuredTours->count() > 4)
 
-    <div class="bg-blue-100/10">
+    <div class="bg-blue-100/10" data-aos="fade-down" data-aos-duration="1200">
         <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
             <div class="">
@@ -12,9 +12,9 @@
             <div class="h-4"></div>
             <div id="multi-slide"
                 data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8, "md": 2.5, "lg": 3.8 } }'
-                class="relative w-full">
+                class="relative w-full" >
                 <div class="carousel h-[28rem] rounded-none">
-                    <div class="carousel-body h-full opacity-0">
+                    <div class="carousel-body h-full opacity-0" data-aos="fade-down" data-aos-duration="1200">
                         <!-- Slide 1 -->
                         @foreach ($featuredTours as $featuredTour)
                             <div class="carousel-slide px-1 max-w-sm">

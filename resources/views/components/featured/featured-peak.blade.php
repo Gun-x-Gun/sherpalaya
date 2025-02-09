@@ -118,8 +118,9 @@
 <div class="bg-blue-100/10">
     <div class="xl:mx-32 mx-4 ">
         <div class="h-14"></div>
-        <div class=" ">
-            <h5 class="text-3xl md:text-4xl font-light uppercase line-clamp-2 tracking-wider text-black text-center ">Peaks
+        <div class=" " data-aos="fade-down-right" data-aos-duration="1200">
+            <h5 class="text-3xl md:text-4xl font-light uppercase line-clamp-2 tracking-wider text-black text-center ">
+                Peaks
             </h5>
             {{-- <h3 class="text-3xl tracking-wider text-accent lg:text-center ">With Sherpalaya</h3> --}}
             {{-- <p
@@ -130,7 +131,7 @@
             <div class="h-8"></div>
         </div>
         @if ($featuredPeaks->count() > 0)
-            <div class="flex flex-col md:grid grid-cols-2 gap-0 bg-blue-100/10">
+            <div class="flex flex-col md:grid grid-cols-2 gap-0 bg-blue-100/10" data-aos="fade-down-right" data-aos-duration="1200">
                 @foreach ($featuredPeaks as $featuredPeak)
                     @if ($loop->index % 2 === 0)
                         <div
@@ -160,7 +161,8 @@
                                     {{ $featuredPeak->title }}</h5>
                                 <p
                                     class="text-md mt-2 text-preety text-blue-800 break-all first-line:uppercase first-line:font-light line-clamp-[14]">
-                                    {{ $featuredPeak->description }}
+                                    {{ strip_tags($featuredPeak->description) }}
+
                                 </p>
                                 <div class="h-4"></div>
                             </div>
@@ -174,7 +176,8 @@
                                     {{ $featuredPeak->title }}</h5>
                                 <p
                                     class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light line-clamp-[14]">
-                                    {{ $featuredPeak->description }}
+                                    {{ strip_tags($featuredPeak->description) }}
+
                                 </p>
                                 <div class="h-4"></div>
                             </div>

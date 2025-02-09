@@ -1,9 +1,9 @@
 <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');"
-    class="bg-cover bg-center w-full  object-top">
+    class="bg-cover bg-center w-full  object-top" >
     <div class="backdrop-blur-md">
         <div class="mx-4 xl:mx-32">
             <div class="h-10"></div>
-            <footer class="footer">
+            <footer class="footer" data-aos="fade-up" data-aos-duration="1200">
                 <div class="gap-6">
                     <a class="link text-base-content link-neutral texl-lg font-semibold no-underline"
                         href="/home">
@@ -86,9 +86,9 @@
                     {{-- </div> --}}
                 </nav>
             </footer>
-            <footer class="footer footer-center bg-transparent rounded ">
+            <footer class="footer footer-center bg-transparent rounded " >
                 <div class="h-2"></div>
-                <aside class="text-blue-300 xl:mb-8">
+                <aside class="text-blue-300 xl:mb-8" >
                     <p>Copyright © 2025 - All right reserved by Sherpalaya</p>
                 </aside>
                 <div class="h-10 xl:hidden"></div>
