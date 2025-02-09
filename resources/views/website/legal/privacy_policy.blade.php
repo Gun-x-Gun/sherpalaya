@@ -33,6 +33,6 @@
                 {!! $privacyPolicy !!}
             </div>
         </div>
-        <div class="h-8"></div>
+        <div class="h-16"></div>
     </div>
 </x-website-layout>
