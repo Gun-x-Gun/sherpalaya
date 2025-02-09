@@ -88,7 +88,8 @@
                                                     @foreach ($navRegion->expeditions as $expedition)
                                                         <div class="flex flex-col gap-3">
                                                             <div class="flex flex-col gap-0 items-start">
-                                                                <div class="text-primary hover:underline tracking-tighter">
+                                                                <div
+                                                                    class="text-primary hover:underline tracking-tighter">
                                                                     <a
                                                                         href="{{ route('show_expedition', $expedition->id) }}">
                                                                         {{ $expedition->title }}
@@ -570,41 +571,42 @@
         </div>
     </div>
 @endpush
+@push('scripts')
+    <script>
+        const scrollableElement = document.body; // document.getElementById('scrollableElement');
+        const navbar = document.getElementById('navbar');
 
-<script>
-    const scrollableElement = document.body; // document.getElementById('scrollableElement');
-    const navbar = document.getElementById('navbar');
+        // Add smooth transition for background and visibility
+        navbar.style.transition = "background 0.5s ease, transform 0.5s ease";
 
-    // Add smooth transition for background and visibility
-    navbar.style.transition = "background 0.5s ease, transform 0.5s ease";
+        scrollableElement.addEventListener('wheel', checkScrollDirection);
 
-    scrollableElement.addEventListener('wheel', checkScrollDirection);
+        function checkScrollDirection(event) {
+            const currentScroll = window.pageYOffset;
 
-    function checkScrollDirection(event) {
-        const currentScroll = window.pageYOffset;
+            // Change background based on position
+            if (currentScroll === 0) {
+                navbar.style.background = "transparent"; // At the top
+                navbar.style.color = "white"; // At the top
+            } else {
+                navbar.style.background = "rgba(255, 255, 255, 1)"; // bg-slate-100
+                navbar.style.color = "black"; // At the top
 
-        // Change background based on position
-        if (currentScroll === 0) {
-            navbar.style.background = "transparent"; // At the top
-            navbar.style.color = "white"; // At the top
-        } else {
-            navbar.style.background = "rgba(255, 255, 255, 1)"; // bg-slate-100
-            navbar.style.color = "black"; // At the top
+            }
 
+            // Show or hide the navbar based on scroll direction
+            if (checkScrollDirectionIsUp(event)) {
+                navbar.style.transform = "translateY(0)"; // Show navbar
+            } else {
+                navbar.style.transform = "translateY(-100%)"; // Hide navbar
+            }
         }
 
-        // Show or hide the navbar based on scroll direction
-        if (checkScrollDirectionIsUp(event)) {
-            navbar.style.transform = "translateY(0)"; // Show navbar
-        } else {
-            navbar.style.transform = "translateY(-100%)"; // Hide navbar
+        function checkScrollDirectionIsUp(event) {
+            if (event.wheelDelta) {
+                return event.wheelDelta > 0;
+            }
+            return event.deltaY < 0;
         }
-    }
-
-    function checkScrollDirectionIsUp(event) {
-        if (event.wheelDelta) {
-            return event.wheelDelta > 0;
-        }
-        return event.deltaY < 0;
-    }
-</script>
+    </script>
+@endpush
