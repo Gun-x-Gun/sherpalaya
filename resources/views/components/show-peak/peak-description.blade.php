@@ -3,21 +3,19 @@
         element
     } = HSCollapse.getInstance('#peak-description-collapse-button', true);
 
-    shortExpeditionDescription = document.getElementById("short-peak-description");
+    shortpeakDescription = document.getElementById("short-peak-description");
 
     peakDescriptionButton.on('open', function(instance) {
-        shortExpeditionDescription.classList.add("hidden");
+        shortpeakDescription.classList.add("hidden");
 
     });
     peakDescriptionButton.on('hide', function(instance) {
-        shortExpeditionDescription.classList.remove("hidden");
+        shortpeakDescription.classList.remove("hidden");
     });
 </script>
 
 
-
 <div class="">
-    
     <p class="mb-4 2xl:text-xl text-white font-bold ">
     <p class="inline text-base-content/80" id="short-peak-description ">
         {{ Str::words(strip_tags($peak->description), 30) }}
@@ -39,10 +37,9 @@
     </p>
 </div> --}}
 
-
-<div class="card sm:w-full shadow-sm shadow-slate-300 bg-blue-100/10">
-    <div class="card-body gap-2 text-slate-700 px-2 capitalize text-preety lg:text-justify">
-        <p class="first-line:uppercase text-balance tracking-tighter align-top text-base/8">
+<div class="card sm:w-full shadow-sm shadow-slate-300 bg-blue-100/10" data-aos="fade-down" data-aos-duration="1200">
+    <div class="card-body gap-2 text-slate-700 px-2 capitalize text-preety lg:text-justify" >
+        <p class="first-line:uppercase text-balance tracking-tighter align-top text-base/8" >
             {!! $peak->description !!}
         </p>
     </div>

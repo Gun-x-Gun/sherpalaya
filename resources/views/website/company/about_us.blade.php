@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/10">
+    <div class="bg-blue-100/10" >
         <div class="card--rounded-none image-full  h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$pageSetting->about_us_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
@@ -9,7 +9,7 @@
             <div class="card-body">
                 <div
                     class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                    <div class="">
+                    <div class="" data-aos="fade-down" data-aos-duration="1200">
                         {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Explore
                         </h5> --}}
@@ -38,7 +38,7 @@
 
 
             <div class="h-4"></div>
-            <div class="xl:mx-32 mx-4 text-left ">
+            <div class="xl:mx-32 mx-4 text-left " data-aos="fade-down" data-aos-duration="1500">
                 <p class="text-md text-left  mt-2  text-slate-800 first-line:uppercase first-line:font-light ">
                     {{ $pageSetting->about_us_page_content }}
                 </p>
@@ -61,7 +61,7 @@
                     <div class="accordion-item {{ $index == 0 ? 'active' : '' }}" id="faq-{{ $faq->id }}">
                         <button
                             class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start bg-blue-100/40"
-                            aria-controls="faq-{{ $faq->id }}-collapse" aria-expanded="true">
+                            aria-controls="faq-{{ $faq->id }}-collapse" aria-expanded="true" data-aos="fade-down" data-aos-duration="1200">
                             <span
                                 class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
                             <span
@@ -70,7 +70,7 @@
                         </button>
                         <div id="faq-{{ $faq->id }}-collapse"
                             class="accordion-content w-full overflow-hidden transition-[height] duration-300 bg-blue-100/40"
-                            aria-labelledby="faq-{{ $faq->id }}" role="region">
+                            aria-labelledby="faq-{{ $faq->id }}" role="region" data-aos="fade-down" data-aos-duration="1200">
                             <div class="px-5 pb-4 ">
                                 <p class="text-base-content/80 font-normal ">
                                     {{ $faq->answer }}

@@ -1,16 +1,16 @@
 <div class="md:grid grid-cols-2 ">
     @if (!empty($tour->costs_include))
 
-        <div id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/30">
+        <div id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/60">
             <div class="h-8">
 
             </div>
-            <div class="card-header p-2">
+            <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
                 <h5 class="card-title text-primary uppercase font-semibold text-xl">Cost
                     Includes
                 </h5>
             </div>
-            <div class="card-body p-2 mt-4">
+            <div class="card-body p-2 mt-4" data-aos="fade-down" data-aos-duration="1200">
                 <ul class="space-y-5 ">
                     @foreach ($tour->costs_include as $cost_include)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse  ">
@@ -36,12 +36,12 @@
             <div class="h-8">
 
             </div>
-            <div class="card-header p-2">
+            <div class="card-header p-2" data-aos="fade-down" data-aos-duration="2000">
                 <h5 class="card-title text-primary uppercase font-semibold text-xl">Cost
                     Excludes
                 </h5>
             </div>
-            <div class="card-body p-2 mt-4">
+            <div class="card-body p-2 mt-4" data-aos="fade-down" data-aos-duration="2000">
                 <ul class="space-y-5">
                     @foreach ($tour->costs_exclude as $cost_exclude)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -49,8 +49,7 @@
                                 <span class="icon-[tabler--exclamation-circle] size-5"></span>
                             </span>
                             <p class="text-slate-900 md:text-justify text-preety text-base">
-                                {{ $cost_exclude[app()->currentLocale()] }}
-                             </p>
+                                {{ $cost_exclude[app()->currentLocale()] }} </p>
                         </li>
                     @endforeach
                 </ul>

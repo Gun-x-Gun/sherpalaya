@@ -51,7 +51,7 @@
         <div class="carousel-body h-full opacity-0">
             <!-- Slide 1 -->
             @foreach ($medias as $media)
-                <div class="carousel-slide">
+                <div class="carousel-slide" >
                     <div class="flex h-full justify-center ">
                         <img src="{{ $media }}" class="h-[90vh] w-full object-contain  " alt="game" />
                     </div>

@@ -2,7 +2,7 @@
     @if ($expedition->itineraries->isNotEmpty())
         <div class="h-6">
         </div>
-        <div class="card-header px-2">
+        <div class="card-header px-2" data-aos="fade-down" data-aos-duration="1200">
             <h5 class="card-title text-primary uppercase font-semi-bold text-2xl">
                 Itineraries
             </h5>
@@ -10,7 +10,7 @@
         <div class="card-body mx-0 px-2">
             <div class="accordion">
                 @foreach ($expedition->itineraries as $itinerary)
-                    <div class="accordion-item " id="itinerary-{{ $itinerary->id }}">
+                    <div class="accordion-item " id="itinerary-{{ $itinerary->id }}" data-aos="fade-down" data-aos-duration="1200">
                         @if (!empty($itinerary->title))
                             <button
                                 class="accordion-toggle inline-flex items-center gap-x-4 text-start text-black font-medium  uppercase px-0"

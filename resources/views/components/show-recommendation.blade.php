@@ -1,14 +1,14 @@
 @if (!empty($recommendations) && collect($recommendations)->flatten()->isNotEmpty())
 <div class="bg-transparent">
     <div class="h-8"></div>
-    <h5 class="card-title text-left">
+    <h5 class="card-title text-left" data-aos="fade-down" data-aos-duration="1200">
         <span class=" uppercase font-semibold text-2xl text-primary rounded-full">
             REcommended
         </span>
     </h5>
     <div class="h-4"></div>
     @foreach ($recommendations as $key => $recommendationDatas)
-        <div class="bg-blue-100/20">
+        <div class="bg-blue-100/20" data-aos="fade-down" data-aos-duration="1200">
             @if ($recommendationDatas->isNotEmpty())
                 @if ($recommendationDatas->count() === 1)
                     <div>

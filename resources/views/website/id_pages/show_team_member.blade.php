@@ -6,13 +6,13 @@
                     class="h-[55vh] w-full object-cover brightness-50" />
             </figure>
             <div class="card-body absolute bottom-1/2 xl:left-32 left-4 flex flex-row items-end gap-4">
-                <div class="overflow-hidden border-none ">
+                <div class="overflow-hidden border-none " data-aos="fade-down" data-aos-duration="1200">
                     <figure class="w-full ">
                         <img class="h-32 lg:h-52 object-cover rounded-full" src="{{ $sherpa->profilePicture->url }}"
                             alt="picture" />
                     </figure>
                 </div>
-                <div class="">
+                <div class="" data-aos="fade-down" data-aos-duration="1200">
                     <h5 class=" card-title  text-warning text-xl md:text-xl uppercase font-extrabold ">
                         {{ $sherpa->title }}
                     </h5>
@@ -40,10 +40,10 @@
 
         <div class="mx-4 xl:mx-32">
             <div class="h-4"></div>
-            <p class="my-1 tracking-normal text-pretty text-blue-900 text-center">{{ $sherpa->description }}
+            <p class="my-1 tracking-normal text-pretty text-blue-900 text-center" data-aos="fade-down" data-aos-duration="1200">{{ $sherpa->description }}
             </p>
             <div class="h-8"></div>
-            <h5 class="card-title font-semibold uppercase text-2xl text-primary tracking-tighter mx-0 text-center">
+            <h5 class="card-title font-semibold uppercase text-2xl text-primary tracking-tighter mx-0 text-center" data-aos="fade-down" data-aos-duration="1200">
                 Experiience
             </h5>
             <div class="card-body w-full px-0 pt-2 flex ">
@@ -59,7 +59,7 @@
                     @foreach ($sherpaExperienceData as $category => $experiences)
                         @foreach ($experiences as $experience)
                             <span
-                                class="badge badge-info badge-outline  my-1 py-4 text-nowrap tracking-tighter text-preety text-base">{{ $experience }}
+                                class="badge badge-info badge-outline  my-1 py-4 text-nowrap tracking-tighter text-preety text-base" data-aos="fade-down" data-aos-duration="2000">{{ $experience }}
                             </span>
                         @endforeach
                     @endforeach
@@ -69,17 +69,17 @@
             <div class="w-full col-span-2">
                 @if ($sherpa->awardsAndCertificates->count() < 4)
                     <div class="h-4"></div>
-                    <h5 class="card-title font-semibold uppercase text-2xl text-primary tracking-tighter mx-0 text-center">
+                    <h5 class="card-title font-semibold uppercase text-2xl text-primary tracking-tighter mx-0 text-center" data-aos="fade-down" data-aos-duration="1200">
                         Awards & Certificates
                     </h5>
                     <div class="h-4"></div>
                     <div class="card-actions  sm:grid grid-cols-3 flex flex-col gap-2 mb-0 skeleton animate-pulse min-h-52"
-                        id="all-awards">
+                        id="all-awards" data-aos="fade-down" data-aos-duration="1200">
                         @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
                             <button type="button"
                                 class="w-full h-full uppercase single-award hidden group hover:shadow"
                                 aria-haspopup="dialog" aria-expanded="false" aria-controls="award-modal"
-                                data-overlay="#award-modal" onclick="changeCarouselSlide({{ $loop->index }})">
+                                data-overlay="#award-modal" onclick="changeCarouselSlide({{ $loop->index }})" >
                                 <img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-90"
                                     src="{{ $awardAndCertificate->url }}" alt="headphone" />
                             </button>

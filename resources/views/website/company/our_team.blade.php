@@ -8,7 +8,7 @@
             <div class="card-body">
                 <div
                     class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                    <div class="">
+                    <div class="" data-aos="fade-down" data-aos-duration="1200">
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Get to know
                         </h5>
@@ -33,8 +33,8 @@
         <div class="h-4"></div>
 
         <div class="mx-4 xl:mx-32">
-            <nav class="tabs tab-active	tabs-bordered tabs-sm gap-4 overflow-x-auto justify-center text-warning" aria-label="Tabs" role="tablist"
-                aria-orientation="horizontal">
+            <nav class="tabs tab-active	tabs-bordered tabs-sm gap-4 overflow-x-auto justify-center text-blue-600" aria-label="Tabs" role="tablist"
+                aria-orientation="horizontal" data-aos="fade-down" data-aos-duration="1200">
                 <button type="button" class="tab active-tab:tab-active active" id="tabs-large-item-1"
                     data-tab="#expedition" aria-controls="expedition" role="tab" aria-selected="true">
                     Team Expedition
@@ -47,7 +47,7 @@
                     aria-controls="trek" role="tab" aria-selected="false">
                     Team Trek
                 </button>
-                <button type="button" class="tab active-tab:tab-active" id="tabs-large-item-3" data-tab="#tour"
+                <button type="button" class="tab active-tab:tab-active" id="tabs-large-item-4" data-tab="#tour"
                     aria-controls="tour" role="tab" aria-selected="false">
                     Team Tour
                 </button>
@@ -58,7 +58,7 @@
                     <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                         @foreach ($expedSherpas as $expedSherpa)
                             <a href="{{ route('show_team_member', $expedSherpa->id) }}">
-                                <div class="card w-full h-full ">
+                                <div class="card w-full h-full " data-aos="fade-down" data-aos-duration="1200">
                                     <img src="{{ $expedSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
                                         alt="{{ $expedSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
                                     <div class="card-body bg-blue-100 px-2 py-2 text-center">

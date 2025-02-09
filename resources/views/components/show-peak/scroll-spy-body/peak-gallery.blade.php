@@ -3,7 +3,7 @@
         <div id="gallery" class="card-header  pb-4  px-0">
             <div class="h-6">
             </div>
-            <h5 class="card-title text-primary uppercase font-semibold text-2xl px-2">
+            <h5 class="card-title text-primary uppercase font-semibold text-2xl px-2" data-aos="fade-down" data-aos-duration="1200">
                 Gallery
             </h5>
             <div class="h-4">
@@ -13,7 +13,7 @@
                     <button
                         class="card cursor-pointer rounded-none image-full h-52 w-full relative items-end  card-side group hover:shadow border single-peak hidden"
                         aria-haspopup="dialog" aria-expanded="false" aria-controls="peak-gallery-modal"
-                        data-overlay="#peak-gallery-modal" onclick="changeCarouselSlide({{ $loop->index }})">
+                        data-overlay="#peak-gallery-modal" onclick="changeCarouselSlide({{ $loop->index }})" data-aos="fade-down" data-aos-duration="1200">
                         <figure class="h-full w-full brightness-90">
                             <img src="{{ $galleryImage->url }}" alt="overlay image"
                                 class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-95 contrast-120" />

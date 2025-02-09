@@ -5,14 +5,14 @@
 
             </div>
             <div class="card-header  pb-4  px-2">
-                <h5 class="card-title text-secondary uppercase font-semi-bold text-2xl">
+                <h5 class="card-title text-secondary uppercase font-semi-bold text-2xl" data-aos="fade-down" data-aos-duration="1200">
                     Destinations
                 </h5>
             </div>
 
             <div class="sm:grid sm:grid-cols-2 md:grid-cols-2 flex flex-col gap-2 w-full md:px-2">
                 @foreach ($tour->destinations as $destination)
-                    <div class="card w-full bg-blue-100/60 at-a-glimpse my-2 ">
+                    <div class="card w-full bg-blue-100/60 at-a-glimpse my-2 " data-aos="fade-down" data-aos-duration="1200">
                         {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}
                         <div>
                             <div id="limited-destiinations-images"

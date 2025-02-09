@@ -5,9 +5,9 @@
                 <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
             </figure>
-            <div class="card-body">
+            <div class="card-body" >
                 <div
-                    class="absolute bottom-1/2 xl:left-32   left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute bottom-1/2 xl:left-32   left-4   max-w-full  2xl:max-w-full overflow-hidden border-none " data-aos="fade-down" data-aos-duration="1200">
                     <div class=" max-w-[92%] 2xl:max-w-[100%]">
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Our
@@ -33,7 +33,7 @@
 
         <div class="h-42"></div>
 
-        <div class="xl:mx-32 mx-4 text-left">
+        <div class="xl:mx-32 mx-4 text-left" data-aos="fade-down" data-aos-duration="1500">
             {{-- <h1
                 class="text-2xl lg:text-4xl  font-bold  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
                 Our Services In Nepal
@@ -50,14 +50,14 @@
         <div class="xl:mx-32 mx-4">
             <div class="flex flex-col  md:grid md:grid-cols-2 xl:grid-cols-3  gap-4 ">
                 @foreach ($services as $serviceData)
-                    <div class="card w-full h-full">
+                    <div class="card w-full h-full" data-aos="fade-down" data-aos-duration="1200">
                         <a href="{{ route('show_service', $serviceData->service->id) }}">
                             <figure>
                                 <img src="{{ $serviceData->service->coverImage?->url ?? asset('photos/P1030127.JPG') }}"
                                     alt="{{ $serviceData->service->title }} Cover Image" class="h-60 object-cover" />
                             </figure>
                         </a>
-                        <div class="card-body px-2 py-4  bg-blue-100/80">
+                        <div class="card-body px-2 py-4  bg-blue-100/80" >
                             <a href="{{ route('show_service', $serviceData->service->id) }}">
                                 <h5
                                     class="card-title line-clamp-2 mb-1 uppercase text-lg text-primary font-bold ">

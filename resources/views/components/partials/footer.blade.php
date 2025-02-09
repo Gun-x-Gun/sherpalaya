@@ -3,7 +3,7 @@
     <div class="backdrop-blur-md">
         <div class="mx-4 xl:mx-32">
             <div class="h-10"></div>
-            <footer class="footer" data-aos="fade-up" data-aos-duration="1200">
+            <footer class="footer" data-aos="fade-down" data-aos-duration="1200">
                 <div class="gap-6">
                     <a class="link text-base-content link-neutral texl-lg font-semibold no-underline"
                         href="/home">

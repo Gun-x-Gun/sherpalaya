@@ -14,15 +14,15 @@
 
 <x-website-layout>
     <div class="bg-blue-100/40">
-        <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
-            <figure class="h-[80vh] w-full">
+        <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
+            <figure class="h-[60vh] w-full">
                 <img src="{{ $service->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
-                    class="h-[80vh] w-full object-cover brightness-50" />
+                    class="h-[60vh] w-full object-cover brightness-50" />
             </figure>
             <div class="card-body">
                 <div
-                    class="absolute bottom-1/4 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                    <div class=" max-w-[92%] 2xl:max-w-[100%]">
+                    class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    <div class=" max-w-[92%] 2xl:max-w-[100%]" data-aos="fade-down" data-aos-duration="1200">
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Explore
                         </h5>
@@ -51,14 +51,14 @@
             ],
         ]" />
 
-        <x-booking.mobile-booking-section :bookingFor="$service" />
+        <x-booking.mobile-booking-section :bookingFor="$service"  />
 
 
         <div class="mx-4 xl:mx-32 mt-4">
             {{-- description  --}}
 
-            <div class="card sm:w-full shadow-md shadow-slate-300 bg-blue-50/10">
-                <div class="card-body text-slate-800 px-2 capitalize text-lg">
+            <div class="card sm:w-full shadow-md shadow-slate-300 bg-blue-50/10" data-aos="fade-down" data-aos-duration="1200">
+                <div class="card-body text-slate-800 px-2 capitalize text-lg" >
                     <p>
                         {{ $service->description }}
                     </p>
@@ -73,16 +73,16 @@
                         @if (!empty($service->destinations))
                             <div  class="card 2xl:max-w-full rounded-none bg-transparent ">
                                 
-                                <div class="card-header  pb-4  px-2">
+                                <div class="card-header  pb-4  px-2" data-aos="fade-down" data-aos-duration="1200">
                                     <h5 class="card-title text-secondary uppercase font-semi-bold text-2xl">
                                         Service Station
                                     </h5>
                                 </div>
-                                <div class="sm:grid sm:grid-cols-2 md:grid-cols-2 flex flex-col gap-2 w-full md:px-2">
+                                <div class="sm:grid sm:grid-cols-2 md:grid-cols-2 flex flex-col gap-2 w-full md:px-2" >
                                     @foreach ($service->destinations as $destination)
-                                        <div class="card w-full bg-blue-100/60 at-a-glimpse my-2 ">
+                                        <div class="card w-full bg-blue-100/60 at-a-glimpse my-2 " data-aos="fade-down" data-aos-duration="1200">
                                             {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}
-                                            <div>
+                                            <div >
                                                 <div id="limited-destiinations-images"
                                                     data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true, "slidesQty": 1 }'
                                                     class="relative w-full">
@@ -160,8 +160,8 @@
                     <x-show-service.service-gallery :service="$service" />
                 </div>
 
-                <div class="w-full hidden xl:block">
-                    <div class="sticky top-32">
+                <div class="w-full hidden xl:block" >
+                    <div class="sticky top-32" data-aos="fade-down" data-aos-duration="1200">
 
                         <x-booking.booking-section :bookingFor="$service" />
                     </div>

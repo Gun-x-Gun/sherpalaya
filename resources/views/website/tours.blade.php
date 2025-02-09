@@ -6,7 +6,7 @@
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
-                <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden">
+                <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden" data-aos="fade-down" data-aos-duration="1200">
                     <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold">
                         Explore
                     </h5>
@@ -33,7 +33,7 @@
             <div class="h-4 "></div>
             <div class="xl:mx-32 mx-4 text-left">
                 <p
-                    class="text-base text-left  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
+                    class="text-base text-left  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light" data-aos="fade-down" data-aos-duration="1200">
                     {{ $pageSetting->tour_page_content }}
                 </p>
             </div>
@@ -52,13 +52,13 @@
                 <div >
                     <div class="h-8"></div>
                     @if ($tours->isNotEmpty())
-                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl md:text-2xl lg:text-center text-primary font-bold">
+                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl md:text-2xl lg:text-center text-primary font-bold" data-aos="fade-down" data-aos-duration="1200">
                             {{ $type }} Tours Packages
                         </h5>
                         <div class="h-2"></div>
                         <div id="type-{{$type}}" class="hidden md:grid md:grid-cols-2 lg:grid-cols-3  gap-4">
                             @foreach ($tours as $tour)
-                                <div class="card w-full ">
+                                <div class="card w-full " data-aos="fade-down" data-aos-duration="1200">
                                     <div>
                                         <div id="info"
                                             data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true, "slidesQty": 1 }'

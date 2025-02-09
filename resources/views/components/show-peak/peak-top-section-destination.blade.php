@@ -19,7 +19,7 @@
 </style>
 
 <div class="">
-    <div class="card-header  px-0">
+    <div class="card-header  px-0" data-aos="fade-down" data-aos-duration="1200">
         <h5 class="card-title text-secondary uppercase font-semibold text-2xl">
             At a glimpse
         </h5>
@@ -29,7 +29,7 @@
     {{-- At a glimpse --}}
     <div class="sm:grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 overflow-x-hidden  gap-4">
         @foreach ($peak->destinations->slice(0, 4) as $destination)
-            <div class="card w-full bg-blue-100/60 at-a-glimpse my-2 ">
+            <div class="card w-full bg-blue-100/60 at-a-glimpse my-2 " data-aos="fade-down" data-aos-duration="1200">
                 {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}
                 <div>
                     <div id="limited-destiinations-images"

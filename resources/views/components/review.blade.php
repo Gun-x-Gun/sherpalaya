@@ -1,4 +1,4 @@
-<div class="bg-blue-100/20" data-aos="fade-up" data-aos-duration="1200">
+<div class="bg-blue-100/20" >
     <div class="h-12"></div>
   
     <div class="xl:mx-32 mx-4">
@@ -12,7 +12,7 @@
 
                     <button class="accordion-toggle inline-flex items-center justify-between text-start bg-blue-100/60"
                         aria-controls="review-{{ $review->id }}-collapse"
-                        aria-expanded="{{ $loop->index == 0 ? 'true' : 'false' }}">
+                        aria-expanded="{{ $loop->index == 0 ? 'true' : 'false' }}" data-aos="fade-down" data-aos-duration="1200">
                         <div class="flex gap-4">
                             <div class="avatar">
                                 <div class="size-12 rounded-full">
@@ -29,7 +29,7 @@
                     </button>
                     <div id="review-{{ $review->id }}-collapse"
                         class="accordion-content w-full overflow-hidden transition-[height] duration-300 {{ $loop->index != 0 ? 'hidden' : '' }}"
-                        aria-labelledby="review-{{ $review->id }}" role="region">
+                        aria-labelledby="review-{{ $review->id }}" role="region" data-aos="fade-down" data-aos-duration="1200">
                         <div class="px-5 pb-4 bg-blue-100/60">
                             <p class="text-secondary font-normal ">
                             <blockquote class="relative ml-10 p-4">

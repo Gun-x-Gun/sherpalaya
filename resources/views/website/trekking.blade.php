@@ -7,7 +7,7 @@
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
-                <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden">
+                <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden" data-aos="fade-down" data-aos-duration="1200">
                     <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold">
                         Explore
                     </h5>
@@ -32,7 +32,7 @@
                 ],
             ]" />
             <div class="h-4 "></div>
-            <div class="xl:mx-32 mx-4 text-left">
+            <div class="xl:mx-32 mx-4 text-left" data-aos="fade-down" data-aos-duration="1200">
                 <p
                     class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
                     {{ $pageSetting->trek_page_content }}
@@ -50,13 +50,13 @@
                 @if ($trekRegion->treks->isNotEmpty())
                     <div id="region-{{ $trekRegion->id }}">
                         <h5
-                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl md:text-2xl text-primary  lg:text-center font-semibold">
+                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl md:text-2xl text-primary  lg:text-center font-semibold" data-aos="fade-down" data-aos-duration="1200">
                             {{ $trekRegion->name }} Region Packages
                         </h5>
                         <div class="h-2"></div>
                         <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3  flex-col gap-4">
                             @foreach ($trekRegion->treks as $trek)
-                                <div class="card w-full ">
+                                <div class="card w-full " data-aos="fade-down" data-aos-duration="1200">
                                     <div>
                                         <div id="info"
                                             data-carousel='{ "loadingClasses": "opacity-0", "isInfiniteLoop": true, "slidesQty": 1 }'
@@ -111,7 +111,7 @@
                                     </div>
 
                                     <div class="card-body px-2 pt-2 bg-blue-100 ">
-                                        <a href="{{ route('show_trek', $trek->id) }}">
+                                        <a href="{{ route('show_trek', $trek->id) }}" >
                                             <h5
                                                 class="card-title mb-1 line-clamp-2 uppercase text-lg tracking-wider text-blue-800 font-semibold">
                                                 {{ $trek->title }}</h5>

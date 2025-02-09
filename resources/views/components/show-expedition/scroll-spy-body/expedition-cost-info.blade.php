@@ -5,12 +5,12 @@
             <div class="h-8">
 
             </div>
-            <div class="card-header p-2">
+            <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
                 <h5 class="card-title text-primary uppercase font-semibold text-xl">Cost
                     Includes
                 </h5>
             </div>
-            <div class="card-body p-2 mt-4">
+            <div class="card-body p-2 mt-4" data-aos="fade-down" data-aos-duration="1200">
                 <ul class="space-y-5 ">
                     @foreach ($expedition->costs_include as $cost_include)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse  ">
@@ -36,12 +36,12 @@
             <div class="h-8">
 
             </div>
-            <div class="card-header p-2">
+            <div class="card-header p-2" data-aos="fade-down" data-aos-duration="2000">
                 <h5 class="card-title text-primary uppercase font-semibold text-xl">Cost
                     Excludes
                 </h5>
             </div>
-            <div class="card-body p-2 mt-4">
+            <div class="card-body p-2 mt-4" data-aos="fade-down" data-aos-duration="2000">
                 <ul class="space-y-5">
                     @foreach ($expedition->costs_exclude as $cost_exclude)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse">

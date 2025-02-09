@@ -1,9 +1,9 @@
-<div class=" card-body bg-blue-200 mt-4">
-    <div class="card-actions justify-center">
+<div class=" card-body bg-blue-200 mt-4" >
+    <div class="card-actions justify-center" >
         {{-- Booking --}}
 
         <button type="button" class="btn btn-primary btn-wide uppercase" aria-haspopup="dialog" aria-expanded="false"
-            aria-controls="booking-section-booking-modal" data-overlay="#booking-section-booking-modal"> Book this trip
+            aria-controls="booking-section-booking-modal" data-overlay="#booking-section-booking-modal" > Book this trip
         </button>
 
 
