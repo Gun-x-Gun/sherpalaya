@@ -1,6 +1,6 @@
 @if ($featuredExpeditions->count() > 1)
     <div class="bg-blue-100/60">
-        <div class="xl:mx-32 mx-4 ">
+        <div class="xl:mx-32 mx-4 font-oswald">
             <div class="h-14"></div>
             <div class=" "data-aos="fade-down" data-aos-duration="1200">
                 <h5
@@ -9,7 +9,7 @@
                 {{-- <h3 class="text-3xl tracking-wider text-accent lg:text-center ">With Sherpalaya</h3> --}}
                 {{-- <p
                     class="text-md mt-2 text-preety text-slate-800 lg:text-center 
-                     first-line:uppercase first-line:font-light">
+                     first-line:uppercase ">
                     {{ $landingPageSetting->expedition_activity_content }}
                 </p> --}}
                 <div class="h-8"></div>
@@ -19,10 +19,10 @@
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
                         <div class="col-span-1 mr-2 hidden md:block " data-aos="fade-down" data-aos-duration="1200">
-                            <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-black md:text-left " >
+                            <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black md:text-left " >
                                 {{ $featuredExpedition->title }}</h5>
                             <p
-                                class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light line-clamp-[14]">
+                                class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase  line-clamp-[14]">
                                 {{ strip_tags($featuredExpedition->description) }}
                             </p>
                         </div>
@@ -36,10 +36,10 @@
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <div class="card-body absolute inset-0 justify-end">
                                     <div class="text-center">
-                                        <h2 class="font-bold text-white text-2xl uppercase">
+                                        <h2 class="font-bold text-white text-3xl uppercase">
                                             {{ $featuredExpedition->title }}
                                         </h2>
-                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-3xl">
                                             {{ $featuredExpedition->highest_altitude }} m
                                         </h2>
                                     </div>
@@ -58,10 +58,10 @@
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <div class="card-body absolute inset-0 justify-end">
                                     <div class="text-center">
-                                        <h2 class="font-bold text-white text-2xl uppercase">
+                                        <h2 class="font-bold text-white text-3xl uppercase">
                                             {{ $featuredExpedition->title }}
                                         </h2>
-                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-3xl">
                                             {{ $featuredExpedition->highest_altitude }} m
                                         </h2>
                                     </div>
@@ -69,11 +69,11 @@
                             </a>
                         </div>
                         <div class="col-span-1 ml-2 hidden md:block" data-aos="fade-down" data-aos-duration="1200">
-                            <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-black lg:text-left ">
+                            <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black lg:text-left ">
                                 {{ $featuredExpedition->title }}
                             </h5>
                             <p
-                                class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light line-clamp-[14]">
+                                class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase  line-clamp-[14]">
                                 {{ strip_tags($featuredExpedition->description) }}
                             </p>
                         </div>
@@ -92,7 +92,7 @@
                 <h3 class="text-3xl tracking-widest text-accent text-left ">With Sherpalaya</h3>
                 <p
                     class="text-md mt-2 text-preety text-slate-800 text-balance md:text-wrap
-                        md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light pr-2">
+                        md:text-justify first-line:uppercase first-line:tracking-widest  pr-2">
                     {{ $landingPageSetting->expedition_activity_content }}
                 </p>
                 <div class="h-4"></div>
@@ -117,11 +117,11 @@
                                                 <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                                     <div class="card-body absolute inset-0 justify-end">
                                                         <div class="text-center">
-                                                            <h2 class="font-bold text-white text-2xl uppercase">
+                                                            <h2 class="font-bold text-white text-3xl uppercase">
                                                                 {{ $featuredExpedition->title }}
                                                             </h2>
                                                             <h2
-                                                                class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                                                class="font-bold tracking-normal text-white line-clamp-2 text-3xl">
                                                                 {{ $featuredExpedition->highest_altitude }} m
                                                             </h2>
                                                         </div>
