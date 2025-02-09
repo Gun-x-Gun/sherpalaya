@@ -1,5 +1,5 @@
 <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');"
-    class="bg-cover bg-center w-full  object-top" >
+    class="bg-cover bg-center w-full  object-top font-oswald" >
     <div class="backdrop-blur-md">
         <div class="mx-4 xl:mx-32">
             <div class="h-10"></div>
