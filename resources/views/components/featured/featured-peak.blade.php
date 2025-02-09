@@ -8,7 +8,7 @@
                 <div class="h-10"></div>
                 <h3 class="text-4xl  tracking-widest text-center ">Peaks</h3>
                 <p
-                    class="text-md mt-2 text-slate-600 text-preety text-balance md:text-wrap md:text-center first-line:uppercase first-line:tracking-widest first-line:font-light ">
+                    class="text-md mt-2 text-slate-600 text-preety text-balance md:text-wrap md:text-center first-line:uppercase first-line:tracking-widest tracking-wide ">
                     {{ $landingPageSetting->peak_activity_content }}
                 </p>
             </div>
@@ -116,7 +116,7 @@
 
 
 <div class="bg-blue-100/10">
-    <div class="xl:mx-32 mx-4 ">
+    <div class="xl:mx-32 mx-4 font-oswald">
         <div class="h-14"></div>
         <div class=" " data-aos="fade-down" data-aos-duration="1200">
             <h5 class="text-3xl md:text-4xl font-light uppercase line-clamp-2 tracking-wider text-black text-center ">
@@ -125,7 +125,7 @@
             {{-- <h3 class="text-3xl tracking-wider text-accent lg:text-center ">With Sherpalaya</h3> --}}
             {{-- <p
                 class="text-md mt-2 text-preety text-slate-800 lg:text-center 
-                 first-line:uppercase first-line:font-light">
+                 first-line:uppercase tracking-wide">
                 {{ $landingPageSetting->peak_activity_content }}
             </p> --}}
             <div class="h-8"></div>
@@ -160,7 +160,7 @@
                                 <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-primary md:text-left  ">
                                     {{ $featuredPeak->title }}</h5>
                                 <p
-                                    class="text-md mt-2 text-preety text-blue-800 break-all first-line:uppercase first-line:font-light line-clamp-[14]">
+                                    class="text-md mt-2 text-preety text-blue-800 break-all first-line:uppercase tracking-wide line-clamp-[14]">
                                     {{ strip_tags($featuredPeak->description) }}
 
                                 </p>
@@ -175,7 +175,7 @@
                                 <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-black md:text-left ">
                                     {{ $featuredPeak->title }}</h5>
                                 <p
-                                    class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light line-clamp-[14]">
+                                    class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase tracking-wide line-clamp-[14]">
                                     {{ strip_tags($featuredPeak->description) }}
 
                                 </p>

@@ -1,5 +1,5 @@
 <header id="navbar"
-    class="fixed top-0 z-50  w-full flex  flex-wrap py-2 text-lg xl:flex-nowrap xl:justify-start xl:py-0 bg-transparent ">
+    class="fixed top-0 z-50  w-full flex  flex-wrap py-2 text-lg xl:flex-nowrap xl:justify-start xl:py-0 bg-transparent font-oswald">
     <nav class="w-full  xl:mx-32 mx-4 " aria-label="Global">
         <div class=" relative xl:flex xl:items-center ">
             <div class="flex items-center justify-between">
@@ -89,7 +89,7 @@
                                                         <div class="flex flex-col gap-3">
                                                             <div class="flex flex-col gap-0 items-start">
                                                                 <div
-                                                                    class="text-primary hover:underline tracking-tighter">
+                                                                    class="text-primary hover:underline ">
                                                                     <a
                                                                         href="{{ route('show_expedition', $expedition->id) }}">
                                                                         {{ $expedition->title }}

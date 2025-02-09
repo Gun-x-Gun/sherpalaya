@@ -22,7 +22,7 @@
                             <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black md:text-left " >
                                 {{ $featuredExpedition->title }}</h5>
                             <p
-                                class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase  line-clamp-[14]">
+                                class="text-md mt-2 text-preety text-slate-800 break-all tracking-wide font-light text-lg first-line:uppercase  line-clamp-[14]">
                                 {{ strip_tags($featuredExpedition->description) }}
                             </p>
                         </div>
@@ -73,7 +73,7 @@
                                 {{ $featuredExpedition->title }}
                             </h5>
                             <p
-                                class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase  line-clamp-[14]">
+                                class="text-md mt-2 text-preety text-slate-800 break-all tracking-wide font-light text-lg first-line:uppercase  line-clamp-[14]">
                                 {{ strip_tags($featuredExpedition->description) }}
                             </p>
                         </div>
