@@ -5,6 +5,7 @@ namespace App\Traits;
 use App\Filament\Pages\Settings\ManageCompany;
 use App\Filament\Pages\Settings\ManageContactUs;
 use App\Filament\Pages\Settings\ManageLangingPage;
+use App\Filament\Pages\Settings\ManageLegal;
 use App\Filament\Pages\Settings\ManagePage;
 use AymanAlhattami\FilamentPageWithSidebar\FilamentPageSidebar;
 use AymanAlhattami\FilamentPageWithSidebar\PageNavigationItem;
@@ -45,6 +46,13 @@ trait HasSettingsSidebar
                     ->icon('heroicon-o-cog-6-tooth')
                     ->isActiveWhen(function () {
                         return request()->routeIs(ManageCompany::getRouteName());
+                    })
+                    ->visible(true),
+                PageNavigationItem::make('Legal')
+                    ->url(ManageLegal::getUrl())
+                    ->icon('heroicon-o-cog-6-tooth')
+                    ->isActiveWhen(function () {
+                        return request()->routeIs(ManageLegal::getRouteName());
                     })
                     ->visible(true),
             ]);

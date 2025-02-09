@@ -3,6 +3,7 @@
 use App\Settings\CompanySetting;
 use App\Settings\ContactUsSetting;
 use App\Settings\LandingPageSetting;
+use App\Settings\LegalSetting;
 use App\Settings\PageSetting;
 
 return [
@@ -16,6 +17,7 @@ return [
         ContactUsSetting::class,
         PageSetting::class,
         CompanySetting::class,
+        LegalSetting::class,
     ],
 
     /*

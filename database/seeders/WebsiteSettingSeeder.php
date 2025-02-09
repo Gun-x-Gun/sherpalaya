@@ -8,6 +8,7 @@ use App\Models\WebsiteSetting;
 use App\Settings\CompanySetting;
 use App\Settings\ContactUsSetting;
 use App\Settings\LandingPageSetting;
+use App\Settings\LegalSetting;
 use App\Settings\PageSetting;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Arr;
@@ -27,6 +28,7 @@ class WebsiteSettingSeeder extends Seeder
         $this->seedPageSettings();
         $this->seedContactUsSettings();
         $this->seedCompanySettings();
+        $this->seedLegalSettings();
     }
 
     public function seedLandingPageSettings()
@@ -93,7 +95,8 @@ class WebsiteSettingSeeder extends Seeder
         $contactUsSetting->save();
     }
 
-    public function seedCompanySettings() {
+    public function seedCompanySettings()
+    {
         $companySetting = app(CompanySetting::class);
 
         $companySetting->company_logo_id = CuratorSeederHelper::resolveFileData(public_path('/photos/logo.png'))->id;
@@ -108,6 +111,16 @@ class WebsiteSettingSeeder extends Seeder
         $companySetting->tiktok_url = "https://www.tiktok.com/@sherpalaya";
 
         $companySetting->save();
+    }
 
+    public function seedLegalSettings()
+    {
+        $legalSetting = app(LegalSetting::class);
+
+        $legalSetting->privacy_policy = "<p>&nbsp;This Privacy Policy explains how Sherpalaya collects, uses, and protects your personal information when you use our website and services. By using our website, you consent to the practices described herein.&nbsp;</p><p><strong>Information We Collect</strong></p><ol><li>Personal information such as name, email, phone number, and payment details when you book a service.</li><li>Usage data, including IP address, browser type, and website activity.</li><li>Cookies and tracking technologies to improve user experience.</li></ol><p><strong>How We Use Your Information</strong></p><ol><li>To process bookings and payments.</li><li>To improve our services and website functionality.</li><li>To communicate with users regarding bookings, promotions, and updates.</li><li>To comply with legal obligations.</li></ol><p><strong>Data Protection and Security</strong></p><ol><li>We implement security measures to protect user data.</li><li>We do not sell or share your personal information with third parties without your consent.</li><li>Your data is stored securely and accessed only by authorized personnel.</li></ol><p><strong>Cookies and Tracking Technologies</strong></p><ol><li>We use cookies to enhance user experience and analyze website traffic.</li><li>You can manage cookie preferences through your browser settings.</li></ol><p><strong>Third-Party Services</strong></p><ol><li>We may use third-party services for payment processing and analytics.</li><li>These providers have their own privacy policies governing data use.</li></ol><p><strong>User Rights</strong></p><ol><li>Users can request access, modification, or deletion of their personal data.</li><li>Users can opt-out of marketing communications at any time.</li></ol><p><strong>Policy Updates</strong></p><ol><li>We reserve the right to update this Privacy Policy as needed.</li><li>Users will be notified of any significant changes.</li></ol><p><strong>Contact Information</strong></p><ol><li>For any privacy-related concerns, contact us at support@sherpalaya.com.</li></ol>";
+        $legalSetting->terms_and_condition = "<p>&nbsp;Welcome to Sherpalaya .Our Terms and Conditions govern your use of our website and services. By using our website, you agree to comply with these terms. If you do not agree, please refrain from using our services.&nbsp;</p><p><strong>General Terms</strong></p><ol><li>These Terms apply to all users of our website and services.&nbsp;</li><li>We reserve the right to modify these Terms at any time. Changes will be effective upon posting on our website.</li><li>Your continued use of our services constitutes acceptance of any modifications.</li></ol><p><strong>Booking and Payment</strong></p><ol><li>All bookings are subject to availability and confirmation.</li><li>Payment must be made as per the instructions provided during the booking process.</li><li>We accept payments through various methods, including credit cards, bank transfers, and digital wallets.</li><li>Any additional fees, such as transaction or service charges, may be applied.&nbsp;</li></ol><p><strong>Cancellation and Refund Policy</strong></p><ol><li>Cancellations must be requested in writing via email.</li><li>Refunds will be processed based on the cancellation policy of the specific service booked.</li><li>We are not responsible for refunds from third-party service providers.</li><li>No refunds will be issued for no-shows or last-minute cancellations.</li></ol><p><strong>Travel Documents and Requirements</strong></p><ol><li>Travelers are responsible for obtaining valid passports, visas, and other necessary travel documents.</li><li>We are not liable for any issues arising due to incorrect or missing documents.</li><li>Some destinations may require specific vaccinations or health certificates.&nbsp;</li></ol><p><strong>Liability and Responsibility</strong></p><ol><li>We act only as an intermediary between travelers and service providers (hotels, airlines, tour operators, etc.).</li><li>We are not responsible for delays, cancellations, or other issues caused by third parties.</li><li>Travelers assume all risks associated with travel, including but not limited to accidents, injuries, or loss of personal belongings.</li><li>We recommend purchasing travel insurance for protection against unforeseen circumstances.</li></ol><p><strong>User Conduct</strong></p><ol><li>Users must not use our website for unlawful activities.</li><li>Any fraudulent, abusive, or disruptive behavior will result in the termination of services.</li><li>We reserve the right to deny service to anyone at our discretion.</li></ol><p><strong>Privacy Policy</strong></p><ol><li>We respect your privacy and protect your personal information as outlined in our Privacy Policy.</li><li>By using our services, you consent to the collection and use of your data as described.</li></ol><p><strong>Force Majeure</strong></p><ol><li>We are not responsible for disruptions caused by unforeseen events, including but not limited to natural disasters, political unrest, pandemics, or government restrictions.</li></ol><p><strong>Governing Law and Dispute Resolution</strong></p><ol><li>These Terms are governed by the laws of Nepal.</li><li>Any disputes will be resolved through negotiations. If unresolved, they will be referred to Nepalese courts.</li></ol>";
+        $legalSetting->cookie_policy = "<p>TBD</p>";
+
+        $legalSetting->save();
     }
 }
