@@ -26,10 +26,13 @@ class LandingPageSetting extends Settings
     public ?string $peak_activity_count;
 
     // Stat
-    public ?string $traveller_count;
-    public ?string $association_count;
-    public ?string $customer_feedback;
-    public ?string $success_rate;
+    public ?string $stat_traveller_count;
+    public ?string $stat_association_count;
+    public ?string $stat_customer_feedback;
+    public ?string $stat_success_rate;
+
+    public ?string $parallax_image_id;
+    public ?string $parallax_sound_id;
 
 
     public static function group(): string

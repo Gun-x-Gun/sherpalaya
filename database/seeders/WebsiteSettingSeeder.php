@@ -47,10 +47,14 @@ class WebsiteSettingSeeder extends Seeder
         $landingPageSetting->tour_activity_count = '1000+';
         $landingPageSetting->peak_activity_count = '100+';
 
-        $landingPageSetting->traveller_count = '500+';
-        $landingPageSetting->association_count = '100+';
-        $landingPageSetting->customer_feedback = '9.3';
-        $landingPageSetting->success_rate = '96';
+        $landingPageSetting->stat_traveller_count = '500+';
+        $landingPageSetting->stat_association_count = '100+';
+        $landingPageSetting->stat_customer_feedback = '9.3';
+        $landingPageSetting->stat_success_rate = '96';
+
+        $landingPageSetting->parallax_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/mountain8.jpg'))->id;
+        $landingPageSetting->parallax_sound_id = CuratorSeederHelper::resolveFileData(public_path('/audio/background-music.mp3'))->id;
+
 
         $landingPageSetting->save();
     }

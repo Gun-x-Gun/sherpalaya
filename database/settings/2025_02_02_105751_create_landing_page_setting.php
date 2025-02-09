@@ -22,10 +22,13 @@ return new class extends SettingsMigration
         $this->migrator->add('landing_page.peak_activity_content', null);
         $this->migrator->add('landing_page.peak_activity_count', null);
 
-        $this->migrator->add('landing_page.traveller_count', null);
-        $this->migrator->add('landing_page.association_count', null);
-        $this->migrator->add('landing_page.customer_feedback', null);
-        $this->migrator->add('landing_page.success_rate', null);
+        $this->migrator->add('landing_page.stat_traveller_count', null);
+        $this->migrator->add('landing_page.stat_association_count', null);
+        $this->migrator->add('landing_page.stat_customer_feedback', null);
+        $this->migrator->add('landing_page.stat_success_rate', null);
+
+        $this->migrator->add('landing_page.parallax_image_id', null);
+        $this->migrator->add('landing_page.parallax_sound_id', null);
 
     }
 };

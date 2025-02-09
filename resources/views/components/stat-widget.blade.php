@@ -47,7 +47,7 @@
                 </div>
                 <div class="stat-title">Travellers </div>
                 <div class="stat-value text-success">
-                    {{ $landingPageSetting->traveller_count }}
+                    {{ $landingPageSetting->stat_traveller_count }}
                 </div>
             </div>
             <div class="stat">
@@ -56,7 +56,7 @@
                 </div>
                 <div class="stat-title">Associations</div>
                 <div class="stat-value text-success">
-                    {{ $landingPageSetting->association_count }}
+                    {{ $landingPageSetting->stat_association_count }}
                 </div>
             </div>
 
@@ -66,7 +66,7 @@
                 </div>
                 <div class="stat-title">Customer Feedback </div>
                 <div class="stat-value text-success">
-                    {{ $landingPageSetting->customer_feedback }}/10
+                    {{ $landingPageSetting->stat_customer_feedback }}/10
                 </div>
             </div>
 
@@ -76,7 +76,7 @@
                 </div>
                 <div class="stat-title">Success Rate </div>
                 <div class="stat-value text-success">
-                    {{ $landingPageSetting->success_rate }} %
+                    {{ $landingPageSetting->stat_success_rate }} %
                      </div>
             </div>
 

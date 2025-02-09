@@ -25,9 +25,9 @@
             function onInViewEvent(element) {
                 let animation = window.motion.animate(
                     element, {
-                        scale: [1, 2]
+                        scale: [1, 1.5]
                     }, {
-                        duration: 25
+                        duration: 50
                     }
                 );
 
