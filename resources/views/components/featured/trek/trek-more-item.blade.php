@@ -3,18 +3,19 @@
         <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
             <div class="">
-                <h5 class="text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">Treks</h5>
-                <p
-                    class="text-md mt-4 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light">
-                        {{ $landingPageSetting->trek_activity_content }}
+                <h5
+                    class="text-4xl md:text-6xl font-normal line-clamp-2 uppercase tracking-wider text-black text-left ">
+                    Treks</h5>
+                <p class="text-lg mt-4 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light pl-2">
+                    {{ $landingPageSetting->trek_activity_content }}
                 </p>
             </div>
-            <div class="h-4"></div>
+            <div class="h-10"></div>
             <div id="multi-slide"
                 data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8, "md": 2.5, "lg": 3.1, "xl": 3.5 } }'
                 class="relative w-full">
                 <div class="carousel h-[28rem] rounded-none">
-                    <div class="carousel-body h-full opacity-0" >
+                    <div class="carousel-body h-full opacity-0">
                         <!-- Slide 1 -->
                         @foreach ($featuredTreks as $featuredTrek)
                             <div class="carousel-slide max-w-sm px-1">
@@ -57,6 +58,7 @@
                 </button>
             </div>
         </div>
-        <div class="h-14"></div>
+        <div class="h-20"></div>
+
     </div>
 @endif

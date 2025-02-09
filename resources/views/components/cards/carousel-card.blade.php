@@ -39,7 +39,7 @@
             <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-oswald  font-extrabold">
                 Explore
             </h5>
-            <h2 class="card-title mb-2.5 text-white text-3xl md:text-5xl uppercase font-oswald tracking-widest">
+            <h2 class="card-title mb-2.5 text-white text-4xl md:text-6xl uppercase font-oswald tracking-widest">
                 {{ $title }}
             </h2>
             <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl font-oswald  uppercase font-extrabold">

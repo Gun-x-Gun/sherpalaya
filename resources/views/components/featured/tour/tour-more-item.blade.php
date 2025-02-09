@@ -4,12 +4,12 @@
         <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
             <div class="">
-                <h5 class="text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">Tours</h5>
-                <p class="text-md mt-4 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light">
+                <h5 class="text-4xl md:text-6xl font-normal line-clamp-2 uppercase tracking-wider text-black text-left ">Other Activities</h5>
+                <p class="text-lg mt-4 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light md:text-left">
                     {{ $landingPageSetting->tour_activity_content }}
                 </p>
             </div>
-            <div class="h-4"></div>
+            <div class="h-10"></div>
             <div id="multi-slide"
                 data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8, "md": 2.5, "lg": 3.8 } }'
                 class="relative w-full" >
@@ -57,6 +57,6 @@
                 </button>
             </div>
         </div>
-        <div class="h-14"></div>
+        <div class="h-20"></div>
     </div>
 @endif

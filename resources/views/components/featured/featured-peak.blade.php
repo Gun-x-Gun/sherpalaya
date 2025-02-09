@@ -117,21 +117,22 @@
 
 <div class="bg-blue-100/10">
     <div class="xl:mx-32 mx-4 font-oswald">
-        <div class="h-14"></div>
+        <div class="h-10 md:h-20"></div>
         <div class=" " data-aos="fade-down" data-aos-duration="1200">
-            <h5 class="text-3xl md:text-4xl font-light uppercase line-clamp-2 tracking-wider text-black text-center ">
+            <h5 class="text-4xl md:text-6xl uppercase line-clamp-2 tracking-wider  text-center text-slate-800">
                 Peaks
             </h5>
             {{-- <h3 class="text-3xl tracking-wider text-accent lg:text-center ">With Sherpalaya</h3> --}}
-            {{-- <p
-                class="text-md mt-2 text-preety text-slate-800 lg:text-center 
-                 first-line:uppercase tracking-wide">
+            <p
+                class="text-xl md:hidden font-light mt-2 text-preety text-slate-800 lg:text-center 
+                 tracking-wide">
                 {{ $landingPageSetting->peak_activity_content }}
-            </p> --}}
-            <div class="h-8"></div>
+            </p>
+            <div class="h-12"></div>
         </div>
         @if ($featuredPeaks->count() > 0)
-            <div class="flex flex-col md:grid grid-cols-2 gap-0 bg-blue-100/10" data-aos="fade-down" data-aos-duration="1200">
+            <div class="flex flex-col md:grid grid-cols-2 gap-0 bg-blue-100/10" data-aos="fade-down"
+                data-aos-duration="1200">
                 @foreach ($featuredPeaks as $featuredPeak)
                     @if ($loop->index % 2 === 0)
                         <div
@@ -144,10 +145,10 @@
                             <a href="{{ route('show_peak', $featuredPeak->id) }}">
                                 <div class="card-body absolute inset-0 justify-end">
                                     <div class="text-center">
-                                        <h2 class="font-bold text-white text-2xl uppercase">
+                                        <h2 class="font-bold text-white text-3xl uppercase ">
                                             {{ $featuredPeak->title }}
                                         </h2>
-                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-3xl">
                                             {{ $featuredPeak->highest_altitude }} m
                                         </h2>
                                     </div>
@@ -157,10 +158,11 @@
                         <div
                             class="card rounded-none w-full relative hidden md:flex items-center card-side group hover:shadow border-none ">
                             <div class=" mx-4">
-                                <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-primary md:text-left  ">
+                                <h5
+                                    class="text-2xl  line-clamp-2 tracking-wider text-slate-800 md:text-left uppercase underline">
                                     {{ $featuredPeak->title }}</h5>
                                 <p
-                                    class="text-md mt-2 text-preety text-blue-800 break-all first-line:uppercase tracking-wide line-clamp-[14]">
+                                    class="text-xl  mt-2 font-light text-slate-800 text-preety break-all first-line:uppercase tracking-wider line-clamp-[15]">
                                     {{ strip_tags($featuredPeak->description) }}
 
                                 </p>
@@ -192,10 +194,10 @@
                             <a href="{{ route('show_peak', $featuredPeak->id) }}">
                                 <div class="card-body absolute inset-0 justify-end">
                                     <div class="text-center">
-                                        <h2 class="font-bold text-white text-2xl uppercase">
+                                        <h2 class="font-bold text-white text-3xl uppercase">
                                             {{ $featuredPeak->title }}
                                         </h2>
-                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-3xl">
                                             {{ $featuredPeak->highest_altitude }} m
                                         </h2>
                                     </div>
@@ -210,66 +212,6 @@
                 @endforeach
             </div>
         @endif
-
-        {{-- //smalldevices --}}
-        {{-- <div class="md:hidden">
-           
-            <div id="multi-slide"
-                data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.5, "md":2 } }'
-                class="relative w-full ">
-                <div class="carousel h-[28rem] rounded-none">
-                    <div class="carousel-body  h-full opacity-0">
-                        <!-- Slide 1 -->
-                        @foreach ($featuredPeaks as $featuredPeak)
-                            <div class="carousel-slide">
-                                <div class="bg-base-200/50 flex h-full justify-center p-1">
-                                    <span class="self-center text-lg">
-                                        <div
-                                            class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none">
-                                            <figure class="h-[28rem] w-full">
-                                                <img src="{{ optional($featuredPeak->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
-                                                    alt="{{ $featuredPeak->title }} Cover Image"
-                                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
-                                            </figure>
-                                            <a href="{{ route('show_peak', $featuredPeak->id) }}">
-                                                <div class="card-body absolute inset-0 justify-end">
-                                                    <div class="text-center">
-                                                        <h2 class="font-bold text-white text-2xl uppercase">
-                                                            {{ $featuredPeak->title }}
-                                                        </h2>
-                                                        <h2
-                                                            class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
-                                                            {{ $featuredPeak->highest_altitude }} m
-                                                        </h2>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </span>
-                                </div>
-                            </div>
-                        @endforeach
-
-                    </div>
-                </div>
-
-                <!-- Previous Slide -->
-                <button type="button" class="carousel-prev">
-                    <span class="size-9.5 bg-base-100 hidden items-center justify-center rounded-full shadow">
-                        <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
-                    </span>
-                    <span class="sr-only">Previous</span>
-                </button>
-                <!-- Next Slide -->
-                <button type="button" class="carousel-next">
-                    <span class="sr-only">Next</span>
-                    <span class="size-9.5 bg-base-100 hidden items-center justify-center rounded-full shadow">
-                        <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
-                    </span>
-                </button>
-            </div>
-        </div> --}}
-
     </div>
-    <div class="h-14"></div>
+    <div class="h-10 md:h-20"></div>
 </div>

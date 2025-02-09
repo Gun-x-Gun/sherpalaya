@@ -1,45 +1,45 @@
 @if ($featuredExpeditions->count() > 1)
     <div class="bg-blue-100/60">
         <div class="xl:mx-32 mx-4 font-oswald">
-            <div class="h-14"></div>
+            <div class="h-10 md:h-20"></div>
             <div class=" "data-aos="fade-down" data-aos-duration="1200">
                 <h5
-                    class="text-3xl md:text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">
+                    class="text-4xl md:text-6xl font- line-clamp-2 uppercase tracking-wider text-black text-left md:text-left  ">
                     Expeditions</h5>
-                {{-- <h3 class="text-3xl tracking-wider text-accent lg:text-center ">With Sherpalaya</h3> --}}
-                {{-- <p
-                    class="text-md mt-2 text-preety text-slate-800 lg:text-center 
-                     first-line:uppercase ">
+                <p
+                    class="text-xl mt-4 text-preety text-slate-800 lg:text-center 
+                     font-light md:hidden ">
                     {{ $landingPageSetting->expedition_activity_content }}
-                </p> --}}
-                <div class="h-8"></div>
+                </p>
+                <div class="h-6 md:h-12"></div>
             </div>
-            <div class="flex flex-col md:grid grid-cols-3 gap-1 md:gap-2 bg-blue-100/10">
+            <div class="flex flex-col md:grid grid-cols-3  md:gap-2 bg-blue-100/10">
                 @foreach ($featuredExpeditions as $featuredExpedition)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
                         <div class="col-span-1 mr-2 hidden md:block " data-aos="fade-down" data-aos-duration="1200">
-                            <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black md:text-left " >
+                            <h5
+                                class="text-2xl line-clamp-2 tracking-wider text-black md:text-left uppercase underline">
                                 {{ $featuredExpedition->title }}</h5>
                             <p
-                                class="text-md mt-2 text-preety text-slate-800 break-all tracking-wide font-light text-lg first-line:uppercase  line-clamp-[14]">
+                                class="text-md mt-2 text-preety text-slate-800 break-all tracking-wide font-light text-xl first-line:uppercase  line-clamp-[15]">
                                 {{ strip_tags($featuredExpedition->description) }}
                             </p>
                         </div>
-                        <div
-                            class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-2" data-aos="fade-down" data-aos-duration="1200">
+                        <div class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-2"
+                            data-aos="fade-down" data-aos-duration="1200">
                             <figure class="h-[28rem] w-full">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
                                     class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                             </figure>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
-                                <div class="card-body absolute inset-0 justify-end">
+                                <div class="card-body absolute inset-0 justify-center md:justify-end">
                                     <div class="text-center">
-                                        <h2 class="font-bold text-white text-3xl uppercase">
+                                        <h2 class="font-bold text-white  text-3xl md:text-4xl uppercase">
                                             {{ $featuredExpedition->title }}
                                         </h2>
-                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-3xl">
+                                        <h2 class="font-bold tracking-normal text-white line-clamp-2  text-3xl md:text-4xl">
                                             {{ $featuredExpedition->highest_altitude }} m
                                         </h2>
                                     </div>
@@ -48,20 +48,20 @@
                         </div>
                     @else
                         {{-- Second Iteration: col-span-2 on the text and col-span-1 on the image --}}
-                        <div
-                            class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-2" data-aos="fade-down" data-aos-duration="1200">
+                        <div class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border col-span-2"
+                            data-aos="fade-down" data-aos-duration="1200">
                             <figure class="h-[28rem] w-full">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
                                     class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                             </figure>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
-                                <div class="card-body absolute inset-0 justify-end">
-                                    <div class="text-center">
-                                        <h2 class="font-bold text-white text-3xl uppercase">
+                                <div class="card-body absolute inset-0 justify-center md:justify-end">
+                                    <div class="text-center ">
+                                        <h2 class="font-bold text-white text-3xl md:text-4xl uppercase">
                                             {{ $featuredExpedition->title }}
                                         </h2>
-                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-3xl">
+                                        <h2 class="font-bold tracking-normal text-white line-clamp-2 text-3xl md:text-4xl">
                                             {{ $featuredExpedition->highest_altitude }} m
                                         </h2>
                                     </div>
@@ -69,11 +69,12 @@
                             </a>
                         </div>
                         <div class="col-span-1 ml-2 hidden md:block" data-aos="fade-down" data-aos-duration="1200">
-                            <h5 class="text-3xl font-light line-clamp-2 tracking-wider text-black lg:text-left ">
+                            <h5
+                                class="text-2xl  line-clamp-2 tracking-wider text-black lg:text-left underline uppercase ">
                                 {{ $featuredExpedition->title }}
                             </h5>
                             <p
-                                class="text-md mt-2 text-preety text-slate-800 break-all tracking-wide font-light text-lg first-line:uppercase  line-clamp-[14]">
+                                class=" mt-2 text-preety text-slate-800 break-all tracking-wide font-light text-xl first-line:uppercase  line-clamp-[15]">
                                 {{ strip_tags($featuredExpedition->description) }}
                             </p>
                         </div>
@@ -154,6 +155,6 @@
             </div> --}}
 
         </div>
-        <div class="h-14"></div>
+        <div class="h-15 md:h-20"></div>
     </div>
 @endif
