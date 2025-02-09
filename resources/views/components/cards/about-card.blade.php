@@ -1,13 +1,13 @@
 <div class="bg-blue-100/10">
     <div class="mx-0 w-full overflow-hidden">
-        <div id="audio-section" style="background-image: url('{{ asset('photos/mountain8.jpg') }}');"
+        <div id="audio-section" style="background-image: url('{{ $parallaxImageUrl }}');"
             class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed scale-[.4]">
         </div>
     </div>
 
     <!-- Hidden Audio Player -->
     <audio id="background-audio" loop>
-        <source src="{{ asset('audio/background-music.mp3') }}" type="audio/mp3">
+        <source src="{{ $parallaxAudioUrl }}" type="{{ $parallaxAudioType }}">
         Your browser does not support the audio element.
     </audio>
 
