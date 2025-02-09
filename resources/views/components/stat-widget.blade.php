@@ -41,7 +41,7 @@
     </div> --}}
     <div class="xl:mx-32 mx-4">
         <div class="stats  gap-2 w-full">
-            <div class="stat">
+            <div class="stat" data-aos="zoom-in-up">
                 <div class="stat-figure text-base-content size-8">
                     <span class="icon-[mingcute--group-3-line] size-14"></span>
                 </div>
@@ -50,7 +50,7 @@
                     {{ $landingPageSetting->stat_traveller_count }}
                 </div>
             </div>
-            <div class="stat">
+            <div class="stat" data-aos="zoom-in-up">
                 <div class="stat-figure text-base-content size-8">
                     <span class="icon-[mingcute--building-6-line] size-14"></span>
                 </div>
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="stat">
+            <div class="stat" data-aos="zoom-in-up">
                 <div class="stat-figure text-base-content size-8">
                     <span class="icon-[mingcute--star-line] size-14"></span>
                 </div>
@@ -70,7 +70,7 @@
                 </div>
             </div>
 
-            <div class="stat">
+            <div class="stat" data-aos="zoom-in-up">
                 <div class="stat-figure text-base-content size-8">
                     <span class="icon-[mingcute--certificate-line] size-14"></span>
                 </div>

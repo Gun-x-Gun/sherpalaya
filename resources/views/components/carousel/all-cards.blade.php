@@ -10,7 +10,7 @@
     <div class="md:grid grid-cols-3 gap-4 xl:mx-32 mx-4 flex flex-col">
         <a href="/expeditions" class="col-span-2">
             <div
-                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border expedition-activity-card">
+                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border expedition-activity-card" data-aos="fade-right">
                 <figure class="h-full w-full">
                     {{-- expedition_activity_image_id --}}
                     <x-curator-glider
@@ -40,7 +40,7 @@
 
         <a href="/treks" class="">
             <div
-                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
+                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border" data-aos="fade-left">
 
                 <figure class="h-full w-full ">
                     <x-curator-glider
@@ -77,8 +77,8 @@
     <div class="md:grid grid-cols-3 gap-4 xl:mx-32 mx-4 flex flex-col">
         <a href="/tours" class="">
             <div
-                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
-                <figure class="h-full w-full ">
+                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border" data-aos="fade-right">
+                <figure class="h-full w-full">
                     <x-curator-glider
                         class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
                         :media="$landingPageSetting->tour_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
@@ -106,7 +106,7 @@
 
         <a href="/peaks" class=" col-span-2">
             <div
-                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border">
+                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border" data-aos="fade-left">
 
                 <figure class="h-full w-full brightness-75">
                     <x-curator-glider

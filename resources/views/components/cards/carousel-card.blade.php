@@ -29,7 +29,7 @@
 
 
 
-<div class="card--rounded-none image-full bg-blue-100/50 h-[100vh] relative">
+<div class="card--rounded-none image-full bg-blue-100/50 h-[100vh] relative" data-aos="zoom-in-left">
     <figure class="h-[100vh] w-full">
         <x-curator-glider class="h-[100vh] w-full object-cover brightness-50" :media="$image" :fallback="asset('/photos/banner.jpg')"
             loading="lazy" />
