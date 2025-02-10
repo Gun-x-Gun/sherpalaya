@@ -36,17 +36,17 @@
     </figure>
     <div class="card-body absolute inset-0 flex items-center justify-start" data-aos="fade-down" data-aos-duration="1500">
         <div class="absolute bottom-1/2 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden ">
-            <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-oswald  font-extrabold">
+            <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-oswald  font-extrabold tracking-tighter">
                 Explore
             </h5>
-            <h2 class="card-title mb-2.5 text-white text-4xl md:text-6xl uppercase font-oswald tracking-widest">
+            <h2 class="card-title mb-2.5 text-white text-4xl md:text-6xl uppercase font-oswald tracking-tighter">
                 {{ $title }}
             </h2>
-            <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl font-oswald  uppercase font-extrabold">
+            <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl font-oswald  uppercase font-extrabold tracking-tighter">
                 With Sherpalaya
             </h5>
             <a href="{{ $url }}">
-                <button class="btn btn-primary  text-white mt-2 font-oswald ">
+                <button class="btn btn-primary  text-white mt-2 font-oswald  tracking-tighter">
                     Lets Go
                     <span class="icon-[tabler--circle-arrow-right-filled] size-6"></span>
                 </button>

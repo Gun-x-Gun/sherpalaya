@@ -5,7 +5,7 @@
             <div class="h-14"></div>
 
             <div class="">
-                <h5 class="text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">Treks</h5>
+                <h5 class="text-4xl font-normal line-clamp-2 uppercase tracking-wider text-black text-center ">The Fun Corner</h5>
                 <p
                     class="text-md mt-4 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light">
                         {{ $landingPageSetting->tour_activity_content }}

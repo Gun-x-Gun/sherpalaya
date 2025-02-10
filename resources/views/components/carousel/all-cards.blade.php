@@ -1,26 +1,35 @@
 <div class="bg-blue-100/50">
-    <div class="h-20"></div>
     <div class="xl:mx-32 mx-4 ">
-        <h3 class="text-4xl md:text-6xl tracking-normal text-black uppercase text-center font-oswald"data-aos="fade-down" data-aos-duration="900" >Activities</h3>
+        <div class="h-8 md:h-15"></div>
+        <div class="md:px-8 flex flex-col justify-center items-center"data-aos="fade-down" data-aos-duration="1200">
+            <h5
+                class="text-4xl md:text-5xl font-oswald  capitalize tracking-tighter text-black text-left md:text-center  ">
+                Explore Beyond Limits</h5>
+            <p
+                class="text-xl/7 mt-6 text-preety text-slate-800 text-center 
+                 font-light font-body lg:w-[80%] tracking-wide">
+                {{ $landingPageSetting->expedition_activity_content }}
+            </p>
+            <div class="h-6 md:h-12"></div>
+        </div>
     </div>
-    <div class="h-10"></div>
-
 </div>
+
 <div class="bg-blue-100/50 max-w-full font-oswald">
 
-    <div class="md:grid grid-cols-3 gap-4 xl:mx-32 mx-4 flex flex-col ">
+    <div class="md:grid grid-cols-3 gap-2 xl:mx-32 mx-4 flex flex-col ">
         <a href="/expeditions" class="col-span-2">
-            <div
-                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border expedition-activity-card" data-aos="fade-down" data-aos-duration="900">
+            <div class="card rounded-md image-full h-[25rem] w-full relative flex items-end  card-side group hover:shadow border expedition-activity-card"
+                data-aos="fade-down" data-aos-duration="900">
                 <figure class="h-full w-full">
                     {{-- expedition_activity_image_id --}}
                     <x-curator-glider
                         class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
                         :media="$landingPageSetting->expedition_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
-                <div class="card-body absolute bottom-0 inset-0 uppercase">
+                <div class="card-body absolute bottom-0 inset-0 uppercase" data-aos="fade-down" data-aos-duration="1200">
                     <div class="text-left ">
-                        <h2 class="font-extrabold text-white text-2xl lg:text-4xl">
+                        <h2 class="font-extrabold text-blue-50 text-2xl lg:text-4xl">
                             Expeditions
                         </h2>
                     </div>
@@ -40,8 +49,8 @@
         </a>
 
         <a href="/treks" class="">
-            <div
-                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border" data-aos="fade-down" data-aos-duration="900">
+            <div class="card rounded-md image-full h-[25rem] w-full relative flex items-end  card-side group hover:shadow border"
+                data-aos="fade-down" data-aos-duration="900">
 
                 <figure class="h-full w-full ">
                     <x-curator-glider
@@ -50,8 +59,8 @@
 
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
-                    <div class="text-left ">
-                        <h2 class="font-bold text-white text-2xl lg:text-4xl ">
+                    <div class="text-left" data-aos="fade-down" data-aos-duration="1200">
+                        <h2 class="font-bold text-blue-50 text-2xl lg:text-4xl ">
                             Treks
                         </h2>
                     </div>
@@ -71,22 +80,22 @@
             </div>
         </a>
     </div>
-    <div class="h-4">
+    <div class="h-2">
 
     </div>
 
-    <div class="md:grid grid-cols-3 gap-4 xl:mx-32 mx-4 flex flex-col">
+    <div class="md:grid grid-cols-3 gap-2 xl:mx-32 mx-4 flex flex-col">
         <a href="/tours" class="">
-            <div
-                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border" data-aos="fade-down" data-aos-duration="900">
+            <div class="card rounded-md image-full h-[25rem] w-full relative flex items-end  card-side group hover:shadow border"
+                data-aos="fade-down" data-aos-duration="900">
                 <figure class="h-full w-full">
                     <x-curator-glider
                         class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
                         :media="$landingPageSetting->tour_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
-                <div class="card-body absolute inset-0 uppercase">
+                <div class="card-body absolute inset-0 uppercase" data-aos="fade-down" data-aos-duration="1200">
                     <div class="text-left ">
-                        <h2 class="font-bold text-white text-2xl lg:text-4xl ">
+                        <h2 class="font-bold text-blue-50 text-2xl lg:text-4xl ">
                             Tours
                         </h2>
                     </div>
@@ -106,17 +115,17 @@
         </a>
 
         <a href="/peaks" class=" col-span-2">
-            <div
-                class="card rounded-md image-full h-96 w-full relative flex items-end  card-side group hover:shadow border" data-aos="fade-down" data-aos-duration="900">
+            <div class="card rounded-md image-full h-[25rem] w-full relative flex items-end  card-side group hover:shadow border"
+                data-aos="fade-down" data-aos-duration="900">
 
                 <figure class="h-full w-full brightness-75">
                     <x-curator-glider
                         class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
                         :media="$landingPageSetting->peak_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
-                <div class="card-body absolute inset-0 uppercase">
+                <div class="card-body absolute inset-0 uppercase" data-aos="fade-down" data-aos-duration="1200">
                     <div class="text-left ">
-                        <h2 class="font-bold text-white  text-2xl lg:text-4xl ">
+                        <h2 class="font-bold text-blue-50  text-2xl lg:text-4xl ">
                             Peaks
                         </h2>
                     </div>

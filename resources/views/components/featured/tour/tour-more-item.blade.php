@@ -1,18 +1,22 @@
 @if ($featuredTours->count() > 4)
 
-    <div class="bg-blue-100/10" data-aos="fade-down" data-aos-duration="1200">
+    <div class="bg-blue-100/40" data-aos="fade-down" data-aos-duration="1200">
         <div class="xl:mx-32 mx-4 ">
-            <div class="h-14"></div>
-            <div class="">
-                <h5 class="text-4xl md:text-6xl font-normal line-clamp-2 uppercase tracking-wider text-black text-left ">Other Activities</h5>
-                <p class="text-lg mt-4 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light md:text-left">
-                    {{ $landingPageSetting->tour_activity_content }}
+            <div class="h-10 md:h-20"></div>
+            <div class="md:px-8"data-aos="fade-down" data-aos-duration="1200">
+                <h5
+                    class="text-4xl md:text-5xl font-normal font-oswald line-clamp-2 uppercase tracking-wider text-black text-left md:text-left  ">
+                    The Fun Corner </h5>
+                <p
+                    class="text-xl/7 mt-4 text-preety text-slate-800 lg:text-left 
+                     font-light font-body break-all">
+                    {{ $landingPageSetting->expedition_activity_content }}
                 </p>
+                <div class="h-6 md:h-12"></div>
             </div>
-            <div class="h-10"></div>
             <div id="multi-slide"
                 data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8, "md": 2.5, "lg": 3.8 } }'
-                class="relative w-full" >
+                class="relative w-full">
                 <div class="carousel h-[28rem] rounded-none">
                     <div class="carousel-body h-full opacity-0" data-aos="fade-down" data-aos-duration="1200">
                         <!-- Slide 1 -->
@@ -23,15 +27,15 @@
                                     <figure class="h-[28rem] max-w-sm">
                                         <img src="{{ optional($featuredTour->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $featuredTour->title }} Cover Image"
-                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
+                                            class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
                                     </figure>
                                     <a href="{{ route('show_tour', $featuredTour->id) }}">
-                                        <div class="card-body absolute inset-0 justify-end max-w-sm">
+                                        <div class="card-body absolute inset-0 justify-center max-w-sm">
                                             <div class="text-center">
-                                                <h2 class="font-bold text-white text-2xl uppercase">
+                                                <h2 class="font-bold text-blue-50 text-2xl uppercase">
                                                     {{ $featuredTour->title }}
                                                 </h2>
-                                                <h2 class="font-bold tracking-normal text-white line-clamp-2 text-2xl">
+                                                <h2 class="font-bold tracking-normal text-blue-50 line-clamp-2 text-2xl">
                                                     {{ $featuredTour->highest_altitude }}
                                                 </h2>
                                             </div>

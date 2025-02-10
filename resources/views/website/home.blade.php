@@ -3,7 +3,7 @@
     <x-carousel.all-cards />
     <x-stat-widget />
     <x-featured.featured-expedition />
-    <x-featured.featured-peak />
+    {{-- <x-featured.featured-peak /> --}}
     <x-featured.featured-trek />
     <x-featured.featured-tour />
     <x-cards.about-card />

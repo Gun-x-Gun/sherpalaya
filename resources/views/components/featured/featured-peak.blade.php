@@ -119,7 +119,8 @@
     <div class="xl:mx-32 mx-4 font-oswald">
         <div class="h-10 md:h-20"></div>
         <div class=" " data-aos="fade-down" data-aos-duration="1200">
-            <h5 class="text-4xl md:text-6xl uppercase line-clamp-2 tracking-wider  text-center text-slate-800">
+            <h5
+                class="text-4xl md:text-6xl uppercase line-clamp-2 tracking-wider  text-left md:text-center text-slate-800">
                 Peaks
             </h5>
             {{-- <h3 class="text-3xl tracking-wider text-accent lg:text-center ">With Sherpalaya</h3> --}}
@@ -174,8 +175,11 @@
                         <div
                             class="card rounded-none  w-full relative  items-center card-side group hover:shadow border-none hidden md:flex">
                             <div class=" mx-4">
-                                <h5 class="text-2xl font-light line-clamp-2 tracking-wider text-black md:text-left ">
-                                    {{ $featuredPeak->title }}</h5>
+                                <h5
+                                    class="relative text-2xl font-light line-clamp-2 tracking-wider text-black md:text-left ">
+                                    {{ $featuredPeak->title }}
+                                    
+                                </h5>
                                 <p
                                     class="text-md mt-2 text-preety text-slate-800 break-all first-line:uppercase tracking-wide line-clamp-[14]">
                                     {{ strip_tags($featuredPeak->description) }}

@@ -1,4 +1,7 @@
-<div class="bg-blue-100/10">
+<div  style="background-image: url('{{ $parallaxImageUrl }}');"
+    class="bg-cover object-center bg-center h-[80vh] w-full bg-fixed ">
+</div>
+{{-- <div class="bg-blue-100/10">
     <div class="mx-0 w-full overflow-hidden">
         <div id="audio-section" style="background-image: url('{{ $parallaxImageUrl }}');"
             class="bg-cover object-center bg-center h-[150vh] w-full bg-fixed scale-[.4]">
@@ -53,4 +56,4 @@
             }
         </script>
     @endpush
-</div>
+</div> --}}

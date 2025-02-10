@@ -1,9 +1,14 @@
-<div class="bg-blue-100/20 font-oswald" >
+<div class="bg-blue-100/20 font-oswald">
+    
     <div class="h-20"></div>
-  
+
     <div class="xl:mx-32 mx-4">
-        <h2 class="text-slate-700  text-left  text-4xl md:text-6xl uppercase">Testimonials</h2>
-        <div class="h-8"></div>
+        <div class=""data-aos="fade-down" data-aos-duration="1200">
+            <h5
+                class="text-4xl md:text-5xl font-oswald  uppercase tracking-tighter text-black text-left md:text-left  ">
+                Real Stories, Real Adventures!</h5>
+            <div class="h-6 md:h-12"></div>
+        </div>
         <div class="accordion accordion-shadow max-w-full ">
             {{-- First review --}}
             @foreach ($allReviews as $review)
@@ -12,7 +17,8 @@
 
                     <button class="accordion-toggle inline-flex items-center justify-between text-start bg-blue-100/40"
                         aria-controls="review-{{ $review->id }}-collapse"
-                        aria-expanded="{{ $loop->index == 0 ? 'true' : 'false' }}" data-aos="fade-down" data-aos-duration="1200">
+                        aria-expanded="{{ $loop->index == 0 ? 'true' : 'false' }}" data-aos="fade-down"
+                        data-aos-duration="1200">
                         <div class="flex gap-4">
                             <div class="avatar">
                                 <div class="size-12 rounded-full">
@@ -20,8 +26,8 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="mb-0.5 text-slate-900 text-lg">{{ $review->name }}</p>
-                                <p class=" text-slate-600 font-normal text-lg tracking-wider">{{ $review->title }}</p>
+                                <p class="mb-0.5 text-stone-700 text-xl font-normal ">{{ $review->name }}</p>
+                                <p class=" text-stone-700 font-light text-xl tracking-tight">{{ $review->title }}</p>
                             </div>
                         </div>
                         <span
@@ -29,15 +35,16 @@
                     </button>
                     <div id="review-{{ $review->id }}-collapse"
                         class="accordion-content w-full overflow-hidden transition-[height] duration-300 {{ $loop->index != 0 ? 'hidden' : '' }}"
-                        aria-labelledby="review-{{ $review->id }}" role="region" data-aos="fade-down" data-aos-duration="1200">
+                        aria-labelledby="review-{{ $review->id }}" role="region" data-aos="fade-down"
+                        data-aos-duration="1200">
                         <div class="px-5 pb-4 bg-blue-100/40">
                             <p class="text-secondary  ">
-                            <blockquote class="relative md:ml-10 p-4 text-xl font-light tracking-wider">
+                            <blockquote class="relative md:ml-10 p-4 text-xl">
                                 <span
-                                    class="icon-[tabler--quote] text-base-300/80 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0 opacity-25"></span>
+                                    class="icon-[tabler--quote] text-base-300/80 absolute -start-3 -top-3 size-8 rotate-180 rtl:rotate-0 opacity-25"></span>
 
                                 <div class="relative z-[1]">
-                                    <p class="text-slate-700  ">
+                                    <p class="text-stone-700 font-body tracking-tight ">
                                         <em>
                                             {{ $review->description }}
                                         </em>

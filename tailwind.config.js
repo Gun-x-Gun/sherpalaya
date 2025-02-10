@@ -23,6 +23,7 @@ export default {
     extend: {
       fontFamily: {
         oswald: ["Oswald"],
+        body: ["Roboto"],
       },
     },
   },

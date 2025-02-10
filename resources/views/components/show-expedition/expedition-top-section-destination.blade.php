@@ -18,9 +18,9 @@
     }
 </style>
 
-<div class="">
+<div class="font-oswald">
     <div class="card-header  px-0" data-aos="fade-down" data-aos-duration="1200">
-        <h5 class="card-title text-secondary uppercase font-semibold text-2xl">
+        <h5 class="card-title text-secondary uppercase font-semibold tracking-tighter text-3xl">
             At a glimpse
         </h5>
     </div>
@@ -86,7 +86,7 @@
                         <p class="text-slate-700 uppercase items-center badge badge-warning  px-1 py-0 text-xs">
                             {{ $destination->region->name }} Region
                         </p>
-                        <p class="text-slate-800 tracking-tighter">
+                        <p class="text-slate-800 tracking-wide text-lg font-light">
                             {{ Str::words($destination->description, 50) }}
                         </p>
                     </div>
