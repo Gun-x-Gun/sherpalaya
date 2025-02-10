@@ -1,11 +1,11 @@
 {{-- gallery  --}}
 @if ($service->images->isNotEmpty())
-    <div class="bg-blue-100/30">
+    <div class="bg-blue-100/5">
         <div class="card-header   px-0">
-            <h5 class="card-title text-secondary uppercase font-semibold text-2xl px-2" data-aos="fade-down" data-aos-duration="1200">
+            <h5 class="card-title uppercase text-center font-semi-bold text-3xl px-2" data-aos="fade-down" data-aos-duration="1200">
                 Gallery
             </h5>
-            <div class="h-4">
+            <div class="h-8">
             </div>
             <div id="all-services" class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1 px-2 skeleton animate-pulse">
                 @foreach ($service->images->slice(0, 8) as $galleryImage)

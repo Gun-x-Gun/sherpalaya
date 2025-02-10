@@ -1,4 +1,4 @@
-<script defer>
+{{-- <script defer>
     let isReadMoreShown = false;
 
     function toggleReadMore() {
@@ -10,10 +10,10 @@
         }
         isReadMoreShown = !isReadMoreShown;
     }
-</script>
+</script> --}}
 
 <x-website-layout>
-    <div class="bg-blue-100/40">
+    <div class="bg-blue-100/10 font-oswald">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <img src="{{ $service->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
@@ -57,8 +57,8 @@
         <div class="mx-4 xl:mx-32 mt-4">
             {{-- description  --}}
 
-            <div class="card sm:w-full shadow-md shadow-slate-300 bg-blue-50/10" data-aos="fade-down" data-aos-duration="1200">
-                <div class="card-body text-slate-800 px-2 capitalize text-lg" >
+            <div class="card sm:w-full md:px-8 shadow-md shadow-slate-300 bg-blue-50/10" data-aos="fade-down" data-aos-duration="1200">
+                <div class="card-body text-center text-stone-800 px-2 tracking-wide font-light text-xl/7 font-body" >
                     <p>
                         {{ $service->description }}
                     </p>
@@ -74,13 +74,14 @@
                             <div  class="card 2xl:max-w-full rounded-none bg-transparent ">
                                 
                                 <div class="card-header  pb-4  px-2" data-aos="fade-down" data-aos-duration="1200">
-                                    <h5 class="card-title text-secondary uppercase font-semi-bold text-2xl">
+                                    <h5 class="card-title  text-center uppercase text-3xl text-stone-800 font-semibold tracking-tight">
                                         Service Station
                                     </h5>
                                 </div>
+                                <div class="h-4"></div>
                                 <div class="sm:grid sm:grid-cols-2 md:grid-cols-2 flex flex-col gap-2 w-full md:px-2" >
                                     @foreach ($service->destinations as $destination)
-                                        <div class="card w-full bg-blue-100/60 at-a-glimpse my-2 " data-aos="fade-down" data-aos-duration="1200">
+                                        <div class="card w-full bg-blue-100/30 at-a-glimpse my-2 " data-aos="fade-down" data-aos-duration="1200">
                                             {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}
                                             <div >
                                                 <div id="limited-destiinations-images"
@@ -133,16 +134,16 @@
 
                                             <div class="card-body px-2 pt-2 bg-transparent">
                                                 <h5
-                                                    class="card-title mb-1 line-clamp-2 uppercase text-lg text-blue-800 font-bold">
+                                                    class="card-title mb-1 line-clamp-2 uppercase text-lg text-stonr-800 font-normal tracking-wide">
                                                     {{ $destination->name }}
                                                 </h5>
 
                                                 <div class="justify-start flex flex-col items-start gap-2">
                                                     <p
-                                                        class="text-slate-700 uppercase items-center badge badge-warning  px-1 py-0 text-xs">
+                                                        class="text-stone-700 uppercase items-center badge tracking-wider badge-warning  px-1 py-0 text-xs">
                                                         {{ $destination->region->name }} Region
                                                     </p>
-                                                    <p class="text-slate-800 tracking-tighter">
+                                                    <p class="text-stone-600 tracking-tighter font-body text-lg/6">
                                                         {{ Str::words($destination->description, 50) }}
                                                     </p>
                                                 </div>
@@ -161,8 +162,7 @@
                 </div>
 
                 <div class="w-full hidden xl:block" >
-                    <div class="sticky top-32" data-aos="fade-down" data-aos-duration="1200">
-
+                    <div class="sticky top-32">
                         <x-booking.booking-section :bookingFor="$service" />
                     </div>
                 </div>

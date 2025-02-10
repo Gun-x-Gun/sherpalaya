@@ -1,12 +1,11 @@
 <x-website-layout>
-    <div class="bg-blue-100/10" >
+    <div class="bg-blue-100/10 ">
         <div class="card--rounded-none image-full  h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$pageSetting->about_us_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
-
             </figure>
-            <div class="card-body">
+            <div class="card-body font-oswald">
                 <div
                     class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class="" data-aos="fade-down" data-aos-duration="1200">
@@ -25,7 +24,7 @@
             </div>
         </div>
 
-        <div class="bg-blue-100/50">
+        <div class="bg-blue-100/20 font-oswald">
             <x-breadcrumb :breadcrumbs="[
                 [
                     'name' => 'Home',
@@ -36,14 +35,23 @@
                 ],
             ]" />
 
+            <div class="xl:mx-32 mx-4 " data-aos="fade-down" data-aos-duration="1500">
+                <div class="h-8"></div>
 
-            <div class="h-4"></div>
-            <div class="xl:mx-32 mx-4 text-left " data-aos="fade-down" data-aos-duration="1500">
-                <p class="text-md text-left  mt-2  text-slate-800 first-line:uppercase first-line:font-light ">
-                    {{ $pageSetting->about_us_page_content }}
-                </p>
+                <div class="md:px-8 flex flex-col justify-center items-center"data-aos="fade-down"
+                    data-aos-duration="1200">
+                    <h5
+                        class="text-4xl md:text-5xl font-oswald  capitalize tracking-tighter text-black text-left md:text-center  ">
+                        Our Passion, Your Adventure
+                    </h5>
+                    <p
+                        class="text-xl/7 mt-6 text-preety text-slate-800 text-center 
+                             font-light font-body lg:w-[80%] tracking-wide">
+                        {{ $pageSetting->about_us_page_content }}
+                    </p>
+                    <div class="h-6 md:h-12"></div>
+                </div>
             </div>
-            <div class="h-8 "></div>
         </div>
 
         <x-stat-widget />
@@ -52,27 +60,29 @@
         {{-- Showing <strong>{{ $expeditionRegion->expeditions->count() }}</strong> --}}
         <div class="xl:mx-32 mx-4">
             <div class="h-10"></div>
-            <h1 class="text-2xl  font-bold  text-center line-clamp-2 text-slate-600 uppercase wrap text-pretty">
+            <h1 class="text-4xl md:text-5xl  font-oswald  text-left line-clamp-2 text-black uppercase wrap text-pretty">
                 Frequently Asked Questions
             </h1>
-            <div class="h-4"></div>
-            <div class="accordion accordion-shadow shadow-md">
+            <div class="h-8"></div>
+            <div class="accordion accordion-shadow shadow-md font-body">
                 @foreach ($faqs as $index => $faq)
                     <div class="accordion-item {{ $index == 0 ? 'active' : '' }}" id="faq-{{ $faq->id }}">
                         <button
-                            class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start bg-blue-100/40"
-                            aria-controls="faq-{{ $faq->id }}-collapse" aria-expanded="true" data-aos="fade-down" data-aos-duration="1200">
+                            class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start bg-blue-100/40 font-oswald tracking-wide text-xl font-normal"
+                            aria-controls="faq-{{ $faq->id }}-collapse" aria-expanded="true" data-aos="fade-down"
+                            data-aos-duration="1200">
                             <span
                                 class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
                             <span
-                                class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+                                class="icon-[tabler--minus] accordion-item-active:block text-lg size-4.5 hidden shrink-0"></span>
                             {{ $faq->question }}
                         </button>
                         <div id="faq-{{ $faq->id }}-collapse"
                             class="accordion-content w-full overflow-hidden transition-[height] duration-300 bg-blue-100/40"
-                            aria-labelledby="faq-{{ $faq->id }}" role="region" data-aos="fade-down" data-aos-duration="1200">
+                            aria-labelledby="faq-{{ $faq->id }}" role="region" data-aos="fade-down"
+                            data-aos-duration="1200">
                             <div class="px-5 pb-4 ">
-                                <p class="text-base-content/80 font-normal ">
+                                <p class=" font-light text-xl/7">
                                     {{ $faq->answer }}
                                     {!! $faq->answer !!}
                                 </p>

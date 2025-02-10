@@ -1,13 +1,13 @@
 <x-website-layout>
-    <div class="bg-blue-100/50">
+    <div class="bg-blue-100/10 font-oswald">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
             </figure>
-            <div class="card-body" >
-                <div
-                    class="absolute bottom-1/2 xl:left-32   left-4   max-w-full  2xl:max-w-full overflow-hidden border-none " data-aos="fade-down" data-aos-duration="1200">
+            <div class="card-body">
+                <div class="absolute bottom-1/2 xl:left-32   left-4   max-w-full  2xl:max-w-full overflow-hidden border-none "
+                    data-aos="fade-down" data-aos-duration="1200">
                     <div class=" max-w-[92%] 2xl:max-w-[100%]">
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Our
@@ -31,18 +31,20 @@
             ],
         ]" />
 
-        <div class="h-42"></div>
-
         <div class="xl:mx-32 mx-4 text-left" data-aos="fade-down" data-aos-duration="1500">
-            {{-- <h1
-                class="text-2xl lg:text-4xl  font-bold  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
-                Our Services In Nepal
-            </h1> --}}
-            {{-- <h3 class="text-3xl tracking-widest text-primary "> With Sherpalaya</h3> --}}
-            <p
-                class="text-md text-left  mt-2  text-blue-900 first-line:uppercase  first-line:font-light ">
-                {{ $pageSetting->service_page_content }}
-            </p>
+            <div class="md:px-8 flex flex-col justify-center items-center"data-aos="fade-down" data-aos-duration="1200">
+                <div class="h-8"></div>
+                <h5
+                    class="text-4xl md:text-5xl font-oswald  capitalize tracking-tighter text-black text-left md:text-center  ">
+                    a helping hand
+                </h5>
+                <p
+                    class="text-xl/7 mt-6 text-preety text-slate-800 text-center 
+                             font-light font-body lg:w-[80%] tracking-wide">
+                    {{ $pageSetting->service_page_content }}
+                </p>
+                <div class="h-6 md:h-12"></div>
+            </div>
         </div>
         <div class="h-10 "></div>
 
@@ -57,25 +59,16 @@
                                     alt="{{ $serviceData->service->title }} Cover Image" class="h-60 object-cover" />
                             </figure>
                         </a>
-                        <div class="card-body px-2 py-4  bg-blue-100/80" >
+                        <div class="card-body group px-2 py-4  bg-blue-100/40 ">
                             <a href="{{ route('show_service', $serviceData->service->id) }}">
-                                <h5
-                                    class="card-title line-clamp-2 mb-1 uppercase text-lg text-primary font-bold ">
+                                <h5 class="card-title line-clamp-2 mb-2 uppercase text-lg text-stone-700 font-oswald tracking-tight  group-hover:underline  decoration-6 decoration-warning   ">
                                     {{ $serviceData->service->title }}</h5>
                             </a>
                             <div class="justify-start flex flex-col  gap-2 pb-0">
-                                <span class="text-blue-900 capitalize items-center font-normal line-clamp-4">
+                                <span class="items-center text-stone-700 break-all text-lg/6 font-body font-light line-clamp-4">
                                     {{ $serviceData->service->description }}
                                 </span>
                             </div>
-                            {{-- <div class="mt-2 flex flex-col ">
-                                <p class="text-blue-800 text-nowrap uppercase font-semibold">Service Station :</p>
-                                <p class="w-full text-preety">
-                                @foreach ($serviceData->destinations as $destination)
-                                    <span class="badge badge-warning my-0.5">{{ $destination }}</span>
-                                @endforeach
-                                </p>
-                            </div> --}}
                         </div>
                     </div>
                 @endforeach

@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/30">
+    <div class="bg-blue-100/10 font-oswald">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
@@ -33,21 +33,22 @@
         <div class="h-4"></div>
 
         <div class="mx-4 xl:mx-32">
-            <nav class="tabs tab-active	tabs-bordered tabs-sm gap-4 overflow-x-auto justify-center text-blue-600" aria-label="Tabs" role="tablist"
-                aria-orientation="horizontal" data-aos="fade-down" data-aos-duration="1200">
-                <button type="button" class="tab active-tab:tab-active active" id="tabs-large-item-1"
+            <nav class="tabs rounded-btn w-fit space-x-1 overflow-x-auto p-1 rtl:space-x-reverse bg-transparent"
+                aria-label="Tabs" role="tablist" aria-orientation="horizontal" data-aos="fade-down"
+                data-aos-duration="1200">
+                <button type="button" class="btn btn-text active-tab:bg-primary active-tab:text-white hover:text-warning active hover:bg-transparent font-normal  text-xl" id="tabs-large-item-1"
                     data-tab="#expedition" aria-controls="expedition" role="tab" aria-selected="true">
                     Team Expedition
                 </button>
-                <button type="button" class="tab active-tab:tab-active" id="tabs-large-item-2" data-tab="#peak"
+                <button type="button" class="btn btn-text active-tab:bg-primary active-tab:text-white hover:text-warning hover:bg-transparent font-normal text-xl" id="tabs-large-item-2" data-tab="#peak"
                     aria-controls="peak" role="tab" aria-selected="false">
                     Team Peak
                 </button>
-                <button type="button" class="tab active-tab:tab-active" id="tabs-large-item-3" data-tab="#trek"
+                <button type="button" class="btn btn-text active-tab:bg-primary active-tab:text-white hover:text-warning hover:bg-transparent font-normal text-xl" id="tabs-large-item-3" data-tab="#trek"
                     aria-controls="trek" role="tab" aria-selected="false">
                     Team Trek
                 </button>
-                <button type="button" class="tab active-tab:tab-active" id="tabs-large-item-4" data-tab="#tour"
+                <button type="button" class="btn btn-text active-tab:bg-primary active-tab:text-white hover:text-warning hover:bg-transparent font-normal text-xl" id="tabs-large-item-4" data-tab="#tour"
                     aria-controls="tour" role="tab" aria-selected="false">
                     Team Tour
                 </button>
@@ -61,13 +62,13 @@
                                 <div class="card w-full h-full " data-aos="fade-down" data-aos-duration="1200">
                                     <img src="{{ $expedSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
                                         alt="{{ $expedSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
-                                    <div class="card-body bg-blue-100 px-2 py-2 text-center">
+                                    <div class="card-body bg-blue-100/50 px-2 py-2 text-left">
                                         <h5
-                                            class="card-title line-clamp-2 capitalize text-xl text-primary font-normal tracking-tighter">
+                                            class="card-title line-clamp-2 uppercase text-xl text-stone-700 font-normal tracking-tight font-oswald hover:text-warning hover:underline ">
                                             {{ $expedSherpa->name }}
                                         </h5>
                                         <h5
-                                            class="card-title line-clamp-2 capitalize text-sm text-slate-900 font-thin tracking-tighter">
+                                            class="card-title line-clamp-2 lowercase warning text-lg text-stone-900 font-light  ">
                                             {{ $expedSherpa->title }}
                                         </h5>
 

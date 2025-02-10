@@ -3,14 +3,14 @@
     <div class="bg-blue-100/40" data-aos="fade-down" data-aos-duration="1200">
         <div class="xl:mx-32 mx-4 ">
             <div class="h-10 md:h-20"></div>
-            <div class="md:px-8"data-aos="fade-down" data-aos-duration="1200">
+            <div class=""data-aos="fade-down" data-aos-duration="1200">
                 <h5
-                    class="text-4xl md:text-5xl font-normal font-oswald line-clamp-2 uppercase tracking-wider text-black text-left md:text-left  ">
+                    class=" text-4xl md:text-5xl font-normal font-oswald line-clamp-2 uppercase tracking-wider text-black text-left md:text-left  ">
                     The Fun Corner </h5>
                 <p
                     class="text-xl/7 mt-4 text-preety text-slate-800 lg:text-left 
                      font-light font-body break-all">
-                    {{ $landingPageSetting->expedition_activity_content }}
+                    {{ $landingPageSetting->tour_activity_content }}
                 </p>
                 <div class="h-6 md:h-12"></div>
             </div>

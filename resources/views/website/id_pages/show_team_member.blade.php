@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/10">
+    <div class="bg-blue-100/10 font-oswald">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[55vh]">
             <figure class="h-[55vh] w-full">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
@@ -13,7 +13,7 @@
                     </figure>
                 </div>
                 <div class="" data-aos="fade-down" data-aos-duration="1200">
-                    <h5 class=" card-title  text-warning text-xl md:text-xl uppercase font-extrabold ">
+                    <h5 class=" card-title  text-warning text-xl md:text-xl lowercase font-extrabold ">
                         {{ $sherpa->title }}
                     </h5>
                     <h5 class=" card-title mb-8 text-white text-2xl md:text-4xl uppercase font-extrabold ">
@@ -40,13 +40,16 @@
 
         <div class="mx-4 xl:mx-32">
             <div class="h-4"></div>
-            <p class="my-1 tracking-normal text-pretty text-blue-900 text-center" data-aos="fade-down" data-aos-duration="1200">{{ $sherpa->description }}
+            <p class="my-1  text-pretty text-stone-700 text-center font-body text-xl/7" data-aos="fade-down"
+                data-aos-duration="1200">{{ $sherpa->description }}
             </p>
             <div class="h-8"></div>
-            <h5 class="card-title font-semibold uppercase text-2xl text-primary tracking-tighter mx-0 text-center" data-aos="fade-down" data-aos-duration="1200">
+            <h5 class="card-title font-normal uppercase text-4xl text-black tracking-tight mx-0 text-center"
+                data-aos="fade-down" data-aos-duration="1200">
                 Experiience
             </h5>
-            <div class="card-body w-full px-0 pt-2 flex ">
+            <div class="h-4"></div>
+            <div class="card-body w-full px-0 pt-2 flex justify-center items-center">
                 @php
                     $sherpaExperienceData = [
                         'treks' => $sherpa->treks->pluck('title'),
@@ -55,78 +58,38 @@
                         'tours' => $sherpa->tours->pluck('title'),
                     ];
                 @endphp
-                <div class="text-preety overflow-hidden text-center">
+                <div class="text-preety overflow-hidden text-center md:w-[70%] ">
                     @foreach ($sherpaExperienceData as $category => $experiences)
                         @foreach ($experiences as $experience)
                             <span
-                                class="badge badge-info badge-outline  my-1 py-4 text-nowrap tracking-tighter text-preety text-base" data-aos="fade-down" data-aos-duration="2000">{{ $experience }}
+                                class="badge badge-primary badge-outline  mx-1 my-1 py-4 text-nowrap tracking-wider text-preety text-xl font-light "
+                                data-aos="fade-down" data-aos-duration="2000">{{ $experience }}
                             </span>
                         @endforeach
                     @endforeach
                 </div>
-                <div class="h-2"></div>
+                <div class="h-8"></div>
             </div>
             <div class="w-full col-span-2">
-                @if ($sherpa->awardsAndCertificates->count() < 4)
-                    <div class="h-4"></div>
-                    <h5 class="card-title font-semibold uppercase text-2xl text-primary tracking-tighter mx-0 text-center" data-aos="fade-down" data-aos-duration="1200">
+                @if ($sherpa->awardsAndCertificates->count() > 0 )
+                    <h5 class="card-title font-normal uppercase text-4xl text-black tracking-tighter mx-0 text-center"
+                        data-aos="fade-down" data-aos-duration="1200">
                         Awards & Certificates
                     </h5>
-                    <div class="h-4"></div>
-                    <div class="card-actions  sm:grid grid-cols-3 flex flex-col gap-2 mb-0 skeleton animate-pulse min-h-52"
+                    <div class="h-8"></div>
+                    <div class="card-actions  sm:grid grid-cols-2 lg:grid-cols-3 flex flex-col gap-2 md:gap-4 mb-0 skeleton animate-pulse min-h-52"
                         id="all-awards" data-aos="fade-down" data-aos-duration="1200">
                         @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
                             <button type="button"
                                 class="w-full h-full uppercase single-award hidden group hover:shadow"
                                 aria-haspopup="dialog" aria-expanded="false" aria-controls="award-modal"
-                                data-overlay="#award-modal" onclick="changeCarouselSlide({{ $loop->index }})" >
+                                data-overlay="#award-modal" onclick="changeCarouselSlide({{ $loop->index }})">
                                 <img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-90"
                                     src="{{ $awardAndCertificate->url }}" alt="headphone" />
                             </button>
                         @endforeach
                     </div>
-                @else
-                    <div class="h-4"></div>
-                    <h5 class="card-title font-normal uppercase text-3xl text-primary tracking-tighter mx-0">
-                        Awards & Certificates
-                    </h5>
-                    <div class="h-4"></div>
-                    <div class="card-actions  mb-0 skeleton animate-pulse min-h-52" id="all-awards">
-                        <div id="multi-slide"
-                            data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8, "md": 2.5, "lg": 3.1, "xl": 3.5 } }'
-                            class="relative w-full">
-                            <div class="carousel h-full rounded-none">
-                                <div class="carousel-body h-full opacity-0">
-                                    <!-- Slide 1 -->
-                                    @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
-                                        <div class="carousel-slide max-w-sm px-1">
-                                            <button type="button"
-                                                class="w-full h-full uppercase single-award hidden group hover:shadow"
-                                                aria-haspopup="dialog" aria-expanded="false" aria-controls="award-modal"
-                                                data-overlay="#award-modal"
-                                                onclick="changeCarouselSlide({{ $loop->index }})">
-                                                <img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                                    src="{{ $awardAndCertificate->url }}" alt="headphone" />
-                                            </button>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-
-                            <!-- Previous Slide -->
-                            <button type="button" class="carousel-prev">
-                                <span
-                                    class="hidden md:flex icon-[tabler--chevron-left] size-8 text-white cursor-pointer rtl:rotate-180"></span>
-                                <span class="sr-only">Previous</span>
-                            </button>
-                            <!-- Next Slide -->
-                            <button type="button" class="carousel-next">
-                                <span class="sr-only">Next</span>
-                                <span
-                                    class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
-                            </button>
-                        </div>
-                    </div>
+                
                 @endif
             </div>
         </div>
@@ -164,8 +127,8 @@
                                         @foreach ($sherpa->awardsAndCertificates as $award)
                                             <div class="carousel-slide">
                                                 <div class="flex h-full justify-center ">
-                                                    <img src="{{ $award->url }}" class="h-[90vh] w-full object-contain  "
-                                                        alt="game" />
+                                                    <img src="{{ $award->url }}"
+                                                        class="h-[90vh] w-full object-contain  " alt="game" />
                                                 </div>
                                             </div>
                                         @endforeach

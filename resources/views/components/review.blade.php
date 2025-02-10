@@ -15,7 +15,7 @@
                 <div class="accordion-item accordion-item-active:scale-[1] transition-transform ease-in duration-300 delay-[1ms] {{ $loop->index == 0 ? 'accordion-item-active:mb-3 active' : 'accordion-item-active:my-3' }}"
                     id="review-{{ $review->id }}">
 
-                    <button class="accordion-toggle inline-flex items-center justify-between text-start bg-blue-100/40"
+                    <button class="accordion-toggle inline-flex items-center justify-between text-start bg-blue-100/50"
                         aria-controls="review-{{ $review->id }}-collapse"
                         aria-expanded="{{ $loop->index == 0 ? 'true' : 'false' }}" data-aos="fade-down"
                         data-aos-duration="1200">
@@ -26,8 +26,8 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="mb-0.5 text-stone-700 text-xl font-normal ">{{ $review->name }}</p>
-                                <p class=" text-stone-700 font-light text-xl tracking-tight">{{ $review->title }}</p>
+                                <p class="mb-0.5 text-stone-700 text-xl font-normal tracking-tight ">{{ $review->name }}</p>
+                                <p class=" text-stone-900 font-light text-xl tracking-wide">{{ $review->title }}</p>
                             </div>
                         </div>
                         <span
@@ -37,9 +37,9 @@
                         class="accordion-content w-full overflow-hidden transition-[height] duration-300 {{ $loop->index != 0 ? 'hidden' : '' }}"
                         aria-labelledby="review-{{ $review->id }}" role="region" data-aos="fade-down"
                         data-aos-duration="1200">
-                        <div class="px-5 pb-4 bg-blue-100/40">
+                        <div class="px-5 pb-4 bg-blue-100/50">
                             <p class="text-secondary  ">
-                            <blockquote class="relative md:ml-10 p-4 text-xl">
+                            <blockquote class="relative md:ml-10 p-4 text-xl/7">
                                 <span
                                     class="icon-[tabler--quote] text-base-300/80 absolute -start-3 -top-3 size-8 rotate-180 rtl:rotate-0 opacity-25"></span>
 
