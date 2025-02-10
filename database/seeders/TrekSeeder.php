@@ -749,7 +749,7 @@ class TrekSeeder extends Seeder
         );
 
 
-                //id6
+        //id6
 
         $gokyo_valley_trek_data = Trek::create([
             'title' => [
@@ -831,7 +831,7 @@ class TrekSeeder extends Seeder
         );
 
 
-                //id7
+        //id7
 
         $everest_three_passes_trek_data = Trek::create([
             'title' => [
@@ -977,7 +977,7 @@ class TrekSeeder extends Seeder
         );
 
 
-                //id8
+        //id8
 
         $renjo_la_pass_trek_data = Trek::create([
             'title' => [
@@ -1121,7 +1121,7 @@ class TrekSeeder extends Seeder
             public_path('photos/mountain4.jpg')
         );
 
-                //id9
+        //id9
 
         $annapurna_dhaulagiri_trek_data = Trek::create([
             'title' => [
@@ -1424,7 +1424,7 @@ class TrekSeeder extends Seeder
             public_path('photos/mountain4.jpg')
         );
 
-                //id11
+        //id11
 
 
         $annapurna_circuit_trek_data = Trek::create([
@@ -1433,8 +1433,8 @@ class TrekSeeder extends Seeder
                 'fr' => 'Trek du Circuit de l\'Annapurna',
             ],
             'description' => [
-                'en' => 'Is trekking in the Himalayan desert of Nepal while you get close to the mountains with views that leave your mouth open in your bucket list? If Yes, Annapurna Circuit Trek 18 Days by Adventure Treks Nepal is a perfect choice for you. With a reputation of being one of the most beautiful trekking trails in the world, our Annapurna Circuit Trek 18 days will not disappoint anyone exploring the region. Travelers have been observing the glorious views of Annapurna and Chu lu range since it was opened for trekking in 1977 A.D. The dramatically changing landscapes as we begin our trek from Chyamje (1,430m) is admired by everyone instead of driving up the valley to minimize the trekking days. Annapurna Circuit Trek by Adventure Treks Nepal is prepared by expert guides because of whom you will not miss anything that this trail has to offer. The vegetation changes drastically from dense Oak forest to Pine forests and finally onto a Himalayan desert. As we gain altitude the landscape turns drier and the mountains seem huge as we approach them. The mixture of people living throughout the trail also offers a lot of new experience and an opportunity to get in contact with their diversified culture. On the beginning part of the trail (i.e. Bahundanda, Chamje) you will see Bhramins people followed by villages inhabited by Magar community in Chame, Tal, Dharapani. The last settlements of the trail are mostly inhabited by the Sherpa community reflecting preserved Buddhist culture.',
-                'fr' => 'Le trekking dans le désert himalayen du Népal tout en vous rapprochant des montagnes avec des vues qui vous laissent la bouche ouverte sur votre liste de choses à faire ? Si oui, le trek du circuit de l\'Annapurna de 18 jours par Adventure Treks Nepal est un choix parfait pour vous. Réputé pour être l\'un des plus beaux sentiers de trekking au monde, notre trek du circuit de l\'Annapurna de 18 jours ne décevra personne explorant la région. Les voyageurs observent les vues magnifiques des chaînes de l\'Annapurna et du Chulu depuis son ouverture au trekking en 1977 après J.-C. Les paysages qui changent radicalement alors que nous commençons notre trek depuis Chyamje (1 430 m) sont admirés par tous au lieu de monter la vallée en voiture pour minimiser les jours de trekking. Le trek du circuit de l\'Annapurna par Adventure Treks Nepal est préparé par des guides experts grâce à qui vous ne manquerez rien de ce que ce sentier a à offrir. La végétation change radicalement, passant d\'une forêt de chênes dense à des forêts de pins, puis à un désert himalayen. Au fur et à mesure que nous gagnons en altitude, le paysage devient plus sec et les montagnes semblent immenses à mesure que nous nous en approchons. Le mélange de personnes vivant tout au long du sentier offre également beaucoup de nouvelles expériences et une opportunité d\'entrer en contact avec leur culture diversifiée. Au début du sentier (c\'est-à-dire Bahundanda, Chamje), vous verrez des Brahmins suivis de villages habités par la communauté Magar à Chame, Tal, Dharapani. Les derniers villages du sentier sont principalement habités par la communauté Sherpa, reflétant une culture bouddhiste préservée.',
+                'en' => 'Is trekking in the Himalayan desert of Nepal while you get close to the mountains with views that leave your mouth open in your bucket list? If Yes, Annapurna Circuit Trek 18 Days by Sherpalaya is a perfect choice for you. With a reputation of being one of the most beautiful trekking trails in the world, our Annapurna Circuit Trek 18 days will not disappoint anyone exploring the region. Travelers have been observing the glorious views of Annapurna and Chu lu range since it was opened for trekking in 1977 A.D. The dramatically changing landscapes as we begin our trek from Chyamje (1,430m) is admired by everyone instead of driving up the valley to minimize the trekking days. Annapurna Circuit Trek by Sherpalaya is prepared by expert guides because of whom you will not miss anything that this trail has to offer. The vegetation changes drastically from dense Oak forest to Pine forests and finally onto a Himalayan desert. As we gain altitude the landscape turns drier and the mountains seem huge as we approach them. The mixture of people living throughout the trail also offers a lot of new experience and an opportunity to get in contact with their diversified culture. On the beginning part of the trail (i.e. Bahundanda, Chamje) you will see Bhramins people followed by villages inhabited by Magar community in Chame, Tal, Dharapani. The last settlements of the trail are mostly inhabited by the Sherpa community reflecting preserved Buddhist culture.',
+                'fr' => 'Le trekking dans le désert himalayen du Népal tout en vous rapprochant des montagnes avec des vues qui vous laissent la bouche ouverte sur votre liste de choses à faire ? Si oui, le trek du circuit de l\'Annapurna de 18 jours par Sherpalaya est un choix parfait pour vous. Réputé pour être l\'un des plus beaux sentiers de trekking au monde, notre trek du circuit de l\'Annapurna de 18 jours ne décevra personne explorant la région. Les voyageurs observent les vues magnifiques des chaînes de l\'Annapurna et du Chulu depuis son ouverture au trekking en 1977 après J.-C. Les paysages qui changent radicalement alors que nous commençons notre trek depuis Chyamje (1 430 m) sont admirés par tous au lieu de monter la vallée en voiture pour minimiser les jours de trekking. Le trek du circuit de l\'Annapurna par Sherpalaya est préparé par des guides experts grâce à qui vous ne manquerez rien de ce que ce sentier a à offrir. La végétation change radicalement, passant d\'une forêt de chênes dense à des forêts de pins, puis à un désert himalayen. Au fur et à mesure que nous gagnons en altitude, le paysage devient plus sec et les montagnes semblent immenses à mesure que nous nous en approchons. Le mélange de personnes vivant tout au long du sentier offre également beaucoup de nouvelles expériences et une opportunité d\'entrer en contact avec leur culture diversifiée. Au début du sentier (c\'est-à-dire Bahundanda, Chamje), vous verrez des Brahmins suivis de villages habités par la communauté Magar à Chame, Tal, Dharapani. Les derniers villages du sentier sont principalement habités par la communauté Sherpa, reflétant une culture bouddhiste préservée.',
             ],
             'duration' => '18',
             'grade' => '7', // Example: Strenuous - REPLACE THIS
@@ -1576,7 +1576,7 @@ class TrekSeeder extends Seeder
             public_path('photos/mountain4.jpg')
         );
 
-                //id12
+        //id12
 
         $langtang_valley_trek_data = Trek::create([
             'title' => [
@@ -1720,7 +1720,7 @@ class TrekSeeder extends Seeder
             public_path('photos/mountain4.jpg')
         );
 
-                //id13
+        //id13
 
         $kanchenjunga_circuit_trek_data = Trek::create([
             'title' => [
@@ -2013,5 +2013,1364 @@ class TrekSeeder extends Seeder
             public_path('photos/mountain4.jpg')
         );
 
+        //id 15
+        $nar_phu_trek_data = Trek::create([
+            'title' => [
+                'en' => 'Nar Phu Valley Trek with Annapurna Circuit',
+                'fr' => 'Trek Vallée de Nar Phu avec Circuit Annapurna', // French translation
+            ],
+            'description' => [
+                'en' => 'The Nar Phu Valley trek with Annapurna Circuit is an epic adventure in the Annapurna region of Nepal. This trek combines the two greatest Himalayan trails and presents a lifetime experience amidst giant mountains and remote villages. This 21-day voyage is for those who dare to challenge themselves and discover less traveled areas. The Annapurna Circuit is a high pass trek that is famous in Nepal for its adventure, nature\'s diversity, stunning mountain landscapes, and interactions with the Nepalese communities. The Nar Phu Valley, on the other hand, is a restricted area between the Annapurna and Manaslu regions. This trek route is known for its exclusivity, offbeat terrain, empty trails, and heavenly vistas. Trekkers usually do these two treks separately. However, we have curated this particular itinerary that allows you to do both treks in one trip. You will start the journey exploring the isolation of the Nar Phu Valley and ascend to Kang La Pass. Crossing this pass, the trail drops to Ngawal and joins the Annapurna Circuit. You will then climb to Thorong La Pass.',
+                'fr' => 'Le trek de la vallée de Nar Phu avec le circuit de l\'Annapurna est une aventure épique dans la région de l\'Annapurna au Népal. Ce trek combine les deux plus grands sentiers himalayens et offre une expérience unique au milieu de montagnes géantes et de villages isolés. Ce voyage de 21 jours est pour ceux qui osent se mettre au défi et découvrir des zones moins fréquentées. Le circuit de l\'Annapurna est un trek de haut col qui est célèbre au Népal pour son aventure, la diversité de la nature, les paysages de montagne époustouflants et les interactions avec les communautés népalaises. La vallée de Nar Phu, quant à elle, est une zone restreinte entre les régions de l\'Annapurna et du Manaslu. Cet itinéraire de trek est connu pour son exclusivité, son terrain hors des sentiers battus, ses sentiers vides et ses vues paradisiaques. Les trekkeurs font généralement ces deux treks séparément. Cependant, nous avons créé cet itinéraire particulier qui vous permet de faire les deux treks en un seul voyage. Vous commencerez le voyage en explorant l\'isolement de la vallée de Nar Phu et monterez jusqu\'au col de Kang La. En traversant ce col, le sentier descend à Ngawal et rejoint le circuit de l\'Annapurna. Vous monterez ensuite jusqu\'au col de Thorong La.', // French translation
+            ],
+            'duration' => '21',
+            'grade' => '7',
+            'starting_point' => 'Kathmandu', // Or specify if different
+            'ending_point' => 'Kathmandu', // Or specify if different
+            'best_time_for_trek' => [
+                'en' => 'September to November and March to May', // Add specific best time if known
+                'fr' => 'Septembre à Novembre et Mars à Mai', // French translation
+            ],
+            'starting_altitude' => 1400, // Add if known
+            'highest_altitude' => 4000, // Add if known
+            'region_id' => Region::find(3)->id, // Annapurna Region ID - ALREADY CORRECT
+            'trek_difficulty' => TrekDifficulty::MODERATE, // Or appropriate difficulty - VERIFY THIS
+            'costs_include' => [
+                [
+                    'en' => 'Arrival and Departure Transport.',
+                    'fr' => 'Transport d\'arrivée et de départ.',
+                ],
+                [
+                    'en' => 'Accommodation in Kathmandu and Pokhara with breakfast.',
+                    'fr' => 'Hébergement à Katmandou et Pokhara avec petit-déjeuner.',
+                ],
+                [
+                    'en' => 'Sightseeing tour in Kathmandu with an entrance fee.',
+                    'fr' => 'Visite touristique à Katmandou avec frais d\'entrée.',
+                ],
+                [
+                    'en' => 'Trekking Duffle Bag using for Trekking.',
+                    'fr' => 'Sac de voyage pour le trekking.',
+                ],
+                [
+                    'en' => 'Breakfast, Lunch and Dinner during the Trekking.',
+                    'fr' => 'Petit-déjeuner, déjeuner et dîner pendant le trekking.',
+                ],
+                [
+                    'en' => 'Accommodation in Tea house (mountain lodge) while trekking.',
+                    'fr' => 'Hébergement dans une maison de thé (lodge de montagne) pendant le trekking.',
+                ],
+                [
+                    'en' => 'Kathmandu Besisahar drive.',
+                    'fr' => 'Trajet Katmandou Besisahar.',
+                ],
+                [
+                    'en' => 'Besisahar - Chamje drive.',
+                    'fr' => 'Trajet Besisahar - Chamje.',
+                ],
+                [
+                    'en' => 'Trekking Porter with Insurance. (We Provide 01 Porter for 02 Pax).',
+                    'fr' => 'Porteur de trekking avec assurance. (Nous fournissons 01 porteur pour 02 personnes).',
+                ],
+                [
+                    'en' => 'Trekking Guide with insurance.',
+                    'fr' => 'Guide de trekking avec assurance.',
+                ],
+                [
+                    'en' => 'Trekking Guide and Porters food and accommodation, wages etc.',
+                    'fr' => 'Nourriture, hébergement, salaires, etc. du guide de trekking et des porteurs.',
+                ],
+                [
+                    'en' => 'Water purification tablets.',
+                    'fr' => 'Pastilles de purification de l\'eau.',
+                ],
+                [
+                    'en' => 'Narphu Valley Trekking map.',
+                    'fr' => 'Carte de trekking de la vallée de Narphu.',
+                ],
+                [
+                    'en' => 'Trekker’s Information Management system (TIMS).',
+                    'fr' => 'Système de gestion de l\'information des trekkeurs (TIMS).',
+                ],
+                [
+                    'en' => 'Annapurna Conservation Area Project (ACAP) entry permit fee.',
+                    'fr' => 'Frais de permis d\'entrée du projet de zone de conservation d\'Annapurna (ACAP).',
+                ],
+                [
+                    'en' => 'Special Permit for Narphu Valley.',
+                    'fr' => 'Permis spécial pour la vallée de Narphu.',
+                ],
+                [
+                    'en' => 'Jomsom - Pokhara flight or drive.',
+                    'fr' => 'Vol ou trajet Jomsom - Pokhara.',
+                ],
+                [
+                    'en' => 'Pokhara - Kathmandu flights or drive.',
+                    'fr' => 'Vols ou trajet Pokhara - Katmandou.',
+                ],
+                [
+                    'en' => 'Farewell dinner with cultural program.',
+                    'fr' => 'Dîner d\'adieu avec programme culturel.',
+                ],
+                [
+                    'en' => 'Government taxes.',
+                    'fr' => 'Taxes gouvernementales.',
+                ],
+                [
+                    'en' => 'Office services charge.',
+                    'fr' => 'Frais de service de bureau.',
+                ],
+            ], // Add costs if known.  Use the same structure as the Upper Mustang example.
+            'costs_exclude' => [
+                [
+                    'en' => 'International Airfare.',
+                    'fr' => 'Billet d\'avion international.',
+                ],
+                [
+                    'en' => 'Your travel insurance of any kind',
+                    'fr' => 'Votre assurance voyage de toute nature',
+                ],
+                [
+                    'en' => 'Nepal entry Visa fee (US$ 50 for 30 days), you should get visa Upon your arrival)',
+                    'fr' => 'Frais de visa d\'entrée au Népal (50 $ US pour 30 jours), vous devriez obtenir un visa à votre arrivée).',
+                ],
+                [
+                    'en' => 'Drinks, Dessert, Juice, Mineral Water, Heater charge, Hot Shower during the Trekking and main meals in cities.',
+                    'fr' => 'Boissons, dessert, jus, eau minérale, frais de chauffage, douche chaude pendant le trekking et les principaux repas dans les villes.',
+                ],
+                [
+                    'en' => 'Tips for Guide, Porter and driver.',
+                    'fr' => 'Pourboires pour le guide, le porteur et le chauffeur.',
+                ],
+            ], // Add exclusions if known. Use the same structure as the Upper Mustang example.
+            'is_featured' => false, // Set as needed
+        ]);
+        $nar_phu_trek_data->destinations()->sync(
+            Destination::where('region_id', 3)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $nar_phu_trek_data,
+            'cover_image_id',
+            public_path('photos/mountain6.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $nar_phu_trek_data,
+            'feature_image_id',
+            public_path('photos/mountain9.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $nar_phu_trek_data,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
+
+
+        //id 16
+
+        $tsum_valley_trek_data = Trek::create([
+            'title' => [
+                'en' => 'Tsum Valley Trek',
+                'fr' => 'Trek Vallée de Tsum', // French translation
+            ],
+            'description' => [
+                'en' => 'Tsum Valley is one of the most untouched corners of the Himalayas. The trek route is located east of the famous Manaslu Circuit. Known as the hidden Shangri La, the Tsum Valley trek offers a magical journey in the Manaslu region. Dominated by Ganesh Himal, Shringi Himal, Himlachuli, and Mount Manaslu, the Tsum Valley offers magnificent vistas. Unlike famous treks such as Everest Base Camp, Annapurna Base Camp, and Langtang Valley, the Tsum Valley is much less crowded. Not even 10% of the tourists do the Tsum Valley trek, which makes it unspoiled and pristine. The trail is not commercialized at all. So, if you are searching for a raw adventure in the Himalayas, consider the Tsum Valley trek 15 days. Luckily, camping is not required on this trek. However, only a handful of tea houses are available in the villages along the way. Not many travelers know about the Tsum Valley trail, and its starting point is also not easily accessible. You have to drive 8 to 9 hours from Kathmandu and walk for two days to reach the entrance of Tsum Valley.',
+                'fr' => 'La vallée de Tsum est l\'un des coins les plus intacts de l\'Himalaya. L\'itinéraire de trek est situé à l\'est du célèbre circuit du Manaslu. Connue sous le nom de Shangri La cachée, le trek de la vallée de Tsum offre un voyage magique dans la région du Manaslu. Dominée par le Ganesh Himal, le Shringi Himal, l\'Himlachuli et le mont Manaslu, la vallée de Tsum offre de magnifiques panoramas. Contrairement aux treks célèbres tels que le camp de base de l\'Everest, le camp de base de l\'Annapurna et la vallée de Langtang, la vallée de Tsum est beaucoup moins fréquentée. Moins de 10 % des touristes font le trek de la vallée de Tsum, ce qui la rend intacte et immaculée. Le sentier n\'est pas du tout commercialisé. Donc, si vous êtes à la recherche d\'une aventure brute dans l\'Himalaya, envisagez le trek de la vallée de Tsum de 15 jours. Heureusement, le camping n\'est pas nécessaire sur ce trek. Cependant, seules quelques maisons de thé sont disponibles dans les villages le long du chemin. Peu de voyageurs connaissent le sentier de la vallée de Tsum, et son point de départ n\'est pas non plus facilement accessible. Vous devez conduire 8 à 9 heures depuis Katmandou et marcher pendant deux jours pour atteindre l\'entrée de la vallée de Tsum.', // French translation
+            ],
+            'duration' => '15',
+            'grade' => '6',
+            'starting_point' => 'Kathmandu', // Verify
+            'ending_point' => 'Kathmandu', // Verify
+            'best_time_for_trek' => [
+                'en' => 'September to November and March to May',
+                'fr' => 'Septembre à Novembre et Mars à Mai', // French translation
+            ], // Add if known
+            'starting_altitude' => 1400, // Add if known
+            'highest_altitude' => 4000, // Add if known
+            'region_id' => Region::find(4)->id, // Manaslu Region ID - ALREADY CORRECT
+            'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
+            'costs_include' => [
+                [
+                    'en' => 'Arrival and Departure Transport.',
+                    'fr' => 'Transport d\'arrivée et de départ.',
+                ],
+                [
+                    'en' => 'Accommodation in Kathmandu with breakfast.',
+                    'fr' => 'Hébergement à Katmandou avec petit-déjeuner.',
+                ],
+                [
+                    'en' => 'Trekking Duffle Bag using for Trekking.',
+                    'fr' => 'Sac de voyage pour le trekking.',
+                ],
+                [
+                    'en' => 'Sightseeing tour in Kathmandu with an entrance fee.',
+                    'fr' => 'Visite touristique à Katmandou avec frais d\'entrée.',
+                ],
+                [
+                    'en' => 'Breakfast, Lunch & Dinner during the Trekking.',
+                    'fr' => 'Petit-déjeuner, déjeuner et dîner pendant le trekking.',
+                ],
+                [
+                    'en' => 'Accommodation in Tea house (mountain lodge) while trekking.',
+                    'fr' => 'Hébergement dans une maison de thé (lodge de montagne) pendant le trekking.',
+                ],
+                [
+                    'en' => 'Kathmandu Machhakhola and Sotikhola Kathmandu by Jeep.',
+                    'fr' => 'Trajet Katmandou Machhakhola et Sotikhola Katmandou en Jeep.',
+                ],
+                [
+                    'en' => 'Trekking Porter with Insurance. (We Provide 01 Porter for 02 Pax).',
+                    'fr' => 'Porteur de trekking avec assurance. (Nous fournissons 01 porteur pour 02 personnes).',
+                ],
+                [
+                    'en' => 'Trekking Guide with insurance.',
+                    'fr' => 'Guide de trekking avec assurance.',
+                ],
+                [
+                    'en' => 'Trekking Guide and Porters food and accommodation, wages etc.',
+                    'fr' => 'Nourriture, hébergement, salaires, etc. du guide de trekking et des porteurs.',
+                ],
+                [
+                    'en' => 'Tsum Valley Trekking map.',
+                    'fr' => 'Carte de trekking de la vallée de Tsum.',
+                ],
+                [
+                    'en' => 'Trekker’s Information Management system (TIMS).',
+                    'fr' => 'Système de gestion de l\'information des trekkeurs (TIMS).',
+                ],
+                [
+                    'en' => 'Special Permit for Tsum Valley.',
+                    'fr' => 'Permis spécial pour la vallée de Tsum.',
+                ],
+                [
+                    'en' => 'Water purification tablets.',
+                    'fr' => 'Pastilles de purification de l\'eau.',
+                ],
+                [
+                    'en' => 'Farewell dinner with cultural program.',
+                    'fr' => 'Dîner d\'adieu avec programme culturel.',
+                ],
+                [
+                    'en' => 'Government taxes.',
+                    'fr' => 'Taxes gouvernementales.',
+                ],
+                [
+                    'en' => 'Office services charge.',
+                    'fr' => 'Frais de service de bureau.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'International Airfare.',
+                    'fr' => 'Billet d\'avion international.',
+                ],
+                [
+                    'en' => 'Your travel insurance.',
+                    'fr' => 'Votre assurance voyage.',
+                ],
+                [
+                    'en' => 'Nepal entry Visa fee (US$ 30 for 15 days and US$ 50 for 30 days, you should get visa open your arrival)',
+                    'fr' => 'Frais de visa d\'entrée au Népal (30 $ US pour 15 jours et 50 $ US pour 30 jours, vous devriez obtenir un visa à votre arrivée).',
+                ],
+                [
+                    'en' => 'Drinks, Dessert, Juice, Mineral Water, Heater charge, Hot Shower during the Trekking and main meals in cities.',
+                    'fr' => 'Boissons, dessert, jus, eau minérale, frais de chauffage, douche chaude pendant le trekking et les principaux repas dans les villes.',
+                ],
+                [
+                    'en' => 'Tips for Guide, Porter and driver.',
+                    'fr' => 'Pourboires pour le guide, le porteur et le chauffeur.',
+                ],
+            ],
+            'is_featured' => false, // Set as needed
+        ]);
+
+        $tsum_valley_trek_data->destinations()->sync(
+            Destination::where('region_id', 4)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $tsum_valley_trek_data,
+            'cover_image_id',
+            public_path('photos/mountain6.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $tsum_valley_trek_data,
+            'feature_image_id',
+            public_path('photos/mountain9.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $tsum_valley_trek_data,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
+
+
+        //id 17
+        $tamang_heritage_trek_data = Trek::create([
+            'title' => [
+                'en' => 'Tamang Heritage Trek',
+                'fr' => 'Trek du Patrimoine Tamang', // French translation
+            ],
+            'description' => [
+                'en' => 'With the objective of sustainable tourism in the Langtang region, Tamang Heritage trail is one of the recently opened and less travelled trekking trails in Nepal. The villagers of this region have been operating Home stays throughout the trail with the intention of offering an authentic trekking experience as you move ahead completely blending with locals. Taman Heritage region holds deep rooted belief in Buddhism and reflects ancient Buddhism through their lifestyles and monuments like Chortens. With rich cultural value this region has some of the jaw dropping sceneries of the central Himalayas. Located north of Kathmandu and close to the Tibetan border white pearls line up in front of trekkers marching in the Tamang Heritage route. With very few travelers on the trail, this itinerary is an ideal match for people wanting to connect with unspoiled nature. Moreover, the gradual change in landscape from sub-tropical forest to high altitude grassland with varieties of flora and fauna is a treat to everyone. Majority of the forest is filled with Rhododendron trees (Nepal\'s national flower) with different species of birds, butterflies, monkeys, insects.',
+                'fr' => 'Dans le but de promouvoir un tourisme durable dans la région de Langtang, le sentier du patrimoine tamang est l\'un des sentiers de trekking récemment ouverts et les moins fréquentés du Népal. Les villageois de cette région exploitent des séjours chez l\'habitant tout au long du sentier dans le but d\'offrir une expérience de trekking authentique en vous intégrant complètement aux habitants. La région du patrimoine tamang est profondément ancrée dans le bouddhisme et reflète le bouddhisme ancien à travers leurs modes de vie et leurs monuments comme les chortens. Avec une riche valeur culturelle, cette région possède des paysages époustouflants de l\'Himalaya central. Située au nord de Katmandou et proche de la frontière tibétaine, des perles blanches s\'alignent devant les trekkeurs qui empruntent la route du patrimoine tamang. Avec très peu de voyageurs sur le sentier, cet itinéraire est idéal pour les personnes souhaitant se connecter avec une nature intacte. De plus, le changement progressif du paysage, de la forêt subtropicale aux prairies de haute altitude avec une variété de flore et de faune, est un régal pour tous. La majorité de la forêt est remplie de rhododendrons (fleur nationale du Népal) avec différentes espèces d\'oiseaux, de papillons, de singes, d\'insectes.', // French translation
+            ],
+            'duration' => '11',
+            'grade' => '7',
+            'starting_point' => 'Kathmandu',
+            'ending_point' => 'Kathmandu',
+            'best_time_for_trek' => [
+                'en' => 'Sep-May',
+                'fr' => 'Septembre à Mai'
+            ],
+            'starting_altitude' => 1400, // Add if known
+            'highest_altitude' => 3165,
+            'region_id' => Region::find(4)->id, // Langtang Region ID - ALREADY CORRECT.  Region ID 4 is likely incorrect. It should be the Langtang region.
+            'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
+            'costs_include' => [
+                [
+                    'en' => 'Arrival and Departure Transport.',
+                    'fr' => 'Transport d\'arrivée et de départ.',
+                ],
+                [
+                    'en' => 'Accommodation in Kathmandu with breakfast. (Twin sharing).',
+                    'fr' => 'Hébergement à Katmandou avec petit-déjeuner. (Chambre double).',
+                ],
+                [
+                    'en' => 'Sightseeing tour in Kathmandu with an entrance fee.',
+                    'fr' => 'Visite touristique à Katmandou avec frais d\'entrée.',
+                ],
+                [
+                    'en' => 'Trekking Duffle Bag using for Trekking.',
+                    'fr' => 'Sac de voyage pour le trekking.',
+                ],
+                [
+                    'en' => 'Breakfast, Lunch and Dinner during the Trekking.',
+                    'fr' => 'Petit-déjeuner, déjeuner et dîner pendant le trekking.',
+                ],
+                [
+                    'en' => 'Accommodation in Tea house (mountain lodge) during trekking.',
+                    'fr' => 'Hébergement dans une maison de thé (lodge de montagne) pendant le trekking.',
+                ],
+                [
+                    'en' => 'Kathmandu Syabru bensi and Kathmandu transport.',
+                    'fr' => 'Transport Katmandou Syabru bensi et Katmandou.',
+                ],
+                [
+                    'en' => 'Trekking Porter with Insurance. (We Provide 01 Porter for 02 Pax).',
+                    'fr' => 'Porteur de trekking avec assurance. (Nous fournissons 01 porteur pour 02 personnes).',
+                ],
+                [
+                    'en' => 'Trekking Guide with insurance.',
+                    'fr' => 'Guide de trekking avec assurance.',
+                ],
+                [
+                    'en' => 'Trekking Guide and Porters food and accommodation, wages etc.',
+                    'fr' => 'Nourriture, hébergement, salaires, etc. du guide de trekking et des porteurs.',
+                ],
+                [
+                    'en' => 'Tamang Heritage trail Trekking map.',
+                    'fr' => 'Carte de trekking du sentier du patrimoine tamang.',
+                ],
+                [
+                    'en' => 'First Aid kit.',
+                    'fr' => 'Trousse de premiers secours.',
+                ],
+                [
+                    'en' => 'Trekker’s Information Management system (TIMS).',
+                    'fr' => 'Système de gestion de l\'information des trekkeurs (TIMS).',
+                ],
+                [
+                    'en' => 'Langtang National park entry fees.',
+                    'fr' => 'Frais d\'entrée du parc national de Langtang.',
+                ],
+                [
+                    'en' => 'Water purification tablets.',
+                    'fr' => 'Pastilles de purification de l\'eau.',
+                ],
+                [
+                    'en' => 'Farewell dinner with cultural program.',
+                    'fr' => 'Dîner d\'adieu avec programme culturel.',
+                ],
+                [
+                    'en' => 'Government taxes.',
+                    'fr' => 'Taxes gouvernementales.',
+                ],
+                [
+                    'en' => 'Office service charge.',
+                    'fr' => 'Frais de service de bureau.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'International Airfare.',
+                    'fr' => 'Billet d\'avion international.',
+                ],
+                [
+                    'en' => 'Travel insurance.',
+                    'fr' => 'Assurance voyage.',
+                ],
+                [
+                    'en' => 'Nepal entry Visa fee (US$ 50 for 30 days), you should get visa Upon your arrival)',
+                    'fr' => 'Frais de visa d\'entrée au Népal (50 $ US pour 30 jours), vous devriez obtenir un visa à votre arrivée).',
+                ],
+                [
+                    'en' => 'Drinks, Dessert, Juice, Mineral Water, Heater charge, Hot Shower during the Trekking and main meals in cities.',
+                    'fr' => 'Boissons, dessert, jus, eau minérale, frais de chauffage, douche chaude pendant le trekking et les principaux repas dans les villes.',
+                ],
+                [
+                    'en' => 'Tips for Guide, Porter and driver.',
+                    'fr' => 'Pourboires pour le guide, le porteur et le chauffeur.',
+                ],
+            ],
+            'is_featured' => false, // Set as needed
+        ]);
+        $tamang_heritage_trek_data->destinations()->sync(
+            Destination::where('region_id', 4)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $tamang_heritage_trek_data,
+            'cover_image_id',
+            public_path('photos/mountain6.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $tamang_heritage_trek_data,
+            'feature_image_id',
+            public_path('photos/mountain9.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $tamang_heritage_trek_data,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
+
+
+        //id 18
+
+        $everest_base_camp_cho_la_pass_trek_data = Trek::create([
+            'title' => [
+                'en' => 'Everest Base Camp via Cho La Pass and Gokyo Lakes',
+                'fr' => 'Trek au Camp de Base de l\'Everest via le Col de Cho La et les Lacs de Gokyo', // French translation
+            ],
+            'description' => [
+                'en' => 'The Everest Base Camp trek via Cho La Pass and Gokyo Lakes is an adventurous trekking program in the Khumbu region. On this trek, you will travel to the base of the tallest mountain on Earth and explore the stunning turquoise alpine lakes. Likewise, you will cross a challenging high pass. The journey is exhilarating and life-changing. You will trek through diverse climatic zones, enjoying varying scenery. The highest point touched during the Everest Cho La Pass trek is the Kala Patthar. It is situated at 5,545 meters. However, you will go multiple times above 5,000 meters. If you want to do something new in the Khumbu region or trek beyond the classic EBC trail, we highly recommend the Everest Base Camp Chola Pass Gokyo trek.',
+                'fr' => 'Le trek du camp de base de l\'Everest via le col de Cho La et les lacs de Gokyo est un programme de trekking aventureux dans la région du Khumbu. Lors de ce trek, vous vous rendrez au pied de la plus haute montagne du monde et explorerez les superbes lacs alpins turquoise. De même, vous traverserez un haut col difficile. Le voyage est exaltant et change la vie. Vous traverserez diverses zones climatiques, en profitant de paysages variés. Le point culminant atteint lors du trek du col de Cho La de l\'Everest est le Kala Patthar. Il est situé à 5 545 mètres. Cependant, vous passerez plusieurs fois au-dessus de 5 000 mètres. Si vous voulez faire quelque chose de nouveau dans la région du Khumbu ou faire un trek au-delà du sentier classique du CBE, nous vous recommandons vivement le trek du camp de base de l\'Everest, du col de Chola et de Gokyo.', // French translation
+            ],
+            'duration' => '21',
+            'grade' => '6',
+            'starting_point' => 'Kathmandu',
+            'ending_point' => 'Kathmandu',
+            'best_time_for_trek' => [
+                'en' => 'Sep-May',
+                'fr' => 'Septembre à Mai'
+            ], // Or be more specific if possible
+            'starting_altitude' => 1400, // Add if known
+            'highest_altitude' => 5545,
+            'region_id' => Region::find(1)->id, // Khumbu Region ID - ALREADY CORRECT
+            'trek_difficulty' => TrekDifficulty::CHALLENGING, // Verify
+            'costs_include' => [
+                [
+                    'en' => 'All Transport (Private).',
+                    'fr' => 'Tous les transports (privés).',
+                ],
+                [
+                    'en' => 'Standard Accommodation (Twin share) in Kathmandu with Breakfast.',
+                    'fr' => 'Hébergement standard (chambre double) à Katmandou avec petit-déjeuner.',
+                ],
+                [
+                    'en' => 'Sightseeing tour with entrance fees.',
+                    'fr' => 'Visite touristique avec frais d\'entrée.',
+                ],
+                [
+                    'en' => 'Duffle Bag using for Trekking.',
+                    'fr' => 'Sac de voyage pour le trekking.',
+                ],
+                [
+                    'en' => 'Breakfast, Lunch and Dinner during the Trekking.',
+                    'fr' => 'Petit-déjeuner, déjeuner et dîner pendant le trekking.',
+                ],
+                [
+                    'en' => 'Standard Accommodation (Twin share) in Tea house (mountain lodge) while trekking.',
+                    'fr' => 'Hébergement standard (chambre double) dans une maison de thé (lodge de montagne) pendant le trekking.',
+                ],
+                [
+                    'en' => 'Domestic Flight with Airport Tax.',
+                    'fr' => 'Vol intérieur avec taxes d\'aéroport.',
+                ],
+                [
+                    'en' => 'Trekking Porter with Insurance. (We Provide 01 Porter for two trekkers)',
+                    'fr' => 'Porteur de trekking avec assurance. (Nous fournissons 01 porteur pour deux trekkeurs)',
+                ],
+                [
+                    'en' => 'Trekking Guide with insurance.',
+                    'fr' => 'Guide de trekking avec assurance.',
+                ],
+                [
+                    'en' => 'Trekking Guide and Porters food and accommodation, wages etc.',
+                    'fr' => 'Nourriture, hébergement, salaires, etc. du guide de trekking et des porteurs.',
+                ],
+                [
+                    'en' => 'Everest Base Camp Trekking Region map.',
+                    'fr' => 'Carte de la région de trekking du camp de base de l\'Everest.',
+                ],
+                [
+                    'en' => 'Sagarmatha (Everest) National park permits fee.',
+                    'fr' => 'Frais de permis du parc national de Sagarmatha (Everest).',
+                ],
+                [
+                    'en' => 'Khumbu pasang lhamu rural municipality entry permit fee.',
+                    'fr' => 'Frais de permis d\'entrée de la municipalité rurale de Khumbu pasang lhamu.',
+                ],
+                [
+                    'en' => 'Trekker’s Information Management system (TIMS).',
+                    'fr' => 'Système de gestion de l\'information des trekkeurs (TIMS).',
+                ],
+                [
+                    'en' => 'All Government taxes Income tax plus VAT.',
+                    'fr' => 'Toutes les taxes gouvernementales, impôt sur le revenu plus TVA.',
+                ],
+                [
+                    'en' => 'Farewell dinner with cultural program.',
+                    'fr' => 'Dîner d\'adieu avec programme culturel.',
+                ],
+                [
+                    'en' => 'Office services charge.',
+                    'fr' => 'Frais de service de bureau.',
+                ],
+                [
+                    'en' => 'Water purification tablets.',
+                    'fr' => 'Pastilles de purification de l\'eau.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'International Airfare.',
+                    'fr' => 'Billet d\'avion international.',
+                ],
+                [
+                    'en' => 'Your travel insurance of any kind',
+                    'fr' => 'Votre assurance voyage de toute nature',
+                ],
+                [
+                    'en' => 'Nepal entry Visa fee (US$ 50 for 30 days) (US$ 30 for 15 days) you should get visa open your arrival)',
+                    'fr' => 'Frais de visa d\'entrée au Népal (50 $ US pour 30 jours) (30 $ US pour 15 jours), vous devriez obtenir un visa à votre arrivée).',
+                ],
+                [
+                    'en' => 'Drinks, Dessert, Juice, Mineral Water, Heater charge, Hot Shower, Wi-Fi etc during the Trekking and main meals in cities.',
+                    'fr' => 'Boissons, dessert, jus, eau minérale, frais de chauffage, douche chaude, Wi-Fi, etc. pendant le trekking et les principaux repas dans les villes.',
+                ],
+                [
+                    'en' => 'Tips for Guide, Porter and driver.',
+                    'fr' => 'Pourboires pour le guide, le porteur et le chauffeur.',
+                ],
+            ],
+            'is_featured' => false, // Set as needed
+        ]);
+        $everest_base_camp_cho_la_pass_trek_data->destinations()->sync(
+            Destination::where('region_id', 1)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $everest_base_camp_cho_la_pass_trek_data,
+            'cover_image_id',
+            public_path('photos/mountain6.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $everest_base_camp_cho_la_pass_trek_data,
+            'feature_image_id',
+            public_path('photos/mountain9.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $everest_base_camp_cho_la_pass_trek_data,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
+
+
+        // id 19
+        $luxury_everest_base_camp_trek_data = Trek::create([
+            'title' => [
+                'en' => 'Luxury Everest Base Camp Trek',
+                'fr' => 'Trek de Luxe au Camp de Base de l\'Everest', // French translation
+            ],
+            'description' => [
+                'en' => 'Did you know you can trek to Everest Base Camp very comfortably, at least in terms of services? Because of the massive increase in budget-friendly travelers in the last few years, the luxury side of the Khumbu region has been shadowed. However, the services along the Everest Base Camp trail are only improving, even though they are not discussed much. If you\'re an adventure enthusiast who values comfort, our exclusive luxury Everest Base Camp trek package is designed just for you. We\'ve meticulously crafted this EBC trek package to ensure our guests experience the highest level of comfort, without compromising on the thrill and adventure of hiking to the base of the world\'s tallest mountain. Imagine starting your trip in the finest five-star hotel in Kathmandu and flying to Lukla in a helicopter. Indulge in superior lodging and food services throughout the trail. You will not have to adjust to basic service or share the room/washroom with fellow trekkers.',
+                'fr' => 'Saviez-vous que vous pouvez faire un trek jusqu\'au camp de base de l\'Everest très confortablement, du moins en termes de services ? En raison de l\'augmentation massive du nombre de voyageurs soucieux de leur budget au cours des dernières années, le côté luxe de la région du Khumbu a été éclipsé. Cependant, les services le long du sentier du camp de base de l\'Everest ne font que s\'améliorer, même s\'ils ne sont pas beaucoup discutés. Si vous êtes un passionné d\'aventure qui apprécie le confort, notre forfait exclusif de trek de luxe au camp de base de l\'Everest est conçu spécialement pour vous. Nous avons méticuleusement conçu ce forfait de trek du CBE pour garantir à nos clients le plus haut niveau de confort, sans compromettre le frisson et l\'aventure de la randonnée jusqu\'à la base de la plus haute montagne du monde. Imaginez commencer votre voyage dans le plus bel hôtel cinq étoiles de Katmandou et vous envoler pour Lukla en hélicoptère. Laissez-vous tenter par des services d\'hébergement et de restauration supérieurs tout au long du sentier. Vous n\'aurez pas à vous adapter à un service de base ou à partager la chambre/les toilettes avec d\'autres trekkeurs.', // French translation
+            ],
+            'duration' => '14',
+            'grade' => 'Strenuous', // You mentioned it's a digit between 1 and 10, but "Strenuous" is a word, not a number.  Clarify if you need to map this to a numerical grade.
+            'starting_point' => 'Kathmandu',
+            'ending_point' => 'Kathmandu',
+            'best_time_for_trek' => [
+                'en' => 'Sep-May',
+                'fr' => 'Septembre à Mai'
+            ], // Correct spelling to "September"
+            'starting_altitude' => 1400, // Kathmandu's altitude
+            'highest_altitude' => 5364,
+            'region_id' => Region::find(1)->id, // Khumbu Region ID - ALREADY CORRECT
+            'trek_difficulty' => TrekDifficulty::HARD, // Verify if "Strenuous" is the correct enum value. If you want to use a numerical grade, you need to define how that maps to the existing difficulty levels.
+            'costs_include' => [
+                [
+                    'en' => 'All Transport (Private).',
+                    'fr' => 'Tous les transports (privés).',
+                ],
+                [
+                    'en' => 'Standard Accommodation (Twin share) in Kathmandu with Breakfast.',
+                    'fr' => 'Hébergement standard (chambre double) à Katmandou avec petit-déjeuner.',
+                ],
+                [
+                    'en' => 'Sightseeing tour with entrance fees.',
+                    'fr' => 'Visite touristique avec frais d\'entrée.',
+                ],
+                [
+                    'en' => 'Duffle Bag using for Trekking.',
+                    'fr' => 'Sac de voyage pour le trekking.',
+                ],
+                [
+                    'en' => 'Breakfast, Lunch and Dinner during the Trekking.',
+                    'fr' => 'Petit-déjeuner, déjeuner et dîner pendant le trekking.',
+                ],
+                [
+                    'en' => 'Standard Accommodation (Twin share) in Tea house (mountain lodge) while trekking.',
+                    'fr' => 'Hébergement standard (chambre double) dans une maison de thé (lodge de montagne) pendant le trekking.',
+                ],
+                [
+                    'en' => 'Domestic Flight with Airport Tax.',
+                    'fr' => 'Vol intérieur avec taxes d\'aéroport.',
+                ],
+                [
+                    'en' => 'Trekking Porter with Insurance. (We Provide 01 Porter for two trekkers)',
+                    'fr' => 'Porteur de trekking avec assurance. (Nous fournissons 01 porteur pour deux trekkeurs)',
+                ],
+                [
+                    'en' => 'Trekking Guide with insurance.',
+                    'fr' => 'Guide de trekking avec assurance.',
+                ],
+                [
+                    'en' => 'Trekking Guide and Porters food and accommodation, wages etc.',
+                    'fr' => 'Nourriture, hébergement, salaires, etc. du guide de trekking et des porteurs.',
+                ],
+                [
+                    'en' => 'Everest Base Camp Trekking Region map.',
+                    'fr' => 'Carte de la région de trekking du camp de base de l\'Everest.',
+                ],
+                [
+                    'en' => 'Sagarmatha (Everest) National park permits fee.',
+                    'fr' => 'Frais de permis du parc national de Sagarmatha (Everest).',
+                ],
+                [
+                    'en' => 'Khumbu pasang lhamu rural municipality entry permit fee.',
+                    'fr' => 'Frais de permis d\'entrée de la municipalité rurale de Khumbu pasang lhamu.',
+                ],
+                [
+                    'en' => 'Trekker’s Information Management system (TIMS).',
+                    'fr' => 'Système de gestion de l\'information des trekkeurs (TIMS).',
+                ],
+                [
+                    'en' => 'All Government taxes Income tax plus VAT.',
+                    'fr' => 'Toutes les taxes gouvernementales, impôt sur le revenu plus TVA.',
+                ],
+                [
+                    'en' => 'Farewell dinner with cultural program.',
+                    'fr' => 'Dîner d\'adieu avec programme culturel.',
+                ],
+                [
+                    'en' => 'Office services charge.',
+                    'fr' => 'Frais de service de bureau.',
+                ],
+                [
+                    'en' => 'Water purification tablets.',
+                    'fr' => 'Pastilles de purification de l\'eau.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'International Airfare.',
+                    'fr' => 'Billet d\'avion international.',
+                ],
+                [
+                    'en' => 'Your travel insurance of any kind',
+                    'fr' => 'Votre assurance voyage de toute nature',
+                ],
+                [
+                    'en' => 'Nepal entry Visa fee (US$ 50 for 30 days) (US$ 30 for 15 days) you should get visa open your arrival)',
+                    'fr' => 'Frais de visa d\'entrée au Népal (50 $ US pour 30 jours) (30 $ US pour 15 jours), vous devriez obtenir un visa à votre arrivée).',
+                ],
+                [
+                    'en' => 'Drinks, Dessert, Juice, Mineral Water, Heater charge, Hot Shower, Wi-Fi etc during the Trekking and main meals in cities.',
+                    'fr' => 'Boissons, dessert, jus, eau minérale, frais de chauffage, douche chaude, Wi-Fi, etc. pendant le trekking et les principaux repas dans les villes.',
+                ],
+                [
+                    'en' => 'Tips for Guide, Porter and driver.',
+                    'fr' => 'Pourboires pour le guide, le porteur et le chauffeur.',
+                ],
+            ],
+            'is_featured' => false, // Set as needed
+        ]);
+        $luxury_everest_base_camp_trek_data->destinations()->sync(
+            Destination::where('region_id', 1)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $luxury_everest_base_camp_trek_data,
+            'cover_image_id',
+            public_path('photos/mountain6.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $luxury_everest_base_camp_trek_data,
+            'feature_image_id',
+            public_path('photos/mountain9.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $luxury_everest_base_camp_trek_data,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
+
+        //id 20
+        $annapurna_excursion_trek_data = Trek::create([
+            'title' => [
+                'en' => 'Annapurna Excursion',
+                'fr' => 'Excursion à l\'Annapurna', // French translation
+            ],
+            'description' => [
+                'en' => 'Annapurna Excursion 12 Days is a customized trip by Sherpalaya that allows our valuable customers to see a glimpse of all geographical features of Nepal. The trip is mixed with multiple activities allowing you to have most of Nepal. With diversified landscapes and easy days, this can be a good choice for Family Trekking in Nepal. Our Annapurna Excursion is filled with thrilling activities as on 2nd day you will get into a raft and paddle your way through various levels of rapids in Trishuli River. Along with our professional river guides you will spend 2 - 3 hrs navigating your way. The next section of the trip is Ghorepani Poonhill Trek, one of the most popular treks in Nepal. During the hike you will be exposed to 7th and 10th highest mountains of the world. Once you step inside the Annapurna Conservation Area, many awesome views will appear in front of you. The Dhaulagiri and Annapurna Range providing 180 degree views of the Himalayan Giants is a major attraction of the trip.',
+                'fr' => 'L\'excursion à l\'Annapurna de 12 jours est un voyage personnalisé par Sherpalaya qui permet à nos précieux clients d\'avoir un aperçu de toutes les caractéristiques géographiques du Népal. Le voyage est composé de plusieurs activités vous permettant de profiter au maximum du Népal. Avec des paysages diversifiés et des journées faciles, cela peut être un bon choix pour le trekking en famille au Népal. Notre excursion à l\'Annapurna est remplie d\'activités passionnantes. Le deuxième jour, vous monterez sur un radeau et pagayerez à travers différents niveaux de rapides dans la rivière Trishuli. Avec nos guides de rivière professionnels, vous passerez 2 à 3 heures à naviguer. La section suivante du voyage est le trek de Ghorepani Poonhill, l\'un des treks les plus populaires du Népal. Pendant la randonnée, vous serez exposé aux 7e et 10e plus hautes montagnes du monde. Une fois que vous aurez pénétré dans la zone de conservation de l\'Annapurna, de nombreuses vues impressionnantes apparaîtront devant vous. La chaîne du Dhaulagiri et de l\'Annapurna offrant une vue à 180 degrés sur les géants de l\'Himalaya est une attraction majeure du voyage.', // French translation
+            ],
+            'duration' => '12',
+            'grade' => '7',
+            'starting_point' => 'Kathmandu',
+            'ending_point' => 'Kathmandu',
+            'best_time_for_trek' => [
+                'en' => 'Sep-May',
+                'fr' => 'Septembre à Mai', // French translation
+            ],
+            'starting_altitude' => 1400, // Assuming Kathmandu's altitude - verify if needed
+            'highest_altitude' => 3210,
+            'region_id' => Region::find(3)->id, // Annapurna Region ID - ALREADY CORRECT
+            'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
+            'costs_include' => [
+                [
+                    'en' => 'Arrival and Departure Transport',
+                    'fr' => 'Transport d\'arrivée et de départ',
+                ],
+                [
+                    'en' => 'Accommodation in Kathmandu and Pokhara with breakfast',
+                    'fr' => 'Hébergement à Katmandou et Pokhara avec petit-déjeuner',
+                ],
+                [
+                    'en' => 'Duffle Bag for Trekking',
+                    'fr' => 'Sac de voyage pour le trekking',
+                ],
+                [
+                    'en' => 'Breakfast, Lunch & Dinner during the Trekking',
+                    'fr' => 'Petit-déjeuner, déjeuner et dîner pendant le trekking',
+                ],
+                [
+                    'en' => 'Accommodation in Tea house (mountain lodge) while trekking',
+                    'fr' => 'Hébergement dans une maison de thé (lodge de montagne) pendant le trekking',
+                ],
+                [
+                    'en' => 'Pokhara-Hyangja and Lumre Pokhara drive',
+                    'fr' => 'Trajet Pokhara-Hyangja et Lumre Pokhara',
+                ],
+                [
+                    'en' => 'Kathmandu-Pokhara drive (Tourist Bus)',
+                    'fr' => 'Trajet Katmandou-Pokhara (bus touristique)',
+                ],
+                [
+                    'en' => 'Pokhara - Kathmandu flights (Buddha Air) with airport tax',
+                    'fr' => 'Vols Pokhara - Katmandou (Buddha Air) avec taxes d\'aéroport',
+                ],
+                [
+                    'en' => 'Trekking Porter with Insurance (1 Porter for 2 Pax)',
+                    'fr' => 'Porteur de trekking avec assurance (1 porteur pour 2 personnes)',
+                ],
+                [
+                    'en' => 'Trekking Guide with insurance',
+                    'fr' => 'Guide de trekking avec assurance',
+                ],
+                [
+                    'en' => 'Trekking guide and porter\'s food and accommodation, wages etc.',
+                    'fr' => 'Nourriture et hébergement, salaires, etc. du guide de trekking et des porteurs',
+                ],
+                [
+                    'en' => 'First Aid kit',
+                    'fr' => 'Trousse de premiers secours',
+                ],
+                [
+                    'en' => 'Mardi Himal Trekking map',
+                    'fr' => 'Carte de trekking du Mardi Himal',
+                ],
+                [
+                    'en' => 'Annapurna Conservation Area Project (ACAP) entry permit fee',
+                    'fr' => 'Frais de permis d\'entrée du projet de zone de conservation d\'Annapurna (ACAP)',
+                ],
+                [
+                    'en' => 'Trekker’s Information Management system (TIMS)',
+                    'fr' => 'Système de gestion de l\'information des trekkeurs (TIMS)',
+                ],
+                [
+                    'en' => 'Farewell dinner with cultural program',
+                    'fr' => 'Dîner d\'adieu avec programme culturel',
+                ],
+                [
+                    'en' => 'Water purification tablets',
+                    'fr' => 'Pastilles de purification de l\'eau',
+                ],
+                [
+                    'en' => 'All Government taxes',
+                    'fr' => 'Toutes les taxes gouvernementales',
+                ],
+                [
+                    'en' => 'Office service charge',
+                    'fr' => 'Frais de service de bureau',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'International Airfare',
+                    'fr' => 'Billet d\'avion international',
+                ],
+                [
+                    'en' => 'Your travel insurance',
+                    'fr' => 'Votre assurance voyage',
+                ],
+                [
+                    'en' => 'Nepal entry Visa fee (US$ 30 for 15 days and US$ 50 for 30 days)',
+                    'fr' => 'Frais de visa d\'entrée au Népal (30 $ US pour 15 jours et 50 $ US pour 30 jours)',
+                ],
+                [
+                    'en' => 'Drinks, Dessert, Juice, Mineral Water, Heater charge, Hot Shower during the Trekking and main meals in cities',
+                    'fr' => 'Boissons, dessert, jus, eau minérale, frais de chauffage, douche chaude pendant le trekking et les principaux repas dans les villes',
+                ],
+                [
+                    'en' => 'Tips for Guide, Porter and driver',
+                    'fr' => 'Pourboires pour le guide, le porteur et le chauffeur',
+                ],
+            ],
+            'is_featured' => false, // Set as needed
+        ]);
+
+        $annapurna_excursion_trek_data->destinations()->sync(
+            Destination::where('region_id', 3)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $annapurna_excursion_trek_data,
+            'cover_image_id',
+            public_path('photos/mountain6.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $annapurna_excursion_trek_data,
+            'feature_image_id',
+            public_path('photos/mountain9.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $annapurna_excursion_trek_data,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
+
+        //id 21
+        $annapurna_sanctuary_trek_data = Trek::create([
+            'title' => [
+                'en' => 'Annapurna Sanctuary Trek',
+                'fr' => 'Trek au Sanctuaire de l\'Annapurna', // French translation
+            ],
+            'description' => [
+                'en' => 'Annapurna Sanctuary trek is an adventurous 10 days trip to the base of the tenth-highest mountain in the world, Mount Annapurna. This trek is famously known as the Annapurna Base Camp trek. It is one of the most loved trekking programs in Nepal and done by hundreds of trekkers every year. Unlike the Everest Base Camp trek, you will travel west of Kathmandu to the beautiful city of Pokhara and take a short drive from here to the lovely Ghandruk village to start the journey in the mountains. The trail goes through picturesque Nepali villages and terraced fields, followed by rhododendron forests and lush cliffsides. The trail gradually ascends along the Modi Khola. It takes you into the heart of the Annapurna Himalayas, where giant mountains like the Annapurna range, Dhaulagiri, Nilgiri, Fishtail, Hiunchuli, Gangapurna, Tukuche Peak, and many others reside.',
+                'fr' => 'Le trek du Sanctuaire de l\'Annapurna est un voyage aventureux de 10 jours à la base de la dixième plus haute montagne du monde, le mont Annapurna. Ce trek est populairement connu sous le nom de trek du camp de base de l\'Annapurna. C\'est l\'un des programmes de trekking les plus appréciés au Népal et effectué par des centaines de trekkeurs chaque année. Contrairement au trek du camp de base de l\'Everest, vous voyagerez à l\'ouest de Katmandou jusqu\'à la belle ville de Pokhara et prendrez un court trajet en voiture d\'ici jusqu\'au charmant village de Ghandruk pour commencer le voyage dans les montagnes. Le sentier traverse des villages népalais pittoresques et des champs en terrasses, suivis de forêts de rhododendrons et de falaises luxuriantes. Le sentier monte progressivement le long de la Modi Khola. Il vous emmène au cœur de l\'Himalaya de l\'Annapurna, où résident des montagnes géantes comme la chaîne de l\'Annapurna, le Dhaulagiri, le Nilgiri, le Fishtail, l\'Hiunchuli, le Gangapurna, le Tukuche Peak et bien d\'autres.', // French translation
+            ],
+            'duration' => '10',
+            'grade' => '6', // You provided a grade of 6, but "Moderate" is the word equivalent.  If you want to use a numerical grade (1-10), you *must* define the mapping.
+            'starting_point' => 'Kathmandu',
+            'ending_point' => 'Kathmandu',
+            'best_time_for_trek' => [
+                'en' => 'Sep-May',
+                'fr' => 'Septembre à Mai', // French translation
+            ],
+            'starting_altitude' => 1400, // Kathmandu altitude - verify
+            'highest_altitude' => 3500,  // You *must* add the highest altitude for this trek.
+            'region_id' => Region::find(3)->id, // Annapurna Region ID - ALREADY CORRECT
+            'trek_difficulty' => TrekDifficulty::MODERATE, // Verify. If using a numerical grade, define the mapping.
+            'costs_include' => [
+                [
+                    'en' => 'Arrival and Departure Transport (Airport transfers).',
+                    'fr' => 'Transport d\'arrivée et de départ (Transferts aéroport).',
+                ],
+                [
+                    'en' => 'Accommodation in Kathmandu (Specify hotel level/stars) with breakfast.',
+                    'fr' => 'Hébergement à Katmandou (Spécifiez le niveau/étoiles de l\'hôtel) avec petit-déjeuner.',
+                ],
+                [
+                    'en' => 'Accommodation in Pokhara (Specify hotel level/stars) with breakfast (if applicable).',
+                    'fr' => 'Hébergement à Pokhara (Spécifiez le niveau/étoiles de l\'hôtel) avec petit-déjeuner (si applicable).',
+                ],
+                [
+                    'en' => 'Trekking permits (TIMS, ACAP, National Park fees, Special Permits if required).',
+                    'fr' => 'Permis de trekking (TIMS, ACAP, frais de parc national, permis spéciaux si requis).',
+                ],
+                [
+                    'en' => 'Trekking Guide (English-speaking, licensed).',
+                    'fr' => 'Guide de trekking (Anglophone, licencié).',
+                ],
+                [
+                    'en' => 'Porters to carry luggage (Specify porter/trekker ratio).',
+                    'fr' => 'Porteurs pour transporter les bagages (Spécifiez le ratio porteur/trekker).',
+                ],
+                [
+                    'en' => 'All meals during the trek (Breakfast, Lunch, Dinner).',
+                    'fr' => 'Tous les repas pendant le trek (Petit-déjeuner, Déjeuner, Dîner).',
+                ],
+                [
+                    'en' => 'Accommodation in teahouses/lodges during the trek.',
+                    'fr' => 'Hébergement dans des maisons de thé/lodges pendant le trek.',
+                ],
+                [
+                    'en' => 'Transportation to/from the trek starting/ending point (Specify mode of transport).',
+                    'fr' => 'Transport vers/depuis le point de départ/arrivée du trek (Spécifiez le mode de transport).',
+                ],
+                [
+                    'en' => 'Domestic flights (if applicable).',
+                    'fr' => 'Vols intérieurs (si applicable).',
+                ],
+                [
+                    'en' => 'Duffel bag for trekking.',
+                    'fr' => 'Sac de voyage pour le trekking.',
+                ],
+                [
+                    'en' => 'First-aid kit.',
+                    'fr' => 'Trousse de premiers secours.',
+                ],
+                [
+                    'en' => 'Water purification tablets or other water treatment.',
+                    'fr' => 'Pastilles de purification d\'eau ou autre traitement de l\'eau.',
+                ],
+                [
+                    'en' => 'Farewell dinner (if included).',
+                    'fr' => 'Dîner d\'adieu (si inclus).',
+                ],
+                [
+                    'en' => 'Government taxes and service charges.',
+                    'fr' => 'Taxes gouvernementales et frais de service.',
+                ],
+                [
+                    'en' => 'Office service charges.',
+                    'fr' => 'Frais de service de bureau.',
+                ],
+                // Add any other specific inclusions from the trek information.
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'International airfare.',
+                    'fr' => 'Billet d\'avion international.',
+                ],
+                [
+                    'en' => 'Nepal entry visa fee.',
+                    'fr' => 'Frais de visa d\'entrée au Népal.',
+                ],
+                [
+                    'en' => 'Travel insurance (Highly recommended).',
+                    'fr' => 'Assurance voyage (Fortement recommandée).',
+                ],
+                [
+                    'en' => 'Drinks (bottled water, soft drinks, alcohol).',
+                    'fr' => 'Boissons (eau en bouteille, boissons gazeuses, alcool).',
+                ],
+                [
+                    'en' => 'Meals in Kathmandu and Pokhara (except breakfasts where included).',
+                    'fr' => 'Repas à Katmandou et Pokhara (sauf les petits-déjeuners lorsque inclus).',
+                ],
+                [
+                    'en' => 'Hot showers, Wi-Fi, and other personal expenses.',
+                    'fr' => 'Douches chaudes, Wi-Fi et autres dépenses personnelles.',
+                ],
+                [
+                    'en' => 'Tips for guides, porters, and drivers (Customary).',
+                    'fr' => 'Pourboires pour les guides, les porteurs et les chauffeurs (Habituel).',
+                ],
+                [
+                    'en' => 'Souvenirs and other personal shopping.',
+                    'fr' => 'Souvenirs et autres achats personnels.',
+                ],
+                // Add any other specific exclusions from the trek information.
+            ],
+            'is_featured' => false, // Set as needed
+        ]);
+        $annapurna_sanctuary_trek_data->destinations()->sync(
+            Destination::where('region_id', 3)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $annapurna_sanctuary_trek_data,
+            'cover_image_id',
+            public_path('photos/mountain6.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $annapurna_sanctuary_trek_data,
+            'feature_image_id',
+            public_path('photos/mountain9.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $annapurna_sanctuary_trek_data,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
+
+
+        //  id 22
+
+        $dhampus_sarangkot_chitwan_trek_data = Trek::create([
+            'title' => [
+                'en' => 'Dhampus / Sarangkot / Chitwan Pack',
+                'fr' => 'Trek Dhampus Sarangkot avec Safari dans la Jungle de Chitwan', // French translation
+            ],
+            'description' => [
+                'en' => 'The Dhampus Sarangkot trek with Chitwan jungle safari package is one of our most happening packages for travelers in Nepal. This package has a tour of historical sites in Kathmandu, a light hike to beautiful Dhampus village, a night stay at Sarangkot, a tour of caves, lakes, and waterfalls in Pokhara, and a jungle safari in Chitwan. You will explore and experience a lot following our Dhampus Sarangkot trek with Chitwan jungle safari itinerary. The journey is incredible and offers a profound glimpse of Nepali culture, traditions, art, and architecture. Not only that, but you will also get to see stunning views of the western Himalayan ranges that include the seventh and tenth-highest mountains in the world. Your time in both cities and nature will be excellent.',
+                'fr' => 'Le forfait trek Dhampus Sarangkot avec safari dans la jungle de Chitwan est l\'un de nos forfaits les plus populaires pour les voyageurs au Népal. Ce forfait comprend une visite des sites historiques de Katmandou, une légère randonnée jusqu\'au magnifique village de Dhampus, une nuit à Sarangkot, une visite des grottes, des lacs et des cascades de Pokhara, et un safari dans la jungle à Chitwan. Vous explorerez et expérimenterez beaucoup en suivant notre itinéraire de trek Dhampus Sarangkot avec safari dans la jungle de Chitwan. Le voyage est incroyable et offre un aperçu profond de la culture, des traditions, de l\'art et de l\'architecture népalaises. Non seulement cela, mais vous aurez également la chance de voir des vues imprenables sur les chaînes de l\'Himalaya occidental qui comprennent les septième et dixième plus hautes montagnes du monde. Votre temps dans les villes et la nature sera excellent.', // French translation
+            ],
+            'duration' => '11',
+            'grade' => '5',
+            'starting_point' => 'Kathmandu',
+            'ending_point' => 'Kathmandu',
+            'best_time_for_trek' => [
+                'en' => 'Sep-May',
+                'fr' => 'Septembre à Mai', // French translation
+            ],
+            'starting_altitude' => 1400, // Kathmandu altitude - verify
+            'highest_altitude' => 3500, // Add if known
+            'region_id' => 6, // Add if known. It is likely a combination of regions.
+            'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
+            'costs_include' => [
+                [
+                    'en' => 'Arrival and Departure Transport.',
+                    'fr' => 'Transport d\'arrivée et de départ.',
+                ],
+                [
+                    'en' => 'Accommodation in Kathmandu and Pokhara (Twin sharing) with breakfast.',
+                    'fr' => 'Hébergement à Katmandou et Pokhara (chambre double) avec petit-déjeuner.',
+                ],
+                [
+                    'en' => 'Accommodation in Chitwan (Twin sharing) with Breakfast, Lunch and dinner.',
+                    'fr' => 'Hébergement à Chitwan (chambre double) avec petit-déjeuner, déjeuner et dîner.',
+                ],
+                [
+                    'en' => 'Cultural Tour with entrance fees.',
+                    'fr' => 'Visite culturelle avec frais d\'entrée.',
+                ],
+                [
+                    'en' => 'Duffle Bag using for Trekking.',
+                    'fr' => 'Sac de voyage pour le trekking.',
+                ],
+                [
+                    'en' => 'Breakfast, Lunch & Dinner during the Trekking.',
+                    'fr' => 'Petit-déjeuner, déjeuner et dîner pendant le trekking.',
+                ],
+                [
+                    'en' => 'Accommodation in Tea house (mountain lodge) while trekking.',
+                    'fr' => 'Hébergement dans une maison de thé (lodge de montagne) pendant le trekking.',
+                ],
+                [
+                    'en' => 'Kathmandu -Pokhara Transport.',
+                    'fr' => 'Transport Katmandou -Pokhara.',
+                ],
+                [
+                    'en' => 'Pokhara-Hyangja Transport.',
+                    'fr' => 'Transport Pokhara-Hyangja.',
+                ],
+                [
+                    'en' => 'Pokhara - Chitwan Transport.',
+                    'fr' => 'Transport Pokhara - Chitwan.',
+                ],
+                [
+                    'en' => 'Chitwan-Kathmandu Transport.',
+                    'fr' => 'Transport Chitwan-Katmandou.',
+                ],
+                [
+                    'en' => 'Trekking Guide with insurance.',
+                    'fr' => 'Guide de trekking avec assurance.',
+                ],
+                [
+                    'en' => 'Trekking Guide\'\'s food and accommodation, wages etc.',
+                    'fr' => 'Nourriture, hébergement, salaires, etc. du guide de trekking.',
+                ],
+                [
+                    'en' => 'First Aid kit.',
+                    'fr' => 'Trousse de premiers secours.',
+                ],
+                [
+                    'en' => 'Dhampus sarangkot Trekking map.',
+                    'fr' => 'Carte de trekking Dhampus Sarangkot.',
+                ],
+                [
+                    'en' => 'Annapurna Conservation Area Project (ACAP) entry permit fee.',
+                    'fr' => 'Frais de permis d\'entrée du projet de zone de conservation d\'Annapurna (ACAP).',
+                ],
+                [
+                    'en' => 'All Jungle activities in Chitwan National Park.',
+                    'fr' => 'Toutes les activités dans la jungle du parc national de Chitwan.',
+                ],
+                [
+                    'en' => 'Farewell dinner with cultural program.',
+                    'fr' => 'Dîner d\'adieu avec programme culturel.',
+                ],
+                [
+                    'en' => 'Water purification tablets.',
+                    'fr' => 'Pastilles de purification de l\'eau.',
+                ],
+                [
+                    'en' => 'All Government taxes.',
+                    'fr' => 'Toutes les taxes gouvernementales.',
+                ],
+                [
+                    'en' => 'Office service charge.',
+                    'fr' => 'Frais de service de bureau.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'International Airfare.',
+                    'fr' => 'Billet d\'avion international.',
+                ],
+                [
+                    'en' => 'Your travel insurance of any kind',
+                    'fr' => 'Votre assurance voyage de toute nature',
+                ],
+                [
+                    'en' => 'Nepal entry Visa fee (US$ 30 for 15 days and US$ 50 for 30 days, you should get visa open your arrival)',
+                    'fr' => 'Frais de visa d\'entrée au Népal (30 $ US pour 15 jours et 50 $ US pour 30 jours, vous devriez obtenir un visa à votre arrivée).',
+                ],
+                [
+                    'en' => 'Drinks, Dessert, Juice, Mineral Water, Heater charge, Hot Shower during the Trekking and main meals in cities.',
+                    'fr' => 'Boissons, dessert, jus, eau minérale, frais de chauffage, douche chaude pendant le trekking et les principaux repas dans les villes.',
+                ],
+                [
+                    'en' => 'Tips for Guide and driver.',
+                    'fr' => 'Pourboires pour le guide et le chauffeur.',
+                ],
+                [
+                    'en' => 'Trekking porter if needed.',
+                    'fr' => 'Porteur de trekking si nécessaire.',
+                ],
+            ],
+            'is_featured' => false, // Set as needed
+        ]);
+        $dhampus_sarangkot_chitwan_trek_data->destinations()->sync(
+            Destination::inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $dhampus_sarangkot_chitwan_trek_data,
+            'cover_image_id',
+            public_path('photos/mountain6.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $dhampus_sarangkot_chitwan_trek_data,
+            'feature_image_id',
+            public_path('photos/mountain9.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $dhampus_sarangkot_chitwan_trek_data,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
+
+        $ghorepani_poonhill_trek_data = Trek::create([
+            'title' => [
+                'en' => 'Ghorepani Poonhill Trek',
+                'fr' => 'Trek Ghorepani Poonhill', // French translation
+            ],
+            'description' => [
+                'en' => 'Ghorepani Poonhill Trek is a paradise for travelers who want to witness some amazing views of the Himalayas without facing a lot of difficulties. The trail takes us through enchanting rhododendron forests and along the flowing rivers eventually offering an extraordinary views of Dhaulagiri , Annapurna I , Annapurna South , Nilgiri , Tukuche Peak, Hiuchuli , Machhapuchre (Fishtail ) , Lamjung Himal and many more. This unforgettable trek in the Annapurna is loved by people of all age groups and physical fitness which allows one to explore deeply into the local ethnic communities and learn more about their culture and tradition. The Gurung Museum in Ghandruk village is a perfect place to witness the ancient lifestyles of people living in this region. Taking a mountain flight to Pokhara from Kathmandu, the trail then heads north-west of Pokhara city towards Nayapul, the starting point of the trail. We will reach Ghorepani after 2 days of trekking as we navigate our way through the village of Birethanti, Ramghai, Tikhedhunga, Ulleri.',
+                'fr' => 'Le trek de Ghorepani Poonhill est un paradis pour les voyageurs qui souhaitent admirer des vues incroyables sur l\'Himalaya sans rencontrer beaucoup de difficultés. Le sentier nous emmène à travers des forêts de rhododendrons enchanteresses et le long des rivières sinueuses, offrant finalement une vue extraordinaire sur le Dhaulagiri, l\'Annapurna I, l\'Annapurna Sud, le Nilgiri, le Tukuche Peak, l\'Hiuchuli, le Machhapuchre (Fishtail), le Lamjung Himal et bien d\'autres. Ce trek inoubliable dans l\'Annapurna est apprécié par les personnes de tous âges et de toutes conditions physiques, ce qui permet d\'explorer en profondeur les communautés ethniques locales et d\'en apprendre davantage sur leur culture et leurs traditions. Le musée Gurung dans le village de Ghandruk est un endroit idéal pour découvrir les anciens modes de vie des habitants de cette région. Après avoir pris un vol de montagne vers Pokhara depuis Katmandou, le sentier se dirige vers le nord-ouest de la ville de Pokhara en direction de Nayapul, le point de départ du sentier. Nous atteindrons Ghorepani après 2 jours de trekking en nous frayant un chemin à travers les villages de Birethanti, Ramghai, Tikhedhunga et Ulleri.', // French translation
+            ],
+            'duration' => '11',
+            'grade' => '6',
+            'starting_point' => 'Kathmandu',
+            'ending_point' => 'Kathmandu',
+            'best_time_for_trek' => [
+                'en' => 'Sep-May',
+                'fr' => 'Septembre à Mai', // French translation
+            ],
+            'starting_altitude' => 1400, // Kathmandu altitude - verify
+            'highest_altitude' => 3210,
+            'region_id' => 3, // Annapurna Region - ALREADY CORRECT
+            'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
+            'costs_include' => [
+                [
+                    'en' => 'Arrival and Departure Transport.',
+                    'fr' => 'Transport d\'arrivée et de départ.',
+                ],
+                [
+                    'en' => 'Accommodation in Kathmandu and Pokhara with breakfast.',
+                    'fr' => 'Hébergement à Katmandou et Pokhara avec petit-déjeuner.',
+                ],
+                [
+                    'en' => 'Cultural Tour with entrance fees.',
+                    'fr' => 'Visite culturelle avec frais d\'entrée.',
+                ],
+                [
+                    'en' => 'Duffle Bag using for Trekking.',
+                    'fr' => 'Sac de voyage pour le trekking.',
+                ],
+                [
+                    'en' => 'Breakfast, Lunch & Dinner during the Trekking.',
+                    'fr' => 'Petit-déjeuner, déjeuner et dîner pendant le trekking.',
+                ],
+                [
+                    'en' => 'Accommodation in Tea house (mountain lodge) while trekking.',
+                    'fr' => 'Hébergement dans une maison de thé (lodge de montagne) pendant le trekking.',
+                ],
+                [
+                    'en' => 'Kathmandu -Pokhara Transport. (Tourist Bus).',
+                    'fr' => 'Transport Katmandou -Pokhara. (Bus touristique).',
+                ],
+                [
+                    'en' => 'Pokhara-Nayapul Transport.',
+                    'fr' => 'Transport Pokhara-Nayapul.',
+                ],
+                [
+                    'en' => 'Kimche - Pokhara Transport.',
+                    'fr' => 'Transport Kimche - Pokhara.',
+                ],
+                [
+                    'en' => 'Pokhara - Kathmandu flights with airport Tax.',
+                    'fr' => 'Vols Pokhara - Katmandou avec taxes d\'aéroport.',
+                ],
+                [
+                    'en' => 'Trekking Porter with Insurance. (We Provide 01 Porter for 02 Pax).',
+                    'fr' => 'Porteur de trekking avec assurance. (Nous fournissons 01 porteur pour 02 personnes).',
+                ],
+                [
+                    'en' => 'Trekking Guide with insurance.',
+                    'fr' => 'Guide de trekking avec assurance.',
+                ],
+                [
+                    'en' => 'Trekking guide and porters food and accommodation, wages etc.',
+                    'fr' => 'Nourriture, hébergement, salaires, etc. du guide de trekking et des porteurs.',
+                ],
+                [
+                    'en' => 'First Aid kit.',
+                    'fr' => 'Trousse de premiers secours.',
+                ],
+                [
+                    'en' => 'Ghorepni Poonhill Trekking Region map.',
+                    'fr' => 'Carte de la région de trekking de Ghorepani Poonhill.',
+                ],
+                [
+                    'en' => 'Annapurna Conservation Area Project (ACAP) entry permit fee.',
+                    'fr' => 'Frais de permis d\'entrée du projet de zone de conservation d\'Annapurna (ACAP).',
+                ],
+                [
+                    'en' => 'Trekker’s Information Management system (TIMS).',
+                    'fr' => 'Système de gestion de l\'information des trekkeurs (TIMS).',
+                ],
+                [
+                    'en' => 'All Government taxes.',
+                    'fr' => 'Toutes les taxes gouvernementales.',
+                ],
+                [
+                    'en' => 'Office service charge.',
+                    'fr' => 'Frais de service de bureau.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'International Airfare.',
+                    'fr' => 'Billet d\'avion international.',
+                ],
+                [
+                    'en' => 'Your travel insurance of any kind',
+                    'fr' => 'Votre assurance voyage de toute nature',
+                ],
+                [
+                    'en' => 'Nepal entry Visa fee (US$ 30 for 15 days and US$ 50 for 30 days, you should get visa open your arrival)',
+                    'fr' => 'Frais de visa d\'entrée au Népal (30 $ US pour 15 jours et 50 $ US pour 30 jours, vous devriez obtenir un visa à votre arrivée).',
+                ],
+                [
+                    'en' => 'Drinks, Dessert, Juice, Mineral Water, Heater charge, Hot Shower during the Trekking and main meals in cities.',
+                    'fr' => 'Boissons, dessert, jus, eau minérale, frais de chauffage, douche chaude pendant le trekking et les principaux repas dans les villes.',
+                ],
+                [
+                    'en' => 'Tips for Guide, Porter and driver.',
+                    'fr' => 'Pourboires pour le guide, le porteur et le chauffeur.',
+                ],
+            ],
+            'is_featured' => false, // Set as needed
+        ]);
+        $ghorepani_poonhill_trek_data->destinations()->sync(
+            Destination::where('region_id', 3)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $ghorepani_poonhill_trek_data,
+            'cover_image_id',
+            public_path('photos/mountain6.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsTo(
+            $ghorepani_poonhill_trek_data,
+            'feature_image_id',
+            public_path('photos/mountain9.jpg') // Replace with the actual path
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $ghorepani_poonhill_trek_data,
+            'images',
+            public_path('photos/mountain4.jpg')
+        );
     }
 }

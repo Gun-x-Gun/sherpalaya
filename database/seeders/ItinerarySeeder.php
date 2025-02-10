@@ -9429,6 +9429,7 @@ class ItinerarySeeder extends Seeder
                 ],
             ],
         ];
+        
         //Treks
 
         $this->createItinerariesWithDetails(
@@ -9475,8 +9476,6 @@ class ItinerarySeeder extends Seeder
             Trek::find(14),
             $upper_mustang_trek_itinerary
         );
-
-
         $this->createItinerariesWithDetails(
             Trek::find(2),
             $annapurnaItineraries
