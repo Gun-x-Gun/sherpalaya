@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorSeederHelper;
+use App\Models\Category;
 use App\Models\Destination;
 use App\Models\Region;
 use App\Models\Trek;
@@ -49,6 +50,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 2610,
             'highest_altitude' => 5545,
             'region_id' => Region::first()->id,
+            'category_id' => Category::find(7)->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING,
             'costs_include' => [
                 [
@@ -197,6 +199,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1070,
             'highest_altitude' => 4130,
             'region_id' => 3,
+            'category_id' => Category::find(8)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE,
             'costs_include' => [
                 [
@@ -358,6 +361,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 710,
             'highest_altitude' => 5160,
             'region_id' => 3,
+            'category_id' => Category::find(8)->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING,
             'costs_include' => [
                 [
@@ -510,6 +514,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1462,
             'highest_altitude' => 4609,
             'region_id' => Region::find(4)->id,
+            'category_id' => Category::find(9)->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING,
             'costs_include' => [
                 [
@@ -654,6 +659,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400,
             'highest_altitude' => 3962,
             'region_id' => Region::first()->id,
+            'category_id' => Category::find(7)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE,
             'costs_include' => [
                 [
@@ -771,6 +777,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 2840, // Example
             'highest_altitude' => 5400, // Example
             'region_id' => Region::first()->id, // Make sure your regions table is seeded
+            'category_id' => Category::find(7)->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING, // Or appropriate difficulty
             'costs_include' => [
                 [
@@ -853,6 +860,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Kathmandu's altitude (approx.)
             'highest_altitude' => 5545,
             'region_id' => Region::first()->id, // Replace with the correct Region ID
+            'category_id' => Category::find(7)->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING,  // Or appropriate difficulty
             'costs_include' => [
                 [
@@ -999,6 +1007,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Kathmandu's altitude (approx.)
             'highest_altitude' => 5360,
             'region_id' => Region::first()->id, // Replace with the correct Region ID
+            'category_id' => Category::find(7)->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING,  // Or appropriate difficulty
             'costs_include' => [
                 [
@@ -1143,6 +1152,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1000, // Example
             'highest_altitude' => 4660,
             'region_id' => Region::find(3)->id, // Replace with the correct Region ID (Annapurna)
+            'category_id' => Category::find(8)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Or appropriate difficulty
             'costs_include' => [
                 [
@@ -1295,6 +1305,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Kathmandu's altitude (approx.)
             'highest_altitude' => 4500,
             'region_id' => Region::find(3)->id, // Replace with the correct Region ID (Annapurna)
+            'category_id' => Category::find(8)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Or appropriate difficulty
             'costs_include' => [
                 [
@@ -1447,6 +1458,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1430, // Chyamje's altitude - REPLACE THIS if starting elsewhere
             'highest_altitude' => 5416,
             'region_id' => Region::find(3)->id, // Replace with the correct Region ID (Annapurna) - VERIFY THIS
+            'category_id' => Category::find(8)->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING, // Or appropriate difficulty - VERIFY THIS
             'costs_include' => [
                 [
@@ -1598,6 +1610,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Starting altitude (Not provided in the data)
             'highest_altitude' => 4984, // Highest altitude in meters
             'region_id' => Region::find(4)->id, // Replace with the correct Region ID (Langtang) - VERIFY THIS
+            'category_id' => Category::find(9)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Or appropriate difficulty - VERIFY THIS
             'costs_include' => [
                 [
@@ -1742,6 +1755,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Not provided
             'highest_altitude' => 5140, // North Base Camp altitude
             'region_id' => Region::find(5)->id, // Kanchenjunga Region ID - ALREADY CORRECT
+            'category_id' => Category::find(10)->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING, // Or appropriate difficulty - VERIFY THIS
             'costs_include' => [
                 [
@@ -1889,6 +1903,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Not provided
             'highest_altitude' => 4780, // Not provided (but under 4000m)
             'region_id' => Region::find(6)->id, // Upper Mustang Region ID - ALREADY CORRECT
+            'category_id' => Category::find(11)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Or appropriate difficulty - VERIFY THIS
             'costs_include' => [
                 [
@@ -2034,6 +2049,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Add if known
             'highest_altitude' => 4000, // Add if known
             'region_id' => Region::find(3)->id, // Annapurna Region ID - ALREADY CORRECT
+            'category_id' => Category::find(8)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Or appropriate difficulty - VERIFY THIS
             'costs_include' => [
                 [
@@ -2193,7 +2209,8 @@ class TrekSeeder extends Seeder
             ], // Add if known
             'starting_altitude' => 1400, // Add if known
             'highest_altitude' => 4000, // Add if known
-            'region_id' => Region::find(4)->id, // Manaslu Region ID - ALREADY CORRECT
+            'region_id' => Region::find(4)->id, // Manaslu Region ID - ALREADY CORRECT#
+            'category_id' => Category::find(9)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
             'costs_include' => [
                 [
@@ -2331,6 +2348,7 @@ class TrekSeeder extends Seeder
             'grade' => '7',
             'starting_point' => 'Kathmandu',
             'ending_point' => 'Kathmandu',
+            'category_id' => Category::find(9)->id,
             'best_time_for_trek' => [
                 'en' => 'Sep-May',
                 'fr' => 'Septembre à Mai'
@@ -2486,6 +2504,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Add if known
             'highest_altitude' => 5545,
             'region_id' => Region::find(1)->id, // Khumbu Region ID - ALREADY CORRECT
+            'category_id' => Category::find(7)->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING, // Verify
             'costs_include' => [
                 [
@@ -2633,6 +2652,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Kathmandu's altitude
             'highest_altitude' => 5364,
             'region_id' => Region::find(1)->id, // Khumbu Region ID - ALREADY CORRECT
+            'category_id' => Category::find(7)->id,
             'trek_difficulty' => TrekDifficulty::HARD, // Verify if "Strenuous" is the correct enum value. If you want to use a numerical grade, you need to define how that maps to the existing difficulty levels.
             'costs_include' => [
                 [
@@ -2779,6 +2799,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Assuming Kathmandu's altitude - verify if needed
             'highest_altitude' => 3210,
             'region_id' => Region::find(3)->id, // Annapurna Region ID - ALREADY CORRECT
+            'category_id' => Category::find(8)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
             'costs_include' => [
                 [
@@ -2930,6 +2951,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Kathmandu altitude - verify
             'highest_altitude' => 3500,  // You *must* add the highest altitude for this trek.
             'region_id' => Region::find(3)->id, // Annapurna Region ID - ALREADY CORRECT
+            'category_id' => Category::find(8)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Verify. If using a numerical grade, define the mapping.
             'costs_include' => [
                 [
@@ -3084,6 +3106,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Kathmandu altitude - verify
             'highest_altitude' => 3500, // Add if known
             'region_id' => 6, // Add if known. It is likely a combination of regions.
+            'category_id' => Category::find(11)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
             'costs_include' => [
                 [
@@ -3244,6 +3267,7 @@ class TrekSeeder extends Seeder
             'starting_altitude' => 1400, // Kathmandu altitude - verify
             'highest_altitude' => 3210,
             'region_id' => 3, // Annapurna Region - ALREADY CORRECT
+            'category_id' => Category::find(8)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
             'costs_include' => [
                 [

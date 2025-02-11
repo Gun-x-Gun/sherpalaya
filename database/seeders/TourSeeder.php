@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Enums\TourType;
+
 use App\Helpers\CuratorSeederHelper;
+use App\Models\Category;
 use App\Models\Destination;
 use App\Models\Region;
 use App\Models\Tour;
@@ -28,7 +29,7 @@ class TourSeeder extends Seeder
                     'fr' => 'Explorez les sites culturels et historiques de Katmandou, notamment les sites classés au patrimoine mondial de l\'UNESCO tels que Swayambhunath (temple des singes), le temple de Pashupatinath, le stupa de Boudhanath et la place Durbar de Patan.',
                 ],
                 'duration' => '2 hours',
-                'type' => TourType::SIGHTSEEING,
+                'category_id' => Category::find(12)->id,
                 'is_featured' => true,
                 'grade' => '6',
                 'starting_point' => 'Kathmandu',
@@ -72,7 +73,7 @@ class TourSeeder extends Seeder
                     'fr' => 'Une aventure cycliste passionnante à travers les sentiers accidentés et les forêts luxuriantes de la vallée de Katmandou, en passant par des villages traditionnels et des terres agricoles en terrasses.',
                 ],
                 'duration' => '3 hours',
-                'type' => TourType::CYCLING,
+                'category_id' => Category::find(13)->id,
                 'is_featured' => true,
                 'grade' => '7',
                 'starting_point' => 'Kathmandu',
@@ -116,7 +117,7 @@ class TourSeeder extends Seeder
                     'fr' => 'Découvrez les rues animées de Katmandou tout en courant à travers des monuments historiques et culturels.',
                 ],
                 'duration' => '1 hour',
-                'type' => TourType::RUNNING,
+                'category_id' => Category::find(14)->id,
                 'is_featured' => true,
                 'grade' => '6',
                 'starting_point' => 'Kathmandu',
@@ -156,7 +157,7 @@ class TourSeeder extends Seeder
                     'fr' => 'Une visite axée sur la photographie pour capturer la beauté époustouflante de Pokhara, notamment le lac Phewa, Sarangkot et la chaîne de l\'Annapurna.',
                 ],
                 'duration' => '4 hours',
-                'type' => TourType::PHOTOGRAPHY,
+                'category_id' => Category::find(15)->id,
                 'is_featured' => true,
                 'grade' => '8',
                 'starting_point' => 'Pokhara',
@@ -196,7 +197,7 @@ class TourSeeder extends Seeder
                     'fr' => 'Imprégnez-vous de la riche culture de Bhaktapur, visitez des temples anciens, la place Durbar et découvrez l\'art et la cuisine traditionnels newari.',
                 ],
                 'duration' => '2 hours',
-                'type' => TourType::CULTURAL,
+                'category_id' => Category::find(16)->id,
                 'is_featured' => true,
                 'grade' => '6',
                 'starting_point' => 'Bhaktapur',
@@ -236,7 +237,7 @@ class TourSeeder extends Seeder
                     'fr' => 'Une excursion en hélicoptère de luxe qui vous emmène au camp de base de l\'Everest et à Kala Patthar pour des vues imprenables sur le mont Everest et les sommets environnants.',
                 ],
                 'duration' => '5 hours',
-                'type' => TourType::OTHERS,
+                'category_id' => Category::find(17)->id,
                 'is_featured' => true,
                 'grade' => '9',
                 'starting_point' => 'Kathmandu',
