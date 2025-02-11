@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             RegionSeeder::class,
             DestinationSeeder::class,
             ExpeditionSeeder::class,
-            PeakSeeder::class,
+            // PeakSeeder::class,
             TrekSeeder::class,
             TourSeeder::class,
             ItinerarySeeder::class,
