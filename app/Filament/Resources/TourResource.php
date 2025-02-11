@@ -61,6 +61,10 @@ class TourResource extends Resource
                                         TextInput::make('title')
                                             ->hiddenOn('view')
                                             ->required(),
+                                        Select::make('category_id')
+                                            ->relationship('category','name')
+                                            ->native(false)
+                                            ->columnSpan(1),
                                         RichEditor::make('description')
                                             ->columnSpanFull()
                                             ->required()

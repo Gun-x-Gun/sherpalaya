@@ -54,10 +54,10 @@ class ExpeditionResource extends Resource
                             ->schema([
                                 Sidebar::make([
                                     Section::make('')
-                                        ->columns(5)
+                                        ->columns(6)
                                         ->schema([
                                             TextInput::make('title')
-                                                ->columnSpan(3)
+                                                ->columnSpanFull()
                                                 ->required()
                                                 ->hiddenOn('view'),
                                             Select::make('region_id')
@@ -65,7 +65,11 @@ class ExpeditionResource extends Resource
                                                 ->relationship('region', 'name')
                                                 ->native(false)
                                                 ->required()
-                                                ->columnSpan(2),
+                                                ->columnSpan(3),
+                                            Select::make('category_id')
+                                                ->relationship('category','name')
+                                                ->native(false)
+                                                ->columnSpan(3),
                                             RichEditor::make('description')
                                                 ->columnSpanFull()
                                                 ->required()
@@ -87,12 +91,6 @@ class ExpeditionResource extends Resource
                                                 ]),
                                         ]),
                                 ], [
-                                    Section::make('')
-                                        ->schema([
-                                            // Select::make('category_id')
-                                            //     ->relationship('category')
-                                            //     ->native(false),
-                                        ]),
                                     Section::make('')
                                         ->schema([
                                             CuratorPicker::make('cover_image_id')

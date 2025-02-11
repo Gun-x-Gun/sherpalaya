@@ -61,10 +61,10 @@ class TrekResource extends Resource
                             ->schema([
                                 Sidebar::make([
                                     Section::make('')
-                                        ->columns(5)
+                                        ->columns(6)
                                         ->schema([
                                             TextInput::make('title')
-                                                ->columnSpan(3)
+                                                ->columnSpanFull()
                                                 ->required()
                                                 ->hiddenOn('view'),
                                             Select::make('region_id')
@@ -72,7 +72,11 @@ class TrekResource extends Resource
                                                 ->label('Region')
                                                 ->relationship('region', 'name')
                                                 ->native(false)
-                                                ->columnSpan(2),
+                                                ->columnSpan(3),
+                                            Select::make('category_id')
+                                                ->relationship('category','name')
+                                                ->native(false)
+                                                ->columnSpan(3),
                                             RichEditor::make('description')
                                                 ->columnSpanFull()
                                                 ->required()
