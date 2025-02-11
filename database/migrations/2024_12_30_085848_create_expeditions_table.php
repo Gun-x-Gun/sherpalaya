@@ -23,6 +23,9 @@ return new class extends Migration
             $table->string('grade')
                 ->nullable()
                 ->default(null);
+            $table->foreignId('category_id')
+                ->nullable()
+                ->default(null);
             $table->string('starting_point')
                 ->required();
             $table->string('ending_point')

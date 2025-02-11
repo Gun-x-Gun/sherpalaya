@@ -22,6 +22,9 @@ return new class extends Migration {
             $table->string('grade')
                 ->nullable()
                 ->default(null);
+            $table->foreignId('category_id')
+                ->nullable()
+                ->default(null);
             $table->foreignId('region_id');
             $table->boolean('is_featured');
             $table->string('starting_point')

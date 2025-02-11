@@ -15,8 +15,9 @@ return new class extends Migration
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
             $table->longText('title');
-            $table->string('type')
-                ->required();
+            $table->foreignId('category_id')
+                ->nullable()
+                ->default(null);
             $table->longText('description')
                 ->required();
             $table->string('duration')
