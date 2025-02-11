@@ -2,7 +2,7 @@
     <div class="bg-blue-100/10">
         <div class="xl:mx-32 mx-4 font-body">
             <div class="h-10 md:h-20"></div>
-            <div class="md:px-8"data-aos="fade-down" data-aos-duration="1200">
+            <div class="md:px-8 "data-aos="fade-down" data-aos-duration="1200">
                 <h5
                     class="text-3xl md:text-4xl font-oswald  font-medium line-clamp-2 uppercase tracking-wider text-black text-left md:text-left  ">
                     Treks</h5>

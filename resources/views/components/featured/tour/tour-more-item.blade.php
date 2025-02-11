@@ -3,13 +3,12 @@
     <div class="bg-blue-100/40" data-aos="fade-down" data-aos-duration="1200">
         <div class="xl:mx-32 mx-4 ">
             <div class="h-10 md:h-20"></div>
-            <div class=""data-aos="fade-down" data-aos-duration="1200">
+            <div class="flex flex-col justify-center items-center "data-aos="fade-down" data-aos-duration="1200">
                 <h5
-                    class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-left  ">
+                    class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-center  ">
                     The Fun Corner </h5>
-                <p
-                    class="text-xl/7 mt-4 text-preety text-black lg:text-left 
-                     font-light font-body break-all">
+                <p class="text-xl/7 mt-4 text-black text-center 
+                     font-light font-body  w-[80%]">
                     {{ $landingPageSetting->tour_activity_content }}
                 </p>
                 <div class="h-6 md:h-12"></div>
@@ -35,7 +34,8 @@
                                                 <h2 class="font-bold text-blue-50 text-2xl uppercase">
                                                     {{ $featuredTour->title }}
                                                 </h2>
-                                                <h2 class="font-bold tracking-normal text-blue-50 line-clamp-2 text-2xl">
+                                                <h2
+                                                    class="font-bold tracking-normal text-blue-50 line-clamp-2 text-2xl">
                                                     {{ $featuredTour->highest_altitude }}
                                                 </h2>
                                             </div>
@@ -49,15 +49,19 @@
 
                 <!-- Previous Slide -->
                 <button type="button" class="carousel-prev">
-                    <span
-                        class="hidden md:flex icon-[tabler--chevron-left] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                    <span class="size-9.5 bg-base-100 bg-opacity-70 flex items-center justify-center rounded-full shadow">
+                        <span
+                            class="hidden md:flex icon-[tabler--chevron-left] size-6 text-black cursor-pointer rtl:rotate-180"></span>
+                    </span>
                     <span class="sr-only">Previous</span>
                 </button>
                 <!-- Next Slide -->
                 <button type="button" class="carousel-next">
                     <span class="sr-only">Next</span>
-                    <span
-                        class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                    <span class="size-9.5 bg-base-100 bg-opacity-70 flex items-center justify-center rounded-full shadow">
+                        <span
+                            class="hidden md:flex icon-[tabler--chevron-right] size-6 text-black cursor-pointer rtl:rotate-180"></span>
+                    </span>
                 </button>
             </div>
         </div>
