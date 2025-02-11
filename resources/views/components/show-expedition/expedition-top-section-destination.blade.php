@@ -20,7 +20,7 @@
 
 <div class="font-body">
     <div class="card-header  px-0" data-aos="fade-down" data-aos-duration="1200">
-        <h5 class="card-title text-black font-oswald uppercase font-medium text-left tracking-tighter text-3xl">
+        <h5 class="card-title text-black font-body uppercase font-medium text-center tracking-normal text-3xl">
             At a glimpse
         </h5>
     </div>

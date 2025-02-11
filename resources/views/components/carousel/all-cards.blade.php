@@ -3,14 +3,14 @@
         <div class="h-8 md:h-15"></div>
         <div class="md:px-8 flex flex-col justify-center items-center"data-aos="fade-down" data-aos-duration="1200">
             <h5
-                class="text-4xl md:text-5xl font-oswald  capitalize tracking-tighter text-black text-left md:text-center  ">
+                class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-center md:text-center  ">
                 Explore Beyond Limits</h5>
             <p
-                class="text-xl/7 mt-6 text-preety text-slate-800 text-center 
+                class="text-xl/7 mt-4 text-preety text-slate-800 text-center 
                  font-light font-body lg:w-[80%] tracking-wide">
                 {{ $landingPageSetting->expedition_activity_content }}
             </p>
-            <div class="h-6 md:h-12"></div>
+            <div class="h-10 md:h-12"></div>
         </div>
     </div>
 </div>

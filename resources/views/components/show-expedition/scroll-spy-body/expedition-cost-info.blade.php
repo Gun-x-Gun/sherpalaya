@@ -5,7 +5,7 @@
             <div class="h-8">
             </div>
             <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
-                <h5 class="card-title text-black uppercase font-oswald font-medium text-2xl">Cost
+                <h5 class="card-title text-black uppercase font-body tracking-normal font-medium text-2xl">Cost
                     Includes
                 </h5>
             </div>
@@ -17,7 +17,7 @@
                                 <span class="icon-[eva--done-all-fill] size-5"></span>
                             </span>
                             <p class="text-black  break-before-auto text-preety text-lg/7 font-light tracking-wide">
-                                {{ $cost_include[app()->currentLocale()] }} 
+                                {{ $cost_include[app()->currentLocale()] }}
                             </p>
                         </li>
                     @endforeach
@@ -36,7 +36,7 @@
 
             </div>
             <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
-                <h5 class="card-title text-black uppercase font-oswald font-medium text-2xl">Cost
+                <h5 class="card-title text-black uppercase font-body tracking-normal font-medium text-2xl">Cost
                     Excludes
                 </h5>
             </div>
@@ -48,7 +48,7 @@
                                 <span class="icon-[tabler--exclamation-circle] size-5"></span>
                             </span>
                             <p class="text-black  break-before-auto text-preety text-lg/7 font-light tracking-wide">
-                                {{ $cost_exclude[app()->currentLocale()] }}  
+                                {{ $cost_exclude[app()->currentLocale()] }}
                             </p>
                         </li>
                     @endforeach

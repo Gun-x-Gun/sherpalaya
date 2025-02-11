@@ -5,10 +5,10 @@
             <div class="h-10 md:h-20"></div>
             <div class=""data-aos="fade-down" data-aos-duration="1200">
                 <h5
-                    class=" text-4xl md:text-5xl font-normal font-oswald line-clamp-2 uppercase tracking-wider text-black text-left md:text-left  ">
+                    class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-left  ">
                     The Fun Corner </h5>
                 <p
-                    class="text-xl/7 mt-4 text-preety text-slate-800 lg:text-left 
+                    class="text-xl/7 mt-4 text-preety text-black lg:text-left 
                      font-light font-body break-all">
                     {{ $landingPageSetting->tour_activity_content }}
                 </p>

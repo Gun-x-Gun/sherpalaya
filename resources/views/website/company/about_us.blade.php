@@ -41,15 +41,15 @@
                 <div class="md:px-8 flex flex-col justify-center items-center"data-aos="fade-down"
                     data-aos-duration="1200">
                     <h5
-                        class="text-4xl md:text-5xl font-oswald  capitalize tracking-tighter text-black text-left md:text-center  ">
+                        class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-center md:text-center  ">
                         Our Passion, Your Adventure
                     </h5>
                     <p
-                        class="text-xl/7 mt-6 text-preety text-slate-800 text-center 
+                        class="text-xl/7 mt-6 text-preety text-black text-center 
                              font-light font-body lg:w-[80%] tracking-wide">
                         {{ $pageSetting->about_us_page_content }}
                     </p>
-                    <div class="h-6 md:h-12"></div>
+                    <div class="h-10 md:h-12"></div>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
         {{-- Showing <strong>{{ $expeditionRegion->expeditions->count() }}</strong> --}}
         <div class="xl:mx-32 mx-4">
             <div class="h-10"></div>
-            <h1 class="text-4xl md:text-5xl  font-oswald  text-left line-clamp-2 text-black uppercase wrap text-pretty">
+            <h1 class="text-3xl md:text-4xl tracking-normal font-body  text-left line-clamp-2 text-black font-medium uppercase ">
                 Frequently Asked Questions
             </h1>
             <div class="h-8"></div>
@@ -68,7 +68,7 @@
                 @foreach ($faqs as $index => $faq)
                     <div class="accordion-item {{ $index == 0 ? 'active' : '' }}" id="faq-{{ $faq->id }}">
                         <button
-                            class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start bg-blue-100/40 font-oswald tracking-wide text-xl font-normal"
+                            class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start bg-blue-100/40 font-body tracking-tight text-xl font-normal"
                             aria-controls="faq-{{ $faq->id }}-collapse" aria-expanded="true" data-aos="fade-down"
                             data-aos-duration="1200">
                             <span
@@ -82,7 +82,7 @@
                             aria-labelledby="faq-{{ $faq->id }}" role="region" data-aos="fade-down"
                             data-aos-duration="1200">
                             <div class="px-5 pb-4 ">
-                                <p class=" font-light text-xl/7">
+                                <p class=" font-light text-lg/7 tracking-wide">
                                     {{ $faq->answer }}
                                     {!! $faq->answer !!}
                                 </p>

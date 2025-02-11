@@ -5,7 +5,7 @@
 
             </div>
             <div class="card-header  pb-4  px-2">
-                <h5 class="card-title text-black uppercase font-medium text-3xl" data-aos="fade-down" data-aos-duration="1200">
+                <h5 class="card-title text-black uppercase font-medium font-body tracking-normal text-3xl text-center" data-aos="fade-down" data-aos-duration="1200">
                     Destinations
                 </h5>
             </div>

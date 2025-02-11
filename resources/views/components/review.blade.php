@@ -5,7 +5,7 @@
     <div class="xl:mx-32 mx-4">
         <div class=""data-aos="fade-down" data-aos-duration="1200">
             <h5
-                class="text-4xl md:text-5xl font-oswald  uppercase tracking-tighter text-black text-left md:text-left  ">
+                class="text-3xl md:text-4xl font-body font-medium uppercase tracking-normal text-black text-left md:text-left  ">
                 Real Stories, Real Adventures!</h5>
             <div class="h-6 md:h-12"></div>
         </div>
@@ -26,8 +26,8 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="mb-0.5 text-stone-700 text-xl font-normal tracking-tight ">{{ $review->name }}</p>
-                                <p class=" text-stone-900 font-light text-xl tracking-wide">{{ $review->title }}</p>
+                                <p class="mb-0.5 text-black text-lg font-body font-normal tracking-tight ">{{ $review->name }}</p>
+                                <p class=" text-black font-light text-xl tracking-wide">{{ $review->title }}</p>
                             </div>
                         </div>
                         <span
@@ -39,12 +39,12 @@
                         data-aos-duration="1200">
                         <div class="px-5 pb-4 bg-blue-100/50">
                             <p class="text-secondary  ">
-                            <blockquote class="relative md:ml-10 p-4 text-xl/7">
+                            <blockquote class="relative md:ml-10 p-4 text-lg/7">
                                 <span
                                     class="icon-[tabler--quote] text-base-300/80 absolute -start-3 -top-3 size-8 rotate-180 rtl:rotate-0 opacity-25"></span>
 
                                 <div class="relative z-[1]">
-                                    <p class="text-stone-700 font-body tracking-tight ">
+                                    <p class="text-black font-body font-light tracking-wide ">
                                         <em>
                                             {{ $review->description }}
                                         </em>

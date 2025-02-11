@@ -4,10 +4,10 @@
             <div class="h-10 md:h-20"></div>
             <div class="md:px-8"data-aos="fade-down" data-aos-duration="1200">
                 <h5
-                    class="text-4xl md:text-5xl font-oswald font-normal line-clamp-2 uppercase tracking-wider text-black text-left md:text-left  ">
+                    class="text-3xl md:text-4xl font-oswald  font-medium line-clamp-2 uppercase tracking-wider text-black text-left md:text-left  ">
                     Treks</h5>
                 <p
-                    class="text-xl/7 mt-4 text-preety text-slate-800 lg:text-left 
+                    class="text-xl/7 mt-4 text-preety text-black lg:text-left 
                      font-light font-body break-all">
                     {{ $landingPageSetting->trek_activity_content }}
                 </p>
@@ -17,18 +17,19 @@
                 @foreach ($featuredTreks->slice(0, 2) as $featuredTrek)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
-                        <div class="card rounded-none px-8 py-16 col-span-1 hidden md:block group justify-center items-center bg-blue-50"
+                        <div class="card rounded-none px-8 py-10 col-span-1 hidden md:block group justify-center items-center bg-blue-50"
                             data-aos="fade-down" data-aos-duration="1200">
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <h5
-                                    class=" text-2xl  line-clamp-2 font-bold tracking-tighter font-body text-stone-700 lg:text-left  uppercase group-hover:underline  decoration-8 decoration-warning   group-hover:underline-offset-4">
+                                    class=" text-2xl  line-clamp-2 font-medium tracking-tight font-body text-black lg:text-left  uppercase group-hover:underline  decoration-8 decoration-warning   group-hover:underline-offset-4">
                                     {{ $featuredTrek->title }}
                                 </h5>
                             </a>
-                            <p
-                                class=" mt-4 text-preety text-stone-700 break-all font-body  font-light text-xl/8   line-clamp-[6] ">
-                                {{ strip_tags($featuredTrek->description) }}
-                            </p>
+                            <div
+                                class=" mt-4 text-preety text-black break-all font-body  font-light text-xl/8   line-clamp-[6] ">
+                                {!! Str::words($featuredTrek->description, 50) !!}
+
+                            </div>
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
@@ -59,10 +60,11 @@
                         </div>
                         <div class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start "
                             data-aos="fade-down" data-aos-duration="1200">
-                            <p
-                                class="text-preety text-stone-700 break-all font-body font-light text-xl/8 line-clamp-[6] ">
-                                {{ strip_tags($featuredTrek->description) }}
-                            </p>
+                            <div
+                                class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
+                                {!! Str::words($featuredTrek->description, 50) !!}
+
+                            </div>
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <button
                                     class="btn btn-primary btn-md my-4 text-base hover:btn-warning justify-start pl-2">
@@ -95,18 +97,19 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="card rounded-none px-8 py-16 col-span-1 hidden md:block group justify-center items-center bg-blue-50"
+                        <div class="card rounded-none px-8 py-10 col-span-1 hidden md:block group justify-center items-center bg-blue-50"
                             data-aos="fade-down" data-aos-duration="1200">
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <h5
-                                    class=" text-2xl  line-clamp-2 font-bold tracking-tighter font-body text-stone-700 lg:text-left  uppercase group-hover:underline  decoration-8 decoration-warning   group-hover:underline-offset-4">
+                                    class=" text-2xl  line-clamp-2 font-medium tracking-tighter font-body text-black lg:text-left  uppercase group-hover:underline  decoration-8 decoration-warning   group-hover:underline-offset-4">
                                     {{ $featuredTrek->title }}
                                 </h5>
                             </a>
-                            <p
-                                class=" mt-4 text-preety text-stone-700 break-all font-body  font-light text-xl/8   line-clamp-[6] ">
-                                {{ strip_tags($featuredTrek->description) }}
-                            </p>
+                            <div
+                                class=" mt-4 text-preety text-black break-all font-body  font-light text-xl/8   line-clamp-[6] ">
+                                {!! Str::words($featuredTrek->description, 50) !!}
+
+                            </div>
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <button class="btn btn-primary btn-md mt-6 text-base hover:btn-warning pl-2">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
@@ -116,10 +119,10 @@
                         </div>
                         <div class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start bg-blue-100"
                             data-aos="fade-down" data-aos-duration="1200">
-                            <p
-                                class="text-preety text-stone-700 break-all font-body font-light text-xl/8 line-clamp-[6] ">
-                                {{ strip_tags($featuredTrek->description) }}
-                            </p>
+                            <div
+                                class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
+                                {!! Str::words($featuredTrek->description, 50) !!}
+                            </div>
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <button
                                     class="btn btn-primary btn-md my-4 text-base hover:btn-warning justify-start pl-2">
@@ -128,7 +131,7 @@
                                 </button>
                             </a>
                         </div>
-                    @endif                  
+                    @endif
                 @endforeach
             </div>
             <div class="h-2"></div>

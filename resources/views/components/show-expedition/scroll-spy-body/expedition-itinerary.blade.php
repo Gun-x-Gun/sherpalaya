@@ -3,7 +3,7 @@
         <div class="h-6">
         </div>
         <div class="card-header px-2" data-aos="fade-down" data-aos-duration="1200">
-            <h5 class="card-title text-black uppercase tracking-wide font-oswald font-medium text-3xl">
+            <h5 class="card-title text-black uppercase tracking-normal font-body font-medium text-3xl">
                 Itineraries
             </h5>
         </div>
@@ -69,7 +69,7 @@
                                                     <span class="icon-[tabler--sun-high] size-6"></span>
                                                     <div>
                                                         <h5
-                                                            class="card-title uppercase text-xl/7 font-body font-medium tracking-tighter ">
+                                                            class="card-title uppercase text-xl/7 font-body font-medium tracking-tight ">
                                                             Highlighted Places
                                                         </h5>
                                                     </div>
@@ -85,7 +85,7 @@
                                                     @endphp
 
                                                     <h5
-                                                        class="card-title pt-0 px-8 mb-1 text-black tracking-tight font-medium capitalize font-body text-lg/7">
+                                                        class="card-title pt-0 px-8 mb-1 text-black tracking-normal font-medium capitalize font-body text-lg/7">
                                                         {{ $itineraryDestination->name }}
                                                     </h5>
                                                     <p class="mb-2 px-8 text-black text-lg/6 font-body font-light">
