@@ -2,7 +2,7 @@
     <div class="bg-blue-100/40">
         <div class="xl:mx-32 mx-4 font-body">
             <div class="h-10 md:h-20"></div>
-            <div class="md:px-8"data-aos="fade-down" data-aos-duration="1200">
+            <div class="md:px-4"data-aos="fade-down" data-aos-duration="1200">
                 <h5
                     class="text-3xl md:text-4xl font-oswald font-medium  line-clamp-2 uppercase tracking-wider text-black text-left md:text-left  ">
                     Expeditions</h5>
@@ -17,16 +17,16 @@
                 @foreach ($featuredExpeditions->slice(0, 4) as $featuredExpedition)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
-                        <div class="card rounded-none px-8 py-10 col-span-1 hidden md:block group justify-center items-center bg-blue-100"
+                        <div class="card rounded-none px-4 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-100"
                             data-aos="fade-down" data-aos-duration="1200">
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <h5
-                                    class=" text-2xl  line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-8 decoration-warning   group-hover:underline-offset-4">
+                                    class=" text-2xl  line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning   group-hover:underline-offset-4">
                                     {{ $featuredExpedition->title }}
                                 </h5>
                             </a>
                             <div
-                                class="  mt-4 text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
+                                class=" mt-2 text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
@@ -96,16 +96,16 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="card rounded-none px-8 py-10 col-span-1 hidden md:block group justify-center items-center bg-blue-100"
+                        <div class="card rounded-none px-4 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-100"
                             data-aos="fade-down" data-aos-duration="1200">
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <h5
-                                    class=" text-2xl  line-clamp-2 font-medium tracking-tight font-body text-black lg:text-left  uppercase group-hover:underline  decoration-8 decoration-warning   group-hover:underline-offset-4">
+                                    class=" text-2xl  line-clamp-2 font-medium tracking-tighter font-body text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning   group-hover:underline-offset-4">
                                     {{ $featuredExpedition->title }}
                                 </h5>
                             </a>
                             <div
-                                class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
+                                class="text-preety mt-2 text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">

@@ -17,7 +17,7 @@
                 @foreach ($featuredTreks->slice(0, 2) as $featuredTrek)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
-                        <div class="card rounded-none px-8 py-10 col-span-1 hidden md:block group justify-center items-center bg-blue-50"
+                        <div class="card rounded-none px-8 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-50"
                             data-aos="fade-down" data-aos-duration="1200">
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <h5
@@ -97,7 +97,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="card rounded-none px-8 py-10 col-span-1 hidden md:block group justify-center items-center bg-blue-50"
+                        <div class="card rounded-none px-8 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-50"
                             data-aos="fade-down" data-aos-duration="1200">
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <h5
