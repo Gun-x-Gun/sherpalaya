@@ -570,10 +570,6 @@ class KeyHighlightSeeder extends Seeder
             $kanchanjunga_highlights
         );
         $this->createKeyHighlights(
-            Peak::first(),
-            $lobuche_peak_climbing
-        );
-        $this->createKeyHighlights(
             Expedition::first(),
             $everest_expedition
         );

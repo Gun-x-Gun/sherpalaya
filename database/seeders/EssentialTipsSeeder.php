@@ -586,10 +586,8 @@ class EssentialTipsSeeder extends Seeder
             Trek::find(14),
             $langtang_tips
         );
-        $this->createEssentialTips(
-            Peak::first(),
-            $lobuche_peak_climbing_tips
-        );
+
+        
         $this->createEssentialTips(
             Expedition::first(),
             $everest_expedition_tips

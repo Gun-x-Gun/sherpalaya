@@ -15,13 +15,12 @@ class OurSherpasSeeder extends Seeder
     public function run(): void
     {
         // Fetch related models
-        $expedition = Expedition::first();
-        $peak = Peak::first();
+        $expeditions = Expedition::limit(2)->get();
         $treks = Trek::limit(2)->get();
         $tours = Tour::limit(1)->get();
 
         // Ensure related models exist
-        if (!$expedition || !$peak || $treks->count() < 2 || $tours->count() < 1) {
+        if ($expeditions->count() < 2 ||  $treks->count() < 2 || $tours->count() < 1) {
             return;
         }
 
@@ -70,12 +69,10 @@ class OurSherpasSeeder extends Seeder
                 public_path('photos/culture3.jpg')
             );
 
-            // Attach Expedition
-            $sherpa->expeditions()->attach($expedition->id, ['order' => 1]);
 
-            // Attach Peak
-            $sherpa->peaks()->attach($peak->id, ['order' => 1]);
-
+            foreach ($expeditions as $index => $expedition) {
+                $sherpa->expeditions()->attach($expedition->id, ['order' => $index + 1]);
+            }
             // Attach Two Treks
             foreach ($treks as $index => $trek) {
                 $sherpa->treks()->attach($trek->id, ['order' => $index + 1]);

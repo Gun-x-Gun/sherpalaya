@@ -6,7 +6,6 @@ use App\Enums\ItineraryTypes;
 use App\Models\Destination;
 use App\Models\Expedition;
 use App\Models\Itinerary;
-use App\Models\Peak;
 use App\Models\Trek;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Eloquent\Model;
@@ -9490,10 +9489,9 @@ class ItinerarySeeder extends Seeder
         );
 
 
-        $this->createItinerariesWithDetails(
-            Peak::first(),
-            $peakItineraries
-        );
+        
+
+        
         $this->createItinerariesWithDetails(
             Expedition::first(),
             $expeditionItineraries
