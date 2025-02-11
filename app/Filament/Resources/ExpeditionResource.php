@@ -89,6 +89,12 @@ class ExpeditionResource extends Resource
                                 ], [
                                     Section::make('')
                                         ->schema([
+                                            // Select::make('category_id')
+                                            //     ->relationship('category')
+                                            //     ->native(false),
+                                        ]),
+                                    Section::make('')
+                                        ->schema([
                                             CuratorPicker::make('cover_image_id')
                                                 ->color('primary')
                                                 ->label('Cover Image')
@@ -279,7 +285,7 @@ class ExpeditionResource extends Resource
                             ->icon('heroicon-m-clock')
                             ->size(TextColumn\TextColumnSize::Small)
                             ->suffix(' days'),
-                        TextColumn::make('expedition_difficulty')
+                        TextColumn::make('category.name')
                             ->badge()
                             ->icon('heroicon-m-bolt')
                             ->size(TextColumn\TextColumnSize::Small)

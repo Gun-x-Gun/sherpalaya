@@ -61,10 +61,6 @@ class TourResource extends Resource
                                         TextInput::make('title')
                                             ->hiddenOn('view')
                                             ->required(),
-                                        Select::make('type')
-                                            ->required()
-                                            ->options(TourType::class)
-                                            ->native(false),
                                         RichEditor::make('description')
                                             ->columnSpanFull()
                                             ->required()
@@ -269,7 +265,7 @@ class TourResource extends Resource
                         TextColumn::make('duration')
                             ->icon('heroicon-m-clock')
                             ->size(TextColumn\TextColumnSize::Small),
-                        TextColumn::make('type')
+                        TextColumn::make('category.name')
                             ->badge(),
 
                     ]),

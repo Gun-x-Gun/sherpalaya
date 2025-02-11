@@ -292,7 +292,7 @@ class TrekResource extends Resource
                             ->icon('heroicon-m-clock')
                             ->size(TextColumn\TextColumnSize::Small)
                             ->suffix(' days'),
-                        TextColumn::make('trek_difficulty')
+                        TextColumn::make('category.name')
                             ->badge()
                             ->icon('heroicon-m-bolt')
                             ->size(TextColumn\TextColumnSize::Small)
