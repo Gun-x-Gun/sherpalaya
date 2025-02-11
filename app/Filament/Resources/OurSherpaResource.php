@@ -7,7 +7,6 @@ use App\Filament\Resources\OurSherpaResource\Pages;
 use App\Filament\Resources\OurSherpaResource\RelationManagers;
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaExpeditionsTableWidget;
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaMultiWidget;
-use App\Filament\Resources\OurSherpaResource\Widgets\SherpaPeaksTableWidget;
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaToursTableWidget;
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaTreksTableWidget;
 use App\Models\OurSherpa;
@@ -103,13 +102,6 @@ class OurSherpaResource extends Resource
                             ->multiple()
                             ->preload()
                             ->native(false),
-                        Select::make('peaks')
-                            // ->hiddenLabel()
-                            ->multiple()
-                            ->relationship(titleAttribute: 'title')
-                            ->preload()
-                            ->searchable(['title', 'region'])
-                            ->native(false),
                         Select::make('treks')
                             // ->hiddenLabel()
                             ->multiple()
@@ -185,7 +177,6 @@ class OurSherpaResource extends Resource
     {
         return [
             SherpaExpeditionsTableWidget::class,
-            SherpaPeaksTableWidget::class,
             SherpaTreksTableWidget::class,
             SherpaToursTableWidget::class,
             SherpaMultiWidget::class,

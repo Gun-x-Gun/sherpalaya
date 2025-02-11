@@ -30,10 +30,6 @@ class Region extends Model
     {
         return $this->hasMany(Tour::class);
     }
-    public function peaks()
-    {
-        return $this->hasMany(Peak::class);
-    }
     public function expeditions()
     {
         return $this->hasMany(Expedition::class);

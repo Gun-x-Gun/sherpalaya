@@ -11,9 +11,10 @@ enum CategoryTypes: string implements EnumHasTranslation
 {
     use TranslatableEnum;
 
-    case TREK = 'trek';
+    
     case EXPEDITION = 'expedition';
-    case PEAK = 'peak';
+    case TREK = 'trek';
+    case TOUR = 'tour';
 
 
     public static function getTranslationKey(): string {

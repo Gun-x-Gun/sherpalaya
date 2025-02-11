@@ -9,7 +9,6 @@ class RegionMultiWidget extends MultiWidget
 {
     public array $widgets = [
         RegionExpeditionTable::class,
-        RegionPeakTable::class,
         RegionTrekTable::class,
         RegionTourTable::class,
     ];

@@ -4,7 +4,6 @@ namespace App\Enums;
 
 use App\Models\Destination;
 use App\Models\Expedition;
-use App\Models\Peak;
 use App\Models\Region;
 use App\Models\Service;
 use App\Models\Tour;
@@ -15,7 +14,6 @@ enum SearchType: string implements HasLabel
 {
     // case DESTINATION = 'destination';
     case EXPEDITION = 'expedition';
-    case PEAK = 'peak';
     // case REGION = 'region';
     case SERVICE = 'service';
     case TOUR = 'tour';
@@ -26,7 +24,6 @@ enum SearchType: string implements HasLabel
         return match ($this) {
             // self::DESTINATION => Destination::search($query),
             self::EXPEDITION => Expedition::search($query),
-            self::PEAK => Peak::search($query),
             // self::REGION => Region::search($query),
             self::SERVICE => Service::search($query),
             self::TOUR => Tour::search($query),
@@ -39,7 +36,6 @@ enum SearchType: string implements HasLabel
         return match ($this) {
             // self::DESTINATION => "Destination",
             self::EXPEDITION => "Expedition",
-            self::PEAK => "Peak",
             // self::REGION => "Region",
             self::SERVICE => "Service",
             self::TOUR => "Tour",

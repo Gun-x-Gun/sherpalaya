@@ -5,7 +5,6 @@ namespace App\Providers\Filament;
 use App\Filament\Pages\Settings\ManageLangingPage;
 use App\Filament\Resources\DestinationResource;
 use App\Filament\Resources\ExpeditionResource;
-use App\Filament\Resources\PeakResource;
 use App\Filament\Resources\RegionResource;
 use App\Filament\Resources\ServiceResource;
 use App\Filament\Resources\TrekResource;
@@ -86,7 +85,6 @@ class AdminPanelProvider extends PanelProvider
                 ->columns(4)
                 ->includes([
                         ExpeditionResource::class,
-                        PeakResource::class,
                         TrekResource::class,
                         TourResource::class,
                         RegionResource::class,

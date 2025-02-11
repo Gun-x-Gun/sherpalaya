@@ -5,7 +5,6 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\DestinationResource\Pages;
 use App\Filament\Resources\DestinationResource\RelationManagers;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationExpeditionTable;
-use App\Filament\Resources\DestinationResource\Widgets\DestinationPeakTable;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationServiceTable;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationToursTable;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationTrekTable;
@@ -184,7 +183,6 @@ class DestinationResource extends Resource
             DestinationServiceTable::class,
             DestinationToursTable::class,
             DestinationExpeditionTable::class,
-            DestinationPeakTable::class,
             DestinationTrekTable::class,
         ];
     }

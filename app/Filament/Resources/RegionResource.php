@@ -7,7 +7,6 @@ use App\Filament\Resources\RegionResource\RelationManagers;
 use App\Filament\Resources\RegionResource\RelationManagers\DestinationsRelationManager;
 use App\Filament\Resources\RegionResource\Widgets\RegionExpeditionTable;
 use App\Filament\Resources\RegionResource\Widgets\RegionMultiWidget;
-use App\Filament\Resources\RegionResource\Widgets\RegionPeakTable;
 use App\Filament\Resources\RegionResource\Widgets\RegionStats;
 use App\Filament\Resources\RegionResource\Widgets\RegionTourTable;
 use App\Filament\Resources\RegionResource\Widgets\RegionTrekTable;
@@ -90,7 +89,6 @@ class RegionResource extends Resource
         return [
             RegionStats::class,
             RegionExpeditionTable::class,
-            RegionPeakTable::class,
             RegionTrekTable::class,
             RegionTourTable::class,
             RegionMultiWidget::class,

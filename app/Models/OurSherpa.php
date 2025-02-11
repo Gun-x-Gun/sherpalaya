@@ -53,16 +53,6 @@ class OurSherpa extends Model
                 'order'
             ]);
     }
-    public function peaks()
-    {
-        return $this->belongsToMany(
-            Peak::class,
-            'our_sherpa_peak'
-        )->using(OurSherpaPeak::class)
-            ->withPivot([
-                'order'
-            ]);
-    }
     public function tours()
     {
         return $this->belongsToMany(

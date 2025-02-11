@@ -3,7 +3,6 @@
 namespace App\Filament\Resources\RegionResource\Widgets;
 
 use App\Filament\Resources\TrekResource;
-use App\Models\Peak;
 use App\Models\Region;
 use App\Models\Trek;
 use Awcodes\Curator\Components\Tables\CuratorColumn;

@@ -3,11 +3,9 @@
 namespace App\Filament\Resources\RegionResource\Widgets;
 
 use App\Filament\Resources\ExpeditionResource;
-use App\Filament\Resources\PeakResource;
 use App\Filament\Resources\TourResource;
 use App\Filament\Resources\TrekResource;
 use App\Models\Expedition;
-use App\Models\Peak;
 use App\Models\Tour;
 use App\Models\Trek;
 use Illuminate\Database\Eloquent\Model;
@@ -26,7 +24,6 @@ class RegionStats extends BaseWidget
         $region = $this->record->id;
 
         $expeditionCount = Expedition::where('region_id', $region)->count();
-        $peakCount = Peak::where('region_id', $region)->count();
         $trekCount = Trek::where('region_id', $region)->count();
         $tourCount = Tour::whereHas('destinations', function ($query) use ($region) {
             $query->where('region_id', $region);
@@ -36,10 +33,6 @@ class RegionStats extends BaseWidget
                 ->description('')
                 ->icon('heroicon-m-moon')
                 ->url(ExpeditionResource::getUrl()),
-            Stat::make('Peaks', $peakCount)
-                ->description('')
-                ->icon('heroicon-m-sun')
-                ->url(PeakResource::getUrl()),
             Stat::make('Treks', $trekCount)
                 ->description('')
                 ->icon('heroicon-m-eye')

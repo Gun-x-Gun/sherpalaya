@@ -11,7 +11,6 @@ class DestinationMultiWidget extends MultiWidget
         DestinationServiceTable::class,
         DestinationToursTable::class,
         DestinationExpeditionTable::class,
-        DestinationPeakTable::class,
         DestinationTrekTable::class,
     ];
 }

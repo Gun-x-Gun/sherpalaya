@@ -5,7 +5,6 @@ namespace App\Filament\Resources\RegionResource\Pages;
 use App\Filament\Resources\RegionResource;
 use App\Filament\Resources\RegionResource\Widgets\RegionExpeditionTable;
 use App\Filament\Resources\RegionResource\Widgets\RegionMultiWidget;
-use App\Filament\Resources\RegionResource\Widgets\RegionPeakTable;
 use App\Filament\Resources\RegionResource\Widgets\RegionStats;
 use App\Filament\Resources\RegionResource\Widgets\RegionTrekTable;
 use Filament\Actions;
