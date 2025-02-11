@@ -65,6 +65,16 @@ class Destination extends Model
                 'order'
             ]);
     }
+    public function expeditions()
+    {
+        return $this->belongsToMany(
+            Trek::class,
+            'destination_expedition'
+        )->using(DestinationExpedition::class)
+            ->withPivot([
+                'order'
+            ]);
+    }
     public function tours()
     {
         return $this->belongsToMany(

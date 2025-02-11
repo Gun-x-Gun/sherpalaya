@@ -8,6 +8,7 @@ use App\Enums\SearchType;
 use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorModelHelper;
 use App\Traits\EasySearch;
+use App\Traits\HasCategory;
 use App\Traits\HasInquiries;
 use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -25,6 +26,7 @@ class Trek extends Model implements CanBeEasySearched, CanBeInquiried
     use HasFactory;
     use HasInquiries;
     use HasTranslations;
+    use HasCategory;
 
     protected $fillable = [
         'title',

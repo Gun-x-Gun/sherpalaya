@@ -8,6 +8,7 @@ use App\Enums\SearchType;
 use App\Enums\TourType;
 use App\Helpers\CuratorModelHelper;
 use App\Traits\EasySearch;
+use App\Traits\HasCategory;
 use App\Traits\HasInquiries;
 use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -25,12 +26,14 @@ class Tour extends Model implements CanBeEasySearched, CanBeInquiried
     use HasFactory;
     use HasInquiries;
     use HasTranslations;
+    use HasCategory;
+
     protected $fillable = [
         'cover_image_id',
         'feature_image_id',
+        'category_id',
         'title',
         'description',
-        'type',
         'duration',
         'grade',
         'starting_point',
@@ -41,7 +44,6 @@ class Tour extends Model implements CanBeEasySearched, CanBeInquiried
         'is_featured',
     ];
     protected $casts = [
-        'type' => TourType::class,
         'costs_exclude' => 'array',
         'costs_include' => 'array',
     ];

@@ -9,6 +9,8 @@ use App\Enums\TrekDifficulty;
 use App\Helpers\CuratorModelHelper;
 use App\Traits\EasySearch;
 use App\Traits\HasInquiries;
+use App\Traits\HasCategories;
+use App\Traits\HasCategory;
 use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -24,6 +26,7 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
     use HasFactory;
     use HasInquiries;
     use HasTranslations;
+    use HasCategory;
 
 
 
@@ -32,6 +35,7 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
         'cover_image_id',
         'feature_image_id',
         'region_id',
+        'category_id',
         'description',
         'duration',
         'grade',

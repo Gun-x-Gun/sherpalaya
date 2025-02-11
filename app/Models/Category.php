@@ -4,6 +4,8 @@ namespace App\Models;
 
 use App\Enums\CategoryTypes;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Spatie\Translatable\HasTranslations;
 
 class Category extends Model
@@ -14,6 +16,7 @@ class Category extends Model
     protected $fillable = [
         'name',
         'type',
+        'order',
     ];
     protected $casts = [
         'type' => CategoryTypes::class
@@ -22,4 +25,13 @@ class Category extends Model
     public $translatable = [
         'name',
     ];
+
+    public function items(): HasMany
+    {
+        return match ($this->type) {
+            CategoryTypes::EXPEDITION => $this->hasMany(Expedition::class),
+            CategoryTypes::TREK => $this->hasMany(Trek::class),
+            CategoryTypes::TOUR => $this->hasMany(Tour::class),
+        };
+    }
 }
