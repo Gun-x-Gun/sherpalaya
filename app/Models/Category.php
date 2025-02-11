@@ -32,6 +32,7 @@ class Category extends Model
             CategoryTypes::EXPEDITION => $this->hasMany(Expedition::class),
             CategoryTypes::TREK => $this->hasMany(Trek::class),
             CategoryTypes::TOUR => $this->hasMany(Tour::class),
+            default => null,
         };
     }
 }
