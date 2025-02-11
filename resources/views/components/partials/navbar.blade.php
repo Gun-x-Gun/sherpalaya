@@ -115,7 +115,7 @@
                     {{-- expedition end --}}
 
                     {{-- peakstart --}}
-                    <div
+                    {{-- <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
                             class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content  text-lg uppercase "
@@ -159,7 +159,7 @@
                                 </div>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
                     {{-- peakend --}}
 
                     {{-- trek-start --}}
@@ -182,11 +182,11 @@
                                                 <a href="/treks#region-{{ $navRegion->id }}"
                                                     class="menu font-bold text-black">{{ $navRegion->name }}
                                                     Region</p></a>
-                                                <ul class="menu px-0">
+                                                <ul class="menu px-0 ">
                                                     <div class="flex flex-col gap-3">
                                                         @foreach ($navRegion->treks as $trek)
                                                             <div class="flex flex-col gap-0 items-start">
-                                                                <div class="text-primary hover:underline">
+                                                                <div class="text-primary hover:underline text-wrap">
                                                                     <a href="{{ route('show_trek', $trek->id) }}">
                                                                         {{ $trek->title }}
                                                                     </a>
@@ -218,7 +218,7 @@
                             Tours
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase rounded-none"
+                        {{-- <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase rounded-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown">
                             @foreach ($navTours as $type => $tours)
                                 @php
@@ -246,7 +246,7 @@
                                     </li>
                                 @endif
                             @endforeach
-                        </ul>
+                        </ul> --}}
                     </div>
                     {{-- tourend --}}
 
@@ -461,7 +461,7 @@
                 {{-- treks end --}}
 
                 {{-- peaks  --}}
-                <li class="nested-collapse-wrapper">
+                {{-- <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="peak-page-collapse"
                         data-collapse="#peak-page-collapse-menu">
                         <span class="icon-[mingcute--mountain-2-line] size-5"></span>
@@ -499,7 +499,7 @@
                             @endif
                         @endforeach
                     </ul>
-                </li>
+                </li> --}}
                 {{-- peaks end  --}}
 
                 {{-- tours  --}}
@@ -509,7 +509,7 @@
                         <span class="icon-[majesticons--map-marker-path-line] size-5""></span> Tours
                         <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
                     </a>
-                    <ul id="tour-page-collapse-menu"
+                    {{-- <ul id="tour-page-collapse-menu"
                         class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
                         aria-labelledby="tour-page-collapse">
                         @foreach ($navTours as $type => $tours)
@@ -538,7 +538,7 @@
                                 </li>
                             @endif
                         @endforeach
-                    </ul>
+                    </ul> --}}
                 </li>
                 {{-- tours end  --}}
 

@@ -114,7 +114,7 @@
             </div>
         </a>
 
-        <a href="/peaks" class=" col-span-2">
+        <a href="/" class=" col-span-2">
             <div class="card rounded-md image-full h-[25rem] w-full relative flex items-end  card-side group hover:shadow border"
                 data-aos="fade-down" data-aos-duration="900">
 

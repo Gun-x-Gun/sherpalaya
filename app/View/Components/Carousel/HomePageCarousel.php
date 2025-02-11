@@ -33,17 +33,17 @@ class HomePageCarousel extends Component
                 ];
             })->unique();
 
-        $peaks = Peak::with('featureImage')
-            ->where('is_featured', true)
-            ->get()
-            ->map(function (Peak $peak) {
-                return (object)[
-                    'id' => $peak->id,
-                    'title' => $peak->title,
-                    'image' => $peak->featureImage,
-                    'url' => "/peaks/" . $peak->id,
-                ];
-            })->unique();
+        // $peaks = Peak::with('featureImage')
+        //     ->where('is_featured', true)
+        //     ->get()
+        //     ->map(function (Peak $peak) {
+        //         return (object)[
+        //             'id' => $peak->id,
+        //             'title' => $peak->title,
+        //             'image' => $peak->featureImage,
+        //             'url' => "/peaks/" . $peak->id,
+        //         ];
+        //     })->unique();
 
         $expeditions = Expedition::with('featureImage')
             ->where('is_featured', true)
@@ -72,7 +72,7 @@ class HomePageCarousel extends Component
 
         $this->featuredData = collect([
             ...$expeditions->toArray(),
-            ...$peaks->toArray(),
+            // ...$peaks->toArray(),
             ...$treks->toArray(),
             // ...$tours->toArray(),
         ])->filter(function ($data) {

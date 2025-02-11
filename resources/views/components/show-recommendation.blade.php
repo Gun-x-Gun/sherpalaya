@@ -1,12 +1,12 @@
 @if (!empty($recommendations) && collect($recommendations)->flatten()->isNotEmpty())
 <div class="bg-transparent">
     <div class="h-8"></div>
-    <h5 class="card-title text-left" data-aos="fade-down" data-aos-duration="1200">
-        <span class=" uppercase font-semibold text-2xl text-primary rounded-full">
+    <h5 class="card-title text-center" data-aos="fade-down" data-aos-duration="1200">
+        <span class="uppercase font-medium text-3xl text-black rounded-full">
             REcommended
         </span>
     </h5>
-    <div class="h-4"></div>
+    <div class="h-8"></div>
     @foreach ($recommendations as $key => $recommendationDatas)
         <div class="bg-blue-100/20" data-aos="fade-down" data-aos-duration="1200">
             @if ($recommendationDatas->isNotEmpty())
@@ -22,13 +22,13 @@
                                             class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
                                     <a href="{{ $recommendation->url }}">
-                                        <div class="card-body absolute inset-0 justify-end">
+                                        <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center">
-                                                <h2 class="font-black text-white text-2xl uppercase">
+                                                <h2 class="font-black text-blue-50 text-3xl uppercase">
                                                     {{ $recommendation->title }}
                                                 </h2>
                                                 <h2
-                                                    class="font-black tracking-normal text-white line-clamp-2 text-2xl">
+                                                    class="font-black tracking-normal text-blue-50 line-clamp-2 text-2xl">
                                                     {{ $recommendation->duration }}
                                                 </h2>
                                             </div>
@@ -48,16 +48,16 @@
                                     <figure class="h-[20rem] w-full">
                                         <img src="{{ $recommendation->coverImage }}"
                                             alt="{{ $recommendation->title }} Cover Image"
-                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                            class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
                                     <a href="{{ $recommendation->url }}">
-                                        <div class="card-body absolute inset-0 justify-end">
+                                        <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center">
-                                                <h2 class="font-black text-white text-2xl uppercase">
+                                                <h2 class="font-black text-blue-50 text-2xl uppercase">
                                                     {{ $recommendation->title }}
                                                 </h2>
                                                 <h2
-                                                    class="font-black tracking-normal text-white line-clamp-2 text-2xl">
+                                                    class="font-black tracking-normal text-blue-50 line-clamp-2 text-2xl">
                                                     {{ $recommendation->duration }}
                                                 </h2>
                                             </div>
@@ -81,13 +81,13 @@
                                             class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
                                     <a href="{{ $recommendation->url }}">
-                                        <div class="card-body absolute inset-0 justify-end">
+                                        <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center">
-                                                <h2 class="font-normal text-white text-2xl uppercase">
+                                                <h2 class="font-normal text-blue-50 text-2xl uppercase">
                                                     {{ $recommendation->title }}
                                                 </h2>
                                                 <h2
-                                                    class="font-normal tracking-normal text-white line-clamp-2 text-2xl">
+                                                    class="font-normal tracking-normal text-blue-50 line-clamp-2 text-2xl">
                                                     {{ $recommendation->duration }}
                                                 </h2>
                                             </div>
@@ -112,13 +112,13 @@
                                                         class="transition-transform duration-500 group-hover:scale-110 h-44 object-cover brightness-75" />
                                                 </figure>
                                                 <a href="{{ $recommendation->url }}">
-                                                    <div class="card-body absolute inset-0 justify-end max-w-sm">
+                                                    <div class="card-body absolute inset-0 justify-center max-w-sm">
                                                         <div class="text-center">
-                                                            <h2 class="font-black text-white text-2xl uppercase">
+                                                            <h2 class="font-black text-blue-50 text-2xl uppercase">
                                                                 {{ $recommendation->title }}
                                                             </h2>
                                                             <h2
-                                                                class="font-black tracking-normal text-white line-clamp-2 text-2xl">
+                                                                class="font-black tracking-normal text-blue-50 line-clamp-2 text-2xl">
                                                                 {{ $recommendation->duration }}
                                                             </h2>
                                                         </div>
@@ -133,14 +133,14 @@
                             <!-- Previous Slide -->
                             <button type="button" class="carousel-prev">
                                 <span
-                                    class="hidden md:flex icon-[tabler--chevron-left] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                                    class="hidden md:flex icon-[tabler--chevron-left] size-8 text-blue-50 cursor-pointer rtl:rotate-180"></span>
                                 <span class="sr-only">Previous</span>
                             </button>
                             <!-- Next Slide -->
                             <button type="button" class="carousel-next">
                                 <span class="sr-only">Next</span>
                                 <span
-                                    class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                                    class="hidden md:flex icon-[tabler--chevron-right] size-8 text-blue-50 cursor-pointer rtl:rotate-180"></span>
                             </button>
                         </div>
                         <div class="h-2"></div>
@@ -165,13 +165,13 @@
                                                         class="transition-transform duration-500 group-hover:scale-110 h-44 object-cover brightness-75" />
                                                 </figure>
                                                 <a href="{{ $recommendation->url }}">
-                                                    <div class="card-body absolute inset-0 justify-end max-w-sm">
+                                                    <div class="card-body absolute inset-0 justify-center max-w-sm">
                                                         <div class="text-center">
-                                                            <h2 class="font-black text-white text-2xl uppercase">
+                                                            <h2 class="font-black text-blue-50 text-2xl uppercase">
                                                                 {{ $recommendation->title }}
                                                             </h2>
                                                             <h2
-                                                                class="font-black tracking-normal text-white line-clamp-2 text-2xl">
+                                                                class="font-black tracking-normal text-blue-50 line-clamp-2 text-2xl">
                                                                 {{ $recommendation->duration }}
                                                             </h2>
                                                         </div>
@@ -186,14 +186,14 @@
                             <!-- Previous Slide -->
                             <button type="button" class="carousel-prev">
                                 <span
-                                    class="hidden md:flex icon-[tabler--chevron-left] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                                    class="hidden md:flex icon-[tabler--chevron-left] size-8 text-blue-50 cursor-pointer rtl:rotate-180"></span>
                                 <span class="sr-only">Previous</span>
                             </button>
                             <!-- Next Slide -->
                             <button type="button" class="carousel-next">
                                 <span class="sr-only">Next</span>
                                 <span
-                                    class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
+                                    class="hidden md:flex icon-[tabler--chevron-right] size-8 text-blue-50 cursor-pointer rtl:rotate-180"></span>
                             </button>
                         </div>
                         <div class="h-2"></div>

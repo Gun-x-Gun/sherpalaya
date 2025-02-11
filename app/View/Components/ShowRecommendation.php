@@ -54,7 +54,7 @@ class ShowRecommendation extends Component
 
         $treksQuery = DestinationTrek::whereIn('destination_id', $destinationIds);
         $expeditionsQuery = DestinationExpedition::whereIn('destination_id', $destinationIds);
-        $peaksQuery = DestinationPeak::whereIn('destination_id', $destinationIds);
+        // $peaksQuery = DestinationPeak::whereIn('destination_id', $destinationIds);
         $toursQuery = DestinationTour::whereIn('destination_id', $destinationIds);
         $servicesQuery = DestinationService::whereIn('destination_id', $destinationIds);
 
@@ -65,9 +65,9 @@ class ShowRecommendation extends Component
             $expeditionsQuery = $expeditionsQuery->where('expedition_id', '<>', $this->recommendFor->id);
         }
 
-        if ($this->recommendFor instanceof Peak) {
-            $peaksQuery = $peaksQuery->where('peak_id', '<>', $this->recommendFor->id);
-        }
+        // if ($this->recommendFor instanceof Peak) {
+        //     $peaksQuery = $peaksQuery->where('peak_id', '<>', $this->recommendFor->id);
+        // }
         if ($this->recommendFor instanceof Tour) {
             $toursQuery = $toursQuery->where('tour_id', '<>', $this->recommendFor->id);
         }
@@ -77,7 +77,7 @@ class ShowRecommendation extends Component
 
         $trekIds = $treksQuery->get(['id'])->pluck('id');
         $expeditionIds = $expeditionsQuery->get(['id'])->pluck('id');
-        $peakIds = $peaksQuery->get(['id'])->pluck('id');
+        // $peakIds = $peaksQuery->get(['id'])->pluck('id');
 
         $tourIds = $toursQuery->get(['id'])->pluck('id');
         $serviceIds = $servicesQuery->get(['id'])->pluck('id');
@@ -95,9 +95,9 @@ class ShowRecommendation extends Component
         $expeditions = Expedition::with('coverImage')
             ->whereIn('id', $expeditionIds)
             ->get();
-        $peaks = Peak::with('coverImage')
-            ->whereIn('id', $peakIds)
-            ->get();
+        // $peaks = Peak::with('coverImage')
+        //     ->whereIn('id', $peakIds)
+        //     ->get();
 
         return collect([
             'Treks' => $treks
@@ -141,20 +141,20 @@ class ShowRecommendation extends Component
 
                     ];
                 }),
-            'Peaks' => $peaks
-                ->filter(function (Peak $peak) {
-                    return !is_null($peak->coverImage);
-                })
-                ->map(function (Peak $peak) {
-                    return (object)[
-                        'title' => $peak->title,
-                        'duration' => $peak->duration . ' Days',
-                        'description' => Str::words($peak->description),
-                        'url' => '/peaks/' . $peak->id,
-                        'coverImage' => $peak->coverImage->url,
+            // 'Peaks' => $peaks
+            //     ->filter(function (Peak $peak) {
+            //         return !is_null($peak->coverImage);
+            //     })
+            //     ->map(function (Peak $peak) {
+            //         return (object)[
+            //             'title' => $peak->title,
+            //             'duration' => $peak->duration . ' Days',
+            //             'description' => Str::words($peak->description),
+            //             'url' => '/peaks/' . $peak->id,
+            //             'coverImage' => $peak->coverImage->url,
 
-                    ];
-                }),
+            //         ];
+            //     }),
             'Services' => $services
                 ->filter(function (Service $service) {
                     return !is_null($service->coverImage);
@@ -177,7 +177,7 @@ class ShowRecommendation extends Component
         $order = [
             'Expeditions',
             'Treks',
-            'Peaks',
+            // 'Peaks',
             'Tours',
             'Services',
         ];
@@ -185,7 +185,7 @@ class ShowRecommendation extends Component
         $top = match (get_class($this->recommendFor)) {
             "App\Models\Expedition" => "Expeditions",
             "App\Models\Trek" => "Treks",
-            "App\Models\Peak" => "Peaks",
+            // "App\Models\Peak" => "Peaks",
             "App\Models\Tour" => "Tours",
             "App\Models\Service" => "Services",
         };

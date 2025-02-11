@@ -22,7 +22,7 @@ class Navbar extends Component
     ) {
         $this->navRegions = Region::with([
             'treks',
-            'peaks',
+            // 'peaks',
             'expeditions',
         ])->get();
         $this->navTours = Tour::all()->groupBy('type');
