@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/10">
+    <div class="bg-blue-100/10 font-oswald">
         <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1">
             <div id="scrollspy-scrollable-parent-1 overflow-x-hidden">
 

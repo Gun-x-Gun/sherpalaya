@@ -18,18 +18,17 @@
     }
 </style>
 
-<div class="font-oswald">
+<div class="font-body">
     <div class="card-header  px-0" data-aos="fade-down" data-aos-duration="1200">
-        <h5 class="card-title text-secondary uppercase font-semibold tracking-tighter text-3xl">
+        <h5 class="card-title text-black font-oswald uppercase font-medium text-left tracking-tighter text-3xl">
             At a glimpse
         </h5>
     </div>
 
-
     {{-- At a glimpse --}}
     <div class="sm:grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 overflow-x-hidden  gap-4">
         @foreach ($expedition->destinations->slice(0, 4) as $destination)
-            <div class="card w-full bg-blue-100/60 at-a-glimpse my-2 " data-aos="fade-down" data-aos-duration="1200">
+            <div class="card w-full bg-blue-100/50 at-a-glimpse my-2 " data-aos="fade-down" data-aos-duration="1200">
                 {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}
                 <div>
                     <div id="limited-destiinations-images"
@@ -44,7 +43,7 @@
                                                 <figure>
                                                     <img src="{{ $destinationImage?->url ?? asset('/photos/banner.jpg') }}"
                                                         alt="{{ $destination->name }} Cover Image"
-                                                        class="h-44 object-cover" />
+                                                        class="h-44 object-cover brightness-75" />
                                                 </figure>
                                             </span>
                                         </div>
@@ -78,15 +77,15 @@
                 {{-- @endif --}}
 
                 <div class="card-body px-2 pt-2 bg-transparent">
-                    <h5 class="card-title mb-1 line-clamp-2 uppercase text-lg text-blue-800 font-bold">
+                    <h5 class="card-title mb-1 line-clamp-2 uppercase text-lg text-black font-medium">
                         {{ $destination->name }}
                     </h5>
 
                     <div class="justify-start flex flex-col items-start gap-2">
-                        <p class="text-slate-700 uppercase items-center badge badge-warning  px-1 py-0 text-xs">
+                        <p class="text-black uppercase items-center badge badge-warning  px-1 py-0 text-xs">
                             {{ $destination->region->name }} Region
                         </p>
-                        <p class="text-slate-800 tracking-wide text-lg font-light">
+                        <p class="text-black tracking-wide text-lg/6 font-light">
                             {{ Str::words($destination->description, 50) }}
                         </p>
                     </div>

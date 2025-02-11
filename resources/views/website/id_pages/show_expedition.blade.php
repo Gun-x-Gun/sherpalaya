@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/10">
+    <div class="bg-blue-100/10 font-oswald">
         <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1" class="">
             <div id="scrollspy-scrollable-parent-1" class="">
                 {{-- topsection --}}
@@ -28,7 +28,9 @@
                     <div class="xl:mx-32 mx-4 text-left">
 
                         {{-- description --}}
-                        <x-show-expedition.expedition-description :expedition="$expedition" />
+                        <x-show-expedition.expedition-description 
+                            :expedition="$expedition" 
+                        />
                         {{-- end description --}}
 
                         <div class="h-4  "></div>

@@ -5,14 +5,14 @@
 
             </div>
             <div class="card-header  pb-4  px-2">
-                <h5 class="card-title text-secondary uppercase font-semi-bold text-2xl" data-aos="fade-down" data-aos-duration="1200">
+                <h5 class="card-title text-black uppercase font-medium text-3xl" data-aos="fade-down" data-aos-duration="1200">
                     Destinations
                 </h5>
             </div>
 
-            <div class="sm:grid sm:grid-cols-2 md:grid-cols-2 flex flex-col gap-2 w-full md:px-2">
+            <div class="sm:grid sm:grid-cols-2 md:grid-cols-2 flex flex-col gap-2 w-full md:px-2 font-body">
                 @foreach ($expedition->destinations as $destination)
-                    <div class="card w-full bg-blue-100/60 at-a-glimpse my-2 " data-aos="fade-down" data-aos-duration="1200">
+                    <div class="card w-full bg-blue-100/50 at-a-glimpse my-2 " data-aos="fade-down" data-aos-duration="1200">
                         {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}
                         <div>
                             <div id="limited-destiinations-images"
@@ -27,7 +27,7 @@
                                                         <figure>
                                                             <img src="{{ $destinationImage?->url ?? asset('/photos/banner.jpg') }}"
                                                                 alt="{{ $destination->name }} Cover Image"
-                                                                class="h-44 object-cover" />
+                                                                class="h-44 object-cover brightness-75" />
                                                         </figure>
                                                     </span>
                                                 </div>
@@ -63,15 +63,15 @@
                         {{-- @endif --}}
 
                         <div class="card-body px-2 pt-2 bg-transparent">
-                            <h5 class="card-title mb-1 line-clamp-2 uppercase text-lg text-blue-800 font-bold">
+                            <h5 class="card-title mb-1 line-clamp-2 uppercase text-lg font-medium">
                                 {{ $destination->name }}
                             </h5>
 
                             <div class="justify-start flex flex-col items-start gap-2">
-                                <p class="text-slate-700 uppercase items-center badge badge-warning  px-1 py-0 text-xs">
+                                <p class="text-black uppercase items-center badge badge-warning  px-1 py-0 text-xs">
                                     {{ $destination->region->name }} Region
                                 </p>
-                                <p class="text-slate-800 tracking-tighter">
+                                <p class="text-black tracking-wide text-lg/6 font-light">
                                     {{ Str::words($destination->description, 50) }}
                                 </p>
                             </div>

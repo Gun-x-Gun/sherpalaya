@@ -1,12 +1,12 @@
 @if ($trek->images->isNotEmpty())
-    <div class="bg-blue-100/20">
-        <div id="gallery" class="card-header  pb-4  px-0">
+    <div class="bg-blue-100/50">
+        <div id="gallery" class="card-header pb-4 px-0 ">
             <div class="h-6">
             </div>
-            <h5 class="card-title text-primary uppercase font-semibold text-2xl px-2" data-aos="fade-down" data-aos-duration="1200">
+            <h5 class="card-title text-center pb-2 text-black uppercase font-medium tracking-wide text-3xl px-2" data-aos="fade-down" data-aos-duration="1200">
                 Gallery
             </h5>
-            <div class="h-4">
+            <div class="h-6">
             </div>
             <div id="all-treks" class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1 px-2 skeleton animate-pulse">
                 @foreach ($trek->images->slice(0, 8) as $galleryImage)
@@ -28,7 +28,7 @@
                     <div class="modal-dialog overlay-open:opacity-100 max-w-[100vw] ">
                         <div class="modal-content h-full max-h-[100vh] justify-center  bg-transparent backdrop-blur-sm">
                             <div class="modal-header">
-                                <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3"
+                                <button type="button" class="btn btn-text btn-circle btn-sm absolute  end-3 top-3"
                                     aria-label="Close" data-overlay="#trek-gallery-modal">
                                     <span class="icon-[tabler--x] size-6 p-0 m-0"></span>
                                 </button>

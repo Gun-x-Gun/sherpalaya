@@ -1,7 +1,8 @@
-<div class="card sm:w-full shadow-sm shadow-slate-300 bg-blue-100/10" data-aos="fade-down" data-aos-duration="1200">
-    <div class="card-body gap-2 text-slate-700 px-2 capitalize text-preety lg:text-justify" >
-        <p class="first-line:uppercase text-balance tracking-tighter align-top text-base/8" >
+<div class="h-4"></div>
+<div class="card sm:w-full shadow-sm shadow-slate-300 bg-blue-100/20 font-body">
+    <div class="card-body gap-2 text-gray-700 px-2  text-preety">
+        <div class="align-top text-black text-lg/8 tracking-wide  font-light">
             {!! $trek->description !!}
-        </p>
+        </div>
     </div>
 </div>

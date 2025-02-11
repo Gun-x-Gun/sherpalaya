@@ -1,13 +1,14 @@
 <x-website-layout>
     {{-- <x-trek.trek-landing-page /> --}}
-    <div class="bg-blue-100/50">
+    <div class="bg-blue-100/10 font-oswald">
         <div class="card--rounded-none image-full bg-blue-100/50 h-[80vh] relative">
             <figure class="h-[80vh] w-full">
                 <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->trek_page_cover_image_id ?? null" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
-                <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden" data-aos="fade-down" data-aos-duration="1200">
+                <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden"
+                    data-aos="fade-down" data-aos-duration="1200">
                     <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold">
                         Explore
                     </h5>
@@ -21,7 +22,7 @@
             </div>
         </div>
 
-        <div class="bg-blue-100/50">
+        <div class="bg-blue-100/30">
             <x-breadcrumb :breadcrumbs="[
                 [
                     'name' => 'Home',
@@ -32,9 +33,8 @@
                 ],
             ]" />
             <div class="h-4 "></div>
-            <div class="xl:mx-32 mx-4 text-left" data-aos="fade-down" data-aos-duration="1200">
-                <p
-                    class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
+            <div class="xl:mx-32 mx-4 text-left">
+                <p class="text-md text-left  mt-2  text-stone-600 font-body text-xl/7 font-light ">
                     {{ $pageSetting->trek_page_content }}
                 </p>
             </div>
@@ -49,11 +49,11 @@
             @foreach ($treksRegion as $trekRegion)
                 @if ($trekRegion->treks->isNotEmpty())
                     <div id="region-{{ $trekRegion->id }}">
-                        <h5
-                            class="card-title mb-2.5 line-clamp-2 uppercase text-xl md:text-2xl text-primary  lg:text-center font-semibold" data-aos="fade-down" data-aos-duration="1200">
+                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl md:text-center md:text-3xl text-black  "
+                            data-aos="fade-down" data-aos-duration="1200">
                             {{ $trekRegion->name }} Region Packages
                         </h5>
-                        <div class="h-2"></div>
+                        <div class="h-4 md:h-8"></div>
                         <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3  flex-col gap-4">
                             @foreach ($trekRegion->treks as $trek)
                                 <div class="card w-full " data-aos="fade-down" data-aos-duration="1200">
@@ -110,16 +110,15 @@
                                         </div>
                                     </div>
 
-                                    <div class="card-body px-2 pt-2 bg-blue-100 ">
-                                        <a href="{{ route('show_trek', $trek->id) }}" >
+                                    <div class="card-body px-2 pt-2 bg-blue-100/50 group">
+                                        <a href="{{ route('show_trek', $trek->id) }}">
                                             <h5
-                                                class="card-title mb-1 line-clamp-2 uppercase text-lg tracking-wider text-blue-800 font-semibold">
+                                                class="card-title mb-1 line-clamp-2 uppercase text-lg tracking-normal text-stone-700 font-semibold group-hover:underline group-hover:text-warning">
                                                 {{ $trek->title }}</h5>
                                         </a>
-                                        <div class="justify-start flex flex-row items-center  gap-2">
-                                            <span
-                                                class="icon-[solar--calendar-outline] size-5 font-extrabold text-slate-800"></span>
-                                            <span class="text-slate-800 uppercase items-center font-semibold ">
+                                        <div class="justify-start flex flex-row items-center  gap-2 text-stone-700">
+                                            <span class="icon-[solar--calendar-outline] size-5 font-extrabold "></span>
+                                            <span class=" uppercase items-center font-semibold tracking-wide">
                                                 {{ $trek->duration . ' days' }}
                                             </span>
                                         </div>

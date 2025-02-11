@@ -1,5 +1,5 @@
 <x-website-layout>
-    <section class="bg-blue-100/10" id="contact">
+    <section class="bg-blue-100/10 font-oswald" id="contact">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
@@ -29,18 +29,19 @@
             ],
         ]" />
         <div class="xl:mx-32 mx-4">
+            <div class="h-8"></div>
             <div class="">
-                <div class="mb-6 text-center sm:text-center ">
-                    <h2 class="font-heading  font-bold tracking-tight text-primary uppercase text-2xl md:text-4xl ">
+                <div class=" text-center sm:text-center tracking-normal">
+                    <h2 class="font-semibold text-black capitalize text-3xl md:text-4xl ">
                         Get in Touch
                     </h2>
-                    <p class=" text-xl text-gray-600">
-                    </p>
                 </div>
+                <div class=" md:h-10"></div>
+
                 <div class="flex items-stretch justify-center ">
                     <div class="grid md:grid-cols-2">
                         <div class="h-full pr-4 ">
-                            <p class="mt-3 mb-12 text-base tracking-tighter text-gray-800" >
+                            <p class="mt-3 mb-12 font-body text-xl/7  tracking-tighter text-gray-800">
                                 {{ $contactUsSetting->content }}
                             </p>
                             <ul class="mb-6 md:mb-0">
@@ -57,8 +58,9 @@
                                         </svg>
                                     </div>
                                     <div class="ml-4 mb-4">
-                                        <h3 class="mb-2 text-base font-medium leading-6 text-gray-900 uppercase">Our Address</h3>
-                                        <p class="text-gray-600 text-base">
+                                        <h3 class="mb-2 text-lg font-medium leading-6 text-gray-900 uppercase">Our
+                                            Address</h3>
+                                        <p class="text-gray-600 text-lg tracking-tighter font-body">
                                             {{ $contactUsSetting->address }}
                                         </p>
                                         {{-- <p class="text-gray-600">New York, EEUU</p> --}}
@@ -78,8 +80,9 @@
                                         </svg>
                                     </div>
                                     <div class="ml-4 mb-4">
-                                        <h3 class="mb-2 text-base uppercase font-medium leading-6 text-gray-900">Contact</h3>
-                                        <p class="text-gray-600">
+                                        <h3 class="mb-2 text-lg uppercase font-medium leading-6 text-gray-900">Contact
+                                        </h3>
+                                        <p class="text-gray-600 text-lg tracking-wide">
                                             {{ $contactUsSetting->contact }}
                                         </p>
                                         {{-- <p class="text-gray-600">Mail: tailnext@gmail.com</p> --}}
@@ -96,16 +99,17 @@
                                         </svg>
                                     </div>
                                     <div class="ml-4 mb-4">
-                                        <h3 class="mb-2 text-base font-medium leading-6 text-gray-900">Working hours</h3>
-                                        <p class="text-gray-600">{{ $contactUsSetting->working_hour }}
+                                        <h3 class="mb-2 text-lg uppercase font-medium leading-6 text-gray-900">Working hours
+                                        </h3>
+                                        <p class="text-gray-600 text-lg tracking-wide">{{ $contactUsSetting->working_hour }}
                                         </p>
                                         {{-- <p class="text-gray-600">Saturday &amp; Sunday: 08:00 - 12:00</p> --}}
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="card h-fit max-w-6xl p-5 md:px-12 bg-blue-100/40" id="form ">
-                            <h2 class="mb-2 text-2xl font-bold uppercase text-blue-600">Ready to Get Started?</h2>
+                        <div class="card h-fit max-w-6xl p-5 md:px-12 bg-blue-100/30" id="form ">
+                            <h2 class="mb-2 text-2xl font-bold uppercase text-gray-700">Ready to Get Started?</h2>
                             @if (isset($contactUsSubmitted))
                                 @if ($contactUsSubmitted === true)
                                     <div class="alert alert-outline alert-success mb-2" role="alert">
@@ -150,7 +154,7 @@
                                 </div>
                                 <div class="text-center">
                                     <button type="submit"
-                                        class="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send
+                                        class="w-full bg-blue-800 text-white px-6 py-3 font-xl tracking-wide uppercase rounded-md sm:mb-0">Send
                                         Message</button>
                                 </div>
                             </form>
@@ -158,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <div class="h-4"></div>
+            <div class="h-12"></div>
         </div>
     </section>
 </x-website-layout>

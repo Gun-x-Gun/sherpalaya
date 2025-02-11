@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/30">
+    <div class="bg-blue-100/10 font-oswald">
         <div class="card--rounded-none image-full bg-blue-100/50 h-[80vh] relative">
             <figure class="h-[80vh] w-full">
                 <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->tour_page_cover_image_id ?? null" :fallback="asset('/photos/banner.jpg')"
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="bg-blue-100/50">
+        <div class="bg-blue-100/20">
             <x-breadcrumb :breadcrumbs="[
                 [
                     'name' => 'Home',
@@ -30,18 +30,15 @@
                     'name' => 'Tours',
                 ],
             ]" />
-            <div class="h-4 "></div>
+            <div class="h-4"></div>
             <div class="xl:mx-32 mx-4 text-left">
                 <p
-                    class="text-base text-left  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light" data-aos="fade-down" data-aos-duration="1200">
+                    class="text-xl/7 text-left  text-stone-600 font-light font-body">
                     {{ $pageSetting->tour_page_content }}
                 </p>
             </div>
-            <div class="h-8"></div>
+            <div class="h-14"></div>
         </div>
-
-
-
 
         {{-- Showing <strong>{{ $tourRegion->tours->count() }}</strong> --}}
         <div class="xl:mx-32 mx-4">
@@ -52,10 +49,10 @@
                 <div >
                     <div class="h-8"></div>
                     @if ($tours->isNotEmpty())
-                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-xl md:text-2xl lg:text-center text-primary font-bold" data-aos="fade-down" data-aos-duration="1200">
+                        <h5 class="card-title mb-2.5 line-clamp-2 uppercase text-2xl md:text-3xl lg:text-center text-black font-semibold" data-aos="fade-down" data-aos-duration="1200">
                             {{ $type }} Tours Packages
                         </h5>
-                        <div class="h-2"></div>
+                        <div class="h-4"></div>
                         <div id="type-{{$type}}" class="hidden md:grid md:grid-cols-2 lg:grid-cols-3  gap-4">
                             @foreach ($tours as $tour)
                                 <div class="card w-full " data-aos="fade-down" data-aos-duration="1200">
@@ -113,7 +110,7 @@
 
                                     </div>
 
-                                    <div class="card-body px-2 pt-2 bg-blue-100/30 ">
+                                    <div class="card-body px-2 pt-2 bg-blue-100/50 ">
                                         <a href="{{ route('show_tour', $tour->id) }}">
                                             <h5
                                                 class="card-title mb-1 line-clamp-2 uppercase text-lg text-blue-700 font-semibold">
