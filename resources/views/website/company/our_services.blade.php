@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/10 font-oswald">
+    <div class="bg-blue-100/10 font-body">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
@@ -31,22 +31,22 @@
             ],
         ]" />
 
-        <div class="xl:mx-32 mx-4 text-left" data-aos="fade-down" data-aos-duration="1500">
-            <div class="md:px-8 flex flex-col justify-center items-center"data-aos="fade-down" data-aos-duration="1200">
-                <div class="h-8"></div>
-                <h5
-                    class="text-4xl md:text-5xl font-oswald  capitalize tracking-tighter text-black text-left md:text-center  ">
-                    a helping hand
+        <div class="xl:mx-32 mx-4 text-left">
+            <div class="h-8"></div>
+
+            <div class="md:px-8 flex flex-col justify-center items-center">
+                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-center md:text-center"
+                    data-aos="fade-down" data-aos-duration="1200">
+                    A helping hand
                 </h5>
                 <p
-                    class="text-xl/7 mt-6 text-preety text-slate-800 text-center 
+                    class="text-xl/7 mt-6 text-preety text-black text-center 
                              font-light font-body lg:w-[80%] tracking-wide">
-                    {{ $pageSetting->service_page_content }}
+                    {{ $pageSetting->about_us_page_content }}
                 </p>
-                <div class="h-6 md:h-12"></div>
+                <div class="h-10 md:h-12"></div>
             </div>
         </div>
-        <div class="h-10 "></div>
 
         {{-- Showing <strong>{{ $serviceDestination->services->count() }}</strong> --}}
         <div class="xl:mx-32 mx-4">
@@ -61,11 +61,13 @@
                         </a>
                         <div class="card-body group px-2 py-4  bg-blue-100/40 ">
                             <a href="{{ route('show_service', $serviceData->service->id) }}">
-                                <h5 class="card-title line-clamp-2 mb-2 uppercase text-lg text-stone-700 font-oswald tracking-tight  group-hover:underline  decoration-6 decoration-warning   ">
+                                <h5
+                                    class="card-title line-clamp-2 mb-2 uppercase text-lg text-black tracking-tight  group-hover:underline  decoration-4 decoration-warning">
                                     {{ $serviceData->service->title }}</h5>
                             </a>
                             <div class="justify-start flex flex-col  gap-2 pb-0">
-                                <span class="items-center text-stone-700 break-all text-lg/6 font-body font-light line-clamp-4">
+                                <span
+                                    class="items-center text-black break-all text-lg/7 font-body font-light  line-clamp-4">
                                     {{ $serviceData->service->description }}
                                 </span>
                             </div>

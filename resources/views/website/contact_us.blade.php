@@ -1,5 +1,5 @@
 <x-website-layout>
-    <section class="bg-blue-100/10 font-oswald" id="contact">
+    <section class="bg-blue-100/10 font-body" id="contact">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"

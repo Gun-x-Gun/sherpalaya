@@ -1,13 +1,13 @@
 <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');"
-    class="bg-cover bg-center w-full  object-top font-oswald" >
+    class="bg-cover bg-center w-full  object-top font-body">
     <div class="backdrop-blur-md">
         <div class="mx-4 xl:mx-32">
             <div class="h-10"></div>
-            <footer class="footer" data-aos="fade-down" data-aos-duration="1200">
+            <footer class="footer">
                 <div class="gap-6">
-                    <a class="link text-base-content link-neutral texl-lg font-semibold no-underline"
-                        href="/home">
-                        <div class="flex items-center gap-4 text-xl uppercase font-semibold text-blue-100  text-wrap">
+                    <a class="link text-base-content link-neutral texl-lg font-semibold no-underline" href="/home">
+                        <div class="flex items-center gap-4 text-xl uppercase font-semibold text-blue-100  text-wrap"
+                            data-aos="fade-down" data-aos-duration="1200">
                             <x-curator-glider alt="Sherpalaya Logo" class="h-6 w-6" :media="$companySetting->company_logo_id" :fallback="asset('/photos/banner.jpg')"
                                 loading="lazy" />
                             <span>{{ $companySetting->company_name }}</span>
@@ -35,17 +35,17 @@
 
                 </div>
                 <nav class="text-base-content capitalize">
-                    <h6 class="footer-title font-bold text-blue-50 uppercase">Activities</h6>
+                    <h6 class="footer-title font-bold text-blue-50 uppercase">Adventures</h6>
                     <a href="/expeditions" class="link link-hover text-blue-100 capitalize">Expeditions</a>
-                    <a href="/peaks" class="link link-hover text-blue-100">Peaks</a>
+                    <a href="/services" class="link link-hover text-blue-100">Services</a>
                     <a href="/treks" class="link link-hover text-blue-100">treks</a>
-                    <a href="/tours" class="link link-hover text-blue-100">Tours</a>
+                    <a href="/tours" class="link link-hover text-blue-100">Activities</a>
                 </nav>
                 <nav class="text-base-content capitalize">
                     <h6 class="footer-title font-bold text-blue-50 uppercase">Company</h6>
                     <a href="/about_us" class="link link-hover text-blue-100">About</a>
                     <a href="/sherpas" class="link link-hover text-blue-100">Our Sherpas</a>
-                    <a href="/sherpas" class="link link-hover text-blue-100">Services</a>
+                    <a href="/" class="link link-hover text-blue-100">Certificates</a>
 
                 </nav>
                 <nav class="text-base-content">
@@ -59,16 +59,20 @@
                         <span>Follow us</span>
                     </div>
                     <div class="flex gap-4 text-blue-300">
-                        <a href="{{ $companySetting->facebook_url }}" target="_blank" class="link link-animated" aria-label="Facebook Link">
+                        <a href="{{ $companySetting->facebook_url }}" target="_blank" class="link link-animated"
+                            aria-label="Facebook Link">
                             <span class="icon-[tabler--brand-facebook] size-6"></span>
                         </a>
-                        <a href="{{ $companySetting->instagram_url }}" target="_blank" class="link link-animated" aria-label="Instagram Link">
+                        <a href="{{ $companySetting->instagram_url }}" target="_blank" class="link link-animated"
+                            aria-label="Instagram Link">
                             <span class="icon-[tabler--brand-instagram] size-6"></span>
                         </a>
-                        <a href="{{ $companySetting->youtube_url }}" target="_blank" class="link link-animated" aria-label="Youtube Link">
+                        <a href="{{ $companySetting->youtube_url }}" target="_blank" class="link link-animated"
+                            aria-label="Youtube Link">
                             <span class="icon-[tabler--brand-youtube] size-6"></span>
                         </a>
-                        <a href="{{ $companySetting->tiktok_url }}" target="_blank" class="link link-animated" aria-label="Tiktok Link">
+                        <a href="{{ $companySetting->tiktok_url }}" target="_blank" class="link link-animated"
+                            aria-label="Tiktok Link">
                             <span class="icon-[tabler--brand-tiktok] size-6"></span>
                         </a>
                     </div>
@@ -86,9 +90,9 @@
                     {{-- </div> --}}
                 </nav>
             </footer>
-            <footer class="footer footer-center bg-transparent rounded " >
+            <footer class="footer footer-center bg-transparent rounded ">
                 <div class="h-2"></div>
-                <aside class="text-blue-300 xl:mb-8" >
+                <aside class="text-blue-300 xl:mb-8">
                     <p>Copyright © 2025 - All right reserved by Sherpalaya</p>
                 </aside>
                 <div class="h-10 xl:hidden"></div>

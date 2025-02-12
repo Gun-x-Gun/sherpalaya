@@ -35,13 +35,12 @@
                 ],
             ]" />
 
-            <div class="xl:mx-32 mx-4 " data-aos="fade-down" data-aos-duration="1500">
+            <div class="xl:mx-32 mx-4 ">
                 <div class="h-8"></div>
 
-                <div class="md:px-8 flex flex-col justify-center items-center"data-aos="fade-down"
-                    data-aos-duration="1200">
-                    <h5
-                        class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-center md:text-center  ">
+                <div class="md:px-8 flex flex-col justify-center items-center">
+                    <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-center md:text-center"
+                        data-aos="fade-down" data-aos-duration="1200">
                         Our Passion, Your Adventure
                     </h5>
                     <p
@@ -60,7 +59,8 @@
         {{-- Showing <strong>{{ $expeditionRegion->expeditions->count() }}</strong> --}}
         <div class="xl:mx-32 mx-4">
             <div class="h-10"></div>
-            <h1 class="text-3xl md:text-4xl tracking-normal font-body  text-left line-clamp-2 text-black font-medium uppercase ">
+            <h1 class="text-3xl md:text-4xl tracking-normal font-body  text-left line-clamp-2 text-black font-medium uppercase"
+                data-aos="fade-down" data-aos-duration="1200">
                 Frequently Asked Questions
             </h1>
             <div class="h-8"></div>
@@ -69,8 +69,7 @@
                     <div class="accordion-item {{ $index == 0 ? 'active' : '' }}" id="faq-{{ $faq->id }}">
                         <button
                             class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start bg-blue-100/40 font-body tracking-tight text-xl font-normal"
-                            aria-controls="faq-{{ $faq->id }}-collapse" aria-expanded="true" data-aos="fade-down"
-                            data-aos-duration="1200">
+                            aria-controls="faq-{{ $faq->id }}-collapse" aria-expanded="true" >
                             <span
                                 class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
                             <span
@@ -79,8 +78,7 @@
                         </button>
                         <div id="faq-{{ $faq->id }}-collapse"
                             class="accordion-content w-full overflow-hidden transition-[height] duration-300 bg-blue-100/40"
-                            aria-labelledby="faq-{{ $faq->id }}" role="region" data-aos="fade-down"
-                            data-aos-duration="1200">
+                            aria-labelledby="faq-{{ $faq->id }}" role="region" >
                             <div class="px-5 pb-4 ">
                                 <p class=" font-light text-lg/7 tracking-wide">
                                     {{ $faq->answer }}

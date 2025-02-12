@@ -2,9 +2,9 @@
     <div class="bg-blue-100/40">
         <div class="xl:mx-32 mx-4 font-body">
             <div class="h-10 md:h-20"></div>
-            <div class="md:px-4"data-aos="fade-down" data-aos-duration="1200">
-                <h5
-                    class="text-3xl md:text-4xl font-oswald font-medium  line-clamp-2 uppercase tracking-wider text-black text-left md:text-left  ">
+            <div class="md:px-4">
+                <h5 class="text-3xl md:text-4xl font-oswald font-medium  line-clamp-2 uppercase tracking-wider text-black text-left md:text-left"
+                    data-aos="fade-down" data-aos-duration="800">
                     Expeditions</h5>
                 <p
                     class="text-xl/7 mt-4 text-preety text-black lg:text-left 
@@ -17,8 +17,8 @@
                 @foreach ($featuredExpeditions->slice(0, 4) as $featuredExpedition)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
-                        <div class="card rounded-none px-4 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-100"
-                            data-aos="fade-down" data-aos-duration="1200">
+                        <div
+                            class="card rounded-none px-4 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-100">
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <h5
                                     class=" text-2xl  line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning   group-hover:underline-offset-4">
@@ -36,30 +36,29 @@
                                 </button>
                             </a>
                         </div>
-                        <div class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-2 "
-                            data-aos="fade-down" data-aos-duration="1200">
+                        <div
+                            class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-2 ">
                             <figure class="h-[28rem] w-full ">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
-                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
+                                    class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <div class="card-body absolute inset-0 justify-center md:justify-center">
-                                    <div class="text-center ">
+                                    <div class="text-center " data-aos="fade-down" data-aos-duration="800">
                                         <h2
-                                            class="font-extrabold font-oswald text-blue-50 text-3xl md:text-3xl uppercase">
+                                            class="font-normal tracking-wide font-oswald text-blue-50 text-3xl md:text-3xl uppercase group-hover:text-warning">
                                             {{ $featuredExpedition->title }}
                                         </h2>
                                         <h2
-                                            class="font-extrabold font-oswald tracking-wide text-blue-50 uppercase line-clamp-2 text-3xl md:text-3xl">
+                                            class="font-normal tracking-wide font-oswald text-blue-50 uppercase line-clamp-2 text-3xl md:text-3xl group-hover:text-warning">
                                             {{ $featuredExpedition->highest_altitude }} m
                                         </h2>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start "
-                            data-aos="fade-down" data-aos-duration="1200">
+                        <div class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start ">
                             <div
                                 class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
@@ -74,30 +73,30 @@
                         </div>
                     @else
                         {{-- Second Iteration: col-span-2 on the text and col-span-1 on the image --}}
-                        <div class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-2"
-                            data-aos="fade-down" data-aos-duration="1200">
+                        <div
+                            class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-2">
                             <figure class="h-[28rem] w-full">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
-                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
+                                    class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <div class="card-body absolute inset-0 justify-center md:justify-center">
-                                    <div class="text-center ">
+                                    <div class="text-center " data-aos="fade-down" data-aos-duration="800">
                                         <h2
-                                            class="font-extrabold tracking-tighter text-blue-50 text-2xl md:text-3xl uppercase">
+                                            class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning" >
                                             {{ $featuredExpedition->title }}
                                         </h2>
                                         <h2
-                                            class="font-extrabold tracking-wide mt-2 text-blue-50 uppercase line-clamp-2 text-2xl md:text-3xl">
+                                            class="font-normal tracking-wide mt-2 text-blue-50 uppercase line-clamp-2 text-2xl md:text-3xl group-hover:text-warning">
                                             {{ $featuredExpedition->highest_altitude }} m
                                         </h2>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="card rounded-none px-4 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-100"
-                            data-aos="fade-down" data-aos-duration="1200">
+                        <div
+                            class="card rounded-none px-4 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-100">
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <h5
                                     class=" text-2xl  line-clamp-2 font-medium tracking-tighter font-body text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning   group-hover:underline-offset-4">
@@ -115,8 +114,8 @@
                                 </button>
                             </a>
                         </div>
-                        <div class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start bg-blue-100"
-                            data-aos="fade-down" data-aos-duration="1200">
+                        <div
+                            class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start bg-blue-100">
                             <div
                                 class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
@@ -142,21 +141,22 @@
             <div class="hidden md:grid grid-cols-2 md:gap-2 bg-blue-100/10 ">
                 @foreach ($featuredExpeditions->slice(4, 10) as $featuredExpedition)
                     {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
-                    <div class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-1 "
-                        data-aos="fade-down" data-aos-duration="1200">
+                    <div
+                        class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-1 ">
                         <figure class="h-[28rem] w-full ">
                             <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                 alt="{{ $featuredExpedition->title }} Cover Image"
-                                class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
+                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                         </figure>
                         <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                             <div class="card-body absolute inset-0 justify-center md:justify-center">
-                                <div class="text-center ">
-                                    <h2 class="font-extrabold text-blue-50 text-3xl md:text-3xl uppercase">
+                                <div class="text-center " data-aos="fade-down" data-aos-duration="800">
+                                    <h2
+                                        class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
                                         {{ $featuredExpedition->title }}
                                     </h2>
                                     <h2
-                                        class="font-extrabold tracking-wide text-blue-50 uppercase line-clamp-2 text-3xl md:text-3xl">
+                                        class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
                                         {{ $featuredExpedition->highest_altitude }} m
                                     </h2>
                                 </div>
@@ -180,7 +180,7 @@
                                     <figure class="h-[28rem] max-w-sm">
                                         <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $featuredExpedition->title }} Cover Image"
-                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
+                                            class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
                                     </figure>
                                     <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                         <div class="card-body absolute inset-0 justify-end">
