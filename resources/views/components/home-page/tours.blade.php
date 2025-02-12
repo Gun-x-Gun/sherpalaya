@@ -2,7 +2,8 @@
     class="bg-cover bg-center h-full w-full">
     <div class="card-header font-extra-bold capitalize tracking-wide my-8 text-4xl md:mx-64 text-center ">
         <h5 class="card-title ">
-            Our Tours </h5>
+            Our Tours
+        </h5>
     </div>
     <div class="md:grid md:grid-cols-1 md:max-[77%] md:mx-44 bg-transparent">
         <!-- Card 1 -->

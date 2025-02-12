@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\CategoryTypes;
+use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -26,13 +27,15 @@ class Category extends Model
         'name',
     ];
 
-    public function items(): HasMany
-    {
-        return match ($this->type) {
-            CategoryTypes::EXPEDITION => $this->hasMany(Expedition::class),
-            CategoryTypes::TREK => $this->hasMany(Trek::class),
-            CategoryTypes::TOUR => $this->hasMany(Tour::class),
-            default => null,
-        };
+    public function expeditions(){
+        return $this->hasMany(Expedition::class);
+    }
+
+    public function treks(){
+        return $this->hasMany(Trek::class);
+    }
+
+    public function tours(){
+        return $this->hasMany(Tour::class);
     }
 }

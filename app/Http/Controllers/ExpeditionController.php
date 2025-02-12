@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\CategoryTypes;
+use App\Models\Category;
 use App\Models\Expedition;
 use App\Models\Region;
 use App\Settings\PageSetting;
@@ -15,13 +17,14 @@ class ExpeditionController extends Controller
     public function index()
     {
         $pageSetting = app(PageSetting::class);
-        $expeditionsRegion = Region::with([
+        $allExpeditions = Category::with([
             'expeditions'
-        ])->get();
+        ])->where('type', CategoryTypes::EXPEDITION)
+            ->get();
 
-        return view('website.expeditions',[
+        return view('website.expeditions', [
             'pageSetting' => $pageSetting,
-            'expeditionsRegion' => $expeditionsRegion
+            'allExpeditions' => $allExpeditions
         ]);
     }
 

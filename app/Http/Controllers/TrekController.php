@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\CategoryTypes;
+use App\Models\Category;
 use App\Models\Region;
 use App\Models\Trek;
 use App\Settings\PageSetting;
@@ -16,11 +18,14 @@ class TrekController extends Controller
     {
         $pageSetting = app(PageSetting::class);
 
-        $treksRegion = Region::with([
-            'treks'
-        ])->get();
+        $allTreks = Category::with([
+            'treks',
+        ])->where('type', CategoryTypes::TREK)
+            ->get();
+
+        // dd($allTreks);
         return view('website.trekking', [
-            'treksRegion' => $treksRegion,
+            'allTreks' => $allTreks,
             'pageSetting' => $pageSetting,
         ]);
     }

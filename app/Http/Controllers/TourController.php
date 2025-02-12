@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\CategoryTypes;
+use App\Models\Category;
 use App\Models\Tour;
 use App\Settings\PageSetting;
 use Illuminate\Http\Request;
@@ -13,12 +15,15 @@ class TourController extends Controller
      */
     public function index()
     {
-        $tourTypes = Tour::all()->groupBy('type');
+        $allTours = Category::with([
+            'tours'
+        ])->where('type', CategoryTypes::TOUR)
+            ->get();
 
         $pageSetting = app(PageSetting::class);
 
-        return view('website.tours',[
-            'tourTypes' => $tourTypes,
+        return view('website.tours', [
+            'allTours' => $allTours,
             'pageSetting' => $pageSetting,
         ]);
     }
