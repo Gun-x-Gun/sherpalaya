@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/10 font-oswald">
+    <div class="bg-blue-100/10 font-body">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[50vh]">
             <figure class="h-[50vh] w-full">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
@@ -40,21 +40,19 @@
 
         <div class="mx-4 xl:mx-32">
             <div class="h-4"></div>
-            <p class="my-1  text-pretty text-stone-700 text-center font-body text-xl/7" data-aos="fade-down"
-                data-aos-duration="1200">{{ $sherpa->description }}
+            <p class="my-1  text-pretty text-stone-700 text-center font-body text-xl/7">
+                {{ $sherpa->description }}
             </p>
             <div class="h-8"></div>
-            <h5 class="card-title font-normal uppercase text-4xl text-black tracking-tight mx-0 text-center"
+            <h5 class="card-title font-normal uppercase text-4xl text-black tracking-wide mx-0 text-center"
                 data-aos="fade-down" data-aos-duration="1200">
-                Experiience
+                Experience
             </h5>
-            <div class="h-4"></div>
-            <div class="card-body w-full px-0 pt-2 flex justify-center items-center">
+            <div class="card-body w-full px-0 pt-2 flex justify-center items-center mb-4">
                 @php
                     $sherpaExperienceData = [
                         'treks' => $sherpa->treks->pluck('title'),
                         'expeditions' => $sherpa->expeditions->pluck('title'),
-                        'peaks' => $sherpa->peaks->pluck('title'),
                         'tours' => $sherpa->tours->pluck('title'),
                     ];
                 @endphp
@@ -71,14 +69,14 @@
                 <div class="h-8"></div>
             </div>
             <div class="w-full col-span-2">
-                @if ($sherpa->awardsAndCertificates->count() > 0 )
-                    <h5 class="card-title font-normal uppercase text-4xl text-black tracking-tighter mx-0 text-center"
+                @if ($sherpa->awardsAndCertificates->count() > 0)
+                    <h5 class="card-title font-normal uppercase text-4xl text-black tracking-normal mx-0 text-center"
                         data-aos="fade-down" data-aos-duration="1200">
                         Awards & Certificates
                     </h5>
                     <div class="h-8"></div>
                     <div class="card-actions  sm:grid grid-cols-2 lg:grid-cols-3 flex flex-col gap-2 md:gap-4 mb-0 skeleton animate-pulse min-h-52"
-                        id="all-awards" data-aos="fade-down" data-aos-duration="1200">
+                        id="all-awards">
                         @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
                             <button type="button"
                                 class="w-full h-full uppercase single-award hidden group hover:shadow"
@@ -89,32 +87,27 @@
                             </button>
                         @endforeach
                     </div>
-                
                 @endif
             </div>
         </div>
 
 
-        <div class="h-8"></div>
-        <div class="flex flex-col lg:grid grid-cols-3 gap-2 ">
-
-        </div>
-
-
-        <div class="h-8"></div>
 
 
 
-        <div class="h-4"></div>
+        <div class="h-20"></div>
+
+
+
 
         @push('modals')
             <div id="award-modal" class="overlay modal overlay-open:opacity-100 hidden p-0" role="dialog" tabindex="-1">
                 <div class="modal-dialog overlay-open:opacity-100 max-w-[100vw] ">
-                    <div class="modal-content h-full max-h-[100vh] justify-center  bg-transparent backdrop-blur-sm">
+                    <div class="modal-content h-full max-h-[100vh] justify-center  bg-transparent backdrop-blur-lg">
                         <div class="modal-header">
                             <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3"
                                 aria-label="Close" data-overlay="#award-modal">
-                                <span class="icon-[tabler--x] size-6 p-0 m-0"></span>
+                                <span class="icon-[tabler--x] size-6 p-0 m-0 text-warning"></span>
                             </button>
                         </div>
                         <div class="modal-body ">
@@ -127,8 +120,8 @@
                                         @foreach ($sherpa->awardsAndCertificates as $award)
                                             <div class="carousel-slide">
                                                 <div class="flex h-full justify-center ">
-                                                    <img src="{{ $award->url }}"
-                                                        class="h-[90vh] w-full object-contain  " alt="game" />
+                                                    <img src="{{ $award->url }}" class="h-[90vh] w-full object-contain  "
+                                                        alt="game" />
                                                 </div>
                                             </div>
                                         @endforeach

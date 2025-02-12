@@ -11,6 +11,7 @@ class OurTeamController extends Controller
     public function index()
     {
         $pageSetting = app(PageSetting::class);
+        
         $expedSherpas = OurSherpa::whereHas('expeditions')
             ->with([
                 'profilePicture',
@@ -18,13 +19,17 @@ class OurTeamController extends Controller
                 'expeditions',
             ])
             ->get();
-        $peakSherpas = OurSherpa::whereHas('peaks')
-            ->with([
-                'profilePicture',
-                'awardsAndCertificates',
-                'peaks',
-            ])
-            ->get();
+
+        $allSherpas = OurSherpa::with([
+            'profilePicture',
+            'awardsAndCertificates',
+            'expeditions',
+            'treks',
+            'tours',
+        ])
+            ->get()
+            ->unique();
+
         $trekSherpas = OurSherpa::whereHas('treks')
             ->with([
                 'profilePicture',
@@ -45,7 +50,7 @@ class OurTeamController extends Controller
             'pageSetting' => $pageSetting,
             'expedSherpas' => $expedSherpas,
             'trekSherpas' => $trekSherpas,
-            'peakSherpas' => $peakSherpas,
+            'allSherpas' => $allSherpas,
             'tourSherpas' => $tourSherpas,
         ]);
     }

@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/10 font-oswald">
+    <div class="bg-blue-100/10 font-body">
         <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
@@ -8,7 +8,7 @@
             <div class="card-body">
                 <div
                     class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                    <div class="" data-aos="fade-down" data-aos-duration="1200">
+                    <div class="">
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Get to know
                         </h5>
@@ -30,28 +30,58 @@
             ],
         ]" />
 
-        <div class="h-4"></div>
+
+        {{--  --}}
+        <div class="xl:mx-32 mx-4 text-left">
+            <div class="h-8"></div>
+
+            <div class="md:px-8 flex flex-col justify-center items-center">
+                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-center md:text-center"
+                    data-aos="fade-down" data-aos-duration="1200">
+                    Journey with Experts
+                </h5>
+                <p
+                    class="text-xl/7 mt-6 text-preety text-black text-center 
+                             font-light font-body lg:w-[80%] tracking-wide">
+                    {{-- {{ $pageSetting->about_us_page_content }} --}}
+                    Our team of travel experts is dedicated to making your journey seamless and unforgettable. With
+                    years of experience and a passion for exploration, we ensure every trip is planned to perfection.
+                    From breathtaking destinations to personalized itineraries, we’re here to guide you every step of
+                    the way.
+                </p>
+                <div class="h-10 md:h-12"></div>
+            </div>
+        </div>
 
         <div class="mx-4 xl:mx-32">
-            <nav class="tabs rounded-btn w-fit space-x-1 overflow-x-auto p-1 rtl:space-x-reverse bg-transparent"
-                aria-label="Tabs" role="tablist" aria-orientation="horizontal" data-aos="fade-down"
-                data-aos-duration="1200">
-                <button type="button" class="btn btn-text active-tab:bg-primary active-tab:text-white hover:text-warning active hover:bg-transparent font-normal  text-xl" id="tabs-large-item-1"
-                    data-tab="#expedition" aria-controls="expedition" role="tab" aria-selected="true">
-                    Team Expedition
-                </button>
-                <button type="button" class="btn btn-text active-tab:bg-primary active-tab:text-white hover:text-warning hover:bg-transparent font-normal text-xl" id="tabs-large-item-2" data-tab="#peak"
-                    aria-controls="peak" role="tab" aria-selected="false">
-                    Team Peak
-                </button>
-                <button type="button" class="btn btn-text active-tab:bg-primary active-tab:text-white hover:text-warning hover:bg-transparent font-normal text-xl" id="tabs-large-item-3" data-tab="#trek"
-                    aria-controls="trek" role="tab" aria-selected="false">
-                    Team Trek
-                </button>
-                <button type="button" class="btn btn-text active-tab:bg-primary active-tab:text-white hover:text-warning hover:bg-transparent font-normal text-xl" id="tabs-large-item-4" data-tab="#tour"
-                    aria-controls="tour" role="tab" aria-selected="false">
-                    Team Tour
-                </button>
+
+            <nav class=" sticky top-0 z-30 tabs tabs-bordered  bg-white horizontal-scrollbar md:justify-center"
+                aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                @if ($allSherpas->count() > 0)
+                    <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-large-item-2"
+                        data-tab="#all" aria-controls="all" role="tab" aria-selected="true">
+                        All
+                    </button>
+                @endif
+                @if ($expedSherpas->count() > 0)
+                    <button type="button" class="tab active-tab:tab-active capitalize text-nowrap text-xl"
+                        id="tabs-large-item-1" data-tab="#expedition" aria-controls="expedition" role="tab"
+                        aria-selected="false">
+                        Team Expedition
+                    </button>
+                @endif
+                @if ($trekSherpas->count() > 0)
+                    <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-large-item-3"
+                        data-tab="#trek" aria-controls="trek" role="tab" aria-selected="false">
+                        Team Trek
+                    </button>
+                @endif
+                @if ($tourSherpas->count() > 0)
+                    <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-large-item-4"
+                        data-tab="#tour" aria-controls="tour" role="tab" aria-selected="false">
+                        Other
+                    </button>
+                @endif
             </nav>
             <div class="h-8"></div>
             <div class="mt-3.5">
@@ -59,19 +89,18 @@
                     <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                         @foreach ($expedSherpas as $expedSherpa)
                             <a href="{{ route('show_team_member', $expedSherpa->id) }}">
-                                <div class="card w-full h-full " data-aos="fade-down" data-aos-duration="1200">
+                                <div class="card w-full h-full ">
                                     <img src="{{ $expedSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
                                         alt="{{ $expedSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
                                     <div class="card-body bg-blue-100/50 px-2 py-2 text-left">
                                         <h5
-                                            class="card-title line-clamp-2 uppercase text-xl text-stone-700 font-normal tracking-tight font-oswald hover:text-warning hover:underline ">
+                                            class="card-title mb-1 line-clamp-2 uppercase text-xl text-black font-medium tracking-wide font-body hover:text-warning hover:underline ">
                                             {{ $expedSherpa->name }}
                                         </h5>
                                         <h5
-                                            class="card-title line-clamp-2 lowercase warning text-lg text-stone-900 font-light  ">
+                                            class="card-title line-clamp-2 capitalize tracking-wide warning text-sm badge badge-outline text-primary font-light px-1 ">
                                             {{ $expedSherpa->title }}
                                         </h5>
-
                                     </div>
                                 </div>
                             </a>
@@ -79,21 +108,21 @@
                     </div>
                 </div>
 
-                <div id="peak" class="hidden" role="tabpanel" aria-labelledby="tabs-large-item-2">
+                <div id="all" class="hidden" role="tabpanel" aria-labelledby="tabs-large-item-2">
                     <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                        @foreach ($peakSherpas as $peakSherpa)
-                            <a href="{{ route('show_team_member', $peakSherpa->id) }}">
+                        @foreach ($allSherpas as $allSherpa)
+                            <a href="{{ route('show_team_member', $allSherpa->id) }}">
                                 <div class="card w-full h-full ">
-                                    <img src="{{ $peakSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
-                                        alt="{{ $peakSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
-                                    <div class="card-body bg-blue-100 px-2 py-2 text-center">
+                                    <img src="{{ $allSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
+                                        alt="{{ $allSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
+                                    <div class="card-body bg-blue-100/50 px-2 py-2 text-left">
                                         <h5
-                                            class="card-title line-clamp-2 capitalize text-2xl text-primary font-normal tracking-tighter">
-                                            {{ $peakSherpa->name }}
+                                            class="card-title mb-1 line-clamp-2 uppercase text-xl text-black font-medium tracking-wide font-body hover:text-warning hover:underline ">
+                                            {{ $allSherpa->name }}
                                         </h5>
                                         <h5
-                                            class="card-title line-clamp-2 capitalize text-sm text-slate-900 font-thin tracking-tighter">
-                                            {{ $peakSherpa->title }}
+                                            class="card-title line-clamp-2 capitalize tracking-wide warning text-sm badge badge-outline text-primary font-light px-1 ">
+                                            {{ $allSherpa->title }}
                                         </h5>
                                     </div>
                                 </div>
@@ -108,13 +137,13 @@
                                 <div class="card w-full h-full ">
                                     <img src="{{ $trekSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
                                         alt="{{ $trekSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
-                                    <div class="card-body bg-blue-100 px-2 py-2 text-center">
+                                    <div class="card-body bg-blue-100/50 px-2 py-2 text-left">
                                         <h5
-                                            class="card-title line-clamp-2 capitalize text-2xl text-primary font-normal tracking-tighter">
+                                            class="card-title mb-1 line-clamp-2 uppercase text-xl text-black font-medium tracking-wide font-body hover:text-warning hover:underline ">
                                             {{ $trekSherpa->name }}
                                         </h5>
                                         <h5
-                                            class="card-title line-clamp-2 capitalize text-sm text-slate-900 font-thin tracking-tighter">
+                                            class="card-title line-clamp-2 capitalize tracking-wide warning text-sm badge badge-outline text-primary font-light px-1 ">
                                             {{ $trekSherpa->title }}
                                         </h5>
                                     </div>
@@ -131,13 +160,13 @@
                                 <div class="card w-full h-full ">
                                     <img src="{{ $tourSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
                                         alt="{{ $tourSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
-                                    <div class="card-body bg-blue-100 px-2 py-2 text-center">
+                                    <div class="card-body bg-blue-100/50 px-2 py-2 text-left">
                                         <h5
-                                            class="card-title line-clamp-2 capitalize text-2xl text-primary font-normal tracking-tighter">
+                                            class="card-title mb-1 line-clamp-2 uppercase text-xl text-black font-medium tracking-wide font-body hover:text-warning hover:underline ">
                                             {{ $tourSherpa->name }}
                                         </h5>
                                         <h5
-                                            class="card-title line-clamp-2 capitalize text-sm text-slate-900 font-thin tracking-tighter">
+                                            class="card-title line-clamp-2 capitalize tracking-wide warning text-sm badge badge-outline text-primary font-light px-1 ">
                                             {{ $tourSherpa->title }}
                                         </h5>
                                     </div>
