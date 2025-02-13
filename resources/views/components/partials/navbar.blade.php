@@ -81,7 +81,7 @@
                             role="menu" aria-orientation="vertical" aria-labelledby="service-dropdown">
                             @foreach ($navServices as $navService)
                                 <li
-                                    class="text-black text-base font-normal teacking-wider  hover:text-warning hover:underline decoration-1">
+                                    class="text-black text-base font-normal teacking-wider  hover:text-primary hover:underline decoration-2">
                                     <a class="dropdown-item"
                                         href="{{ route('show_service', $navService->id) }}">{{ $navService->title }}</a>
                                 </li>
@@ -197,7 +197,7 @@
                             role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown">
                             @foreach ($navTours as $tourCategory)
                                 <li class="items-start">
-                                    <div class="flex flex-row gap-2 items-center">
+                                    <div class="flex flex-row gap-2 items-center mb-2">
                                         <div
                                             class="menu font-medium text-wrap text-black px-0 py-1 tracking-wider hover:text-primary hover:underline decoration-2">
                                             <a href="/tours#type-{{ $tourCategory->id }}">
