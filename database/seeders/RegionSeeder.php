@@ -29,6 +29,12 @@ class RegionSeeder extends Seeder
             'name' => 'Kanchanjunga',
         ]);
         Region::create([
+            'name' => 'Pakistan'
+        ]);
+        Region::create([
+            'name' => 'Tibet/China'
+        ]);
+        Region::create([
             'name' => 'Other',
         ]);
     }
