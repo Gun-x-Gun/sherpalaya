@@ -230,57 +230,57 @@ class KeyHighlightSeeder extends Seeder
         ];
 
         $kathmandu_cultural_tour = [
-    [
-        'title' => [
-            'en' => 'Watching Sunrise at Swayambhunath Stupa',
-            'fr' => 'Assister au lever du soleil au stupa de Swayambhunath',
-        ],
-        'description' => [
-            'en' => 'The golden light hitting the ancient stupa while prayer flags flutter and monks chant in the background.',
-            'fr' => 'La lumière dorée frappant l\'ancien stupa pendant que les drapeaux de prière flottent et que les moines chantent en arrière-plan.',
-        ],
-    ],
-    [
-        'title' => [
-            'en' => 'Exploring the Hidden Courtyards of Patan Durbar Square',
-            'fr' => 'Explorer les cours cachées de la place Durbar de Patan',
-        ],
-        'description' => [
-            'en' => 'Walking through centuries-old courtyards, admiring intricate Newari architecture and stone carvings.',
-            'fr' => 'Se promener dans des cours centenaires, admirer l\'architecture newari complexe et les sculptures sur pierre.',
-        ],
-    ],
-    [
-        'title' => [
-            'en' => 'Tasting Local Street Food in Ason Bazaar',
-            'fr' => 'Déguster la cuisine de rue locale au bazar d\'Ason',
-        ],
-        'description' => [
-            'en' => 'The spicy aroma of chatpate, freshly fried sel roti, and the bustle of Kathmandu’s oldest marketplace.',
-            'fr' => 'L\'arôme épicé du chatpate, du sel roti fraîchement frit et l\'agitation du plus ancien marché de Katmandou.',
-        ],
-    ],
-    [
-        'title' => [
-            'en' => 'Witnessing the Evening Aarti at Pashupatinath',
-            'fr' => 'Assister à l\'Aarti du soir à Pashupatinath',
-        ],
-        'description' => [
-            'en' => 'A mesmerizing sight of priests performing fire rituals by the sacred Bagmati River as chants fill the air.',
-            'fr' => 'Un spectacle envoûtant de prêtres accomplissant des rituels du feu au bord du fleuve sacré Bagmati pendant que les chants emplissent l\'air.',
-        ],
-    ],
-    [
-        'title' => [
-            'en' => 'Getting Lost in the Alleyways of Thamel',
-            'fr' => 'Se perdre dans les ruelles de Thamel',
-        ],
-        'description' => [
-            'en' => 'Discovering hidden bookshops, vibrant handicraft stores, and cozy cafés in Kathmandu’s famous backpacker hub.',
-            'fr' => 'Découvrir des librairies cachées, des boutiques d\'artisanat dynamiques et des cafés confortables dans le célèbre quartier des routards de Katmandou.',
-        ],
-    ],
-];
+            [
+                'title' => [
+                    'en' => 'Watching Sunrise at Swayambhunath Stupa',
+                    'fr' => 'Assister au lever du soleil au stupa de Swayambhunath',
+                ],
+                'description' => [
+                    'en' => 'The golden light hitting the ancient stupa while prayer flags flutter and monks chant in the background.',
+                    'fr' => 'La lumière dorée frappant l\'ancien stupa pendant que les drapeaux de prière flottent et que les moines chantent en arrière-plan.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Exploring the Hidden Courtyards of Patan Durbar Square',
+                    'fr' => 'Explorer les cours cachées de la place Durbar de Patan',
+                ],
+                'description' => [
+                    'en' => 'Walking through centuries-old courtyards, admiring intricate Newari architecture and stone carvings.',
+                    'fr' => 'Se promener dans des cours centenaires, admirer l\'architecture newari complexe et les sculptures sur pierre.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Tasting Local Street Food in Ason Bazaar',
+                    'fr' => 'Déguster la cuisine de rue locale au bazar d\'Ason',
+                ],
+                'description' => [
+                    'en' => 'The spicy aroma of chatpate, freshly fried sel roti, and the bustle of Kathmandu’s oldest marketplace.',
+                    'fr' => 'L\'arôme épicé du chatpate, du sel roti fraîchement frit et l\'agitation du plus ancien marché de Katmandou.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Witnessing the Evening Aarti at Pashupatinath',
+                    'fr' => 'Assister à l\'Aarti du soir à Pashupatinath',
+                ],
+                'description' => [
+                    'en' => 'A mesmerizing sight of priests performing fire rituals by the sacred Bagmati River as chants fill the air.',
+                    'fr' => 'Un spectacle envoûtant de prêtres accomplissant des rituels du feu au bord du fleuve sacré Bagmati pendant que les chants emplissent l\'air.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Getting Lost in the Alleyways of Thamel',
+                    'fr' => 'Se perdre dans les ruelles de Thamel',
+                ],
+                'description' => [
+                    'en' => 'Discovering hidden bookshops, vibrant handicraft stores, and cozy cafés in Kathmandu’s famous backpacker hub.',
+                    'fr' => 'Découvrir des librairies cachées, des boutiques d\'artisanat dynamiques et des cafés confortables dans le célèbre quartier des routards de Katmandou.',
+                ],
+            ],
+        ];
 
         $manaslu_circuit_trek = [
             [
@@ -569,6 +569,7 @@ class KeyHighlightSeeder extends Seeder
             Trek::find(14),
             $kanchanjunga_highlights
         );
+
         $this->createKeyHighlights(
             Expedition::first(),
             $everest_expedition
@@ -577,11 +578,89 @@ class KeyHighlightSeeder extends Seeder
             Expedition::find(2),
             $kanchanjunga_highlights
         );
-
         $this->createKeyHighlights(
             Expedition::find(3),
             $everest_expedition
         );
+        $this->createKeyHighlights(
+            Expedition::find(4),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(5),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Expedition::find(6),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(7),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Expedition::find(8),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(9),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(10),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Expedition::find(11),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(12),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Expedition::find(13),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(14),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(15),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Expedition::find(16),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(17),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Expedition::find(18),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(4),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(5),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Expedition::find(6),
+            $everest_expedition
+        );
+        
+        
+        
+        
+        
+        
+        
         $this->createKeyHighlights(
             Tour::first(),
             $kathmandu_cultural_tour

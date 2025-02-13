@@ -601,6 +601,67 @@ class EssentialTipsSeeder extends Seeder
             $everest_expedition_tips
         );
         $this->createEssentialTips(
+            Expedition::find(4),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(5),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(6),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(7),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(8),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(9),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(10),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(11),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(12),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(13),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(14),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(15),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(16),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(17),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(18),
+            $kanchanjunga_exped_essential_tips
+        );
+        
+        $this->createEssentialTips(
             Tour::first(),
             $kathmandu_cultural_tour_tips
         );
