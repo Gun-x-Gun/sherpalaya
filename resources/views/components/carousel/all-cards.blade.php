@@ -2,9 +2,8 @@
     <div class="xl:mx-32 mx-4 ">
         <div class="h-8 md:h-15"></div>
         <div class="md:px-8 flex flex-col justify-center items-center">
-            <h5
-                class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-center md:text-center" data-aos="fade-down"
-                data-aos-duration="800">
+            <h5 class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-center md:text-center"
+                data-aos="fade-down" data-aos-duration="800">
                 Explore Beyond Limits</h5>
             <p
                 class="text-xl/7 mt-4 text-preety text-black text-center 
@@ -28,8 +27,7 @@
                         class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
                         :media="$landingPageSetting->expedition_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
-                <div class="card-body absolute bottom-0 inset-0 uppercase" data-aos="fade-down"
-                    data-aos-duration="800">
+                <div class="card-body absolute bottom-0 inset-0 uppercase" data-aos="fade-down" data-aos-duration="800">
                     <div class="text-left ">
                         <h2 class="font-extrabold text-blue-50 text-2xl lg:text-4xl">
                             Expeditions
@@ -115,7 +113,7 @@
             </div>
         </a>
 
-        <a href="/" class=" col-span-2">
+        <a href="/services" class=" col-span-2">
             <div
                 class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow border">
 

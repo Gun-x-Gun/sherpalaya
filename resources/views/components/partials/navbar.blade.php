@@ -197,14 +197,14 @@
                             role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown">
                             @foreach ($navTours as $tourCategory)
                                 <li class="items-start">
-                                    <div class="flex flex-col gap-0 items-start">
+                                    <div class="flex flex-row gap-2 items-center">
                                         <div
                                             class="menu font-medium text-wrap text-black px-0 py-1 tracking-wider hover:text-primary hover:underline decoration-2">
                                             <a href="/tours#type-{{ $tourCategory->id }}">
                                                 {{ $tourCategory->name }}
                                             </a>
                                         </div>
-                                        <div class="mb-3 px-0">
+                                        <div class=" px-0">
                                             @if ($tourCategory->tours->count() > 0)
                                                 <p
                                                     class="text-xs rounded-full text-warning tracking-tight font-normal badge-outline text-nowrap px-1">
