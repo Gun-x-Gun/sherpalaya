@@ -1,4 +1,4 @@
-<div class="bg-blue-100/40 font-oswald">
+<div class="bg-blue-100/30 font-oswald">
 
     <div class="h-20 ">
 

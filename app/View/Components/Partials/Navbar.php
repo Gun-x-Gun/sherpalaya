@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Expedition;
 use App\Models\Peak;
 use App\Models\Region;
+use App\Models\Service;
 use App\Models\Tour;
 use App\Models\Trek;
 use Closure;
@@ -18,6 +19,7 @@ class Navbar extends Component
     public $navTours;
     public $navTreks;
     public $navExpeditions;
+    public $navServices;
 
     public function __construct(
         public ?string $query = null,
@@ -36,7 +38,12 @@ class Navbar extends Component
             'expeditions'
         ])->where('type', CategoryTypes::EXPEDITION)
             ->get();
+        $this->navServices = Service::select('id', 'title')
+            ->get();
+            // dd($this->navServices);
     }
+
+
 
     /**
      * Get the view / contents that represent the component.

@@ -52,13 +52,40 @@
                         </button>
                         <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase rounded-none"
                             role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown">
-                            <li class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1"><a class="dropdown-item" href="about_us">About
-                                    Us</a></li>
-                            <li class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1"><a class="dropdown-item"
-                                    href="/services">Services</a></li>
-                            <li class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1"><a class="dropdown-item" href="/sherpas">
+                            <li
+                                class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
+                                <a class="dropdown-item" href="about_us">About
+                                    Us</a>
+                            </li>
+                            {{-- <li
+                                class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
+                                <a class="dropdown-item" href="/">
+                                    Documents
+                                </a>
+                            </li> --}}
+                            <li
+                                class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
+                                <a class="dropdown-item" href="/sherpas">
                                     Our Sherpas</a>
                             </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
+                        <button id="service-dropdown" type="button"
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  "
+                            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                            Services
+                            <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase rounded-none px-0"
+                            role="menu" aria-orientation="vertical" aria-labelledby="service-dropdown">
+                            @foreach ($navServices as $navService)
+                                <li
+                                    class="text-black text-base font-normal teacking-wider  hover:text-warning hover:underline decoration-1">
+                                    <a class="dropdown-item"
+                                        href="{{ route('show_service', $navService->id) }}">{{ $navService->title }}</a>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
 
@@ -171,7 +198,8 @@
                             @foreach ($navTours as $tourCategory)
                                 <li class="items-start">
                                     <div class="flex flex-col gap-0 items-start">
-                                        <div class="menu font-medium text-wrap text-black px-0 py-1 tracking-wider hover:text-primary hover:underline decoration-2">
+                                        <div
+                                            class="menu font-medium text-wrap text-black px-0 py-1 tracking-wider hover:text-primary hover:underline decoration-2">
                                             <a href="/tours#type-{{ $tourCategory->id }}">
                                                 {{ $tourCategory->name }}
                                             </a>
@@ -276,6 +304,7 @@
                         Home
                     </a>
                 </li>
+                {{-- company --}}
                 <li class="nested-collapse-wrapper">
                     <a class="collapse-toggle nested-collapse" id="company-collapse"
                         data-collapse="#company-collapse-menu">
@@ -293,12 +322,12 @@
                                         About Us
                                     </a>
                                 </li>
-                                <li class="text-black hover:underline"><a class="dropdown-item" href="/services">
-                                        <span class="icon-[stash--integrations-duotone]">
-                                        </span>
-                                        Services
+                                {{-- <li
+                                    class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
+                                    <a class="dropdown-item" href="/">
+                                        Documents
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="text-black hover:underline"><a class="dropdown-item" href="/sherpas">
                                         <span class="icon-[stash--people-group-duotone]"></span>
                                         Our Sherpas
@@ -308,6 +337,31 @@
                         </li>
                     </ul>
                 </li>
+                {{-- company end --}}
+                {{-- services --}}
+                <li class="nested-collapse-wrapper">
+                    <a class="collapse-toggle nested-collapse" id="service-collapse"
+                        data-collapse="#service-collapse-menu">
+                        <span class="icon-[ep--office-building] size-5"></span> Services
+                        <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
+                    </a>
+                    <ul id="service-collapse-menu"
+                        class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
+                        aria-labelledby="service-collapse">
+                        <li class="uppercase">
+                            <ul class="menu px-0 mx-0">
+                                @foreach ($navServices as $navService)
+                                    <li
+                                        class="text-black text-base font-light teacking-wide  hover:text-warning hover:underline decoration-1">
+                                        <a class="dropdown-item"
+                                            href="{{ route('show_service', $navService->id) }}">{{ $navService->title }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                {{-- services end --}}
 
                 {{-- expeditions --}}
                 <li class="nested-collapse-wrapper">
@@ -411,11 +465,13 @@
                                         </a>
                                     </div>
                                     @if ($tourCategory->tours->count() > 0)
-                                        <p class="text-xs rounded-full text-warning tracking-tight font-normal badge-outline px-1">
+                                        <p
+                                            class="text-xs rounded-full text-warning tracking-tight font-normal badge-outline px-1">
                                             {{ $tourCategory->tours->count() }} packages
                                         </p>
                                     @else
-                                        <p class="text-xs rounded-full text-warning tracking-tight font-normal badge-outline px-1">
+                                        <p
+                                            class="text-xs rounded-full text-warning tracking-tight font-normal badge-outline px-1">
                                             0 packages
                                         </p>
                                     @endif

@@ -12,7 +12,7 @@
                         Explore
                     </h5>
                     <h2 class="card-title mb-2.5 text-white text-3xl md:text-6xl uppercase font-bold">
-                        Tours
+                        Activities
                     </h2>
                     <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold">
                         With Sherpalaya
