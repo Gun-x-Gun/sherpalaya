@@ -21,8 +21,7 @@ class PageSetting extends Settings
     public ?string $service_page_cover_image_id;
     public ?string $service_page_content;
 
-    public ?string $about_us_page_cover_image_id;
-    public ?string $about_us_page_content;
+   
 
     public static function group(): string
     {

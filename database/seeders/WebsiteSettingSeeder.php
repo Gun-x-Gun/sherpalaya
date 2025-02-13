@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Enums\WebsiteSettingType;
 use App\Helpers\CuratorSeederHelper;
 use App\Models\WebsiteSetting;
+use App\Settings\AboutUsSetting;
 use App\Settings\CompanySetting;
 use App\Settings\ContactUsSetting;
 use App\Settings\LandingPageSetting;
@@ -29,6 +30,7 @@ class WebsiteSettingSeeder extends Seeder
         $this->seedContactUsSettings();
         $this->seedCompanySettings();
         $this->seedLegalSettings();
+        $this->seedAboutUsSettings();
     }
 
     public function seedLandingPageSettings()
@@ -70,14 +72,12 @@ class WebsiteSettingSeeder extends Seeder
         $pageSetting->tour_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/culture2.jpg'))->id;
         $pageSetting->peak_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/lobuche.jpg'))->id;
         $pageSetting->service_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/temple.jpg'))->id;
-        $pageSetting->about_us_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount1.png'))->id;
 
         $pageSetting->expedition_page_content = "Push your limits and embark on an extraordinary Himalayan expedition. Our expertly guided journeys take you to some of the highest and most challenging peaks on the planet. Experience raw adventure, breathtaking landscapes, and the triumph of reaching new heights with our experienced mountaineers and support teams.";
         $pageSetting->trek_page_content = "Step into the heart of the Himalayas with our unforgettable trekking adventures. Walk through lush forests, rugged mountain trails, and culturally rich villages as you discover Nepal’s most iconic routes. Whether you seek a short scenic trek or an epic multi-day journey, we create experiences that inspire.";
         $pageSetting->tour_page_content = "Experience Nepal beyond the mountains with our immersive tours. From exploring Kathmandu’s UNESCO-listed sites to witnessing the serene beauty of Pokhara and the wildlife of Chitwan, our tours blend history, nature, and culture into an unforgettable adventure tailored just for you.";
         $pageSetting->peak_page_content = "Challenge yourself with our thrilling peak climbing adventures. Designed for climbers of all levels, our expertly guided expeditions help you conquer Nepal’s stunning peaks, from beginner-friendly summits to technical ascents. Let the mountains call, and we’ll guide you to the top!";
         $pageSetting->service_page_content = "We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.";
-        $pageSetting->about_us_page_content = "We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.";
 
 
         $pageSetting->save();
@@ -122,5 +122,16 @@ class WebsiteSettingSeeder extends Seeder
         $legalSetting->cookie_policy = "<p>TBD</p>";
 
         $legalSetting->save();
+    }
+
+    public function seedAboutUsSettings()
+    {
+        $aboutUsSetting = app(AboutUsSetting::class);
+
+        $aboutUsSetting->about_us_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount.png'))->id;
+        $aboutUsSetting->about_us_page_content = "We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.";
+        $aboutUsSetting->certificate_images = CuratorSeederHelper::resolveFileData(public_path('/photos/logo.png'))->id;
+        $aboutUsSetting->certificate_images = CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount2.png'))->id;
+        $aboutUsSetting->save();
     }
 }
