@@ -746,6 +746,90 @@ class DestinationSeeder extends Seeder
                 'location' => [
                     'lat' => 27.8667,
                     'lng' => 88.1000
+                ],
+            ],
+            [
+                'name' => 'Skardu',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A major town and gateway to the K2 region, known for its bustling bazaar and stunning views of the surrounding mountains.',
+                    'fr' => 'Une ville importante et porte d\'entrée de la région du K2, connue pour son bazar animé et ses vues imprenables sur les montagnes environnantes.',
+                ],
+                'location' => [
+                    'lat' => 35.3000, // Approximate latitude
+                    'lng' => 75.6500  // Approximate longitude
+                ]
+            ],
+            [
+                'name' => 'Askole',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'The last village before entering the K2 trek, offering a glimpse into local Balti culture and serving as the starting point for many expeditions.',
+                    'fr' => 'Le dernier village avant d\'entrer dans le trek du K2, offrant un aperçu de la culture Balti locale et servant de point de départ à de nombreuses expéditions.',
+                ],
+                'location' => [
+                    'lat' => 35.5500, // Approximate latitude
+                    'lng' => 75.8000  // Approximate longitude
+                ]
+            ],
+            [
+                'name' => 'Concordia',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A stunning confluence of glaciers, offering breathtaking panoramic views of K2 and several other high peaks.',
+                    'fr' => 'Une confluence de glaciers époustouflante, offrant des vues panoramiques à couper le souffle sur le K2 et plusieurs autres hauts sommets.',
+                ],
+                'location' => [
+                    'lat' => 35.8833, // Approximate latitude
+                    'lng' => 76.3833  // Approximate longitude
+                ]
+            ],
+            [
+                'name' => 'K2 Base Camp',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'The challenging and iconic base camp for K2 expeditions, a place of anticipation, preparation, and shared experiences among climbers.',
+                    'fr' => 'Le camp de base difficile et emblématique des expéditions du K2, un lieu d\'anticipation, de préparation et d\'expériences partagées entre les grimpeurs.',
+                ],
+                'location' => [
+                    'lat' => 35.8833, // Approximate latitude
+                    'lng' => 76.4833  // Approximate longitude
+                ]
+            ],
+            [
+                'name' => 'Bottleneck',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A technically challenging and dangerous section of the K2 climb, a narrow couloir just below the summit.',
+                    'fr' => 'Une section techniquement difficile et dangereuse de l\'ascension du K2, un couloir étroit juste en dessous du sommet.',
+                ],
+                'location' => [
+                    'lat' => 35.8667, // Approximate latitude
+                    'lng' => 76.5000  // Approximate longitude
+                ]
+            ],
+            [
+                'name' => 'The Shoulder',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A high-altitude plateau on K2, often used as a staging point for summit attempts.',
+                    'fr' => 'Un plateau de haute altitude sur le K2, souvent utilisé comme point de départ pour les tentatives de sommet.',
+                ],
+                'location' => [
+                    'lat' => 35.8500, // Approximate latitude
+                    'lng' => 76.5167  // Approximate longitude
+                ]
+            ],
+            [
+                'name' => 'Summit of K2',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'The ultimate goal, the summit of K2, offering unparalleled views and a profound sense of accomplishment.',
+                    'fr' => 'Le but ultime, le sommet du K2, offrant des vues inégalées et un profond sentiment d\'accomplissement.',
+                ],
+                'location' => [
+                    'lat' => 35.8617, // Approximate latitude
+                    'lng' => 76.4900  // Approximate longitude
                 ]
             ],
         ];
