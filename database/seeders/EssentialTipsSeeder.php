@@ -660,6 +660,38 @@ class EssentialTipsSeeder extends Seeder
             Expedition::find(18),
             $kanchanjunga_exped_essential_tips
         );
+        $this->createEssentialTips(
+            Expedition::find(19),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(20),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(21),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(22),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(23),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(24),
+            $kanchanjunga_exped_essential_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(25),
+            $everest_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(26),
+            $kanchanjunga_exped_essential_tips
+        );
         
         $this->createEssentialTips(
             Tour::first(),

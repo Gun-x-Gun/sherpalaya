@@ -643,15 +643,35 @@ class KeyHighlightSeeder extends Seeder
             $everest_expedition
         );
         $this->createKeyHighlights(
-            Expedition::find(4),
+            Expedition::find(19),
             $everest_expedition
         );
         $this->createKeyHighlights(
-            Expedition::find(5),
+            Expedition::find(20),
             $kanchanjunga_highlights
         );
         $this->createKeyHighlights(
-            Expedition::find(6),
+            Expedition::find(21),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(22),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Expedition::find(23),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(24),
+            $everest_expedition
+        );
+        $this->createKeyHighlights(
+            Expedition::find(25),
+            $kanchanjunga_highlights
+        );
+        $this->createKeyHighlights(
+            Expedition::find(26),
             $everest_expedition
         );
         
