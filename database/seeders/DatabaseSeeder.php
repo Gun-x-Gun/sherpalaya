@@ -19,13 +19,11 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             CategorySeeder::class,
-            // KeyPointSeeder::class,
             ShieldSeeder::class,
             UserSeeder::class,
             RegionSeeder::class,
             DestinationSeeder::class,
             ExpeditionSeeder::class,
-            // PeakSeeder::class,
             TrekSeeder::class,
             TourSeeder::class,
             ItinerarySeeder::class,
