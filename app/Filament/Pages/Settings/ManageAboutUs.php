@@ -7,6 +7,7 @@ use App\Settings\AboutUsSetting;
 use App\Settings\PageSetting;
 use App\Traits\HasSettingsSidebar;
 use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Form;
@@ -31,18 +32,20 @@ class ManageAboutUs extends SettingsPage
                 Tabs::make()
                     ->columnSpanFull()
                     ->schema([
-                        Tabs\Tab::make('About Us')
+                        Tabs\Tab::make('General')
                             ->schema([
-                                CuratorPicker::make('about_us_page_cover_image_id')
+                                CuratorPicker::make('cover_image_id')
                                     ->required(),
-                                Textarea::make('about_us_page_content')
+                                RichEditor::make('content')
                                     ->required(),
+                            ]),
+                        Tabs\Tab::make('Certificates')
+                            ->schema([
                                 CuratorPicker::make('certificate_images')
                                     ->columnSpanFull()
                                     ->multiple()
                                     ->label('Certificates')
                                     ->hint('authentic')
-                                    // ->relationship('destinationImages', 'id')
                             ]),
                     ])
             ]);

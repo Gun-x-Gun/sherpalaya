@@ -1,5 +1,6 @@
 <?php
 
+use App\Settings\AboutUsSetting;
 use App\Settings\CompanySetting;
 use App\Settings\ContactUsSetting;
 use App\Settings\LandingPageSetting;
@@ -18,6 +19,7 @@ return [
         PageSetting::class,
         CompanySetting::class,
         LegalSetting::class,
+        AboutUsSetting::class,
     ],
 
     /*

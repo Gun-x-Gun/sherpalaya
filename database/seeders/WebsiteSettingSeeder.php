@@ -126,12 +126,14 @@ class WebsiteSettingSeeder extends Seeder
 
     public function seedAboutUsSettings()
     {
-        // $aboutUsSetting = app(AboutUsSetting::class);
+        $aboutUsSetting = app(AboutUsSetting::class);
 
-        // $aboutUsSetting->about_us_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount.png'))->id;
-        // $aboutUsSetting->about_us_page_content = "We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.";
-        // $aboutUsSetting->certificate_images = CuratorSeederHelper::resolveFileData(public_path('/photos/logo.png'))->id;
-        // $aboutUsSetting->certificate_images = CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount2.png'))->id;
-        // $aboutUsSetting->save();
+        $aboutUsSetting->cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount.png'))->id;
+        $aboutUsSetting->content = "<p>We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.</p>";
+        $aboutUsSetting->certificate_images = [
+            CuratorSeederHelper::resolveFileData(public_path('/photos/logo.png'))->id,
+            CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount2.png'))->id
+        ];
+        $aboutUsSetting->save();
     }
 }

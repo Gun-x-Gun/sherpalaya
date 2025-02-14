@@ -2,7 +2,7 @@
     <div class="bg-blue-100/10 ">
         <div class="card--rounded-none image-full  h-[60vh]">
             <figure class="h-[60vh] w-full">
-                <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$pageSetting->about_us_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
+                <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$aboutUsSetting->cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
             </figure>
             <div class="card-body font-oswald">
@@ -43,11 +43,11 @@
                         data-aos="fade-down" data-aos-duration="1200">
                         Our Passion, Your Adventure
                     </h5>
-                    <p
-                        class="text-xl/7 mt-6 text-preety text-black text-center 
+                    <div
+                        class="text-xl/7 mt-6 text-preety text-black text-center
                              font-light font-body lg:w-[80%] tracking-wide">
-                        {{ $pageSetting->about_us_page_content }}
-                    </p>
+                        {!! $aboutUsSetting->content !!}
+                    </div>
                     <div class="h-10 md:h-12"></div>
                 </div>
             </div>

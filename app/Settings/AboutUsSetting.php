@@ -7,10 +7,16 @@ use Spatie\LaravelSettings\Settings;
 class AboutUsSetting extends Settings
 {
 
-    public ?string $about_us_page_cover_image_id;
-    public ?string $about_us_page_content;
-    public ?string $certificate_images;
+    public ?string $cover_image_id;
+    public ?string $content;
+    public ?array $certificate_images;
 
+    // public static function casts(): array
+    // {
+    //     return [
+    //         'certificate_images' => 'array',
+    //     ];
+    // }
 
     public static function group(): string
     {
