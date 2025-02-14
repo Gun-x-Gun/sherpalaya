@@ -32,6 +32,15 @@
 
     @vite('resources/js/app.js')
     @livewireScripts
+
+    @if ($initAOS)
+        <script type="module">
+            document.addEventListener("DOMContentLoaded", function() {
+                window.AOS.init();
+            });
+        </script>
+    @endif
+
     @stack('scripts')
     @stack('modals')
 </body>

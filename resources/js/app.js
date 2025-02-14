@@ -2,12 +2,12 @@ import './bootstrap';
 
 import AOS from "aos";
 import "flyonui/flyonui";
-import { animate, inView } from "motion";
+import { animate, inView, scroll } from "motion";
 
 
 document.addEventListener('DOMContentLoaded', (e) => {
-    AOS.init();
+    window.AOS = AOS;
     window.motion = {
-        animate, inView
+        animate, inView, scroll
     };
 });

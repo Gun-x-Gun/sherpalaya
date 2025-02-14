@@ -12,7 +12,8 @@ class WebsiteLayout extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public bool $showFooter = true
+        public bool $showFooter = true,
+        public bool $initAOS = true,
     ) {
         //
     }
