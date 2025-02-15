@@ -529,10 +529,496 @@ class EssentialTipsSeeder extends Seeder
             ],
         ];
 
+        $eight_thousanders_expedition_tips = [
+            [
+                'title' => [
+                    'en' => 'Elite Mountaineering Experience',
+                    'fr' => 'Expérience en alpinisme d\'élite',
+                ],
+                'description' => [
+                    'en' => 'Climbing 8000-meter peaks is the pinnacle of mountaineering.  You must have extensive experience on multiple 7000m peaks and a proven track record of high-altitude success.  Consider this the "doctorate" level of mountaineering.',
+                    'fr' => 'L\'ascension de sommets de 8 000 mètres est le summum de l\'alpinisme. Vous devez avoir une vaste expérience sur plusieurs sommets de 7 000 mètres et des antécédents de succès en haute altitude. Considérez cela comme le niveau de "doctorat" de l\'alpinisme.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Exceptional Physical and Mental Fortitude',
+                    'fr' => 'Force physique et mentale exceptionnelle',
+                ],
+                'description' => [
+                    'en' => '8000m expeditions push the human body and mind to their limits.  Prepare for extreme cold, low oxygen, and grueling physical exertion.  Mental resilience, determination, and the ability to endure suffering are essential.',
+                    'fr' => 'Les expéditions de 8 000 m poussent le corps et l\'esprit humains à leurs limites. Préparez-vous à un froid extrême, à un faible taux d\'oxygène et à un effort physique exténuant. La résilience mentale, la détermination et la capacité à endurer la souffrance sont essentielles.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'World-Class Expedition Team',
+                    'fr' => 'Équipe d\'expédition de classe mondiale',
+                ],
+                'description' => [
+                    'en' => 'Select an expedition operator with impeccable credentials, highly experienced guides, and a strong Sherpa support team.  Your life depends on their expertise and judgment.',
+                    'fr' => 'Choisissez un opérateur d\'expédition avec des références impeccables, des guides très expérimentés et une solide équipe de soutien Sherpa. Votre vie dépend de leur expertise et de leur jugement.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Meticulous Preparation and Planning',
+                    'fr' => 'Préparation et planification méticuleuses',
+                ],
+                'description' => [
+                    'en' => 'Every detail matters.  Train specifically for the challenges of the chosen peak.  Research weather patterns, route conditions, and potential hazards.  Leave no room for error in your gear selection or logistics.',
+                    'fr' => 'Chaque détail compte. Entraînez-vous spécifiquement pour les défis du sommet choisi. Renseignez-vous sur les conditions météorologiques, l\'état des itinéraires et les dangers potentiels. Ne laissez aucune place à l\'erreur dans le choix de votre équipement ou dans la logistique.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Embrace the Death Zone',
+                    'fr' => 'Adopter la zone de la mort',
+                ],
+                'description' => [
+                    'en' => 'Above 8000 meters, you enter the "Death Zone" where the human body cannot survive indefinitely.  Be prepared for the psychological and physiological effects of extreme altitude.  Supplemental oxygen is typically used.',
+                    'fr' => 'Au-dessus de 8 000 mètres, vous entrez dans la "zone de la mort" où le corps humain ne peut survivre indéfiniment. Soyez prêt à affronter les effets psychologiques et physiologiques de l\'altitude extrême. L\'oxygène supplémentaire est généralement utilisé.',
+                ],
+            ],
+        ];
+        $seven_thousanders_expedition_tips = [
+            [
+                'title' => [
+                    'en' => 'Extensive High-Altitude Experience',
+                    'fr' => 'Vaste expérience en haute altitude',
+                ],
+                'description' => [
+                    'en' => 'Climbing 7000+ meter peaks requires significant prior experience on lower 6000m peaks and preferably some 8000m experience.  This builds the necessary acclimatization knowledge and technical skills.',
+                    'fr' => 'L\'ascension de sommets de plus de 7 000 mètres exige une vaste expérience préalable sur des sommets de 6 000 mètres inférieurs et, de préférence, une certaine expérience de 8 000 mètres. Cela permet d\'acquérir les connaissances nécessaires en matière d\'acclimatation et les compétences techniques.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Advanced Mountaineering Skills',
+                    'fr' => 'Compétences avancées en alpinisme',
+                ],
+                'description' => [
+                    'en' => 'Master advanced techniques in ice climbing, rock climbing, mixed climbing, and crevasse rescue.  Be proficient with using crampons, ice axes, ropes, and other technical equipment.',
+                    'fr' => 'Maîtrisez les techniques avancées en escalade sur glace, en escalade rocheuse, en escalade mixte et en sauvetage en crevasse. Maîtrisez l\'utilisation des crampons, des piolets, des cordes et d\'autres équipements techniques.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Rigorous Physical Conditioning',
+                    'fr' => 'Conditionnement physique rigoureux',
+                ],
+                'description' => [
+                    'en' => '7000+ meter peaks demand exceptional physical fitness.  Engage in intense training focused on endurance, strength, and cardiovascular fitness, including training at altitude if possible.',
+                    'fr' => 'Les sommets de plus de 7 000 mètres exigent une condition physique exceptionnelle. Participez à un entraînement intense axé sur l\'endurance, la force et la capacité cardiovasculaire, y compris un entraînement en altitude si possible.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Comprehensive Acclimatization Strategy',
+                    'fr' => 'Stratégie d\'acclimatation complète',
+                ],
+                'description' => [
+                    'en' => 'Develop a detailed acclimatization plan with your expedition team.  Understand the signs and symptoms of altitude sickness and be prepared to descend if necessary.  Supplemental oxygen may be considered.',
+                    'fr' => 'Élaborez un plan d\'acclimatation détaillé avec votre équipe d\'expédition. Comprenez les signes et les symptômes du mal des montagnes et soyez prêt à descendre si nécessaire. L\'oxygène supplémentaire peut être envisagé.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'High-Quality Gear and Equipment',
+                    'fr' => 'Équipement de haute qualité',
+                ],
+                'description' => [
+                    'en' => 'Invest in the best quality mountaineering gear you can afford.  Ensure it is appropriate for the specific conditions of the mountain you are climbing.  Test all gear before the expedition.',
+                    'fr' => 'Investissez dans l\'équipement d\'alpinisme de la meilleure qualité que vous pouvez vous permettre. Assurez-vous qu\'il est adapté aux conditions spécifiques de la montagne que vous escaladez. Testez tout l\'équipement avant l\'expédition.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Experienced Expedition Team',
+                    'fr' => 'Équipe d\'expédition expérimentée',
+                ],
+                'description' => [
+                    'en' => 'Choose a reputable expedition company with experienced guides and Sherpas who have successfully summited the peak.  A strong and cohesive team is crucial for safety and success.',
+                    'fr' => 'Choisissez une entreprise d\'expédition réputée avec des guides et des Sherpas expérimentés qui ont gravi avec succès le sommet. Une équipe soudée et solide est cruciale pour la sécurité et le succès.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Contingency Planning',
+                    'fr' => 'Planification des imprévus',
+                ],
+                'description' => [
+                    'en' => 'Be prepared for unexpected challenges such as bad weather, injuries, or logistical problems.  Have backup plans in place and be flexible with your summit plans.',
+                    'fr' => 'Soyez prêt à faire face à des défis inattendus tels que le mauvais temps, les blessures ou les problèmes logistiques. Prévoyez des plans de secours et soyez flexible quant à vos plans de sommet.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Respect for the Mountain',
+                    'fr' => 'Respect de la montagne',
+                ],
+                'description' => [
+                    'en' => '7000+ meter peaks are inherently dangerous.  Respect the power of nature and be prepared to turn back if conditions are unfavorable.  The summit is never worth risking your life.',
+                    'fr' => 'Les sommets de plus de 7 000 mètres sont intrinsèquement dangereux. Respectez le pouvoir de la nature et soyez prêt à faire demi-tour si les conditions sont défavorables. Le sommet ne vaut jamais la peine de risquer votre vie.',
+                ],
+            ],
+        ];
+        $six_thousanders_expedition_tips = [
+            [
+                'title' => [
+                    'en' => 'Solid Mountaineering Foundation',
+                    'fr' => 'Solide base en alpinisme',
+                ],
+                'description' => [
+                    'en' => '6000-meter peaks are a great stepping stone to higher altitudes. You should have prior experience in trekking and basic mountaineering skills, including using crampons, ice axes, and ropes.',
+                    'fr' => 'Les sommets de 6 000 mètres sont un excellent tremplin vers des altitudes plus élevées. Vous devez avoir une expérience préalable en trekking et des compétences de base en alpinisme, notamment l\'utilisation de crampons, de piolets et de cordes.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Good Physical Fitness',
+                    'fr' => 'Bonne condition physique',
+                ],
+                'description' => [
+                    'en' => 'While not as demanding as 8000-meter peaks, 6000ers still require a good level of fitness. Train with cardio, strength training, and hiking, ideally at altitude if possible.',
+                    'fr' => 'Bien que moins exigeants que les sommets de 8 000 mètres, les sommets de 6 000 mètres exigent toujours un bon niveau de forme physique. Entraînez-vous avec du cardio, de la musculation et de la randonnée, idéalement en altitude si possible.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Acclimatization Strategy',
+                    'fr' => 'Stratégie d\'acclimatation',
+                ],
+                'description' => [
+                    'en' => 'Proper acclimatization is essential. Ascend gradually, include rest days, and be aware of altitude sickness symptoms. Descend if necessary.',
+                    'fr' => 'Une bonne acclimatation est essentielle. Montez progressivement, incluez des jours de repos et soyez conscient des symptômes du mal des montagnes. Descendez si nécessaire.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Appropriate Gear',
+                    'fr' => 'Équipement approprié',
+                ],
+                'description' => [
+                    'en' => 'Use reliable mountaineering gear suitable for the conditions. This includes warm layers, a good sleeping bag, sturdy boots, and necessary safety equipment.',
+                    'fr' => 'Utilisez un équipement d\'alpinisme fiable et adapté aux conditions. Cela comprend des couches chaudes, un bon sac de couchage, des bottes robustes et l\'équipement de sécurité nécessaire.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Experienced Guide',
+                    'fr' => 'Guide expérimenté',
+                ],
+                'description' => [
+                    'en' => 'It\'s highly recommended to hire an experienced guide, especially if you are new to mountaineering. They can provide valuable guidance and ensure your safety.',
+                    'fr' => 'Il est fortement recommandé d\'engager un guide expérimenté, surtout si vous débutez en alpinisme. Il peut vous fournir des conseils précieux et assurer votre sécurité.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Weather Awareness',
+                    'fr' => 'Connaissance de la météo',
+                ],
+                'description' => [
+                    'en' => 'Monitor weather forecasts and be prepared to adjust your plans accordingly. Mountain weather can change rapidly.',
+                    'fr' => 'Surveillez les prévisions météorologiques et soyez prêt à adapter vos plans en conséquence. Le temps en montagne peut changer rapidement.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Teamwork and Communication',
+                    'fr' => 'Travail d\'équipe et communication',
+                ],
+                'description' => [
+                    'en' => 'Good communication and teamwork are crucial for safety and success. Stay in contact with your team and guide.',
+                    'fr' => 'Une bonne communication et un bon travail d\'équipe sont essentiels pour la sécurité et le succès. Restez en contact avec votre équipe et votre guide.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Respect the Mountain',
+                    'fr' => 'Respectez la montagne',
+                ],
+                'description' => [
+                    'en' => 'Mountains are unpredictable. Be prepared to turn back if conditions are unfavorable.  The summit is not worth risking your life.',
+                    'fr' => 'Les montagnes sont imprévisibles. Soyez prêt à faire demi-tour si les conditions sont défavorables. Le sommet ne vaut pas la peine de risquer votre vie.',
+                ],
+            ],
+        ];
+        $base_camp_trekking_tips = [
+            [
+                'title' => [
+                    'en' => 'Prepare Physically',
+                    'fr' => 'Préparez-vous physiquement',
+                ],
+                'description' => [
+                    'en' => 'Base camp treks involve long days of hiking at altitude.  Train beforehand with cardio, strength training, and hiking, ideally with a weighted pack.',
+                    'fr' => 'Les treks de camp de base impliquent de longues journées de randonnée en altitude. Entraînez-vous au préalable avec du cardio, de la musculation et de la randonnée, idéalement avec un sac à dos lesté.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Acclimatize Gradually',
+                    'fr' => 'Acclimatisez-vous progressivement',
+                ],
+                'description' => [
+                    'en' => 'Ascend slowly to allow your body to adjust to the altitude.  Rest days are crucial.  Listen to your body and descend if you experience altitude sickness symptoms.',
+                    'fr' => 'Montez lentement pour permettre à votre corps de s\'adapter à l\'altitude. Les jours de repos sont cruciaux. Écoutez votre corps et descendez si vous ressentez des symptômes du mal des montagnes.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Pack Appropriately',
+                    'fr' => 'Préparez vos bagages de manière appropriée',
+                ],
+                'description' => [
+                    'en' => 'Pack layers of clothing for varying temperatures.  Include a good quality sleeping bag, rain gear, sturdy hiking boots, and essentials like sunscreen, a hat, and sunglasses.',
+                    'fr' => 'Emportez des couches de vêtements pour les différentes températures. Incluez un sac de couchage de bonne qualité, un équipement de pluie, des chaussures de randonnée robustes et des essentiels comme de la crème solaire, un chapeau et des lunettes de soleil.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Stay Hydrated and Eat Well',
+                    'fr' => 'Restez hydraté et mangez bien',
+                ],
+                'description' => [
+                    'en' => 'Drink plenty of water (3-4 liters per day) and eat nutritious meals to fuel your body.  Carry snacks for energy between meals.',
+                    'fr' => 'Buvez beaucoup d\'eau (3 à 4 litres par jour) et mangez des repas nutritifs pour alimenter votre corps. Emportez des collations pour avoir de l\'énergie entre les repas.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Respect Local Culture',
+                    'fr' => 'Respectez la culture locale',
+                ],
+                'description' => [
+                    'en' => 'Be mindful of local customs and traditions.  Dress modestly, ask permission before taking photos, and interact respectfully with locals.',
+                    'fr' => 'Soyez attentif aux coutumes et traditions locales. Habillez-vous modestement, demandez la permission avant de prendre des photos et interagissez respectueusement avec les habitants.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Be Prepared for Basic Amenities',
+                    'fr' => 'Soyez prêt pour des commodités de base',
+                ],
+                'description' => [
+                    'en' => 'Teahouses and lodges along the trail offer basic accommodation and food.  Electricity and hot water may be limited or unavailable.',
+                    'fr' => 'Les maisons de thé et les lodges le long du sentier offrent un hébergement et une nourriture de base. L\'électricité et l\'eau chaude peuvent être limitées ou indisponibles.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Hire a Guide and Porter (Optional)',
+                    'fr' => 'Engagez un guide et un porteur (facultatif)',
+                ],
+                'description' => [
+                    'en' => 'Hiring a guide enhances your safety and provides valuable insights into the local culture and environment. Porters can carry your heavy gear, making the trek more enjoyable.',
+                    'fr' => 'Engager un guide améliore votre sécurité et fournit des informations précieuses sur la culture et l\'environnement locaux. Les porteurs peuvent transporter votre équipement lourd, ce qui rend le trek plus agréable.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Enjoy the Journey',
+                    'fr' => 'Profitez du voyage',
+                ],
+                'description' => [
+                    'en' => 'Base camp treks offer stunning scenery and a unique cultural experience. Take your time, savor the views, and connect with fellow trekkers and locals.',
+                    'fr' => 'Les treks de camp de base offrent des paysages époustouflants et une expérience culturelle unique. Prenez votre temps, savourez les vues et connectez-vous avec les autres trekkeurs et les habitants.',
+                ],
+            ],
+        ];
+        $general_expedition_tips = [
+            [
+                'title' => [
+                    'en' => 'Thorough Planning and Preparation',
+                    'fr' => 'Planification et préparation approfondies',
+                ],
+                'description' => [
+                    'en' => 'Research your destination extensively.  Understand the terrain, climate, potential hazards, and logistical requirements.  Create a detailed itinerary and contingency plans.',
+                    'fr' => 'Faites des recherches approfondies sur votre destination. Comprenez le terrain, le climat, les dangers potentiels et les exigences logistiques. Créez un itinéraire détaillé et des plans d\'urgence.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Physical Fitness and Conditioning',
+                    'fr' => 'Condition physique',
+                ],
+                'description' => [
+                    'en' => 'Expeditions demand physical exertion.  Train appropriately with cardio, strength training, and activities specific to your expedition (e.g., hiking, climbing, paddling).',
+                    'fr' => 'Les expéditions exigent un effort physique. Entraînez-vous de manière appropriée avec du cardio, de la musculation et des activités spécifiques à votre expédition (par exemple, randonnée, escalade, canotage).',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Essential Gear and Equipment',
+                    'fr' => 'Équipement essentiel',
+                ],
+                'description' => [
+                    'en' => 'Pack reliable and appropriate gear for your expedition.  This includes clothing, footwear, navigation tools, safety equipment, first-aid kit, and any specialized equipment required.',
+                    'fr' => 'Emportez un équipement fiable et approprié pour votre expédition. Cela comprend les vêtements, les chaussures, les outils de navigation, l\'équipement de sécurité, une trousse de premiers secours et tout équipement spécialisé requis.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Navigation and Route Finding',
+                    'fr' => 'Navigation et recherche d\'itinéraire',
+                ],
+                'description' => [
+                    'en' => 'Develop strong navigation skills.  Use maps, compass, GPS, and other tools to plan your route and stay on course.  Be aware of potential hazards and changing conditions.',
+                    'fr' => 'Développez de solides compétences en navigation. Utilisez des cartes, une boussole, un GPS et d\'autres outils pour planifier votre itinéraire et rester sur la bonne voie. Soyez conscient des dangers potentiels et des conditions changeantes.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Safety and Risk Management',
+                    'fr' => 'Sécurité et gestion des risques',
+                ],
+                'description' => [
+                    'en' => 'Prioritize safety.  Identify potential risks and develop mitigation strategies.  Carry a first-aid kit and know how to use it.  Communicate your plans with someone and have a way to contact them in emergencies.',
+                    'fr' => 'Privilégiez la sécurité. Identifiez les risques potentiels et élaborez des stratégies d\'atténuation. Emportez une trousse de premiers secours et sachez l\'utiliser. Communiquez vos plans à quelqu\'un et ayez un moyen de le contacter en cas d\'urgence.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Nutrition and Hydration',
+                    'fr' => 'Nutrition et hydratation',
+                ],
+                'description' => [
+                    'en' => 'Maintain a healthy diet and stay well-hydrated.  Pack enough food and water for the duration of your expedition, plus some extra for emergencies.',
+                    'fr' => 'Maintenez une alimentation saine et restez bien hydraté. Emportez suffisamment de nourriture et d\'eau pour la durée de votre expédition, ainsi qu\'un peu plus pour les urgences.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Leave No Trace Principles',
+                    'fr' => 'Principes du sans trace',
+                ],
+                'description' => [
+                    'en' => 'Minimize your impact on the environment.  Pack out all trash, stay on designated trails, and respect wildlife and natural resources.',
+                    'fr' => 'Minimisez votre impact sur l\'environnement. Emportez tous vos déchets, restez sur les sentiers désignés et respectez la faune et les ressources naturelles.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Respect Local Culture and Customs',
+                    'fr' => 'Respectez la culture et les coutumes locales',
+                ],
+                'description' => [
+                    'en' => 'Be mindful of local customs and traditions.  Dress appropriately, ask permission before taking photos, and interact respectfully with local communities.',
+                    'fr' => 'Soyez attentif aux coutumes et traditions locales. Habillez-vous de manière appropriée, demandez la permission avant de prendre des photos et interagissez respectueusement avec les communautés locales.',
+                ],
+            ],
+        ];
+
+        $vip_tips = [
+            [
+                'title' => [
+                    'en' => 'Book Well in Advance',
+                    'fr' => 'Réservez Bien à l\'Avance',
+                ],
+                'description' => [
+                    'en' => 'For the best accommodations, guides, and availability, especially during peak season, it\'s crucial to book your VIP experience well in advance.',
+                    'fr' => 'Pour les meilleurs hébergements, guides et disponibilités, surtout en haute saison, il est crucial de réserver votre expérience VIP bien à l\'avance.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Communicate Your Preferences',
+                    'fr' => 'Communiquez Vos Préférences',
+                ],
+                'description' => [
+                    'en' => 'Share your interests, desired level of activity, dietary restrictions, and any other specific needs with your travel planner.  The more information you provide, the more personalized and perfect your trip will be.',
+                    'fr' => 'Partagez vos intérêts, le niveau d\'activité souhaité, vos restrictions alimentaires et tout autre besoin spécifique avec votre planificateur de voyage. Plus vous fournirez d\'informations, plus votre voyage sera personnalisé et parfait.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Consider Travel Insurance',
+                    'fr' => 'Envisagez une Assurance Voyage',
+                ],
+                'description' => [
+                    'en' => 'Comprehensive travel insurance is essential for any trip, but especially for VIP experiences that may involve higher costs or more complex logistics. Ensure your policy covers trip cancellations, medical emergencies, and other unforeseen circumstances.',
+                    'fr' => 'Une assurance voyage complète est essentielle pour tout voyage, mais surtout pour les expériences VIP qui peuvent impliquer des coûts plus élevés ou une logistique plus complexe. Assurez-vous que votre police couvre les annulations de voyage, les urgences médicales et d\'autres circonstances imprévues.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Pack Appropriately but Lightly',
+                    'fr' => 'Préparez-vous de Manière Appropriée mais Légère',
+                ],
+                'description' => [
+                    'en' => 'While luxury accommodations will likely provide many amenities, pack essential items for your activities (trekking gear, appropriate clothing, etc.).  However, consider packing lightly to make transfers and porter services easier.',
+                    'fr' => 'Bien que les hébergements de luxe fournissent probablement de nombreux équipements, emballez les articles essentiels pour vos activités (équipement de trekking, vêtements appropriés, etc.). Cependant, pensez à voyager léger pour faciliter les transferts et les services de porteurs.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Respect Local Customs and Traditions',
+                    'fr' => 'Respectez les Coutumes et Traditions Locales',
+                ],
+                'description' => [
+                    'en' => 'Even on VIP tours, it\'s important to be respectful of local customs and traditions. Dress modestly when visiting religious sites, ask permission before taking photos of people, and be mindful of local etiquette.',
+                    'fr' => 'Même lors de visites VIP, il est important de respecter les coutumes et traditions locales. Habillez-vous modestement lorsque vous visitez des sites religieux, demandez la permission avant de prendre des photos de personnes et soyez attentif à l\'étiquette locale.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Confirm All Details',
+                    'fr' => 'Confirmez Tous les Détails',
+                ],
+                'description' => [
+                    'en' => 'Before your trip, double-check all bookings, itineraries, and arrangements with your travel planner. Confirm flight times, accommodation details, and any special requests to avoid any last-minute surprises.',
+                    'fr' => 'Avant votre voyage, vérifiez toutes les réservations, les itinéraires et les arrangements avec votre planificateur de voyage. Confirmez les heures de vol, les détails de l\'hébergement et toute demande spéciale pour éviter toute surprise de dernière minute.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Stay Connected (When Possible)',
+                    'fr' => 'Restez Connecté (Lorsque Possible)',
+                ],
+                'description' => [
+                    'en' => 'Depending on your itinerary, connectivity might be limited in certain areas.  If possible, consider a local SIM card or satellite communication device for emergencies or to stay in touch with your travel planner.',
+                    'fr' => 'Selon votre itinéraire, la connectivité peut être limitée dans certaines zones. Si possible, envisagez une carte SIM locale ou un appareil de communication par satellite en cas d\'urgence ou pour rester en contact avec votre planificateur de voyage.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Be Prepared for Altitude (If Applicable)',
+                    'fr' => 'Soyez Préparé à l\'Altitude (Si Applicable)',
+                ],
+                'description' => [
+                    'en' => 'Even on luxury treks or climbs, altitude can be a factor. Discuss acclimatization plans with your guide and be aware of the signs of altitude sickness.',
+                    'fr' => 'Même lors de treks ou d\'ascensions de luxe, l\'altitude peut être un facteur. Discutez des plans d\'acclimatation avec votre guide et soyez conscient des signes du mal d\'altitude.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Relax and Enjoy!',
+                    'fr' => 'Détendez-vous et Profitez!',
+                ],
+                'description' => [
+                    'en' => 'Most importantly, relax and enjoy the incredible experience! You\'re on a VIP trip, so let the expert team take care of the details and savor every moment of your journey.',
+                    'fr' => 'Plus important encore, détendez-vous et profitez de cette incroyable expérience ! Vous êtes en voyage VIP, alors laissez l\'équipe d\'experts s\'occuper des détails et savourez chaque instant de votre voyage.',
+                ],
+            ],
+        ];
+
 
         $this->createEssentialTips(
             Trek::first(),
             $everest_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(2),
+            $annapurna_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(3),
+            $manaslu_circuit_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(4),
+            $langtang_tips
         );
         $this->createEssentialTips(
             Trek::find(5),
@@ -551,10 +1037,6 @@ class EssentialTipsSeeder extends Seeder
             $everest_base_camp_trek_tips
         );
         $this->createEssentialTips(
-            Trek::find(2),
-            $annapurna_base_camp_trek_tips
-        );
-        $this->createEssentialTips(
             Trek::find(9),
             $annapurna_base_camp_trek_tips
         );
@@ -565,14 +1047,6 @@ class EssentialTipsSeeder extends Seeder
         $this->createEssentialTips(
             Trek::find(11),
             $manaslu_circuit_trek_tips
-        );
-        $this->createEssentialTips(
-            Trek::find(3),
-            $manaslu_circuit_trek_tips
-        );
-        $this->createEssentialTips(
-            Trek::find(4),
-            $langtang_tips
         );
         $this->createEssentialTips(
             Trek::find(12),
@@ -587,18 +1061,18 @@ class EssentialTipsSeeder extends Seeder
             $langtang_tips
         );
 
-        
+
         $this->createEssentialTips(
             Expedition::first(),
             $everest_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(2),
-            $kanchanjunga_exped_essential_tips
+            $everest_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(3),
-            $everest_expedition_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(4),
@@ -606,93 +1080,132 @@ class EssentialTipsSeeder extends Seeder
         );
         $this->createEssentialTips(
             Expedition::find(5),
-            $everest_expedition_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(6),
-            $kanchanjunga_exped_essential_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(7),
-            $everest_expedition_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(8),
-            $kanchanjunga_exped_essential_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(9),
-            $everest_expedition_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(10),
-            $kanchanjunga_exped_essential_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(11),
-            $everest_expedition_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(12),
-            $kanchanjunga_exped_essential_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(13),
-            $everest_expedition_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(14),
-            $kanchanjunga_exped_essential_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(15),
-            $everest_expedition_tips
+            $eight_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(16),
-            $kanchanjunga_exped_essential_tips
+            $seven_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(17),
-            $everest_expedition_tips
+            $seven_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(18),
-            $kanchanjunga_exped_essential_tips
+            $seven_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(19),
-            $everest_expedition_tips
+            $seven_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(20),
-            $kanchanjunga_exped_essential_tips
+            $seven_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(21),
-            $everest_expedition_tips
+            $seven_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(22),
-            $kanchanjunga_exped_essential_tips
+            $seven_thousanders_expedition_tips
         );
         $this->createEssentialTips(
             Expedition::find(23),
-            $everest_expedition_tips
+            $general_expedition_tips
         );
+
+
         $this->createEssentialTips(
             Expedition::find(24),
-            $kanchanjunga_exped_essential_tips
+            $vip_tips
         );
         $this->createEssentialTips(
             Expedition::find(25),
-            $everest_expedition_tips
+            $vip_tips
         );
+
         $this->createEssentialTips(
             Expedition::find(26),
-            $kanchanjunga_exped_essential_tips
+            $lobuche_peak_climbing_tips
         );
-        
+        $this->createEssentialTips(
+            Expedition::find(27),
+            $six_thousanders_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(28),
+            $six_thousanders_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(29),
+            $six_thousanders_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(30),
+            $six_thousanders_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(31),
+            $six_thousanders_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(32),
+            $six_thousanders_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(33),
+            $six_thousanders_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(34),
+            $six_thousanders_expedition_tips
+        );
+        $this->createEssentialTips(
+            Expedition::find(35),
+            $six_thousanders_expedition_tips
+        );
+
         $this->createEssentialTips(
             Tour::first(),
             $kathmandu_cultural_tour_tips
@@ -705,7 +1218,6 @@ class EssentialTipsSeeder extends Seeder
             Tour::find(3),
             $kathmandu_cultural_tour_tips
         );
-
     }
     protected function createEssentialTips(Model $model, array $tips): void
     {

@@ -512,6 +512,197 @@ class KeyHighlightSeeder extends Seeder
             ],
         ];
 
+        $highlights_8000ers = [
+            [
+                'title' => [
+                    'en' => 'Ultimate Challenges',
+                    'fr' => 'Défis Ultimes',
+                ],
+                'description' => [
+                    'en' => 'These mountains represent the most extreme mountaineering challenges, reserved for the most experienced and physically fit climbers.',
+                    'fr' => 'Ces montagnes représentent les défis d\'alpinisme les plus extrêmes, réservés aux alpinistes les plus expérimentés et en excellente condition physique.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'High Altitude',
+                    'fr' => 'Haute Altitude',
+                ],
+                'description' => [
+                    'en' => 'The extreme altitude presents significant risks, including altitude sickness, and requires careful acclimatization.',
+                    'fr' => 'L\'altitude extrême présente des risques importants, notamment le mal d\'altitude, et nécessite une acclimatation minutieuse.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Technical Skills and Equipment',
+                    'fr' => 'Compétences Techniques et Équipement',
+                ],
+                'description' => [
+                    'en' => 'Climbing these peaks requires advanced technical skills and the use of specialized equipment.',
+                    'fr' => 'L\'alpinisme sur ces sommets exige des compétences techniques avancées et l\'utilisation d\'équipement spécialisé.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Unparalleled Rewards',
+                    'fr' => 'Récompenses Inégalées',
+                ],
+                'description' => [
+                    'en' => 'Reaching the summit of an 8000m peak offers an immense sense of accomplishment and spectacular views.',
+                    'fr' => 'Atteindre le sommet d\'un 8000m offre un sentiment d\'accomplissement immense et des vues spectaculaires.',
+                ],
+            ],
+        ];
+
+        $highlights_7000ers = [
+            [
+                'title' => [
+                    'en' => 'Excellent Mountaineering Experience',
+                    'fr' => 'Excellente Expérience d\'Alpinisme',
+                ],
+                'description' => [
+                    'en' => 'These peaks offer a challenging mountaineering experience, suitable for climbers with some high-altitude experience.',
+                    'fr' => 'Ces sommets offrent une expérience d\'alpinisme stimulante, adaptée aux grimpeurs ayant une certaine expérience en haute altitude.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Fewer Risks than 8000ers',
+                    'fr' => 'Moins de Risques que les 8000m',
+                ],
+                'description' => [
+                    'en' => 'While still challenging, these mountains generally pose fewer risks than 8000m peaks.',
+                    'fr' => 'Bien que toujours difficiles, ces montagnes présentent généralement moins de risques que les 8000m.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Preparation and Acclimatization',
+                    'fr' => 'Préparation et Acclimatation',
+                ],
+                'description' => [
+                    'en' => 'Good physical preparation and proper acclimatization are essential.',
+                    'fr' => 'Une bonne préparation physique et une acclimatation adéquate sont essentielles.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Panoramic Views',
+                    'fr' => 'Vues Panoramiques',
+                ],
+                'description' => [
+                    'en' => '7000m peaks offer panoramic views of the surrounding mountain ranges.',
+                    'fr' => 'Les sommets de 7000m offrent des vues panoramiques sur les chaînes de montagnes environnantes.',
+                ],
+            ],
+        ];
+        $vip_highlights = [
+            [
+                'title' => [
+                    'en' => 'Exclusive Access and Personalized Itineraries',
+                    'fr' => 'Accès Exclusif et Itinéraires Personnalisés',
+                ],
+                'description' => [
+                    'en' => 'Experience Nepal like never before with exclusive access to hidden gems, off-the-beaten-path adventures, and tailor-made itineraries designed to match your interests and preferences.',
+                    'fr' => 'Découvrez le Népal comme jamais auparavant avec un accès exclusif à des joyaux cachés, des aventures hors des sentiers battus et des itinéraires sur mesure conçus pour correspondre à vos intérêts et préférences.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Luxury Accommodation and Unparalleled Comfort',
+                    'fr' => 'Hébergement de Luxe et Confort Inégalé',
+                ],
+                'description' => [
+                    'en' => 'Indulge in luxurious accommodations, from boutique hotels with breathtaking views to cozy teahouses with premium amenities, ensuring a comfortable and unforgettable stay.',
+                    'fr' => 'Offrez-vous un hébergement luxueux, des hôtels de charme avec des vues imprenables aux maisons de thé confortables avec des équipements haut de gamme, garantissant un séjour confortable et inoubliable.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Private Transportation and Seamless Logistics',
+                    'fr' => 'Transport Privé et Logistique Transparente',
+                ],
+                'description' => [
+                    'en' => 'Enjoy seamless travel with private transportation, including helicopter tours, comfortable 4x4 vehicles, and experienced porters, ensuring a hassle-free and enjoyable journey.',
+                    'fr' => 'Profitez d\'un voyage en toute tranquillité avec un transport privé, notamment des excursions en hélicoptère, des véhicules 4x4 confortables et des porteurs expérimentés, garantissant un voyage agréable et sans tracas.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Expert Guides and Cultural Immersion',
+                    'fr' => 'Guides Experts et Immersion Culturelle',
+                ],
+                'description' => [
+                    'en' => 'Gain deeper insights into Nepal\'s culture and traditions with expert local guides, who will share their knowledge and passion, creating an enriching and authentic experience.',
+                    'fr' => 'Approfondissez vos connaissances sur la culture et les traditions du Népal avec des guides locaux experts, qui partageront leurs connaissances et leur passion, créant une expérience enrichissante et authentique.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Gourmet Dining and Local Delicacies',
+                    'fr' => 'Cuisine Gastronomique et Spécialités Locales',
+                ],
+                'description' => [
+                    'en' => 'Savor delicious meals prepared by experienced chefs, featuring a fusion of international and local flavors, catering to your dietary needs and preferences.',
+                    'fr' => 'Savourez de délicieux repas préparés par des chefs expérimentés, proposant une fusion de saveurs internationales et locales, en tenant compte de vos besoins et préférences alimentaires.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Wellness and Relaxation',
+                    'fr' => 'Bien-être et Détente',
+                ],
+                'description' => [
+                    'en' => 'Unwind and rejuvenate with wellness activities like yoga sessions, spa treatments, and meditation retreats, enhancing your overall well-being during your journey.',
+                    'fr' => 'Détendez-vous et ressourcez-vous avec des activités de bien-être comme des séances de yoga, des soins spa et des retraites de méditation, améliorant votre bien-être général pendant votre voyage.',
+                ],
+            ],
+        ];
+
+        $highlights_6000ers = [
+            [
+                'title' => [
+                    'en' => 'Ideal for Intermediate Climbers',
+                    'fr' => 'Idéal pour les Grimpeurs Intermédiaires',
+                ],
+                'description' => [
+                    'en' => 'These peaks are an excellent choice for climbers looking to gain high-altitude experience.',
+                    'fr' => 'Ces sommets sont un excellent choix pour les grimpeurs qui souhaitent acquérir de l\'expérience en haute altitude.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Less Technical than 7000m and 8000m',
+                    'fr' => 'Moins Techniques que les 7000m et 8000m',
+                ],
+                'description' => [
+                    'en' => 'The climbing is often less technical, but still requires good physical fitness.',
+                    'fr' => 'L\'escalade est souvent moins technique, mais nécessite toujours une bonne condition physique.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Training Opportunity',
+                    'fr' => 'Possibilité d\'Entraînement',
+                ],
+                'description' => [
+                    'en' => 'These peaks can serve as a stepping stone for more challenging ascents in the future.',
+                    'fr' => 'Ces sommets peuvent servir de tremplin pour des ascensions plus difficiles à l\'avenir.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Magnificent Views',
+                    'fr' => 'Vues Magnifiques',
+                ],
+                'description' => [
+                    'en' => '6000m peaks also offer magnificent views of the Himalayan landscapes.',
+                    'fr' => 'Les sommets de 6000m offrent également des vues magnifiques sur les paysages himalayens.',
+                ],
+            ],
+        ];
+
 
         $this->createKeyHighlights(
             Trek::first(),
@@ -570,116 +761,158 @@ class KeyHighlightSeeder extends Seeder
             $kanchanjunga_highlights
         );
 
+
+
         $this->createKeyHighlights(
             Expedition::first(),
             $everest_expedition
         );
         $this->createKeyHighlights(
             Expedition::find(2),
-            $kanchanjunga_highlights
+            $everest_expedition
         );
         $this->createKeyHighlights(
             Expedition::find(3),
-            $everest_expedition
+            $kanchanjunga_highlights
         );
         $this->createKeyHighlights(
             Expedition::find(4),
-            $everest_expedition
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(5),
-            $kanchanjunga_highlights
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(6),
-            $everest_expedition
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(7),
-            $kanchanjunga_highlights
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(8),
-            $everest_expedition
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(9),
-            $everest_expedition
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(10),
-            $kanchanjunga_highlights
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(11),
-            $everest_expedition
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(12),
-            $kanchanjunga_highlights
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(13),
-            $everest_expedition
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(14),
-            $everest_expedition
+            $highlights_8000ers
         );
         $this->createKeyHighlights(
             Expedition::find(15),
-            $kanchanjunga_highlights
+            $highlights_8000ers
         );
+
+
+
+
         $this->createKeyHighlights(
             Expedition::find(16),
-            $everest_expedition
+            $highlights_7000ers
         );
         $this->createKeyHighlights(
             Expedition::find(17),
-            $kanchanjunga_highlights
+            $highlights_7000ers
         );
         $this->createKeyHighlights(
             Expedition::find(18),
-            $everest_expedition
+            $highlights_7000ers
         );
         $this->createKeyHighlights(
             Expedition::find(19),
-            $everest_expedition
+            $highlights_7000ers
         );
         $this->createKeyHighlights(
             Expedition::find(20),
-            $kanchanjunga_highlights
+            $highlights_7000ers
         );
         $this->createKeyHighlights(
             Expedition::find(21),
-            $everest_expedition
+            $highlights_7000ers
         );
         $this->createKeyHighlights(
             Expedition::find(22),
-            $kanchanjunga_highlights
+            $highlights_7000ers
         );
         $this->createKeyHighlights(
             Expedition::find(23),
-            $everest_expedition
+            $highlights_7000ers
         );
+
+
         $this->createKeyHighlights(
             Expedition::find(24),
-            $everest_expedition
+            $vip_highlights
         );
         $this->createKeyHighlights(
             Expedition::find(25),
-            $kanchanjunga_highlights
+            $vip_highlights
         );
+
+
         $this->createKeyHighlights(
             Expedition::find(26),
-            $everest_expedition
+            $lobuche_peak_climbing
         );
-        
-        
-        
-        
-        
-        
+        $this->createKeyHighlights(
+            Expedition::find(27),
+            $highlights_6000ers
+        );
+        $this->createKeyHighlights(
+            Expedition::find(28),
+            $highlights_6000ers
+        );
+        $this->createKeyHighlights(
+            Expedition::find(29),
+            $highlights_6000ers
+        );
+        $this->createKeyHighlights(
+            Expedition::find(30),
+            $highlights_6000ers
+        );
+        $this->createKeyHighlights(
+            Expedition::find(31),
+            $highlights_6000ers
+        );
+        $this->createKeyHighlights(
+            Expedition::find(32),
+            $highlights_6000ers
+        );
+        $this->createKeyHighlights(
+            Expedition::find(33),
+            $highlights_6000ers
+        );
+        $this->createKeyHighlights(
+            Expedition::find(34),
+            $highlights_6000ers
+        );
+        $this->createKeyHighlights(
+            Expedition::find(35),
+            $highlights_6000ers
+        );
+
+
         
         $this->createKeyHighlights(
             Tour::first(),
