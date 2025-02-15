@@ -69,7 +69,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
         $annapurna_base_camp_trek = [
             [
                 'title' => [
@@ -122,7 +121,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
         $lobuche_peak_climbing = [
             [
                 'title' => [
@@ -175,7 +173,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
         $everest_expedition = [
             [
                 'title' => [
@@ -228,7 +225,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
         $kathmandu_cultural_tour = [
             [
                 'title' => [
@@ -281,7 +277,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
         $manaslu_circuit_trek = [
             [
                 'title' => [
@@ -384,8 +379,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
-
         $langtang_highlights = [
             [
                 'title' => [
@@ -458,7 +451,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
         $kanchanjunga_highlights = [
             [
                 'title' => [
@@ -511,7 +503,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
         $highlights_8000ers = [
             [
                 'title' => [
@@ -554,7 +545,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
         $highlights_7000ers = [
             [
                 'title' => [
@@ -659,7 +649,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
         $highlights_6000ers = [
             [
                 'title' => [
@@ -702,7 +691,6 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
-
 
         $this->createKeyHighlights(
             Trek::first(),
@@ -824,9 +812,6 @@ class KeyHighlightSeeder extends Seeder
             $highlights_8000ers
         );
 
-
-
-
         $this->createKeyHighlights(
             Expedition::find(16),
             $highlights_7000ers
@@ -860,7 +845,6 @@ class KeyHighlightSeeder extends Seeder
             $highlights_7000ers
         );
 
-
         $this->createKeyHighlights(
             Expedition::find(24),
             $vip_highlights
@@ -869,7 +853,6 @@ class KeyHighlightSeeder extends Seeder
             Expedition::find(25),
             $vip_highlights
         );
-
 
         $this->createKeyHighlights(
             Expedition::find(26),

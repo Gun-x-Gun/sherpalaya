@@ -69,7 +69,6 @@ class EssentialTipsSeeder extends Seeder
                 ],
             ],
         ];
-
         $annapurna_base_camp_trek_tips = [
             [
                 'title' => [
@@ -122,7 +121,6 @@ class EssentialTipsSeeder extends Seeder
                 ],
             ],
         ];
-
         $lobuche_peak_climbing_tips = [
             [
                 'title' => [
@@ -175,7 +173,6 @@ class EssentialTipsSeeder extends Seeder
                 ],
             ],
         ];
-
         $everest_expedition_tips = [
             [
                 'title' => [
@@ -228,7 +225,6 @@ class EssentialTipsSeeder extends Seeder
                 ],
             ],
         ];
-
         $kathmandu_cultural_tour_tips = [
             [
                 'title' => [
@@ -475,7 +471,6 @@ class EssentialTipsSeeder extends Seeder
                 ],
             ],
         ];
-
         $kanchanjunga_exped_essential_tips = [
             [
                 'title' => [
@@ -528,7 +523,6 @@ class EssentialTipsSeeder extends Seeder
                 ],
             ],
         ];
-
         $eight_thousanders_expedition_tips = [
             [
                 'title' => [
@@ -909,7 +903,6 @@ class EssentialTipsSeeder extends Seeder
                 ],
             ],
         ];
-
         $vip_tips = [
             [
                 'title' => [
