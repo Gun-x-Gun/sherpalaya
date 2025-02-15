@@ -40,6 +40,9 @@ class TourResource extends Resource
     protected static ?string $model = Tour::class;
     protected static ?int $navigationSort = 4;
 
+    protected static ?string $pluralModelLabel = 'Activities';
+    protected static ?string $modelLabel = 'Activity';
+
 
     protected static ?string $navigationIcon = 'heroicon-o-swatch';
     protected static ?string $navigationGroup = 'Content';
