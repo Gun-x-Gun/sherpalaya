@@ -9,6 +9,7 @@ use App\Filament\Resources\RegionResource;
 use App\Filament\Resources\ServiceResource;
 use App\Filament\Resources\TrekResource;
 use App\Filament\Resources\TourResource;
+use App\Filament\Resources\CategoryResource;
 use App\Filament\Resources\UserResource;
 use Awcodes\Curator\Resources\MediaResource;
 use Awcodes\Overlook\OverlookPlugin;
@@ -87,6 +88,7 @@ class AdminPanelProvider extends PanelProvider
                         ExpeditionResource::class,
                         TrekResource::class,
                         TourResource::class,
+                        CategoryResource::class,
                         RegionResource::class,
                         DestinationResource::class,
                         ServiceResource::class,
