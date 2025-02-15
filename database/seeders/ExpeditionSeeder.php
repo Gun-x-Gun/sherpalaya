@@ -2539,9 +2539,9 @@ class ExpeditionSeeder extends Seeder
         );
 
 
-       
 
-        
+
+
         $pumori_expedition_data = Expedition::create([
             'title' => [
                 'en' => 'Mt. Pumori Expedition',
@@ -2684,7 +2684,7 @@ class ExpeditionSeeder extends Seeder
             'images',
             public_path('photos/mountain3.jpg')
         );
-        
+
         $tilicho_peak_expedition_data = Expedition::create([
             'title' => [
                 'en' => 'Tilicho Peak Expedition',
@@ -2837,7 +2837,7 @@ class ExpeditionSeeder extends Seeder
         );
 
 
-    
+
         $baruntse_expedition_data = Expedition::create([
             'title' => [
                 'en' => 'Mt. Baruntse Expedition',
@@ -3088,11 +3088,11 @@ class ExpeditionSeeder extends Seeder
             public_path('photos/mountain3.jpg')
         );
 
-        
 
-       
 
-        
+
+
+
         $vip_everest_expedition_data = Expedition::create([
             'title' => [
                 'en' => 'VIP Everest Expedition',
@@ -3681,9 +3681,9 @@ class ExpeditionSeeder extends Seeder
             ],
             'description' => [
                 'en' => 'Lobuche Peak is one the best peak in Everest region as it’s best view is seen from the summit. Summit is sourounded by panoramic view including Mt. Everest.
-        We approach Lobuche via completing Everest Base Camp and Kalapattar trip which helps you with proper acclimatization and return to Lukla along the famous Khumbu Valley, with its diverse wildlife and vegetation, as well as its rich culture, where villages and rustic dwellings have seemingly scrambled up to perch atop rocky outcrops and vertiginous ledges. A truly memorable experience closely following the footsteps of legendary mountaineers.',
+            We approach Lobuche via completing Everest Base Camp and Kalapattar trip which helps you with proper acclimatization and return to Lukla along the famous Khumbu Valley, with its diverse wildlife and vegetation, as well as its rich culture, where villages and rustic dwellings have seemingly scrambled up to perch atop rocky outcrops and vertiginous ledges. A truly memorable experience closely following the footsteps of legendary mountaineers.',
                 'fr' => 'Le pic de Lobuche est l\'un des meilleurs sommets de la région de l\'Everest, car sa meilleure vue est visible depuis le sommet. Le sommet est entouré d\'une vue panoramique comprenant le mont Everest.
-        Nous approchons de Lobuche en réalisant le voyage au camp de base de l\'Everest et à Kalapattar, ce qui vous aide à une bonne acclimatation et revenons à Lukla le long de la célèbre vallée de Khumbu, avec sa faune et sa végétation diversifiées, ainsi que sa riche culture, où les villages et les habitations rustiques semblent s\'être précipités pour se percher au sommet d\'affleurements rocheux et de corniches vertigineuses. Une expérience vraiment mémorable suivant de près les traces d\'alpinistes légendaires.',
+            Nous approchons de Lobuche en réalisant le voyage au camp de base de l\'Everest et à Kalapattar, ce qui vous aide à une bonne acclimatation et revenons à Lukla le long de la célèbre vallée de Khumbu, avec sa faune et sa végétation diversifiées, ainsi que sa riche culture, où les villages et les habitations rustiques semblent s\'être précipités pour se percher au sommet d\'affleurements rocheux et de corniches vertigineuses. Une expérience vraiment mémorable suivant de près les traces d\'alpinistes légendaires.',
             ],
             'duration' => '17',
             'region_id' => Region::first()->id,
@@ -3770,6 +3770,1111 @@ class ExpeditionSeeder extends Seeder
                 ->get()
                 ->pluck('id')
                 ->toArray()
+        );
+
+        $ama_dablam_expedition_data = Expedition::create([
+            'title' => [
+                'en' => 'Mt. Ama Dablam Expedition',
+                'fr' => 'Expédition au Mont Ama Dablam', // Example French Translation
+            ],
+            'description' => [
+                'en' => 'Ama Dablam, 6,812 m (2,350 ft), popularly known as the “Matterhorn of the Himalaya” is one of the most gorgeous mountains in the world located in the Khumbu sub-range of Eastern Nepal. Ama Dablam characterizes itself with its unique pyramid shape. The hanging glacier seen on the southwest face of Ama Dablam bears a resemblance to the sacred ornament box used by Sherpa Women, which is known as Dablam, Ama means mother, therefore giving it a name as “Ama Dablam” or “Mother’s Necklace”. The mountain’s long stretched ridges resemble a mother embracing her children from the nearby villages. This mountain is not impressive for its height but for its aesthetics it holds. Ama Dablam is located in the Khumbu region of Nepal, south of Mt. Everest. One should see some splendid views during the ascent to the summit. The usual ascension to Ama Dablam is done from the southwestern ridge. This was the same route followed by the climbers who reached the top for the first time in 1961. Commonly, climbers set up three camps just below and to the right of the hanging glacier, “Dablam”. There are risks of serac collapse and rock falls but we make sure the fixed ropes and veteran guides will help you reach the summit safe and descend back. Climbers should train themselves in the skills of rock and ice climbing and get used to high altitude before climbing Ama Dablam. If you have previous experience as a climber and wish to join a team on an expedition to the world’s most extraordinary mountain, then the Ama Dablam expedition is for you. Our Amadablam expedition begins with a scenic flight to Lukla and eventually to Ama Dablam BC through the raging Dudh Koshi river shore. High camp is set at 5000 meters. The climb is modest up to Camp 1, but the challenge starts from Camp 1 to Camp 2 as it gets more technical on the narrow edges of ridges made from granite. This challenge increases even more from Camp 2 to Camp 3. The summit push is tough but the vistas witnessed from the top washes every bit of fatigue away.',
+                'fr' => 'L\'Ama Dablam, 6 812 m, populairement connue sous le nom de « Cervin de l\'Himalaya », est l\'une des plus belles montagnes du monde, située dans la sous-chaîne du Khumbu, dans l\'est du Népal.',
+            ],
+            'duration' => '30',
+            'region_id' => 1, // Or a more specific region ID if you have one
+            'category_id' => 3, // Expedition category ID
+            'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
+            'starting_point' => 'Lukla', // Or a more specific starting point if known. Verify this.
+            'ending_point' => 'Lukla', // Or a more specific ending point if known. Verify this.
+            'best_time_for_expedition' => [
+                'en' => 'Spring/Autumn',
+                'fr' => 'Printemps/Automne', // Example French Translation
+            ],
+            'starting_altitude' => 2840, // Approximate altitude in Lukla. Verify.
+            'highest_altitude' => 6812,
+            'expedition_difficulty' => TrekDifficulty::CHALLENGING, // Or a more specific difficulty level
+            'costs_include' => [
+                [
+                    'en' => 'ARRIVAL AND DEPARTURE: Airport - Hotel transfers – Airport (Pick Up and Drop), by private vehicle.',
+                    'fr' => 'ARRIVÉE ET DÉPART : Transferts aéroport - hôtel - aéroport (prise en charge et retour), en véhicule privé.',
+                ],
+                [
+                    'en' => 'HOTEL ACCOMMODATION IN KATHMANDU: 4 nights hotel in Kathmandu (4-star category) - single room on bed and breakfast plan.',
+                    'fr' => 'HÉBERGEMENT HÔTELIER À KATMANDOU : 4 nuits d\'hôtel à Katmandou (catégorie 4 étoiles) - chambre individuelle en formule petit-déjeuner.',
+                ],
+                [
+                    'en' => 'WELCOME DINNER: One Welcome Dinner in a tourist standard restaurant in Kathmandu with Office’s Staff.',
+                    'fr' => 'DÎNER DE BIENVENUE : Un dîner de bienvenue dans un restaurant touristique standard à Katmandou avec le personnel de bureau.',
+                ],
+                [
+                    'en' => 'PERMIT: Expedition Royalty and a permit fee of Nepal Government to climb Mt. Ama Dablam, Sagarmatha National Park, and Pasang Lhamu Rural Municipality entry permit and fee.',
+                    'fr' => 'PERMIS : Redevance d\'expédition et frais de permis du gouvernement népalais pour l\'ascension du Mt. Ama Dablam, du parc national de Sagarmatha et permis et frais d\'entrée de la municipalité rurale de Pasang Lhamu.',
+                ],
+                [
+                    'en' => 'MEMBER TRANSPORTATION: - (Domestic Flight) Fly from Kathmandu – Lukla and while returning Lukla - Kathmandu, as per itinerary.',
+                    'fr' => 'TRANSPORT DES MEMBRES : - (Vol intérieur) Vol de Katmandou à Lukla et au retour Lukla - Katmandou, selon l\'itinéraire.',
+                ],
+                [
+                    'en' => 'FOOD AND LODGING: Three (3) meals a day (breakfast, lunch, and dinner), including tea, coffee, and hot water, will be provided, along with accessible accommodation at hotels, lodges, or tea houses (sharing) during the trek. Hygienic foods will be served throughout the entire trek. (To upgrade to a room with an attachment, inform us earlier. Extra cost applies).',
+                    'fr' => 'NOURRITURE ET HÉBERGEMENT : Trois (3) repas par jour (petit-déjeuner, déjeuner et dîner), y compris le thé, le café et l\'eau chaude, seront fournis, ainsi qu\'un hébergement accessible dans des hôtels, des lodges ou des maisons de thé (partagés) pendant le trek. Des aliments hygiéniques seront servis tout au long du trek. (Pour passer à une chambre avec salle de bain attenante, informez-nous plus tôt. Des frais supplémentaires s\'appliquent).',
+                ],
+                [
+                    'en' => 'BASECAMP LOGISTICS (FULL BOARD SUPPORT): Three (3) meals a day (breakfast, lunch, and dinner), including tea, coffee, juice, soft drinks, etc., will be provided. Additionally, a comfortable box tent will be provided for accommodation at the base camp. Hygienic and fresh green vegetables, fresh meat, fruits, soft drinks, and juice will be served regularly throughout the entire expedition, facilitated by helicopter flights. A well-managed base camp setup, including a dining tent, kitchen tent, toilet, and shower tent, will be available for both members and staff.',
+                    'fr' => 'LOGISTIQUE DU CAMP DE BASE (SUPPORT PENSION COMPLÈTE) : Trois (3) repas par jour (petit-déjeuner, déjeuner et dîner), y compris le thé, le café, le jus, les boissons gazeuses, etc., seront fournis. De plus, une tente-box confortable sera fournie pour l\'hébergement au camp de base. Des légumes verts frais et hygiéniques, de la viande fraîche, des fruits, des boissons gazeuses et des jus seront servis régulièrement tout au long de l\'expédition, facilitée par des vols en hélicoptère. Un camp de base bien aménagé, comprenant une tente-salle à manger, une tente-cuisine, des toilettes et une tente-douche, sera disponible pour les membres et le personnel.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'AIR FARE: International flight airfare (from and to Kathmandu).',
+                    'fr' => 'BILLET D\'AVION : Billet d\'avion international (de et vers Katmandou).',
+                ],
+                [
+                    'en' => 'NEPAL ENTRY VISA FEE: Nepalese Visa fee is $ 125 USD for 90 Days.',
+                    'fr' => 'FRAIS DE VISA D\'ENTRÉE AU NÉPAL : Frais de visa népalais de 125 $ US pour 90 jours.',
+                ],
+                [
+                    'en' => 'LUNCH & DINNER: Lunch & dinner during the stay in Kathmandu (also in case of early return from Trekking / Expedition than the scheduled itinerary).',
+                    'fr' => 'DÉJEUNER ET DÎNER : Déjeuner et dîner pendant le séjour à Katmandou (également en cas de retour anticipé du trekking/expédition que l\'itinéraire prévu).',
+                ],
+                [
+                    'en' => 'EXTRA NIGHTS IN KATHMANDU: Extra nights’ accommodation in Kathmandu. In case of early arrival or late departure, early return from Trekking / Expedition, domestic flight cancellation (due to any other reason) than the scheduled itinerary.',
+                    'fr' => 'NUITS SUPPLÉMENTAIRES À KATMANDOU : Nuits d\'hébergement supplémentaires à Katmandou. En cas d\'arrivée anticipée ou de départ tardif, de retour anticipé du trekking/expédition, d\'annulation de vol intérieur (pour toute autre raison) que l\'itinéraire prévu.',
+                ],
+                [
+                    'en' => 'INSURANCE POLICY: Insurance covering both medical and high-altitude evacuation costs (for the trip cancellation, interruption, high-altitude rescue, air evacuation, medical treatment, repatriation, etc.) *Mandatory (Send us a copy of your insurance policy- before your arrival.)',
+                    'fr' => 'POLICE D\'ASSURANCE : Assurance couvrant à la fois les frais médicaux et d\'évacuation en haute altitude (pour l\'annulation du voyage, l\'interruption, l\'évacuation en haute altitude, l\'évacuation aérienne, le traitement médical, le rapatriement, etc.) *Obligatoire (Envoyez-nous une copie de votre police d\'assurance avant votre arrivée.)',
+                ],
+                [
+                    'en' => 'PERSONAL EXPENSES: Telephone Calls, Internet, Toiletries, battery recharge, hot shower, bottled/mineral water, laundry, soft drinks, beers, and any Alcoholic beverages (during the trek and in Kathmandu but we will have soft drinks for members at base camp).',
+                    'fr' => 'DÉPENSES PERSONNELLES : Appels téléphoniques, Internet, articles de toilette, recharge de batterie, douche chaude, eau en bouteille/minérale, blanchisserie, boissons gazeuses, bières et toutes boissons alcoolisées (pendant le trek et à Katmandou, mais nous aurons des boissons gazeuses pour les membres au camp de base).',
+                ],
+                [
+                    'en' => 'PERSONAL CLIMBING EQUIPMENT: Clothing, Packing Items, Bags, Personal Medical Kit, and all kinds of Personal Trekking / Climbing Gear.',
+                    'fr' => 'ÉQUIPEMENT PERSONNEL D\'ESCALADE : Vêtements, articles d\'emballage, sacs, trousse médicale personnelle et toutes sortes d\'équipement personnel de trekking/d\'escalade.',
+                ],
+            ],
+            'is_featured' => false, // Or false, as appropriate
+        ]);
+
+        $ama_dablam_expedition_data->destinations()->sync(
+            Destination::where('region_id', 1)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $ama_dablam_expedition_data,
+            'cover_image_id',
+            public_path('photos/qualitymount2.png')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $ama_dablam_expedition_data,
+            'feature_image_id',
+            public_path('photos/qualitymount.png')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $ama_dablam_expedition_data,
+            'images',
+            public_path('photos/mountain2.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $ama_dablam_expedition_data,
+            'images',
+            public_path('photos/mountain3.jpg')
+        );
+
+        $mera_peak_expedition_data = Expedition::create([
+            'title' => [
+                'en' => 'Mera Peak Expedition',
+                'fr' => 'Expédition au Mera Peak',
+            ],
+            'description' => [
+                'en' => 'Mera Peak elevates 6,476m above sea level in the Mahalangur section of the Himalayas, south of Mount Everest. Categorized as the trekking peak, it is one of the most popular in its category. Mera Peak is the highest trekking peak in Nepal. The summit offers some exquisite views of 8000m peaks namely, Mt. Everest, Makalu, Lhotse, Cho Oyo, Kanchenjunga, and several other peaks. Spring and autumn seasons are the best time to trek this mountain. J.O.M Roberts, who is regarded as one of the greatest Himalayans explorers of the world ascended to the summit of Mera Peak on 20th May 1953 along with Sen Tenzing following the standard route. There are several routes to the top and all of them require technical skill. However, the route from the north is suitable for trekkers with less experience. The western and southern-faced ascent is tougher and it is suited for experienced climbers. The typical route to Mera Peak is through Zwatra La pass situated at the height of 4,610m. While traveling through Zwatra La Pass, one can witness the amazing sight of antique villages with their rich traditions and cultures. Trekkers get to be more familiarized with the route because this route is comparatively longer. Mera Peak Trekking is the best option for a trekker with a modest experience of mountaineering. Its elevation is a challenge for a trekking peak. On the way to the top, one has to encounter high and difficult passes, however basic technical skills of mountaineering should overcome these barriers. Trekking to the top of Mera Peak leads to the real mountaineering experiences.',
+                'fr' => 'Le Mera Peak culmine à 6 476 m d\'altitude dans la section Mahalangur de l\'Himalaya, au sud du mont Everest. Classé comme sommet de trekking, il est l\'un des plus populaires de sa catégorie. Le Mera Peak est le plus haut sommet de trekking du Népal. Le sommet offre des vues exquises sur les sommets de 8 000 m, à savoir le mont Everest, le Makalu, le Lhotse, le Cho Oyo, le Kanchenjunga et plusieurs autres sommets. Les saisons de printemps et d\'automne sont les meilleures périodes pour faire du trekking sur cette montagne. J.O.M Roberts, qui est considéré comme l\'un des plus grands explorateurs himalayens du monde, a atteint le sommet du Mera Peak le 20 mai 1953 avec Sen Tenzing en suivant la voie normale. Il existe plusieurs itinéraires vers le sommet et tous nécessitent des compétences techniques. Cependant, l\'itinéraire par le nord convient aux trekkeurs moins expérimentés. L\'ascension des faces ouest et sud est plus difficile et convient aux grimpeurs expérimentés. L\'itinéraire typique vers le Mera Peak passe par le col de Zwatra La, situé à une altitude de 4 610 m. En traversant le col de Zwatra La, on peut admirer la vue imprenable sur les villages antiques avec leurs riches traditions et cultures. Les trekkeurs se familiarisent davantage avec l\'itinéraire car cet itinéraire est comparativement plus long. Le trekking au Mera Peak est la meilleure option pour un trekkeur ayant une modeste expérience en alpinisme. Son altitude est un défi pour un sommet de trekking. Sur le chemin du sommet, il faut rencontrer des cols hauts et difficiles, mais des compétences techniques de base en alpinisme devraient surmonter ces obstacles. Le trekking jusqu\'au sommet du Mera Peak mène à de véritables expériences d\'alpinisme.',
+            ],
+            'duration' => '16',
+            'region_id' => 1, // Or a more specific region ID if you have one
+            'category_id' => 3, // Expedition category ID
+            'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
+            'starting_point' => 'Lukla', // Verify starting point
+            'ending_point' => 'Lukla', // Verify ending point
+            'best_time_for_expedition' => [
+                'en' => 'Spring/Autumn',
+                'fr' => 'Printemps/Automne',
+            ],
+            'starting_altitude' => 2840, // Approximate altitude in Lukla. Verify.
+            'highest_altitude' => 6476,
+            'expedition_difficulty' => TrekDifficulty::CHALLENGING, // Or a more specific difficulty level
+            'costs_include' => [
+                [
+                    'en' => 'AIRPORT PICK-UP & DROP: Airport - Hotel transfers – Airport (Pick Up and Drop).',
+                    'fr' => 'PRISE EN CHARGE ET DÉPOSE À L\'AÉROPORT : Transferts aéroport - hôtel - aéroport (prise en charge et retour).',
+                ],
+                [
+                    'en' => 'ACCOMMODATION IN KATHMANDU: 3 nights hotel in Kathmandu (3-star category) on a bed & breakfast Basis- Single Room Supplementary.',
+                    'fr' => 'HÉBERGEMENT À KATMANDOU : 3 nuits d\'hôtel à Katmandou (catégorie 3 étoiles) en formule lit et petit-déjeuner - Supplément chambre individuelle.',
+                ],
+                [
+                    'en' => 'WELCOME DINNER: One Welcome Dinner in a tourist standard restaurant in Kathmandu with Office’s Staff.',
+                    'fr' => 'DÎNER DE BIENVENUE : Un dîner de bienvenue dans un restaurant touristique standard à Katmandou avec le personnel de bureau.',
+                ],
+                [
+                    'en' => 'PERMITS: Expedition Royalty and permit of Nepal Mountaineering Association (NMA) to climb Mera Peak, TIMS Card, Makalu-Barun National park entry permit and fee.',
+                    'fr' => 'PERMIS : Redevance d\'expédition et permis de l\'Association d\'alpinisme du Népal (NMA) pour l\'ascension du Mera Peak, carte TIMS, permis et frais d\'entrée du parc national de Makalu-Barun.',
+                ],
+                [
+                    'en' => 'MEMBER TRANSPORTATION: Air Transportation: (Domestic Flight) Fly from Kathmandu – to Lukla and while returning Lukla - Kathmandu, as per itinerary.',
+                    'fr' => 'TRANSPORT DES MEMBRES : Transport aérien : (Vol intérieur) Vol de Katmandou à Lukla et au retour Lukla - Katmandou, selon l\'itinéraire.',
+                ],
+                [
+                    'en' => 'FOODS & LODGING: 3 meals a day (BLD; including tea and coffee) along with accessible accommodation at Hotel/Lodge/Tea house/Camp during the trek and the Basecamp. Well-managed base camp set up for members & Staffs.',
+                    'fr' => 'NOURRITURE ET HÉBERGEMENT : 3 repas par jour (PDJ, déjeuner, dîner ; y compris thé et café) ainsi qu\'un hébergement accessible à l\'hôtel/lodge/maison de thé/camp pendant le trek et le camp de base. Camp de base bien aménagé pour les membres et le personnel.',
+                ],
+                [
+                    'en' => 'DRINKS: 2 liters of boiled water to carry on thermos per day per member.',
+                    'fr' => 'BOISSONS : 2 litres d\'eau bouillie à transporter sur le thermos par jour et par membre.',
+                ],
+                [
+                    'en' => 'CLIMBING SHERPA: Veteran and Government Licensed Climbing Guide.',
+                    'fr' => 'SHERPA D\'ESCALADE : Guide d\'escalade vétéran et licencié par le gouvernement.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'INTERNATIONAL AIRFARE: International flight airfare (from and to Kathmandu).',
+                    'fr' => 'BILLET D\'AVION INTERNATIONAL : Billet d\'avion international (de et vers Katmandou).',
+                ],
+                [
+                    'en' => 'NEPAL VISA FEES: Nepali Visa fee $60 USD per person for 30 days and to be applied for 60 days $120 USD.',
+                    'fr' => 'FRAIS DE VISA NÉPAL : Frais de visa népalais de 60 $ US par personne pour 30 jours et à appliquer pour 60 jours 120 $ US.',
+                ],
+                [
+                    'en' => 'LUNCH & DINNER: Lunch & dinner during the stay in Kathmandu (also in case of early return from Trekking / Expedition than the scheduled itinerary).',
+                    'fr' => 'DÉJEUNER ET DÎNER : Déjeuner et dîner pendant le séjour à Katmandou (également en cas de retour anticipé du trekking/expédition que l\'itinéraire prévu).',
+                ],
+                [
+                    'en' => 'EXTRA NIGHTS IN KATHMANDU: Extra nights’ accommodation in Kathmandu. In case of early arrival or late departure, early return from Trekking / Expedition (due to any reason) than the scheduled itinerary.',
+                    'fr' => 'NUITS SUPPLÉMENTAIRES À KATMANDOU : Nuits d\'hébergement supplémentaires à Katmandou. En cas d\'arrivée anticipée ou de départ tardif, de retour anticipé du trekking/expédition (pour toute raison) que l\'itinéraire prévu.',
+                ],
+                [
+                    'en' => 'INSURANCE: Travel and high-altitude insurance, accident, helicopter medical & emergency evacuation. *Mandatory',
+                    'fr' => 'ASSURANCE : Assurance voyage et haute altitude, accident, évacuation médicale et d\'urgence par hélicoptère. *Obligatoire',
+                ],
+                [
+                    'en' => 'RESCUE EVACUATION: Medical and emergency rescue evacuation costs if required. (Rescue, Repatriation, Helicopter, Medication, Medical Tests, and Hospitalization costs.)',
+                    'fr' => 'ÉVACUATION DE SAUVETAGE : Frais d\'évacuation médicale et d\'urgence si nécessaire. (Sauvetage, rapatriement, hélicoptère, médicaments, tests médicaux et frais d\'hospitalisation).',
+                ],
+                [
+                    'en' => 'PERSONAL EXPENSES: Telephone, Internet, Toiletries, battery recharge, hot shower, laundry, any Alcoholic beverages (during the trek and in Kathmandu but we will serve soft drinks for members in base camp).',
+                    'fr' => 'DÉPENSES PERSONNELLES : Téléphone, Internet, articles de toilette, recharge de batterie, douche chaude, blanchisserie, toutes boissons alcoolisées (pendant le trek et à Katmandou, mais nous servirons des boissons gazeuses aux membres au camp de base).',
+                ],
+                [
+                    'en' => 'PERSONAL EQUIPMENT: Clothing, Packing Items or Bags, Personal Medical Kit, Personal Trekking /Climbing Gears.',
+                    'fr' => 'ÉQUIPEMENT PERSONNEL : Vêtements, articles ou sacs d\'emballage, trousse médicale personnelle, équipement personnel de trekking/d\'escalade.',
+                ],
+            ],
+            'is_featured' => false,
+        ]);
+
+        $mera_peak_expedition_data->destinations()->sync(
+            Destination::where('region_id', 1)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $mera_peak_expedition_data,
+            'cover_image_id',
+            public_path('photos/qualitymount2.png')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $mera_peak_expedition_data,
+            'feature_image_id',
+            public_path('photos/qualitymount.png')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $mera_peak_expedition_data,
+            'images',
+            public_path('photos/mountain2.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $mera_peak_expedition_data,
+            'images',
+            public_path('photos/mountain3.jpg')
+        );
+
+        $cholatse_peak_expedition_data = Expedition::create([
+            'title' => [
+                'en' => 'Mt. Cholatse Peak Expedition',
+                'fr' => 'Expédition au sommet du Mt. Cholatse',
+            ],
+            'description' => [
+                'en' => 'Cholatse (also known as Jobo Lhaptshan) is a technical peak in the Khumbu region of the eastern Nepal Himalaya. Cholatse is connected to Taboche (6,501m) via a southern col. The Chola glacier descends off the east face and feeds into the famous Cholalake. The dominant east face and north ridge of Cholatse can be seen from Dughla, on the trail to Mount Everest base camp. To the west of Cholatse lies the famous trail to Gokyo and eventually to Cho Oyu or Nangpa La via the Ngozumpa glacier. Cholatse was first climbed by a British-American party via the southwest ridge on April 22, 1982, by Vern Clevenger, Galen Rowell, John Roskelley, and Bill O\'Connor. The expedition was led by Al Read, the man who is credited as being the first person to introduce bungee jumping in Nepal. The north face was successfully scaled in 1984. The first solo ascent was accomplished on April 15, 2005, by Ueli Steck through the north face. Cholatse expedition starts as you take a scenic flight to Lukla. We take Gokyo approach to the mountain where the standard route of Cholatse lie. After climbing Gokyo Ri (5357 m) for acclimatization, we’ll continue trekking to Cholatse Base Camp. We’ll place two camps, standard for a technical 6000er, at C1 (5700 m) and C2 (6200 m). The summit offers a majestic panoramic view of the entire Mahalangur (Everest) range. Finally, we’ll return down to Namche and final departure from Lukla. Cholatse is generally a tough climbing challenge among the 6000ers. It is a technically difficult peak and requires sound knowledge of steep ice climbing, mixed climbing, and careful handling of ropes. We recommended Cholatse Peak for those climbers who are experienced in ice and rock climbing. Only a few climbers get success in Cholatse. However, if you have a thing for technical climbing, Cholatse is a perfect climb for you. Especially with our veteran guides with decades of experience, we assure you we’ll manage and organize with the best of our ability to help you achieve your dream summit.',
+                'fr' => 'Le Cholatse (également connu sous le nom de Jobo Lhaptshan) est un sommet technique de la région du Khumbu, dans l\'Himalaya de l\'est du Népal. Le Cholatse est relié au Taboche (6 501 m) par un col sud. Le glacier de Chola descend de la face est et se jette dans le célèbre lac de Cholalake. La face est dominante et l\'arête nord du Cholatse peuvent être vues depuis Dughla, sur le sentier menant au camp de base du mont Everest. À l\'ouest du Cholatse se trouve le célèbre sentier menant à Gokyo et finalement au Cho Oyu ou au Nangpa La via le glacier de Ngozumpa. Le Cholatse a été gravi pour la première fois par une équipe anglo-américaine via l\'arête sud-ouest le 22 avril 1982, par Vern Clevenger, Galen Rowell, John Roskelley et Bill O\'Connor. L\'expédition était dirigée par Al Read, l\'homme à qui l\'on attribue le mérite d\'avoir été la première personne à avoir introduit le saut à l\'élastique au Népal. La face nord a été gravie avec succès en 1984. La première ascension en solo a été réalisée le 15 avril 2005 par Ueli Steck à travers la face nord. L\'expédition au Cholatse commence par un vol panoramique vers Lukla. Nous empruntons l\'approche de Gokyo de la montagne où se trouve la voie normale du Cholatse. Après avoir gravi le Gokyo Ri (5 357 m) pour l\'acclimatation, nous continuerons le trekking jusqu\'au camp de base du Cholatse. Nous placerons deux camps, standard pour un 6 000 technique, au C1 (5 700 m) et au C2 (6 200 m). Le sommet offre une vue panoramique majestueuse de toute la chaîne du Mahalangur (Everest). Enfin, nous redescendrons à Namche et départ final de Lukla. Le Cholatse est généralement un défi d\'escalade difficile parmi les 6 000. C\'est un sommet techniquement difficile et qui exige une bonne connaissance de l\'escalade sur glace raide, de l\'escalade mixte et une manipulation prudente des cordes. Nous recommandons le sommet du Cholatse aux grimpeurs expérimentés en escalade sur glace et sur roche. Seuls quelques grimpeurs réussissent le Cholatse. Cependant, si vous aimez l\'escalade technique, le Cholatse est une ascension parfaite pour vous. Surtout avec nos guides vétérans avec des décennies d\'expérience, nous vous assurons que nous gérerons et organiserons au mieux de nos capacités pour vous aider à atteindre le sommet de vos rêves.',
+            ],
+            'duration' => '30',
+            'region_id' => 1, // Or a more specific region ID if you have one
+            'category_id' => 3, // Expedition category ID
+            'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
+            'starting_point' => 'Lukla', // Verify starting point
+            'ending_point' => 'Lukla', // Verify ending point
+            'best_time_for_expedition' => [
+                'en' => 'Spring/Autumn',
+                'fr' => 'Printemps/Automne',
+            ],
+            'starting_altitude' => 2840, // Approximate altitude in Lukla. Verify.
+            'highest_altitude' => 6440,
+            'expedition_difficulty' => TrekDifficulty::CHALLENGING, // Or a more specific difficulty level
+            'costs_include' => [
+                [
+                    'en' => 'AIRPORT PICK-UP & DROP: Airport - Hotel transfer – Airport (Pick Up and Drop).',
+                    'fr' => 'PRISE EN CHARGE ET DÉPOSE À L\'AÉROPORT : Transfert aéroport - hôtel - aéroport (prise en charge et retour).',
+                ],
+                [
+                    'en' => 'ACCOMMODATION IN KATHMANDU: 3 nights hotel (3-star category) in Kathmandu on bed & breakfast Basis-Sharing Twin Bed Room.',
+                    'fr' => 'HÉBERGEMENT À KATMANDOU : 3 nuits d\'hôtel (catégorie 3 étoiles) à Katmandou en formule lit et petit-déjeuner - Chambre à deux lits partagée.',
+                ],
+                [
+                    'en' => 'WELCOME DINNER: One Welcome Dinner in a tourist standard restaurant in Kathmandu with Office’s Staff.',
+                    'fr' => 'DÎNER DE BIENVENUE : Un dîner de bienvenue dans un restaurant touristique standard à Katmandou avec le personnel de bureau.',
+                ],
+                [
+                    'en' => 'PERMITS: Expedition Royalty and permit of Nepal Mountaineering Association (NMA) to climb Mt. Cholatse, Pasang Lhamu Rural Municipal entry, Sagarmatha National park permit & fee.',
+                    'fr' => 'PERMIS : Redevance d\'expédition et permis de l\'Association d\'alpinisme du Népal (NMA) pour l\'ascension du Mt. Cholatse, entrée de la municipalité rurale de Pasang Lhamu, permis et frais du parc national de Sagarmatha.',
+                ],
+                [
+                    'en' => 'MEMBER TRANSPORTATION: Air Transportation: Fly from Kathmandu – to Lukla and while returning Lukla – to Kathmandu, domestic flight as per itinerary',
+                    'fr' => 'TRANSPORT DES MEMBRES : Transport aérien : Vol de Katmandou à Lukla et au retour Lukla - Katmandou, vol intérieur selon l\'itinéraire.',
+                ],
+                [
+                    'en' => 'FOODS & LODGING: 3 meals a day (BLD; including tea and coffee) along with accessible accommodation at Hotel/Lodge/Tea house/Camp during the trek and BC. Well-managed base camp set up for members & Staffs.',
+                    'fr' => 'NOURRITURE ET HÉBERGEMENT : 3 repas par jour (PDJ, déjeuner, dîner ; y compris thé et café) ainsi qu\'un hébergement accessible à l\'hôtel/lodge/maison de thé/camp pendant le trek et le camp de base. Camp de base bien aménagé pour les membres et le personnel.',
+                ],
+                [
+                    'en' => 'DRINKS: 2 liters of boiled water to carry on thermos per day per member.',
+                    'fr' => 'BOISSONS : 2 litres d\'eau bouillie à transporter sur le thermos par jour et par membre.',
+                ],
+                [
+                    'en' => 'HIGH ALTITUDE CLIMBING SHERPA: 1 veteran and Government Licensed Climbing Sherpa per member.',
+                    'fr' => 'SHERPA D\'ESCALADE EN HAUTE ALTITUDE : 1 Sherpa d\'escalade vétéran et licencié par le gouvernement par membre.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'INTERNATIONAL AIRFARE: International flight airfare (from and to Kathmandu).',
+                    'fr' => 'BILLET D\'AVION INTERNATIONAL : Billet d\'avion international (de et vers Katmandou).',
+                ],
+                [
+                    'en' => 'NEPAL VISA FEES: Nepali Visa fee is $60 USD per person for 30 days and to be applied for 60 days $120 USD.',
+                    'fr' => 'FRAIS DE VISA NÉPAL : Frais de visa népalais de 60 $ US par personne pour 30 jours et à appliquer pour 60 jours 120 $ US.',
+                ],
+                [
+                    'en' => 'LUNCH & DINNER: Lunch & dinner during the stay in Kathmandu (also in case of early return from Trekking / Expedition than the scheduled itinerary).',
+                    'fr' => 'DÉJEUNER ET DÎNER : Déjeuner et dîner pendant le séjour à Katmandou (également en cas de retour anticipé du trekking/expédition que l\'itinéraire prévu).',
+                ],
+                [
+                    'en' => 'EXTRA NIGHTS IN KATHMANDU: Extra nights’ accommodation in Kathmandu. In case of early arrival or late departure, early return from Trekking / Expedition (due to any reason) than the scheduled itinerary.',
+                    'fr' => 'NUITS SUPPLÉMENTAIRES À KATMANDOU : Nuits d\'hébergement supplémentaires à Katmandou. En cas d\'arrivée anticipée ou de départ tardif, de retour anticipé du trekking/expédition (pour toute raison) que l\'itinéraire prévu.',
+                ],
+                [
+                    'en' => 'INSURANCE: Travel and high altitude insurance, accident, helicopter medical & emergency evacuation. *Mandatory',
+                    'fr' => 'ASSURANCE : Assurance voyage et haute altitude, accident, évacuation médicale et d\'urgence par hélicoptère. *Obligatoire',
+                ],
+                [
+                    'en' => 'RESCUE EVACUATION: Medical and emergency rescue evacuation costs if required. (Rescue, Repatriation, Helicopter, Medication, Medical Tests, and Hospitalization costs.)',
+                    'fr' => 'ÉVACUATION DE SAUVETAGE : Frais d\'évacuation médicale et d\'urgence si nécessaire. (Sauvetage, rapatriement, hélicoptère, médicaments, tests médicaux et frais d\'hospitalisation).',
+                ],
+                [
+                    'en' => 'PERSONAL EXPENSES: Telephone, Internet, Toiletries, battery recharge, hot shower, laundry, any Alcoholic beverages (during the trek and in Kathmandu but we will serve soft drinks for members in base camp).',
+                    'fr' => 'DÉPENSES PERSONNELLES : Téléphone, Internet, articles de toilette, recharge de batterie, douche chaude, blanchisserie, toutes boissons alcoolisées (pendant le trek et à Katmandou, mais nous servirons des boissons gazeuses aux membres au camp de base).',
+                ],
+                [
+                    'en' => 'PERSONAL EQUIPMENT: Clothing, Packing Items or Bags, Personal Medical Kit, Personal Trekking /Climbing Gears.',
+                    'fr' => 'ÉQUIPEMENT PERSONNEL : Vêtements, articles ou sacs d\'emballage, trousse médicale personnelle, équipement personnel de trekking/d\'escalade.',
+                ],
+            ],
+            'is_featured' => false,
+        ]);
+
+        $cholatse_peak_expedition_data->destinations()->sync(
+            Destination::where('region_id', 1)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $cholatse_peak_expedition_data,
+            'cover_image_id',
+            public_path('photos/qualitymount2.png')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $cholatse_peak_expedition_data,
+            'feature_image_id',
+            public_path('photos/qualitymount.png')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $cholatse_peak_expedition_data,
+            'images',
+            public_path('photos/mountain2.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $cholatse_peak_expedition_data,
+            'images',
+            public_path('photos/mountain3.jpg')
+        );
+
+
+        $chulu_west_expedition_data = Expedition::create([
+            'title' => [
+                'en' => 'Chulu West Expedition',
+                'fr' => 'Expédition au Chulu West',
+            ],
+            'description' => [
+                'en' => 'The highest of these peaks, marked Chulu West on the trekking maps, has a recorded altitude from at least two expeditions of nearer 6400m; this might more accurately be called Chulu Central. As a result, many climbing parties have mistakenly climbed one of these peaks thinking it to be Chulu East or West. It is usually understood that with the permit to climb the East or West peak an attempt can be made to the nearby peak as well. The obvious approach to this peak diverges from the main trail to the Thorung La pass past the village of Manang and Base Camp is established in a small valley to the North. From base camp, the route follows a subsidiary North-West ridge that leads up to the main peak. A climb of one or both of these peaks combined with Nepal\'s most famous Around the Annapurna trek makes up for one of the most spectacular Himalayan trekking and climbing outings.',
+                'fr' => 'Le plus haut de ces sommets, marqué Chulu West sur les cartes de trekking, a une altitude enregistrée d\'au moins deux expéditions de près de 6 400 m ; on pourrait plus précisément l\'appeler Chulu Central. Par conséquent, de nombreuses équipes d\'escalade ont gravi par erreur l\'un de ces sommets en pensant qu\'il s\'agissait du Chulu East ou West. Il est généralement entendu qu\'avec le permis d\'escalader le sommet Est ou Ouest, une tentative peut également être faite sur le sommet voisin. L\'approche évidente de ce sommet s\'écarte du sentier principal menant au col de Thorung La, après le village de Manang, et le camp de base est établi dans une petite vallée au nord. Depuis le camp de base, l\'itinéraire suit une arête secondaire nord-ouest qui mène au sommet principal. L\'ascension de l\'un ou des deux sommets combinée au plus célèbre trek du Népal, le Tour de l\'Annapurna, constitue l\'une des sorties de trekking et d\'escalade himalayennes les plus spectaculaires.',
+            ],
+            'duration' => '15',
+            'region_id' => 8, // Or a more specific region ID if you have one
+            'category_id' => 3, // Expedition category ID
+            'grade' => '4', // Assuming "Best" maps to 4, adjust as needed.
+            'starting_point' => 'Manang', // Verify starting point
+            'ending_point' => 'Manang', // Verify ending point
+            'best_time_for_expedition' => [
+                'en' => 'Spring/Autumn',
+                'fr' => 'Printemps/Automne',
+            ],
+            'starting_altitude' => 3500, // Approximate altitude in Manang. Verify.
+            'highest_altitude' => 6419,
+            'expedition_difficulty' => TrekDifficulty::CHALLENGING, // Or a more specific difficulty level
+            'costs_include' => [
+                [
+                    'en' => 'AIRPORT PICK-UP & DROP: Airport - Hotel transfer – Airport (Pick Up and Drop).',
+                    'fr' => 'PRISE EN CHARGE ET DÉPOSE À L\'AÉROPORT : Transfert aéroport - hôtel - aéroport (prise en charge et retour).',
+                ],
+                [
+                    'en' => 'ACCOMMODATION IN KATHMANDU: 3 nights hotel (3-star category) in Kathmandu on a bed & breakfast Basis- Single Room Supplementary.',
+                    'fr' => 'HÉBERGEMENT À KATMANDOU : 3 nuits d\'hôtel (catégorie 3 étoiles) à Katmandou en formule lit et petit-déjeuner - Supplément chambre individuelle.',
+                ],
+                [
+                    'en' => 'WELCOME DINNER: One Welcome Dinner in a tourist standard restaurant in Kathmandu with Office’s Staff.',
+                    'fr' => 'DÎNER DE BIENVENUE : Un dîner de bienvenue dans un restaurant touristique standard à Katmandou avec le personnel de bureau.',
+                ],
+                [
+                    'en' => 'PERMITS: Expedition Royalty and permit of Nepal Mountaineering Association to climb Chulu Peak, TIMS Card, Annapurna conservation area entry permit & fee.',
+                    'fr' => 'PERMIS : Redevance d\'expédition et permis de l\'Association d\'alpinisme du Népal pour l\'ascension du Chulu Peak, carte TIMS, permis et frais d\'entrée de la zone de conservation de l\'Annapurna.',
+                ],
+                [
+                    'en' => 'MEMBER TRANSPORTATION: Drive from Kathmandu – to Lower Pisang. While returning Drive from Chame to Kathmandu, as per itinerary.',
+                    'fr' => 'TRANSPORT DES MEMBRES : Trajet en voiture de Katmandou à Lower Pisang. Au retour, trajet en voiture de Chame à Katmandou, selon l\'itinéraire.',
+                ],
+                [
+                    'en' => 'FOODS & LODGING: Food 3 meals a day (BLD; including tea and coffee) along with accessible accommodation at Hotel/Lodge during the trek.',
+                    'fr' => 'NOURRITURE ET HÉBERGEMENT : 3 repas par jour (PDJ, déjeuner, dîner ; y compris thé et café) ainsi qu\'un hébergement accessible à l\'hôtel/lodge pendant le trek.',
+                ],
+                [
+                    'en' => 'DRINKS: 2 liters of boiled water to carry on thermos per day per member.',
+                    'fr' => 'BOISSONS : 2 litres d\'eau bouillie à transporter sur le thermos par jour et par membre.',
+                ],
+                [
+                    'en' => 'CLIMBING SHERPA: Veteran and Government Licensed Climbing Guide.',
+                    'fr' => 'SHERPA D\'ESCALADE : Guide d\'escalade vétéran et licencié par le gouvernement.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'INTERNATIONAL AIRFARE: International flight airfare (from and to Kathmandu).',
+                    'fr' => 'BILLET D\'AVION INTERNATIONAL : Billet d\'avion international (de et vers Katmandou).',
+                ],
+                [
+                    'en' => 'NEPAL VISA FEES: Nepali Visa fee is $60 USD per person for 30 days and to be applied for 60 days is $120 USD.',
+                    'fr' => 'FRAIS DE VISA NÉPAL : Frais de visa népalais de 60 $ US par personne pour 30 jours et à appliquer pour 60 jours est de 120 $ US.',
+                ],
+                [
+                    'en' => 'LUNCH & DINNER: Lunch & dinner during the stay in Kathmandu (also in case of early return from Trekking / Expedition than the scheduled itinerary).',
+                    'fr' => 'DÉJEUNER ET DÎNER : Déjeuner et dîner pendant le séjour à Katmandou (également en cas de retour anticipé du trekking/expédition que l\'itinéraire prévu).',
+                ],
+                [
+                    'en' => 'EXTRA NIGHTS IN KATHMANDU: Extra nights’ accommodation in Kathmandu. In case of early arrival or late departure, early return from Trekking / Expedition (due to any reason) than the scheduled itinerary.',
+                    'fr' => 'NUITS SUPPLÉMENTAIRES À KATMANDOU : Nuits d\'hébergement supplémentaires à Katmandou. En cas d\'arrivée anticipée ou de départ tardif, de retour anticipé du trekking/expédition (pour toute raison) que l\'itinéraire prévu.',
+                ],
+                [
+                    'en' => 'INSURANCE: Travel and high altitude insurance, accident, helicopter medical & emergency evacuation. *Mandatory',
+                    'fr' => 'ASSURANCE : Assurance voyage et haute altitude, accident, évacuation médicale et d\'urgence par hélicoptère. *Obligatoire',
+                ],
+                [
+                    'en' => 'RESCUE EVACUATION: Medical and emergency rescue evacuation costs if required. (Rescue, Repatriation, Helicopter, Medication, Medical Tests, and Hospitalization costs.)',
+                    'fr' => 'ÉVACUATION DE SAUVETAGE : Frais d\'évacuation médicale et d\'urgence si nécessaire. (Sauvetage, rapatriement, hélicoptère, médicaments, tests médicaux et frais d\'hospitalisation).',
+                ],
+                [
+                    'en' => 'PERSONAL EXPENSES: Telephone, Internet, Toiletries, battery recharge, hot shower, laundry, any Alcoholic beverages (during the trek and in Kathmandu but we will serve soft drinks for members in base camp).',
+                    'fr' => 'DÉPENSES PERSONNELLES : Téléphone, Internet, articles de toilette, recharge de batterie, douche chaude, blanchisserie, toutes boissons alcoolisées (pendant le trek et à Katmandou, mais nous servirons des boissons gazeuses aux membres au camp de base).',
+                ],
+                [
+                    'en' => 'PERSONAL EQUIPMENT: Clothing, Packing Items or Bags, Personal Medical Kit, Personal Trekking /Climbing Gears.',
+                    'fr' => 'ÉQUIPEMENT PERSONNEL : Vêtements, articles ou sacs d\'emballage, trousse médicale personnelle, équipement personnel de trekking/d\'escalade.',
+                ],
+            ],
+            'is_featured' => false,
+        ]);
+        $chulu_west_expedition_data->destinations()->sync(
+            Destination::inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $chulu_west_expedition_data,
+            'cover_image_id',
+            public_path('photos/lobuche.jpg')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $chulu_west_expedition_data,
+            'feature_image_id',
+            public_path('photos/lobuche.jpg')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $chulu_west_expedition_data,
+            'images',
+            public_path('photos/lobuche.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $chulu_west_expedition_data,
+            'images',
+            public_path('photos/mountain7.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $chulu_west_expedition_data,
+            'images',
+            public_path('photos/mountain1.jpg')
+        );
+
+        $larke_peak_expedition_data = Expedition::create([
+            'title' => [
+                'en' => 'Larke Peak Expedition',
+                'fr' => 'Expédition au Larke Peak',
+            ],
+            'description' => [
+                'en' => 'Larke Peak Climbing in the Manaslu region is even newly opened by the Nepal government for the trekkers. Manaslu has still its natural amazing beauty that every trekker can have the maximum satisfaction of nature\'s paradise here. Tamang and Sherpa communities’ diverse cultures and traditions make the journey fascinating and ever memorable. This trek initiates from Gorkha along with Larke pass (5420m) and prorogues finally Besisahar. Trekking around Manaslu rewards you with an excellent opportunity to experience the exceptionally unvisited region of Nepal. Larke Peak Climbing and Manaslu trekking region of Nepal receives a few trekkers, which makes your visit here more interesting and exotic. Manaslu trekking has been open for travelers since 1991 and it provides spectacular beauties along the border of Nepal and Tibet organized trekking in groups and special permits are required to get entry into this region.',
+                'fr' => 'L\'escalade du Larke Peak dans la région du Manaslu a même été récemment ouverte par le gouvernement népalais aux trekkeurs. Manaslu a toujours sa beauté naturelle étonnante que chaque trekkeur peut avoir la satisfaction maximale du paradis de la nature ici. Les diverses cultures et traditions des communautés Tamang et Sherpa rendent le voyage fascinant et inoubliable. Ce trek commence à Gorkha le long du col de Larke (5 420 m) et se prolonge finalement à Besisahar. Le trekking autour de Manaslu vous offre une excellente occasion de découvrir la région exceptionnellement peu visitée du Népal. La région de trekking du Larke Peak et du Manaslu au Népal reçoit peu de trekkeurs, ce qui rend votre visite ici plus intéressante et exotique. Le trekking de Manaslu est ouvert aux voyageurs depuis 1991 et il offre des beautés spectaculaires le long de la frontière du Népal et du Tibet. Les trekkings sont organisés en groupes et des permis spéciaux sont nécessaires pour entrer dans cette région.',
+            ],
+            'duration' => '18',
+            'region_id' => 3, // Or a more specific region ID if you have one
+            'category_id' => 3, // Expedition category ID
+            'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
+            'starting_point' => 'Gorkha', // Verify starting point
+            'ending_point' => 'Besisahar', // Verify ending point
+            'best_time_for_expedition' => [
+                'en' => 'Autumn',
+                'fr' => 'Automne',
+            ],
+            'starting_altitude' => 1100, // Approximate altitude in Gorkha. Verify.
+            'highest_altitude' => 6249,
+            'expedition_difficulty' => TrekDifficulty::CHALLENGING, // Or a more specific difficulty level
+            'costs_include' => [
+                [
+                    'en' => 'AIRPORT PICK-UP & DROP: Airport - Hotel transfers – Airport (Pick Up and Drop).',
+                    'fr' => 'PRISE EN CHARGE ET DÉPOSE À L\'AÉROPORT : Transferts aéroport - hôtel - aéroport (prise en charge et retour).',
+                ],
+                [
+                    'en' => 'ACCOMMODATION IN KATHMANDU: 3 nights hotel in Kathmandu on bed & breakfast Basis-Twin Bed Room.',
+                    'fr' => 'HÉBERGEMENT À KATMANDOU : 3 nuits d\'hôtel à Katmandou en formule lit et petit-déjeuner - Chambre à deux lits.',
+                ],
+                [
+                    'en' => 'WELCOME DINNER: One Welcome Dinner in a tourist standard restaurant in Kathmandu with Office’s Staff.',
+                    'fr' => 'DÎNER DE BIENVENUE : Un dîner de bienvenue dans un restaurant touristique standard à Katmandou avec le personnel de bureau.',
+                ],
+                [
+                    'en' => 'PERMITS: Expedition Royalty and permit of Nepal Government to climb Larke Peak, TIMS Card, Manaslu, and Annapurna conservation area entry permit & fee.',
+                    'fr' => 'PERMIS : Redevance d\'expédition et permis du gouvernement népalais pour l\'ascension du Larke Peak, carte TIMS, permis et frais d\'entrée de la zone de conservation de Manaslu et de l\'Annapurna.',
+                ],
+                [
+                    'en' => 'MEMBER TRANSPORTATION: Land Transportation: Drive from Kathmandu – to Arughat and While returning Drive from Besi Shahar to Kathmandu, as per itinerary.',
+                    'fr' => 'TRANSPORT DES MEMBRES : Transport terrestre : Trajet en voiture de Katmandou à Arughat et au retour trajet en voiture de Besi Shahar à Katmandou, selon l\'itinéraire.',
+                ],
+                [
+                    'en' => 'FOODS & LODGING: Food 3 meals a day (BDL; including tea and coffee) along with accessible accommodation at Hotel/Lodge/Tea house/Camp during the trek and BC. Well-managed base camp set up for members & Staffs.',
+                    'fr' => 'NOURRITURE ET HÉBERGEMENT : 3 repas par jour (PDJ, déjeuner, dîner ; y compris thé et café) ainsi qu\'un hébergement accessible à l\'hôtel/lodge/maison de thé/camp pendant le trek et le camp de base. Camp de base bien aménagé pour les membres et le personnel.',
+                ],
+                [
+                    'en' => 'PORTERS: Porters up to Base camp from Arughat & Porter’s return from Base camp to Besi Sahar.',
+                    'fr' => 'PORTEURS : Porteurs jusqu\'au camp de base depuis Arughat et retour des porteurs du camp de base à Besi Sahar.',
+                ],
+                [
+                    'en' => 'HIGH ALTITUDE CLIMBING SHERPA: Veteran and Government Licensed Climbing Guide.',
+                    'fr' => 'SHERPA D\'ESCALADE EN HAUTE ALTITUDE : Guide d\'escalade vétéran et licencié par le gouvernement.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'INTERNATIONAL AIRFARE: International flight airfare (from and to Kathmandu).',
+                    'fr' => 'BILLET D\'AVION INTERNATIONAL : Billet d\'avion international (de et vers Katmandou).',
+                ],
+                [
+                    'en' => 'NEPAL VISA FEES: Nepali Visa fee US$ 60 per person for 30 days (to be applied for 60 days (USD$ 120).',
+                    'fr' => 'FRAIS DE VISA NÉPAL : Frais de visa népalais de 60 $ US par personne pour 30 jours (à appliquer pour 60 jours (120 $ US)).',
+                ],
+                [
+                    'en' => 'LUNCH & DINNER: Lunch & dinner during the stay in Kathmandu (also in case of early return from Trekking / Expedition than the scheduled itinerary).',
+                    'fr' => 'DÉJEUNER ET DÎNER : Déjeuner et dîner pendant le séjour à Katmandou (également en cas de retour anticipé du trekking/expédition que l\'itinéraire prévu).',
+                ],
+                [
+                    'en' => 'EXTRA NIGHTS IN KATHMANDU: Extra nights’ accommodation in Kathmandu. In case of early arrival or late departure, early return from Trekking / Expedition (due to any reason) than the scheduled itinerary.',
+                    'fr' => 'NUITS SUPPLÉMENTAIRES À KATMANDOU : Nuits d\'hébergement supplémentaires à Katmandou. En cas d\'arrivée anticipée ou de départ tardif, de retour anticipé du trekking/expédition (pour toute raison) que l\'itinéraire prévu.',
+                ],
+                [
+                    'en' => 'INSURANCE: Travel and high-altitude insurance, accident, helicopter medical & emergency evacuation. *Mandatory',
+                    'fr' => 'ASSURANCE : Assurance voyage et haute altitude, accident, évacuation médicale et d\'urgence par hélicoptère. *Obligatoire',
+                ],
+                [
+                    'en' => 'RESCUE EVACUATION: Medical and emergency rescue evacuation costs if required. (Rescue, Repatriation, Helicopter, Medication, Medical Tests, and Hospitalization costs.)',
+                    'fr' => 'ÉVACUATION DE SAUVETAGE : Frais d\'évacuation médicale et d\'urgence si nécessaire. (Sauvetage, rapatriement, hélicoptère, médicaments, tests médicaux et frais d\'hospitalisation).',
+                ],
+                [
+                    'en' => 'PERSONAL EXPENSES: Telephone Calls, Internet, Toiletries, battery recharge, hot shower, laundry, soft drinks, beers, and any Alcoholic beverages (during the trek and in Kathmandu but we will serve soft drinks for members at the base camp).',
+                    'fr' => 'DÉPENSES PERSONNELLES : Appels téléphoniques, Internet, articles de toilette, recharge de batterie, douche chaude, blanchisserie, boissons gazeuses, bières et toutes boissons alcoolisées (pendant le trek et à Katmandou, mais nous servirons des boissons gazeuses aux membres au camp de base).',
+                ],
+                [
+                    'en' => 'PERSONAL EQUIPMENT: Clothing, Packing Items or Bags, Personal Medical Kit, Personal Trekking /Climbing Gears.',
+                    'fr' => 'ÉQUIPEMENT PERSONNEL : Vêtements, articles ou sacs d\'emballage, trousse médicale personnelle, équipement personnel de trekking/d\'escalade.',
+                ],
+            ],
+            'is_featured' => false,
+        ]);
+        $larke_peak_expedition_data->destinations()->sync(
+            Destination::where('region_id', 3)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $larke_peak_expedition_data,
+            'cover_image_id',
+            public_path('photos/qualitymount2.png')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $larke_peak_expedition_data,
+            'feature_image_id',
+            public_path('photos/qualitymount.png')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $larke_peak_expedition_data,
+            'images',
+            public_path('photos/mountain2.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $larke_peak_expedition_data,
+            'images',
+            public_path('photos/mountain3.jpg')
+        );
+
+        $dhampus_peak_expedition_data = Expedition::create([
+            'title' => [
+                'en' => 'Dhampus Peak (Thapa Peak) Expedition',
+                'fr' => 'Expédition au Dhampus Peak (Thapa Peak)',
+            ],
+            'description' => [
+                'en' => 'Dhampus Peak, also known as the Thapa peak locally is situated in the Dhaulagiri massif. The peak is relatively easy to climb and does not need any specialized climbing skills. This peak can be a great opportunity for beginners who are willing to climb higher mountains. The famous Annapurna and Dhaulagiri mountain range can be seen from the summit of Dhampus peak along with Tukuche Peak, Tilicho Peak, Hiunchuli, and Dhaulagiri.',
+                'fr' => 'Le Dhampus Peak, également connu localement sous le nom de Thapa Peak, est situé dans le massif du Dhaulagiri. Le sommet est relativement facile à gravir et ne nécessite aucune compétence d\'escalade spécialisée. Ce sommet peut être une excellente occasion pour les débutants qui souhaitent gravir des montagnes plus hautes. Les célèbres chaînes de montagnes de l\'Annapurna et du Dhaulagiri peuvent être vues depuis le sommet du Dhampus Peak, ainsi que le Tukuche Peak, le Tilicho Peak, le Hiunchuli et le Dhaulagiri.',
+            ],
+            'duration' => '20',
+            'region_id' => 3, // Or a more specific region ID if you have one
+            'category_id' => 3, // Expedition category ID
+            'grade' => '4', // Assuming "Best" maps to 4, adjust as needed.
+            'starting_point' => 'Pokhara', // Verify starting point
+            'ending_point' => 'Pokhara', // Verify ending point
+            'best_time_for_expedition' => [
+                'en' => 'Autumn/Spring',
+                'fr' => 'Automne/Printemps',
+            ],
+            'starting_altitude' => 1400, // Approximate altitude in Pokhara. Verify.
+            'highest_altitude' => 6012,
+            'expedition_difficulty' => TrekDifficulty::MODERATE, // Or a more specific difficulty level.  This is a trekking peak, so likely less difficult than full expeditions.
+            'costs_include' => [
+                [
+                    'en' => 'AIRPORT PICK-UP & DROP: Airport - Hotel transfer – Airport (Pick Up and Drop).',
+                    'fr' => 'PRISE EN CHARGE ET DÉPOSE À L\'AÉROPORT : Transfert aéroport - hôtel - aéroport (prise en charge et retour).',
+                ],
+                [
+                    'en' => 'ACCOMMODATION IN KATHMANDU: 4 nights hotel in Kathmandu on bed & breakfast Basis-Twin Bed Room at Yak and Yeti Hotel.',
+                    'fr' => 'HÉBERGEMENT À KATMANDOU : 4 nuits d\'hôtel à Katmandou en formule lit et petit-déjeuner - Chambre à deux lits au Yak and Yeti Hotel.',
+                ],
+                [
+                    'en' => 'ACCOMMODATION IN POKHARA: 3 nights Hotel in Pokhara City on Bed and Breakfast basis.',
+                    'fr' => 'HÉBERGEMENT À POKHARA : 3 nuits d\'hôtel dans la ville de Pokhara en formule lit et petit-déjeuner.',
+                ],
+                [
+                    'en' => 'WELCOME DINNER: One Welcome Dinner in a tourist standard restaurant in Kathmandu with Office’s Staff.',
+                    'fr' => 'DÎNER DE BIENVENUE : Un dîner de bienvenue dans un restaurant touristique standard à Katmandou avec le personnel de bureau.',
+                ],
+                [
+                    'en' => 'PERMITS: Expedition Royalty and permit of Nepal Government to climb Thapa Peak, TIMS permit, Annapurna conservation area entry permit & fee.',
+                    'fr' => 'PERMIS : Redevance d\'expédition et permis du gouvernement népalais pour l\'ascension du Thapa Peak, permis TIMS, permis et frais d\'entrée de la zone de conservation de l\'Annapurna.',
+                ],
+                [
+                    'en' => 'MEMBER TRANSPORTATION: Air Transportation (Domestic Flight): Fly from Kathmandu – to Pokhara and drive from Pokhara to Takam. While returning: Drive from Takam to Pokhara and from Pokhara Fly to Kathmandu, as per itinerary.',
+                    'fr' => 'TRANSPORT DES MEMBRES : Transport aérien (vol intérieur) : Vol de Katmandou à Pokhara et trajet en voiture de Pokhara à Takam. Au retour : Trajet en voiture de Takam à Pokhara et de Pokhara, vol à Katmandou, selon l\'itinéraire.',
+                ],
+                [
+                    'en' => 'FOODS & LODGING: Food 3 meals a day (BDL; including tea and coffee) along with accessible accommodation at Hotel/Lodge/Tea house/Camp during the trek and BC. Well-managed base camp set up for members & Staffs.',
+                    'fr' => 'NOURRITURE ET HÉBERGEMENT : 3 repas par jour (PDJ, déjeuner, dîner ; y compris thé et café) ainsi qu\'un hébergement accessible à l\'hôtel/lodge/maison de thé/camp pendant le trek et le camp de base. Camp de base bien aménagé pour les membres et le personnel.',
+                ],
+                [
+                    'en' => 'HIGH ALTITUDE CLIMBING SHERPA: Veteran and Government Licensed Climbing Guide.',
+                    'fr' => 'SHERPA D\'ESCALADE EN HAUTE ALTITUDE : Guide d\'escalade vétéran et licencié par le gouvernement.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'INTERNATIONAL AIRFARE: International flight airfare (from and to Kathmandu).',
+                    'fr' => 'BILLET D\'AVION INTERNATIONAL : Billet d\'avion international (de et vers Katmandou).',
+                ],
+                [
+                    'en' => 'NEPAL ENTRY VISA FEES: Nepali Visa fee is $60 USD per person for 30 days and to be applied for 60 days $120 USD.',
+                    'fr' => 'FRAIS DE VISA D\'ENTRÉE AU NÉPAL : Frais de visa népalais de 60 $ US par personne pour 30 jours et à appliquer pour 60 jours 120 $ US.',
+                ],
+                [
+                    'en' => 'LUNCH & DINNER: Lunch & dinner during the stay in Kathmandu (also in case of early return from Trekking / Expedition than the scheduled itinerary).',
+                    'fr' => 'DÉJEUNER ET DÎNER : Déjeuner et dîner pendant le séjour à Katmandou (également en cas de retour anticipé du trekking/expédition que l\'itinéraire prévu).',
+                ],
+                [
+                    'en' => 'EXTRA NIGHTS IN KATHMANDU: Extra nights’ accommodation in Kathmandu. In case of early arrival or late departure, early return from Trekking / Expedition (due to any reason) than the scheduled itinerary.',
+                    'fr' => 'NUITS SUPPLÉMENTAIRES À KATMANDOU : Nuits d\'hébergement supplémentaires à Katmandou. En cas d\'arrivée anticipée ou de départ tardif, de retour anticipé du trekking/expédition (pour toute raison) que l\'itinéraire prévu.',
+                ],
+                [
+                    'en' => 'INSURANCE: Travel and high altitude insurance, accident, helicopter medical & emergency evacuation. *Mandatory',
+                    'fr' => 'ASSURANCE : Assurance voyage et haute altitude, accident, évacuation médicale et d\'urgence par hélicoptère. *Obligatoire',
+                ],
+                [
+                    'en' => 'RESCUE EVACUATION: Medical and emergency rescue evacuation costs if required. (Rescue, Repatriation, Helicopter, Medication, Medical Tests, and Hospitalization costs.)',
+                    'fr' => 'ÉVACUATION DE SAUVETAGE : Frais d\'évacuation médicale et d\'urgence si nécessaire. (Sauvetage, rapatriement, hélicoptère, médicaments, tests médicaux et frais d\'hospitalisation).',
+                ],
+                [
+                    'en' => 'PERSONAL EXPENSES: Telephone, Internet, Toiletries, battery recharge, hot shower, laundry, any Alcoholic beverages (during the trek and in Kathmandu but we will serve soft drinks for members in base camp).',
+                    'fr' => 'DÉPENSES PERSONNELLES : Téléphone, Internet, articles de toilette, recharge de batterie, douche chaude, blanchisserie, toutes boissons alcoolisées (pendant le trek et à Katmandou, mais nous servirons des boissons gazeuses aux membres au camp de base).',
+                ],
+                [
+                    'en' => 'PERSONAL EQUIPMENT: Clothing, Packing Items or Bags, Personal Medical Kit, Personal Trekking /Climbing Gears.',
+                    'fr' => 'ÉQUIPEMENT PERSONNEL : Vêtements, articles ou sacs d\'emballage, trousse médicale personnelle, équipement personnel de trekking/d\'escalade.',
+                ],
+            ],
+            'is_featured' => false,
+        ]);
+        $dhampus_peak_expedition_data->destinations()->sync(
+            Destination::where('region_id', 3)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $dhampus_peak_expedition_data,
+            'cover_image_id',
+            public_path('photos/qualitymount2.png')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $dhampus_peak_expedition_data,
+            'feature_image_id',
+            public_path('photos/qualitymount.png')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $dhampus_peak_expedition_data,
+            'images',
+            public_path('photos/mountain2.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $dhampus_peak_expedition_data,
+            'images',
+            public_path('photos/mountain3.jpg')
+        );
+
+        $kusum_kanguru_expedition_data = Expedition::create([
+            'title' => [
+                'en' => 'Kusum Kanguru Expedition',
+                'fr' => 'Expédition au Kusum Kanguru',
+            ],
+            'description' => [
+                'en' => 'Kusum Kanguru, situated at an impressive elevation of 6,360 meters in Nepal\'s Khumbu region, stands as a formidable peak in the Mahalangur range of the Himalayas. Characterized by its striking pyramidal shape and sharp ridges, this mountain offers both a visual spectacle and a challenging adventure for climbers. Its prominence lies in the technical nature of its climbs, involving a mix of ice and rock-climbing skills. Accessible through a trek from Lukla, the journey to Kusum Kanguru not only leads through picturesque Sherpa villages but also provides awe-inspiring vistas of the Everest region. The mountain\'s climbing history is marked by successful ascents and attempts by mountaineers seeking to conquer its challenging slopes. Expeditions to Kusum Kanguru necessitate meticulous planning and preparation, demanding a high level of expertise from those attempting the climb. Aspiring adventurers are advised to stay updated on the latest conditions, relying on recent information from mountaineering organizations and local authorities to ensure a safe and rewarding experience in the face of this Himalayan giant.',
+                'fr' => 'Le Kusum Kanguru, situé à une altitude impressionnante de 6 360 mètres dans la région du Khumbu au Népal, se présente comme un sommet formidable de la chaîne du Mahalangur dans l\'Himalaya. Caractérisée par sa forme pyramidale frappante et ses arêtes vives, cette montagne offre à la fois un spectacle visuel et une aventure difficile aux grimpeurs. Sa particularité réside dans la nature technique de ses ascensions, qui impliquent un mélange de compétences en escalade sur glace et sur roche. Accessible par un trek depuis Lukla, le voyage vers le Kusum Kanguru ne mène pas seulement à travers des villages Sherpas pittoresques, mais offre également des vues impressionnantes sur la région de l\'Everest. L\'histoire de l\'alpinisme de la montagne est marquée par des ascensions réussies et des tentatives de la part d\'alpinistes cherchant à conquérir ses pentes difficiles. Les expéditions au Kusum Kanguru nécessitent une planification et une préparation méticuleuses, exigeant un niveau élevé d\'expertise de la part de ceux qui tentent l\'ascension. Il est conseillé aux aventuriers en herbe de se tenir au courant des dernières conditions, en s\'appuyant sur les informations récentes provenant d\'organisations d\'alpinisme et d\'autorités locales pour garantir une expérience sûre et enrichissante face à ce géant himalayen.',
+            ],
+            'duration' => '18',
+            'region_id' => 1, // Or a more specific region ID if you have one
+            'category_id' => 3, // Expedition category ID
+            'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
+            'starting_point' => 'Lukla', // Verify starting point
+            'ending_point' => 'Lukla', // Verify ending point
+            'best_time_for_expedition' => [
+                'en' => 'Spring/Autumn',
+                'fr' => 'Printemps/Automne',
+            ],
+            'starting_altitude' => 2840, // Approximate altitude in Lukla. Verify.
+            'highest_altitude' => 6360,
+            'expedition_difficulty' => TrekDifficulty::CHALLENGING, // Or a more specific difficulty level
+            'costs_include' => [
+                [
+                    'en' => 'ARRIVAL & DEPARTURE: Airport - Hotel transfers – Airport (Pick Up and Drop), by private vehicle.',
+                    'fr' => 'ARRIVÉE ET DÉPART : Transferts aéroport - hôtel - aéroport (prise en charge et retour), en véhicule privé.',
+                ],
+                [
+                    'en' => 'HOTEL ACCOMMODATION IN KATHMANDU: 3 nights hotel in Kathmandu (4-star category) - single room on bed and breakfast plan.',
+                    'fr' => 'HÉBERGEMENT HÔTELIER À KATMANDOU : 3 nuits d\'hôtel à Katmandou (catégorie 4 étoiles) - chambre individuelle en formule lit et petit-déjeuner.',
+                ],
+                [
+                    'en' => 'WELCOME DINNER: One Welcome Dinner in a tourist standard restaurant in Kathmandu with Office Staff.',
+                    'fr' => 'DÎNER DE BIENVENUE : Un dîner de bienvenue dans un restaurant touristique standard à Katmandou avec le personnel de bureau.',
+                ],
+                [
+                    'en' => 'PERMIT: Expedition Royalty and a permit fee of Nepal Mountaineering Association (NMA) to climb Kusum Kanguru Peak, Sagarmatha National Park, and Pasang Lhamu Rural Municipality entry permit and fee.',
+                    'fr' => 'PERMIS : Redevance d\'expédition et frais de permis de l\'Association d\'alpinisme du Népal (NMA) pour l\'ascension du sommet du Kusum Kanguru, du parc national de Sagarmatha et permis et frais d\'entrée de la municipalité rurale de Pasang Lhamu.',
+                ],
+                [
+                    'en' => 'MEMBER TRANSPORTATION: - (Domestic Flight) Fly from Kathmandu – Lukla and while returning Lukla - Kathmandu, as per itinerary.',
+                    'fr' => 'TRANSPORT DES MEMBRES : - (Vol intérieur) Vol de Katmandou à Lukla et au retour Lukla - Katmandou, selon l\'itinéraire.',
+                ],
+                [
+                    'en' => 'FOOD AND LODGING: Three (3) meals a day (breakfast, lunch, and dinner), including tea, coffee, and hot water, will be provided, along with accessible accommodation at hotels, lodges, or tea houses during the trek. Hygienic foods will be served throughout the entire trek.',
+                    'fr' => 'NOURRITURE ET HÉBERGEMENT : Trois (3) repas par jour (petit-déjeuner, déjeuner et dîner), y compris le thé, le café et l\'eau chaude, seront fournis, ainsi qu\'un hébergement accessible dans des hôtels, des lodges ou des maisons de thé pendant le trek. Des aliments hygiéniques seront servis tout au long du trek.',
+                ],
+                [
+                    'en' => 'BASECAMP LOGISTICS (FULL BOARD SUPPORT): Three (3) meals a day (breakfast, lunch, and dinner), including tea, coffee, juice, soft drinks, etc., will be provided. Additionally, a comfortable tent will be provided for accommodation at the base camp. Hygienic and green vegetables, fresh meat, fruits, soft drinks, and juice will be served throughout the entire expedition. A well-managed base camp setup, including a dining tent, kitchen tent, toilet, and shower tent, will be available for both members and staff.',
+                    'fr' => 'LOGISTIQUE DU CAMP DE BASE (SUPPORT PENSION COMPLÈTE) : Trois (3) repas par jour (petit-déjeuner, déjeuner et dîner), y compris le thé, le café, le jus, les boissons gazeuses, etc., seront fournis. De plus, une tente confortable sera fournie pour l\'hébergement au camp de base. Des légumes verts hygiéniques, de la viande fraîche, des fruits, des boissons gazeuses et du jus seront servis tout au long de l\'expédition. Un camp de base bien aménagé, comprenant une tente-salle à manger, une tente-cuisine, des toilettes et une tente-douche, sera disponible pour les membres et le personnel.',
+                ],
+                [
+                    'en' => 'HIGH ALTITUDE CLIMBING SHERPA: 1 veteran and government-licensed climbing Sherpa per member (1 Member: 1 Sherpa), during the entire climb from Basecamp to the summit and back.',
+                    'fr' => 'SHERPA D\'ESCALADE EN HAUTE ALTITUDE : 1 Sherpa d\'escalade vétéran et licencié par le gouvernement par membre (1 membre : 1 Sherpa), pendant toute l\'ascension du camp de base au sommet et retour.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'AIRFARE: International flight airfare (from and to Kathmandu).',
+                    'fr' => 'BILLET D\'AVION : Billet d\'avion international (de et vers Katmandou).',
+                ],
+                [
+                    'en' => 'NEPAL ENTRY VISA FEE: Nepali Visa fee is $60 USD per person for 30 days and is to be applied for 60 days $120 USD.',
+                    'fr' => 'FRAIS DE VISA D\'ENTRÉE AU NÉPAL : Les frais de visa népalais sont de 60 $ US par personne pour 30 jours et doivent être appliqués pour 60 jours 120 $ US.',
+                ],
+                [
+                    'en' => 'LUNCH & DINNER: Lunch & dinner during the stay in Kathmandu (also in case of early return from Trekking / Expedition than the scheduled itinerary).',
+                    'fr' => 'DÉJEUNER ET DÎNER : Déjeuner et dîner pendant le séjour à Katmandou (également en cas de retour anticipé du trekking/expédition que l\'itinéraire prévu).',
+                ],
+                [
+                    'en' => 'EXTRA NIGHT IN KATHMANDU: Extra nights’ accommodation in Kathmandu. In case of early arrival or late departure, early return from Trekking / Expedition (due to any reason) than the scheduled itinerary.',
+                    'fr' => 'NUIT SUPPLÉMENTAIRE À KATMANDOU : Nuits d\'hébergement supplémentaires à Katmandou. En cas d\'arrivée anticipée ou de départ tardif, de retour anticipé du trekking/expédition (pour toute raison) que l\'itinéraire prévu.',
+                ],
+                [
+                    'en' => 'INSURANCE POLICY: Insurance covering both medical and high-altitude evacuation costs (for the trip cancellation, interruption, high-altitude rescue, air evacuation, medical treatment, repatriation, etc.) *Mandatory',
+                    'fr' => 'POLICE D\'ASSURANCE : Assurance couvrant à la fois les frais médicaux et d\'évacuation en haute altitude (pour l\'annulation du voyage, l\'interruption, le sauvetage en haute altitude, l\'évacuation aérienne, le traitement médical, le rapatriement, etc.) *Obligatoire',
+                ],
+                [
+                    'en' => 'PERSONAL EXPENSES: Telephone Calls, Internet, Toiletries, battery recharge, hot shower, laundry, soft drinks, beers, and any Alcoholic beverages (during the trek and in Kathmandu but we will have soft drinks for members at base camp).',
+                    'fr' => 'DÉPENSES PERSONNELLES : Appels téléphoniques, Internet, articles de toilette, recharge de batterie, douche chaude, blanchisserie, boissons gazeuses, bières et toutes boissons alcoolisées (pendant le trek et à Katmandou, mais nous aurons des boissons gazeuses pour les membres au camp de base).',
+                ],
+                [
+                    'en' => 'PERSONAL CLIMBING EQUIPMENT: Clothing, Packing Items, Bags, Personal Medical Kit, and all kinds of Personal Trekking / Climbing Gear.',
+                    'fr' => 'ÉQUIPEMENT D\'ESCALADE PERSONNEL : Vêtements, articles d\'emballage, sacs, trousse médicale personnelle et toutes sortes d\'équipement personnel de trekking/d\'escalade.',
+                ],
+                [
+                    'en' => 'FIXING ROPE, GEARS, AND EQUIPMENT: Mt. Kusum Kanguru is a technical and multiday climbing peak, this peak requires route and rope fixing. (Clients need to buy all Necessity gears and equipment if they are taking just basecamp service).',
+                    'fr' => 'FIXATION DE CORDE, ÉQUIPEMENT ET MATÉRIEL : Le Mt. Kusum Kanguru est un sommet d\'escalade technique et de plusieurs jours, ce sommet nécessite la fixation de la route et de la corde. (Les clients doivent acheter tous les équipements et matériels nécessaires s\'ils ne prennent que le service de camp de base).',
+                ],
+            ],
+            'is_featured' => false,
+        ]);
+        $kusum_kanguru_expedition_data->destinations()->sync(
+            Destination::where('region_id', 1)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $kusum_kanguru_expedition_data,
+            'cover_image_id',
+            public_path('photos/qualitymount2.png')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $kusum_kanguru_expedition_data,
+            'feature_image_id',
+            public_path('photos/qualitymount.png')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $kusum_kanguru_expedition_data,
+            'images',
+            public_path('photos/mountain2.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $kusum_kanguru_expedition_data,
+            'images',
+            public_path('photos/mountain3.jpg')
+        );
+
+
+
+        $pisang_peak_expedition_data = Expedition::create([
+            'title' => [
+                'en' => 'Pisang Peak Expedition',
+                'fr' => 'Expédition au Pisang Peak',
+            ],
+            'description' => [
+                'en' => 'Pisang Peak (Jong Ri) is located in the northern part of Nepal in the Manang district. It lies in between Annapurna I and Manaslu. Pisang Peak (6091m) is the most popular climbing Peak among the trekking peaks in the Annapurna region as it is famous for its easy climbing peak. Pisang Peak rises from yak pastures above the village of Pisang on a uniform slope to the final summit pyramid which is an undistinguished snow and ice slope. In 1955, a German expedition made the first ascent of Pisang peak, and it has been going very popular nowadays. Considered an easy climbing peak, Pisang peak provides its climbers with an interesting journey passing along varied ecosystems, diverse cultures, and amazing landscapes. Although this climb is considered to be among the easier ones in the Himalayan region, a reasonably high level of physical fitness and health is still strongly recommended.',
+                'fr' => 'Le Pisang Peak (Jong Ri) est situé dans la partie nord du Népal, dans le district de Manang. Il se trouve entre l\'Annapurna I et le Manaslu. Le Pisang Peak (6091m) est le sommet d\'escalade le plus populaire parmi les sommets de trekking de la région de l\'Annapurna, car il est réputé pour sa facilité d\'escalade. Le Pisang Peak s\'élève des pâturages de yaks au-dessus du village de Pisang sur une pente uniforme jusqu\'à la pyramide sommitale finale qui est une pente de neige et de glace indistincte. En 1955, une expédition allemande a réalisé la première ascension du Pisang Peak, et il est devenu très populaire de nos jours. Considéré comme un sommet d\'escalade facile, le Pisang Peak offre à ses grimpeurs un voyage intéressant passant le long d\'écosystèmes variés, de cultures diverses et de paysages étonnants. Bien que cette ascension soit considérée comme l\'une des plus faciles de la région himalayenne, un niveau raisonnablement élevé de forme physique et de santé est toujours fortement recommandé.',
+            ],
+            'duration' => '15',
+            'region_id' => 8, // Or a more specific region ID if you have one
+            'category_id' => 3, // Expedition category ID
+            'grade' => '4', // Assuming "Best" maps to 4, adjust as needed.
+            'starting_point' => 'Pisang', // Verify starting point
+            'ending_point' => 'Pisang', // Verify ending point
+            'best_time_for_expedition' => [
+                'en' => 'Spring/Autumn',
+                'fr' => 'Printemps/Automne',
+            ],
+            'starting_altitude' => 3200, // Approximate altitude in Pisang. Verify.
+            'highest_altitude' => 6091,
+            'expedition_difficulty' => TrekDifficulty::MODERATE, // Or a more specific difficulty level.  This is a trekking peak, so likely less difficult than full expeditions.
+            'costs_include' => [
+                [
+                    'en' => 'AIRPORT PICK-UP & DROP: Airport - Hotel transfer – Airport (Pick Up and Drop).',
+                    'fr' => 'PRISE EN CHARGE ET DÉPOSE À L\'AÉROPORT : Transfert aéroport - hôtel - aéroport (prise en charge et retour).',
+                ],
+                [
+                    'en' => 'ACCOMMODATION IN KATHMANDU: 3 nights hotel (3-star category) in Kathmandu on a bed & breakfast Basis- Sharing Twin Bed Room.',
+                    'fr' => 'HÉBERGEMENT À KATMANDOU : 3 nuits d\'hôtel (catégorie 3 étoiles) à Katmandou en formule lit et petit-déjeuner - Chambre à deux lits partagée.',
+                ],
+                [
+                    'en' => 'WELCOME DINNER: One Welcome Dinner in a tourist standard restaurant in Kathmandu with Office’s Staff.',
+                    'fr' => 'DÎNER DE BIENVENUE : Un dîner de bienvenue dans un restaurant touristique standard à Katmandou avec le personnel de bureau.',
+                ],
+                [
+                    'en' => 'PERMITS: Expedition Royalty and permit of Nepal Mountaineering Association to climb PISANG Peak, TIMS Card, Annapurna conservation area entry permit & fee.',
+                    'fr' => 'PERMIS : Redevance d\'expédition et permis de l\'Association d\'alpinisme du Népal pour l\'ascension du PISANG Peak, carte TIMS, permis et frais d\'entrée de la zone de conservation de l\'Annapurna.',
+                ],
+                [
+                    'en' => 'MEMBER TRANSPORTATION: Drive from Kathmandu – to Nga Di. While returning Drive from Chame to Kathmandu, as per itinerary.',
+                    'fr' => 'TRANSPORT DES MEMBRES : Trajet en voiture de Katmandou à Nga Di. Au retour, trajet en voiture de Chame à Katmandou, selon l\'itinéraire.',
+                ],
+                [
+                    'en' => 'FOODS & LODGING: 3 meals a day (BLD; including tea and coffee) along with accessible accommodation at Hotel/Lodge/Tea house/Camp during the trek and at the basecamp. Well-managed base camp set up for members & Staff.',
+                    'fr' => 'NOURRITURE ET HÉBERGEMENT : 3 repas par jour (PDJ, déjeuner, dîner ; y compris thé et café) ainsi qu\'un hébergement accessible à l\'hôtel/lodge/maison de thé/camp pendant le trek et au camp de base. Camp de base bien aménagé pour les membres et le personnel.',
+                ],
+                [
+                    'en' => 'DRINKS: 2 liters of boiled water to carry on thermos per day per member.',
+                    'fr' => 'BOISSONS : 2 litres d\'eau bouillie à transporter sur le thermos par jour et par membre.',
+                ],
+                [
+                    'en' => 'CLIMBING SHERPA: Veteran and Government Licensed Climbing Guide.',
+                    'fr' => 'SHERPA D\'ESCALADE : Guide d\'escalade vétéran et licencié par le gouvernement.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'INTERNATIONAL AIRFARE: International flight airfare (from and to Kathmandu).',
+                    'fr' => 'BILLET D\'AVION INTERNATIONAL : Billet d\'avion international (de et vers Katmandou).',
+                ],
+                [
+                    'en' => 'NEPAL VISA FEES: Nepali Visa fee is US$ 40 per person for 30 days (to be applied for 60 days (USD$ 100).',
+                    'fr' => 'FRAIS DE VISA NÉPAL : Frais de visa népalais de 40 $ US par personne pour 30 jours (à appliquer pour 60 jours (100 $ US)).',
+                ],
+                [
+                    'en' => 'LUNCH & DINNER: Lunch & dinner during the stay in Kathmandu (also in case of early return from Trekking / Expedition than the scheduled itinerary).',
+                    'fr' => 'DÉJEUNER ET DÎNER : Déjeuner et dîner pendant le séjour à Katmandou (également en cas de retour anticipé du trekking/expédition que l\'itinéraire prévu).',
+                ],
+                [
+                    'en' => 'EXTRA NIGHTS IN KATHMANDU: Extra nights’ accommodation in Kathmandu. In case of early arrival or late departure, early return from Trekking / Expedition (due to any reason) than the scheduled itinerary.',
+                    'fr' => 'NUITS SUPPLÉMENTAIRES À KATMANDOU : Nuits d\'hébergement supplémentaires à Katmandou. En cas d\'arrivée anticipée ou de départ tardif, de retour anticipé du trekking/expédition (pour toute raison) que l\'itinéraire prévu.',
+                ],
+                [
+                    'en' => 'INSURANCE: Travel and high altitude insurance, accident, medical & emergency evacuation.',
+                    'fr' => 'ASSURANCE : Assurance voyage et haute altitude, accident, médicale et évacuation d\'urgence.',
+                ],
+                [
+                    'en' => 'RESCUE EVACUATION: Medical Insurance and emergency rescue evacuation cost if required. (Rescue, Repatriation, Medication, Medical Tests, and Hospitalization costs.)',
+                    'fr' => 'ÉVACUATION DE SAUVETAGE : Assurance médicale et frais d\'évacuation de sauvetage d\'urgence si nécessaire. (Sauvetage, rapatriement, médicaments, tests médicaux et frais d\'hospitalisation).',
+                ],
+                [
+                    'en' => 'PERSONAL EXPENSES: Telephone Calls, Internet, Toiletries, battery recharge, hot shower, laundry, soft drinks, beers, and any Alcoholic beverages.',
+                    'fr' => 'DÉPENSES PERSONNELLES : Appels téléphoniques, Internet, articles de toilette, recharge de batterie, douche chaude, blanchisserie, boissons gazeuses, bières et toutes boissons alcoolisées.',
+                ],
+                [
+                    'en' => 'PERSONAL EQUIPMENT: Clothing, Packing Items or Bags, Personal Medical Kit, Personal Trekking /Climbing Gears.',
+                    'fr' => 'ÉQUIPEMENT PERSONNEL : Vêtements, articles ou sacs d\'emballage, trousse médicale personnelle, équipement personnel de trekking/d\'escalade.',
+                ],
+            ],
+            'is_featured' => false,
+        ]);
+
+        $pisang_peak_expedition_data->destinations()->sync(
+            Destination::inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $pisang_peak_expedition_data,
+            'cover_image_id',
+            public_path('photos/lobuche.jpg')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $pisang_peak_expedition_data,
+            'feature_image_id',
+            public_path('photos/lobuche.jpg')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $pisang_peak_expedition_data,
+            'images',
+            public_path('photos/lobuche.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $pisang_peak_expedition_data,
+            'images',
+            public_path('photos/mountain7.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $pisang_peak_expedition_data,
+            'images',
+            public_path('photos/mountain1.jpg')
+        );
+
+        $island_peak_expedition_data = Expedition::create([
+            'title' => [
+                'en' => 'Island Peak Expedition (Imja Tse)',
+                'fr' => 'Expédition à l\'Island Peak (Imja Tse)',
+            ],
+            'description' => [
+                'en' => 'Imja Tse peak or also popularly known as Island Peak stands tall with a modest height of 6,189m. English Mountaineer Eric Shipton named it an Island Peak in 1953. He thought it resembles an island in a sea of ice seeing it from Dingboche. In 1983, Island Peak again got its new name, Imja Tse. Island peak climbing is done along with the Everest Base Camp Trek. With very few technical aspects, it offers itself even to beginner climbers with competitive endurance. Hence, it is one of the most popular choices among the 6000m. Island Peak welcomes hundreds of climbers groups each year luring them to their peak. The trip begins after landing at Lukla airport. Spending a couple of nights in Namche Bazaar the climbers acquaint themselves gradually before actually climbing the Island Peak. It takes four to five days to reach the Base camp of Island Peak. Here in the base camp climbers have to familiarize themself with the climatic condition before actually pushing themselves to the summit. The ascent to the top starts along a ridge where climbers use a foot traction device popularly known as crampons along with a rope to elevate upwards. The way across the glacier is easy with occasional fractures in them. After reaching the top, an exquisite view of Lhotse Shar, Makalu, Baruntse, and Ama Dablam is seen. This peak was first ascended by Tenzing Norgay who was a part of the British Team preparing for the Everest Triumph. After reaching the summit, you descend via the main Everest Trail to Lukla Airport.',
+                'fr' => 'Le sommet de l\'Imja Tse, également connu sous le nom d\'Island Peak, culmine à une altitude modeste de 6 189 m. L\'alpiniste anglais Eric Shipton l\'a nommé Island Peak en 1953. Il pensait qu\'il ressemblait à une île dans une mer de glace en le voyant depuis Dingboche. En 1983, Island Peak a de nouveau reçu son nouveau nom, Imja Tse. L\'escalade de l\'Island Peak se fait en même temps que le trek du camp de base de l\'Everest. Avec très peu d\'aspects techniques, il s\'offre même aux grimpeurs débutants ayant une endurance compétitive. Par conséquent, c\'est l\'un des choix les plus populaires parmi les 6000m. Island Peak accueille chaque année des centaines de groupes de grimpeurs les attirant vers leur sommet. Le voyage commence après l\'atterrissage à l\'aéroport de Lukla. Après avoir passé quelques nuits à Namche Bazaar, les grimpeurs se familiarisent progressivement avant d\'escalader réellement l\'Island Peak. Il faut quatre à cinq jours pour atteindre le camp de base d\'Island Peak. Ici, au camp de base, les grimpeurs doivent se familiariser avec les conditions climatiques avant de se lancer réellement vers le sommet. L\'ascension vers le sommet commence le long d\'une crête où les grimpeurs utilisent un dispositif de traction pour les pieds, populairement connu sous le nom de crampons, ainsi qu\'une corde pour s\'élever. La traversée du glacier est facile avec des fractures occasionnelles. Après avoir atteint le sommet, une vue exquise du Lhotse Shar, du Makalu, du Baruntse et de l\'Ama Dablam s\'offre à vous. Ce sommet a été gravi pour la première fois par Tenzing Norgay qui faisait partie de l\'équipe britannique se préparant au Triomphe de l\'Everest. Après avoir atteint le sommet, vous descendez par le sentier principal de l\'Everest jusqu\'à l\'aéroport de Lukla.',
+            ],
+            'duration' => '17',
+            'region_id' => 1, // Or a more specific region ID if you have one
+            'category_id' => 3, // Expedition category ID
+            'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
+            'starting_point' => 'Lukla', // Verify starting point
+            'ending_point' => 'Lukla', // Verify ending point
+            'best_time_for_expedition' => [
+                'en' => 'Spring/Autumn',
+                'fr' => 'Printemps/Automne',
+            ],
+            'starting_altitude' => 2840, // Approximate altitude in Lukla. Verify.
+            'highest_altitude' => 6189,
+            'expedition_difficulty' => TrekDifficulty::CHALLENGING, // Or a more specific difficulty level
+            'costs_include' => [
+                [
+                    'en' => 'ARRIVAL AND DEPARTURE: Airport - Hotel transfers – Airport (Pick Up and Drop), by private vehicle.',
+                    'fr' => 'ARRIVÉE ET DÉPART : Transferts aéroport - hôtel - aéroport (prise en charge et retour), en véhicule privé.',
+                ],
+                [
+                    'en' => 'HOTEL ACCOMMODATION IN KATHMANDU: 3 nights hotel in Kathmandu (4-star category) - single room supplementary on the bed and breakfast plan.',
+                    'fr' => 'HÉBERGEMENT HÔTELIER À KATMANDOU : 3 nuits d\'hôtel à Katmandou (catégorie 4 étoiles) - supplément chambre individuelle en formule lit et petit-déjeuner.',
+                ],
+                [
+                    'en' => 'WELCOME DINNER: One Welcome Dinner in a tourist standard restaurant in Kathmandu with Office’s Staff.',
+                    'fr' => 'DÎNER DE BIENVENUE : Un dîner de bienvenue dans un restaurant touristique standard à Katmandou avec le personnel de bureau.',
+                ],
+                [
+                    'en' => 'PERMITS: Expedition Royalty and a permit fee of Nepal Mountaineering Association (NMA) to climb Island Peak, Sagarmatha National Park, and Pasang Lhamu Rural Municipality entry permit and fee.',
+                    'fr' => 'PERMIS : Redevance d\'expédition et frais de permis de l\'Association d\'alpinisme du Népal (NMA) pour l\'ascension de l\'Island Peak, du parc national de Sagarmatha et permis et frais d\'entrée de la municipalité rurale de Pasang Lhamu.',
+                ],
+                [
+                    'en' => 'MEMBER TRANSPORTATION: (Domestic Flight) Fly from Kathmandu – Lukla and while returning Lukla - Kathmandu, as per itinerary.',
+                    'fr' => 'TRANSPORT DES MEMBRES : (Vol intérieur) Vol de Katmandou à Lukla et au retour Lukla - Katmandou, selon l\'itinéraire.',
+                ],
+                [
+                    'en' => 'FOOD AND LODGING: 3 meals a day (breakfast, lunch, and dinner; including tea and coffee) along with accessible accommodation at Hotel/Lodge/Tent during the trek and at the Basecamp.',
+                    'fr' => 'NOURRITURE ET HÉBERGEMENT : 3 repas par jour (petit-déjeuner, déjeuner et dîner ; y compris le thé et le café) ainsi qu\'un hébergement accessible à l\'hôtel/lodge/tente pendant le trek et au camp de base.',
+                ],
+                [
+                    'en' => 'DRINKING: Per day 2 Liters of boiled water per member to carry on the thermos.',
+                    'fr' => 'BOISSON : Par jour 2 litres d\'eau bouillie par membre à transporter sur le thermos.',
+                ],
+                [
+                    'en' => 'HIGH ALTITUDE CLIMBING SHERPA: 1 veteran and government-licensed climbing Sherpa per member (1 Member: 1 Sherpa), during the entire climb from Basecamp to the summit and back.',
+                    'fr' => 'SHERPA D\'ESCALADE EN HAUTE ALTITUDE : 1 Sherpa d\'escalade vétéran et licencié par le gouvernement par membre (1 membre : 1 Sherpa), pendant toute l\'ascension du camp de base au sommet et retour.',
+                ],
+            ],
+            'costs_exclude' => [
+                [
+                    'en' => 'AIR FARE: International flight airfare (from and to Kathmandu).',
+                    'fr' => 'BILLET D\'AVION : Billet d\'avion international (de et vers Katmandou).',
+                ],
+                [
+                    'en' => 'NEPAL ENTRY VISA FEE: Nepalese Visa fee is $50 USD for 30 Days.',
+                    'fr' => 'FRAIS DE VISA D\'ENTRÉE AU NÉPAL : Les frais de visa népalais sont de 50 $ US pour 30 jours.',
+                ],
+                [
+                    'en' => 'LUNCH & DINNER: Lunch & dinner during the stay in Kathmandu (also in case of early return from Trekking / Expedition than the scheduled itinerary).',
+                    'fr' => 'DÉJEUNER ET DÎNER : Déjeuner et dîner pendant le séjour à Katmandou (également en cas de retour anticipé du trekking/expédition que l\'itinéraire prévu).',
+                ],
+                [
+                    'en' => 'EXTRA NIGHTS IN KATHMANDU: Extra nights’ accommodation in Kathmandu. In case of early arrival or late departure, early return from Trekking / Expedition, domestic flight cancellation (due to any other reason) than the scheduled itinerary.',
+                    'fr' => 'NUITS SUPPLÉMENTAIRES À KATMANDOU : Nuits d\'hébergement supplémentaires à Katmandou. En cas d\'arrivée anticipée ou de départ tardif, de retour anticipé du trekking/expédition, annulation de vol intérieur (pour toute autre raison) que l\'itinéraire prévu.',
+                ],
+                [
+                    'en' => 'INSURANCE POLICY: Insurance covering both medical and high-altitude evacuation costs (for the trip cancellation, interruption, high altitude rescue & air evacuation, medical treatment, repatriation, etc.) *Mandatory',
+                    'fr' => 'POLICE D\'ASSURANCE : Assurance couvrant à la fois les frais médicaux et d\'évacuation en haute altitude (pour l\'annulation du voyage, l\'interruption, le sauvetage en haute altitude et l\'évacuation aérienne, le traitement médical, le rapatriement, etc.) *Obligatoire',
+                ],
+                [
+                    'en' => 'PERSONAL EXPENSES: Telephone Calls, Internet, Toiletries, battery recharge, hot shower, laundry, soft drinks, beers, and any Alcoholic beverages (during the trek and in Kathmandu but we will have soft drinks for members at base camp).',
+                    'fr' => 'DÉPENSES PERSONNELLES : Appels téléphoniques, Internet, articles de toilette, recharge de batterie, douche chaude, blanchisserie, boissons gazeuses, bières et toutes boissons alcoolisées (pendant le trek et à Katmandou, mais nous aurons des boissons gazeuses pour les membres au camp de base).',
+                ],
+                [
+                    'en' => 'PERSONAL CLIMBING EQUIPMENT: Clothing, Packing Items, Bags, Personal Medical Kit, and all kinds of Personal Trekking / Climbing Gear.',
+                    'fr' => 'ÉQUIPEMENT D\'ESCALADE PERSONNEL : Vêtements, articles d\'emballage, sacs, trousse médicale personnelle et toutes sortes d\'équipement personnel de trekking/d\'escalade.',
+                ],
+                [
+                    'en' => 'TOILETRIES : Soaps, shampoos, toilet and tissue papers, toothpaste, and other items used to keep yourself clean.',
+                    'fr' => 'ARTICLES DE TOILETTE : Savons, shampoings, papier toilette et mouchoirs, dentifrice et autres articles utilisés pour vous garder propre.',
+                ],
+            ],
+            'is_featured' => false,
+        ]);
+        $island_peak_expedition_data->destinations()->sync(
+            Destination::where('region_id', 1)
+                ->inRandomOrder()
+                ->limit(5)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $island_peak_expedition_data,
+            'cover_image_id',
+            public_path('photos/qualitymount2.png')
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $island_peak_expedition_data,
+            'feature_image_id',
+            public_path('photos/qualitymount.png')
+        );
+
+        CuratorSeederHelper::seedBelongsToMany(
+            $island_peak_expedition_data,
+            'images',
+            public_path('photos/mountain2.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $island_peak_expedition_data,
+            'images',
+            public_path('photos/mountain3.jpg')
         );
     }
 }
