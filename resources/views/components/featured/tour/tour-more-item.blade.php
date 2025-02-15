@@ -1,4 +1,4 @@
-@if ($featuredTours->count() > 4)
+@if ($featuredTours->count() > 3)
 
     <div class="bg-blue-100/40">
         <div class="xl:mx-32 mx-4 ">
@@ -50,9 +50,9 @@
                 <!-- Previous Slide -->
                 <button type="button" class="carousel-prev">
                     <span
-                        class="size-9.5 bg-base-100 bg-opacity-70 flex items-center justify-center rounded-full shadow">
+                        class="size-9.5 hidden md:flex bg-base-100 bg-opacity-70  items-center justify-center rounded-full shadow">
                         <span
-                            class="hidden md:flex icon-[tabler--chevron-left] size-6 text-black cursor-pointer rtl:rotate-180"></span>
+                            class=" icon-[tabler--chevron-left] size-6 text-black cursor-pointer rtl:rotate-180"></span>
                     </span>
                     <span class="sr-only">Previous</span>
                 </button>
@@ -60,9 +60,9 @@
                 <button type="button" class="carousel-next">
                     <span class="sr-only">Next</span>
                     <span
-                        class="size-9.5 bg-base-100 bg-opacity-70 flex items-center justify-center rounded-full shadow">
+                        class="size-9.5 hidden md:flex bg-base-100 bg-opacity-70  items-center justify-center rounded-full shadow">
                         <span
-                            class="hidden md:flex icon-[tabler--chevron-right] size-6 text-black cursor-pointer rtl:rotate-180"></span>
+                            class=" icon-[tabler--chevron-right] size-6 text-black cursor-pointer rtl:rotate-180"></span>
                     </span>
                 </button>
             </div>

@@ -98,12 +98,13 @@
                             Expedition
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute overflow-y-scroll vertical-scrollbar h-[30rem] bg-slate-500"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute overflow-y-scroll vertical-scrollbar h-[30rem] bg-slate-400"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start">
-                                <nav class=" tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4" aria-label="Tabs"
-                                    role="tablist" aria-orientation="horizontal">
-                                    <button type="button" class="tab active-tab:tab-active active  uppercase text-wrap text-base  font-normal tracking-normal shadow-sm "
+                                <nav class=" tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4"
+                                    aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                                    <button type="button"
+                                        class="tab active-tab:tab-active active  uppercase text-wrap text-base  font-normal tracking-normal shadow-sm "
                                         id="tabs-center-item-expedition" data-tab="#tabs-center-expedition"
                                         aria-controls="tabs-center-expedition" role="tab" aria-selected="true">
                                         All
@@ -137,8 +138,8 @@
                                                         <a href="{{ route('show_expedition', $expedition->id) }}">
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
-                                                                <div class="text-center font-oswald tracking-widest font-light"
-                                                                    >
+                                                                <div
+                                                                    class="text-center font-oswald tracking-widest font-light">
                                                                     <h2
                                                                         class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
                                                                         {{ $expedition->title }}
@@ -170,8 +171,8 @@
                                                         </figure>
                                                         <a href="{{ route('show_expedition', $expedition->id) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
-                                                                <div class="text-center font-oswald tracking-widest font-light"
-                                                                    >
+                                                                <div
+                                                                    class="text-center font-oswald tracking-widest font-light">
                                                                     <h2
                                                                         class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
                                                                         {{ $expedition->title }}
@@ -203,12 +204,13 @@
                             Treks
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute overflow-y-scroll vertical-scrollbar h-[30rem] bg-slate-500"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute overflow-y-scroll vertical-scrollbar h-[30rem] bg-slate-400"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start gap-4 ">
-                                <nav class="tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4" aria-label="Tabs"
-                                    role="tablist" aria-orientation="horizontal">
-                                    <button type="button" class="tab active-tab:tab-active active text-base  font-normal tracking-normal shadow-sm "
+                                <nav class="tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4"
+                                    aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                                    <button type="button"
+                                        class="tab active-tab:tab-active active text-base  font-normal tracking-normal shadow-sm "
                                         id="tabs-center-item-all" data-tab="#tabs-center-all"
                                         aria-controls="tabs-center-all" role="tab" aria-selected="true">
                                         All
@@ -241,8 +243,8 @@
                                                         <a href="{{ route('show_trek', $catTrek->id) }}">
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
-                                                                <div class="text-center font-oswald tracking-widest font-light "
-                                                                    >
+                                                                <div
+                                                                    class="text-center font-oswald tracking-widest font-light ">
                                                                     <h2
                                                                         class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
                                                                         {{ $catTrek->title }}
@@ -274,8 +276,8 @@
                                                         </figure>
                                                         <a href="{{ route('show_trek', $trek->id) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
-                                                                <div class="text-center font-oswald tracking-widest font-light"
-                                                                    >
+                                                                <div
+                                                                    class="text-center font-oswald tracking-widest font-light">
                                                                     <h2
                                                                         class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
                                                                         {{ $trek->title }}
@@ -307,12 +309,13 @@
                             Activities
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute overflow-y-scroll vertical-scrollbar h-[30rem] bg-slate-500"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute overflow-y-scroll vertical-scrollbar h-[30rem] bg-slate-400"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start">
-                                <nav class=" tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 " aria-label="Tabs"
-                                    role="tablist" aria-orientation="horizontal">
-                                    <button type="button" class="tab active-tab:tab-active active  uppercase text-wrap text-base  font-normal tracking-normal shadow-sm "
+                                <nav class=" tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 "
+                                    aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                                    <button type="button"
+                                        class="tab active-tab:tab-active active  uppercase text-wrap text-base  font-normal tracking-normal shadow-sm "
                                         id="tabs-center-item-tour" data-tab="#tabs-center-tour"
                                         aria-controls="tabs-center-tour" role="tab" aria-selected="true">
                                         All
@@ -346,8 +349,8 @@
                                                         <a href="{{ route('show_tour', $tour->id) }}">
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
-                                                                <div class="text-center font-oswald tracking-widest font-light "
-                                                                    >
+                                                                <div
+                                                                    class="text-center font-oswald tracking-widest font-light ">
                                                                     <h2
                                                                         class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
                                                                         {{ $tour->title }}
@@ -379,8 +382,8 @@
                                                         </figure>
                                                         <a href="{{ route('show_tour', $tour->id) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
-                                                                <div class="text-center font-oswald tracking-wide font-normal"
-                                                                    >
+                                                                <div
+                                                                    class="text-center font-oswald tracking-wide font-normal">
                                                                     <h2
                                                                         class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
                                                                         {{ $tour->title }}
@@ -402,7 +405,7 @@
                         </div>
                     </div>
                     {{-- tourend --}}
-                    
+
 
 
                     {{-- contact  --}}

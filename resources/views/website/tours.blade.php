@@ -45,16 +45,16 @@
             <div class="h-4"></div>
             <nav class="sticky top-0 z-30 tabs tabs-bordered  bg-white horizontal-scrollbar md:justify-center"
                 aria-label="Tabs" role="tablist" aria-orientation="horizontal">
-                <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-center-item-all"
-                    data-tab="#tabs-center-all" aria-controls="tabs-center-all" role="tab" aria-selected="true">
+                <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-center-item-all-tour"
+                    data-tab="#tabs-center-all-tour" aria-controls="tabs-center-all-tour" role="tab" aria-selected="true">
                     All
                 </button>
                 @foreach ($allTours as $index => $tourCategory)
                     @if ($tourCategory->tours->count() > 0)
                         <button type="button" class="tab active-tab:tab-active capitalize text-nowrap text-xl"
-                            id="tabs-center-item-{{ $tourCategory->id }}"
-                            data-tab="#tabs-center-{{ $tourCategory->id }}"
-                            aria-controls="tabs-center-{{ $tourCategory->id }}" role="tab"
+                            id="tour-tabs-center-item-{{ $tourCategory->id }}"
+                            data-tab="#tour-tabs-center-{{ $tourCategory->id }}"
+                            aria-controls="tour-tabs-center-{{ $tourCategory->id }}" role="tab"
                             aria-selected="false">
                             {{ $tourCategory->name }}
                         </button>
@@ -62,13 +62,13 @@
                 @endforeach
             </nav>
             <div class="mt-8">
-                <div id="tabs-center-all" role="tabpanel" aria-labelledby="tabs-center-item-all">
-                    <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+                <div id="tabs-center-all-tour" role="tabpanel" aria-labelledby="tabs-center-item-all-tour">
+                    <div class="flex flex-col md:grid md:grid-cols-2  gap-2">
                         @foreach ($allTours as $allExpedition)
                             @foreach ($allExpedition->tours as $tour)
                                 <div
                                     class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
-                                    <figure class="h-[25rem] w-full">
+                                    <figure class="h-[20rem] w-full">
                                         <img src="{{ optional($tour->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $tour->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
@@ -92,14 +92,14 @@
                     </div>
                 </div>
                 @foreach ($allTours as $index => $tourCategory)
-                    <div id="tabs-center-{{ $tourCategory->id }}" role="tabpanel"
-                        aria-labelledby="tabs-center-item-{{ $tourCategory->id }}"
+                    <div id="tour-tabs-center-{{ $tourCategory->id }}" role="tabpanel"
+                        aria-labelledby="tour-tabs-center-item-{{ $tourCategory->id }}"
                         class="@if ($index !== -1) hidden @endif ">
-                        <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+                        <div class="flex flex-col md:grid md:grid-cols-2  gap-1">
                             @foreach ($tourCategory->tours as $tour)
                                 <div
                                     class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
-                                    <figure class="h-[25rem] w-full">
+                                    <figure class="h-[20rem] w-full">
                                         <img src="{{ optional($tour->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $tour->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
@@ -136,7 +136,7 @@
                         {{ $tourCategory->name }} Tours Packages
                     </h5>
                     <div class="h-4"></div>
-                    <div id="type-{{ $tourCategory->id }}" class="hidden md:grid md:grid-cols-2 lg:grid-cols-3  gap-4">
+                    <div id="type-{{ $tourCategory->id }}" class="hidden md:grid md:grid-cols-2   gap-4">
                         @foreach ($tourCategory->tours as $tour)
                             <div class="card w-full " data-aos="fade-down" data-aos-duration="1200">
                                 <div>

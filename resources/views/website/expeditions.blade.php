@@ -41,16 +41,16 @@
             <div class="h-4"></div>
             <nav class="sticky top-0 z-30 tabs tabs-bordered  bg-white horizontal-scrollbar md:justify-center"
                 aria-label="Tabs" role="tablist" aria-orientation="horizontal">
-                <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-center-item-all"
-                    data-tab="#tabs-center-all" aria-controls="tabs-center-all" role="tab" aria-selected="true">
+                <button type="button" class="tab active-tab:tab-active active text-xl" id="expedition-tabs-center-item-all"
+                    data-tab="#expedition-tabs-center-all" aria-controls="expedition-tabs-center-all" role="tab" aria-selected="true">
                     All
                 </button>
                 @foreach ($allExpeditions as $index => $expeditionCategory)
                     @if ($expeditionCategory->expeditions->count() > 0)
                         <button type="button" class="tab active-tab:tab-active capitalize text-nowrap text-xl"
-                            id="tabs-center-item-{{ $expeditionCategory->id }}"
-                            data-tab="#tabs-center-{{ $expeditionCategory->id }}"
-                            aria-controls="tabs-center-{{ $expeditionCategory->id }}" role="tab"
+                            id="expedition-tabs-center-item-{{ $expeditionCategory->id }}"
+                            data-tab="#expedition-tabs-center-{{ $expeditionCategory->id }}"
+                            aria-controls="expedition-tabs-center-{{ $expeditionCategory->id }}" role="tab"
                             aria-selected="false">
                             {{ $expeditionCategory->name }}
                         </button>
@@ -58,14 +58,14 @@
                 @endforeach
             </nav>
             <div class="mt-8 ">
-                <div id="tabs-center-all" role="tabpanel" aria-labelledby="tabs-center-item-all">
-                    <div class="flex flex-col md:grid md:grid-cols-2 gap-1 lg:mx-12">
+                <div id="expedition-tabs-center-all" role="tabpanel" aria-labelledby="expedition-tabs-center-item-all">
+                    <div class="flex flex-col md:grid md:grid-cols-2 gap-2">
                         @foreach ($allExpeditions as $allExpedition)
                             @foreach ($allExpedition->expeditions as $expedition)
                                 {{-- <div class="w-[70%] flex md:justify-center md:items-center"></div> --}}
                                 <div
                                     class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
-                                    <figure class="h-[25rem] w-full">
+                                    <figure class="h-[20rem] w-full">
                                         <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $expedition->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
@@ -89,14 +89,14 @@
                     </div>
                 </div>
                 @foreach ($allExpeditions as $index => $expeditionCategory)
-                    <div id="tabs-center-{{ $expeditionCategory->id }}" role="tabpanel"
-                        aria-labelledby="tabs-center-item-{{ $expeditionCategory->id }}"
+                    <div id="expedition-tabs-center-{{ $expeditionCategory->id }}" role="tabpanel"
+                        aria-labelledby="expedition-tabs-center-item-{{ $expeditionCategory->id }}"
                         class="@if ($index !== -1) hidden @endif ">
-                        <div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+                        <div class="flex flex-col md:grid md:grid-cols-2  gap-2">
                             @foreach ($expeditionCategory->expeditions as $expedition)
                                 <div
                                     class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
-                                    <figure class="h-[25rem] w-full">
+                                    <figure class="h-[20rem] w-full">
                                         <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $expedition->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
@@ -139,7 +139,7 @@
                             @foreach ($expeditionRegion->expeditions as $expedition)
                                 <div class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border "
                                     >
-                                    <figure class="h-[25rem] w-full">
+                                    <figure class="h-[20rem] w-full">
                                         <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $expedition->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
