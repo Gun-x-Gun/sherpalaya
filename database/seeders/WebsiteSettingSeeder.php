@@ -131,8 +131,11 @@ class WebsiteSettingSeeder extends Seeder
         $aboutUsSetting->cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount.png'))->id;
         $aboutUsSetting->content = "<p>We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.</p>";
         $aboutUsSetting->certificate_images = [
-            CuratorSeederHelper::resolveFileData(public_path('/photos/logo.png'))->id,
-            CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount2.png'))->id
+            CuratorSeederHelper::resolveFileData(public_path('/certificates/company-registration.jpg'))->id,
+            CuratorSeederHelper::resolveFileData(public_path('/certificates/gharelu-udhyog.jpg'))->id,
+            CuratorSeederHelper::resolveFileData(public_path('/certificates/pan-registration.jpg'))->id,
+            CuratorSeederHelper::resolveFileData(public_path('/certificates/rastriya-bank-dollar.jpg'))->id,
+            CuratorSeederHelper::resolveFileData(public_path('/certificates/valley-tourism.jpg'))->id,
         ];
         $aboutUsSetting->save();
     }
