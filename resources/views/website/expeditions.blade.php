@@ -73,7 +73,7 @@
                                     <a href="{{ route('show_expedition', $expedition->id) }}">
                                         <div class="card-body absolute inset-0 justify-center ">
                                             <div class="font-oswald tracking-wide font-normal text-center"
-                                                data-aos="fade-down" data-aos-duration="800">
+                                                >
                                                 <h2 class=" text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                     {{ $expedition->title }}
                                                 </h2>
@@ -104,7 +104,7 @@
                                     <a href="{{ route('show_expedition', $expedition->id) }}">
                                         <div class="card-body absolute inset-0 justify-center">
                                             <div class="font-oswald tracking-wide font-normal text-center"
-                                                data-aos="fade-down" data-aos-duration="800">
+                                                >
                                                 <h2 class=" text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                     {{ $expedition->title }}
                                                 </h2>
@@ -146,7 +146,7 @@
                                     </figure>
                                     <a href="{{ route('show_expedition', $expedition->id) }}">
                                         <div class="card-body absolute inset-0 justify-center">
-                                            <div class="text-center" data-aos="fade-down" data-aos-duration="800">
+                                            <div class="text-center" >
                                                 <h2 class="font-bold text-blue-50 text-3xl uppercase">
                                                     {{ $expedition->title }}
                                                 </h2>

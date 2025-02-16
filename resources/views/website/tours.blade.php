@@ -75,7 +75,7 @@
                                     </figure>
                                     <a href="{{ route('show_tour', $tour->id) }}">
                                         <div class="card-body absolute inset-0 justify-center">
-                                            <div class="text-center" data-aos="fade-down" data-aos-duration="800">
+                                            <div class="text-center" >
                                                 <h2 class="font-normal text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                     {{ $tour->title }}
                                                 </h2>
@@ -106,7 +106,7 @@
                                     </figure>
                                     <a href="{{ route('show_tour', $tour->id) }}">
                                         <div class="card-body absolute inset-0 justify-center">
-                                            <div class="text-center" data-aos="fade-down" data-aos-duration="800">
+                                            <div class="text-center" >
                                                 <h2 class="font-bold text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                     {{ $tour->title }}
                                                 </h2>

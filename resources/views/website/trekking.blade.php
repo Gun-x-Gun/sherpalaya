@@ -75,8 +75,7 @@
                                     </figure>
                                     <a href="{{ route('show_trek', $catTrek->id) }}">
                                         <div class="card-body absolute inset-0 justify-center group ">
-                                            <div class="text-center font-oswald tracking-wide font-normal "
-                                                data-aos="fade-down" data-aos-duration="800">
+                                            <div class="text-center font-oswald tracking-wide font-normal ">
                                                 <h2 class=" text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                     {{ $catTrek->title }}
                                                 </h2>
@@ -107,8 +106,7 @@
                                     </figure>
                                     <a href="{{ route('show_trek', $trek->id) }}">
                                         <div class="card-body absolute inset-0 justify-center">
-                                            <div class="text-center font-oswald tracking-wide font-normal"
-                                                data-aos="fade-down" data-aos-duration="800">
+                                            <div class="text-center font-oswald tracking-wide font-normal">
                                                 <h2 class=" text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                     {{ $trek->title }}
                                                 </h2>
