@@ -47,8 +47,8 @@ class AdminPanelProvider extends PanelProvider
             ->font('Quicksand')
             // ->topbar(false)
             // ->topNavigation()
-            ->sidebarCollapsibleOnDesktop()
-        ->collapsedSidebarWidth('9rem')
+            // ->sidebarCollapsibleOnDesktop()
+            // ->collapsedSidebarWidth('9rem')
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->colors([
                 'primary' => Color::Amber,
@@ -81,7 +81,6 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 SpatieLaravelTranslatablePlugin::make()
                 ->defaultLocales(['en', 'fr']),
-
                 OverlookPlugin::make()
                 ->columns(4)
                 ->includes([
@@ -93,12 +92,10 @@ class AdminPanelProvider extends PanelProvider
                         DestinationResource::class,
                         ServiceResource::class,
                         MediaResource::class,
-                    ])
-                    ,
+                    ]),
                 FilamentShieldPlugin::make(),
                 FilamentBackgroundsPlugin::make()
                 ->showAttribution(false),
-
                 \Awcodes\Curator\CuratorPlugin::make()
                 ->label('Media')
                 ->pluralLabel('Media')
@@ -107,16 +104,8 @@ class AdminPanelProvider extends PanelProvider
                 ->navigationSort(8)
                 // ->navigationCountBadge()
                 ->registerNavigation(true)
-
             ])
             ->navigationItems([
-                // NavigationItem::make('Roles')
-                //     ->url('/admin/shield/roles')
-                //     ->icon('heroicon-o-cog')
-                //     ->group('Control')
-                //     ->isActiveWhen(function(){
-                //         return request()->is('admin/shield/roles');
-                //     }),
                 NavigationItem::make('Sherpalaya Home')
                     ->url('/home', shouldOpenInNewTab: true)
                     ->icon('heroicon-o-chevron-double-up'),
