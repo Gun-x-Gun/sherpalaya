@@ -17,8 +17,8 @@
 
 <div class="bg-blue-100/50 max-w-full font-body">
 
-    <div class="md:grid grid-cols-3 gap-2 xl:mx-32 mx-4 flex flex-col ">
-        <a href="/expeditions" class="col-span-2">
+    <div class="md:grid grid-cols-7 gap-2 xl:mx-32 mx-4 flex flex-col ">
+        <a href="/expeditions" class="col-span-4">
             <div
                 class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow border expedition-activity-card">
                 <figure class="h-full w-full">
@@ -48,7 +48,7 @@
             </div>
         </a>
 
-        <a href="/treks" class="">
+        <a href="/treks" class="col-span-3">
             <div
                 class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow border">
                 <figure class="h-full w-full ">
@@ -83,8 +83,8 @@
 
     </div>
 
-    <div class="md:grid grid-cols-3 gap-2 xl:mx-32 mx-4 flex flex-col">
-        <a href="/tours" class="">
+    <div class="md:grid grid-cols-7 gap-2 xl:mx-32 mx-4 flex flex-col">
+        <a href="/tours" class="col-span-3">
             <div
                 class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow border">
                 <figure class="h-full w-full">
@@ -113,7 +113,7 @@
             </div>
         </a>
 
-        <a href="/services" class=" col-span-2">
+        <a href="/services" class=" col-span-4">
             <div
                 class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow border">
 

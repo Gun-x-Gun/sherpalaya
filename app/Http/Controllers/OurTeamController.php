@@ -11,14 +11,14 @@ class OurTeamController extends Controller
     public function index()
     {
         $pageSetting = app(PageSetting::class);
-        
-        $expedSherpas = OurSherpa::whereHas('expeditions')
-            ->with([
-                'profilePicture',
-                'awardsAndCertificates',
-                'expeditions',
-            ])
-            ->get();
+
+        // $expedSherpas = OurSherpa::whereHas('expeditions')
+        //     ->with([
+        //         'profilePicture',
+        //         'awardsAndCertificates',
+        //         'expeditions',
+        //     ])
+        //     ->get();
 
         $allSherpas = OurSherpa::with([
             'profilePicture',
@@ -27,31 +27,30 @@ class OurTeamController extends Controller
             'treks',
             'tours',
         ])
-            ->get()
-            ->unique();
+            ->get();
 
-        $trekSherpas = OurSherpa::whereHas('treks')
-            ->with([
-                'profilePicture',
-                'awardsAndCertificates',
-                'treks',
-            ])
-            ->get();
-        $tourSherpas = OurSherpa::whereHas('tours')
-            ->with([
-                'profilePicture',
-                'awardsAndCertificates',
-                'tours'
-            ])
-            ->get();
+        // $trekSherpas = OurSherpa::whereHas('treks')
+        //     ->with([
+        //         'profilePicture',
+        //         'awardsAndCertificates',
+        //         'treks',
+        //     ])
+        //     ->get();
+        // $tourSherpas = OurSherpa::whereHas('tours')
+        //     ->with([
+        //         'profilePicture',
+        //         'awardsAndCertificates',
+        //         'tours'
+        //     ])
+        //     ->get();
 
 
         return view('website.company.our_team', [
             'pageSetting' => $pageSetting,
-            'expedSherpas' => $expedSherpas,
-            'trekSherpas' => $trekSherpas,
+            // 'expedSherpas' => $expedSherpas,
+            // 'trekSherpas' => $trekSherpas,
             'allSherpas' => $allSherpas,
-            'tourSherpas' => $tourSherpas,
+            // 'tourSherpas' => $tourSherpas,
         ]);
     }
 

@@ -9,10 +9,10 @@
                 <div
                     class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class="">
-                        <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
+                        {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Get to know
-                        </h5>
-                        <h5 class="card-title mb-8 text-white text-2xl md:text-4xl uppercase font-extrabold ">
+                        </h5> --}}
+                        <h5 class="card-title mb-8 text-white text-3xl md:text-5xl uppercase font-normal tracking-wide ">
                             Sherpalaya's Team
                         </h5>
                     </div>
@@ -54,127 +54,25 @@
         </div>
 
         <div class="mx-4 xl:mx-32">
-
-            <nav class=" sticky top-0 z-30 tabs tabs-bordered  bg-white horizontal-scrollbar md:justify-center"
-                aria-label="Tabs" role="tablist" aria-orientation="horizontal">
-                @if ($allSherpas->count() > 0)
-                    <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-large-item-2"
-                        data-tab="#all" aria-controls="all" role="tab" aria-selected="true">
-                        All
-                    </button>
-                @endif
-                @if ($expedSherpas->count() > 0)
-                    <button type="button" class="tab active-tab:tab-active capitalize text-nowrap text-xl"
-                        id="tabs-large-item-1" data-tab="#expedition" aria-controls="expedition" role="tab"
-                        aria-selected="false">
-                        Team Expedition
-                    </button>
-                @endif
-                @if ($trekSherpas->count() > 0)
-                    <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-large-item-3"
-                        data-tab="#trek" aria-controls="trek" role="tab" aria-selected="false">
-                        Team Trek
-                    </button>
-                @endif
-                @if ($tourSherpas->count() > 0)
-                    <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-large-item-4"
-                        data-tab="#tour" aria-controls="tour" role="tab" aria-selected="false">
-                        Other
-                    </button>
-                @endif
-            </nav>
-            <div class="h-8"></div>
-            <div class="mt-3.5">
-                <div id="expedition" role="tabpanel" aria-labelledby="tabs-large-item-1">
-                    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                        @foreach ($expedSherpas as $expedSherpa)
-                            <a href="{{ route('show_team_member', $expedSherpa->id) }}">
-                                <div class="card w-full h-full ">
-                                    <img src="{{ $expedSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
-                                        alt="{{ $expedSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
-                                    <div class="card-body bg-blue-100/50 px-2 py-2 text-left">
-                                        <h5
-                                            class="card-title mb-1 line-clamp-2 uppercase text-xl text-black font-medium tracking-wide font-body hover:text-warning hover:underline ">
-                                            {{ $expedSherpa->name }}
-                                        </h5>
-                                        <h5
-                                            class="card-title line-clamp-2 capitalize tracking-wide warning text-sm badge badge-outline text-primary font-light px-1 ">
-                                            {{ $expedSherpa->title }}
-                                        </h5>
-                                    </div>
-                                </div>
-                            </a>
-                        @endforeach
-                    </div>
-                </div>
-
-                <div id="all" class="hidden" role="tabpanel" aria-labelledby="tabs-large-item-2">
-                    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                        @foreach ($allSherpas as $allSherpa)
-                            <a href="{{ route('show_team_member', $allSherpa->id) }}">
-                                <div class="card w-full h-full ">
-                                    <img src="{{ $allSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
-                                        alt="{{ $allSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
-                                    <div class="card-body bg-blue-100/50 px-2 py-2 text-left">
-                                        <h5
-                                            class="card-title mb-1 line-clamp-2 uppercase text-xl text-black font-medium tracking-wide font-body hover:text-warning hover:underline ">
-                                            {{ $allSherpa->name }}
-                                        </h5>
-                                        <h5
-                                            class="card-title line-clamp-2 capitalize tracking-wide warning text-sm badge badge-outline text-primary font-light px-1 ">
-                                            {{ $allSherpa->title }}
-                                        </h5>
-                                    </div>
-                                </div>
-                            </a>
-                        @endforeach
-                    </div>
-                </div>
-                <div id="trek" class="hidden" role="tabpanel" aria-labelledby="tabs-large-item-3">
-                    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                        @foreach ($trekSherpas as $trekSherpa)
-                            <a href="{{ route('show_team_member', $trekSherpa->id) }}">
-                                <div class="card w-full h-full ">
-                                    <img src="{{ $trekSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
-                                        alt="{{ $trekSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
-                                    <div class="card-body bg-blue-100/50 px-2 py-2 text-left">
-                                        <h5
-                                            class="card-title mb-1 line-clamp-2 uppercase text-xl text-black font-medium tracking-wide font-body hover:text-warning hover:underline ">
-                                            {{ $trekSherpa->name }}
-                                        </h5>
-                                        <h5
-                                            class="card-title line-clamp-2 capitalize tracking-wide warning text-sm badge badge-outline text-primary font-light px-1 ">
-                                            {{ $trekSherpa->title }}
-                                        </h5>
-                                    </div>
-                                </div>
-                            </a>
-                        @endforeach
-                    </div>
-                </div>
-                <div id="tour" class="hidden" role="tabpanel" aria-labelledby="tabs-large-item-3">
-                    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-
-                        @foreach ($tourSherpas as $tourSherpa)
-                            <a href="{{ route('show_team_member', $tourSherpa->id) }}">
-                                <div class="card w-full h-full ">
-                                    <img src="{{ $tourSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
-                                        alt="{{ $tourSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
-                                    <div class="card-body bg-blue-100/50 px-2 py-2 text-left">
-                                        <h5
-                                            class="card-title mb-1 line-clamp-2 uppercase text-xl text-black font-medium tracking-wide font-body hover:text-warning hover:underline ">
-                                            {{ $tourSherpa->name }}
-                                        </h5>
-                                        <h5
-                                            class="card-title line-clamp-2 capitalize tracking-wide warning text-sm badge badge-outline text-primary font-light px-1 ">
-                                            {{ $tourSherpa->title }}
-                                        </h5>
-                                    </div>
-                                </div>
-                            </a>
-                        @endforeach
-                    </div>
-                </div>
+            <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                @foreach ($allSherpas as $allSherpa)
+                    <a href="{{ route('show_team_member', $allSherpa->id) }}">
+                        <div class="card w-full h-full ">
+                            <img src="{{ $allSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
+                                alt="{{ $allSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
+                            <div class="card-body bg-blue-100/50 px-2 py-2 text-left">
+                                <h5
+                                    class="card-title mb-1 line-clamp-2 uppercase text-xl text-black font-medium tracking-wide font-body hover:text-warning hover:underline ">
+                                    {{ $allSherpa->name }}
+                                </h5>
+                                <h5
+                                    class="card-title line-clamp-2 capitalize tracking-wide warning text-sm badge badge-outline text-primary font-light  ">
+                                    {{ $allSherpa->title }}
+                                </h5>
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
             </div>
         </div>
         <div class="h-20"></div>

@@ -84,7 +84,7 @@
                                 <div class="card-body absolute inset-0 justify-center md:justify-center">
                                     <div class="text-center " data-aos="fade-down" data-aos-duration="800">
                                         <h2
-                                            class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning" >
+                                            class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
                                             {{ $featuredExpedition->title }}
                                         </h2>
                                         <h2
@@ -143,10 +143,10 @@
                     {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
                     <div
                         class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-1 ">
-                        <figure class="h-[28rem] w-full ">
+                        <figure class="h-[20rem] w-full ">
                             <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                 alt="{{ $featuredExpedition->title }} Cover Image"
-                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
+                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[20rem] w-full object-cover" />
                         </figure>
                         <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                             <div class="card-body absolute inset-0 justify-center md:justify-center">

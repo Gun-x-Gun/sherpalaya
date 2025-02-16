@@ -57,12 +57,12 @@
                                 <a class="dropdown-item" href="about_us">About
                                     Us</a>
                             </li>
-                            <li
+                            {{-- <li
                                 class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
                                 <a class="dropdown-item" href="/">
                                     Legal Documents
                                 </a>
-                            </li>
+                            </li> --}}
                             <li
                                 class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
                                 <a class="dropdown-item" href="/sherpas">
@@ -98,10 +98,10 @@
                             Expedition
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute overflow-y-scroll vertical-scrollbar h-[30rem] bg-slate-400"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-slate-400 overflow-hidden m-2"
                             role="menu" aria-orientation="vertical">
-                            <div class="flex justify-start">
-                                <nav class=" tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4"
+                            <div class="flex justify-start overflow-y-scroll vertical-scrollbar h-[29rem]">
+                                <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
                                         class="tab active-tab:tab-active active  uppercase text-wrap text-base  font-normal tracking-normal shadow-sm "
@@ -204,10 +204,10 @@
                             Treks
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute overflow-y-scroll vertical-scrollbar h-[30rem] bg-slate-400"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-slate-400"
                             role="menu" aria-orientation="vertical">
-                            <div class="flex justify-start gap-4 ">
-                                <nav class="tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4"
+                            <div class="flex justify-start gap-4 h-[29rem] overflow-y-scroll vertical-scrollbar">
+                                <nav class="sticky top-10 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
                                         class="tab active-tab:tab-active active text-base  font-normal tracking-normal shadow-sm "
@@ -309,10 +309,10 @@
                             Activities
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute overflow-y-scroll vertical-scrollbar h-[30rem] bg-slate-400"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-slate-400"
                             role="menu" aria-orientation="vertical">
-                            <div class="flex justify-start">
-                                <nav class=" tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 "
+                            <div class="flex justify-start h-[29rem] overflow-y-scroll vertical-scrollbar">
+                                <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 "
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
                                         class="tab active-tab:tab-active active  uppercase text-wrap text-base  font-normal tracking-normal shadow-sm "
@@ -390,7 +390,7 @@
                                                                     </h2>
                                                                     <h2
                                                                         class=" tracking-normal text-blue-50 line-clamp-2 text-base group-hover:text-warning">
-                                                                        {{ $tour->duration }} 
+                                                                        {{ $tour->duration }}
                                                                     </h2>
                                                                 </div>
                                                             </div>

@@ -1,11 +1,11 @@
 <x-website-layout>
     <div class="bg-blue-100/10 font-body">
-        <div class="card--rounded-none image-full  bg-blue-100/50 h-[50vh]">
-            <figure class="h-[50vh] w-full">
+        <div class="card--rounded-none image-full   h-[60vh]">
+            <figure class="h-[60vh] w-full">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
-                    class="h-[50vh] w-full object-cover brightness-50" />
+                    class="h-[60vh] w-full object-cover brightness-50" />
             </figure>
-            <div class="card-body absolute bottom-1/2 xl:left-28 left-0 flex flex-row items-end gap-4">
+            <div class="card-body absolute bottom-1/2 xl:left-28 left-0 flex flex-row items-center gap-4">
                 <div class="overflow-hidden border-none " data-aos="fade-down" data-aos-duration="1200">
                     <figure class="w-full ">
                         <img class="h-28 lg:h-52 object-cover rounded-full" src="{{ $sherpa->profilePicture->url }}"
@@ -13,10 +13,10 @@
                     </figure>
                 </div>
                 <div class="" data-aos="fade-down" data-aos-duration="1200">
-                    <h5 class=" card-title mb-1 text-warning text-base md:text-xl lowercase font-extrabold ">
+                    <h5 class=" card-title mb-1 text-warning text-xl md:text-2xl lowercase font-oswald font-normal ">
                         {{ $sherpa->title }}
                     </h5>
-                    <h5 class=" card-title mb-6 text-white text-xl md:text-4xl uppercase font-extrabold ">
+                    <h5 class=" card-title  text-white text-2xl md:text-4xl uppercase font-normal ">
                         {{ $sherpa->name }}
                     </h5>
                 </div>
@@ -56,12 +56,12 @@
                         'tours' => $sherpa->tours->pluck('title'),
                     ];
                 @endphp
-                <div class="text-preety overflow-hidden text-center md:w-[70%] ">
+                <div class="text-preety overflow-hidden text-center md:w-[70%] my-2">
                     @foreach ($sherpaExperienceData as $category => $experiences)
                         @foreach ($experiences as $experience)
                             <span
-                                class="badge badge-primary badge-outline  mx-1 my-1 py-4 text-nowrap tracking-wider text-preety text-xl font-light "
-                                data-aos="fade-down" data-aos-duration="2000">{{ $experience }}
+                                class="badge badge-primary badge-outline  mx-1 my-1 py-4 text-nowrap tracking-wider text-preety text-xl font-light ">
+                                {{ $experience }}
                             </span>
                         @endforeach
                     @endforeach

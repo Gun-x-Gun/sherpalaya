@@ -45,7 +45,7 @@
                     <h6 class="footer-title font-bold text-blue-50 uppercase">Company</h6>
                     <a href="/about_us" class="link link-hover text-blue-100">About</a>
                     <a href="/sherpas" class="link link-hover text-blue-100">Our Sherpas</a>
-                    <a href="/" class="link link-hover text-blue-100">Certificates</a>
+                    {{-- <a href="/" class="link link-hover text-blue-100">Certificates</a> --}}
 
                 </nav>
                 <nav class="text-base-content">
