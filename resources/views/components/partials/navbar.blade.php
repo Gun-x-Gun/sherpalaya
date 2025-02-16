@@ -1,5 +1,5 @@
 <header id="navbar"
-    class="fixed top-0 z-50  w-full flex  flex-wrap py-2 text-lg xl:flex-nowrap xl:justify-start xl:py-0 bg-transparent font-body font-normal tracking-tighter">
+    class="fixed top-0 z-50  w-full flex  flex-wrap py-2 text-lg xl:flex-nowrap xl:justify-start xl:py-0 bg-transparent font-oswald font-light tracking-tighter">
     <nav class="w-full  xl:mx-32 mx-4 " aria-label="Global">
         <div class=" relative xl:flex xl:items-center ">
             <div class="flex items-center justify-between">
@@ -34,8 +34,8 @@
             <div id="navbar-mega-menu-click"
                 class="collapse hidden grow basis-full overflow-hidden rounded-lg transition-all duration-300  xl:block ">
                 <div
-                    class="flex flex-col rounded-lg max-xl:mt-3 max-xl:border max-xl:p-2 xl:flex-row xl:items-center xl:justify-end gap-2z xl:ps-5 xl:pe-0.5 xl:py-0.5">
-                    <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit gap-2 bg-transparent ">
+                    class="flex flex-col rounded-lg max-xl:mt-3 max-xl:border  xl:flex-row xl:items-center xl:justify-end gap-2z xl:ps-5 xl:pe-0.5 xl:py-0.5">
+                    <ul class="menu xl:menu-horizontal p-0 font-normal max-xl:w-fit gap-1 bg-transparent ">
                         <li class=" hover:text-warning rounded-lg uppercase"><a href="/home"
                                 @class([
                                     'underline decoration-wavy text-black' =>
@@ -45,7 +45,7 @@
                     </ul>
                     <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="nested-dropdown" type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  font-normal"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Company
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -57,12 +57,12 @@
                                 <a class="dropdown-item" href="about_us">About
                                     Us</a>
                             </li>
-                            {{-- <li
+                            <li
                                 class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
                                 <a class="dropdown-item" href="/">
-                                    Documents
+                                    Legal Documents
                                 </a>
-                            </li> --}}
+                            </li>
                             <li
                                 class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
                                 <a class="dropdown-item" href="/sherpas">
@@ -72,12 +72,12 @@
                     </div>
                     <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="service-dropdown" type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase font-normal "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Services
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase rounded-none px-0"
+                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60 uppercase rounded-none px-0 font-body"
                             role="menu" aria-orientation="vertical" aria-labelledby="service-dropdown">
                             @foreach ($navServices as $navService)
                                 <li
@@ -93,7 +93,7 @@
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase font-normal "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Expedition
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -199,7 +199,7 @@
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  font-normal"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Treks
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -304,7 +304,7 @@
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg uppercase  font-normal"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Activities
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -390,7 +390,7 @@
                                                                     </h2>
                                                                     <h2
                                                                         class=" tracking-normal text-blue-50 line-clamp-2 text-base group-hover:text-warning">
-                                                                        {{ $tour->highest_altitude }} m
+                                                                        {{ $tour->duration }} 
                                                                     </h2>
                                                                 </div>
                                                             </div>
@@ -409,7 +409,7 @@
 
 
                     {{-- contact  --}}
-                    <ul class="menu xl:menu-horizontal p-0 font-medium max-xl:w-fit bg-transparent items-center  ">
+                    <ul class="menu xl:menu-horizontal p-0 font-normal max-xl:w-fit bg-transparent items-center  ">
                         <li class=" hover:text-warning rounded-lg text-lg uppercase"><a href="/contact"
                                 @class([
                                     'underline decoration-wavy text-black' =>
