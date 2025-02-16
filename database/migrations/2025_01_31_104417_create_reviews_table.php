@@ -1,5 +1,6 @@
 <?php
 
+use App\Helpers\CuratorMigrationHelper;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,6 +21,7 @@ return new class extends Migration
                 ->default(true);
             $table->timestamps();
         });
+        CuratorMigrationHelper::migrateMediaField('reviews', 'image_id');
     }
 
     /**
@@ -27,6 +29,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        CuratorMigrationHelper::rollbackMediaField('reviews', 'image_id');
         Schema::dropIfExists('reviews');
     }
 };
