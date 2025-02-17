@@ -36,7 +36,6 @@
 
             let bodyElement = document.querySelector('body');
 
-            bodyElement.classList.add('overflow-y-hidden');
 
             navbar.classList.add('hidden');
 
@@ -46,6 +45,8 @@
             scrollDownWrapper.classList.remove('hidden');
 
             window.motion.inView(scrollDownWrapper, (element) => {
+                bodyElement.classList.add('overflow-y-hidden');
+
                 let scrollDownIconsAnimation = window.motion.animate(
                     scrollDownIcons, {
                         y: [0, 10]
