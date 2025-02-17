@@ -90,19 +90,18 @@
             </div>
             <div class="flex flex-col md:grid grid-cols-2 gap-4">
                 @foreach ($featuredTours as $featuredTour)
-                    <div
-                        class="card group sm:card-side max-w-sm sm:max-w-full rounded-md md:h-[20rem] shadow-sm  ">
-                        <a class="md:w-1/2 " href="{{ route('show_tour', $featuredTour->id) }}">
+                    <div class="card group lg:card-side sm:max-w-full rounded-md lg:h-[20rem] shadow-sm  ">
+                        <a class="lg:w-1/2 " href="{{ route('show_tour', $featuredTour->id) }}">
                             <figure>
                                 <img src="{{ optional($featuredTour->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredTour->title }} Cover Image"
                                     class="transition-transform brightness-75 duration-500   group-hover:scale-110 h-[20rem] object-cover" />
                             </figure>
                         </a>
-                        <div class="card-body md:w-1/2 px-2 md:px-4 bg-blue-100/50">
+                        <div class="card-body lg:w-1/2 px-2 md:px-4 bg-blue-100/50">
                             <a href="{{ route('show_tour', $featuredTour->id) }}">
                                 <h5
-                                    class=" text-2xl  line-clamp-2  tracking-wide font-body font-medium text-black lg:text-left  uppercase group-hover:text-warning  decoration-2 decoration-warning   group-hover:underline-offset-4">
+                                    class=" text-xl  line-clamp-2  tracking-wide font-body font-medium text-black lg:text-left  uppercase group-hover:text-warning  decoration-2 decoration-warning   group-hover:underline-offset-4">
                                     {{ $featuredTour->title }}
                                 </h5>
                             </a>

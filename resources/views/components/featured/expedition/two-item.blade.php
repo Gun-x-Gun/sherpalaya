@@ -183,7 +183,7 @@
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
                                     </figure>
                                     <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
-                                        <div class="card-body absolute inset-0 justify-end">
+                                        <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center">
                                                 <h2 class="font-medium text-blue-50 text-2xl uppercase">
                                                     {{ $featuredExpedition->title }}
