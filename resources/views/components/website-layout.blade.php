@@ -15,6 +15,11 @@
 
 <body class="bg-white font-mono">
 
+    <div
+    class="h-screen w-screen overflow-hidden flex flex-col justify-center items-center" id="page-loading-container">
+        <span class="loading loading-spinner loading-lg"></span>
+    </div>
+
     {{-- top --}}
     <x-partials.navbar />
 
@@ -40,6 +45,19 @@
             });
         </script>
     @endif
+
+    <script>
+        let navbarComponent = document.querySelector("#navbar");
+        let pageLoadingContainer = document.querySelector("#page-loading-container");
+        navbarComponent.classList.add('hidden');
+        document.addEventListener("DOMContentLoaded", function() {
+            navbarComponent.classList.remove('hidden');
+
+            pageLoadingContainer.classList.remove('h-screen');
+            pageLoadingContainer.classList.add('h-0');
+            pageLoadingContainer.classList.add('hidden');
+            });
+    </script>
 
     @stack('scripts')
     @stack('modals')
