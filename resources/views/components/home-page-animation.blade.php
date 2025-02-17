@@ -30,33 +30,27 @@
 @push('scripts')
     <script type="module">
         document.addEventListener("DOMContentLoaded", function() {
+
+            let showHomepageAnimation = sessionStorage.getItem("shown-homepage-animation");
+
             let scrollDownIcons = document.querySelectorAll(".animated-scroll-down-icon");
             let scrollDownWrapper = document.querySelector("#scroll-down-wrapper");
+            let homePageAnimationSection = document.querySelector("#home-page-animation");
             let navbar = document.querySelector("#navbar");
 
             let bodyElement = document.querySelector('body');
-
-
-            navbar.classList.add('hidden');
-
             let finalAnimationSection = document.querySelector("#animation-section-4");
 
 
+
+            navbar.classList.add('hidden');
+            bodyElement.classList.add('overflow-y-hidden');
+
+
+            if (showHomepageAnimation) {
+                afterAnimationEnds();
+            }
             scrollDownWrapper.classList.remove('hidden');
-
-            window.motion.inView(scrollDownWrapper, (element) => {
-                bodyElement.classList.add('overflow-y-hidden');
-
-                let scrollDownIconsAnimation = window.motion.animate(
-                    scrollDownIcons, {
-                        y: [0, 10]
-                    }, {
-                        duration: 0.5,
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                    }
-                );
-            });
 
             window.motion.press(scrollDownWrapper, (element) => {
                 let finalAnimation = window.motion.animate(
@@ -68,13 +62,18 @@
                 );
 
                 finalAnimation.then(() => {
-                    finalAnimationSection.remove();
-                    navbar.classList.remove('hidden');
-                    bodyElement.classList.remove('overflow-y-hidden');
-
-                    window.AOS.init();
+                    sessionStorage.setItem("shown-homepage-animation", true);
+                    afterAnimationEnds();
                 });
             });
+
+            function afterAnimationEnds() {
+                homePageAnimationSection.remove();
+                navbar.classList.remove('hidden');
+                bodyElement.classList.remove('overflow-y-hidden');
+
+                window.AOS.init();
+            }
         });
     </script>
 @endpush
