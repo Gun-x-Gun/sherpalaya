@@ -38,7 +38,7 @@
                     <ul class="menu xl:menu-horizontal p-0 font-normal max-xl:w-fit gap-1 bg-transparent ">
                         <li class=" hover:text-warning rounded-lg uppercase"><a href="/home"
                                 @class([
-                                    'underline decoration-wavy text-black' =>
+                                    'underline decoration-wavy decoration-warning' =>
                                         request()->route()->getName() == 'website.home',
                                 ])>Home</a>
                         </li>
@@ -412,7 +412,7 @@
                     <ul class="menu xl:menu-horizontal p-0 font-normal max-xl:w-fit bg-transparent items-center  ">
                         <li class=" hover:text-warning rounded-lg text-lg uppercase"><a href="/contact"
                                 @class([
-                                    'underline decoration-wavy text-black' =>
+                                    'underline decoration-wavy decoration-warning' =>
                                         request()->route()->getName() == 'website.contact',
                                 ])>Contact</a>
                         </li>

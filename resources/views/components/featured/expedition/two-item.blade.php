@@ -4,7 +4,7 @@
             <div class="h-10 md:h-20"></div>
             <div class="md:px-4">
                 <h5 class="text-3xl md:text-4xl font-oswald font-medium  line-clamp-2 uppercase tracking-wider text-black text-left md:text-left"
-                    data-aos="fade-down" data-aos-duration="800">
+                    data-aos="flip-up" data-aos-duration="800">
                     Expeditions</h5>
                 <p
                     class="text-xl/7 mt-4 text-preety text-black lg:text-left 
@@ -45,7 +45,7 @@
                             </figure>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <div class="card-body absolute inset-0 justify-center md:justify-center">
-                                    <div class="text-center " data-aos="fade-down" data-aos-duration="800">
+                                    <div class="text-center " data-aos="flip-up" data-aos-duration="800">
                                         <h2
                                             class="font-normal tracking-wide font-oswald text-blue-50 text-3xl md:text-3xl uppercase group-hover:text-warning">
                                             {{ $featuredExpedition->title }}
@@ -82,7 +82,7 @@
                             </figure>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <div class="card-body absolute inset-0 justify-center md:justify-center">
-                                    <div class="text-center " data-aos="fade-down" data-aos-duration="800">
+                                    <div class="text-center " data-aos="flip-up" data-aos-duration="800">
                                         <h2
                                             class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
                                             {{ $featuredExpedition->title }}
@@ -150,7 +150,7 @@
                         </figure>
                         <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                             <div class="card-body absolute inset-0 justify-center md:justify-center">
-                                <div class="text-center " data-aos="fade-down" data-aos-duration="800">
+                                <div class="text-center " data-aos="flip-up" data-aos-duration="800">
                                     <h2
                                         class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
                                         {{ $featuredExpedition->title }}

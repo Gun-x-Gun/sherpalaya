@@ -2,12 +2,12 @@
     <div class="xl:mx-32 mx-4 ">
         <div class="h-8 md:h-15"></div>
         <div class="md:px-8 flex flex-col justify-center items-center">
-            <h5 class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-center md:text-center"
-                data-aos="fade-down" data-aos-duration="800">
+            <h5 class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-left md:text-center"
+                data-aos="flip-up" data-aos-duration="800">
                 Explore Beyond Limits</h5>
             <p
-                class="text-xl/7 mt-4 text-preety text-black text-center 
-                 font-light font-body lg:w-[80%] tracking-wide">
+                class="text-xl/7 mt-4 text-preety text-black  
+                 font-light font-body lg:w-[80%] tracking-wide text-left md:text-center">
                 {{ $landingPageSetting->expedition_activity_content }}
             </p>
             <div class="h-10 md:h-12"></div>
@@ -18,16 +18,16 @@
 <div class="bg-blue-100/50 max-w-full font-body">
 
     <div class="md:grid grid-cols-7 gap-2 xl:mx-32 mx-4 flex flex-col ">
-        <a href="/expeditions" class="col-span-4">
+        <a href="/expeditions" class="col-span-4 ">
             <div
-                class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow border expedition-activity-card">
+                class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group  border expedition-activity-card hover:shadow-sm hover:shadow-black">
                 <figure class="h-full w-full">
                     {{-- expedition_activity_image_id --}}
                     <x-curator-glider
                         class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
                         :media="$landingPageSetting->expedition_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
-                <div class="card-body absolute bottom-0 inset-0 uppercase" data-aos="fade-down" data-aos-duration="800">
+                <div class="card-body absolute bottom-0 inset-0 uppercase" data-aos="flip-up" data-aos-duration="800">
                     <div class="text-left ">
                         <h2 class="font-extrabold text-blue-50 text-2xl lg:text-4xl">
                             Expeditions
@@ -50,7 +50,7 @@
 
         <a href="/treks" class="col-span-3">
             <div
-                class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow border">
+                class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group  border hover:shadow-sm  hover:shadow-black">
                 <figure class="h-full w-full ">
                     <x-curator-glider
                         class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
@@ -58,7 +58,7 @@
 
                 </figure>
                 <div class="card-body absolute inset-0 uppercase">
-                    <div class="text-left" data-aos="fade-down" data-aos-duration="800">
+                    <div class="text-left" data-aos="flip-up" data-aos-duration="800">
                         <h2 class="font-bold text-blue-50 text-2xl lg:text-4xl ">
                             Treks
                         </h2>
@@ -86,13 +86,13 @@
     <div class="md:grid grid-cols-7 gap-2 xl:mx-32 mx-4 flex flex-col">
         <a href="/tours" class="col-span-3">
             <div
-                class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow border">
+                class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group  border hover:shadow-sm  hover:shadow-black">
                 <figure class="h-full w-full">
                     <x-curator-glider
                         class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
                         :media="$landingPageSetting->tour_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
-                <div class="card-body absolute inset-0 uppercase" data-aos="fade-down" data-aos-duration="800">
+                <div class="card-body absolute inset-0 uppercase" data-aos="flip-up" data-aos-duration="800">
                     <div class="text-left ">
                         <h2 class="font-bold text-blue-50 text-2xl lg:text-4xl ">
                             Activities
@@ -115,14 +115,14 @@
 
         <a href="/services" class=" col-span-4">
             <div
-                class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow border">
+                class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow-sm  hover:shadow-black border">
 
                 <figure class="h-full w-full brightness-75">
                     <x-curator-glider
                         class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
                         :media="$landingPageSetting->peak_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                 </figure>
-                <div class="card-body absolute inset-0 uppercase" data-aos="fade-down" data-aos-duration="800">
+                <div class="card-body absolute inset-0 uppercase" data-aos="flip-up" data-aos-duration="800">
                     <div class="text-left ">
                         <h2 class="font-bold text-blue-50  text-2xl lg:text-4xl ">
                             Services
