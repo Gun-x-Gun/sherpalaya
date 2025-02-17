@@ -699,7 +699,7 @@
     <script defer>
         document.addEventListener("DOMContentLoaded", function () {
             const navbar = document.getElementById('navbar');
-            const drawer = document.getElementById('overlay-end-example');
+            const drawer = document.getElementById('navbar');
             let lastScrollTop = 0;
 
             // Ensure transitions are smooth
