@@ -1,7 +1,7 @@
 <div class="bg-blue-100/50">
     <div class="xl:mx-32 mx-4 ">
         <div class="h-8 md:h-15"></div>
-        <div class="md:px-8 flex flex-col justify-center items-center">
+        <div class="md:px-8 flex flex-col md:justify-center md:items-center">
             <h5 class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-left md:text-center"
                 data-aos="flip-up" data-aos-duration="800">
                 Explore Beyond Limits</h5>

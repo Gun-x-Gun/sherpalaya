@@ -13,7 +13,7 @@
                 </p>
                 <div class="h-6 md:h-12"></div>
             </div>
-            <div class="flex flex-col md:grid grid-cols-3 md:gap-2 bg-blue-100/10 ">
+            <div class="flex flex-col md:grid grid-cols-3 gap-2 bg-blue-100/10 ">
                 @foreach ($featuredExpeditions->slice(0, 4) as $featuredExpedition)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
@@ -44,14 +44,14 @@
                                     class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
-                                <div class="card-body absolute inset-0 justify-center md:justify-center">
-                                    <div class="text-center " data-aos="flip-up" data-aos-duration="800">
+                                <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2">
+                                    <div class="md:text-center " data-aos="flip-up" data-aos-duration="800">
                                         <h2
-                                            class="font-normal tracking-wide font-oswald text-blue-50 text-3xl md:text-3xl uppercase group-hover:text-warning">
+                                            class="font-normal tracking-wide font-oswald text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning ">
                                             {{ $featuredExpedition->title }}
                                         </h2>
                                         <h2
-                                            class="font-normal tracking-wide font-oswald text-blue-50 uppercase line-clamp-2 text-3xl md:text-3xl group-hover:text-warning">
+                                            class="font-normal tracking-wide font-oswald text-blue-50 uppercase line-clamp-2 text-2xl md:text-3xl group-hover:text-warning">
                                             {{ $featuredExpedition->highest_altitude }} m
                                         </h2>
                                     </div>
@@ -81,8 +81,8 @@
                                     class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
-                                <div class="card-body absolute inset-0 justify-center md:justify-center">
-                                    <div class="text-center " data-aos="flip-up" data-aos-duration="800">
+                                <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2">
+                                    <div class="text-left md:text-center " data-aos="flip-up" data-aos-duration="800">
                                         <h2
                                             class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
                                             {{ $featuredExpedition->title }}
