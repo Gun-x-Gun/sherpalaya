@@ -1,6 +1,6 @@
 @if ($featuredExpeditions->count() > 0)
     <div class="bg-blue-100/40">
-        <div class="xl:mx-32 mx-4 font-body">
+        <div class="2xl:mx-32 mx-4 font-body">
             <div class="h-10 md:h-20"></div>
             <div class="md:px-4">
                 <h5 class="text-3xl md:text-4xl font-oswald font-medium  line-clamp-2 uppercase tracking-wider text-black text-left md:text-left"
@@ -13,7 +13,7 @@
                 </p>
                 <div class="h-6 md:h-12"></div>
             </div>
-            <div class="flex flex-col md:grid grid-cols-3 gap-2 bg-blue-100/10 ">
+            <div class="flex flex-col md:grid grid-cols-3 md:gap-2 bg-blue-100/10 ">
                 @foreach ($featuredExpeditions->slice(0, 4) as $featuredExpedition)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}

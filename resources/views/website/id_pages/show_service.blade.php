@@ -54,7 +54,7 @@
         <x-booking.mobile-booking-section :bookingFor="$service" />
 
 
-        <div class="mx-4 xl:mx-32 mt-4">
+        <div class="mx-4 2xl:mx-32 mt-4">
             {{-- description  --}}
 
             <div class="card sm:w-full md:px-8 shadow-sm shadow-slate-300 bg-blue-50/10" data-aos="fade-down"

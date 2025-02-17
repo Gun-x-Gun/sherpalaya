@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="h-8 "></div>
-    <div class="xl:mx-32 mx-4 text-left">
+    <div class="2xl:mx-32 mx-4 text-left">
         <h1
             class="text-2xl lg:text-5xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
             Our Services In Nepal
@@ -55,7 +55,7 @@
 
 
     {{-- Showing <strong>{{ $serviceDestination->services->count() }}</strong> --}}
-    <div class="xl:mx-32 mx-4">
+    <div class="2xl:mx-32 mx-4">
 
         @foreach ($servicesRegion as $serviceRegion)
             @if (!empty($serviceRegion->name))

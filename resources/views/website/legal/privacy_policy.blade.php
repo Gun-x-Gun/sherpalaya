@@ -28,7 +28,7 @@
             ],
         ]" />
         <div class="h-8"></div>
-        <div class="mx-4 xl:mx-32">
+        <div class="mx-4 2xl:mx-32">
             <div class="bg-blue-transparent text-blue-600">
                 {!! $privacyPolicy !!}
             </div>

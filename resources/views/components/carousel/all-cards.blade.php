@@ -1,5 +1,5 @@
 <div class="bg-blue-100/50">
-    <div class="xl:mx-32 mx-4 ">
+    <div class="2xl:mx-32 mx-4 ">
         <div class="h-8 md:h-15"></div>
         <div class="md:px-8 flex flex-col md:justify-center md:items-center">
             <h5 class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-left md:text-center"
@@ -17,7 +17,7 @@
 
 <div class="bg-blue-100/50 max-w-full font-body">
 
-    <div class="md:grid grid-cols-7 gap-2 xl:mx-32 mx-4 flex flex-col ">
+    <div class="md:grid grid-cols-7 gap-2 2xl:mx-32 mx-4 flex flex-col ">
         <a href="/expeditions" class="col-span-4 ">
             <div
                 class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group  border expedition-activity-card hover:shadow-sm hover:shadow-black">
@@ -83,7 +83,7 @@
 
     </div>
 
-    <div class="md:grid grid-cols-7 gap-2 xl:mx-32 mx-4 flex flex-col">
+    <div class="md:grid grid-cols-7 gap-2 2xl:mx-32 mx-4 flex flex-col">
         <a href="/tours" class="col-span-3">
             <div
                 class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group  border hover:shadow-sm  hover:shadow-black">

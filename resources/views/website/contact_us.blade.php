@@ -28,7 +28,7 @@
                 'name' => 'Contact',
             ],
         ]" />
-        <div class="xl:mx-32 mx-4">
+        <div class="2xl:mx-32 mx-4">
             <div class="h-8"></div>
             <div class="">
                 <div class=" text-center sm:text-center ">

@@ -30,7 +30,7 @@
                 ],
             ]" />
             <div class="h-4 "></div>
-            <div class="xl:mx-32 mx-4 text-left" data-aos="fade-down" data-aos-duration="1200">
+            <div class="2xl:mx-32 mx-4 text-left" data-aos="fade-down" data-aos-duration="1200">
                 <p
                     class="text-md text-left  mt-2  text-blue-600 first-line:uppercase first-line:tracking-widest first-line:font-light ">
                     {{ $pageSetting->peak_page_content }}
@@ -47,7 +47,7 @@
         <div class="h-12"></div>
 
 
-        <div class="xl:mx-32 mx-4">
+        <div class="2xl:mx-32 mx-4">
             @foreach ($peaksRegion as $peakRegion)
                 @if ($peakRegion->peaks->isNotEmpty())
                     <div id="region-{{ $peakRegion->id }}">

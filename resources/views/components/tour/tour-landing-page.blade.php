@@ -25,7 +25,7 @@
 
     <div class="bg-blue-100/50">
         <div class="h-10 "></div>
-        <div class="xl:mx-32 mx-4 text-left">
+        <div class="2xl:mx-32 mx-4 text-left">
             <h1
                 class="text-2xl lg:text-5xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
                 tour Adventure In Nepal
@@ -54,7 +54,7 @@
     ]" />
 
     {{-- Showing <strong>{{ $tourRegion->tours->count() }}</strong> --}}
-    <div class="xl:mx-32 mx-4">
+    <div class="2xl:mx-32 mx-4">
         @foreach ($tourTypes as $type => $tours)
             @php
                 $typeLabel = \App\Enums\TourType::tryFrom($type)?->getLabel() ?? 'Unknown';

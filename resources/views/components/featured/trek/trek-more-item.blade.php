@@ -1,6 +1,6 @@
 @if ($featuredTreks->count() > 0)
     <div class="bg-blue-100/10">
-        <div class="xl:mx-32 mx-4 font-body">
+        <div class="2xl:mx-32 mx-4 font-body">
             <div class="h-10 md:h-20"></div>
             <div class="md:px-8 ">
                 <h5 class="text-3xl md:text-4xl font-oswald  font-medium line-clamp-2 uppercase tracking-wider text-black text-left md:text-left"
@@ -46,14 +46,14 @@
                                     class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
-                                <div class="card-body absolute inset-0 justify-center md:justify-center">
-                                    <div class="text-center " data-aos="zoom-in" data-aos-duration="800">
+                                <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2">
+                                    <div class="text-left md:text-center " data-aos="zoom-in" data-aos-duration="800">
                                         <h2
-                                            class="font-medium text-blue-50 text-3xl md:text-3xl uppercase group-hover:text-warning">
+                                            class="font-medium text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
                                             {{ $featuredTrek->title }}
                                         </h2>
                                         <h2
-                                            class="font-medium tracking-normal text-blue-50 uppercase line-clamp-2 text-3xl md:text-3xl group-hover:text-warning">
+                                            class="font-medium tracking-normal text-blue-50 uppercase line-clamp-2 text-2xl md:text-3xl group-hover:text-warning">
                                             {{ $featuredTrek->highest_altitude }} m
                                         </h2>
                                     </div>
@@ -84,8 +84,8 @@
                                     class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
-                                <div class="card-body absolute inset-0 justify-center md:justify-center">
-                                    <div class="text-center " data-aos="zoom-in" data-aos-duration="1200">
+                                <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2">
+                                    <div class="text-left md:text-center " data-aos="zoom-in" data-aos-duration="1200">
                                         <h2
                                             class="font-medium tracking-tight text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
                                             {{ $featuredTrek->title }}
@@ -118,8 +118,8 @@
                                 </button>
                             </a>
                         </div>
-                        <div class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start bg-blue-100"
-                            data-aos="zoom-in" data-aos-duration="1200">
+                        <div
+                            class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start bg-blue-100">
                             <div
                                 class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredTrek->description, 50) !!}
@@ -181,7 +181,7 @@
                                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
                                         </figure>
                                         <a href="{{ route('show_trek', $featuredTrek->id) }}">
-                                            <div class="card-body absolute inset-0 justify-end">
+                                            <div class="card-body absolute inset-0 justify-center">
                                                 <div class="text-center">
                                                     <h2
                                                         class="font-medium tracking-tight text-white text-2xl uppercase group-hover:text-warning">

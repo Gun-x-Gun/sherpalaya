@@ -29,7 +29,7 @@
             ]" />
             <div class="h-10">
             </div>
-            <div class="xl:mx-32 mx-4 text-left">
+            <div class="2xl:mx-32 mx-4 text-left">
                 <p class="text-left  mt-2  text-stone-600  font-body text-xl/7 font-light">
                     {{ $pageSetting->expedition_page_content }}
                 </p>
@@ -37,7 +37,7 @@
             <div class="h-10"></div>
         </div>
 
-        <div class="xl:mx-32 mx-4">
+        <div class="2xl:mx-32 mx-4">
             <div class="h-4"></div>
             <nav class="sticky top-0 z-30 tabs tabs-bordered  bg-white horizontal-scrollbar md:justify-center"
                 aria-label="Tabs" role="tablist" aria-orientation="horizontal">

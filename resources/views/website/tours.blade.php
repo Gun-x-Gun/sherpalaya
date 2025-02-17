@@ -32,7 +32,7 @@
                 ],
             ]" />
             <div class="h-4"></div>
-            <div class="xl:mx-32 mx-4 text-left">
+            <div class="2xl:mx-32 mx-4 text-left">
                 <p class="text-xl/7 text-left  text-stone-600 font-light font-body">
                     {{ $pageSetting->tour_page_content }}
                 </p>
@@ -41,7 +41,7 @@
         </div>
 
         {{-- Showing <strong>{{ $tourRegion->tours->count() }}</strong> --}}
-        <div class="xl:mx-32 mx-4">
+        <div class="2xl:mx-32 mx-4">
             <div class="h-4"></div>
             <nav class="sticky top-0 z-30 tabs tabs-bordered  bg-white horizontal-scrollbar md:justify-center"
                 aria-label="Tabs" role="tablist" aria-orientation="horizontal">

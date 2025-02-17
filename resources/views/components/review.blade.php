@@ -2,7 +2,7 @@
 
     <div class="h-20"></div>
 
-    <div class="xl:mx-32 mx-4">
+    <div class="2xl:mx-32 mx-4">
         <div class="">
             <h5 class="text-3xl md:text-4xl font-body font-medium uppercase tracking-normal text-black text-left md:text-left"
                 data-aos="fade-down" data-aos-duration="1200">

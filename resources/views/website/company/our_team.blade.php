@@ -32,7 +32,7 @@
 
 
         {{--  --}}
-        <div class="xl:mx-32 mx-4 text-left">
+        <div class="2xl:mx-32 mx-4 text-left">
             <div class="h-8"></div>
 
             <div class="md:px-8 flex flex-col justify-center items-center">
@@ -53,7 +53,7 @@
             </div>
         </div>
 
-        <div class="mx-4 xl:mx-32">
+        <div class="mx-4 2xl:mx-32">
             <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 @foreach ($allSherpas as $allSherpa)
                     <a href="{{ route('show_team_member', $allSherpa->id) }}">

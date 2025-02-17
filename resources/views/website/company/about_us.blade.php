@@ -35,7 +35,7 @@
                 ],
             ]" />
 
-            <div class="xl:mx-32 mx-4 ">
+            <div class="2xl:mx-32 mx-4 ">
                 <div class="h-8"></div>
 
 
@@ -58,18 +58,18 @@
 
 
         {{-- Showing <strong>{{ $expeditionRegion->expeditions->count() }}</strong> --}}
-        <div class="xl:mx-32 mx-4">
+        <div class="2xl:mx-32 mx-4">
             <div class="h-10"></div>
             <div class="bg-blue-100/5">
                 <div class="card-header   px-0">
-                    <h5 class="card-title uppercase text-center font-medium text-3xl px-2" data-aos="fade-down"
-                        data-aos-duration="1200">
+                    <h5 class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-left "
+                        data-aos="flip-up" data-aos-duration="800">
                         Legal Certificates
                     </h5>
                     <div class="h-8">
                     </div>
                     <div id="all-services"
-                        class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1 px-2 skeleton animate-pulse">
+                        class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1  skeleton animate-pulse">
                         @foreach ($aboutUsSetting->certificate_images as $galleryImage)
                             <button
                                 class="card cursor-pointer rounded-none image-fullw-full relative items-end  card-side group hover:shadow border single-service hidden"

@@ -53,7 +53,7 @@
 
         {{-- <div class="h-8"></div> --}}
         @forelse ($results ?? [] as $resultType => $resultDatas)
-            <div class="xl:mx-32 mx-4 ">
+            <div class="2xl:mx-32 mx-4 ">
                 {{-- bg-blue-100/20 --}}
                 <div class="w-full ">
                     {{-- <x-carousel.full-width-carousel :header="$searchTypes->get($resultType)->getLabel()" viewAllUrl="/{{ Str::plural($resultType) }}"> --}}

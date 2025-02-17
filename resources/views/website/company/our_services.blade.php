@@ -31,7 +31,7 @@
             ],
         ]" />
 
-        <div class="xl:mx-32 mx-4 text-left">
+        <div class="2xl:mx-32 mx-4 text-left">
             <div class="h-8"></div>
 
             <div class="md:px-8 flex flex-col justify-center items-center">
@@ -49,7 +49,7 @@
         </div>
 
         {{-- Showing <strong>{{ $serviceDestination->services->count() }}</strong> --}}
-        <div class="xl:mx-32 mx-4">
+        <div class="2xl:mx-32 mx-4">
             <div class="flex flex-col  md:grid md:grid-cols-2 xl:grid-cols-3  gap-4 ">
                 @foreach ($services as $serviceData)
                     <div class="card w-full h-full" data-aos="fade-down" data-aos-duration="1200">

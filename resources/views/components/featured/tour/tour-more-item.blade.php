@@ -1,6 +1,6 @@
 {{-- @if ($featuredTours->count() > 3)
     <div class="bg-blue-100/40">
-        <div class="xl:mx-32 mx-4 ">
+        <div class="2xl:mx-32 mx-4 ">
             <div class="h-10 md:h-20"></div>
             <div class="flex flex-col md:justify-center md:items-center ">
                 <h5 class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-center  "
@@ -74,9 +74,9 @@
 
 @if ($featuredTours->count() > 0)
 
-    <div class="bg-blue-100/10 font-body">
+    <div class="bg-blue-100/40 font-body">
         <div class="h-20"></div>
-        <div class="xl:mx-32 mx-4 ">
+        <div class="2xl:mx-32 mx-4 ">
             <div class="flex flex-col md:justify-center md:items-center ">
                 <h5 class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-center  "
                     data-aos="fade-down" data-aos-duration="1200">
@@ -90,15 +90,15 @@
             </div>
             <div class="flex flex-col md:grid grid-cols-2 gap-4">
                 @foreach ($featuredTours as $featuredTour)
-                    <div class="card group lg:card-side sm:max-w-full rounded-md lg:h-[20rem] shadow-sm  ">
-                        <a class="lg:w-1/2 " href="{{ route('show_tour', $featuredTour->id) }}">
+                    <div class="card group xl:card-side sm:max-w-full rounded-md xl:h-[20rem] shadow-sm  shadow-blue-50">
+                        <a class="xl:w-1/2 " href="{{ route('show_tour', $featuredTour->id) }}">
                             <figure>
                                 <img src="{{ optional($featuredTour->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredTour->title }} Cover Image"
                                     class="transition-transform brightness-75 duration-500   group-hover:scale-110 h-[20rem] object-cover" />
                             </figure>
                         </a>
-                        <div class="card-body lg:w-1/2 px-2 md:px-4 bg-blue-100/50">
+                        <div class="card-body xl:w-1/2 px-2 md:px-4 bg-blue-100/20">
                             <a href="{{ route('show_tour', $featuredTour->id) }}">
                                 <h5
                                     class=" text-xl  line-clamp-2  tracking-wide font-body font-medium text-black lg:text-left  uppercase group-hover:text-warning  decoration-2 decoration-warning   group-hover:underline-offset-4">
@@ -106,8 +106,8 @@
                                 </h5>
                             </a>
                             <div
-                                class=" mt-2 text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
-                                {!! Str::words($featuredTour->description, 15) !!}
+                                class=" mt-2 text-preety text-black break-all font-body font-light text-lg/7 line-clamp-[6] ">
+                                {!! Str::words($featuredTour->description, 20) !!}
                             </div>
                             <a href="{{ route('show_tour', $featuredTour->id) }}">
                                 <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">

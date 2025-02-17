@@ -38,7 +38,7 @@
         ]" />
 
 
-        <div class="mx-4 xl:mx-32">
+        <div class="mx-4 2xl:mx-32">
             <div class="h-4"></div>
             <p class="my-1  text-pretty text-stone-700 text-center font-body text-xl/7">
                 {{ $sherpa->description }}

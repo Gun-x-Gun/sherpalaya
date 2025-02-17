@@ -34,7 +34,7 @@
     <div class="bg-blue-100/50">
 
         <div class="h-8 "></div>
-        <div class="xl:mx-32 mx-4 text-left">
+        <div class="2xl:mx-32 mx-4 text-left">
             <h1
                 class="text-2xl lg:text-4xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
                 Trekking Adventure In Nepal
@@ -59,7 +59,7 @@
     <div class="h-12"></div>
 
 
-    <div class="xl:mx-32 mx-4">
+    <div class="2xl:mx-32 mx-4">
         @foreach ($treksRegion as $trekRegion)
             @if ($trekRegion->treks->isNotEmpty())
                 <div id="region-{{ $trekRegion->id }}">

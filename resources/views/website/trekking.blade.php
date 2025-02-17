@@ -33,7 +33,7 @@
                 ],
             ]" />
             <div class="h-4 "></div>
-            <div class="xl:mx-32 mx-4 text-left">
+            <div class="2xl:mx-32 mx-4 text-left">
                 <p class="text-md text-left  mt-2  text-stone-600 font-body text-xl/7 font-light ">
                     {{ $pageSetting->trek_page_content }}
                 </p>
@@ -42,7 +42,7 @@
         </div>
 
         <div class="h-12"></div>
-        <div class="xl:mx-32 mx-4">
+        <div class="2xl:mx-32 mx-4">
             <div class="h-4"></div>
             <nav class="sticky top-0 z-30 tabs tabs-bordered  bg-white horizontal-scrollbar md:justify-center"
                 aria-label="Tabs" role="tablist" aria-orientation="horizontal">
@@ -126,7 +126,7 @@
         </div>
 
         {{-- Showing <strong>{{ $trekRegion->treks->count() }}</strong> --}}
-        {{-- <div class="xl:mx-32 mx-4">
+        {{-- <div class="2xl:mx-32 mx-4">
             @foreach ($treksRegion as $trekRegion)
                 @if ($trekRegion->treks->isNotEmpty())
                     <div id="region-{{ $trekRegion->id }}">
