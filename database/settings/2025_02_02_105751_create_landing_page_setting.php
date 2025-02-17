@@ -6,6 +6,11 @@ return new class extends SettingsMigration
 {
     public function up(): void
     {
+        $this->migrator->add('landing_page.animation_sections', null);
+        $this->migrator->add('landing_page.animation_button_icon_id', null);
+        $this->migrator->add('landing_page.animation_button_text', null);
+        $this->migrator->add('landing_page.animation_sound_id', null);
+
         $this->migrator->add('landing_page.expedition_activity_image_id', null);
         $this->migrator->add('landing_page.expedition_activity_content', null);
         $this->migrator->add('landing_page.expedition_activity_count', null);
@@ -28,7 +33,6 @@ return new class extends SettingsMigration
         $this->migrator->add('landing_page.stat_success_rate', null);
 
         $this->migrator->add('landing_page.parallax_image_id', null);
-        $this->migrator->add('landing_page.parallax_sound_id', null);
 
     }
 };

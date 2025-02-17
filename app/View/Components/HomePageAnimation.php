@@ -6,24 +6,34 @@ use App\Settings\LandingPageSetting;
 use Awcodes\Curator\Models\Media;
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Collection;
 use Illuminate\View\Component;
 
 class HomePageAnimation extends Component
 {
-    public string $parallaxImageUrl;
-    public string $parallaxAudioUrl;
-    public string $parallaxAudioType;
+    public LandingPageSetting $landingPageSetting;
+    public Collection $animationSections;
+    public array $animationMediaUrls = [];
 
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-        $landingPageSettings = app(LandingPageSetting::class);
+        $landingPageSetting = $this->landingPageSetting = app(LandingPageSetting::class);
 
-        $this->parallaxImageUrl = Media::find($landingPageSettings->parallax_image_id)?->url ?? asset('photos/banner.jpg');
-        $this->parallaxAudioUrl = Media::find($landingPageSettings->parallax_sound_id)?->url ?? asset('audio/background-music.mp3');
-        $this->parallaxAudioType = Media::find($landingPageSettings->parallax_sound_id)?->type ?? 'audio/mpeg';
+        $this->animationSections = collect($this->landingPageSetting->animation_sections ?? []);
+
+        $mediaIds = collect([])
+            ->merge($this->animationSections->pluck('image_id'))
+            ->merge($this->animationSections->pluck('icon_id'))
+            ->push($landingPageSetting->animation_button_icon_id)
+            ->toArray();
+
+        $this->animationMediaUrls = Media::whereIn('id', $mediaIds)
+            ->get()
+            ->pluck('url', 'id')
+            ->toArray();
     }
 
     /**

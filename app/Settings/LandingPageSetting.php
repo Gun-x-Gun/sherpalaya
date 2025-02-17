@@ -7,6 +7,21 @@ use Spatie\LaravelSettings\Settings;
 class LandingPageSetting extends Settings
 {
 
+    /**
+     * Animation format for single animation
+     *      - id (auto generate on create)
+     *      - title
+     *      - content
+     *      - icon_id
+     *      - image_id
+     *      - wait_time
+     */
+    // Animation
+    public ?array $animation_sections;
+    public ?string $animation_button_icon_id;
+    public ?string $animation_button_text;
+    public ?string $animation_sound_id;
+
     // Activity
 
     public ?string $expedition_activity_image_id;
@@ -32,8 +47,6 @@ class LandingPageSetting extends Settings
     public ?string $stat_success_rate;
 
     public ?string $parallax_image_id;
-    public ?string $parallax_sound_id;
-
 
     public static function group(): string
     {

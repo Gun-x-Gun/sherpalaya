@@ -2,17 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Enums\WebsiteSettingType;
-use App\Helpers\CuratorSeederHelper;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use App\Settings\PageSetting;
 use App\Models\WebsiteSetting;
+use App\Settings\LegalSetting;
+use Illuminate\Database\Seeder;
 use App\Settings\AboutUsSetting;
 use App\Settings\CompanySetting;
+use App\Enums\WebsiteSettingType;
 use App\Settings\ContactUsSetting;
+use App\Helpers\CuratorSeederHelper;
 use App\Settings\LandingPageSetting;
-use App\Settings\LegalSetting;
-use App\Settings\PageSetting;
-use Illuminate\Database\Seeder;
-use Illuminate\Support\Arr;
 
 class WebsiteSettingSeeder extends Seeder
 {
@@ -37,6 +38,56 @@ class WebsiteSettingSeeder extends Seeder
     {
         $landingPageSetting = app(LandingPageSetting::class);
 
+        $landingPageSetting->animation_sections = [
+            [
+                'id' => fake()->regexify('[A-Za-z]{10}'),
+                'title' => 'Expedition',
+                'wait_time' => 2,
+                'content' => 'Embark on the ultimate adventure with our expertly guided expeditions',
+                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/mountain1.jpg'))->id,
+                'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/icons/expedition.svg'))->id,
+            ],
+            [
+                'id' => fake()->regexify('[A-Za-z]{10}'),
+                'title' => 'Peak',
+                'wait_time' => 2,
+                'content' => 'Reach new heights with our exhilarating peak climbing adventures',
+                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/mountain2.jpg'))->id,
+                'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/icons/peak.svg'))->id,
+            ],
+            [
+                'id' => fake()->regexify('[A-Za-z]{10}'),
+                'title' => 'Trek',
+                'wait_time' => 2,
+                'content' => 'Discover the magic of Nepal’s breathtaking trails with our immersive treks',
+                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/mountain3.jpg'))->id,
+                'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/icons/trek.svg'))->id,
+            ],
+
+            [
+                'id' => fake()->regexify('[A-Za-z]{10}'),
+                'title' => 'Activities',
+                'wait_time' => 2,
+                'content' => 'Indulge and explore Nepali society and culture in the best way possible',
+                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/culture2.jpg'))->id,
+                'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/icons/culture.svg'))->id,
+            ],
+            [
+                'id' => fake()->regexify('[A-Za-z]{10}'),
+                'title' => 'Explore Now',
+                'wait_time' => 2,
+                'content' => 'Explore Nepal with Sherpalaya',
+                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/mountain5.jpg'))->id,
+                'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/logo.png'))->id,
+            ],
+        ];
+
+        $landingPageSetting->animation_button_text = 'Explore Now';
+
+        $landingPageSetting->animation_button_icon_id = CuratorSeederHelper::resolveFileData(public_path('/icons/scroll-down.svg'))->id;
+        $landingPageSetting->animation_sound_id = CuratorSeederHelper::resolveFileData(public_path('/audio/background-music.mp3'))->id;
+
+
         $landingPageSetting->expedition_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/mountain1.jpg'))->id;
         $landingPageSetting->trek_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/mountain5.jpg'))->id;
         $landingPageSetting->tour_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/culture.jpg'))->id;
@@ -57,7 +108,6 @@ class WebsiteSettingSeeder extends Seeder
         $landingPageSetting->stat_success_rate = '96';
 
         $landingPageSetting->parallax_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/mountain8.jpg'))->id;
-        $landingPageSetting->parallax_sound_id = CuratorSeederHelper::resolveFileData(public_path('/audio/background-music.mp3'))->id;
 
 
         $landingPageSetting->save();

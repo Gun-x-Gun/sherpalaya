@@ -23,8 +23,8 @@
         document.addEventListener("DOMContentLoaded", function() {
 
             let animationInviewSelector = "#{{ $id }} h2";
-            let animationRootId = "{{ $id }}";
-            let animationRoot = document.querySelector(`#${animationRootId}`);
+            let animationRootId = "#{{ $id }}";
+            let animationRoot = document.querySelector(animationRootId);
             let hideAfterScroll = {{ $hideAfterScroll ? 'true' : 'false' }};
             let waitBeforeHide = {{ $waitBeforeHide }};
 

@@ -23,8 +23,8 @@ class AboutCard extends Component
         $landingPageSettings = app(LandingPageSetting::class);
 
         $this->parallaxImageUrl = Media::find($landingPageSettings->parallax_image_id)?->url ?? asset('photos/banner.jpg');
-        $this->parallaxAudioUrl = Media::find($landingPageSettings->parallax_sound_id)?->url ?? asset('audio/background-music.mp3');
-        $this->parallaxAudioType = Media::find($landingPageSettings->parallax_sound_id)?->type ?? 'audio/mpeg';
+        $this->parallaxAudioUrl = Media::find($landingPageSettings->animation_sound_id)?->url ?? asset('audio/background-music.mp3');
+        $this->parallaxAudioType = Media::find($landingPageSettings->animation_sound_id)?->type ?? 'audio/mpeg';
     }
 
     /**
