@@ -42,7 +42,8 @@
                 <p
                     class="text-xl/7 mt-6 text-preety text-black text-center 
                              font-light font-body lg:w-[80%] tracking-wide">
-                    {{ $pageSetting->about_us_page_content }}
+                    {{-- {{ $pageSetting->service_page_page_content }} --}}
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nostrum doloremque eaque ducimus repellendus odio laborum sint optio quis harum molestiae maxime atque delectus ipsa, ullam minima quia earum quas!
                 </p>
                 <div class="h-10 md:h-12"></div>
             </div>
@@ -52,7 +53,7 @@
         <div class="2xl:mx-32 mx-4">
             <div class="flex flex-col  md:grid md:grid-cols-2 xl:grid-cols-3  gap-4 ">
                 @foreach ($services as $serviceData)
-                    <div class="card w-full h-full" data-aos="fade-down" data-aos-duration="1200">
+                    <div class="card w-full h-full" >
                         <a href="{{ route('show_service', $serviceData->service->id) }}">
                             <figure>
                                 <img src="{{ $serviceData->service->coverImage?->url ?? asset('photos/P1030127.JPG') }}"
