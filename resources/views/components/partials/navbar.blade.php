@@ -697,40 +697,51 @@
 @endpush
 @push('scripts')
     <script defer>
-        const scrollableElement = document.body; // document.getElementById('scrollableElement');
-        const navbar = document.getElementById('navbar');
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.getElementById('navbar');
+            const drawer = document.getElementById('overlay-end-example');
+            let lastScrollTop = 0;
 
-        // Add smooth transition for background and visibility
-        navbar.style.transition = "background 0.5s ease, transform 0.5s ease";
-
-        scrollableElement.addEventListener('wheel', checkScrollDirection);
-
-        function checkScrollDirection(event) {
-            const currentScroll = window.pageYOffset;
-
-            // Change background based on position
-            if (currentScroll === 0) {
-                navbar.style.background = "transparent"; // At the top
-                navbar.style.color = "white"; // At the top
-            } else {
-                navbar.style.background = "rgba(255, 255, 255, 1)"; // bg-slate-100
-                navbar.style.color = "black"; // At the top
-
+            // Ensure transitions are smooth
+            if (navbar) {
+                navbar.style.transition = "background 0.5s ease, transform 0.5s ease";
+            }
+            if (drawer) {
+                drawer.style.transition = "transform 0.5s ease";
             }
 
-            // Show or hide the navbar based on scroll direction
-            if (checkScrollDirectionIsUp(event)) {
-                navbar.style.transform = "translateY(0)"; // Show navbar
-            } else {
-                navbar.style.transform = "translateY(-100%)"; // Hide navbar
-            }
-        }
+            function handleScroll(event) {
+                const currentScroll = window.pageYOffset;
+                const isScrollingUp = checkScrollDirectionIsUp(event);
 
-        function checkScrollDirectionIsUp(event) {
-            if (event.wheelDelta) {
-                return event.wheelDelta > 0;
+                // Change background based on position
+                if (navbar) {
+                    navbar.style.background = currentScroll === 0 ? "transparent" : "rgba(255, 255, 255, 1)";
+                    navbar.style.color = currentScroll === 0 ? "white" : "black";
+                    navbar.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
+                }
+
+                // Only affect drawer if it is visible (mobile)
+                if (drawer && getComputedStyle(drawer).display !== "none") {
+                    drawer.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
+                }
+
+                lastScrollTop = currentScroll;
             }
-            return event.deltaY < 0;
-        }
+
+            function checkScrollDirectionIsUp(event) {
+                if (event.type === "wheel") {
+                    return event.deltaY < 0;
+                } else if (event.type === "touchmove") {
+                    return window.pageYOffset < lastScrollTop;
+                }
+                return false;
+            }
+
+            // Apply event listeners for different devices
+            window.addEventListener('wheel', handleScroll, { passive: true });
+            window.addEventListener('touchmove', handleScroll, { passive: true });
+        });
     </script>
 @endpush
+
