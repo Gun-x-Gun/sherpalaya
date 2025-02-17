@@ -82,9 +82,17 @@ class WebsiteSettingSeeder extends Seeder
             ],
         ];
 
-        $landingPageSetting->animation_button_text = 'Explore Now';
+        $landingPageSetting->ask_for_animation_title = 'Immerse yourself';
+        $landingPageSetting->ask_for_animation_content = 'Do you want to immerse yourself in a short visual animation related to Sherpalaya?';
+        $landingPageSetting->ask_for_animation_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount2.png'))->id;
+        $landingPageSetting->ask_for_animation_positive_response = 'Ok';
+        $landingPageSetting->ask_for_animation_negative_response = 'Skip';
 
+
+        $landingPageSetting->animation_button_text = 'Explore Now';
         $landingPageSetting->animation_button_icon_id = CuratorSeederHelper::resolveFileData(public_path('/icons/scroll-down.svg'))->id;
+
+
         $landingPageSetting->animation_sound_id = CuratorSeederHelper::resolveFileData(public_path('/audio/background-music.mp3'))->id;
 
 

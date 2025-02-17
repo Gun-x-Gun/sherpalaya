@@ -5,7 +5,7 @@
         <img src="{{ $image }}" alt="overlay image" />
     </figure>
     <div class="card-body justify-center items-center">
-        <span class="icon-[mynaui--{{ $icon }}] size-28 text-white animated-icon"></span>
+        <img src="{{ $icon }}" class="size-28 animated-icon"/>
         <h2 class="card-title mb-2.5 text-white animated-title text-3xl">
             {{ $title }}
         </h2>

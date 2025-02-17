@@ -1,34 +1,66 @@
-<div id="home-page-animation">
-    @foreach ($animationSections as $animationSection)
-        @if ($loop->remaining != 0)
-            <x-animation.scroll-animation-section :id="$animationSection['id']" :title="$animationSection['title']" :image="$animationMediaUrls[$animationSection['image_id']]"
-                :content="$animationSection['content']" :hideAfterScroll="true" :waitBeforeHide="$animationSection['wait_time']" icon="mountain" />
-        @else
-            <x-animation.scroll-animation-section :id="$animationSection['id']" :title="$animationSection['title']" :image="$animationMediaUrls[$animationSection['image_id']]"
-                :content="$animationSection['content']" :hideAfterScroll="false" :waitBeforeHide="$animationSection['wait_time']" icon="mountain">
-                <div class="absolute bottom-20">
-                    <p class="text-xl text-white text-center w-full cursor-pointer hidden" id="scroll-down-wrapper">
-                        <span class="icon-[pajamas--scroll-down] size-8 text-white animated-scroll-down-icon"></span>
-                        Explore
-                        <span class="icon-[pajamas--scroll-down] size-8 text-white animated-scroll-down-icon"></span>
-                    </p>
-                </div>
-            </x-animation.scroll-animation-section>
-        @endif
-    @endforeach
+<div>
+    {{-- Ask for animations --}}
+    <div id="ask-for-animation" class="w-[100vw] h-[100vh] card image-full flex-col-reverse rounded-none">
+        <figure class="overflow-hidden rounded-none">
+            <img src="{{ $animationMediaUrls[$askForAnimation['image_id']] }}" alt="overlay image" />
+        </figure>
+        <div class="card-body justify-center items-center">
 
+            {{-- <span class="icon-[mynaui--{{ $icon }}] size-28 text-white animated-icon"></span> --}}
+            <h2 class="card-title mb-2.5 text-white animated-title text-3xl">
+                {{ $askForAnimation['title'] }}
+            </h2>
+            <p class="text-white animated-content">
+                {{ $askForAnimation['content'] }}
+            </p>
+            <div class="flex flex-row items-center justify-evenly w-full max-w-64 mt-10">
+                <button class="btn btn-outline btn-success min-w-20" id="ask-for-animation-positive-response">
+                    {{ $askForAnimation['positive_response'] }}
+                </button>
+                <button class="btn btn-soft btn-error" id="ask-for-animation-negative-response">
+                    {{ $askForAnimation['negative_response'] }}
+                </button>
+            </div>
+        </div>
+    </div>
+
+    {{-- Animation sections --}}
+    <div id="home-page-animation">
+        @foreach ($animationSections as $animationSection)
+            @if ($loop->remaining != 0)
+                <x-animation.scroll-animation-section :id="$animationSection['id']" :title="$animationSection['title']" :image="$animationMediaUrls[$animationSection['image_id']]"
+                    :content="$animationSection['content']" :hideAfterScroll="true" :waitBeforeHide="$animationSection['wait_time']" :icon="$animationMediaUrls[$animationSection['icon_id']]" />
+            @else
+                <x-animation.scroll-animation-section :id="$animationSection['id']" :title="$animationSection['title']" :image="$animationMediaUrls[$animationSection['image_id']]"
+                    :content="$animationSection['content']" :hideAfterScroll="false" :waitBeforeHide="$animationSection['wait_time']" :icon="$animationMediaUrls[$animationSection['icon_id']]">
+                    <div class="absolute bottom-20">
+                        <p class="text-xl text-white text-center w-full cursor-pointer hidden" id="scroll-down-wrapper">
+                            <img src="{{ $animationMediaUrls[$animationButton['icon_id']] }}" class="inline size-8 text-white animated-scroll-down-icon" alt="Scroll down">
+                            {{ $animationButton['text'] }}
+                            <img src="{{ $animationMediaUrls[$animationButton['icon_id']] }}" class="inline size-8 text-white animated-scroll-down-icon" alt="Scroll down">
+                        </p>
+                    </div>
+                </x-animation.scroll-animation-section>
+            @endif
+        @endforeach
+
+    </div>
 </div>
 
 @push('scripts')
     <script type="module">
         document.addEventListener("DOMContentLoaded", function() {
 
+            let askedForHomepageAnimation = sessionStorage.getItem("asked-for-homepage-animation");
             let showHomepageAnimation = sessionStorage.getItem("shown-homepage-animation");
 
             let scrollDownIcons = document.querySelectorAll(".animated-scroll-down-icon");
             let scrollDownWrapper = document.querySelector("#scroll-down-wrapper");
             let homePageAnimationSection = document.querySelector("#home-page-animation");
             let navbar = document.querySelector("#navbar");
+            let askForAnimationSection = document.querySelector("#ask-for-animation");
+            let positiveResponseButton = document.querySelector("#ask-for-animation-positive-response");
+            let negativeResponseButton = document.querySelector("#ask-for-animation-negative-response");
 
             let bodyElement = document.querySelector('body');
 
@@ -36,16 +68,40 @@
 
             let finalAnimationSection = document.querySelector(lastAnimationSectionId);
 
-
-
             navbar.classList.add('hidden');
             bodyElement.classList.add('overflow-y-hidden');
 
+            if (askedForHomepageAnimation) {
+                askForAnimationSection.remove();
+            }
 
             if (showHomepageAnimation) {
                 afterAnimationEnds();
             }
             scrollDownWrapper.classList.remove('hidden');
+
+            positiveResponseButton.addEventListener('click', (event) => {
+                askForHomepageAnimation(true);
+            });
+
+            negativeResponseButton.addEventListener('click', (event) => {
+                askForHomepageAnimation(false);
+            });
+
+            window.motion.inView(scrollDownWrapper, (element) => {
+                window.motion.animate(
+                    scrollDownIcons,
+                    {
+                        y: [-5, 5]
+                    },
+                    {
+                        duration: 0.6,
+                        repeat: Infinity,
+                        repeatType: "reverse",
+
+                    }
+                )
+            });
 
             window.motion.press(scrollDownWrapper, (element) => {
                 let finalAnimation = window.motion.animate(
@@ -57,17 +113,26 @@
                 );
 
                 finalAnimation.then(() => {
-                    sessionStorage.setItem("shown-homepage-animation", true);
                     afterAnimationEnds();
                 });
             });
 
             function afterAnimationEnds() {
+                sessionStorage.setItem("shown-homepage-animation", true);
                 homePageAnimationSection.remove();
                 navbar.classList.remove('hidden');
                 bodyElement.classList.remove('overflow-y-hidden');
 
                 window.AOS.init();
+            }
+
+            function askForHomepageAnimation(showAnimation = true) {
+                sessionStorage.setItem("asked-for-homepage-animation", true);
+                askForAnimationSection.remove();
+                if (!showAnimation) {
+                    afterAnimationEnds();
+                }
+
             }
         });
     </script>

@@ -15,6 +15,9 @@ class HomePageAnimation extends Component
     public Collection $animationSections;
     public array $animationMediaUrls = [];
 
+    public array $askForAnimation = [];
+    public array $animationButton = [];
+
     /**
      * Create a new component instance.
      */
@@ -28,12 +31,27 @@ class HomePageAnimation extends Component
             ->merge($this->animationSections->pluck('image_id'))
             ->merge($this->animationSections->pluck('icon_id'))
             ->push($landingPageSetting->animation_button_icon_id)
+            ->push($landingPageSetting->ask_for_animation_image_id)
+            ->push($landingPageSetting->animation_sound_id)
             ->toArray();
 
         $this->animationMediaUrls = Media::whereIn('id', $mediaIds)
             ->get()
             ->pluck('url', 'id')
             ->toArray();
+
+        $this->askForAnimation = [
+            'title' => $landingPageSetting->ask_for_animation_title,
+            'content' => $landingPageSetting->ask_for_animation_content,
+            'image_id' => $landingPageSetting->ask_for_animation_image_id,
+            'positive_response' => $landingPageSetting->ask_for_animation_positive_response,
+            'negative_response' => $landingPageSetting->ask_for_animation_negative_response,
+        ];
+
+        $this->animationButton = [
+            'icon_id' => $landingPageSetting->animation_button_icon_id,
+            'text' => $landingPageSetting->animation_button_text,
+        ];
     }
 
     /**

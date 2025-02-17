@@ -14,8 +14,6 @@ use Filament\Forms\Components\Hidden;
 use App\Filament\Fields\CuratorPicker;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Repeater;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\Split;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Support\HtmlString;
@@ -41,7 +39,9 @@ class ManageLangingPage extends SettingsPage
                     ->tabs([
                         Tabs\Tab::make('Animation')
                             ->schema([
-                                Placeholder::make('button_title')
+                                // General animation settings
+
+                                Placeholder::make('general_animation_settings_placeholder')
                                     ->dehydrated(false)
                                     ->hiddenLabel()
                                     ->content(
@@ -52,19 +52,41 @@ class ManageLangingPage extends SettingsPage
                                             </h1>
                                         ')
                                     ),
+                                Grid::make(2)
+                                    ->schema([
+                                        CuratorPicker::make('ask_for_animation_image_id')
+                                            ->required(),
+                                        Grid::make(1)
+                                            ->columnSpan(1)
+                                            ->schema([
+                                                TextInput::make('ask_for_animation_title')
+                                                    ->required(),
+                                                Textarea::make('ask_for_animation_content')
+                                                    ->required(),
+                                                Grid::make(2)
+                                                    ->columnSpan(1)
+                                                    ->schema([
+                                                        TextInput::make('ask_for_animation_positive_response')
+                                                            ->required(),
+                                                        TextInput::make('ask_for_animation_negative_response')
+                                                            ->required(),
+                                                    ])
+                                            ]),
+                                    ]),
 
-                                Split::make([
-                                    CuratorPicker::make('animation_button_icon_id')
-                                        ->required(),
-
-                                    CuratorPicker::make('animation_sound_id')
-                                        ->required(),
-                                ]),
+                                Grid::make(2)
+                                    ->schema([
+                                        CuratorPicker::make('animation_button_icon_id')
+                                            ->required(),
+                                        CuratorPicker::make('animation_sound_id')
+                                            ->required(),
+                                    ]),
                                 TextInput::make('animation_button_text')
                                     ->required(),
 
+                                // Animation sections
 
-                                Placeholder::make('button_title')
+                                Placeholder::make('animation_sections_placeholder')
                                     ->dehydrated(false)
                                     ->hiddenLabel()
                                     ->content(
@@ -81,12 +103,13 @@ class ManageLangingPage extends SettingsPage
                                     ->schema([
                                         Hidden::make('id')
                                             ->default(fake()->regexify('[A-Za-z]{10}')),
-                                        Split::make([
-                                            CuratorPicker::make('image_id')
-                                                ->required(),
-                                            CuratorPicker::make('icon_id')
-                                                ->required(),
-                                        ]),
+                                        Grid::make(2)
+                                            ->schema([
+                                                CuratorPicker::make('image_id')
+                                                    ->required(),
+                                                CuratorPicker::make('icon_id')
+                                                    ->required(),
+                                            ]),
                                         TextInput::make('title')
                                             ->required()
                                             ->columnSpanFull(),

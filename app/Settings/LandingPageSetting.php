@@ -18,8 +18,16 @@ class LandingPageSetting extends Settings
      */
     // Animation
     public ?array $animation_sections;
+
+    public ?string $ask_for_animation_title;
+    public ?string $ask_for_animation_content;
+    public ?string $ask_for_animation_image_id;
+    public ?string $ask_for_animation_positive_response;
+    public ?string $ask_for_animation_negative_response;
+
     public ?string $animation_button_icon_id;
     public ?string $animation_button_text;
+
     public ?string $animation_sound_id;
 
     // Activity
