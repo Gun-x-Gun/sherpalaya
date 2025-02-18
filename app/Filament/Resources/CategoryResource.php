@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Enums\CategoryTypes;
 use App\Filament\Resources\CategoryResource\Pages;
 use App\Filament\Resources\CategoryResource\RelationManagers;
+use App\Filament\Resources\CategoryResource\Widgets\CategoryTable;
 use App\Helpers\FilamentEnumFieldHelper;
 use App\Models\Category;
 use App\Traits\Filament\TranslatableResource;
@@ -16,7 +17,9 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
+use Filament\Tables\Columns\Layout\Split;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -41,6 +44,7 @@ class CategoryResource extends Resource
         return $form
             ->schema([
                 Section::make()
+                    ->hiddenOn('view')
                     ->schema([
                         TextInput::make('name')
                             ->required(),
@@ -54,15 +58,24 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                FilamentEnumFieldHelper::makeTextColumn('type', CategoryTypes::class),
+                Split::make([
+                    TextColumn::make('name')
+                    ->size(TextColumn\TextColumnSize::Large)
+                    ->weight(FontWeight::Bold),
+                ]),
+                // FilamentEnumFieldHelper::makeTextColumn('type', CategoryTypes::class),
+            ])
+            ->contentGrid([
+                'sm' =>2,
+                'md' => 2,
+                'lg' =>3,
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\ViewAction::make(),
+                // Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -85,6 +98,12 @@ class CategoryResource extends Resource
             'create' => Pages\CreateCategory::route('/create'),
             'view' => Pages\ViewCategory::route('/{record}'),
             'edit' => Pages\EditCategory::route('/{record}/edit'),
+        ];
+    }
+    public static function getWidgets(): array
+    {
+        return [
+            CategoryTable::class,
         ];
     }
 }
