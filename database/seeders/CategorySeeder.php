@@ -82,13 +82,13 @@ class CategorySeeder extends Seeder
             ],
             'type' => CategoryTypes::TREK
         ]);
-        Category::create([
-            'name' => [
-                'en' => 'Kangchanjunga',
-                'fr' => 'Kangchanjunga (fr)',
-            ],
-            'type' => CategoryTypes::TREK
-        ]);
+        // Category::create([
+        //     'name' => [
+        //         'en' => 'Kangchanjunga',
+        //         'fr' => 'Kangchanjunga (fr)',
+        //     ],
+        //     'type' => CategoryTypes::TREK
+        // ]);
         Category::create([
             'name' => [
                 'en' => 'Other',
