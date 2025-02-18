@@ -110,7 +110,7 @@
                                 {!! Str::words($featuredTour->description, 20) !!}
                             </div>
                             <a href="{{ route('show_tour', $featuredTour->id) }}">
-                                <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">
+                                <button class="btn btn-primary btn-sm pl-2 mt-6 text-sm hover:btn-warning">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
                                     Explore
                                 </button>

@@ -34,26 +34,34 @@
         <x-curator-glider class="h-[100vh] w-full object-cover brightness-50" :media="$image" :fallback="asset('/photos/banner.jpg')"
             loading="lazy" />
     </figure>
-    <div class="card-body absolute inset-0 flex items-center justify-start" data-aos="fade-down" data-aos-duration="1500">
-        <div class="absolute bottom-1/2 left-4 md:left-20  lg:left-32 transform translate-y-1/2 overflow-hidden ">
-            {{-- <h5
-                class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-oswald  font-extrabold tracking-tighter">
+    <div class="card-body absolute inset-0 flex items-center justify-start leading-[1.1] md:leading-snug"
+        data-aos="fade-down" data-aos-duration="1500">
+        <div class="absolute bottom-2/4 left-4 lg:left-16   2xl:left-32 transform translate-y-1/2 ">
+            <h5
+                class="card-title mb-2 text-blue-50 text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
                 Explore
-            </h5> --}}
+            </h5>
             <h2
-                class="card-title mb-2.5 text-blue-50 text-4xl md:text-5xl uppercase font-oswald  font-normal tracking-wide">
+                class="card-title mb-2 text-warning  text-6xl  uppercase font-card font-semibold tracking-tight text-wrap md:w-[90%] leading-[1.3]  overflow-hidden opacity-75">
                 {{ $title }}
             </h2>
             <h5
-                class="card-title mb-2.5 text-warning text-2xl md:text-4xl font-oswald  uppercase  font-normal tracking-wider">
+                class="card-title  mb-8 text-blue-50 text-2xl  font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
                 With Sherpalaya
             </h5>
+
             <a href="{{ $url }}">
-                <button class="btn btn-primary btn-md mt-4 tracking-tight text-base hover:btn-warning pl-2">
-                    <span class="icon-[ci--chevron-right] size-5"></span>
-                    Explore
+                <button
+                    class="btn btn-primary btn-md gap-2 text-base hover:btn-warning tracking-tighter pl-2 opacity-80">
+                    <span class="icon-[mdi--chevron-double-right] size-5 "></span>
+                    View
                 </button>
             </a>
+            {{-- <h5 class="card-title flex gap-2 mb-2  text-lg/7 items-center  text-black capitalize font-medium font-body">
+                <span
+                    class="{{ $icon }} accordion-item-active:rotate-90 size-6 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
+                <p> {{ $detail->type->getLabel() }}</p>
+            </h5> --}}
         </div>
     </div>
 </div>

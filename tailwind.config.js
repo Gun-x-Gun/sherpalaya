@@ -24,6 +24,7 @@ export default {
       fontFamily: {
         oswald: ["Oswald"],
         body: ["Roboto"],
+        card: ["Public Sans"],
       },
     },
   },
