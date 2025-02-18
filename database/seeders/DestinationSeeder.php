@@ -570,7 +570,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Kanchenjunga Base Camp',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'The base camp for Kanchenjunga expeditions, offering stunning views of the mountain and surrounding peaks.',
                     'fr' => 'Le camp de base pour les expéditions du Kanchenjunga, offrant une vue imprenable sur la montagne et les sommets environnants.'
@@ -582,7 +582,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Khewang',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A small village on the Kanchenjunga Base Camp trek, known for its traditional Limbu culture and beautiful scenery.',
                     'fr' => 'Un petit village sur le trek du camp de base du Kanchenjunga, connu pour sa culture Limbu traditionnelle et ses beaux paysages.'
@@ -594,7 +594,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Yamphudin',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A picturesque village with a monastery, offering a peaceful rest stop on the trek.',
                     'fr' => 'Un village pittoresque avec un monastère, offrant une halte paisible sur le trek.'
@@ -606,7 +606,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Tortong',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A high-altitude campsite with panoramic views of the Himalayas.',
                     'fr' => 'Un camping en haute altitude avec une vue panoramique sur l\'Himalaya.'
@@ -618,7 +618,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Tseram',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A village with a unique cultural heritage and stunning views of Kanchenjunga.',
                     'fr' => 'Un village avec un patrimoine culturel unique et une vue imprenable sur le Kanchenjunga.'
@@ -630,7 +630,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Ramche',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A high-altitude grazing area with breathtaking views of the surrounding mountains.',
                     'fr' => 'Une zone de pâturage en haute altitude avec une vue imprenable sur les montagnes environnantes.'
@@ -642,7 +642,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Glacier Camp',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A campsite near the Kanchenjunga Glacier, offering a close-up view of the icy landscape.',
                     'fr' => 'Un camping près du glacier du Kanchenjunga, offrant une vue rapprochée du paysage glaciaire.'
@@ -654,7 +654,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Simbuwa',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A small village with a rich cultural heritage and stunning views of the Himalayas.',
                     'fr' => 'Un petit village avec un riche patrimoine culturel et une vue imprenable sur l\'Himalaya.'
@@ -666,7 +666,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Labrang',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A small village with a monastery, offering a peaceful retreat and panoramic views.',
                     'fr' => 'Un petit village avec un monastère, offrant une retraite paisible et une vue panoramique.'
@@ -678,7 +678,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Thukla',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'The last village before the base camp, offering stunning views of the surrounding peaks.',
                     'fr' => 'Le dernier village avant le camp de base, offrant une vue imprenable sur les sommets environnants.'
@@ -690,7 +690,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Lhonak',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A small village near the base camp, known for its friendly locals and unique culture.',
                     'fr' => 'Un petit village près du camp de base, connu pour ses habitants sympathiques et sa culture unique.'
@@ -702,7 +702,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Oktang',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A small village with a beautiful monastery and stunning views of the Himalayas.',
                     'fr' => 'Un petit village avec un beau monastère et une vue imprenable sur l\'Himalaya.'
@@ -714,7 +714,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Thangpe',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A small village with a view of the Kangchenjunga massif and the surrounding peaks.',
                     'fr' => 'Un petit village avec vue sur le massif du Kangchenjunga et les sommets environnants.'
@@ -726,7 +726,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Sherpa Land',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A small region inhabited by the Sherpa people, known for their hospitality and mountaineering skills.',
                     'fr' => 'Une petite région habitée par le peuple Sherpa, connue pour son hospitalité et ses compétences en alpinisme.'
@@ -738,7 +738,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Pangpema',
-                'region_id' => 5,
+                'region_id' => 7,
                 'description' => [
                     'en' => 'A high-altitude pass with stunning views of the Himalayas, often used as an acclimatization hike.',
                     'fr' => 'Un col de haute altitude avec une vue imprenable sur l\'Himalaya, souvent utilisé comme randonnée d\'acclimatation.'
@@ -750,7 +750,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Skardu',
-                'region_id' => 6,
+                'region_id' => 5,
                 'description' => [
                     'en' => 'A major town and gateway to the K2 region, known for its bustling bazaar and stunning views of the surrounding mountains.',
                     'fr' => 'Une ville importante et porte d\'entrée de la région du K2, connue pour son bazar animé et ses vues imprenables sur les montagnes environnantes.',
@@ -762,7 +762,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Askole',
-                'region_id' => 6,
+                'region_id' => 5,
                 'description' => [
                     'en' => 'The last village before entering the K2 trek, offering a glimpse into local Balti culture and serving as the starting point for many expeditions.',
                     'fr' => 'Le dernier village avant d\'entrer dans le trek du K2, offrant un aperçu de la culture Balti locale et servant de point de départ à de nombreuses expéditions.',
@@ -774,7 +774,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Concordia',
-                'region_id' => 6,
+                'region_id' => 5,
                 'description' => [
                     'en' => 'A stunning confluence of glaciers, offering breathtaking panoramic views of K2 and several other high peaks.',
                     'fr' => 'Une confluence de glaciers époustouflante, offrant des vues panoramiques à couper le souffle sur le K2 et plusieurs autres hauts sommets.',
@@ -786,7 +786,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'K2 Base Camp',
-                'region_id' => 6,
+                'region_id' => 5,
                 'description' => [
                     'en' => 'The challenging and iconic base camp for K2 expeditions, a place of anticipation, preparation, and shared experiences among climbers.',
                     'fr' => 'Le camp de base difficile et emblématique des expéditions du K2, un lieu d\'anticipation, de préparation et d\'expériences partagées entre les grimpeurs.',
@@ -798,7 +798,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Bottleneck',
-                'region_id' => 6,
+                'region_id' => 5,
                 'description' => [
                     'en' => 'A technically challenging and dangerous section of the K2 climb, a narrow couloir just below the summit.',
                     'fr' => 'Une section techniquement difficile et dangereuse de l\'ascension du K2, un couloir étroit juste en dessous du sommet.',
@@ -810,7 +810,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'The Shoulder',
-                'region_id' => 6,
+                'region_id' => 5,
                 'description' => [
                     'en' => 'A high-altitude plateau on K2, often used as a staging point for summit attempts.',
                     'fr' => 'Un plateau de haute altitude sur le K2, souvent utilisé comme point de départ pour les tentatives de sommet.',
@@ -822,7 +822,7 @@ class DestinationSeeder extends Seeder
             ],
             [
                 'name' => 'Summit of K2',
-                'region_id' => 6,
+                'region_id' => 5,
                 'description' => [
                     'en' => 'The ultimate goal, the summit of K2, offering unparalleled views and a profound sense of accomplishment.',
                     'fr' => 'Le but ultime, le sommet du K2, offrant des vues inégalées et un profond sentiment d\'accomplissement.',
@@ -832,6 +832,186 @@ class DestinationSeeder extends Seeder
                     'lng' => 76.4900  // Approximate longitude
                 ]
             ],
+            [
+                'name' => 'Mount Everest Base Camp (North Side)',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'The northern base camp for Mount Everest expeditions, offering a unique perspective of the world\'s highest peak.',
+                    'fr' => 'Le camp de base nord pour les expéditions du mont Everest, offrant une perspective unique du plus haut sommet du monde.'
+                ],
+                'location' => [
+                    'lat' => 28.1400,
+                    'lng' => 86.8500
+                ]
+            ],
+            [
+                'name' => 'Rongbuk Monastery',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'The highest monastery in the world, serving as a spiritual and logistical hub for Everest expeditions.',
+                    'fr' => 'Le plus haut monastère du monde, servant de centre spirituel et logistique pour les expéditions de l\'Everest.'
+                ],
+                'location' => [
+                    'lat' => 28.2000,
+                    'lng' => 86.8000
+                ]
+            ],
+            [
+                'name' => 'Advanced Base Camp (ABC) - Everest',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'The staging point for summit attempts on Everest, located at an altitude of 6,500 meters.',
+                    'fr' => 'Le point de départ pour les tentatives de sommet sur l\'Everest, situé à une altitude de 6 500 mètres.'
+                ],
+                'location' => [
+                    'lat' => 28.1000,
+                    'lng' => 86.9000
+                ]
+            ],
+            [
+                'name' => 'Lhakpa La Pass',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A high-altitude pass on the north side of Everest, offering stunning views of the surrounding peaks.',
+                    'fr' => 'Un col de haute altitude sur le côté nord de l\'Everest, offrant des vues imprenables sur les sommets environnants.'
+                ],
+                'location' => [
+                    'lat' => 28.0500,
+                    'lng' => 86.9500
+                ]
+            ],
+            [
+                'name' => 'Changtse',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A subsidiary peak of Everest, often used for acclimatization before summit attempts.',
+                    'fr' => 'Un sommet subsidiaire de l\'Everest, souvent utilisé pour l\'acclimatation avant les tentatives de sommet.'
+                ],
+                'location' => [
+                    'lat' => 28.0833,
+                    'lng' => 86.9167
+                ]
+            ],
+            [
+                'name' => 'Tingri',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A small town serving as the gateway to Everest expeditions, with stunning views of the Himalayas.',
+                    'fr' => 'Une petite ville servant de porte d\'entrée aux expéditions de l\'Everest, avec des vues imprenables sur l\'Himalaya.'
+                ],
+                'location' => [
+                    'lat' => 28.6500,
+                    'lng' => 86.2000
+                ]
+            ],
+            [
+                'name' => 'Shishapangma Base Camp',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'The base camp for Shishapangma, the 14th highest peak in the world, located entirely within Tibet.',
+                    'fr' => 'Le camp de base du Shishapangma, le 14e plus haut sommet du monde, situé entièrement au Tibet.'
+                ],
+                'location' => [
+                    'lat' => 28.3500,
+                    'lng' => 85.7833
+                ]
+            ],
+            [
+                'name' => 'Cho Oyu Base Camp',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'The base camp for Cho Oyu, the sixth highest mountain in the world, known for its relatively accessible climbing routes.',
+                    'fr' => 'Le camp de base du Cho Oyu, le sixième plus haut sommet du monde, connu pour ses voies d\'escalade relativement accessibles.'
+                ],
+                'location' => [
+                    'lat' => 28.1000,
+                    'lng' => 86.6500
+                ]
+            ],
+            [
+                'name' => 'Nangpa La Pass',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A historic trade route and high-altitude pass used by Sherpas and climbers to access the Everest region.',
+                    'fr' => 'Une ancienne route commerciale et un col de haute altitude utilisé par les Sherpas et les alpinistes pour accéder à la région de l\'Everest.'
+                ],
+                'location' => [
+                    'lat' => 27.9833,
+                    'lng' => 86.6000
+                ]
+            ],
+            [
+                'name' => 'Gyirong Valley',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A lush valley near the Nepal-Tibet border, known for its stunning landscapes and biodiversity.',
+                    'fr' => 'Une vallée luxuriante près de la frontière Népal-Tibet, connue pour ses paysages magnifiques et sa biodiversité.'
+                ],
+                'location' => [
+                    'lat' => 28.4000,
+                    'lng' => 85.3667
+                ]
+            ],
+            [
+                'name' => 'Mount Kailash',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A sacred mountain in Tibetan Buddhism, revered as the center of the universe and a destination for spiritual pilgrimages.',
+                    'fr' => 'Une montagne sacrée du bouddhisme tibétain, vénérée comme le centre de l\'univers et une destination pour les pèlerinages spirituels.'
+                ],
+                'location' => [
+                    'lat' => 31.0667,
+                    'lng' => 81.3000
+                ]
+            ],
+            [
+                'name' => 'Lake Manasarovar',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A sacred freshwater lake near Mount Kailash, revered in Hinduism, Buddhism, and Jainism.',
+                    'fr' => 'Un lac d\'eau douce sacré près du mont Kailash, vénéré dans l\'hindouisme, le bouddhisme et le jaïnisme.'
+                ],
+                'location' => [
+                    'lat' => 30.6500,
+                    'lng' => 81.4500
+                ]
+            ],
+            [
+                'name' => 'Gurla Mandhata',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A massive peak near Mount Kailash, offering challenging climbing routes and stunning views.',
+                    'fr' => 'Un sommet massif près du mont Kailash, offrant des voies d\'escalade difficiles et des vues magnifiques.'
+                ],
+                'location' => [
+                    'lat' => 30.4333,
+                    'lng' => 81.3000
+                ]
+            ],
+            [
+                'name' => 'Sakya Monastery',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A historic monastery in Tibet, known for its unique architecture and significance in Tibetan Buddhism.',
+                    'fr' => 'Un monastère historique au Tibet, connu pour son architecture unique et son importance dans le bouddhisme tibétain.'
+                ],
+                'location' => [
+                    'lat' => 28.9167,
+                    'lng' => 88.0500
+                ]
+            ],
+            [
+                'name' => 'Yamdrok Lake',
+                'region_id' => 6,
+                'description' => [
+                    'en' => 'A stunning turquoise lake in Tibet, considered one of the most sacred lakes in the region.',
+                    'fr' => 'Un magnifique lac turquoise au Tibet, considéré comme l\'un des lacs les plus sacrés de la région.'
+                ],
+                'location' => [
+                    'lat' => 28.9333,
+                    'lng' => 90.4167
+                ]
+            ]
         ];
 
 

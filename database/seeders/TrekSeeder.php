@@ -1754,7 +1754,7 @@ class TrekSeeder extends Seeder
             ],
             'starting_altitude' => 1400, // Not provided
             'highest_altitude' => 5140, // North Base Camp altitude
-            'region_id' => Region::find(5)->id, // Kanchenjunga Region ID - ALREADY CORRECT
+            'region_id' => Region::find(7)->id, // Kanchenjunga Region ID - ALREADY CORRECT
             'category_id' => Category::find(10)->id,
             'trek_difficulty' => TrekDifficulty::CHALLENGING, // Or appropriate difficulty - VERIFY THIS
             'costs_include' => [
@@ -1856,7 +1856,7 @@ class TrekSeeder extends Seeder
             'is_featured' => false, // Set as needed
         ]);
         $kanchenjunga_circuit_trek_data->destinations()->sync(
-            Destination::where('region_id', 5)
+            Destination::where('region_id', 7)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()
@@ -1902,8 +1902,8 @@ class TrekSeeder extends Seeder
             ],
             'starting_altitude' => 1400, // Not provided
             'highest_altitude' => 4780, // Not provided (but under 4000m)
-            'region_id' => Region::find(6)->id, // Upper Mustang Region ID - ALREADY CORRECT
-            'category_id' => Category::find(11)->id,
+            'region_id' => Region::find(7)->id, // Upper Mustang Region ID - ALREADY CORRECT
+            'category_id' => Category::find(10)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Or appropriate difficulty - VERIFY THIS
             'costs_include' => [
                 [
@@ -2209,7 +2209,7 @@ class TrekSeeder extends Seeder
             ], // Add if known
             'starting_altitude' => 1400, // Add if known
             'highest_altitude' => 4000, // Add if known
-            'region_id' => Region::find(4)->id, // Manaslu Region ID - ALREADY CORRECT#
+            'region_id' => Region::find(7)->id, // Manaslu Region ID - ALREADY CORRECT#
             'category_id' => Category::find(9)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
             'costs_include' => [
@@ -3105,8 +3105,8 @@ class TrekSeeder extends Seeder
             ],
             'starting_altitude' => 1400, // Kathmandu altitude - verify
             'highest_altitude' => 3500, // Add if known
-            'region_id' => 6, // Add if known. It is likely a combination of regions.
-            'category_id' => Category::find(11)->id,
+            'region_id' => 7, // Add if known. It is likely a combination of regions.
+            'category_id' => Category::find(10)->id,
             'trek_difficulty' => TrekDifficulty::MODERATE, // Verify
             'costs_include' => [
                 [

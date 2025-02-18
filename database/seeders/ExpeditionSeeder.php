@@ -189,7 +189,7 @@ class ExpeditionSeeder extends Seeder
                 'fr' => 'L\'expédition au Mont Everest est une expérience d\'alpinisme unique qui vous permet de vous tenir au point le plus haut du monde. ... (French translation of the description)', // Example French translation
             ],
             'duration' => '58',
-            'region_id' => 7, // Tibet Region
+            'region_id' => 6, // Tibet Region
             'category_id' => 1, // Expedition Category
             'grade' => '5', // Assuming "Excellent" translates to a grade of 5, adjust as needed
             'starting_point' => 'Lhasa/Kathmandu', // You'll need to specify the starting point more precisely
@@ -345,7 +345,7 @@ class ExpeditionSeeder extends Seeder
         ]);
 
         $everest_expedition_north_data->destinations()->sync(
-            Destination::where('region_id', 1)
+            Destination::where('region_id', 6)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()
@@ -400,7 +400,7 @@ class ExpeditionSeeder extends Seeder
                 'fr' => 'Le K2, populairement connu sous le nom de "Montagne Sauvage" à 8 611 m (28 251 pi) au-dessus du niveau de la mer, est la deuxième plus haute montagne de la Terre, après le Mont Everest à 8 848,86 m (29 032 pi). ... (French translation)', // Example French translation
             ],
             'duration' => '52',
-            'region_id' => 6, // Other Region (K2 is not in the typical trekking regions of Nepal)
+            'region_id' => 5, // Other Region (K2 is not in the typical trekking regions of Nepal)
             'category_id' => 1, // Expedition Category
             'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
             'starting_point' => 'Islamabad', // More specific starting point
@@ -478,7 +478,7 @@ class ExpeditionSeeder extends Seeder
         ]);
 
         $k2_expedition_data->destinations()->sync(
-            Destination::where('region_id', 6)
+            Destination::where('region_id', 5)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()
@@ -524,7 +524,7 @@ class ExpeditionSeeder extends Seeder
                 'fr' => 'S’élevant à 8 568 m au-dessus du niveau de la mer, le Kanchenjunga est bien plus que la troisième plus haute montagne du monde. Ses cinq sommets sont enveloppés de mythes, considérés comme si sacrés que les premiers hommes à l’escalader, une expédition britannique de 1955, se sont arrêtés juste avant le sommet réel par respect pour les divinités de la montagne. Aujourd’hui, il représente l’un des plus grands défis parmi les 8000 mètres et un must pour tout alpiniste sérieux. Un défi pour ceux qui ont déjà escaladé l’Everest, le Kanchenjunga, qui se traduit par « Les Cinq Trésors de Neige », compte pas moins de cinq sommets, dont quatre dépassent les 8 450 m. Situé à la frontière entre le Népal et l’État du Sikkim en Inde, il est non seulement l’une des montagnes les plus hautes du monde, mais aussi l’une des plus dangereuses. Très peu de touristes s’aventurent dans cette région de l’Himalaya, et encore moins tentent l’ascension - on compte généralement seulement environ 25 sommets réussis par saison. Cet isolement est l’un des principaux attraits du Kanchenjunga pour les alpinistes expérimentés, mais il ajoute également un élément de risque. Avec un pourcentage élevé d’avalanches et de dangers météorologiques, le choix de votre équipe d’escalade est peut-être plus crucial ici que nulle part ailleurs. L’équipe de guides d’Elite Exped - soigneusement sélectionnée par nos leaders Nimsdai et Mingma David Sherpa - a accumulé de nombreuses ascensions du Kanchenjunga. Plusieurs de nos membres, y compris Nim et Mingma David, ont également participé à des opérations de sauvetage de grande envergure au-dessus de 8 000 m. En résumé, vous ne pourriez être entre de meilleures mains pour tenter cette montagne si redoutable.',
             ],
             'duration' => '51',
-            'region_id' => Region::find(5)->id,
+            'region_id' => Region::find(7)->id,
             'category_id' => Category::find(1)->id,
             'grade' => '9',
             'starting_point' => 'Kathmandu',
@@ -572,7 +572,7 @@ class ExpeditionSeeder extends Seeder
         ]);
 
         $kanchenjunga_expedition_data->destinations()->sync(
-            Destination::where('region_id', 5)
+            Destination::where('region_id', 7)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()
@@ -1252,7 +1252,7 @@ class ExpeditionSeeder extends Seeder
                 'fr' => 'Le Nanga Parbat, le neuvième sommet de 8000 m au monde, est célèbre dans le monde de l\'escalade pour être une montagne difficile, technique et très enrichissante. ... (French translation)', // Example French translation
             ],
             'duration' => '50',
-            'region_id' => 6, // Or a more specific region ID if you have one
+            'region_id' => 5, // Or a more specific region ID if you have one
             'category_id' => 1, // Expedition Category
             'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
             'starting_point' => 'Kathmandu', // Or Islamabad, depending on the itinerary
@@ -1328,7 +1328,7 @@ class ExpeditionSeeder extends Seeder
         ]);
 
         $nanga_parbat_expedition_data->destinations()->sync(
-            Destination::where('region_id', 6)
+            Destination::where('region_id', 5)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()
@@ -1492,7 +1492,7 @@ class ExpeditionSeeder extends Seeder
                 'fr' => 'Le Gasherbrum I, également connu sous le nom de K5 et de Hidden Peak, est la 11ème plus haute montagne du monde, culminant à 8 080 m au-dessus du niveau de la mer. ... (French translation)', // Example French translation
             ],
             'duration' => '50',
-            'region_id' => 6, // Or a more specific region ID if you have one
+            'region_id' => 5, // Or a more specific region ID if you have one
             'category_id' => 1, // Expedition Category
             'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
             'starting_point' => 'Islamabad', // Corrected starting point
@@ -1572,7 +1572,7 @@ class ExpeditionSeeder extends Seeder
         ]);
 
         $gasherbrum_i_expedition_data->destinations()->sync(
-            Destination::where('region_id', 6)
+            Destination::where('region_id', 5)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()
@@ -1616,7 +1616,7 @@ class ExpeditionSeeder extends Seeder
                 'fr' => 'Le Broad Peak, considéré comme le sommet de 8000 m le plus facile à gravir à 8 048 m (26 404 pi), est situé dans la chaîne du Karakoram, dans le nord-est du Pakistan. ... (French translation)', // Example French translation
             ],
             'duration' => '52',
-            'region_id' => 6, // Or a more specific region ID if you have one
+            'region_id' => 5, // Or a more specific region ID if you have one
             'category_id' => 1, // Expedition Category
             'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
             'starting_point' => 'Islamabad',
@@ -1696,7 +1696,7 @@ class ExpeditionSeeder extends Seeder
         ]);
 
         $broad_peak_expedition_data->destinations()->sync(
-            Destination::where('region_id', 6)
+            Destination::where('region_id', 5)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()
@@ -1740,7 +1740,7 @@ class ExpeditionSeeder extends Seeder
                 'fr' => 'Le Gasherbrum II (également connu sous le nom de K4) est la 13ème plus haute montagne du monde, avec une altitude de 8 035 mètres (26 362 pieds) au-dessus du niveau de la mer. ... (French translation)', // Example French translation
             ],
             'duration' => '50',
-            'region_id' => 6, // Or a more specific region ID if you have one
+            'region_id' => 5, // Or a more specific region ID if you have one
             'category_id' => 1, // Expedition Category
             'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
             'starting_point' => 'Islamabad',
@@ -1820,7 +1820,7 @@ class ExpeditionSeeder extends Seeder
         ]);
 
         $gasherbrum_ii_expedition_data->destinations()->sync(
-            Destination::where('region_id', 6)
+            Destination::where('region_id', 5)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()
@@ -1865,7 +1865,7 @@ class ExpeditionSeeder extends Seeder
                 'fr' => 'Le Shisha Pangma, à 8 027 m (26 335 pi) au-dessus du niveau de la mer, connu au Tibet sous le nom de « Dieu des prairies », est le plus bas en altitude parmi les quatorze sommets de 8 000 m. ... (French translation)', // Example French translation
             ],
             'duration' => '33',
-            'region_id' => 7, // Or a more specific region ID if you have one
+            'region_id' => 6, // Or a more specific region ID if you have one
             'category_id' => 1, // Expedition Category
             'grade' => '5', // Assuming "Excellent" maps to 5, adjust as needed.
             'starting_point' => 'Kathmandu',
@@ -1944,7 +1944,7 @@ class ExpeditionSeeder extends Seeder
             'is_featured' => false, // Or false, as appropriate
         ]);
         $shisha_pangma_expedition_data->destinations()->sync(
-            Destination::where('region_id', 1)
+            Destination::where('region_id', 6)
                 ->inRandomOrder()
                 ->limit(5)
                 ->get()
