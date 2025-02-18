@@ -26,7 +26,7 @@ class ListCategories extends ListRecords
     public function getTabs(): array
 {
     return [
-        'all' => Tab::make('All'),
+        // 'all' => Tab::make('All'),
         'expedition' => Tab::make('Expedition')
             ->modifyQueryUsing(fn (Builder $query) => $query->where('type', CategoryTypes::EXPEDITION)),
         'trek' => Tab::make('Trek')
