@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\CategoryTypes;
 use App\Enums\ItineraryTypes;
 use App\Enums\TourType;
 use App\Enums\TrekDifficulty;
@@ -65,7 +66,11 @@ class TourResource extends Resource
                                             ->hiddenOn('view')
                                             ->required(),
                                         Select::make('category_id')
-                                            ->relationship('category','name')
+                                        ->relationship(
+                                            'category',
+                                            'name',
+                                            modifyQueryUsing: fn ($query) => $query->where('type', CategoryTypes::TOUR) 
+                                            )
                                             ->native(false)
                                             ->columnSpan(1),
                                         RichEditor::make('description')

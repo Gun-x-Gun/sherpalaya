@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\CategoryTypes;
 use App\Enums\ItineraryTypes;
 use App\Enums\TrekDifficulty;
 use App\Filament\Fields\CuratorPicker;
@@ -74,7 +75,11 @@ class TrekResource extends Resource
                                                 ->native(false)
                                                 ->columnSpan(3),
                                             Select::make('category_id')
-                                                ->relationship('category','name')
+                                                ->relationship(
+                                                    'category',
+                                                    'name',
+                                                    modifyQueryUsing: fn ($query) => $query->where('type', CategoryTypes::TREK)
+                                                    )
                                                 ->native(false)
                                                 ->columnSpan(3),
                                             RichEditor::make('description')
@@ -299,6 +304,11 @@ class TrekResource extends Resource
                         TextColumn::make('category.name')
                             ->badge()
                             ->icon('heroicon-m-bolt')
+                            ->size(TextColumn\TextColumnSize::Small)
+                            ->prefix(''),
+                        TextColumn::make('region.name')
+                            ->badge()
+                            ->icon('heroicon-m-map')
                             ->size(TextColumn\TextColumnSize::Small)
                             ->prefix(''),
                     ]),
