@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Fields\CuratorPicker;
 use App\Filament\Resources\ReviewResource\Pages;
 use App\Filament\Resources\ReviewResource\RelationManagers;
 use App\Models\Review;
@@ -43,39 +44,54 @@ class ReviewResource extends Resource
         return $form
             ->schema([
                 Section::make()
-                    ->columns(5)
+                    ->columns(2)
                     ->schema([
-                        TextInput::make('name')
-                            ->columnSpan(4)
-                            ->required(),
-                        Toggle::make('display_in_home_page')
-                            ->inline(false)
-                                ->default(false)
-                                ->columnSpan(1),
-                        Textarea::make('title')
-                            ->rows(1)
-                            ->columnSpanFull()
-                            ->required(),
-                        RichEditor::make('description')
-                            ->required()
-                            ->columnSpanFull()
-                            ->toolbarButtons([
-                                // 'attachFiles',
-                                'blockquote',
-                                'bold',
-                                'bulletList',
-                                // 'codeBlock',
-                                'h2',
-                                'h3',
-                                'italic',
-                                'link',
-                                'orderedList',
-                                'redo',
-                                // 'strike',
-                                'underline',
-                                'undo',
+                        Section::make()
+                            ->columns(5)
+                            ->columnSpan(1)
+                            ->schema([
+                                TextInput::make('name')
+                                    ->columnSpan(3)
+                                    ->required(),
+                                Toggle::make('display_in_home_page')
+                                    ->inline(false)
+                                    ->default(false)
+                                    ->columnSpan(2),
+                                Textarea::make('title')
+                                    ->rows(1)
+                                    ->columnSpanFull()
+                                    ->required(),
+                                RichEditor::make('description')
+                                    ->required()
+                                    ->columnSpanFull()
+                                    ->toolbarButtons([
+                                        // 'attachFiles',
+                                        'blockquote',
+                                        'bold',
+                                        'bulletList',
+                                        // 'codeBlock',
+                                        'h2',
+                                        'h3',
+                                        'italic',
+                                        'link',
+                                        'orderedList',
+                                        'redo',
+                                        // 'strike',
+                                        'underline',
+                                        'undo',
+                                    ]),
+                            ]),
+                        Section::make()
+                            ->columnSpan(1)
+                            ->schema([
+                                CuratorPicker::make('image_id')
+                                    ->color('primary')
+                                    ->label('Review Image')
+                                    // ->hint('for expedition page')
+                                    ->relationship('reviewImage', 'id'),
                             ]),
                     ]),
+
             ]);
     }
 
