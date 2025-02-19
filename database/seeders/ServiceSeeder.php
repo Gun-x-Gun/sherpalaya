@@ -30,30 +30,6 @@ class ServiceSeeder extends Seeder
             ],
             [
                 'title' => [
-                    'en' => 'Laundry Services',
-                    'fr' => 'Services de blanchisserie',
-                ],
-                'description' => [
-                    'en' => 'Quick and reliable laundry services for travelers in Kathmandu. Ideal for those who need fresh clothes after a long trek.',
-                    'fr' => 'Services de blanchisserie rapides et fiables pour les voyageurs à Katmandou. Idéal pour ceux qui ont besoin de vêtements frais après un long trek.',
-                ],
-                'cover_image_id' => null,
-                'location' => ['lat' => 27.7000, 'lng' => 85.3000],
-            ],
-            [
-                'title' => [
-                    'en' => 'Accommodation', // Corrected spelling
-                    'fr' => 'Hébergement',
-                ],
-                'description' => [
-                    'en' => 'Enjoy live music events featuring local Nepali bands at popular venues in Thamel. Perfect for relaxing evenings.',
-                    'fr' => 'Profitez de concerts de musique live avec des groupes népalais locaux dans des lieux populaires de Thamel. Parfait pour des soirées de détente.',
-                ],
-                'cover_image_id' => null,
-                'location' => ['lat' => 27.7109, 'lng' => 85.3000],
-            ],
-            [
-                'title' => [
                     'en' => 'Recommended Trekking Gear Shops',
                     'fr' => 'Magasins de matériel de trekking recommandés',
                 ],
