@@ -8,7 +8,7 @@
                 @foreach ($featuredData as $featured)
                     <div class="carousel-slide snap-center rounded-none ">
                         <x-cards.carousel-card :id="$featured->id" :title="$featured->title" :url="$featured->url"
-                            :image="$featured->image" />
+                            :image="$featured->image" :description="$featured->description" />
                     </div>
                 @endforeach
             </div>

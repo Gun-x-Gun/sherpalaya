@@ -36,27 +36,35 @@
     </figure>
     <div class="card-body absolute inset-0 flex items-center justify-start leading-[1.1] md:leading-snug"
         data-aos="fade-down" data-aos-duration="1500">
-        <div class="absolute bottom-2/4 left-4 lg:left-16   2xl:left-32 transform translate-y-1/2 ">
+        <div class="absolute bottom-1/2 left-4 lg:left-16 2xl:left-32 transform translate-y-1/2 ">
             <h5
-                class="card-title mb-2 text-blue-50 text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
-                Explore
+                class="card-title mb-2 text-blue-50 text-7xl  uppercase font-oswald  font-normal tracking-wider opacity-75 text-wrap md:w-[90%]">
+                {{ $title }}
+
             </h5>
             <h2
-                class="card-title mb-2 text-warning  text-6xl  uppercase font-card font-semibold tracking-tight text-wrap md:w-[90%] leading-[1.3]  overflow-hidden opacity-75">
-                {{ $title }}
+                class="card-title mb-2 text-warning  text-8xl  font-card font-semibold tracking-tight leading-[1.3]  overflow-hidden opacity-75">
+                {{$description}}
             </h2>
-            <h5
-                class="card-title  mb-8 text-blue-50 text-2xl  font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
-                With Sherpalaya
-            </h5>
 
-            <a href="{{ $url }}">
-                <button
+                {{-- <button
                     class="btn btn-primary btn-md gap-2 text-base hover:btn-warning tracking-tighter pl-2 opacity-80">
                     <span class="icon-[mdi--chevron-double-right] size-5 "></span>
                     View
-                </button>
-            </a>
+                </button> --}}
+                {{--
+    height: 2.875rem /* 46px */;
+    min-height: 2.875rem /* 46px */;
+    padding-left: 1.25rem /* 20px */;
+    padding-right: 1.25rem /* 20px */;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.5rem /* 24px */;
+                 --}}
+                <a href="{{ $url }}" class="btn btn-primary hover:btn-warning h-20 min-h-20 px-8 text-[2rem] rounded-full opacity-75">
+                    Go
+                    <span class="icon-[mdi--chevron-double-right] size-[1.25em]"></span>
+                </a>
+
             {{-- <h5 class="card-title flex gap-2 mb-2  text-lg/7 items-center  text-black capitalize font-medium font-body">
                 <span
                     class="{{ $icon }} accordion-item-active:rotate-90 size-6 shrink-0 transition-transform duration-300 rtl:rotate-180"></span>
