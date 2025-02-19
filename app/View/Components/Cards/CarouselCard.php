@@ -17,6 +17,7 @@ class CarouselCard extends Component
         public string $title,
         public string $url,
         public ?Media $image,
+        public ?string $description = null,
     )
     {
         //

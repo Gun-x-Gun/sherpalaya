@@ -28,6 +28,7 @@ class HomePageCarousel extends Component
                 return (object)[
                     'id' => $trek->id,
                     'title' => $trek->title,
+                    'description' => $trek->highest_altitude . 'm',
                     'image' => $trek->featureImage,
                     'url' => "/treks/" . $trek->id,
                 ];
@@ -52,6 +53,7 @@ class HomePageCarousel extends Component
                 return (object)[
                     'id' => $expedition->id,
                     'title' => $expedition->title,
+                    'description' => $expedition->highest_altitude . 'm',
                     'image' => $expedition->featureImage,
                     'url' => "/expeditions/" . $expedition->id,
                 ];
@@ -64,6 +66,7 @@ class HomePageCarousel extends Component
                 return (object)[
                     'id' => $tour->id,
                     'title' => $tour->title,
+                    'description' =>null,
                     'image' => $tour->featureImage,
                     'url' => "/tours/" . $tour->id,
 
