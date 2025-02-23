@@ -3,7 +3,7 @@
         <div class="stat">
             <div class="stat-title text-black uppercase font-normal">Duration</div>
             <div class="stat-value font-normal">
-                {{ $tour->duration ? $tour->duration . ' Days' : 'N/A' }}
+                {{ $tour->duration }}
             </div>
             <div class="stat-value font-body">
                 <span class="badge badge-outline badge-success text-wrap h-full text-lg px-2 ">
@@ -26,7 +26,7 @@
                 @endif
             </div>
         </div>
-        <div class="stat">
+        {{-- <div class="stat">
             <div class="stat-title text-black uppercase font-normal">Altitude</div>
             <div class="stat-value font-body">
                 @if (!empty($tour->starting_altitude))
@@ -42,6 +42,6 @@
                 @endif
                 </span>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>

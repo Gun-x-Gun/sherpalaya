@@ -8,14 +8,17 @@
             <div class="card-body absolute inset-0 flex items-center justify-start">
                 <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden"
                     data-aos="fade-down" data-aos-duration="1200">
-                    <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold">
-                        Explore
+                    <h5
+                        class="card-title mb-2 text-blue-50 text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
+                        Jaw Dropping
                     </h5>
-                    <h2 class="card-title mb-2.5 text-white text-3xl md:text-6xl uppercase font-bold">
-                        Activities
+                    <h2
+                        class="card-title mb-2 text-warning  text-6xl  uppercase font-card font-semibold tracking-tight text-wrap md:w-[70%] leading-[1.3]  overflow-hidden opacity-75">
+                        Tours & Activities
                     </h2>
-                    <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold">
-                        With Sherpalaya
+                    <h5
+                        class="card-title  mb-8 text-blue-50 text-2xl  font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
+                        The Journey of a Lifetime
                     </h5>
                 </div>
             </div>

@@ -212,7 +212,7 @@
                                 </nav>
                                 <div class="m-8 w-full">
                                     <div id="tabs-center-all" role="tabpanel" aria-labelledby="tabs-center-item-all">
-                                        <div class="grid grid-cols-3 gap-4">
+                                        <div class="grid grid-cols-2 gap-4">
                                             @foreach ($navTreks as $allTrek)
                                                 @foreach ($allTrek->treks as $catTrek)
                                                     <div
@@ -247,7 +247,7 @@
                                         <div id="tabs-center-{{ $trekCategory->id }}" role="tabpanel"
                                             aria-labelledby="tabs-center-item-{{ $trekCategory->id }}"
                                             class="@if ($index !== -1) hidden @endif ">
-                                            <div class="md:grid  grid-cols-3 gap-4  ">
+                                            <div class="md:grid  grid-cols-2 gap-4  ">
                                                 @foreach ($trekCategory->treks as $trek)
                                                     <div
                                                         class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black">
