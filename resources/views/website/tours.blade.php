@@ -43,15 +43,18 @@
         {{-- Showing <strong>{{ $tourRegion->tours->count() }}</strong> --}}
         <div class="2xl:mx-32 mx-4">
             <div class="h-4"></div>
-            <nav class="sticky top-0 z-30 tabs tabs-bordered  bg-white horizontal-scrollbar md:justify-center"
+            <nav class="sticky top-0 z-30 tabs  gap-2 md:gap-8  bg-white horizontal-scrollbar md:justify-end py-4"
                 aria-label="Tabs" role="tablist" aria-orientation="horizontal">
-                <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-center-item-all-tour"
-                    data-tab="#tabs-center-all-tour" aria-controls="tabs-center-all-tour" role="tab" aria-selected="true">
-                    All
+                <button type="button"
+                    class="tab active-tab:tab-active active-tab:font-extrabold active text-base font-medium"
+                    id="tabs-center-item-all-tour" data-tab="#tabs-center-all-tour" aria-controls="tabs-center-all-tour"
+                    role="tab" aria-selected="true">
+                    ALL
                 </button>
                 @foreach ($allTours as $index => $tourCategory)
                     @if ($tourCategory->tours->count() > 0)
-                        <button type="button" class="tab active-tab:tab-active capitalize text-nowrap text-xl"
+                        <button type="button"
+                            class="tab active-tab:tab-active active-tab:font-extrabold uppercase text-nowrap text-base font-medium"
                             id="tour-tabs-center-item-{{ $tourCategory->id }}"
                             data-tab="#tour-tabs-center-{{ $tourCategory->id }}"
                             aria-controls="tour-tabs-center-{{ $tourCategory->id }}" role="tab"
@@ -75,13 +78,14 @@
                                     </figure>
                                     <a href="{{ route('show_tour', $tour->id) }}">
                                         <div class="card-body absolute inset-0 justify-center">
-                                            <div class="text-center" >
-                                                <h2 class="font-normal text-blue-50 text-3xl uppercase group-hover:text-warning">
+                                            <div class="text-center">
+                                                <h2
+                                                    class="font-bold text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                     {{ $tour->title }}
                                                 </h2>
                                                 <h2
-                                                    class="font-normal tracking-normal text-blue-50 line-clamp-2 text-3xl group-hover:text-warning">
-                                                    {{ $tour->duration }} 
+                                                    class="font-bold tracking-normal text-blue-50 line-clamp-2 text-3xl group-hover:text-warning">
+                                                    {{ $tour->duration }}
                                                 </h2>
                                             </div>
                                         </div>
@@ -106,13 +110,14 @@
                                     </figure>
                                     <a href="{{ route('show_tour', $tour->id) }}">
                                         <div class="card-body absolute inset-0 justify-center">
-                                            <div class="text-center" >
-                                                <h2 class="font-bold text-blue-50 text-3xl uppercase group-hover:text-warning">
+                                            <div class="text-center">
+                                                <h2
+                                                    class="font-bold text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                     {{ $tour->title }}
                                                 </h2>
                                                 <h2
                                                     class="font-bold tracking-normal text-blue-50 line-clamp-2 text-3xl group-hover:text-warning">
-                                                    {{ $tour->duration }} 
+                                                    {{ $tour->duration }}
                                                 </h2>
                                             </div>
                                         </div>

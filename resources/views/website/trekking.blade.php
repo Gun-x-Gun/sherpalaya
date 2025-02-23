@@ -44,15 +44,15 @@
         <div class="h-12"></div>
         <div class="2xl:mx-32 mx-4">
             <div class="h-4"></div>
-            <nav class="sticky top-0 z-30 tabs tabs-bordered  bg-white horizontal-scrollbar md:justify-center"
+            <nav class="sticky top-0 z-30 tabs bg-white horizontal-scrollbar md:justify-end py-4 md:gap-8 gap-2"
                 aria-label="Tabs" role="tablist" aria-orientation="horizontal">
-                <button type="button" class="tab active-tab:tab-active active text-xl" id="tabs-center-item-all"
+                <button type="button" class="tab active-tab:tab-active active-tab:font-extrabold active text-base font-medium " id="tabs-center-item-all"
                     data-tab="#trek-tabs-center-all" aria-controls="trek-tabs-center-all" role="tab" aria-selected="true">
-                    All
+                    ALL
                 </button>
                 @foreach ($allTreks as $index => $trekCategory)
                     @if ($trekCategory->treks->count() > 0)
-                        <button type="button" class="tab active-tab:tab-active capitalize text-nowrap text-xl"
+                        <button type="button" class="tab active-tab:tab-active active-tab:font-extrabold uppercase text-nowrap text-base font-medium "
                             id="trek-tabs-center-item-{{ $trekCategory->id }}"
                             data-tab="#trek-tabs-center-{{ $trekCategory->id }}"
                             aria-controls="trek-tabs-center-{{ $trekCategory->id }}" role="tab" aria-selected="false">

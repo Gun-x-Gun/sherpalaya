@@ -39,15 +39,18 @@
 
         <div class="2xl:mx-32 mx-4">
             <div class="h-4"></div>
-            <nav class="sticky top-0 z-30 tabs tabs-bordered  bg-white horizontal-scrollbar md:justify-center"
+            <nav class="sticky top-0 z-30 tabs  bg-white horizontal-scrollbar md:justify-end py-4 gap-2 md:gap-16"
                 aria-label="Tabs" role="tablist" aria-orientation="horizontal">
-                <button type="button" class="tab active-tab:tab-active active text-xl" id="expedition-tabs-center-item-all"
-                    data-tab="#expedition-tabs-center-all" aria-controls="expedition-tabs-center-all" role="tab" aria-selected="true">
-                    All
+                <button type="button"
+                    class="tab active-tab:tab-active active-tab:font-extrabold active text-base  font-medium "
+                    id="expedition-tabs-center-item-all" data-tab="#expedition-tabs-center-all"
+                    aria-controls="expedition-tabs-center-all" role="tab" aria-selected="true">
+                    ALL
                 </button>
                 @foreach ($allExpeditions as $index => $expeditionCategory)
                     @if ($expeditionCategory->expeditions->count() > 0)
-                        <button type="button" class="tab active-tab:tab-active capitalize text-nowrap text-xl"
+                        <button type="button"
+                            class="tab active-tab:tab-active active-tab:font-extrabold uppercase text-nowrap text-base  font-medium "
                             id="expedition-tabs-center-item-{{ $expeditionCategory->id }}"
                             data-tab="#expedition-tabs-center-{{ $expeditionCategory->id }}"
                             aria-controls="expedition-tabs-center-{{ $expeditionCategory->id }}" role="tab"
@@ -57,7 +60,8 @@
                     @endif
                 @endforeach
             </nav>
-            <div class="mt-8 ">
+            <div class="h-10"></div>
+            <div class="bg-white">
                 <div id="expedition-tabs-center-all" role="tabpanel" aria-labelledby="expedition-tabs-center-item-all">
                     <div class="flex flex-col md:grid md:grid-cols-2 gap-2">
                         @foreach ($allExpeditions as $allExpedition)
@@ -72,8 +76,7 @@
                                     </figure>
                                     <a href="{{ route('show_expedition', $expedition->id) }}">
                                         <div class="card-body absolute inset-0 justify-center ">
-                                            <div class="font-oswald tracking-wide font-normal text-center"
-                                                >
+                                            <div class="font-oswald tracking-wide font-normal text-center">
                                                 <h2 class=" text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                     {{ $expedition->title }}
                                                 </h2>
@@ -103,8 +106,7 @@
                                     </figure>
                                     <a href="{{ route('show_expedition', $expedition->id) }}">
                                         <div class="card-body absolute inset-0 justify-center">
-                                            <div class="font-oswald tracking-wide font-normal text-center"
-                                                >
+                                            <div class="font-oswald tracking-wide font-normal text-center">
                                                 <h2 class=" text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                     {{ $expedition->title }}
                                                 </h2>
