@@ -1,12 +1,12 @@
 <header id="navbar"
-    class="fixed top-0 z-50  w-full flex  flex-wrap py-2 text-base xl:flex-nowrap xl:justify-start xl:py-0 bg-transparent font-body  font-medium tracking-wide">
+    class="fixed top-0 z-50  w-full flex  flex-wrap py-4 text-base lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
     <nav class="w-full  2xl:mx-32 mx-4 " aria-label="Global">
-        <div class=" relative xl:flex xl:items-center ">
+        <div class=" relative lg:flex lg:items-center ">
             <div class="flex items-center justify-between">
                 <a class="link text-base-content link-neutral texl-lg font-semibold no-underline" href="/home">
-                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-8 w-12">
+                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-12 w-20">
                 </a>
-                <div class="xl:hidden">
+                <div class="lg:hidden">
                     <div class="dropdown relative inline-flex [--placement:bottom-end]">
                         <button id="language-select-dropdown-drawer" type="button" class="dropdown-toggle"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
@@ -32,10 +32,10 @@
             </div>
 
             <div id="navbar-mega-menu-click"
-                class="collapse hidden grow basis-full overflow-hidden rounded-lg transition-all duration-300  xl:block ">
+                class="collapse hidden grow basis-full overflow-hidden rounded-lg transition-all duration-300  lg:block ">
                 <div
-                    class="flex flex-col rounded-lg max-xl:mt-3 max-xl:border  xl:flex-row xl:items-center xl:justify-end gap-2z xl:ps-5 xl:pe-0.5 xl:py-0.5">
-                    <ul class="menu xl:menu-horizontal p-0  max-xl:w-fit bg-transparent ">
+                    class="flex flex-col rounded-lg max-lg:mt-3 max-lg:border  lg:flex-row lg:items-center lg:justify-end  lg:py-0.5">
+                    <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent ">
                         <li class=" hover:text-warning rounded-lg "><a href="/home"
                                 @class([
                                     'text-warning' => request()->route()->getName() == 'website.home',
@@ -49,8 +49,8 @@
                             Company
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60  rounded-none"
-                            role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown">
+                        <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60  rounded-none" role="menu"
+                            aria-orientation="vertical" aria-labelledby="nested-dropdown">
                             <li
                                 class="text-black text-base  teacking-normal  hover:text-warning hover:underline decoration-1">
                                 <a class="dropdown-item" href="/about_us">About
@@ -73,20 +73,20 @@
 
                     {{-- expedition start --}}
                     <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
                         <button type="button"
                             class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base  font-bold "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                            Expedition
+                            Expeditions
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-slate-400 overflow-hidden m-2"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300 overflow-hidden m-2"
                             role="menu" aria-orientation="vertical">
-                            <div class="flex justify-start overflow-y-scroll vertical-scrollbar h-[29rem]">
-                                <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4"
+                            <div class="flex gap-5 justify-start overflow-y-scroll vertical-scrollbar h-[29rem]">
+                                <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black min-w-32"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active   text-wrap text-base   tracking-normal shadow-sm "
+                                        class="tab active-tab:tab-active active-tab:font-bold active   text-wrap text-lg uppercase   tracking-normal shadow-sm shadow-black"
                                         id="tabs-center-item-expedition" data-tab="#tabs-center-expedition"
                                         aria-controls="tabs-center-expedition" role="tab" aria-selected="true">
                                         All
@@ -94,7 +94,7 @@
                                     @foreach ($navExpeditions as $index => $expCategory)
                                         @if ($expCategory->expeditions->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active    text-wrap text-base   tracking-normal shadow-sm "
+                                                class="tab active-tab:tab-active active-tab:font-bold   text-wrap text-lg uppercase   tracking-normal shadow-sm shadow-black"
                                                 id="tabs-center-item-{{ $expCategory->id }}"
                                                 data-tab="#tabs-center-{{ $expCategory->id }}"
                                                 aria-controls="tabs-center-{{ $expCategory->id }}" role="tab"
@@ -107,11 +107,11 @@
                                 <div class="m-8 w-full">
                                     <div id="tabs-center-expedition" role="tabpanel"
                                         aria-labelledby="tabs-center-item-expedition">
-                                        <div class="grid grid-cols-2 gap-2 w-full">
+                                        <div class="grid grid-cols-2 gap-4 w-full">
                                             @foreach ($navExpeditions as $allExpedition)
                                                 @foreach ($allExpedition->expeditions as $expedition)
                                                     <div
-                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
+                                                        class="card rounded-none image-full w-full relative flex items-center border-none group hover:shadow shadow-md shadow-black ">
                                                         <figure class="h-[15rem] w-full">
                                                             <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $expedition->title }} Cover Image"
@@ -121,13 +121,13 @@
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
                                                                 <div
-                                                                    class="text-center font-oswald tracking-widest font-light">
+                                                                    class="text-center font-oswald tracking-widest font-normal">
                                                                     <h2
-                                                                        class=" text-blue-50 text-base  group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-100 text-xl  group-hover:text-warning uppercase text-wrap">
                                                                         {{ $expedition->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" text-blue-50 line-clamp-2 text-base group-hover:text-warning">
+                                                                        class=" text-blue-100 line-clamp-2 text-xl group-hover:text-warning">
                                                                         {{ $expedition->highest_altitude }} m
                                                                     </h2>
                                                                 </div>
@@ -142,10 +142,10 @@
                                         <div id="tabs-center-{{ $expCategory->id }}" role="tabpanel"
                                             aria-labelledby="tabs-center-item-{{ $expCategory->id }}"
                                             class="@if ($index !== -1) hidden @endif ">
-                                            <div class="grid grid-cols-2 gap-2 w-full">
+                                            <div class="grid grid-cols-2 gap-4  w-full">
                                                 @foreach ($expCategory->expeditions as $expedition)
                                                     <div
-                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
+                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black ">
                                                         <figure class="h-[15rem] w-full">
                                                             <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $expedition->title }} Cover Image"
@@ -154,13 +154,13 @@
                                                         <a href="{{ route('show_expedition', $expedition->id) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
                                                                 <div
-                                                                    class="text-center font-oswald tracking-widest font-light">
+                                                                    class="text-center font-oswald tracking-widest font-normal">
                                                                     <h2
-                                                                        class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-100 text-xl uppercase group-hover:text-warning text-wrap">
                                                                         {{ $expedition->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" tracking-normal text-blue-50 line-clamp-2 text-base group-hover:text-warning">
+                                                                        class=" tracking-widest text-blue-100 line-clamp-2 text-xl group-hover:text-warning">
                                                                         {{ $expedition->highest_altitude }} m
                                                                     </h2>
                                                                 </div>
@@ -179,28 +179,28 @@
 
                     {{-- trek-start --}}
                     <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
                         <button type="button"
                             class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Treks
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-slate-400"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300"
                             role="menu" aria-orientation="vertical">
-                            <div class="flex justify-start gap-4 h-[29rem] overflow-y-scroll vertical-scrollbar">
-                                <nav class="sticky top-10 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4"
+                            <div class="flex justify-start gap-5 h-[29rem] overflow-y-scroll vertical-scrollbar">
+                                <nav class="sticky top-10 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active text-base   tracking-normal shadow-sm "
+                                        class="tab active-tab:tab-active active-tab:font-bold active text-lg   tracking-normal shadow-sm shadow-black"
                                         id="tabs-center-item-all" data-tab="#tabs-center-all"
                                         aria-controls="tabs-center-all" role="tab" aria-selected="true">
-                                        All
+                                        ALL
                                     </button>
                                     @foreach ($navTreks as $index => $trekCategory)
                                         @if ($trekCategory->treks->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active  uppercase text-wrap text-base   tracking-normal shadow-sm "
+                                                class="tab active-tab:tab-active active-tab:font-bold uppercase text-wrap text-lg   tracking-normal shadow-sm shadow-black"
                                                 id="tabs-center-item-{{ $trekCategory->id }}"
                                                 data-tab="#tabs-center-{{ $trekCategory->id }}"
                                                 aria-controls="tabs-center-{{ $trekCategory->id }}" role="tab"
@@ -212,11 +212,11 @@
                                 </nav>
                                 <div class="m-8 w-full">
                                     <div id="tabs-center-all" role="tabpanel" aria-labelledby="tabs-center-item-all">
-                                        <div class="grid grid-cols-2 gap-2">
+                                        <div class="grid grid-cols-3 gap-4">
                                             @foreach ($navTreks as $allTrek)
                                                 @foreach ($allTrek->treks as $catTrek)
                                                     <div
-                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
+                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black">
                                                         <figure class="h-[15rem] w-full ">
                                                             <img src="{{ optional($catTrek->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $catTrek->title }} Cover Image"
@@ -226,13 +226,13 @@
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
                                                                 <div
-                                                                    class="text-center font-oswald tracking-widest font-light ">
+                                                                    class="text-center font-oswald tracking-widest font-normal ">
                                                                     <h2
-                                                                        class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-50 text-xl uppercase group-hover:text-warning text-wrap">
                                                                         {{ $catTrek->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" text-blue-50 line-clamp-2 text-base group-hover:text-warning">
+                                                                        class=" text-blue-50 line-clamp-2 text-xl group-hover:text-warning">
                                                                         {{ $catTrek->highest_altitude }} m
                                                                     </h2>
                                                                 </div>
@@ -247,10 +247,10 @@
                                         <div id="tabs-center-{{ $trekCategory->id }}" role="tabpanel"
                                             aria-labelledby="tabs-center-item-{{ $trekCategory->id }}"
                                             class="@if ($index !== -1) hidden @endif ">
-                                            <div class="md:grid  grid-cols-2 gap-2  ">
+                                            <div class="md:grid  grid-cols-3 gap-4  ">
                                                 @foreach ($trekCategory->treks as $trek)
                                                     <div
-                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
+                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black">
                                                         <figure class="h-[15rem] w-full">
                                                             <img src="{{ optional($trek->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $trek->title }} Cover Image"
@@ -259,13 +259,13 @@
                                                         <a href="{{ route('show_trek', $trek->id) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
                                                                 <div
-                                                                    class="text-center font-oswald tracking-widest font-light">
+                                                                    class="text-center font-oswald tracking-widest font-normal">
                                                                     <h2
-                                                                        class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-50 text-xl uppercase group-hover:text-warning text-wrap">
                                                                         {{ $trek->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" tracking-normal text-blue-50 line-clamp-2 text-base group-hover:text-warning">
+                                                                        class=" tracking-normal text-blue-50 line-clamp-2 text-xl group-hover:text-warning">
                                                                         {{ $trek->highest_altitude }} m
                                                                     </h2>
                                                                 </div>
@@ -284,20 +284,20 @@
 
                     {{-- tours --}}
                     <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
                         <button type="button"
                             class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Activities
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-slate-400"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start h-[29rem] overflow-y-scroll vertical-scrollbar">
-                                <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 "
+                                <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black font-medium"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active  uppercase text-wrap text-base   tracking-normal shadow-sm "
+                                        class="tab active-tab:tab-active active  uppercase text-wrap text-base   tracking-normal shadow-sm shadow-black border-none"
                                         id="tabs-center-item-tour" data-tab="#tabs-center-tour"
                                         aria-controls="tabs-center-tour" role="tab" aria-selected="true">
                                         All
@@ -305,7 +305,7 @@
                                     @foreach ($navTours as $index => $tourCategory)
                                         @if ($tourCategory->tours->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active   uppercase text-wrap text-base   tracking-normal shadow-sm "
+                                                class="tab active-tab:tab-active   uppercase text-wrap text-base   tracking-normal shadow-sm shadow-black border-none"
                                                 id="tabs-center-item-{{ $tourCategory->id }}"
                                                 data-tab="#tabs-center-{{ $tourCategory->id }}"
                                                 aria-controls="tabs-center-{{ $tourCategory->id }}" role="tab"
@@ -318,11 +318,11 @@
                                 <div class="m-8 w-full">
                                     <div id="tabs-center-tour" role="tabpanel"
                                         aria-labelledby="tabs-center-item-tour">
-                                        <div class="grid grid-cols-2 gap-2 w-full">
+                                        <div class="grid grid-cols-2 gap-4 w-full">
                                             @foreach ($navTours as $allTour)
                                                 @foreach ($allTour->tours as $tour)
                                                     <div
-                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
+                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black ">
                                                         <figure class="h-[15rem] w-full">
                                                             <img src="{{ optional($tour->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $tour->title }} Cover Image"
@@ -332,13 +332,13 @@
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
                                                                 <div
-                                                                    class="text-center font-oswald tracking-widest font-light ">
+                                                                    class="text-center font-oswald tracking-widest font-normal ">
                                                                     <h2
-                                                                        class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-50 text-xl uppercase group-hover:text-warning text-wrap">
                                                                         {{ $tour->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" text-blue-50 line-clamp-2 text-base group-hover:text-warning">
+                                                                        class=" text-blue-50 line-clamp-2 text-xl group-hover:text-warning uppercase">
                                                                         {{ $tour->duration }}
                                                                     </h2>
                                                                 </div>
@@ -356,7 +356,7 @@
                                             <div class="grid grid-cols-2 gap-2 w-full">
                                                 @foreach ($tourCategory->tours as $tour)
                                                     <div
-                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border ">
+                                                        class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black ">
                                                         <figure class="h-[15rem] w-full">
                                                             <img src="{{ optional($tour->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $tour->title }} Cover Image"
@@ -364,14 +364,13 @@
                                                         </figure>
                                                         <a href="{{ route('show_tour', $tour->id) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
-                                                                <div
-                                                                    class="text-center font-oswald tracking-wide ">
+                                                                <div class="text-center font-oswald tracking-wide font-normal">
                                                                     <h2
-                                                                        class=" text-blue-50 text-base uppercase group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-50 text-xl uppercase group-hover:text-warning text-wrap">
                                                                         {{ $tour->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" tracking-normal text-blue-50 line-clamp-2 text-base group-hover:text-warning">
+                                                                        class=" text-blue-50 line-clamp-2 text-xl group-hover:text-warning uppercase">
                                                                         {{ $tour->duration }}
                                                                     </h2>
                                                                 </div>
@@ -408,7 +407,7 @@
                     </div>
 
                     {{-- contact  --}}
-                    <ul class="menu xl:menu-horizontal p-0  max-xl:w-fit bg-transparent items-center  ">
+                    <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent items-center  ">
                         <li class=" hover:text-warning rounded-lg text-base "><a href="/contact"
                                 @class([
                                     'underline decoration-wavy decoration-warning' =>
@@ -440,9 +439,6 @@
                         </li>
                         {{-- Language end --}}
                     </ul>
-                    <ul>
-
-                    </ul>
                     {{-- contact end  --}}
                 </div>
             </div>
@@ -451,7 +447,7 @@
 </header>
 
 {{-- drawer --}}
-<div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden xl:hidden font-body"
+<div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden lg:hidden font-body"
     role="dialog" tabindex="-1">
     <div class="drawer-body px-2 uppercase">
         <div class="drawer-header px-2">
@@ -659,7 +655,7 @@
                 {{-- tours end  --}}
 
                 {{-- contact  --}}
-                <li class="text-slate-900 hover:text-warning rounded-lg text-md uppercase">
+                <li class="text-slate-900 hover:text-warning rounded-lg text-base uppercase">
                     <a href="/contact" @class([
                         'underline decoration-wavy text-black' =>
                             request()->route()->getName() == 'website.contact',
