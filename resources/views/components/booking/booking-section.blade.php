@@ -1,4 +1,4 @@
-<div class=" card-body bg-blue-200 mt-4" >
+<div class=" card-body bg-gray-100 mt-4 font-body shadow-md shadow-gray-300 rounded-md" >
     <div class="card-actions justify-center" >
         {{-- Booking --}}
 

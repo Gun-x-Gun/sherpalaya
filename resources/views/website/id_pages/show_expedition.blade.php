@@ -28,23 +28,18 @@
                     <div class="2xl:mx-32 mx-4 text-left">
 
                         {{-- description --}}
-                        <x-show-expedition.expedition-description 
-                            :expedition="$expedition" 
-                        />
+                        <x-show-expedition.expedition-description :expedition="$expedition" />
                         {{-- end description --}}
 
                         <div class="h-4  "></div>
 
-                        {{-- top section destination --}}
-                        <x-show-expedition.expedition-top-section-destination :expedition="$expedition" />
-                        {{-- end top section destination --}}
                     </div>
 
                     <div class="h-12 "></div>
 
                 </div>
                 {{-- mobile-booking-section --}}
-                <x-booking.mobile-booking-section :bookingFor="$expedition"/>
+                <x-booking.mobile-booking-section :bookingFor="$expedition" />
 
                 {{-- stat-mobile --}}
 
@@ -80,19 +75,19 @@
                                 <x-show-expedition.scroll-spy-body.expedition-gallery :expedition="$expedition" />
 
                                 {{-- destinations --}}
-                                <x-show-expedition.scroll-spy-body.expedition-destination :expedition="$expedition" />
+                                {{-- <x-show-expedition.scroll-spy-body.expedition-destination :expedition="$expedition" /> --}}
 
                                 <div class="h-10"></div>
                             </div>
 
                             <div class=" ">
                                 <div class="h-8"></div>
-                                <div class="sticky top-32 hidden xl:block">
+                                <div class="sticky top-20 hidden xl:block">
                                     {{-- stat --}}
                                     <x-show-expedition.expedition-stat-section :expedition="$expedition" />
 
                                     {{-- booking-section --}}
-                                    <x-booking.booking-section :bookingFor="$expedition"/>
+                                    <x-booking.booking-section :bookingFor="$expedition" />
 
                                     <div class="h-10"></div>
                                 </div>

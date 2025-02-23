@@ -28,9 +28,9 @@
                         <x-show-tour.tour-description :tour="$tour" />
                         {{-- end description --}}
                         <div class="h-4  "></div>
-                        {{-- top section destination --}}
-                        <x-show-tour.tour-top-section-destination :tour="$tour" />
-                        {{-- end top section destination --}}
+
+                        
+                       
                     </div>
 
                     <div class="h-12 "></div>
@@ -77,7 +77,7 @@
                                 <x-show-tour.scroll-spy-body.tour-gallery :tour="$tour" />
 
                                 {{-- destinations --}}
-                                <x-show-tour.scroll-spy-body.tour-destination :tour="$tour" />
+                                {{-- <x-show-tour.scroll-spy-body.tour-destination :tour="$tour" /> --}}
 
                                 
 
@@ -86,7 +86,7 @@
 
                             <div class=" ">
                                 <div class="h-8"></div>
-                                <div class="sticky top-32 hidden xl:block">
+                                <div class="sticky top-20 hidden xl:block">
                                     {{-- stat --}}
                                     <x-show-tour.tour-stat-section :tour="$tour" />
 

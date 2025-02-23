@@ -1,5 +1,5 @@
 <x-website-layout>
-    <div class="bg-blue-100/10 font-oswald">
+    <div class="bg-blue-100/10 font-body">
         <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1">
             <div id="scrollspy-scrollable-parent-1 overflow-x-hidden">
 
@@ -29,9 +29,7 @@
                         <x-show-trek.description :trek="$trek" />
                         {{-- end description --}}
                         <div class="h-4  "></div>
-                        {{-- top section destination --}}
-                        <x-show-trek.top-section-destination :trek="$trek" />
-                        {{-- end top section destination --}}
+                        
                     </div>
 
                     <div class="h-12 "></div>
@@ -83,7 +81,7 @@
                                 <x-show-trek.gallery :trek="$trek" />
 
                                 {{-- destinations --}}
-                                <x-show-trek.scroll-spy-body.destination :trek="$trek" />
+                                {{-- <x-show-trek.scroll-spy-body.destination :trek="$trek" /> --}}
 
                                 {{-- recommendation --}}
                                 <div class="h-10"></div>
@@ -91,7 +89,7 @@
 
                             <div class=" ">
                                 <div class="h-8"></div>
-                                <div class="sticky top-32 hidden xl:block">
+                                <div class="sticky top-20 hidden xl:block">
                                     {{-- stat --}}
                                     <x-show-trek.stat-section :trek="$trek" />
 

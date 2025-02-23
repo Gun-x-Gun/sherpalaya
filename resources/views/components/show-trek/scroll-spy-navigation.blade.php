@@ -51,21 +51,22 @@
                 Gallery
             </div>
         </button>
-        <button href="#destination" type="button"
+        {{-- <button href="#destination" type="button"
             class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary " id="tabs-scroll-item-7"
             data-tab="#tabs-scroll-7" aria-controls="#tabs-scroll-7" role="tab" aria-selected="false">
             <div class="gap-1 lg:gap-2 uppercase text-base tracking-wide font-normal flex text-nowrap">
                 <span class="icon-[tabler--current-location] size-5"></span>
                 Destinations
             </div>
-        </button>
-        <button href="#recommended" type="button"
+        </button> --}}
+        
+        {{-- <button href="#recommended" type="button"
             class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary " id="tabs-scroll-item-7"
             data-tab="#tabs-scroll-8" aria-controls="#tabs-scroll-7" role="tab" aria-selected="false">
             <div class="gap-1 lg:gap-2 uppercase text-base tracking-wide font-normal flex text-nowrap">
                 <span class="icon-[tabler--thumb-up] size-5"></span>
                 Recommended
             </div>
-        </button>
+        </button> --}}
     </nav>
 </div>

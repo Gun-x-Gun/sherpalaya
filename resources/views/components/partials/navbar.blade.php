@@ -80,7 +80,7 @@
                             Expeditions
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300 overflow-hidden m-2"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 overflow-hidden m-2"
                             role="menu" aria-orientation="vertical">
                             <div class="flex gap-5 justify-start overflow-y-scroll vertical-scrollbar h-[29rem]">
                                 <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black min-w-32"
@@ -186,7 +186,7 @@
                             Treks
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start gap-5 h-[29rem] overflow-y-scroll vertical-scrollbar">
                                 <nav class="sticky top-10 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black"
@@ -291,7 +291,7 @@
                             Activities
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start h-[29rem] overflow-y-scroll vertical-scrollbar">
                                 <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black font-medium"
@@ -364,7 +364,8 @@
                                                         </figure>
                                                         <a href="{{ route('show_tour', $tour->id) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
-                                                                <div class="text-center font-oswald tracking-wide font-normal">
+                                                                <div
+                                                                    class="text-center font-oswald tracking-wide font-normal">
                                                                     <h2
                                                                         class=" text-blue-50 text-xl uppercase group-hover:text-warning text-wrap">
                                                                         {{ $tour->title }}
