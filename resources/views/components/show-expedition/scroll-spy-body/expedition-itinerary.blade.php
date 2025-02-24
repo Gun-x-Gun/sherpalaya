@@ -13,7 +13,7 @@
                     <div class="accordion-item " id="itinerary-{{ $itinerary->id }}">
                         @if (!empty($itinerary->title))
                             <button
-                                class="accordion-toggle inline-flex items-center gap-x-4 text-start text-black font-normal font-body tracking-normal  px-0"
+                                class="accordion-toggle inline-flex items-center gap-x-4 text-start text-black font-normal font-body tracking-wide  px-0"
                                 aria-controls="itinerary-{{ $itinerary->id }}-collapse" aria-expanded="false">
                                 <div class="card flex flex-row gap-2 bg-blue-100/40 m-0 p-2 text-lg">
                                     <span

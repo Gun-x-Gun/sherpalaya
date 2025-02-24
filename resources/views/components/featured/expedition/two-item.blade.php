@@ -13,12 +13,12 @@
                 </p>
                 <div class="h-6 md:h-12"></div>
             </div>
-            <div class="flex flex-col md:grid grid-cols-3 md:gap-2 bg-blue-100/10 ">
+            <div class="flex flex-col md:grid grid-cols-7 md:gap-0 bg-blue-100/10 ">
                 @foreach ($featuredExpeditions->slice(0, 4) as $featuredExpedition)
                     @if ($loop->index % 2 === 0)
-                        {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
+                        {{-- First Iteration: col-span-3 on the text and col-span-4 on the image --}}
                         <div
-                            class="card rounded-none px-4 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-100">
+                            class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-blue-100/60">
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <h5
                                     class=" text-2xl  line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning   group-hover:underline-offset-4">
@@ -37,7 +37,7 @@
                             </a>
                         </div>
                         <div
-                            class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-2 ">
+                            class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-4 ">
                             <figure class="h-[28rem] w-full ">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
@@ -58,7 +58,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start ">
+                        <div class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start ">
                             <div
                                 class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
@@ -72,9 +72,9 @@
                             </a>
                         </div>
                     @else
-                        {{-- Second Iteration: col-span-2 on the text and col-span-1 on the image --}}
+                        {{-- Second Iteration: col-span-4 on the text and col-span-3 on the image --}}
                         <div
-                            class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-2">
+                            class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-4">
                             <figure class="h-[28rem] w-full">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
@@ -96,7 +96,7 @@
                             </a>
                         </div>
                         <div
-                            class="card rounded-none px-4 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-100">
+                            class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-transparent">
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <h5
                                     class=" text-2xl  line-clamp-2 font-medium tracking-tighter font-body text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning   group-hover:underline-offset-4">
@@ -115,7 +115,7 @@
                             </a>
                         </div>
                         <div
-                            class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start bg-blue-100">
+                            class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start bg-blue-100">
                             <div
                                 class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
@@ -129,21 +129,16 @@
                             </a>
                         </div>
                     @endif
-
-                    {{-- Add height between iterations except for the last one --}}
-                    {{-- @unless ($loop->last)
-                        <div class=" h-2 col-span-3"></div>
-                    @endunless --}}
                 @endforeach
             </div>
 
-            <div class="h-6"></div>
-            <div class="hidden md:grid grid-cols-2 md:gap-2 bg-blue-100/10 ">
+            <div class="h-2"></div>
+            <div class="hidden md:grid grid-cols-3 md:gap-2 bg-blue-100/10 ">
                 @foreach ($featuredExpeditions->slice(4, 10) as $featuredExpedition)
-                    {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
+                    {{-- First Iteration: col-span-3 on the text and col-span-4 on the image --}}
                     <div
                         class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-1 ">
-                        <figure class="h-[20rem] w-full ">
+                        <figure class="h-[28rem] w-full ">
                             <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                 alt="{{ $featuredExpedition->title }} Cover Image"
                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[20rem] w-full object-cover" />

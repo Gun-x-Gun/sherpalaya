@@ -14,7 +14,7 @@
                 </p>
                 <div class="h-6 md:h-12"></div>
             </div>
-            <div class="flex flex-col md:grid grid-cols-2 md:gap-2 bg-transparent ">
+            <div class="flex flex-col md:grid grid-cols-2  bg-transparent ">
                 @foreach ($featuredTreks->slice(0, 2) as $featuredTrek)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
@@ -77,7 +77,7 @@
                     @else
                         {{-- Second Iteration: col-span-2 on the text and col-span-1 on the image --}}
                         <div
-                            class="card rounded-none font-body image-full w-full h-full relative flex items-center card-side group hover:shadow border">
+                            class="card rounded-none font-body image-full w-full h-full relative flex items-center card-side group hover:shadow border bg-blue-100">
                             <figure class="h-[28rem] w-full">
                                 <img src="{{ optional($featuredTrek->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredTrek->title }} Cover Image"
