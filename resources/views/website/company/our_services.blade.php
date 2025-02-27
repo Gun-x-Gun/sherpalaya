@@ -34,16 +34,18 @@
         <div class="2xl:mx-32 mx-4 text-left">
             <div class="h-8"></div>
 
-            <div class="md:px-8 flex flex-col justify-center items-center">
-                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-center md:text-center"
+            <div class="md:px-8 flex flex-col md:justify-center md:items-center">
+                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left md:text-center"
                     data-aos="fade-down" data-aos-duration="1200">
                     A helping hand
                 </h5>
                 <p
-                    class="text-xl/7 mt-6 text-preety text-black text-center 
-                             font-light font-body lg:w-[80%] tracking-wide">
+                    class="text-xl/7 mt-6 text-preety text-black text-left md:text-center 
+                             font-light font-body md:w-[60%] tracking-wide">
                     {{-- {{ $pageSetting->service_page_page_content }} --}}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nostrum doloremque eaque ducimus repellendus odio laborum sint optio quis harum molestiae maxime atque delectus ipsa, ullam minima quia earum quas!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nostrum doloremque eaque ducimus
+                    repellendus odio laborum sint optio quis harum molestiae maxime atque delectus ipsa, ullam minima
+                    quia earum quas!
                 </p>
                 <div class="h-10 md:h-12"></div>
             </div>
@@ -53,7 +55,7 @@
         <div class="2xl:mx-32 mx-4">
             <div class="flex flex-col  md:grid md:grid-cols-2 xl:grid-cols-3  gap-4 ">
                 @foreach ($services as $serviceData)
-                    <div class="card w-full h-full" >
+                    <div class="card w-full h-full">
                         <a href="{{ route('show_service', $serviceData->service->id) }}">
                             <figure>
                                 <img src="{{ $serviceData->service->coverImage?->url ?? asset('photos/P1030127.JPG') }}"

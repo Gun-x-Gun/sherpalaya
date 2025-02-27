@@ -1,4 +1,4 @@
-{{-- <div class="w-full my-4">
+<div class="w-full my-4">
     <div class="stats stats-vertical bg-blue-100/50 w-full rounded-none">
         <div class="stat">
             <div class="stat-title text-black uppercase font-normal ">Duration</div>
@@ -44,10 +44,10 @@
             </div>
         </div>
     </div>
-</div> --}}
+</div>
 
 
-<div class="h-8"></div>
+{{-- <div class="h-8"></div>
 <div class="card grid grid-cols-2  gap-2 font-body px-2 bg-gray-100">
    
     <div class="flex flex-col gap-2 justify-center items-start my-4">
@@ -83,5 +83,5 @@
             {{ $trek->trek_difficulty }}
         </span>
     </div>
-</div>
+</div> --}}
 {{-- </div> --}}

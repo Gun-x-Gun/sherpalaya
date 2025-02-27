@@ -65,7 +65,7 @@
                             <li
                                 class="text-black text-base  teacking-normal  hover:text-warning hover:underline decoration-1">
                                 <a class="dropdown-item" href="/sherpas">
-                                    Our Sherpas</a>
+                                    Our Team</a>
                             </li>
                         </ul>
                     </div>
@@ -411,8 +411,7 @@
                     <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent items-center  ">
                         <li class=" hover:text-warning rounded-lg text-base "><a href="/contact"
                                 @class([
-                                    'underline decoration-wavy decoration-warning' =>
-                                        request()->route()->getName() == 'website.contact',
+                                    'text-warning' => request()->route()->getName() == 'website.contact',
                                 ])>Contact</a>
                         </li>
 
@@ -503,7 +502,7 @@
                                 </li> --}}
                                 <li class="text-black hover:underline"><a class="dropdown-item" href="/sherpas">
                                         <span class="icon-[stash--people-group-duotone]"></span>
-                                        Our Sherpas
+                                        Our Team
                                     </a>
                                 </li>
                             </ul>
@@ -512,29 +511,7 @@
                 </li>
                 {{-- company end --}}
                 {{-- services --}}
-                <li class="nested-collapse-wrapper">
-                    <a class="collapse-toggle nested-collapse" id="service-collapse"
-                        data-collapse="#service-collapse-menu">
-                        <span class="icon-[ep--office-building] size-5"></span> Services
-                        <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
-                    </a>
-                    <ul id="service-collapse-menu"
-                        class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
-                        aria-labelledby="service-collapse">
-                        <li class="uppercase">
-                            <ul class="menu px-0 mx-0">
-                                @foreach ($navServices as $navService)
-                                    <li
-                                        class="text-black text-base font-light teacking-wide  hover:text-warning hover:underline decoration-1">
-                                        <a class="dropdown-item"
-                                            href="{{ route('show_service', $navService->id) }}">{{ $navService->title }}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                {{-- services end --}}
+
 
                 {{-- expeditions --}}
                 <li class="nested-collapse-wrapper">
@@ -655,6 +632,31 @@
                 </li>
                 {{-- tours end  --}}
 
+
+                <li class="nested-collapse-wrapper">
+                    <a class="collapse-toggle nested-collapse" id="service-collapse"
+                        data-collapse="#service-collapse-menu">
+                        <span class="icon-[ep--office-building] size-5"></span> Services
+                        <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
+                    </a>
+                    <ul id="service-collapse-menu"
+                        class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
+                        aria-labelledby="service-collapse">
+                        <li class="uppercase">
+                            <ul class="menu px-0 mx-0">
+                                @foreach ($navServices as $navService)
+                                    <li
+                                        class="text-black text-base font-light teacking-wide  hover:text-warning hover:underline decoration-1">
+                                        <a class="dropdown-item"
+                                            href="{{ route('show_service', $navService->id) }}">{{ $navService->title }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                {{-- services end --}}
+                
                 {{-- contact  --}}
                 <li class="text-slate-900 hover:text-warning rounded-lg text-base uppercase">
                     <a href="/contact" @class([
