@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ config('app.name') }}</title>
+    <title>
+        {{-- {{ config('app.name') }} --}}
+        sherpalaya
+    </title>
+    <link rel="icon" type="image/png" href="{{ asset('photos/logo.png') }}">
+
 
     @vite('resources/css/app.css')
     @livewireStyles
