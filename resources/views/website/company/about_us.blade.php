@@ -7,7 +7,7 @@
             </figure>
             <div class="card-body font-oswald">
                 <div
-                    class="absolute bottom-1/2 xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute bottom-1/2 2xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class="" data-aos="fade-down" data-aos-duration="1200">
                         {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                             Explore

@@ -6,7 +6,7 @@
         </figure>
         <div class="card-body ">
             <div
-                class="absolute 2xl:bottom-52 xl:left-32  bottom-52 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                class="absolute 2xl:bottom-52 2xl:left-32  bottom-52 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class="">
                     <h2 class="card-title mb-2.5  text-white text-3xl md:text-6xl uppercase font-bold">
                         Expeditions

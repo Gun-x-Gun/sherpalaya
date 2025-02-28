@@ -1,10 +1,10 @@
 <header id="navbar"
     class="fixed top-0 z-50  w-full flex  flex-wrap py-4 text-base lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
-    <nav class="w-full  2xl:mx-32 mx-4 " aria-label="Global">
+    <nav class="w-full" aria-label="Global">
         <div class=" relative lg:flex lg:items-center ">
-            <div class="flex items-center justify-between">
-                <a class="link text-base-content link-neutral texl-lg font-semibold no-underline" href="/home">
-                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-12 w-20">
+            <div class="flex items-center justify-between 2xl:mx-32 mx-4 ">
+                <a class="link text-base-content link-neutral texl-lg font-semibold no-underline " href="/home">
+                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-12 w-12 xl:w-20">
                 </a>
                 <div class="lg:hidden">
                     <div class="dropdown relative inline-flex [--placement:bottom-end]">
@@ -32,7 +32,7 @@
             </div>
 
             <div id="navbar-mega-menu-click"
-                class="collapse hidden grow basis-full overflow-hidden rounded-lg transition-all duration-300  lg:block ">
+                class="collapse hidden grow basis-full overflow-hidden rounded-lg transition-all duration-300  lg:block 2xl:mx-32 mx-4 ">
                 <div
                     class="flex flex-col rounded-lg max-lg:mt-3 max-lg:border  lg:flex-row lg:items-center lg:justify-end  lg:py-0.5">
                     <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent ">
@@ -80,13 +80,13 @@
                             Expeditions
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 overflow-hidden m-2"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300 overflow-hidden m-2"
                             role="menu" aria-orientation="vertical">
                             <div class="flex gap-5 justify-start overflow-y-scroll vertical-scrollbar h-[29rem]">
-                                <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black min-w-32"
+                                <nav class="sticky top-5 tabs tabs-bordered bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black min-w-32"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active-tab:font-bold active   text-wrap text-lg uppercase   tracking-normal shadow-sm shadow-black"
+                                        class="tab active-tab:tab-active active-tab:font-bold active text-wrap text-lg uppercase   tracking-normal "
                                         id="tabs-center-item-expedition" data-tab="#tabs-center-expedition"
                                         aria-controls="tabs-center-expedition" role="tab" aria-selected="true">
                                         All
@@ -94,7 +94,7 @@
                                     @foreach ($navExpeditions as $index => $expCategory)
                                         @if ($expCategory->expeditions->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active active-tab:font-bold   text-wrap text-lg uppercase   tracking-normal shadow-sm shadow-black"
+                                                class="tab active-tab:tab-active active-tab:font-bold text-wrap text-lg uppercase tracking-normal "
                                                 id="tabs-center-item-{{ $expCategory->id }}"
                                                 data-tab="#tabs-center-{{ $expCategory->id }}"
                                                 aria-controls="tabs-center-{{ $expCategory->id }}" role="tab"
@@ -107,7 +107,7 @@
                                 <div class="m-8 w-full">
                                     <div id="tabs-center-expedition" role="tabpanel"
                                         aria-labelledby="tabs-center-item-expedition">
-                                        <div class="grid grid-cols-2 gap-4 w-full">
+                                        <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 w-full">
                                             @foreach ($navExpeditions as $allExpedition)
                                                 @foreach ($allExpedition->expeditions as $expedition)
                                                     <div
@@ -142,7 +142,7 @@
                                         <div id="tabs-center-{{ $expCategory->id }}" role="tabpanel"
                                             aria-labelledby="tabs-center-item-{{ $expCategory->id }}"
                                             class="@if ($index !== -1) hidden @endif ">
-                                            <div class="grid grid-cols-2 gap-4  w-full">
+                                            <div class="grid grid-cols-2 xl:grid-cols-3 gap-4  w-full">
                                                 @foreach ($expCategory->expeditions as $expedition)
                                                     <div
                                                         class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black ">
@@ -186,13 +186,13 @@
                             Treks
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start gap-5 h-[29rem] overflow-y-scroll vertical-scrollbar">
                                 <nav class="sticky top-10 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active-tab:font-bold active text-lg   tracking-normal shadow-sm shadow-black"
+                                        class="tab active-tab:tab-active active-tab:font-bold active text-lg   tracking-normal "
                                         id="tabs-center-item-all" data-tab="#tabs-center-all"
                                         aria-controls="tabs-center-all" role="tab" aria-selected="true">
                                         ALL
@@ -200,7 +200,7 @@
                                     @foreach ($navTreks as $index => $trekCategory)
                                         @if ($trekCategory->treks->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active active-tab:font-bold uppercase text-wrap text-lg   tracking-normal shadow-sm shadow-black"
+                                                class="tab active-tab:tab-active active-tab:font-bold uppercase text-wrap text-lg   tracking-normal "
                                                 id="tabs-center-item-{{ $trekCategory->id }}"
                                                 data-tab="#tabs-center-{{ $trekCategory->id }}"
                                                 aria-controls="tabs-center-{{ $trekCategory->id }}" role="tab"
@@ -212,7 +212,7 @@
                                 </nav>
                                 <div class="m-8 w-full">
                                     <div id="tabs-center-all" role="tabpanel" aria-labelledby="tabs-center-item-all">
-                                        <div class="grid grid-cols-2 gap-4">
+                                        <div class="grid grid-cols-2 xl:grid-cols-3  gap-4">
                                             @foreach ($navTreks as $allTrek)
                                                 @foreach ($allTrek->treks as $catTrek)
                                                     <div
@@ -247,7 +247,7 @@
                                         <div id="tabs-center-{{ $trekCategory->id }}" role="tabpanel"
                                             aria-labelledby="tabs-center-item-{{ $trekCategory->id }}"
                                             class="@if ($index !== -1) hidden @endif ">
-                                            <div class="md:grid  grid-cols-2 gap-4  ">
+                                            <div class="grid grid-cols-2 xl:grid-cols-3 gap-4  ">
                                                 @foreach ($trekCategory->treks as $trek)
                                                     <div
                                                         class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black">
@@ -291,13 +291,13 @@
                             Activities
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start h-[29rem] overflow-y-scroll vertical-scrollbar">
                                 <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black font-medium"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active  uppercase text-wrap text-base   tracking-normal shadow-sm shadow-black border-none"
+                                        class="tab active-tab:tab-active active  uppercase text-wrap text-base   tracking-normal  border-none"
                                         id="tabs-center-item-tour" data-tab="#tabs-center-tour"
                                         aria-controls="tabs-center-tour" role="tab" aria-selected="true">
                                         All
@@ -305,7 +305,7 @@
                                     @foreach ($navTours as $index => $tourCategory)
                                         @if ($tourCategory->tours->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active   uppercase text-wrap text-base   tracking-normal shadow-sm shadow-black border-none"
+                                                class="tab active-tab:tab-active   uppercase text-wrap text-base   tracking-normal  border-none"
                                                 id="tabs-center-item-{{ $tourCategory->id }}"
                                                 data-tab="#tabs-center-{{ $tourCategory->id }}"
                                                 aria-controls="tabs-center-{{ $tourCategory->id }}" role="tab"
@@ -318,7 +318,7 @@
                                 <div class="m-8 w-full">
                                     <div id="tabs-center-tour" role="tabpanel"
                                         aria-labelledby="tabs-center-item-tour">
-                                        <div class="grid grid-cols-2 gap-4 w-full">
+                                        <div class="grid grid-cols-2 xl:grid-cols-3  gap-4 w-full">
                                             @foreach ($navTours as $allTour)
                                                 @foreach ($allTour->tours as $tour)
                                                     <div
@@ -353,7 +353,7 @@
                                         <div id="tabs-center-{{ $tourCategory->id }}" role="tabpanel"
                                             aria-labelledby="tabs-center-item-{{ $tourCategory->id }}"
                                             class="@if ($index !== -1) hidden @endif ">
-                                            <div class="grid grid-cols-2 gap-2 w-full">
+                                            <div class="grid grid-cols-2 xl:grid-cols-3  gap-4 w-full">
                                                 @foreach ($tourCategory->tours as $tour)
                                                     <div
                                                         class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black ">
@@ -445,6 +445,8 @@
         </div>
     </nav>
 </header>
+
+
 
 {{-- drawer --}}
 <div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden lg:hidden font-body"
@@ -656,7 +658,7 @@
                     </ul>
                 </li>
                 {{-- services end --}}
-                
+
                 {{-- contact  --}}
                 <li class="text-slate-900 hover:text-warning rounded-lg text-base uppercase">
                     <a href="/contact" @class([

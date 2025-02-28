@@ -8,7 +8,7 @@
                     Expeditions</h5>
                 <p
                     class="text-xl/7 mt-4 text-preety text-black lg:text-left 
-                     font-light font-body break-all">
+                     font-light font-body ">
                     {{ $landingPageSetting->expedition_activity_content }}
                 </p>
                 <div class="h-6 md:h-12"></div>
@@ -26,7 +26,7 @@
                                 </h5>
                             </a>
                             <div
-                                class=" mt-2 text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
+                                class=" mt-2 text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
@@ -60,7 +60,7 @@
                         </div>
                         <div class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start ">
                             <div
-                                class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
+                                class="text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
@@ -104,7 +104,7 @@
                                 </h5>
                             </a>
                             <div
-                                class="text-preety mt-2 text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
+                                class="text-preety mt-2 text-black  font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
@@ -117,7 +117,7 @@
                         <div
                             class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start bg-blue-100">
                             <div
-                                class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
+                                class="text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
@@ -133,7 +133,7 @@
             </div>
 
             <div class="h-2"></div>
-            <div class="hidden md:grid grid-cols-3 md:gap-2 bg-blue-100/10 ">
+            <div class="hidden md:grid md:grid-cols-2 xl:grid-cols-3 md:gap-2 bg-blue-100/10 ">
                 @foreach ($featuredExpeditions->slice(4, 10) as $featuredExpedition)
                     {{-- First Iteration: col-span-3 on the text and col-span-4 on the image --}}
                     <div

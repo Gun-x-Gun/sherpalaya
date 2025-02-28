@@ -6,7 +6,7 @@
         </figure>
         <div class="card-body relative">
             <div
-                class="absolute lg:bottom-96 xl:left-32  bottom-20 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                class="absolute lg:bottom-96 2xl:left-32  bottom-20 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class="">
                     {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
                         Explore
