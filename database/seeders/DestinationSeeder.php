@@ -1011,7 +1011,569 @@ class DestinationSeeder extends Seeder
                     'lat' => 28.9333,
                     'lng' => 90.4167
                 ]
-            ]
+                ],
+                [
+                    'name' => 'Lobuche',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'A high-altitude village near the Khumbu Glacier, a stop for climbers and trekkers heading to Everest and nearby peaks.',
+                        'fr' => 'Un village en haute altitude près du glacier Khumbu, un arrêt pour les alpinistes et randonneurs se dirigeant vers l\'Everest et les sommets voisins.',
+                    ],
+                    'location' => [
+                        'lat' => 27.9500,
+                        'lng' => 86.8167,
+                    ],
+                ],
+                [
+                    'name' => 'Nuptse Base Camp',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'The base camp for Nuptse expeditions, located near the Khumbu Glacier with views of Everest and Lhotse.',
+                        'fr' => 'Le camp de base pour les expéditions de Nuptse, situé près du glacier Khumbu avec des vues sur l\'Everest et Lhotse.',
+                    ],
+                    'location' => [
+                        'lat' => 27.9667,
+                        'lng' => 86.8667,
+                    ],
+                ],
+                [
+                    'name' => 'Pangboche',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'A Sherpa village in the Khumbu region, known for its ancient monastery and views of Ama Dablam.',
+                        'fr' => 'Un village sherpa dans la région du Khumbu, connu pour son ancien monastère et ses vues sur Ama Dablam.',
+                    ],
+                    'location' => [
+                        'lat' => 27.8500,
+                        'lng' => 86.8000,
+                    ],
+                ],
+                [
+                    'name' => 'Chame',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'The administrative center of Manang District, a key stop on the Annapurna Circuit with hot springs and stunning views.',
+                        'fr' => 'Le centre administratif du district de Manang, un arrêt clé sur le circuit de l\'Annapurna avec des sources chaudes et des vues magnifiques.',
+                    ],
+                    'location' => [
+                        'lat' => 28.5536,
+                        'lng' => 84.2514,
+                    ],
+                ],
+                [
+                    'name' => 'Pisang',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'A scenic village split into Upper and Lower Pisang, offering views of Annapurna II and a glimpse into Gurung culture.',
+                        'fr' => 'Un village pittoresque divisé en Pisang supérieur et inférieur, offrant des vues sur Annapurna II et un aperçu de la culture Gurung.',
+                    ],
+                    'location' => [
+                        'lat' => 28.6167,
+                        'lng' => 84.1500,
+                    ],
+                ],
+                [
+                    'name' => 'Manang',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'A major acclimatization stop on the Annapurna Circuit, known for its medieval architecture and Himalayan views.',
+                        'fr' => 'Un arrêt majeur d\'acclimatation sur le circuit de l\'Annapurna, connu pour son architecture médiévale et ses vues sur l\'Himalaya.',
+                    ],
+                    'location' => [
+                        'lat' => 28.6667,
+                        'lng' => 84.0167,
+                    ],
+                ],
+                [
+                    'name' => 'Gangapurna Base Camp',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'The base camp for Gangapurna expeditions, offering panoramic views of the Annapurna massif.',
+                        'fr' => 'Le camp de base pour les expéditions de Gangapurna, offrant des vues panoramiques sur le massif de l\'Annapurna.',
+                    ],
+                    'location' => [
+                        'lat' => 28.6500,
+                        'lng' => 83.9667,
+                    ],
+                ],
+                [
+                    'name' => 'Pheriche',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'A high-altitude village in the Khumbu region, known for its medical post and stunning mountain views.',
+                        'fr' => 'Un village en haute altitude dans la région du Khumbu, connu pour son poste médical et ses vues imprenables sur les montagnes.',
+                    ],
+                    'location' => [
+                        'lat' => 27.8950,
+                        'lng' => 86.8167,
+                    ],
+                ],
+                [
+                    'name' => 'Ama Dablam Base Camp',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'The base camp for Ama Dablam, located in a scenic meadow with views of this iconic peak.',
+                        'fr' => 'Le camp de base d\'Ama Dablam, situé dans une prairie pittoresque avec des vues sur ce sommet emblématique.',
+                    ],
+                    'location' => [
+                        'lat' => 27.8667,
+                        'lng' => 86.8667,
+                    ],
+                ],
+                [
+                    'name' => 'Phortse Thanga',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'A quiet village on a less-traveled route in the Khumbu, offering serene views of the Himalayas.',
+                        'fr' => 'Un village calme sur une route moins fréquentée dans le Khumbu, offrant des vues sereines sur l\'Himalaya.',
+                    ],
+                    'location' => [
+                        'lat' => 27.8500,
+                        'lng' => 86.7333,
+                    ],
+                ],
+                [
+                    'name' => 'Machhermo',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'A high-altitude village in the Gokyo Valley, known for its peaceful setting and mountain scenery.',
+                        'fr' => 'Un village de haute altitude dans la vallée de Gokyo, connu pour son cadre paisible et ses paysages montagneux.',
+                    ],
+                    'location' => [
+                        'lat' => 27.8667,
+                        'lng' => 86.7167,
+                    ],
+                ],
+                [
+                    'name' => 'Gokyo',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'A settlement famous for its sacred lakes and proximity to Gokyo Ri, offering stunning Himalayan views.',
+                        'fr' => 'Un établissement célèbre pour ses lacs sacrés et sa proximité avec Gokyo Ri, offrant des vues imprenables sur l\'Himalaya.',
+                    ],
+                    'location' => [
+                        'lat' => 27.9500,
+                        'lng' => 86.6833,
+                    ],
+                ],
+                [
+                    'name' => 'Gokyo Ri',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'A popular viewpoint above Gokyo, renowned for its panoramic vistas of Everest, Lhotse, and Cho Oyu.',
+                        'fr' => 'Un point de vue populaire au-dessus de Gokyo, réputé pour ses vues panoramiques sur l\'Everest, Lhotse et Cho Oyu.',
+                    ],
+                    'location' => [
+                        'lat' => 27.9667,
+                        'lng' => 86.6667,
+                    ],
+                ],
+                [
+                    'name' => 'Cholatse Base Camp',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'The base camp for Cholatse, a technical peak in the Gokyo Valley with views of Everest.',
+                        'fr' => 'Le camp de base de Cholatse, un sommet technique dans la vallée de Gokyo avec des vues sur l\'Everest.',
+                    ],
+                    'location' => [
+                        'lat' => 27.9167,
+                        'lng' => 86.7000,
+                    ],
+                ],
+                [
+                    'name' => 'Dole',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'A small village in the Gokyo Valley, offering a peaceful stop with Himalayan scenery.',
+                        'fr' => 'Un petit village dans la vallée de Gokyo, offrant un arrêt paisible avec des paysages himalayens.',
+                    ],
+                    'location' => [
+                        'lat' => 27.8833,
+                        'lng' => 86.7333,
+                    ],
+                ],
+                [
+                    'name' => 'Chulu West Base Camp',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'The base camp for Chulu West, a trekking peak offering views of Annapurna and Dhaulagiri.',
+                        'fr' => 'Le camp de base de Chulu West, un sommet de trekking offrant des vues sur Annapurna et Dhaulagiri.',
+                    ],
+                    'location' => [
+                        'lat' => 28.6667,
+                        'lng' => 84.0333,
+                    ],
+                ],
+                [
+                    'name' => 'Larke Peak Base Camp',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'The base camp for Larke Peak, located near Larkya La Pass with views of Manaslu and Annapurna peaks.',
+                        'fr' => 'Le camp de base de Larke Peak, situé près du col de Larkya La avec des vues sur les sommets de Manaslu et Annapurna.',
+                    ],
+                    'location' => [
+                        'lat' => 28.6667,
+                        'lng' => 84.5833,
+                    ],
+                ],
+                [
+                    'name' => 'Tikhedhunga',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'A small village on the Annapurna Base Camp trek, known for its stone steps and scenic beauty.',
+                        'fr' => 'Un petit village sur le trek du camp de base de l\'Annapurna, connu pour ses marches en pierre et sa beauté pittoresque.',
+                    ],
+                    'location' => [
+                        'lat' => 28.3833,
+                        'lng' => 83.7500,
+                    ],
+                ],
+                [
+                    'name' => 'Poon Hill',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'A famous viewpoint near Ghorepani, renowned for its sunrise views over Annapurna and Dhaulagiri.',
+                        'fr' => 'Un point de vue célèbre près de Ghorepani, réputé pour ses vues de lever de soleil sur Annapurna et Dhaulagiri.',
+                    ],
+                    'location' => [
+                        'lat' => 28.4000,
+                        'lng' => 83.6833,
+                    ],
+                ],
+                [
+                    'name' => 'Tadapani',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'A forested stop with panoramic views of Annapurna South and Machhapuchhre.',
+                        'fr' => 'Un arrêt forestier avec des vues panoramiques sur Annapurna Sud et Machhapuchhre.',
+                    ],
+                    'location' => [
+                        'lat' => 28.4167,
+                        'lng' => 83.6667,
+                    ],
+                ],
+                [
+                    'name' => 'Chhomrong',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'A Gurung village with stunning views of Annapurna South, a key stop before base camps.',
+                        'fr' => 'Un village Gurung avec des vues imprenables sur Annapurna Sud, un arrêt clé avant les camps de base.',
+                    ],
+                    'location' => [
+                        'lat' => 28.4000,
+                        'lng' => 83.8333,
+                    ],
+                ],
+                [
+                    'name' => 'Himalaya Hotel',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'A lodge settlement in a forested area, en route to Dhampus Peak and Annapurna Base Camp.',
+                        'fr' => 'Un établissement de lodge dans une zone forestière, en route vers Dhampus Peak et le camp de base de l\'Annapurna.',
+                    ],
+                    'location' => [
+                        'lat' => 28.4667,
+                        'lng' => 83.8833,
+                    ],
+                ],
+                [
+                    'name' => 'Dhampus Peak Base Camp',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'The base camp for Dhampus Peak, offering views of Dhaulagiri and Annapurna ranges.',
+                        'fr' => 'Le camp de base de Dhampus Peak, offrant des vues sur les chaînes de Dhaulagiri et Annapurna.',
+                    ],
+                    'location' => [
+                        'lat' => 28.5000,
+                        'lng' => 83.8667,
+                    ],
+                ],
+                [
+                    'name' => 'Bamboo',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'A small settlement with bamboo groves, a stop on the Annapurna Base Camp trek.',
+                        'fr' => 'Un petit établissement avec des bosquets de bambou, un arrêt sur le trek du camp de base de l\'Annapurna.',
+                    ],
+                    'location' => [
+                        'lat' => 28.4333,
+                        'lng' => 83.8667,
+                    ],
+                ],
+                [
+                    'name' => 'Jhinu Danda',
+                    'region_id' => 3, // Annapurna
+                    'description' => [
+                        'en' => 'A village famous for its natural hot springs, offering relaxation after Annapurna treks.',
+                        'fr' => 'Un village célèbre pour ses sources chaudes naturelles, offrant une détente après les treks de l\'Annapurna.',
+                    ],
+                    'location' => [
+                        'lat' => 28.3667,
+                        'lng' => 83.8167,
+                    ],
+                ],
+                [
+                    'name' => 'Mong La',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'A high ridge offering panoramic views of Ama Dablam and Everest, a stop en route to Kusum Kanguru.',
+                        'fr' => 'Une crête élevée offrant des vues panoramiques sur Ama Dablam et l\'Everest, un arrêt en route vers Kusum Kanguru.',
+                    ],
+                    'location' => [
+                        'lat' => 27.8167,
+                        'lng' => 86.7667,
+                    ],
+                ],
+                [
+                    'name' => 'Kusum Kanguru Base Camp',
+                    'region_id' => 1, // Everest
+                    'description' => [
+                        'en' => 'The base camp for Kusum Kanguru, a challenging peak in the Khumbu region with rugged terrain.',
+                        'fr' => 'Le camp de base de Kusum Kanguru, un sommet difficile dans la région du Khumbu avec un terrain accidenté.',
+                    ],
+                    'location' => [
+                        'lat' => 27.8000,
+                        'lng' => 86.7833,
+                    ],
+                ],
+    [
+        'name' => 'Chhukung',
+        'region_id' => 1,
+        'description' => [
+            'en' => 'A small village in the Khumbu region, serving as a base for climbers heading to Island Peak and other nearby peaks.',
+            'fr' => 'Un petit village de la région du Khumbu, servant de base aux alpinistes se dirigeant vers Island Peak et d\'autres sommets voisins.',
+        ],
+        'location' => [
+            'lat' => 27.9000,
+            'lng' => 86.8667,
+        ],
+    ],
+    [
+        'name' => 'Island Peak Base Camp',
+        'region_id' => 1,
+        'description' => [
+            'en' => 'The base camp for Island Peak expeditions, located at the foot of this popular trekking peak with views of Lhotse and Ama Dablam.',
+            'fr' => 'Le camp de base pour les expéditions d\'Island Peak, situé au pied de ce sommet de trekking populaire avec des vues sur Lhotse et Ama Dablam.',
+        ],
+        'location' => [
+            'lat' => 27.9167,
+            'lng' => 86.8833,
+        ],
+    ],
+    [
+        'name' => 'Pumori Base Camp',
+        'region_id' => 1,
+        'description' => [
+            'en' => 'The base camp for Pumori, offering a stunning view of Everest and the Khumbu Glacier.',
+            'fr' => 'Le camp de base de Pumori, offrant une vue imprenable sur l\'Everest et le glacier Khumbu.',
+        ],
+        'location' => [
+            'lat' => 28.0000,
+            'lng' => 86.8333,
+        ],
+    ],
+
+    // Region 3: Annapurna
+    [
+        'name' => 'Humde',
+        'region_id' => 3,
+        'description' => [
+            'en' => 'A small village with an airstrip, nestled in the Manang Valley with views of Annapurna peaks.',
+            'fr' => 'Un petit village avec une piste d\'atterrissage, niché dans la vallée de Manang avec des vues sur les sommets de l\'Annapurna.',
+        ],
+        'location' => [
+            'lat' => 28.6333,
+            'lng' => 84.0833,
+        ],
+    ],
+    [
+        'name' => 'Khangsar',
+        'region_id' => 3,
+        'description' => [
+            'en' => 'A small village on the route to Tilicho Lake, surrounded by dramatic Himalayan landscapes.',
+            'fr' => 'Un petit village sur la route du lac Tilicho, entouré de paysages himalayens spectaculaires.',
+        ],
+        'location' => [
+            'lat' => 28.6667,
+            'lng' => 83.9667,
+        ],
+    ],
+    [
+        'name' => 'Tilicho Base Camp',
+        'region_id' => 3,
+        'description' => [
+            'en' => 'The base camp for Tilicho Peak, near the stunning Tilicho Lake at high altitude.',
+            'fr' => 'Le camp de base de Tilicho Peak, près du magnifique lac Tilicho en haute altitude.',
+        ],
+        'location' => [
+            'lat' => 28.6833,
+            'lng' => 83.9167,
+        ],
+    ],
+    [
+        'name' => 'Tilicho Lake',
+        'region_id' => 3,
+        'description' => [
+            'en' => 'One of the highest lakes in the world, known for its turquoise waters and spiritual significance.',
+            'fr' => 'L\'un des lacs les plus élevés au monde, connu pour ses eaux turquoise et sa signification spirituelle.',
+        ],
+        'location' => [
+            'lat' => 28.7000,
+            'lng' => 83.9000,
+        ],
+    ],
+
+    // Region 4: Langtang
+    [
+        'name' => 'Syaule',
+        'region_id' => 4,
+        'description' => [
+            'en' => 'A rural stop on the Dorje Lakpa trek, surrounded by rolling hills and traditional lifestyles.',
+            'fr' => 'Un arrêt rural sur le trek de Dorje Lakpa, entouré de collines ondulantes et de modes de vie traditionnels.',
+        ],
+        'location' => [
+            'lat' => 28.0167,
+            'lng' => 85.4667,
+        ],
+    ],
+    [
+        'name' => 'Kami Kharka',
+        'region_id' => 4,
+        'description' => [
+            'en' => 'A high pasture area en route to Dorje Lakpa Base Camp, offering open views of the Langtang range.',
+            'fr' => 'Une zone de pâturage élevé en route vers le camp de base de Dorje Lakpa, offrant des vues ouvertes sur la chaîne de Langtang.',
+        ],
+        'location' => [
+            'lat' => 28.0500,
+            'lng' => 85.5000,
+        ],
+    ],
+    [
+        'name' => 'Dorje Lakpa Base Camp',
+        'region_id' => 4,
+        'description' => [
+            'en' => 'The base camp for Dorje Lakpa, a challenging peak in the Jugal Himal region.',
+            'fr' => 'Le camp de base de Dorje Lakpa, un sommet difficile dans la région de Jugal Himal.',
+        ],
+        'location' => [
+            'lat' => 28.0833,
+            'lng' => 85.5333,
+        ],
+    ],
+    [
+        'name' => 'Chautara',
+        'region_id' => 4,
+        'description' => [
+            'en' => 'A town serving as the starting point for treks to Dorje Lakpa, with access to the Jugal Himal.',
+            'fr' => 'Une ville servant de point de départ pour les treks vers Dorje Lakpa, avec accès au Jugal Himal.',
+        ],
+        'location' => [
+            'lat' => 27.7667,
+            'lng' => 85.7167,
+        ],
+    ],
+
+    // Region 5: Pakistan
+    [
+        'name' => 'Jhula',
+        'region_id' => 5,
+        'description' => [
+            'en' => 'A campsite on the Baltoro Glacier route to K2, known for its rugged beauty and proximity to the Karakoram range.',
+            'fr' => 'Un campement sur la route du glacier Baltoro vers K2, connu pour sa beauté sauvage et sa proximité avec la chaîne du Karakorum.',
+        ],
+        'location' => [
+            'lat' => 35.6833,
+            'lng' => 76.0167,
+        ],
+    ],
+    [
+        'name' => 'Paiju',
+        'region_id' => 5,
+        'description' => [
+            'en' => 'A key campsite before the Baltoro Glacier, offering views of the Trango Towers and a resting point for K2 trekkers.',
+            'fr' => 'Un campement clé avant le glacier Baltoro, offrant des vues sur les tours Trango et un point de repos pour les randonneurs de K2.',
+        ],
+        'location' => [
+            'lat' => 35.7167,
+            'lng' => 76.0833,
+        ],
+    ],
+    [
+        'name' => 'Urdukas',
+        'region_id' => 5,
+        'description' => [
+            'en' => 'A scenic campsite on the Baltoro Glacier, with panoramic views of Gasherbrum peaks and Broad Peak.',
+            'fr' => 'Un campement pittoresque sur le glacier Baltoro, avec des vues panoramiques sur les sommets Gasherbrum et Broad Peak.',
+        ],
+        'location' => [
+            'lat' => 35.7667,
+            'lng' => 76.2833,
+        ],
+    ],
+
+    // Region 6: Tibet/China
+    [
+        'name' => 'Kerung',
+        'region_id' => 6,
+        'description' => [
+            'en' => 'A border town near Nepal, a starting point for expeditions to Shishapangma and Cho Oyu.',
+            'fr' => 'Une ville frontalière près du Népal, un point de départ pour les expéditions vers Shishapangma et Cho Oyu.',
+        ],
+        'location' => [
+            'lat' => 28.3833,
+            'lng' => 85.3833,
+        ],
+    ],
+    [
+        'name' => 'Chinese Base Camp (Shishapangma)',
+        'region_id' => 6,
+        'description' => [
+            'en' => 'The initial base camp for Shishapangma expeditions on the Tibetan side, accessible by vehicle.',
+            'fr' => 'Le camp de base initial pour les expéditions de Shishapangma côté tibétain, accessible en véhicule.',
+        ],
+        'location' => [
+            'lat' => 28.3167,
+            'lng' => 85.7833,
+        ],
+    ],
+    [
+        'name' => 'Lhatse',
+        'region_id' => 6,
+        'description' => [
+            'en' => 'A small town on the route to Everest North Side and Shishapangma, surrounded by Tibetan plateau landscapes.',
+            'fr' => 'Une petite ville sur la route vers le côté nord de l\'Everest et Shishapangma, entourée de paysages du plateau tibétain.',
+        ],
+        'location' => [
+            'lat' => 29.0833,
+            'lng' => 87.6333,
+        ],
+    ],
+
+    // Region 7: Other (e.g., Eastern Nepal for Kanchenjunga-related areas not yet covered)
+    [
+        'name' => 'Taplejung',
+        'region_id' => 7,
+        'description' => [
+            'en' => 'A town in eastern Nepal, the gateway to Kanchenjunga expeditions and treks.',
+            'fr' => 'Une ville dans l\'est du Népal, la porte d\'entrée des expéditions et treks vers Kanchenjunga.',
+        ],
+        'location' => [
+            'lat' => 27.3500,
+            'lng' => 87.6667,
+        ],
+    ],
+    [
+        'name' => 'Ghunsa',
+        'region_id' => 7,
+        'description' => [
+            'en' => 'A remote village on the Kanchenjunga trek, known for its Tibetan-influenced culture and mountain views.',
+            'fr' => 'Un village isolé sur le trek de Kanchenjunga, connu pour sa culture influencée par le Tibet et ses vues sur les montagnes.',
+        ],
+        'location' => [
+            'lat' => 27.6667,
+            'lng' => 87.9333,
+        ],
+    ],
         ];
 
 
