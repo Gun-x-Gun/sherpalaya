@@ -45,7 +45,7 @@ class ExpeditionSeeder extends Seeder
                 'fr' => 'Automne (sept.-oct.-nov.) et printemps (mars-avril-mai)',
             ],
             'starting_altitude' => 2610,
-            'highest_altitude' => 8848,
+            'highest_altitude' => 8849,
             'expedition_difficulty' => TrekDifficulty::CHALLENGING,
             'costs_include' => [
                 [
@@ -199,7 +199,7 @@ class ExpeditionSeeder extends Seeder
                 'fr' => 'Printemps', // Example French translation
             ],
             'starting_altitude' => 5200, // Approximate base camp altitude
-            'highest_altitude' => 8848,
+            'highest_altitude' => 8849,
             'expedition_difficulty' => TrekDifficulty::CHALLENGING,  // Or another appropriate difficulty level
             'costs_include' => [
                 [
@@ -341,7 +341,7 @@ class ExpeditionSeeder extends Seeder
                     'fr' => 'EXTRA : Tous les autres services ou activités qui ne sont pas mentionnés dans l\'itinéraire et ne figurent pas dans la section "Coût inclus".',
                 ],
             ],
-            'is_featured' => true, // Or false, as appropriate
+            'is_featured' => false, // Or false, as appropriate
         ]);
 
         $everest_expedition_north_data->destinations()->sync(
@@ -582,7 +582,7 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $kanchenjunga_expedition_data,
             'cover_image_id',
-            public_path('photos/qualitymount.png')
+            public_path('photos/mountain2.jpg')
         );
         CuratorSeederHelper::seedBelongsTo(
             $kanchenjunga_expedition_data,
@@ -855,7 +855,7 @@ class ExpeditionSeeder extends Seeder
                 ],
                 // Add more Cost Excludes if needed, up to 7 main points.
             ],
-            'is_featured' => true, // Or false, as appropriate
+            'is_featured' => false, // Or false, as appropriate
         ]);
 
         $makalu_expedition_data->destinations()->sync(
@@ -1094,7 +1094,7 @@ class ExpeditionSeeder extends Seeder
                     'fr' => 'PRIME DE SOMMET : Prime de sommet pour chaque Sherpa d\'escalade - Minimum 1500 USD.',
                 ],
             ],
-            'is_featured' => true, // Or false, as appropriate
+            'is_featured' => false, // Or false, as appropriate
         ]);
 
         $dhaulagiri_expedition_data->destinations()->sync(
@@ -1223,7 +1223,7 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $manaslu_expedition_data,
             'cover_image_id',
-            public_path('photos/qualitymount2.png')
+            public_path('photos/mountain2.jpg')
         );
         CuratorSeederHelper::seedBelongsTo(
             $manaslu_expedition_data,
@@ -1324,7 +1324,7 @@ class ExpeditionSeeder extends Seeder
                     'fr' => 'PRIME DE SOMMET : Prime de sommet pour le Sherpa d\'escalade - Minimum 2000 USD.',
                 ],
             ],
-            'is_featured' => true, // Or false, as appropriate
+            'is_featured' => false, // Or false, as appropriate
         ]);
 
         $nanga_parbat_expedition_data->destinations()->sync(
@@ -1462,7 +1462,7 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $annapurna_i_expedition_data,
             'cover_image_id',
-            public_path('photos/qualitymount2.png')
+            public_path('photos/qualitymount.png')
         );
         CuratorSeederHelper::seedBelongsTo(
             $annapurna_i_expedition_data,
@@ -3055,7 +3055,7 @@ class ExpeditionSeeder extends Seeder
                     'fr' => 'POURBOIRES : Calculez quelques pourboires pour le personnel du camp de base et du haut camp - Minimum 350 USD.',
                 ],
             ],
-            'is_featured' => true, // Or false, as appropriate
+            'is_featured' => false, // Or false, as appropriate
         ]);
 
         $himlung_himal_expedition_data->destinations()->sync(
