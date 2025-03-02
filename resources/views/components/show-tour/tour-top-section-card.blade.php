@@ -7,7 +7,7 @@
         <div class="absolute bottom-1/4 left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
             data-aos="fade-down" data-aos-duration="1200">
             <h2
-                class="card-title mb-2 text-blue-50  text-6xl  uppercase font-card font-semibold tracking-tight text-wrap md:w-[70%] leading-[1.3]  overflow-hidden opacity-75">
+                class="card-title mb-2 text-blue-50  text-4xl sm:text-5xl lg:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap md:w-[70%] leading-[1.3]  overflow-hidden opacity-75">
                 {{ $tour->title }}
 
             </h2>
