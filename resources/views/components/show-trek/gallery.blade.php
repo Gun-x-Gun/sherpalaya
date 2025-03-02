@@ -3,7 +3,8 @@
         <div id="gallery" class="card-header pb-4 px-0 ">
             <div class="h-6">
             </div>
-            <h5 class="card-title text-center pb-2 text-black uppercase font-medium tracking-wide text-3xl px-2" data-aos="fade-down" data-aos-duration="1200">
+            <h5 class="card-title text-center pb-2 text-black uppercase font-medium tracking-wide text-3xl px-2"
+                data-aos="fade-down" data-aos-duration="1200">
                 Gallery
             </h5>
             <div class="h-6">
@@ -13,7 +14,7 @@
                     <button
                         class="card cursor-pointer rounded-none image-full h-52 w-full relative items-end  card-side group hover:shadow border single-trek hidden"
                         aria-haspopup="dialog" aria-expanded="false" aria-controls="trek-gallery-modal"
-                        data-overlay="#trek-gallery-modal" onclick="changeCarouselSlide({{ $loop->index }})" data-aos="fade-down" data-aos-duration="1200">
+                        data-overlay="#trek-gallery-modal" onclick="changeCarouselSlide({{ $loop->index }})">
                         <figure class="h-full w-full brightness-90">
                             <img src="{{ $galleryImage->url }}" alt="overlay image"
                                 class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-95 contrast-120" />
