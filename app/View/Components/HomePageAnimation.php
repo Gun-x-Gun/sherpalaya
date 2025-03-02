@@ -18,6 +18,9 @@ class HomePageAnimation extends Component
     public array $askForAnimation = [];
     public array $animationButton = [];
 
+    public string $parallaxAudioUrl;
+    public string $parallaxAudioType;
+
     /**
      * Create a new component instance.
      */
@@ -52,6 +55,10 @@ class HomePageAnimation extends Component
             'icon_id' => $landingPageSetting->animation_button_icon_id,
             'text' => $landingPageSetting->animation_button_text,
         ];
+
+        $this->parallaxAudioUrl = Media::find($landingPageSetting->animation_sound_id)?->url ?? asset('audio/background-music.mp3');
+        $this->parallaxAudioType = Media::find($landingPageSetting->animation_sound_id)?->type ?? 'audio/mpeg';
+
     }
 
     /**

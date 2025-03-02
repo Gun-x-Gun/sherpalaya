@@ -35,14 +35,22 @@
                     :content="$animationSection['content']" :hideAfterScroll="false" :waitBeforeHide="$animationSection['wait_time']" :icon="$animationMediaUrls[$animationSection['icon_id']]">
                     <div class="absolute bottom-20">
                         <p class="text-xl text-white text-center w-full cursor-pointer hidden" id="scroll-down-wrapper">
-                            <img src="{{ $animationMediaUrls[$animationButton['icon_id']] }}" class="inline size-8 text-white animated-scroll-down-icon" alt="Scroll down">
+                            <img src="{{ $animationMediaUrls[$animationButton['icon_id']] }}"
+                                class="inline size-8 text-white animated-scroll-down-icon" alt="Scroll down">
                             {{ $animationButton['text'] }}
-                            <img src="{{ $animationMediaUrls[$animationButton['icon_id']] }}" class="inline size-8 text-white animated-scroll-down-icon" alt="Scroll down">
+                            <img src="{{ $animationMediaUrls[$animationButton['icon_id']] }}"
+                                class="inline size-8 text-white animated-scroll-down-icon" alt="Scroll down">
                         </p>
                     </div>
                 </x-animation.scroll-animation-section>
             @endif
         @endforeach
+
+        <!-- Hidden Audio Player -->
+        <audio id="background-audio" loop>
+            <source src="{{ $parallaxAudioUrl }}" type="{{ $parallaxAudioType }}">
+            Your browser does not support the audio element.
+        </audio>
 
     </div>
 </div>
@@ -50,6 +58,8 @@
 @push('scripts')
     <script type="module">
         document.addEventListener("DOMContentLoaded", function() {
+
+            let audio = document.getElementById("background-audio");
 
             let askedForHomepageAnimation = sessionStorage.getItem("asked-for-homepage-animation");
             let showHomepageAnimation = sessionStorage.getItem("shown-homepage-animation");
@@ -90,11 +100,9 @@
 
             window.motion.inView(scrollDownWrapper, (element) => {
                 window.motion.animate(
-                    scrollDownIcons,
-                    {
+                    scrollDownIcons, {
                         y: [-5, 5]
-                    },
-                    {
+                    }, {
                         duration: 0.6,
                         repeat: Infinity,
                         repeatType: "reverse",
@@ -119,6 +127,7 @@
 
             function afterAnimationEnds() {
                 sessionStorage.setItem("shown-homepage-animation", true);
+                audio.pause();
                 homePageAnimationSection.remove();
                 navbar.classList.remove('hidden');
                 bodyElement.classList.remove('overflow-y-hidden');
@@ -132,6 +141,8 @@
                 if (!showAnimation) {
                     afterAnimationEnds();
                 }
+
+                audio.play().catch((error) => console.log("Autoplay blocked", error));
 
             }
         });
