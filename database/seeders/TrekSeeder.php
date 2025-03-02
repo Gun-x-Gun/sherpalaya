@@ -447,7 +447,7 @@ class TrekSeeder extends Seeder
                     'fr' => 'Frais de visa d\'entrée au Népal.',
                 ],
             ],
-            'is_featured' => true,
+            'is_featured' => false,
         ]);
         $trek3->destinations()->sync(
             Destination::where('region_id', 3)
@@ -608,7 +608,7 @@ class TrekSeeder extends Seeder
                     'fr' => 'Pourboires pour le guide, le porteur et le chauffeur.',
                 ],
             ],
-            'is_featured' => true,
+            'is_featured' => false,
         ]);
 
         $trek4->destinations()->sync(
@@ -809,7 +809,7 @@ class TrekSeeder extends Seeder
                 ],
                 // ... Add ALL your ACTUAL "costs exclude" items here in this format! ...
             ],
-            'is_featured' => true,
+            'is_featured' => false,
         ]);
         $gokyo_valley_trek_data->destinations()->sync(
             Destination::where('region_id', 1)
@@ -1254,7 +1254,7 @@ class TrekSeeder extends Seeder
                     'fr' => 'Pourboires pour le guide, le porteur et le chauffeur',
                 ],
             ],
-            'is_featured' => true,
+            'is_featured' => false,
         ]);
         $annapurna_dhaulagiri_trek_data->destinations()->sync(
             Destination::where('region_id', 3)
