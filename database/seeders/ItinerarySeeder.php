@@ -19,7 +19,7 @@ class ItinerarySeeder extends Seeder
     public function run(): void
     {
 
-        $trekItineraries = [
+        $ebcTrekItineraries = [
             [
                 'title' => [
                     'en' => 'Day 01: Lukla and trek to Phakding',
@@ -383,7 +383,7 @@ class ItinerarySeeder extends Seeder
                 ],
             ],
         ];
-        $annapurnaItineraries = [
+        $abcTrekItineraries = [
             [
                 'title' => [
                     'en' => 'Day 1: Arrival in Kathmandu',
@@ -656,837 +656,9 @@ class ItinerarySeeder extends Seeder
             ],
         ];
 
-        $peakItineraries = [
-            [
-                'title' => [
-                    'en' => 'Day 01: Arrival in Kathmandu Airport and Hotel transfer',
-                    'fr' => 'Jour 01 : Arrivée à l\'aéroport de Katmandou et transfert à l\'hôtel',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => "Hotel",
-                            'fr' => "Hôtel",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::OTHERS,
-                        'description' => [
-                            'en' => "You will land at Kathmandu airport, and a team from Exciting Nepal will pick you up for a quick and hassle-free hotel transfer. You’ll rest at the hotel after a long flight.",
-                            'fr' => "Vous atterrirez à l'aéroport de Katmandou, et une équipe d'Exciting Nepal viendra vous chercher pour un transfert rapide et sans tracas à l'hôtel. Vous vous reposerez à l'hôtel après un long vol.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 02: Arrangement Day',
-                    'fr' => 'Jour 02 : Journée d\'arrangement',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => "Hotel",
-                            'fr' => "Hôtel",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::OTHERS,
-                        'description' => [
-                            'en' => "This day is dedicated to preparation for the expedition. You'll meet your guide, attend a briefing, and shop for necessary climbing gear.",
-                            'fr' => "Cette journée est consacrée à la préparation de l'expédition. Vous rencontrerez votre guide, assisterez à un briefing et achèterez l'équipement d'escalade nécessaire.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 03: Fly to Lukla and trek to Phakding',
-                    'fr' => 'Jour 03 : Vol pour Lukla et trek jusqu\'à Phakding',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::FLIGHT,
-                        'description' => [
-                            'en' => "40 minutes to Lukla with breathtaking mountain views.",
-                            'fr' => "40 minutes jusqu'à Lukla avec des vues imprenables sur les montagnes.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "The trek to Phakding follows the Dudh Koshi River, passing settlements, mani walls, and rhododendron forests.",
-                            'fr' => "Le trek jusqu'à Phakding suit la rivière Dudh Koshi, en passant par des villages, des murs mani et des forêts de rhododendrons.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "2,640 m",
-                            'fr' => "2 640 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "3 to 4 hours",
-                            'fr' => "3 à 4 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 04: Trek from Phakding to Namche Bazaar',
-                    'fr' => 'Jour 04 : Trek de Phakding à Namche Bazaar',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "The trail to Namche Bazaar passes through suspension bridges, Sherpa settlements, and the entrance to Sagarmatha National Park.",
-                            'fr' => "Le sentier menant à Namche Bazaar traverse des ponts suspendus, des villages sherpas et l'entrée du parc national de Sagarmatha.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "3,446 m",
-                            'fr' => "3 446 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 05: Acclimatization in Namche Bazaar',
-                    'fr' => 'Jour 05 : Acclimatation à Namche Bazaar',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => "Lodge",
-                            'fr' => "Lodge",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Hike to Everest View Hotel (3,880 m) with stunning views of Mt. Everest, then return to Namche Bazaar.",
-                            'fr' => "Randonnée jusqu'à l'Everest View Hotel (3 880 m) avec des vues imprenables sur le mont Everest, puis retour à Namche Bazaar.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 06: Trek from Namche Bazaar to Tengboche',
-                    'fr' => 'Jour 06 : Trek de Namche Bazaar à Tengboche',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Descend from Namche to Phunki Tenga, then ascend to Tengboche Monastery with views of Everest and Ama Dablam.",
-                            'fr' => "Descendez de Namche à Phunki Tenga, puis montez jusqu'au monastère de Tengboche avec des vues sur l'Everest et l'Ama Dablam.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "3,800 m",
-                            'fr' => "3 800 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 07: Trek from Tengboche to Dingboche',
-                    'fr' => 'Jour 07 : Trek de Tengboche à Dingboche',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Pass through rhododendron forests, cross Imja Khola, and ascend to Dingboche through the Imja Valley.",
-                            'fr' => "Traversez des forêts de rhododendrons, traversez l'Imja Khola et montez jusqu'à Dingboche à travers la vallée de l'Imja.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "4,347 m",
-                            'fr' => "4 347 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 08: Trek from Dingboche to Lobuche',
-                    'fr' => 'Jour 08 : Trek de Dingboche à Lobuche',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Climb past Duglha and Chuki Lahara, then walk over Khumbu Glacier moraines to reach Lobuche.",
-                            'fr' => "Montez au-delà de Duglha et Chuki Lahara, puis marchez sur les moraines du glacier de Khumbu pour atteindre Lobuche.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "4,900 m",
-                            'fr' => "4 900 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 09: Trek to Kala Patthar via Gorakshep and trace back to Gorakshep',
-                    'fr' => 'Jour 09 : Trek jusqu\'à Kala Patthar via Gorakshep et retour à Gorakshep',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Hike to Kala Patthar (5,545 m) via Gorakshep for a panoramic view of Everest and nearby peaks, then return to Gorakshep.",
-                            'fr' => "Randonnée jusqu'à Kala Patthar (5 545 m) via Gorakshep pour une vue panoramique sur l'Everest et les sommets voisins, puis retour à Gorakshep.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "5,545 m",
-                            'fr' => "5 545 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "6 to 7 hours",
-                            'fr' => "6 à 7 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 10: Trek to Lobuche Base Camp',
-                    'fr' => 'Jour 10 : Trek jusqu\'au camp de base de Lobuche',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Climb a steep and rough trail from Gorakshep to Lobuche Base Camp. Enjoy glacier views en route.",
-                            'fr' => "Montez un sentier raide et accidenté de Gorakshep au camp de base de Lobuche. Profitez des vues sur le glacier en cours de route.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "4,900 m",
-                            'fr' => "4 900 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 11: Trek to Lobuche High Camp',
-                    'fr' => 'Jour 11 : Trek jusqu\'au camp d\'altitude de Lobuche',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Ascend steep and rough trails to reach Lobuche High Camp, where your guide will provide climbing tips.",
-                            'fr' => "Montez des sentiers raides et accidentés pour atteindre le camp d'altitude de Lobuche, où votre guide vous fournira des conseils d'escalade.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "5,300 m",
-                            'fr' => "5 300 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "3 to 4 hours",
-                            'fr' => "3 à 4 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 12: Summit Day',
-                    'fr' => 'Jour 12 : Jour du sommet',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK, // Or CLIMBING if you have a specific type
-                        'description' => [
-                            'en' => "Climb the southern ridge of Lobuche Peak using technical climbing gear. Enjoy panoramic views of the Everest region from the summit.",
-                            'fr' => "Escaladez l'arête sud du Lobuche Peak en utilisant du matériel d'escalade technique. Profitez des vues panoramiques sur la région de l'Everest depuis le sommet.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "6,119 m",
-                            'fr' => "6 119 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "8 to 10 hours",
-                            'fr' => "8 à 10 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 13: Trek to Pheriche',
-                    'fr' => 'Jour 13 : Trek jusqu\'à Pheriche',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Descend from Lobuche High Camp through rugged trails to Pheriche, a Sherpa settlement surrounded by rocky hills.",
-                            'fr' => "Descendez du camp d'altitude de Lobuche par des sentiers accidentés jusqu'à Pheriche, un village sherpa entouré de collines rocheuses.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "4,200 m",
-                            'fr' => "4 200 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 14: Trek back to Tengboche',
-                    'fr' => 'Jour 14 : Trek de retour à Tengboche',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Descend along Imja Khola through Pangboche village and rhododendron forests to reach Tengboche.",
-                            'fr' => "Descendez le long de l'Imja Khola à travers le village de Pangboche et les forêts de rhododendrons pour atteindre Tengboche.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "3,800 m",
-                            'fr' => "3 800 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "4 to 5 hours",
-                            'fr' => "4 à 5 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 15: Trek back to Namche Bazaar',
-                    'fr' => 'Jour 15 : Trek de retour à Namche Bazaar',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Retrace your steps through familiar trails with views of Everest, Nuptse, and Lhotse.",
-                            'fr' => "Retournez sur vos pas à travers des sentiers familiers avec des vues sur l'Everest, le Nuptse et le Lhotse.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "3,446 m",
-                            'fr' => "3 446 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 16: Trek back to Lukla',
-                    'fr' => 'Jour 16 : Trek de retour à Lukla',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Trek through suspension bridges and picturesque scenery to reach Lukla, marking the end of your trek.",
-                            'fr' => "Trek à travers des ponts suspendus et des paysages pittoresques pour atteindre Lukla, marquant la fin de votre trek.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "2,800 m",
-                            'fr' => "2 800 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "6 to 7 hours",
-                            'fr' => "6 à 7 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 17: Fly back to Kathmandu and to the Hotel via Hotel transfer',
-                    'fr' => 'Jour 17 : Vol de retour à Katmandou et transfert à l\'hôtel',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::FLIGHT,
-                        'description' => [
-                            'en' => "40-minute scenic flight back to Kathmandu.",
-                            'fr' => "Vol panoramique de 40 minutes de retour à Katmandou.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => "Hotel",
-                            'fr' => "Hôtel",
-                        ],
-                    ],
-                ],
-            ],
-        ];
-        $expeditionItineraries = [
-            [
-                'title' => [
-                    'en' => 'Day 01: Arrival in Kathmandu & transfer to hotel',
-                    'fr' => 'Jour 01 : Arrivée à Katmandou et transfert à l\'hôtel',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => "Hotel",
-                            'fr' => "Hôtel",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::OTHERS,
-                        'description' => [
-                            'en' => "Arrive at Kathmandu airport and meet the expedition team. Transfer to the hotel for check-in and rest. Spend the evening meeting the guides and going over the itinerary for the expedition.",
-                            'fr' => "Arrivez à l'aéroport de Katmandou et rencontrez l'équipe d'expédition. Transfert à l'hôtel pour l'enregistrement et le repos. Passez la soirée à rencontrer les guides et à passer en revue l'itinéraire de l'expédition.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 02-03: At leisure in Kathmandu',
-                    'fr' => 'Jour 02-03 : Temps libre à Katmandou',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::OTHERS,
-                        'description' => [
-                            'en' => "Spend the day exploring the vibrant streets of Kathmandu, visiting historical and cultural landmarks such as Swayambhunath (Monkey Temple) and Durbar Square. Use this time to prepare and shop for essential gear for the climb.",
-                            'fr' => "Passez la journée à explorer les rues animées de Katmandou, à visiter des sites historiques et culturels tels que Swayambhunath (Temple des Singes) et la place Durbar. Profitez de ce temps pour vous préparer et acheter l'équipement essentiel pour l'ascension.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 04: Fly to Lukla & Trek to Phakding',
-                    'fr' => 'Jour 04 : Vol pour Lukla et trek jusqu\'à Phakding',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::FLIGHT,
-                        'description' => [
-                            'en' => "Take an early morning 40-minute flight from Kathmandu to Lukla, enjoying scenic views of the Himalayas.",
-                            'fr' => "Prenez un vol matinal de 40 minutes de Katmandou à Lukla, en profitant des vues panoramiques de l'Himalaya.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Trek from Lukla to Phakding along the Dudh Koshi River, passing suspension bridges and small villages.",
-                            'fr' => "Trek de Lukla à Phakding le long de la rivière Dudh Koshi, en passant par des ponts suspendus et de petits villages.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "2,640 m",
-                            'fr' => "2 640 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "3 to 4 hours",
-                            'fr' => "3 à 4 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 05: Trek to Namche Bazaar',
-                    'fr' => 'Jour 05 : Trek jusqu\'à Namche Bazaar',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "The trail to Namche Bazaar passes through Sagarmatha National Park, suspension bridges, and pine forests. Along the way, enjoy your first glimpses of Mt. Everest and other peaks.",
-                            'fr' => "Le sentier menant à Namche Bazaar traverse le parc national de Sagarmatha, des ponts suspendus et des forêts de pins. En chemin, profitez de vos premières vues sur le mont Everest et d'autres sommets.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "3,445 m",
-                            'fr' => "3 445 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 06: At leisure in Namche Bazaar',
-                    'fr' => 'Jour 06 : Temps libre à Namche Bazaar',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK, // Or OTHERS, depending on activities
-                        'description' => [
-                            'en' => "Explore the vibrant Sherpa town of Namche Bazaar. Visit the Everest View Hotel for stunning views of Mt. Everest, and acclimatize to the high altitude.",
-                            'fr' => "Explorez la ville sherpa animée de Namche Bazaar. Visitez l'Everest View Hotel pour des vues imprenables sur le mont Everest, et acclimater-vous à la haute altitude.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 07: Trek to Thyangboche',
-                    'fr' => 'Jour 07 : Trek jusqu\'à Thyangboche',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Descend to Phunki Tenga before climbing up to Thyangboche Monastery, one of the most significant spiritual centers in the region. Enjoy panoramic views of Everest, Ama Dablam, and other peaks.",
-                            'fr' => "Descendez jusqu'à Phunki Tenga avant de monter jusqu'au monastère de Thyangboche, l'un des centres spirituels les plus importants de la région. Profitez des vues panoramiques sur l'Everest, l'Ama Dablam et d'autres sommets.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "3,860 m",
-                            'fr' => "3 860 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 08: Trek to Dingboche',
-                    'fr' => 'Jour 08 : Trek jusqu\'à Dingboche',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Follow the trail through rhododendron forests and cross the Imja Khola to reach the Imja Valley and Dingboche. This village offers incredible views of the Lhotse and Nuptse peaks.",
-                            'fr' => "Suivez le sentier à travers les forêts de rhododendrons et traversez l'Imja Khola pour atteindre la vallée de l'Imja et Dingboche. Ce village offre des vues incroyables sur les sommets du Lhotse et du Nuptse.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "4,410 m",
-                            'fr' => "4 410 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 09-13: Acclimatization',
-                    'fr' => 'Jour 09-13 : Acclimatation',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::OTHERS, // Could be TREK if hikes are involved
-                        'description' => [
-                            'en' => "Spend several days acclimatizing to the high altitude. Take short hikes to nearby ridges, enjoy the view of the Khumbu Glacier, and prepare for the next stage of the expedition.",
-                            'fr' => "Passez plusieurs jours à vous acclimater à la haute altitude. Faites de courtes randonnées vers les crêtes voisines, profitez de la vue sur le glacier de Khumbu et préparez-vous pour la prochaine étape de l'expédition.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 14: Trek to Lobuje',
-                    'fr' => 'Jour 14 : Trek jusqu\'à Lobuje',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Trek past Duglha and ascend to the memorial site for climbers before reaching Lobuje, with views of the Khumbu Glacier.",
-                            'fr' => "Trek au-delà de Duglha et montez jusqu'au mémorial des grimpeurs avant d'atteindre Lobuje, avec des vues sur le glacier de Khumbu.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "4,940 m",
-                            'fr' => "4 940 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "5 to 6 hours",
-                            'fr' => "5 à 6 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 15: Trek to Everest Base Camp',
-                    'fr' => 'Jour 15 : Trek jusqu\'au camp de base de l\'Everest',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Trek from Lobuje to Gorakshep, then follow the trail to Everest Base Camp with views of towering icefalls and the Khumbu Glacier.",
-                            'fr' => "Trek de Lobuje à Gorakshep, puis suivez le sentier jusqu'au camp de base de l'Everest avec des vues sur des cascades de glace imposantes et le glacier de Khumbu.",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => "5,364 m",
-                            'fr' => "5 364 m",
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => "7 to 8 hours",
-                            'fr' => "7 à 8 heures",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 16-18: Rest and preparation',
-                    'fr' => 'Jour 16-18 : Repos et préparation',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::OTHERS,
-                        'description' => [
-                            'en' => "Rest and prepare for the climb. Review climbing routes and ensure gear is in order.",
-                            'fr' => "Reposez-vous et préparez-vous pour l'ascension. Examinez les itinéraires d'escalade et assurez-vous que l'équipement est en ordre.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 19-64: Ascent of Mt Everest',
-                    'fr' => 'Jour 19-64 : Ascension du mont Everest',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK, // Or CLIMBING, if you have a specific type
-                        'description' => [
-                            'en' => "Climb Mt Everest through established camps, with periodic acclimatization and rest. The summit attempt will depend on weather conditions and team readiness.",
-                            'fr' => "Escaladez le mont Everest à travers des camps établis, avec une acclimatation et un repos périodiques. La tentative de sommet dépendra des conditions météorologiques et de la préparation de l'équipe.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 65: Withdraw to Base Camp',
-                    'fr' => 'Jour 65 : Retour au camp de base',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Descend from higher camps back to Base Camp for recovery and reflection on the summit success.",
-                            'fr' => "Descendez des camps supérieurs jusqu'au camp de base pour la récupération et la réflexion sur le succès du sommet.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 66-68: Return trek to Namche Bazaar via Dingboche and Thyangboche',
-                    'fr' => 'Jour 66-68 : Trek de retour à Namche Bazaar via Dingboche et Thyangboche',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Retrace your steps back to Namche Bazaar via the same route, enjoying the sights and stopping at familiar landmarks.",
-                            'fr' => "Retournez sur vos pas jusqu'à Namche Bazaar par le même itinéraire, en profitant des paysages et en vous arrêtant à des points de repère familiers.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 69: Trek to Lukla',
-                    'fr' => 'Jour 69 : Trek jusqu\'à Lukla',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => "Complete the final day of trekking in the Khumbu region, reaching Lukla for an overnight stay.",
-                            'fr' => "Terminez le dernier jour de trekking dans la région de Khumbu, en atteignant Lukla pour une nuit.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 70: Fly Lukla to Kathmandu',
-                    'fr' => 'Jour 70 : Vol de Lukla à Katmandou',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::FLIGHT,
-                        'description' => [
-                            'en' => "Fly back to Kathmandu on a scenic 40-minute flight.",
-                            'fr' => "Retournez à Katmandou par un vol panoramique de 40 minutes.",
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 71: Shopping and sightseeing in Kathmandu',
-                    'fr' => 'Jour 71 : Shopping et visites touristiques à Katmandou',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::OTHERS,
-                        'description' => [
-                            'en' => "Explore Kathmandu's vibrant markets, temples, and cultural landmarks. Buy souvenirs and enjoy a farewell dinner with the expedition team.",
-                            'fr' => "Explorez les marchés animés, les temples et les monuments culturels de Katmandou. Achetez des souvenirs et profitez d'un dîner d'adieu avec l'équipe d'expédition.",
-                        ],
-                    ],
-                ],
-            ],
-        ];
 
-        $manasluItineraries = [
+
+        $manasluTrekItineraries = [
             [
                 'title' => [
                     'en' => 'Day 1: Welcome to Kathmandu and transfer to the hotel',
@@ -2059,7 +1231,7 @@ class ItinerarySeeder extends Seeder
         ];
 
 
-        $langtang_itinerary = [
+        $langtangTrekItinerary = [
             [
                 'title' => [
                     'en' => 'Day 01: Arrival at Kathmandu and transfer to hotel',
@@ -3071,374 +2243,6 @@ class ItinerarySeeder extends Seeder
                 ],
             ],
         ];
-
-
-        $kanchanjunga_exped_itinerary = [
-            [
-                'title' => [
-                    'en' => 'Day 01: Arrival in Kathmandu and Transfer to Hotel',
-                    'fr' => 'Jour 01 : Arrivée à Katmandou et transfert à l\'hôtel',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::OTHERS,
-                        'description' => [
-                            'en' => 'Arrive in Kathmandu. Transfer to hotel.',
-                            'fr' => 'Arrivée à Katmandou. Transfert à l\'hôtel.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Hotel',
-                            'fr' => 'Hôtel',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 02: Full-day sightseeing tour of Bhaktapur, Pashupatinath, and Boudhanath',
-                    'fr' => 'Jour 02 : Visite d\'une journée à Bhaktapur, Pashupatinath et Boudhanath',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::OTHERS,
-                        'description' => [
-                            'en' => 'Start the day with a guided sightseeing of some of the tourist sites in Kathmandu. Visit Bouddhanath Stupa, Pashupatinath Temple, and Bhaktapur Durbar Square with our friendly guide. These monuments present a glimpse of Nepali art, architecture, and culture. After the tour, the guide will drop you back at the hotel. On the remaining day, you will prepare for the trek. Meet with your mountain guide and learn about the trek plan. Purchase any last-minute trekking gear and pack your duffle bags.',
-                            'fr' => 'Commencez la journée par une visite guidée de quelques sites touristiques de Katmandou. Visitez le Stupa de Bouddhanath, le temple de Pashupatinath et la place Durbar de Bhaktapur avec notre guide. Ces monuments offrent un aperçu de l\'art, de l\'architecture et de la culture népalais. Après la visite, le guide vous déposera à l\'hôtel. Le reste de la journée sera consacré aux préparatifs du trek. Rencontrez votre guide de montagne et découvrez le plan du trek. Achetez les derniers équipements nécessaires et préparez vos sacs.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::OTHERS,
-                        'description' => [
-                            'en' => 'Meals: Breakfast only',
-                            'fr' => 'Repas : Petit-déjeuner uniquement',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Hotel',
-                            'fr' => 'Hôtel',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 03: Fly to Bhadrapur and Drive to Taplejung',
-                    'fr' => 'Jour 03 : Vol vers Bhadrapur et route vers Taplejung',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::FLIGHT,
-                        'description' => [
-                            'en' => 'Fly from Kathmandu to Bhadrapur. The flight is about 35 minutes. The specific airport depends on the season.',
-                            'fr' => 'Vol de Katmandou à Bhadrapur. Le vol dure environ 35 minutes. L\'aéroport spécifique dépend de la saison.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::DRIVE,
-                        'description' => [
-                            'en' => 'Drive from Bhadrapur to Taplejung. The drive is about 8 hours.',
-                            'fr' => 'Route de Bhadrapur à Taplejung. Le trajet dure environ 8 heures.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Hotel/Tea House',
-                            'fr' => 'Hôtel/Maison de thé',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 04: Trek from Taplejung to Sekathum',
-                    'fr' => 'Jour 04 : Trek de Taplejung à Sekathum',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => 'Trek from Taplejung to Sekathum. The trail passes through lush green forests and small villages.',
-                            'fr' => 'Trek de Taplejung à Sekathum. Le sentier traverse des forêts verdoyantes et de petits villages.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => 'Sekathum: 1,576m/5,170ft',
-                            'fr' => 'Sekathum : 1 576m/5 170ft',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => '5-6 hours',
-                            'fr' => '5-6 heures',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Hotel/Tea House',
-                            'fr' => 'Hôtel/Maison de thé',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 05: Trek from Sekathum to Amjilossa',
-                    'fr' => 'Jour 05 : Trek de Sekathum à Amjilossa',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => 'Trek from Sekathum to Amjilossa. The trail continues uphill through forests and small villages before descending to the Ghunsa Khola River.',
-                            'fr' => 'Trek de Sekathum à Amjilossa. Le sentier monte à travers les forêts et de petits villages avant de redescendre vers la rivière Ghunsa Khola.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => 'Amjilosa: 2,308m/7,542ft',
-                            'fr' => 'Amjilosa : 2 308m/7 542ft',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => '6-7 hours',
-                            'fr' => '6-7 heures',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Hotel/Tea House',
-                            'fr' => 'Hôtel/Maison de thé',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 06: Trek from Amjilossa to Yamphudin',
-                    'fr' => 'Jour 06 : Trek d\'Amjilossa à Yamphudin',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => 'Trek from Amjilossa to Yamphudin. The trail follows the Ghunsa Khola River, passing through lush forests and waterfalls.',
-                            'fr' => 'Trek d\'Amjilossa à Yamphudin. Le sentier suit la rivière Ghunsa Khola, traversant des forêts luxuriantes et des cascades.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => 'Yamphudin: 3,300m/10,826ft',
-                            'fr' => 'Yamphudin : 3 300m/10 826ft',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => '6-7 hours',
-                            'fr' => '6-7 heures',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Hotel/Tea House',
-                            'fr' => 'Hôtel/Maison de thé',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 07: Trek from Yamphudin to Tortong',
-                    'fr' => 'Jour 07 : Trek de Yamphudin à Tortong',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => 'Trek from Yamphudin to Tortong. The trail ascends gradually through rhododendron forests, offering stunning views of the surrounding peaks.',
-                            'fr' => 'Trek de Yamphudin à Tortong. Le sentier monte progressivement à travers les forêts de rhododendrons, offrant de superbes vues sur les sommets environnants.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => 'Tortong: 4,250m/13,943ft',
-                            'fr' => 'Tortong : 4 250m/13 943ft',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => '5-6 hours',
-                            'fr' => '5-6 heures',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Hotel/Tea House',
-                            'fr' => 'Hôtel/Maison de thé',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 08: Trek from Tortong to Tseram',
-                    'fr' => 'Jour 08 : Trek de Tortong à Tseram',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => 'Trek from Tortong to Tseram. The trail climbs steeply through rocky terrain, offering breathtaking views of the Kanchenjunga massif.',
-                            'fr' => 'Trek de Tortong à Tseram. Le sentier monte fortement à travers un terrain rocheux, offrant des vues imprenables sur le massif du Kanchenjunga.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ALTITUDE,
-                        'description' => [
-                            'en' => 'Tseram: 4,870m/15,977ft',
-                            'fr' => 'Tseram : 4 870m/15 977ft',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::TREK_HOURS,
-                        'description' => [
-                            'en' => '5-6 hours',
-                            'fr' => '5-6 heures',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Hotel/Tea House',
-                            'fr' => 'Hôtel/Maison de thé',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 09-41: Kanchenjunga Climbing Period',
-                    'fr' => 'Jour 09-41 : Période d\'ascension du Kanchenjunga',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::HIMALAYA,
-                        'description' => [
-                            'en' => 'Climbing period, establishing high camps, summit attempt, and descent.',
-                            'fr' => 'Période d\'ascension, établissement des camps d\'altitude, tentative de sommet et descente.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Tents at High Camps / Base Camp',
-                            'fr' => 'Tentes aux camps d\'altitude / Camp de base',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 42-49: Descent back to Taplejung',
-                    'fr' => 'Jour 42-49 : Descente vers Taplejung',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::TREK,
-                        'description' => [
-                            'en' => 'Descending back through the same route, passing through Tseram, Tortong, Yamphudin, and Taplejung.',
-                            'fr' => 'Descente par le même itinéraire, en passant par Tseram, Tortong, Yamphudin et Taplejung.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Tea House / Lodge along the way',
-                            'fr' => 'Maison de thé / Lodge en route',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 50: Flight from Bhadrapur to Kathmandu',
-                    'fr' => 'Jour 50 : Vol de Bhadrapur à Katmandou',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::FLIGHT,
-                        'description' => [
-                            'en' => 'Fly from Bhadrapur to Kathmandu.',
-                            'fr' => 'Vol de Bhadrapur à Katmandou.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Hotel in Kathmandu',
-                            'fr' => 'Hôtel à Katmandou',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 51: Free Day in Kathmandu (Optional Sightseeing)',
-                    'fr' => 'Jour 51 : Journée libre à Katmandou (Visite optionnelle)',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::REST,
-                        'description' => [
-                            'en' => 'Free day in Kathmandu. Optional sightseeing or shopping.',
-                            'fr' => 'Journée libre à Katmandou. Possibilité de visites touristiques ou de shopping.',
-                        ],
-                    ],
-                    [
-                        'type' => ItineraryTypes::ACCOMODATION,
-                        'description' => [
-                            'en' => 'Hotel',
-                            'fr' => 'Hôtel',
-                        ],
-                    ],
-                ],
-            ],
-            [
-                'title' => [
-                    'en' => 'Day 52: Departure – Transfer to Airport',
-                    'fr' => 'Jour 52 : Départ – Transfert à l\'aéroport',
-                ],
-                'details' => [
-                    [
-                        'type' => ItineraryTypes::OTHERS,
-                        'description' => [
-                            'en' => 'Transfer to the airport for international departure.',
-                            'fr' => 'Transfert à l\'aéroport pour le départ international.',
-                        ],
-                    ],
-                ],
-            ],
-        ];
-
 
         $lhotse_exped_itinerary = [
             [
@@ -6172,7 +4976,7 @@ class ItinerarySeeder extends Seeder
                             'fr' => '1 330m',
                         ],
                     ],
-                   [
+                    [
                         'type' => ItineraryTypes::OTHERS, // Changed to OTHERS
                         'description' => [
                             'en' => 'Breakfast',
@@ -6327,7 +5131,7 @@ class ItinerarySeeder extends Seeder
                         ],
                     ],
                     [
-                       'type' => ItineraryTypes::TREK,
+                        'type' => ItineraryTypes::TREK,
                         'description' => [
                             'en' => 'Approx. 15 km / 9.3 miles',
                             'fr' => 'Environ 15 km / 9,3 miles',
@@ -6591,7 +5395,7 @@ class ItinerarySeeder extends Seeder
                             'fr' => 'Hôtel',
                         ],
                     ],
-                     [
+                    [
                         'type' => ItineraryTypes::TREK,
                         'description' => [
                             'en' => 'Approx. 5.1 km / 3.1 miles',
@@ -9332,7 +8136,7 @@ class ItinerarySeeder extends Seeder
                             'fr' => 'Vol de Jomsom à Pokhara.',
                         ],
                     ],
-                     [
+                    [
                         'type' => ItineraryTypes::ALTITUDE,
                         'description' => [
                             'en' => '820 m/2,690 ft',
@@ -9428,12 +8232,24 @@ class ItinerarySeeder extends Seeder
                 ],
             ],
         ];
-        
+
         //Treks
 
         $this->createItinerariesWithDetails(
             Trek::first(),
-            $trekItineraries
+            $ebcTrekItineraries
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(2),
+            $abcTrekItineraries
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(3),
+            $manasluTrekItineraries
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(4),
+            $langtangTrekItinerary
         );
         $this->createItinerariesWithDetails(
             Trek::find(5),
@@ -9475,34 +8291,21165 @@ class ItinerarySeeder extends Seeder
             Trek::find(14),
             $upper_mustang_trek_itinerary
         );
-        $this->createItinerariesWithDetails(
-            Trek::find(2),
-            $annapurnaItineraries
-        );
-        $this->createItinerariesWithDetails(
-            Trek::find(3),
-            $manasluItineraries
-        );
-        $this->createItinerariesWithDetails(
-            Trek::find(4),
-            $langtang_itinerary
-        );
 
 
-        
 
-        
+
+        $lobuchePeakItineraries = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu Airport and Hotel transfer',
+                    'fr' => 'Jour 01 : Arrivée à l\'aéroport de Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => "Hotel",
+                            'fr' => "Hôtel",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => "You will land at Kathmandu airport, and a team from Exciting Nepal will pick you up for a quick and hassle-free hotel transfer. You’ll rest at the hotel after a long flight.",
+                            'fr' => "Vous atterrirez à l'aéroport de Katmandou, et une équipe d'Exciting Nepal viendra vous chercher pour un transfert rapide et sans tracas à l'hôtel. Vous vous reposerez à l'hôtel après un long vol.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Arrangement Day',
+                    'fr' => 'Jour 02 : Journée d\'arrangement',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => "Hotel",
+                            'fr' => "Hôtel",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => "This day is dedicated to preparation for the expedition. You'll meet your guide, attend a briefing, and shop for necessary climbing gear.",
+                            'fr' => "Cette journée est consacrée à la préparation de l'expédition. Vous rencontrerez votre guide, assisterez à un briefing et achèterez l'équipement d'escalade nécessaire.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly to Lukla and trek to Phakding',
+                    'fr' => 'Jour 03 : Vol pour Lukla et trek jusqu\'à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => "40 minutes to Lukla with breathtaking mountain views.",
+                            'fr' => "40 minutes jusqu'à Lukla avec des vues imprenables sur les montagnes.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "The trek to Phakding follows the Dudh Koshi River, passing settlements, mani walls, and rhododendron forests.",
+                            'fr' => "Le trek jusqu'à Phakding suit la rivière Dudh Koshi, en passant par des villages, des murs mani et des forêts de rhododendrons.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "2,640 m",
+                            'fr' => "2 640 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "3 to 4 hours",
+                            'fr' => "3 à 4 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Phakding to Namche Bazaar',
+                    'fr' => 'Jour 04 : Trek de Phakding à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "The trail to Namche Bazaar passes through suspension bridges, Sherpa settlements, and the entrance to Sagarmatha National Park.",
+                            'fr' => "Le sentier menant à Namche Bazaar traverse des ponts suspendus, des villages sherpas et l'entrée du parc national de Sagarmatha.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "3,446 m",
+                            'fr' => "3 446 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Acclimatization in Namche Bazaar',
+                    'fr' => 'Jour 05 : Acclimatation à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => "Lodge",
+                            'fr' => "Lodge",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Hike to Everest View Hotel (3,880 m) with stunning views of Mt. Everest, then return to Namche Bazaar.",
+                            'fr' => "Randonnée jusqu'à l'Everest View Hotel (3 880 m) avec des vues imprenables sur le mont Everest, puis retour à Namche Bazaar.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Namche Bazaar to Tengboche',
+                    'fr' => 'Jour 06 : Trek de Namche Bazaar à Tengboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Descend from Namche to Phunki Tenga, then ascend to Tengboche Monastery with views of Everest and Ama Dablam.",
+                            'fr' => "Descendez de Namche à Phunki Tenga, puis montez jusqu'au monastère de Tengboche avec des vues sur l'Everest et l'Ama Dablam.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "3,800 m",
+                            'fr' => "3 800 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Tengboche to Dingboche',
+                    'fr' => 'Jour 07 : Trek de Tengboche à Dingboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Pass through rhododendron forests, cross Imja Khola, and ascend to Dingboche through the Imja Valley.",
+                            'fr' => "Traversez des forêts de rhododendrons, traversez l'Imja Khola et montez jusqu'à Dingboche à travers la vallée de l'Imja.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "4,347 m",
+                            'fr' => "4 347 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Dingboche to Lobuche',
+                    'fr' => 'Jour 08 : Trek de Dingboche à Lobuche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Climb past Duglha and Chuki Lahara, then walk over Khumbu Glacier moraines to reach Lobuche.",
+                            'fr' => "Montez au-delà de Duglha et Chuki Lahara, puis marchez sur les moraines du glacier de Khumbu pour atteindre Lobuche.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "4,900 m",
+                            'fr' => "4 900 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek to Kala Patthar via Gorakshep and trace back to Gorakshep',
+                    'fr' => 'Jour 09 : Trek jusqu\'à Kala Patthar via Gorakshep et retour à Gorakshep',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Hike to Kala Patthar (5,545 m) via Gorakshep for a panoramic view of Everest and nearby peaks, then return to Gorakshep.",
+                            'fr' => "Randonnée jusqu'à Kala Patthar (5 545 m) via Gorakshep pour une vue panoramique sur l'Everest et les sommets voisins, puis retour à Gorakshep.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "5,545 m",
+                            'fr' => "5 545 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "6 to 7 hours",
+                            'fr' => "6 à 7 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek to Lobuche Base Camp',
+                    'fr' => 'Jour 10 : Trek jusqu\'au camp de base de Lobuche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Climb a steep and rough trail from Gorakshep to Lobuche Base Camp. Enjoy glacier views en route.",
+                            'fr' => "Montez un sentier raide et accidenté de Gorakshep au camp de base de Lobuche. Profitez des vues sur le glacier en cours de route.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "4,900 m",
+                            'fr' => "4 900 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11: Trek to Lobuche High Camp',
+                    'fr' => 'Jour 11 : Trek jusqu\'au camp d\'altitude de Lobuche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Ascend steep and rough trails to reach Lobuche High Camp, where your guide will provide climbing tips.",
+                            'fr' => "Montez des sentiers raides et accidentés pour atteindre le camp d'altitude de Lobuche, où votre guide vous fournira des conseils d'escalade.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "5,300 m",
+                            'fr' => "5 300 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "3 to 4 hours",
+                            'fr' => "3 à 4 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 12: Summit Day',
+                    'fr' => 'Jour 12 : Jour du sommet',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK, // Or CLIMBING if you have a specific type
+                        'description' => [
+                            'en' => "Climb the southern ridge of Lobuche Peak using technical climbing gear. Enjoy panoramic views of the Everest region from the summit.",
+                            'fr' => "Escaladez l'arête sud du Lobuche Peak en utilisant du matériel d'escalade technique. Profitez des vues panoramiques sur la région de l'Everest depuis le sommet.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "6,119 m",
+                            'fr' => "6 119 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "8 to 10 hours",
+                            'fr' => "8 à 10 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 13: Trek to Pheriche',
+                    'fr' => 'Jour 13 : Trek jusqu\'à Pheriche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Descend from Lobuche High Camp through rugged trails to Pheriche, a Sherpa settlement surrounded by rocky hills.",
+                            'fr' => "Descendez du camp d'altitude de Lobuche par des sentiers accidentés jusqu'à Pheriche, un village sherpa entouré de collines rocheuses.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "4,200 m",
+                            'fr' => "4 200 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 14: Trek back to Tengboche',
+                    'fr' => 'Jour 14 : Trek de retour à Tengboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Descend along Imja Khola through Pangboche village and rhododendron forests to reach Tengboche.",
+                            'fr' => "Descendez le long de l'Imja Khola à travers le village de Pangboche et les forêts de rhododendrons pour atteindre Tengboche.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "3,800 m",
+                            'fr' => "3 800 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "4 to 5 hours",
+                            'fr' => "4 à 5 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 15: Trek back to Namche Bazaar',
+                    'fr' => 'Jour 15 : Trek de retour à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Retrace your steps through familiar trails with views of Everest, Nuptse, and Lhotse.",
+                            'fr' => "Retournez sur vos pas à travers des sentiers familiers avec des vues sur l'Everest, le Nuptse et le Lhotse.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "3,446 m",
+                            'fr' => "3 446 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 16: Trek back to Lukla',
+                    'fr' => 'Jour 16 : Trek de retour à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Trek through suspension bridges and picturesque scenery to reach Lukla, marking the end of your trek.",
+                            'fr' => "Trek à travers des ponts suspendus et des paysages pittoresques pour atteindre Lukla, marquant la fin de votre trek.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "2,800 m",
+                            'fr' => "2 800 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "6 to 7 hours",
+                            'fr' => "6 à 7 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 17: Fly back to Kathmandu and to the Hotel via Hotel transfer',
+                    'fr' => 'Jour 17 : Vol de retour à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => "40-minute scenic flight back to Kathmandu.",
+                            'fr' => "Vol panoramique de 40 minutes de retour à Katmandou.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => "Hotel",
+                            'fr' => "Hôtel",
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $everestSouthExpeditionItineraries = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu & transfer to hotel',
+                    'fr' => 'Jour 01 : Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => "Hotel",
+                            'fr' => "Hôtel",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => "Arrive at Kathmandu airport and meet the expedition team. Transfer to the hotel for check-in and rest. Spend the evening meeting the guides and going over the itinerary for the expedition.",
+                            'fr' => "Arrivez à l'aéroport de Katmandou et rencontrez l'équipe d'expédition. Transfert à l'hôtel pour l'enregistrement et le repos. Passez la soirée à rencontrer les guides et à passer en revue l'itinéraire de l'expédition.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02-03: At leisure in Kathmandu',
+                    'fr' => 'Jour 02-03 : Temps libre à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => "Spend the day exploring the vibrant streets of Kathmandu, visiting historical and cultural landmarks such as Swayambhunath (Monkey Temple) and Durbar Square. Use this time to prepare and shop for essential gear for the climb.",
+                            'fr' => "Passez la journée à explorer les rues animées de Katmandou, à visiter des sites historiques et culturels tels que Swayambhunath (Temple des Singes) et la place Durbar. Profitez de ce temps pour vous préparer et acheter l'équipement essentiel pour l'ascension.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Fly to Lukla & Trek to Phakding',
+                    'fr' => 'Jour 04 : Vol pour Lukla et trek jusqu\'à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => "Take an early morning 40-minute flight from Kathmandu to Lukla, enjoying scenic views of the Himalayas.",
+                            'fr' => "Prenez un vol matinal de 40 minutes de Katmandou à Lukla, en profitant des vues panoramiques de l'Himalaya.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Trek from Lukla to Phakding along the Dudh Koshi River, passing suspension bridges and small villages.",
+                            'fr' => "Trek de Lukla à Phakding le long de la rivière Dudh Koshi, en passant par des ponts suspendus et de petits villages.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "2,640 m",
+                            'fr' => "2 640 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "3 to 4 hours",
+                            'fr' => "3 à 4 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek to Namche Bazaar',
+                    'fr' => 'Jour 05 : Trek jusqu\'à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "The trail to Namche Bazaar passes through Sagarmatha National Park, suspension bridges, and pine forests. Along the way, enjoy your first glimpses of Mt. Everest and other peaks.",
+                            'fr' => "Le sentier menant à Namche Bazaar traverse le parc national de Sagarmatha, des ponts suspendus et des forêts de pins. En chemin, profitez de vos premières vues sur le mont Everest et d'autres sommets.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "3,445 m",
+                            'fr' => "3 445 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: At leisure in Namche Bazaar',
+                    'fr' => 'Jour 06 : Temps libre à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK, // Or OTHERS, depending on activities
+                        'description' => [
+                            'en' => "Explore the vibrant Sherpa town of Namche Bazaar. Visit the Everest View Hotel for stunning views of Mt. Everest, and acclimatize to the high altitude.",
+                            'fr' => "Explorez la ville sherpa animée de Namche Bazaar. Visitez l'Everest View Hotel pour des vues imprenables sur le mont Everest, et acclimater-vous à la haute altitude.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek to Thyangboche',
+                    'fr' => 'Jour 07 : Trek jusqu\'à Thyangboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Descend to Phunki Tenga before climbing up to Thyangboche Monastery, one of the most significant spiritual centers in the region. Enjoy panoramic views of Everest, Ama Dablam, and other peaks.",
+                            'fr' => "Descendez jusqu'à Phunki Tenga avant de monter jusqu'au monastère de Thyangboche, l'un des centres spirituels les plus importants de la région. Profitez des vues panoramiques sur l'Everest, l'Ama Dablam et d'autres sommets.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "3,860 m",
+                            'fr' => "3 860 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek to Dingboche',
+                    'fr' => 'Jour 08 : Trek jusqu\'à Dingboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Follow the trail through rhododendron forests and cross the Imja Khola to reach the Imja Valley and Dingboche. This village offers incredible views of the Lhotse and Nuptse peaks.",
+                            'fr' => "Suivez le sentier à travers les forêts de rhododendrons et traversez l'Imja Khola pour atteindre la vallée de l'Imja et Dingboche. Ce village offre des vues incroyables sur les sommets du Lhotse et du Nuptse.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "4,410 m",
+                            'fr' => "4 410 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09-13: Acclimatization',
+                    'fr' => 'Jour 09-13 : Acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS, // Could be TREK if hikes are involved
+                        'description' => [
+                            'en' => "Spend several days acclimatizing to the high altitude. Take short hikes to nearby ridges, enjoy the view of the Khumbu Glacier, and prepare for the next stage of the expedition.",
+                            'fr' => "Passez plusieurs jours à vous acclimater à la haute altitude. Faites de courtes randonnées vers les crêtes voisines, profitez de la vue sur le glacier de Khumbu et préparez-vous pour la prochaine étape de l'expédition.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 14: Trek to Lobuje',
+                    'fr' => 'Jour 14 : Trek jusqu\'à Lobuje',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Trek past Duglha and ascend to the memorial site for climbers before reaching Lobuje, with views of the Khumbu Glacier.",
+                            'fr' => "Trek au-delà de Duglha et montez jusqu'au mémorial des grimpeurs avant d'atteindre Lobuje, avec des vues sur le glacier de Khumbu.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "4,940 m",
+                            'fr' => "4 940 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "5 to 6 hours",
+                            'fr' => "5 à 6 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 15: Trek to Everest Base Camp',
+                    'fr' => 'Jour 15 : Trek jusqu\'au camp de base de l\'Everest',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Trek from Lobuje to Gorakshep, then follow the trail to Everest Base Camp with views of towering icefalls and the Khumbu Glacier.",
+                            'fr' => "Trek de Lobuje à Gorakshep, puis suivez le sentier jusqu'au camp de base de l'Everest avec des vues sur des cascades de glace imposantes et le glacier de Khumbu.",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => "5,364 m",
+                            'fr' => "5 364 m",
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => "7 to 8 hours",
+                            'fr' => "7 à 8 heures",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 16-18: Rest and preparation',
+                    'fr' => 'Jour 16-18 : Repos et préparation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => "Rest and prepare for the climb. Review climbing routes and ensure gear is in order.",
+                            'fr' => "Reposez-vous et préparez-vous pour l'ascension. Examinez les itinéraires d'escalade et assurez-vous que l'équipement est en ordre.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 19-64: Ascent of Mt Everest',
+                    'fr' => 'Jour 19-64 : Ascension du mont Everest',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK, // Or CLIMBING, if you have a specific type
+                        'description' => [
+                            'en' => "Climb Mt Everest through established camps, with periodic acclimatization and rest. The summit attempt will depend on weather conditions and team readiness.",
+                            'fr' => "Escaladez le mont Everest à travers des camps établis, avec une acclimatation et un repos périodiques. La tentative de sommet dépendra des conditions météorologiques et de la préparation de l'équipe.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 65: Withdraw to Base Camp',
+                    'fr' => 'Jour 65 : Retour au camp de base',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Descend from higher camps back to Base Camp for recovery and reflection on the summit success.",
+                            'fr' => "Descendez des camps supérieurs jusqu'au camp de base pour la récupération et la réflexion sur le succès du sommet.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 66-68: Return trek to Namche Bazaar via Dingboche and Thyangboche',
+                    'fr' => 'Jour 66-68 : Trek de retour à Namche Bazaar via Dingboche et Thyangboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Retrace your steps back to Namche Bazaar via the same route, enjoying the sights and stopping at familiar landmarks.",
+                            'fr' => "Retournez sur vos pas jusqu'à Namche Bazaar par le même itinéraire, en profitant des paysages et en vous arrêtant à des points de repère familiers.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 69: Trek to Lukla',
+                    'fr' => 'Jour 69 : Trek jusqu\'à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => "Complete the final day of trekking in the Khumbu region, reaching Lukla for an overnight stay.",
+                            'fr' => "Terminez le dernier jour de trekking dans la région de Khumbu, en atteignant Lukla pour une nuit.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 70: Fly Lukla to Kathmandu',
+                    'fr' => 'Jour 70 : Vol de Lukla à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => "Fly back to Kathmandu on a scenic 40-minute flight.",
+                            'fr' => "Retournez à Katmandou par un vol panoramique de 40 minutes.",
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 71: Shopping and sightseeing in Kathmandu',
+                    'fr' => 'Jour 71 : Shopping et visites touristiques à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => "Explore Kathmandu's vibrant markets, temples, and cultural landmarks. Buy souvenirs and enjoy a farewell dinner with the expedition team.",
+                            'fr' => "Explorez les marchés animés, les temples et les monuments culturels de Katmandou. Achetez des souvenirs et profitez d'un dîner d'adieu avec l'équipe d'expédition.",
+                        ],
+                    ],
+                ],
+            ],
+        ];
+
+        $everest_expedition_north_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrival at Tribhuvan International Airport. Our team will greet you and transfer you to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan. Notre équipe vous accueillera et vous transférera à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest day in Kathmandu for Tibet visa preparation',
+                    'fr' => 'Jour 02: Journée de repos à Katmandou pour la préparation du visa tibétain',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'A day to relax and prepare documentation for the Tibet visa.',
+                            'fr' => 'Une journée pour se détendre et préparer les documents pour le visa tibétain.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Apply for Tibet visa, shopping, and expedition briefing',
+                    'fr' => 'Jour 03: Demande de visa tibétain, shopping et briefing de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Submit visa applications, shop for gear, and attend a detailed expedition briefing.',
+                            'fr' => 'Soumettre les demandes de visa, acheter du matériel et assister à un briefing détaillé de l\'expédition.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Rest in Kathmandu for last-minute preparation',
+                    'fr' => 'Jour 04: Repos à Katmandou pour les préparatifs de dernière minute',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Final day to rest and pack for the journey ahead.',
+                            'fr' => 'Dernière journée pour se reposer et préparer le voyage à venir.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Drive from Kathmandu to Timure',
+                    'fr' => 'Jour 05: Route de Katmandou à Timure',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Scenic drive from Kathmandu to Timure along mountain roads.',
+                            'fr' => 'Route pittoresque de Katmandou à Timure le long des routes de montagne.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Cross the border and drive to Kerung',
+                    'fr' => 'Jour 06: Traversée de la frontière et route vers Kerung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Cross the Nepal-Tibet border and drive to Kerung.',
+                            'fr' => 'Traverser la frontière Népal-Tibet et conduire jusqu\'à Kerung.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,962 m/6,437 ft',
+                            'fr' => '1 962 m/6 437 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Drive from Kerung to Thingri',
+                    'fr' => 'Jour 07: Route de Kerung à Thingri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive through the Tibetan plateau to Thingri.',
+                            'fr' => 'Conduire à travers le plateau tibétain jusqu\'à Thingri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,300 m/14,108 ft',
+                            'fr' => '4 300 m/14 108 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization and preparation day in Thingri',
+                    'fr' => 'Jour 08: Journée d\'acclimatation et de préparation à Thingri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and acclimatize to the altitude, with light exploration.',
+                            'fr' => 'Repos et acclimatation à l\'altitude, avec une légère exploration.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Drive from Thingri to Chinese Basecamp via Rombuk Monastery',
+                    'fr' => 'Jour 09: Route de Thingri au camp de base chinois via le monastère de Rombuk',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to the Chinese Basecamp, stopping at Rombuk Monastery.',
+                            'fr' => 'Conduire jusqu\'au camp de base chinois, avec un arrêt au monastère de Rombuk.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,100 m/16,732 ft',
+                            'fr' => '5 100 m/16 732 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10-12: Rest and acclimatization at Chinese Basecamp',
+                    'fr' => 'Jour 10-12: Repos et acclimatation au camp de base chinois',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Two nights resting and climbing surrounding hills for acclimatization.',
+                            'fr' => 'Deux nuits de repos et escalade des collines environnantes pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 13: Trek from Chinese Basecamp to Intermediate Camp',
+                    'fr' => 'Jour 13: Trek du camp de base chinois au camp intermédiaire',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to the Intermediate Camp.',
+                            'fr' => 'Trek jusqu\'au camp intermédiaire.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,750 m/18,865 ft',
+                            'fr' => '5 750 m/18 865 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 14: Ascent from Intermediate Camp to Advanced Basecamp',
+                    'fr' => 'Jour 14: Ascension du camp intermédiaire au camp de base avancé',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Ascend to the Advanced Basecamp.',
+                            'fr' => 'Ascension vers le camp de base avancé.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '6,400 m/20,997 ft',
+                            'fr' => '6 400 m/20 997 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 15-30: Rotation period for acclimatization',
+                    'fr' => 'Jour 15-30: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Advanced Basecamp, North Col (7,000 m), and higher points up to 7,500 m, returning to Chinese Basecamp for recovery.',
+                            'fr' => 'Rotation entre le camp de base avancé, le col Nord (7 000 m) et des points plus élevés jusqu\'à 7 500 m, retour au camp de base chinois pour la récupération.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'High Camp',
+                            'fr' => 'Camp élevé',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31-51: Climbing period to Everest Summit',
+                    'fr' => 'Jour 31-51: Période d\'escalade jusqu\'au sommet de l\'Everest',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Climbing from Chinese Basecamp to Advanced Basecamp, Camp I, Camp II (7,700 m), Camp III (8,300 m), and summit push to Everest (8,848.86 m), descending back to Advanced Basecamp.',
+                            'fr' => 'Escalade du camp de base chinois au camp de base avancé, camp I, camp II (7 700 m), camp III (8 300 m), et poussée au sommet de l\'Everest (8 848,86 m), descente au camp de base avancé.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'High Camp',
+                            'fr' => 'Camp élevé',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 52: Cleaning up basecamp and preparation for return',
+                    'fr' => 'Jour 52: Nettoyage du camp de base et préparation pour le retour',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Pack up gear and clean the basecamp area.',
+                            'fr' => 'Ranger l\'équipement et nettoyer la zone du camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 53: Trek from Advanced Basecamp to Chinese Basecamp',
+                    'fr' => 'Jour 53: Trek du camp de base avancé au camp de base chinois',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend back to Chinese Basecamp.',
+                            'fr' => 'Redescendre au camp de base chinois.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,100 m/16,732 ft',
+                            'fr' => '5 100 m/16 732 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 54: Drive from Chinese Basecamp to Thingri',
+                    'fr' => 'Jour 54: Route du camp de base chinois à Thingri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Thingri.',
+                            'fr' => 'Retour en voiture à Thingri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,300 m/14,108 ft',
+                            'fr' => '4 300 m/14 108 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 55: Drive from Thingri to Kerung border',
+                    'fr' => 'Jour 55: Route de Thingri à la frontière de Kerung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to the Kerung border.',
+                            'fr' => 'Conduire jusqu\'à la frontière de Kerung.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,962 m/6,437 ft',
+                            'fr' => '1 962 m/6 437 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 56: Cross the border and drive to Kathmandu',
+                    'fr' => 'Jour 56: Traversée de la frontière et route vers Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Cross back into Nepal and drive to Kathmandu.',
+                            'fr' => 'Repasser au Népal et conduire jusqu\'à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 57: Leisure day in Kathmandu',
+                    'fr' => 'Jour 57: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu at your own pace.',
+                            'fr' => 'Détendez-vous et explorez Katmandou à votre rythme.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 58: Transfer to the airport for final departure',
+                    'fr' => 'Jour 58: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $k2_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Islamabad and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Islamabad et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive in Islamabad and transfer to your hotel for rest.',
+                            'fr' => 'Arrivée à Islamabad et transfert à votre hôtel pour vous reposer.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Fly from Islamabad to Skardu',
+                    'fr' => 'Jour 02: Vol d\'Islamabad à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Take a scenic flight to Skardu.',
+                            'fr' => 'Prendre un vol pittoresque vers Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,228 m/7,310 ft',
+                            'fr' => '2 228 m/7 310 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Rest day in Skardu',
+                    'fr' => 'Jour 03: Journée de repos à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and acclimatize in Skardu.',
+                            'fr' => 'Détendez-vous et acclimatez-vous à Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Rest day in Skardu for expedition briefing and preparation',
+                    'fr' => 'Jour 04: Journée de repos à Skardu pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend expedition briefing and finalize preparations.',
+                            'fr' => 'Assister au briefing de l\'expédition et finaliser les préparatifs.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Drive from Skardu to Askole',
+                    'fr' => 'Jour 05: Route de Skardu à Askole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive through rugged terrain to Askole.',
+                            'fr' => 'Conduire à travers un terrain accidenté jusqu\'à Askole.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,600 m/8,530 ft',
+                            'fr' => '2 600 m/8 530 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Askole to Jhola',
+                    'fr' => 'Jour 06: Trek d\'Askole à Jhola',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Begin the trek to Jhola along the Braldu River.',
+                            'fr' => 'Commencer le trek vers Jhola le long de la rivière Braldu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,185 m/10,449 ft',
+                            'fr' => '3 185 m/10 449 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Jhola to Paiyu',
+                    'fr' => 'Jour 07: Trek de Jhola à Paiyu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Paiyu with views of the Karakoram range.',
+                            'fr' => 'Trek vers Paiyu avec des vues sur la chaîne du Karakoram.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,383 m/11,099 ft',
+                            'fr' => '3 383 m/11 099 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Rest day in Paiyu',
+                    'fr' => 'Jour 08: Journée de repos à Paiyu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and acclimatize at Paiyu.',
+                            'fr' => 'Repos et acclimatation à Paiyu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Paiyu to Urdukas',
+                    'fr' => 'Jour 09: Trek de Paiyu à Urdukas',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Urdukas with stunning glacier views.',
+                            'fr' => 'Trek vers Urdukas avec des vues imprenables sur les glaciers.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,130 m/13,550 ft',
+                            'fr' => '4 130 m/13 550 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Urdukas to Goro II',
+                    'fr' => 'Jour 10: Trek d\'Urdukas à Goro II',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Goro II amidst towering peaks.',
+                            'fr' => 'Trek vers Goro II au milieu de pics imposants.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,250 m/13,944 ft',
+                            'fr' => '4 250 m/13 944 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11: Trek from Goro II to Concordia',
+                    'fr' => 'Jour 11: Trek de Goro II à Concordia',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Concordia, the heart of the Karakoram.',
+                            'fr' => 'Trek vers Concordia, le cœur du Karakoram.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,690 m/15,387 ft',
+                            'fr' => '4 690 m/15 387 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 12: Trek from Concordia to K2 Basecamp',
+                    'fr' => 'Jour 12: Trek de Concordia au camp de base du K2',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to K2 Basecamp with breathtaking views of K2.',
+                            'fr' => 'Trek vers le camp de base du K2 avec des vues imprenables sur le K2.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,150 m/16,896 ft',
+                            'fr' => '5 150 m/16 896 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 13-35: Rotation period for acclimatization',
+                    'fr' => 'Jour 13-35: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, Camp II, and Camp III for acclimatization.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II et le camp III pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 36-43: Climbing period to K2 Summit',
+                    'fr' => 'Jour 36-43: Période d\'escalade jusqu\'au sommet du K2',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Summit push from Basecamp to K2 Summit (8,611 m) and return to Basecamp.',
+                            'fr' => 'Poussée au sommet depuis le camp de base jusqu\'au sommet du K2 (8 611 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 44: Cleaning up basecamp and preparation for descent',
+                    'fr' => 'Jour 44: Nettoyage du camp de base et préparation pour la descente',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Clean up Basecamp and pack for the return journey.',
+                            'fr' => 'Nettoyer le camp de base et préparer le voyage de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 45: Trek from Basecamp to Goro II',
+                    'fr' => 'Jour 45: Trek du camp de base à Goro II',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Goro II.',
+                            'fr' => 'Trek de retour à Goro II.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,250 m/13,944 ft',
+                            'fr' => '4 250 m/13 944 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 46: Trek from Goro II to Khuburtze',
+                    'fr' => 'Jour 46: Trek de Goro II à Khuburtze',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Continue the descent to Khuburtze.',
+                            'fr' => 'Continuer la descente vers Khuburtze.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 47: Trek from Khuburtze to Mundung',
+                    'fr' => 'Jour 47: Trek de Khuburtze à Mundung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Mundung through scenic valleys.',
+                            'fr' => 'Trek vers Mundung à travers des vallées pittoresques.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 48: Trek from Mundung to Askole',
+                    'fr' => 'Jour 48: Trek de Mundung à Askole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Askole.',
+                            'fr' => 'Dernier trek de retour à Askole.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,600 m/8,530 ft',
+                            'fr' => '2 600 m/8 530 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 49: Drive from Askole to Skardu',
+                    'fr' => 'Jour 49: Route d\'Askole à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Skardu.',
+                            'fr' => 'Retour en voiture à Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,228 m/7,310 ft',
+                            'fr' => '2 228 m/7 310 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 50: Leisure day in Skardu with debriefing',
+                    'fr' => 'Jour 50: Journée de loisirs à Skardu avec débriefing',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and attend a debriefing at the Ministry.',
+                            'fr' => 'Repos et participation à un débriefing au ministère.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 51: Fly from Skardu to Islamabad and transfer to the hotel',
+                    'fr' => 'Jour 51: Vol de Skardu à Islamabad et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Islamabad.',
+                            'fr' => 'Vol de retour à Islamabad.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 52: Transfer to the airport for final departure',
+                    'fr' => 'Jour 52: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to the airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $kanchenjunga_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,350 m/4,429 ft',
+                            'fr' => '1 350 m/4 429 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Bhadrapur and drive to Phidim',
+                    'fr' => 'Jour 03: Vol de Katmandou à Bhadrapur et route vers Phidim',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Bhadrapur.',
+                            'fr' => 'Court vol vers Bhadrapur.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive from Bhadrapur to Phidim.',
+                            'fr' => 'Conduire de Bhadrapur à Phidim.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Drive from Phidim to Yamphudin',
+                    'fr' => 'Jour 04: Route de Phidim à Yamphudin',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Yamphudin, the starting point of the trek.',
+                            'fr' => 'Conduire jusqu\'à Yamphudin, le point de départ du trek.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,080 m/6,824 ft',
+                            'fr' => '2 080 m/6 824 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Acclimatization in Yamphudin',
+                    'fr' => 'Jour 05: Acclimatation à Yamphudin',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day to acclimatize and explore Yamphudin.',
+                            'fr' => 'Journée de repos pour s\'acclimater et explorer Yamphudin.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Yamphudin to Tortong',
+                    'fr' => 'Jour 06: Trek de Yamphudin à Tortong',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek through forests to Tortong.',
+                            'fr' => 'Trek à travers les forêts jusqu\'à Tortong.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,995 m/9,826 ft',
+                            'fr' => '2 995 m/9 826 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Tortong to Tseram',
+                    'fr' => 'Jour 07: Trek de Tortong à Tseram',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Tseram with views of the Kanchenjunga range.',
+                            'fr' => 'Trek vers Tseram avec des vues sur la chaîne du Kanchenjunga.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,870 m/12,697 ft',
+                            'fr' => '3 870 m/12 697 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization in Tseram with hike to Ramche',
+                    'fr' => 'Jour 08: Acclimatation à Tseram avec randonnée à Ramche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with a hike to Ramche for acclimatization.',
+                            'fr' => 'Journée de repos avec une randonnée à Ramche pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,580 m/15,026 ft',
+                            'fr' => '4 580 m/15 026 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Acclimatization in Tseram',
+                    'fr' => 'Jour 09: Acclimatation à Tseram',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Additional rest day to acclimatize.',
+                            'fr' => 'Journée de repos supplémentaire pour s\'acclimater.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Fly by helicopter from Tseram to Kanchenjunga Basecamp',
+                    'fr' => 'Jour 10: Vol en hélicoptère de Tseram au camp de base du Kanchenjunga',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HELICOPTER,
+                        'description' => [
+                            'en' => 'Helicopter flight to Kanchenjunga Basecamp.',
+                            'fr' => 'Vol en hélicoptère jusqu\'au camp de base du Kanchenjunga.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,475 m/17,963 ft',
+                            'fr' => '5 475 m/17 963 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-35: Rotation period for acclimatization',
+                    'fr' => 'Jour 11-35: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, Camp II, and Camp III for acclimatization.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II et le camp III pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 36-45: Climbing period to Kanchenjunga Summit',
+                    'fr' => 'Jour 36-45: Période d\'escalade jusqu\'au sommet du Kanchenjunga',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Summit push from Basecamp to Kanchenjunga Summit (8,586 m) and return to Basecamp.',
+                            'fr' => 'Poussée au sommet depuis le camp de base jusqu\'au sommet du Kanchenjunga (8 586 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 46: Fly by helicopter from Basecamp to Tapetok',
+                    'fr' => 'Jour 46: Vol en hélicoptère du camp de base à Tapetok',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HELICOPTER,
+                        'description' => [
+                            'en' => 'Helicopter flight back to Tapetok.',
+                            'fr' => 'Vol en hélicoptère de retour à Tapetok.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 47: Drive from Tapetok to Bhadrapur via Phidim',
+                    'fr' => 'Jour 47: Route de Tapetok à Bhadrapur via Phidim',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Bhadrapur with a stop in Phidim.',
+                            'fr' => 'Conduire jusqu\'à Bhadrapur avec un arrêt à Phidim.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 48: Fly from Bhadrapur to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 48: Vol de Bhadrapur à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,350 m/4,429 ft',
+                            'fr' => '1 350 m/4 429 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 49: Leisure day in Kathmandu',
+                    'fr' => 'Jour 49: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Explore Kathmandu at your leisure.',
+                            'fr' => 'Explorez Katmandou à votre guise.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 50: Transfer to the airport for final departure',
+                    'fr' => 'Jour 50: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to the airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $makalu_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend briefing and prepare gear.',
+                            'fr' => 'Assister au briefing et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Tumlingtar and drive to Num',
+                    'fr' => 'Jour 03: Vol de Katmandou à Tumlingtar et route vers Num',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Tumlingtar.',
+                            'fr' => 'Court vol vers Tumlingtar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive from Tumlingtar to Num.',
+                            'fr' => 'Conduire de Tumlingtar à Num.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,560 m/5,118 ft',
+                            'fr' => '1 560 m/5 118 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Num to Seduwa',
+                    'fr' => 'Jour 04: Trek de Num à Seduwa',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Seduwa through rural landscapes.',
+                            'fr' => 'Trek vers Seduwa à travers des paysages ruraux.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,510 m/4,954 ft',
+                            'fr' => '1 510 m/4 954 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Seduwa to Tashi Gaun',
+                    'fr' => 'Jour 05: Trek de Seduwa à Tashi Gaun',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Tashi Gaun, a Sherpa village.',
+                            'fr' => 'Trek vers Tashi Gaun, un village Sherpa.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,070 m/6,791 ft',
+                            'fr' => '2 070 m/6 791 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Acclimatization at Tashi Gaun',
+                    'fr' => 'Jour 06: Acclimatation à Tashi Gaun',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day to acclimatize and explore the village.',
+                            'fr' => 'Journée de repos pour s\'acclimater et explorer le village.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Tashi Gaun to Khongma',
+                    'fr' => 'Jour 07: Trek de Tashi Gaun à Khongma',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Khongma through alpine terrain.',
+                            'fr' => 'Trek vers Khongma à travers un terrain alpin.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,760 m/12,336 ft',
+                            'fr' => '3 760 m/12 336 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Khongma to Dobato',
+                    'fr' => 'Jour 08: Trek de Khongma à Dobato',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dobato with scenic views.',
+                            'fr' => 'Trek vers Dobato avec des vues pittoresques.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,010 m/13,156 ft',
+                            'fr' => '4 010 m/13 156 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Dobato to Yangle Kharka',
+                    'fr' => 'Jour 09: Trek de Dobato à Yangle Kharka',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Yangle Kharka.',
+                            'fr' => 'Trek vers Yangle Kharka.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,640 m/11,942 ft',
+                            'fr' => '3 640 m/11 942 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Yangle Kharka to Makalu Lower Basecamp',
+                    'fr' => 'Jour 10: Trek de Yangle Kharka au camp de base inférieur de Makalu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Makalu Lower Basecamp and begin acclimatization.',
+                            'fr' => 'Trek vers le camp de base inférieur de Makalu et début de l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,850 m/15,912 ft',
+                            'fr' => '4 850 m/15 912 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-12: Acclimatization in Lower Base Camp',
+                    'fr' => 'Jour 11-12: Acclimatation au camp de base inférieur',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Two days of rest and acclimatization at Lower Base Camp.',
+                            'fr' => 'Deux jours de repos et d\'acclimatation au camp de base inférieur.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 13: Hike from Lower Base Camp to Higher Base Camp',
+                    'fr' => 'Jour 13: Randonnée du camp de base inférieur au camp de base principal',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Hike to the main Makalu Base Camp.',
+                            'fr' => 'Randonnée vers le camp de base principal de Makalu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,600 m/18,373 ft',
+                            'fr' => '5 600 m/18 373 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 14-30: Rotation period for acclimatization',
+                    'fr' => 'Jour 14-30: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, Camp II, and Camp III.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II et le camp III.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'High Camp',
+                            'fr' => 'Camp élevé',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31-42: Climbing period to Makalu Summit',
+                    'fr' => 'Jour 31-42: Période d\'escalade jusqu\'au sommet de Makalu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Summit push from Basecamp to Makalu Summit (8,485 m) and return.',
+                            'fr' => 'Poussée au sommet depuis le camp de base jusqu\'au sommet de Makalu (8 485 m) et retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'High Camp',
+                            'fr' => 'Camp élevé',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 43: Cleaning up Base Camp',
+                    'fr' => 'Jour 43: Nettoyage du camp de base',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Pack up and clean the Base Camp.',
+                            'fr' => 'Ranger et nettoyer le camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 44: Trek from Makalu Base Camp to Yangle Kharka',
+                    'fr' => 'Jour 44: Trek du camp de base de Makalu à Yangle Kharka',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Yangle Kharka.',
+                            'fr' => 'Descendre à Yangle Kharka.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,640 m/11,942 ft',
+                            'fr' => '3 640 m/11 942 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 45: Trek from Yangle Kharka to Khongma',
+                    'fr' => 'Jour 45: Trek de Yangle Kharka à Khongma',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Khongma.',
+                            'fr' => 'Trek de retour à Khongma.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,760 m/12,336 ft',
+                            'fr' => '3 760 m/12 336 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 46: Trek from Khongma to Seduwa',
+                    'fr' => 'Jour 46: Trek de Khongma à Seduwa',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Seduwa.',
+                            'fr' => 'Trek vers Seduwa.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,510 m/4,954 ft',
+                            'fr' => '1 510 m/4 954 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 47: Trek from Seduwa to Num and drive to Khadbari',
+                    'fr' => 'Jour 47: Trek de Seduwa à Num et route vers Khadbari',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Num.',
+                            'fr' => 'Trek vers Num.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive from Num to Khadbari.',
+                            'fr' => 'Conduire de Num à Khadbari.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 48: Drive from Khadbari to Tumlingtar and fly to Kathmandu',
+                    'fr' => 'Jour 48: Route de Khadbari à Tumlingtar et vol vers Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Tumlingtar.',
+                            'fr' => 'Conduire à Tumlingtar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 49: Leisure day in Kathmandu',
+                    'fr' => 'Jour 49: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 50: Transfer to the airport for final departure',
+                    'fr' => 'Jour 50: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to the airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $cho_oyu_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest day in Kathmandu for Tibet visa preparation',
+                    'fr' => 'Jour 02: Journée de repos à Katmandou pour la préparation du visa tibétain',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and prepare documentation for the Tibet visa.',
+                            'fr' => 'Repos et préparation des documents pour le visa tibétain.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Apply for Tibet visa and expedition briefing',
+                    'fr' => 'Jour 03: Demande de visa tibétain et briefing de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Submit visa applications and attend expedition briefing.',
+                            'fr' => 'Soumettre les demandes de visa et assister au briefing de l\'expédition.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Rest in Kathmandu',
+                    'fr' => 'Jour 04: Repos à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Final rest day to prepare for the journey.',
+                            'fr' => 'Dernière journée de repos pour préparer le voyage.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Drive from Kathmandu to Timure',
+                    'fr' => 'Jour 05: Route de Katmandou à Timure',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Timure near the Tibet border.',
+                            'fr' => 'Conduire jusqu\'à Timure près de la frontière tibétaine.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Cross the border and drive to Kerung',
+                    'fr' => 'Jour 06: Traversée de la frontière et route vers Kerung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Cross the Nepal-Tibet border and drive to Kerung.',
+                            'fr' => 'Traverser la frontière Népal-Tibet et conduire jusqu\'à Kerung.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,962 m/6,437 ft',
+                            'fr' => '1 962 m/6 437 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Drive from Kerung to Thingri',
+                    'fr' => 'Jour 07: Route de Kerung à Thingri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive through the Tibetan plateau to Thingri.',
+                            'fr' => 'Conduire à travers le plateau tibétain jusqu\'à Thingri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,300 m/14,108 ft',
+                            'fr' => '4 300 m/14 108 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization and preparation day in Thingri',
+                    'fr' => 'Jour 08: Journée d\'acclimatation et de préparation à Thingri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and acclimatize with light exploration.',
+                            'fr' => 'Repos et acclimatation avec une légère exploration.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Drive from Thingri to Cho Oyu Chinese Basecamp via Rombuk Monastery',
+                    'fr' => 'Jour 09: Route de Thingri au camp de base chinois de Cho Oyu via le monastère de Rombuk',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Cho Oyu Chinese Basecamp with a stop at Rombuk Monastery.',
+                            'fr' => 'Conduire jusqu\'au camp de base chinois de Cho Oyu avec un arrêt au monastère de Rombuk.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,100 m/16,732 ft',
+                            'fr' => '5 100 m/16 732 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Rest in Cho Oyu Chinese Basecamp',
+                    'fr' => 'Jour 10: Repos au camp de base chinois de Cho Oyu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and acclimatize at the Chinese Basecamp.',
+                            'fr' => 'Repos et acclimatation au camp de base chinois.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11: Trek from Chinese Basecamp to Intermediate Camp',
+                    'fr' => 'Jour 11: Trek du camp de base chinois au camp intermédiaire',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Intermediate Camp.',
+                            'fr' => 'Trek jusqu\'au camp intermédiaire.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,400 m/17,717 ft',
+                            'fr' => '5 400 m/17 717 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 12: Ascent from Intermediate Camp to Advanced Basecamp',
+                    'fr' => 'Jour 12: Ascension du camp intermédiaire au camp de base avancé',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Ascend to Advanced Basecamp.',
+                            'fr' => 'Ascension vers le camp de base avancé.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,700 m/18,701 ft',
+                            'fr' => '5 700 m/18 701 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 13-20: Rotation period for acclimatization',
+                    'fr' => 'Jour 13-20: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => '1st Rotation: Basecamp to Camp I, touch Camp II, sleep at Camp I, descend to Basecamp. 2nd Rotation: Basecamp to Camp I, Camp I to Camp II, sleep at Camp II, descend to Basecamp.',
+                            'fr' => '1ère rotation : Camp de base au camp I, toucher le camp II, dormir au camp I, redescendre au camp de base. 2ème rotation : Camp de base au camp I, camp I au camp II, dormir au camp II, redescendre au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'High Camp',
+                            'fr' => 'Camp élevé',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 21-26: Climbing period to Cho Oyu Summit',
+                    'fr' => 'Jour 21-26: Période d\'escalade jusqu\'au sommet de Cho Oyu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Climb from Advanced Basecamp to Camp I, Camp II, summit Cho Oyu (8,188 m), and descend to Camp II or directly to Advanced Basecamp.',
+                            'fr' => 'Escalade du camp de base avancé au camp I, camp II, sommet de Cho Oyu (8 188 m), et descente au camp II ou directement au camp de base avancé.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'High Camp',
+                            'fr' => 'Camp élevé',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 27: Trek from Advanced Basecamp to Chinese Basecamp',
+                    'fr' => 'Jour 27: Trek du camp de base avancé au camp de base chinois',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Chinese Basecamp.',
+                            'fr' => 'Redescendre au camp de base chinois.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,100 m/16,732 ft',
+                            'fr' => '5 100 m/16 732 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 28: Drive from Chinese Basecamp to Thingri',
+                    'fr' => 'Jour 28: Route du camp de base chinois à Thingri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Thingri.',
+                            'fr' => 'Retour en voiture à Thingri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,300 m/14,108 ft',
+                            'fr' => '4 300 m/14 108 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 29: Drive from Thingri to Kerung Border',
+                    'fr' => 'Jour 29: Route de Thingri à la frontière de Kerung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to the Kerung border.',
+                            'fr' => 'Conduire jusqu\'à la frontière de Kerung.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,962 m/6,437 ft',
+                            'fr' => '1 962 m/6 437 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30: Cross the border and drive to Kathmandu',
+                    'fr' => 'Jour 30: Traversée de la frontière et route vers Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Cross back into Nepal and drive to Kathmandu.',
+                            'fr' => 'Repasser au Népal et conduire jusqu\'à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Leisure day in Kathmandu',
+                    'fr' => 'Jour 31: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu at your leisure.',
+                            'fr' => 'Détendez-vous et explorez Katmandou à votre guise.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 32: Transfer to the airport for final departure',
+                    'fr' => 'Jour 32: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $dhaulagiri_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend expedition briefing and prepare gear.',
+                            'fr' => 'Assister au briefing de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Pokhara',
+                    'fr' => 'Jour 03: Vol de Katmandou à Pokhara',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Pokhara.',
+                            'fr' => 'Court vol vers Pokhara.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '960 m/3,150 ft',
+                            'fr' => '960 m/3 150 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Drive from Pokhara to Marpha',
+                    'fr' => 'Jour 04: Route de Pokhara à Marpha',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Marpha, a picturesque village.',
+                            'fr' => 'Conduire jusqu\'à Marpha, un village pittoresque.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Acclimatization in Marpha with exploration',
+                    'fr' => 'Jour 05: Acclimatation à Marpha avec exploration',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day to acclimatize and explore Muktinath.',
+                            'fr' => 'Journée de repos pour s\'acclimater et explorer Muktinath.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Marpha to Yak Kharka',
+                    'fr' => 'Jour 06: Trek de Marpha à Yak Kharka',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Yak Kharka through rugged terrain.',
+                            'fr' => 'Trek vers Yak Kharka à travers un terrain accidenté.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,900 m/16,076 ft',
+                            'fr' => '4 900 m/16 076 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Yak Kharka to Dhampus Basecamp via Thapa Pass',
+                    'fr' => 'Jour 07: Trek de Yak Kharka au camp de base de Dhampus via le col de Thapa',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dhampus Basecamp via Thapa Pass.',
+                            'fr' => 'Trek vers le camp de base de Dhampus via le col de Thapa.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,244 m/17,205 ft',
+                            'fr' => '5 244 m/17 205 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '7-8 hours',
+                            'fr' => '7-8 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Dhampus Basecamp to Dhaulagiri Basecamp',
+                    'fr' => 'Jour 08: Trek du camp de base de Dhampus au camp de base de Dhaulagiri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dhaulagiri Basecamp.',
+                            'fr' => 'Trek vers le camp de base de Dhaulagiri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,750 m/15,584 ft',
+                            'fr' => '4 750 m/15 584 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09-29: Rotation period for acclimatization',
+                    'fr' => 'Jour 09-29: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, Camp II, and touch Camp III.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II et toucher le camp III.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30-40: Summit push to Dhaulagiri',
+                    'fr' => 'Jour 30-40: Poussée au sommet de Dhaulagiri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Climb from Basecamp to Camp II, Camp III, summit Dhaulagiri (8,167 m), and return to Camp II or Basecamp.',
+                            'fr' => 'Escalade du camp de base au camp II, camp III, sommet de Dhaulagiri (8 167 m), et retour au camp II ou au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 41: Trek from Dhaulagiri Basecamp to Yak Kharka',
+                    'fr' => 'Jour 41: Trek du camp de base de Dhaulagiri à Yak Kharka',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Yak Kharka.',
+                            'fr' => 'Descendre à Yak Kharka.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,680 m/12,073 ft',
+                            'fr' => '3 680 m/12 073 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 42: Trek from Yak Kharka to Marpha',
+                    'fr' => 'Jour 42: Trek de Yak Kharka à Marpha',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Marpha.',
+                            'fr' => 'Trek de retour à Marpha.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 43: Drive from Marpha to Pokhara',
+                    'fr' => 'Jour 43: Route de Marpha à Pokhara',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Pokhara.',
+                            'fr' => 'Retour en voiture à Pokhara.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '960 m/3,150 ft',
+                            'fr' => '960 m/3 150 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 44: Fly from Pokhara to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 44: Vol de Pokhara à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 45: Leisure day in Kathmandu',
+                    'fr' => 'Jour 45: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Explore Kathmandu at your leisure.',
+                            'fr' => 'Explorez Katmandou à votre guise.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 46: Transfer to the airport for final departure',
+                    'fr' => 'Jour 46: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to the airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $manaslu_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend briefing and prepare gear.',
+                            'fr' => 'Assister au briefing et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Drive from Kathmandu to Besisahar',
+                    'fr' => 'Jour 03: Route de Katmandou à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Besisahar, the gateway to the Manaslu region.',
+                            'fr' => 'Conduire jusqu\'à Besisahar, la porte d\'entrée de la région de Manaslu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Drive from Besisahar to Dharapani',
+                    'fr' => 'Jour 04: Route de Besisahar à Dharapani',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Dharapani.',
+                            'fr' => 'Conduire jusqu\'à Dharapani.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,860 m/6,102 ft',
+                            'fr' => '1 860 m/6 102 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Dharapani to Gowa',
+                    'fr' => 'Jour 05: Trek de Dharapani à Gowa',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Gowa through scenic trails.',
+                            'fr' => 'Trek vers Gowa à travers des sentiers pittoresques.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,530 m/8,301 ft',
+                            'fr' => '2 530 m/8 301 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Gowa to Bhimthang',
+                    'fr' => 'Jour 06: Trek de Gowa à Bhimthang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Bhimthang with views of Manaslu.',
+                            'fr' => 'Trek vers Bhimthang avec des vues sur Manaslu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,720 m/12,205 ft',
+                            'fr' => '3 720 m/12 205 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Acclimatization at Bhimthang',
+                    'fr' => 'Jour 07: Acclimatation à Bhimthang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day to acclimatize.',
+                            'fr' => 'Journée de repos pour s\'acclimater.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Bhimthang to Samdo via Larke Pass',
+                    'fr' => 'Jour 08: Trek de Bhimthang à Samdo via le col de Larke',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Samdo crossing the challenging Larke Pass.',
+                            'fr' => 'Trek vers Samdo en traversant le col de Larke, un défi.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,160 m/16,929 ft (Larke Pass), 3,872 m/12,703 ft (Samdo)',
+                            'fr' => '5 160 m/16 929 ft (col de Larke), 3 872 m/12 703 ft (Samdo)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '8-9 hours',
+                            'fr' => '8-9 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Samdo to Sama Gaun',
+                    'fr' => 'Jour 09: Trek de Samdo à Sama Gaun',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Sama Gaun, a key village near Manaslu.',
+                            'fr' => 'Trek vers Sama Gaun, un village clé près de Manaslu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,541 m/11,617 ft',
+                            'fr' => '3 541 m/11 617 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Sama Gaun to Manaslu Basecamp',
+                    'fr' => 'Jour 10: Trek de Sama Gaun au camp de base de Manaslu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Manaslu Basecamp.',
+                            'fr' => 'Trek vers le camp de base de Manaslu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,700 m/15,420 ft',
+                            'fr' => '4 700 m/15 420 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-22: Rotation period for acclimatization',
+                    'fr' => 'Jour 11-22: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, Camp II, and touch Camp III.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II et toucher le camp III.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 23-29: Summit push to Manaslu',
+                    'fr' => 'Jour 23-29: Poussée au sommet de Manaslu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Climb from Basecamp to Manaslu Summit (8,163 m) and return to Basecamp.',
+                            'fr' => 'Escalade du camp de base au sommet de Manaslu (8 163 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30: Trek from Manaslu Basecamp to Sama Gaun',
+                    'fr' => 'Jour 30: Trek du camp de base de Manaslu à Sama Gaun',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Sama Gaun.',
+                            'fr' => 'Descendre à Sama Gaun.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,541 m/11,617 ft',
+                            'fr' => '3 541 m/11 617 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Trek from Sama Gaun to Namrung',
+                    'fr' => 'Jour 31: Trek de Sama Gaun à Namrung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namrung.',
+                            'fr' => 'Trek vers Namrung.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 32: Trek from Namrung to Philim',
+                    'fr' => 'Jour 32: Trek de Namrung à Philim',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Philim through lush valleys.',
+                            'fr' => 'Trek vers Philim à travers des vallées luxuriantes.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,606 m/5,269 ft',
+                            'fr' => '1 606 m/5 269 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 33: Trek from Philim to Machha Khola',
+                    'fr' => 'Jour 33: Trek de Philim à Machha Khola',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Machha Khola along the Budhi Gandaki River.',
+                            'fr' => 'Trek vers Machha Khola le long de la rivière Budhi Gandaki.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '883 m/2,897 ft',
+                            'fr' => '883 m/2 897 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 34: Drive from Machha Khola to Kathmandu',
+                    'fr' => 'Jour 34: Route de Machha Khola à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Kathmandu.',
+                            'fr' => 'Retour en voiture à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 35: Leisure day in Kathmandu',
+                    'fr' => 'Jour 35: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu at your leisure.',
+                            'fr' => 'Détendez-vous et explorez Katmandou à votre guise.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 36: Transfer to the airport for final departure',
+                    'fr' => 'Jour 36: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $nanga_parbat_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Islamabad and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Islamabad et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive in Islamabad and transfer to your hotel.',
+                            'fr' => 'Arrivée à Islamabad et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest day in Islamabad for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Journée de repos à Islamabad pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '585 m/1,919 ft',
+                            'fr' => '585 m/1 919 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Drive from Islamabad to Chilas on Karakoram Highway',
+                    'fr' => 'Jour 03: Route d\'Islamabad à Chilas sur l\'autoroute du Karakoram',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Chilas along the scenic Karakoram Highway.',
+                            'fr' => 'Conduire jusqu\'à Chilas le long de l\'autoroute pittoresque du Karakoram.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,265 m/4,150 ft',
+                            'fr' => '1 265 m/4 150 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Rest day in Chilas for packing and preparation',
+                    'fr' => 'Jour 04: Journée de repos à Chilas pour emballage et préparation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and finalize preparations in Chilas.',
+                            'fr' => 'Repos et finalisation des préparatifs à Chilas.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Drive from Chilas to Halale and trek to Kachal',
+                    'fr' => 'Jour 05: Route de Chilas à Halale et trek à Kachal',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Halale.',
+                            'fr' => 'Conduire jusqu\'à Halale.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek from Halale to Kachal.',
+                            'fr' => 'Trek de Halale à Kachal.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Kachal to Nanga Parbat Basecamp / Diamir Basecamp',
+                    'fr' => 'Jour 06: Trek de Kachal au camp de base de Nanga Parbat / camp de base Diamir',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Nanga Parbat Diamir Basecamp with stunning views.',
+                            'fr' => 'Trek vers le camp de base Diamir de Nanga Parbat avec des vues imprenables.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,100 m/13,451 ft',
+                            'fr' => '4 100 m/13 451 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07-35: Rotation period for acclimatization',
+                    'fr' => 'Jour 07-35: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, Camp II, and Camp III for acclimatization.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II et le camp III pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 36-45: Climbing period to Nanga Parbat Summit',
+                    'fr' => 'Jour 36-45: Période d\'escalade jusqu\'au sommet de Nanga Parbat',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Summit push from Basecamp to Nanga Parbat Summit (8,125 m) and return to Basecamp.',
+                            'fr' => 'Poussée au sommet depuis le camp de base jusqu\'au sommet de Nanga Parbat (8 125 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 46: Cleaning up Basecamp and preparation for descent',
+                    'fr' => 'Jour 46: Nettoyage du camp de base et préparation pour la descente',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Clean up Basecamp and pack for the return journey.',
+                            'fr' => 'Nettoyer le camp de base et préparer le voyage de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 47: Trek from Basecamp to Diamoroi',
+                    'fr' => 'Jour 47: Trek du camp de base à Diamoroi',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Diamoroi.',
+                            'fr' => 'Trek de retour à Diamoroi.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 48: Trek from Diamoroi to Halale and drive to Chilas',
+                    'fr' => 'Jour 48: Trek de Diamoroi à Halale et route vers Chilas',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Halale.',
+                            'fr' => 'Trek vers Halale.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive from Halale to Chilas.',
+                            'fr' => 'Conduire de Halale à Chilas.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,265 m/4,150 ft',
+                            'fr' => '1 265 m/4 150 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 49: Drive from Chilas to Islamabad',
+                    'fr' => 'Jour 49: Route de Chilas à Islamabad',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Islamabad.',
+                            'fr' => 'Retour en voiture à Islamabad.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '585 m/1,919 ft',
+                            'fr' => '585 m/1 919 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 50: Transfer to the airport for final departure',
+                    'fr' => 'Jour 50: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to the airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $annapurna_i_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Pokhara',
+                    'fr' => 'Jour 03: Vol de Katmandou à Pokhara',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Pokhara.',
+                            'fr' => 'Court vol vers Pokhara.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '960 m/3,150 ft',
+                            'fr' => '960 m/3 150 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Drive from Pokhara to Dana',
+                    'fr' => 'Jour 04: Route de Pokhara à Dana',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Dana, the starting point for the helicopter flight.',
+                            'fr' => 'Conduire jusqu\'à Dana, le point de départ du vol en hélicoptère.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,440 m/4,724 ft',
+                            'fr' => '1 440 m/4 724 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Fly by helicopter from Dana to Annapurna I Basecamp',
+                    'fr' => 'Jour 05: Vol en hélicoptère de Dana au camp de base d\'Annapurna I',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HELICOPTER,
+                        'description' => [
+                            'en' => 'Helicopter flight to Annapurna I Basecamp.',
+                            'fr' => 'Vol en hélicoptère jusqu\'au camp de base d\'Annapurna I.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,190 m/13,747 ft',
+                            'fr' => '4 190 m/13 747 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06-29: Rotation period for acclimatization',
+                    'fr' => 'Jour 06-29: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, and Camp II for acclimatization.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30-37: Climbing period to Annapurna I Summit',
+                    'fr' => 'Jour 30-37: Période d\'escalade jusqu\'au sommet d\'Annapurna I',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Summit push from Basecamp to Annapurna I Summit (8,091 m) and return to Basecamp.',
+                            'fr' => 'Poussée au sommet depuis le camp de base jusqu\'au sommet d\'Annapurna I (8 091 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 38: Fly by helicopter from Annapurna I Basecamp to Dana',
+                    'fr' => 'Jour 38: Vol en hélicoptère du camp de base d\'Annapurna I à Dana',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HELICOPTER,
+                        'description' => [
+                            'en' => 'Helicopter flight back to Dana in a group.',
+                            'fr' => 'Vol en hélicoptère de retour à Dana en groupe.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,440 m/4,724 ft',
+                            'fr' => '1 440 m/4 724 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 39: Drive from Dana to Pokhara and fly to Kathmandu',
+                    'fr' => 'Jour 39: Route de Dana à Pokhara et vol vers Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Pokhara.',
+                            'fr' => 'Conduire jusqu\'à Pokhara.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly from Pokhara to Kathmandu.',
+                            'fr' => 'Vol de Pokhara à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 40: Leisure day in Kathmandu',
+                    'fr' => 'Jour 40: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 41: Transfer to the airport for final departure',
+                    'fr' => 'Jour 41: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $gasherbrum_i_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Islamabad and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Islamabad et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive in Islamabad and transfer to your hotel.',
+                            'fr' => 'Arrivée à Islamabad et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Fly from Islamabad to Skardu',
+                    'fr' => 'Jour 02: Vol d\'Islamabad à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Take a scenic flight to Skardu.',
+                            'fr' => 'Prendre un vol pittoresque vers Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,228 m/7,310 ft',
+                            'fr' => '2 228 m/7 310 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Rest day in Skardu',
+                    'fr' => 'Jour 03: Journée de repos à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and acclimatize in Skardu.',
+                            'fr' => 'Détendez-vous et acclimatez-vous à Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Rest day in Skardu for expedition briefing and preparation',
+                    'fr' => 'Jour 04: Journée de repos à Skardu pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend expedition briefing and finalize preparations.',
+                            'fr' => 'Assister au briefing de l\'expédition et finaliser les préparatifs.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Drive from Skardu to Askole',
+                    'fr' => 'Jour 05: Route de Skardu à Askole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive through rugged terrain to Askole.',
+                            'fr' => 'Conduire à travers un terrain accidenté jusqu\'à Askole.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,600 m/8,530 ft',
+                            'fr' => '2 600 m/8 530 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Askole to Jhola',
+                    'fr' => 'Jour 06: Trek d\'Askole à Jhola',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Begin the trek to Jhola along the Braldu River.',
+                            'fr' => 'Commencer le trek vers Jhola le long de la rivière Braldu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,185 m/10,449 ft',
+                            'fr' => '3 185 m/10 449 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Jhola to Paiyu',
+                    'fr' => 'Jour 07: Trek de Jhola à Paiyu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Paiyu with views of the Karakoram range.',
+                            'fr' => 'Trek vers Paiyu avec des vues sur la chaîne du Karakoram.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,383 m/11,099 ft',
+                            'fr' => '3 383 m/11 099 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Rest day in Paiyu',
+                    'fr' => 'Jour 08: Journée de repos à Paiyu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and acclimatize at Paiyu.',
+                            'fr' => 'Repos et acclimatation à Paiyu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Paiyu to Urdukas',
+                    'fr' => 'Jour 09: Trek de Paiyu à Urdukas',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Urdukas with stunning glacier views.',
+                            'fr' => 'Trek vers Urdukas avec des vues imprenables sur les glaciers.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,130 m/13,550 ft',
+                            'fr' => '4 130 m/13 550 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Urdukas to Goro II',
+                    'fr' => 'Jour 10: Trek d\'Urdukas à Goro II',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Goro II amidst towering peaks.',
+                            'fr' => 'Trek vers Goro II au milieu de pics imposants.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,250 m/13,944 ft',
+                            'fr' => '4 250 m/13 944 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11: Trek from Goro II to Shagharing',
+                    'fr' => 'Jour 11: Trek de Goro II à Shagharing',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Shagharing.',
+                            'fr' => 'Trek vers Shagharing.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,530 m/14,862 ft',
+                            'fr' => '4 530 m/14 862 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 12: Trek from Shagharing to Gasherbrum I Basecamp',
+                    'fr' => 'Jour 12: Trek de Shagharing au camp de base de Gasherbrum I',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Gasherbrum I Basecamp.',
+                            'fr' => 'Trek vers le camp de base de Gasherbrum I.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,000 m/16,404 ft',
+                            'fr' => '5 000 m/16 404 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 13-33: Rotation period for acclimatization',
+                    'fr' => 'Jour 13-33: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, Camp II, and Camp III for acclimatization.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II et le camp III pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 34-41: Climbing period to Gasherbrum I Summit',
+                    'fr' => 'Jour 34-41: Période d\'escalade jusqu\'au sommet de Gasherbrum I',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Summit push from Basecamp to Gasherbrum I Summit (8,080 m) and return to Basecamp.',
+                            'fr' => 'Poussée au sommet depuis le camp de base jusqu\'au sommet de Gasherbrum I (8 080 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 42: Cleaning up Basecamp and preparation for descent',
+                    'fr' => 'Jour 42: Nettoyage du camp de base et préparation pour la descente',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Clean up Basecamp and pack for the return journey.',
+                            'fr' => 'Nettoyer le camp de base et préparer le voyage de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 43: Trek from Basecamp to Goro II',
+                    'fr' => 'Jour 43: Trek du camp de base à Goro II',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Goro II.',
+                            'fr' => 'Trek de retour à Goro II.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,250 m/13,944 ft',
+                            'fr' => '4 250 m/13 944 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 44: Trek from Goro II to Khuburtze',
+                    'fr' => 'Jour 44: Trek de Goro II à Khuburtze',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Continue the descent to Khuburtze.',
+                            'fr' => 'Continuer la descente vers Khuburtze.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 45: Trek from Khuburtze to Mundung',
+                    'fr' => 'Jour 45: Trek de Khuburtze à Mundung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Mundung through scenic valleys.',
+                            'fr' => 'Trek vers Mundung à travers des vallées pittoresques.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 46: Trek from Mundung to Askole',
+                    'fr' => 'Jour 46: Trek de Mundung à Askole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Askole.',
+                            'fr' => 'Dernier trek de retour à Askole.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,600 m/8,530 ft',
+                            'fr' => '2 600 m/8 530 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 47: Drive from Askole to Skardu',
+                    'fr' => 'Jour 47: Route d\'Askole à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Skardu.',
+                            'fr' => 'Retour en voiture à Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,228 m/7,310 ft',
+                            'fr' => '2 228 m/7 310 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 48: Leisure day in Skardu with debriefing',
+                    'fr' => 'Jour 48: Journée de loisirs à Skardu avec débriefing',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and attend a debriefing at the Ministry.',
+                            'fr' => 'Repos et participation à un débriefing au ministère.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 49: Fly from Skardu to Islamabad and transfer to the hotel',
+                    'fr' => 'Jour 49: Vol de Skardu à Islamabad et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Islamabad.',
+                            'fr' => 'Vol de retour à Islamabad.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 50: Transfer to the airport for final departure',
+                    'fr' => 'Jour 50: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to the airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $broad_peak_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Islamabad and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Islamabad et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive in Islamabad and transfer to your hotel.',
+                            'fr' => 'Arrivée à Islamabad et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Fly from Islamabad to Skardu',
+                    'fr' => 'Jour 02: Vol d\'Islamabad à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Take a scenic flight to Skardu.',
+                            'fr' => 'Prendre un vol pittoresque vers Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,228 m/7,310 ft',
+                            'fr' => '2 228 m/7 310 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Rest day in Skardu',
+                    'fr' => 'Jour 03: Journée de repos à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and acclimatize in Skardu.',
+                            'fr' => 'Détendez-vous et acclimatez-vous à Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Rest day in Skardu for expedition briefing and preparation',
+                    'fr' => 'Jour 04: Journée de repos à Skardu pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend expedition briefing and finalize preparations.',
+                            'fr' => 'Assister au briefing de l\'expédition et finaliser les préparatifs.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Drive from Skardu to Askole',
+                    'fr' => 'Jour 05: Route de Skardu à Askole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive through rugged terrain to Askole.',
+                            'fr' => 'Conduire à travers un terrain accidenté jusqu\'à Askole.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,600 m/8,530 ft',
+                            'fr' => '2 600 m/8 530 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Askole to Jhola',
+                    'fr' => 'Jour 06: Trek d\'Askole à Jhola',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Begin the trek to Jhola along the Braldu River.',
+                            'fr' => 'Commencer le trek vers Jhola le long de la rivière Braldu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,185 m/10,449 ft',
+                            'fr' => '3 185 m/10 449 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Jhola to Paiyu',
+                    'fr' => 'Jour 07: Trek de Jhola à Paiyu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Paiyu with views of the Karakoram range.',
+                            'fr' => 'Trek vers Paiyu avec des vues sur la chaîne du Karakoram.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,383 m/11,099 ft',
+                            'fr' => '3 383 m/11 099 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Rest day in Paiyu',
+                    'fr' => 'Jour 08: Journée de repos à Paiyu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and acclimatize at Paiyu.',
+                            'fr' => 'Repos et acclimatation à Paiyu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Paiyu to Urdukas',
+                    'fr' => 'Jour 09: Trek de Paiyu à Urdukas',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Urdukas with stunning glacier views.',
+                            'fr' => 'Trek vers Urdukas avec des vues imprenables sur les glaciers.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,130 m/13,550 ft',
+                            'fr' => '4 130 m/13 550 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Urdukas to Goro II',
+                    'fr' => 'Jour 10: Trek d\'Urdukas à Goro II',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Goro II amidst towering peaks.',
+                            'fr' => 'Trek vers Goro II au milieu de pics imposants.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,250 m/13,944 ft',
+                            'fr' => '4 250 m/13 944 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11: Trek from Goro II to Concordia',
+                    'fr' => 'Jour 11: Trek de Goro II à Concordia',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Concordia, the heart of the Karakoram.',
+                            'fr' => 'Trek vers Concordia, le cœur du Karakoram.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,690 m/15,387 ft',
+                            'fr' => '4 690 m/15 387 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 12: Trek from Concordia to Broad Peak Basecamp',
+                    'fr' => 'Jour 12: Trek de Concordia au camp de base de Broad Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Broad Peak Basecamp with views of Broad Peak.',
+                            'fr' => 'Trek vers le camp de base de Broad Peak avec des vues sur Broad Peak.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,150 m/16,896 ft',
+                            'fr' => '5 150 m/16 896 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 13-35: Rotation period for acclimatization',
+                    'fr' => 'Jour 13-35: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, Camp II, and Camp III for acclimatization.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II et le camp III pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 36-43: Climbing period to Broad Peak Summit',
+                    'fr' => 'Jour 36-43: Période d\'escalade jusqu\'au sommet de Broad Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Summit push from Basecamp to Broad Peak Summit (8,051 m) and return to Basecamp.',
+                            'fr' => 'Poussée au sommet depuis le camp de base jusqu\'au sommet de Broad Peak (8 051 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 44: Cleaning up Basecamp and preparation for descent',
+                    'fr' => 'Jour 44: Nettoyage du camp de base et préparation pour la descente',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Clean up Basecamp and pack for the return journey.',
+                            'fr' => 'Nettoyer le camp de base et préparer le voyage de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 45: Trek from Basecamp to Goro II',
+                    'fr' => 'Jour 45: Trek du camp de base à Goro II',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Goro II.',
+                            'fr' => 'Trek de retour à Goro II.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,250 m/13,944 ft',
+                            'fr' => '4 250 m/13 944 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 46: Trek from Goro II to Khuburtze',
+                    'fr' => 'Jour 46: Trek de Goro II à Khuburtze',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Continue the descent to Khuburtze.',
+                            'fr' => 'Continuer la descente vers Khuburtze.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 47: Trek from Khuburtze to Mundung',
+                    'fr' => 'Jour 47: Trek de Khuburtze à Mundung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Mundung through scenic valleys.',
+                            'fr' => 'Trek vers Mundung à travers des vallées pittoresques.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 48: Trek from Mundung to Askole',
+                    'fr' => 'Jour 48: Trek de Mundung à Askole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Askole.',
+                            'fr' => 'Dernier trek de retour à Askole.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,600 m/8,530 ft',
+                            'fr' => '2 600 m/8 530 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 49: Drive from Askole to Skardu',
+                    'fr' => 'Jour 49: Route d\'Askole à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Skardu.',
+                            'fr' => 'Retour en voiture à Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,228 m/7,310 ft',
+                            'fr' => '2 228 m/7 310 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 50: Leisure day in Skardu with debriefing',
+                    'fr' => 'Jour 50: Journée de loisirs à Skardu avec débriefing',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and attend a debriefing at the Ministry.',
+                            'fr' => 'Repos et participation à un débriefing au ministère.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 51: Fly from Skardu to Islamabad and transfer to the hotel',
+                    'fr' => 'Jour 51: Vol de Skardu à Islamabad et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Islamabad.',
+                            'fr' => 'Vol de retour à Islamabad.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 52: Transfer to the airport for final departure',
+                    'fr' => 'Jour 52: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to the airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $gasherbrum_ii_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Islamabad and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Islamabad et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive in Islamabad and transfer to your hotel.',
+                            'fr' => 'Arrivée à Islamabad et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Fly from Islamabad to Skardu',
+                    'fr' => 'Jour 02: Vol d\'Islamabad à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Take a scenic flight to Skardu.',
+                            'fr' => 'Prendre un vol pittoresque vers Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,228 m/7,310 ft',
+                            'fr' => '2 228 m/7 310 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Rest day in Skardu',
+                    'fr' => 'Jour 03: Journée de repos à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and acclimatize in Skardu.',
+                            'fr' => 'Détendez-vous et acclimatez-vous à Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Rest day in Skardu for expedition briefing and preparation',
+                    'fr' => 'Jour 04: Journée de repos à Skardu pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend expedition briefing and finalize preparations.',
+                            'fr' => 'Assister au briefing de l\'expédition et finaliser les préparatifs.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Drive from Skardu to Askole',
+                    'fr' => 'Jour 05: Route de Skardu à Askole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive through rugged terrain to Askole.',
+                            'fr' => 'Conduire à travers un terrain accidenté jusqu\'à Askole.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,600 m/8,530 ft',
+                            'fr' => '2 600 m/8 530 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Askole to Jhola',
+                    'fr' => 'Jour 06: Trek d\'Askole à Jhola',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Begin the trek to Jhola along the Braldu River.',
+                            'fr' => 'Commencer le trek vers Jhola le long de la rivière Braldu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,185 m/10,449 ft',
+                            'fr' => '3 185 m/10 449 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Jhola to Paiyu',
+                    'fr' => 'Jour 07: Trek de Jhola à Paiyu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Paiyu with views of the Karakoram range.',
+                            'fr' => 'Trek vers Paiyu avec des vues sur la chaîne du Karakoram.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,383 m/11,099 ft',
+                            'fr' => '3 383 m/11 099 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Rest day in Paiyu',
+                    'fr' => 'Jour 08: Journée de repos à Paiyu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and acclimatize at Paiyu.',
+                            'fr' => 'Repos et acclimatation à Paiyu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Paiyu to Urdukas',
+                    'fr' => 'Jour 09: Trek de Paiyu à Urdukas',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Urdukas with stunning glacier views.',
+                            'fr' => 'Trek vers Urdukas avec des vues imprenables sur les glaciers.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,130 m/13,550 ft',
+                            'fr' => '4 130 m/13 550 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Urdukas to Goro II',
+                    'fr' => 'Jour 10: Trek d\'Urdukas à Goro II',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Goro II amidst towering peaks.',
+                            'fr' => 'Trek vers Goro II au milieu de pics imposants.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,250 m/13,944 ft',
+                            'fr' => '4 250 m/13 944 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11: Trek from Goro II to Shagharing',
+                    'fr' => 'Jour 11: Trek de Goro II à Shagharing',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Shagharing.',
+                            'fr' => 'Trek vers Shagharing.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,530 m/14,862 ft',
+                            'fr' => '4 530 m/14 862 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 12: Trek from Shagharing to Gasherbrum II Basecamp',
+                    'fr' => 'Jour 12: Trek de Shagharing au camp de base de Gasherbrum II',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Gasherbrum II Basecamp.',
+                            'fr' => 'Trek vers le camp de base de Gasherbrum II.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,000 m/16,404 ft',
+                            'fr' => '5 000 m/16 404 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 13-33: Rotation period for acclimatization',
+                    'fr' => 'Jour 13-33: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, Camp II, and Camp III for acclimatization.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II et le camp III pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 34-41: Climbing period to Gasherbrum II Summit',
+                    'fr' => 'Jour 34-41: Période d\'escalade jusqu\'au sommet de Gasherbrum II',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Summit push from Basecamp to Gasherbrum II Summit (8,035 m) and return to Basecamp.',
+                            'fr' => 'Poussée au sommet depuis le camp de base jusqu\'au sommet de Gasherbrum II (8 035 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 42: Cleaning up Basecamp and preparation for descent',
+                    'fr' => 'Jour 42: Nettoyage du camp de base et préparation pour la descente',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Clean up Basecamp and pack for the return journey.',
+                            'fr' => 'Nettoyer le camp de base et préparer le voyage de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 43: Trek from Basecamp to Goro II',
+                    'fr' => 'Jour 43: Trek du camp de base à Goro II',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Goro II.',
+                            'fr' => 'Trek de retour à Goro II.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,250 m/13,944 ft',
+                            'fr' => '4 250 m/13 944 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 44: Trek from Goro II to Khuburtze',
+                    'fr' => 'Jour 44: Trek de Goro II à Khuburtze',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Continue the descent to Khuburtze.',
+                            'fr' => 'Continuer la descente vers Khuburtze.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 45: Trek from Khuburtze to Mundung',
+                    'fr' => 'Jour 45: Trek de Khuburtze à Mundung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Mundung through scenic valleys.',
+                            'fr' => 'Trek vers Mundung à travers des vallées pittoresques.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 46: Trek from Mundung to Askole',
+                    'fr' => 'Jour 46: Trek de Mundung à Askole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Askole.',
+                            'fr' => 'Dernier trek de retour à Askole.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,600 m/8,530 ft',
+                            'fr' => '2 600 m/8 530 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 47: Drive from Askole to Skardu',
+                    'fr' => 'Jour 47: Route d\'Askole à Skardu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Skardu.',
+                            'fr' => 'Retour en voiture à Skardu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,228 m/7,310 ft',
+                            'fr' => '2 228 m/7 310 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 48: Leisure day in Skardu with debriefing',
+                    'fr' => 'Jour 48: Journée de loisirs à Skardu avec débriefing',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and attend a debriefing at the Ministry.',
+                            'fr' => 'Repos et participation à un débriefing au ministère.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 49: Fly from Skardu to Islamabad and transfer to the hotel',
+                    'fr' => 'Jour 49: Vol de Skardu à Islamabad et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Islamabad.',
+                            'fr' => 'Vol de retour à Islamabad.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 50: Transfer to the airport for final departure',
+                    'fr' => 'Jour 50: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to the airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+
+        $shisha_pangma_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest day in Kathmandu for Tibet visa preparation',
+                    'fr' => 'Jour 02: Journée de repos à Katmandou pour la préparation du visa tibétain',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and prepare documentation for the Tibet visa.',
+                            'fr' => 'Repos et préparation des documents pour le visa tibétain.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Apply for Tibet visa and expedition briefing',
+                    'fr' => 'Jour 03: Demande de visa tibétain et briefing de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Submit visa applications and attend expedition briefing.',
+                            'fr' => 'Soumettre les demandes de visa et assister au briefing de l\'expédition.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Rest in Kathmandu',
+                    'fr' => 'Jour 04: Repos à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Final rest day to prepare for the journey.',
+                            'fr' => 'Dernière journée de repos pour préparer le voyage.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Drive from Kathmandu to Timure',
+                    'fr' => 'Jour 05: Route de Katmandou à Timure',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Timure near the Tibet border.',
+                            'fr' => 'Conduire jusqu\'à Timure près de la frontière tibétaine.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Cross the border and drive to Kerung',
+                    'fr' => 'Jour 06: Traversée de la frontière et route vers Kerung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Cross the Nepal-Tibet border and drive to Kerung.',
+                            'fr' => 'Traverser la frontière Népal-Tibet et conduire jusqu\'à Kerung.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,962 m/6,437 ft',
+                            'fr' => '1 962 m/6 437 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Drive from Kerung to Thingri',
+                    'fr' => 'Jour 07: Route de Kerung à Thingri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive through the Tibetan plateau to Thingri.',
+                            'fr' => 'Conduire à travers le plateau tibétain jusqu\'à Thingri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,300 m/14,108 ft',
+                            'fr' => '4 300 m/14 108 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization and preparation day in Thingri',
+                    'fr' => 'Jour 08: Journée d\'acclimatation et de préparation à Thingri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and acclimatize with light exploration.',
+                            'fr' => 'Repos et acclimatation avec une légère exploration.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Drive from Thingri to Shisha Pangma Chinese Basecamp',
+                    'fr' => 'Jour 09: Route de Thingri au camp de base chinois de Shisha Pangma',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Shisha Pangma Chinese Basecamp.',
+                            'fr' => 'Conduire jusqu\'au camp de base chinois de Shisha Pangma.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,220 m/17,126 ft',
+                            'fr' => '5 220 m/17 126 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Acclimatization at Chinese Basecamp',
+                    'fr' => 'Jour 10: Acclimatation au camp de base chinois',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest and acclimatize at the Chinese Basecamp.',
+                            'fr' => 'Repos et acclimatation au camp de base chinois.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11: Trek from Chinese Basecamp to Shisha Pangma Advance Basecamp',
+                    'fr' => 'Jour 11: Trek du camp de base chinois au camp de base avancé de Shisha Pangma',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Shisha Pangma Advance Basecamp.',
+                            'fr' => 'Trek vers le camp de base avancé de Shisha Pangma.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,400 m/17,717 ft',
+                            'fr' => '5 400 m/17 717 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 12-20: Rotation period for acclimatization',
+                    'fr' => 'Jour 12-20: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => '1st Rotation: Basecamp to Camp I, touch Camp II, sleep at Camp I, descend to Basecamp. 2nd Rotation: Basecamp to Camp I, Camp I to Camp II, sleep at Camp II, descend to Basecamp.',
+                            'fr' => '1ère rotation : Camp de base au camp I, toucher le camp II, dormir au camp I, redescendre au camp de base. 2ème rotation : Camp de base au camp I, camp I au camp II, dormir au camp II, redescendre au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'High Camp',
+                            'fr' => 'Camp élevé',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 21-27: Climbing period to Shisha Pangma Summit',
+                    'fr' => 'Jour 21-27: Période d\'escalade jusqu\'au sommet de Shisha Pangma',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Climb from Advance Basecamp to Camp I, Camp II, summit Shisha Pangma (8,027 m), and descend to Camp II or directly to Advance Basecamp.',
+                            'fr' => 'Escalade du camp de base avancé au camp I, camp II, sommet de Shisha Pangma (8 027 m), et descente au camp II ou directement au camp de base avancé.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'High Camp',
+                            'fr' => 'Camp élevé',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 28: Descend from Advance Basecamp to Chinese Basecamp',
+                    'fr' => 'Jour 28: Descente du camp de base avancé au camp de base chinois',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Chinese Basecamp.',
+                            'fr' => 'Redescendre au camp de base chinois.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,220 m/17,126 ft',
+                            'fr' => '5 220 m/17 126 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 29: Drive from Chinese Basecamp to Thingri',
+                    'fr' => 'Jour 29: Route du camp de base chinois à Thingri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Thingri.',
+                            'fr' => 'Retour en voiture à Thingri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,300 m/14,108 ft',
+                            'fr' => '4 300 m/14 108 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30: Drive from Thingri to Kerung Border',
+                    'fr' => 'Jour 30: Route de Thingri à la frontière de Kerung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to the Kerung border.',
+                            'fr' => 'Conduire jusqu\'à la frontière de Kerung.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,962 m/6,437 ft',
+                            'fr' => '1 962 m/6 437 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Cross the border and drive to Kathmandu',
+                    'fr' => 'Jour 31: Traversée de la frontière et route vers Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Cross back into Nepal and drive to Kathmandu.',
+                            'fr' => 'Repasser au Népal et conduire jusqu\'à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 32: Leisure day in Kathmandu',
+                    'fr' => 'Jour 32: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu at your leisure.',
+                            'fr' => 'Détendez-vous et explorez Katmandou à votre guise.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 33: Transfer to the airport for final departure',
+                    'fr' => 'Jour 33: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $gyachung_kang_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Fly from Kathmandu to Lukla and trek to Phakding',
+                    'fr' => 'Jour 02: Vol de Katmandou à Lukla et trek à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Lukla.',
+                            'fr' => 'Court vol vers Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek from Lukla to Phakding.',
+                            'fr' => 'Trek de Lukla à Phakding.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Trek from Phakding to Namche Bazaar',
+                    'fr' => 'Jour 03: Trek de Phakding à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namche Bazaar, the gateway to the Everest region.',
+                            'fr' => 'Trek vers Namche Bazaar, la porte d\'entrée de la région de l\'Everest.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Acclimatization at Namche Bazaar with hike to Khumjung Valley',
+                    'fr' => 'Jour 04: Acclimatation à Namche Bazaar avec randonnée à la vallée de Khumjung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with a hike to Khumjung Valley for acclimatization.',
+                            'fr' => 'Journée de repos avec une randonnée à la vallée de Khumjung pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Namche Bazaar to Dole',
+                    'fr' => 'Jour 05: Trek de Namche Bazaar à Dole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dole through rhododendron forests.',
+                            'fr' => 'Trek vers Dole à travers les forêts de rhododendrons.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,200 m/13,780 ft',
+                            'fr' => '4 200 m/13 780 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Dole to Machhermo',
+                    'fr' => 'Jour 06: Trek de Dole à Machhermo',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Machhermo with stunning mountain views.',
+                            'fr' => 'Trek vers Machhermo avec des vues imprenables sur les montagnes.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,450 m/14,600 ft',
+                            'fr' => '4 450 m/14 600 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Machhermo to Gokyo',
+                    'fr' => 'Jour 07: Trek de Machhermo à Gokyo',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Gokyo, known for its stunning lakes.',
+                            'fr' => 'Trek vers Gokyo, connu pour ses lacs magnifiques.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,750 m/15,584 ft',
+                            'fr' => '4 750 m/15 584 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization day with hike to Gokyo Ri',
+                    'fr' => 'Jour 08: Journée d\'acclimatation avec randonnée à Gokyo Ri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with a hike to Gokyo Ri for acclimatization and views.',
+                            'fr' => 'Journée de repos avec une randonnée à Gokyo Ri pour l\'acclimatation et les vues.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,300 m/17,388 ft (Gokyo Ri)',
+                            'fr' => '5 300 m/17 388 ft (Gokyo Ri)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Gokyo to Ngozumba Tso',
+                    'fr' => 'Jour 09: Trek de Gokyo à Ngozumba Tso',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Ngozumba Tso near the glacier.',
+                            'fr' => 'Trek vers Ngozumba Tso près du glacier.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,998 m/16,398 ft',
+                            'fr' => '4 998 m/16 398 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Ngozumba Tso to Gyachung Kang Basecamp',
+                    'fr' => 'Jour 10: Trek de Ngozumba Tso au camp de base de Gyachung Kang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Gyachung Kang Basecamp.',
+                            'fr' => 'Trek vers le camp de base de Gyachung Kang.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,350 m/17,552 ft',
+                            'fr' => '5 350 m/17 552 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-41: Climbing period to Gyachung Kang Summit',
+                    'fr' => 'Jour 11-41: Période d\'escalade jusqu\'au sommet de Gyachung Kang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Climb from Basecamp to Gyachung Kang Summit (7,952 m) and return to Basecamp.',
+                            'fr' => 'Escalade du camp de base au sommet de Gyachung Kang (7 952 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 42: Basecamp cleanup',
+                    'fr' => 'Jour 42: Nettoyage du camp de base',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Pack up and clean the Basecamp area.',
+                            'fr' => 'Ranger et nettoyer la zone du camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 43: Trek from Basecamp to Gokyo',
+                    'fr' => 'Jour 43: Trek du camp de base à Gokyo',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Gokyo.',
+                            'fr' => 'Descendre à Gokyo.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,750 m/15,584 ft',
+                            'fr' => '4 750 m/15 584 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 44: Trek from Gokyo to Dole',
+                    'fr' => 'Jour 44: Trek de Gokyo à Dole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Dole.',
+                            'fr' => 'Trek de retour à Dole.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,200 m/13,780 ft',
+                            'fr' => '4 200 m/13 780 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 45: Trek from Dole to Namche Bazaar',
+                    'fr' => 'Jour 45: Trek de Dole à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Namche Bazaar.',
+                            'fr' => 'Trek de retour à Namche Bazaar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 46: Trek from Namche Bazaar to Lukla',
+                    'fr' => 'Jour 46: Trek de Namche Bazaar à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Lukla.',
+                            'fr' => 'Dernier trek de retour à Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 47: Fly from Lukla to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 47: Vol de Lukla à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 48: Leisure day in Kathmandu',
+                    'fr' => 'Jour 48: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 49: Transfer to the airport for final departure',
+                    'fr' => 'Jour 49: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $himlung_himal_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Drive from Kathmandu to Besisahar',
+                    'fr' => 'Jour 03: Route de Katmandou à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Besisahar, the gateway to the Annapurna region.',
+                            'fr' => 'Conduire jusqu\'à Besisahar, la porte d\'entrée de la région de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Drive from Besisahar to Koto',
+                    'fr' => 'Jour 04: Route de Besisahar à Koto',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Koto, near the Nar Phu Valley.',
+                            'fr' => 'Conduire jusqu\'à Koto, près de la vallée de Nar Phu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,600 m/8,530 ft',
+                            'fr' => '2 600 m/8 530 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Koto to Meta',
+                    'fr' => 'Jour 05: Trek de Koto à Meta',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Meta through the Nar Phu Valley.',
+                            'fr' => 'Trek vers Meta à travers la vallée de Nar Phu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,560 m/11,680 ft',
+                            'fr' => '3 560 m/11 680 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Meta to Kyang',
+                    'fr' => 'Jour 06: Trek de Meta à Kyang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Kyang with views of remote landscapes.',
+                            'fr' => 'Trek vers Kyang avec des vues sur des paysages isolés.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,840 m/12,598 ft',
+                            'fr' => '3 840 m/12 598 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Kyang to Phu Gaun',
+                    'fr' => 'Jour 07: Trek de Kyang à Phu Gaun',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Phu Gaun, a traditional village.',
+                            'fr' => 'Trek vers Phu Gaun, un village traditionnel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,900 m/12,795 ft',
+                            'fr' => '3 900 m/12 795 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization at Phu Gaun',
+                    'fr' => 'Jour 08: Acclimatation à Phu Gaun',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day to acclimatize and explore Phu Gaun.',
+                            'fr' => 'Journée de repos pour s\'acclimater et explorer Phu Gaun.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Phu Gaun to Himlung Basecamp',
+                    'fr' => 'Jour 09: Trek de Phu Gaun au camp de base de Himlung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Himlung Basecamp.',
+                            'fr' => 'Trek vers le camp de base de Himlung.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,900 m/16,076 ft',
+                            'fr' => '4 900 m/16 076 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10-21: Rotation period for acclimatization',
+                    'fr' => 'Jour 10-21: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, and Camp II for acclimatization.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 22-26: Summit push to Himlung Himal',
+                    'fr' => 'Jour 22-26: Poussée au sommet de Himlung Himal',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Climb from Basecamp to Himlung Himal Summit (7,126 m) and return to Basecamp.',
+                            'fr' => 'Escalade du camp de base au sommet de Himlung Himal (7 126 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 27: Trek from Basecamp to Phu Gaun',
+                    'fr' => 'Jour 27: Trek du camp de base à Phu Gaun',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Phu Gaun.',
+                            'fr' => 'Descendre à Phu Gaun.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,900 m/12,795 ft',
+                            'fr' => '3 900 m/12 795 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 28: Trek from Phu Gaun to Meta',
+                    'fr' => 'Jour 28: Trek de Phu Gaun à Meta',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Meta.',
+                            'fr' => 'Trek de retour à Meta.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,560 m/11,680 ft',
+                            'fr' => '3 560 m/11 680 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 29: Trek from Meta to Koto',
+                    'fr' => 'Jour 29: Trek de Meta à Koto',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Koto.',
+                            'fr' => 'Trek de retour à Koto.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,600 m/8,530 ft',
+                            'fr' => '2 600 m/8 530 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30: Drive from Koto to Besisahar',
+                    'fr' => 'Jour 30: Route de Koto à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Besisahar.',
+                            'fr' => 'Retour en voiture à Besisahar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Drive from Besisahar to Kathmandu',
+                    'fr' => 'Jour 31: Route de Besisahar à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Kathmandu.',
+                            'fr' => 'Retour en voiture à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 32: Leisure day in Kathmandu',
+                    'fr' => 'Jour 32: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 33: Transfer to the airport for final departure',
+                    'fr' => 'Jour 33: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $baruntse_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Lukla and trek to Chutanga',
+                    'fr' => 'Jour 03: Vol de Katmandou à Lukla et trek à Chutanga',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Lukla.',
+                            'fr' => 'Court vol vers Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek from Lukla to Chutanga.',
+                            'fr' => 'Trek de Lukla à Chutanga.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,060 m/10,039 ft',
+                            'fr' => '3 060 m/10 039 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Chutanga to Tuli Kharka via Zatrawa La Pass',
+                    'fr' => 'Jour 04: Trek de Chutanga à Tuli Kharka via le col de Zatrawa La',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Tuli Kharka crossing Zatrawa La Pass.',
+                            'fr' => 'Trek vers Tuli Kharka en traversant le col de Zatrawa La.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,610 m/15,125 ft (Zatrawa La), 3,900 m/12,795 ft (Tuli Kharka)',
+                            'fr' => '4 610 m/15 125 ft (Zatrawa La), 3 900 m/12 795 ft (Tuli Kharka)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Tuli Kharka to Kothe',
+                    'fr' => 'Jour 05: Trek de Tuli Kharka à Kothe',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Kothe through forested trails.',
+                            'fr' => 'Trek vers Kothe à travers des sentiers forestiers.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,095 m/13,435 ft',
+                            'fr' => '4 095 m/13 435 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Kothe to Thangnak',
+                    'fr' => 'Jour 06: Trek de Kothe à Thangnak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Thangnak with views of the Hinku Valley.',
+                            'fr' => 'Trek vers Thangnak avec des vues sur la vallée de Hinku.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,350 m/14,272 ft',
+                            'fr' => '4 350 m/14 272 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Thangnak to Khare',
+                    'fr' => 'Jour 07: Trek de Thangnak à Khare',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Khare, a key acclimatization point.',
+                            'fr' => 'Trek vers Khare, un point clé d\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,054 m/16,581 ft',
+                            'fr' => '5 054 m/16 581 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization at Khare',
+                    'fr' => 'Jour 08: Acclimatation à Khare',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day to acclimatize and prepare for higher altitudes.',
+                            'fr' => 'Journée de repos pour s\'acclimater et se préparer aux altitudes élevées.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Khare to Khamedingma',
+                    'fr' => 'Jour 09: Trek de Khare à Khamedingma',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Khamedingma.',
+                            'fr' => 'Trek vers Khamedingma.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Khamedingma to Seto Pokhari',
+                    'fr' => 'Jour 10: Trek de Khamedingma à Seto Pokhari',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Seto Pokhari, a high-altitude campsite.',
+                            'fr' => 'Trek vers Seto Pokhari, un campement en haute altitude.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,035 m/16,519 ft',
+                            'fr' => '5 035 m/16 519 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11: Trek from Seto Pokhari to Baruntse Basecamp',
+                    'fr' => 'Jour 11: Trek de Seto Pokhari au camp de base de Baruntse',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Baruntse Basecamp.',
+                            'fr' => 'Trek vers le camp de base de Baruntse.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,400 m/17,717 ft',
+                            'fr' => '5 400 m/17 717 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 12-23: Rotation period for acclimatization',
+                    'fr' => 'Jour 12-23: Période de rotation pour l\'acclimatation',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, and Camp II for acclimatization.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 24-28: Summit push to Baruntse',
+                    'fr' => 'Jour 24-28: Poussée au sommet de Baruntse',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Climb from Basecamp to Baruntse Summit (7,129 m) and return to Basecamp.',
+                            'fr' => 'Escalade du camp de base au sommet de Baruntse (7 129 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 29: Trek from Baruntse Basecamp to Khamedingma',
+                    'fr' => 'Jour 29: Trek du camp de base de Baruntse à Khamedingma',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Khamedingma.',
+                            'fr' => 'Descendre à Khamedingma.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30: Trek from Khamedingma to Thangnak',
+                    'fr' => 'Jour 30: Trek de Khamedingma à Thangnak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Thangnak.',
+                            'fr' => 'Trek de retour à Thangnak.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,350 m/14,272 ft',
+                            'fr' => '4 350 m/14 272 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Trek from Thangnak to Chatrabu',
+                    'fr' => 'Jour 31: Trek de Thangnak à Chatrabu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Chatrabu.',
+                            'fr' => 'Trek vers Chatrabu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 32: Trek from Chatrabu to Lukla',
+                    'fr' => 'Jour 32: Trek de Chatrabu à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Lukla.',
+                            'fr' => 'Trek de retour à Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 33: Fly from Lukla to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 33: Vol de Lukla à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 34: Leisure day in Kathmandu',
+                    'fr' => 'Jour 34: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 35: Transfer to the airport for final departure',
+                    'fr' => 'Jour 35: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+
+
+        $pumori_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Lukla and trek to Phakding',
+                    'fr' => 'Jour 03: Vol de Katmandou à Lukla et trek à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Lukla.',
+                            'fr' => 'Court vol vers Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek from Lukla to Phakding.',
+                            'fr' => 'Trek de Lukla à Phakding.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Phakding to Namche Bazaar',
+                    'fr' => 'Jour 04: Trek de Phakding à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namche Bazaar, the gateway to Everest.',
+                            'fr' => 'Trek vers Namche Bazaar, la porte d\'entrée de l\'Everest.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Acclimatization at Namche Bazaar',
+                    'fr' => 'Jour 05: Acclimatation à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Namche Bazaar to Tengboche',
+                    'fr' => 'Jour 06: Trek de Namche Bazaar à Tengboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Tengboche, home to a famous monastery.',
+                            'fr' => 'Trek vers Tengboche, abritant un célèbre monastère.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,870 m/12,697 ft',
+                            'fr' => '3 870 m/12 697 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Tengboche to Dingboche',
+                    'fr' => 'Jour 07: Trek de Tengboche à Dingboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dingboche with views of Ama Dablam.',
+                            'fr' => 'Trek vers Dingboche avec des vues sur Ama Dablam.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,360 m/14,305 ft',
+                            'fr' => '4 360 m/14 305 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization at Dingboche',
+                    'fr' => 'Jour 08: Acclimatation à Dingboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Dingboche to Lobuche',
+                    'fr' => 'Jour 09: Trek de Dingboche à Lobuche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Lobuche along the Khumbu Glacier.',
+                            'fr' => 'Trek vers Lobuche le long du glacier Khumbu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,940 m/16,207 ft',
+                            'fr' => '4 940 m/16 207 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Lobuche to Pumori Basecamp',
+                    'fr' => 'Jour 10: Trek de Lobuche au camp de base de Pumori',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Pumori Basecamp.',
+                            'fr' => 'Trek vers le camp de base de Pumori.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,300 m/17,388 ft',
+                            'fr' => '5 300 m/17 388 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-30: Rotation period for acclimatization and summit push to Pumori',
+                    'fr' => 'Jour 11-30: Période de rotation pour l\'acclimatation et poussée au sommet de Pumori',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, and Camp II, followed by a summit push to Pumori (7,161 m) and return to Basecamp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II, suivie d\'une poussée au sommet de Pumori (7 161 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Trek from Pumori Basecamp to Lobuche',
+                    'fr' => 'Jour 31: Trek du camp de base de Pumori à Lobuche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Lobuche.',
+                            'fr' => 'Descendre à Lobuche.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,940 m/16,207 ft',
+                            'fr' => '4 940 m/16 207 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 32: Trek from Lobuche to Pangboche',
+                    'fr' => 'Jour 32: Trek de Lobuche à Pangboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Pangboche.',
+                            'fr' => 'Trek de retour à Pangboche.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,985 m/13,074 ft',
+                            'fr' => '3 985 m/13 074 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 33: Trek from Pangboche to Namche Bazaar',
+                    'fr' => 'Jour 33: Trek de Pangboche à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Namche Bazaar.',
+                            'fr' => 'Trek de retour à Namche Bazaar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 34: Trek from Namche Bazaar to Lukla',
+                    'fr' => 'Jour 34: Trek de Namche Bazaar à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Lukla.',
+                            'fr' => 'Dernier trek de retour à Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 35: Fly from Lukla to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 35: Vol de Lukla à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 36: Leisure day in Kathmandu',
+                    'fr' => 'Jour 36: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 37: Transfer to the airport for final departure',
+                    'fr' => 'Jour 37: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $tilicho_peak_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Drive from Kathmandu to Besisahar',
+                    'fr' => 'Jour 03: Route de Katmandou à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Besisahar, the gateway to the Annapurna region.',
+                            'fr' => 'Conduire jusqu\'à Besisahar, la porte d\'entrée de la région de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Drive from Besisahar to Chame',
+                    'fr' => 'Jour 04: Route de Besisahar à Chame',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Chame, a key village in the Annapurna Circuit.',
+                            'fr' => 'Conduire jusqu\'à Chame, un village clé du circuit de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Chame to Pisang',
+                    'fr' => 'Jour 05: Trek de Chame à Pisang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Pisang through pine forests.',
+                            'fr' => 'Trek vers Pisang à travers des forêts de pins.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,300 m/10,827 ft',
+                            'fr' => '3 300 m/10 827 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Pisang to Manang',
+                    'fr' => 'Jour 06: Trek de Pisang à Manang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Manang, a major village for acclimatization.',
+                            'fr' => 'Trek vers Manang, un village majeur pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,540 m/11,614 ft',
+                            'fr' => '3 540 m/11 614 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Acclimatization at Manang',
+                    'fr' => 'Jour 07: Acclimatation à Manang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Manang to Khangsar',
+                    'fr' => 'Jour 08: Trek de Manang à Khangsar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Khangsar, a village en route to Tilicho.',
+                            'fr' => 'Trek vers Khangsar, un village sur la route de Tilicho.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,750 m/12,303 ft',
+                            'fr' => '3 750 m/12 303 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Khangsar to Tilicho Basecamp',
+                    'fr' => 'Jour 09: Trek de Khangsar au camp de base de Tilicho',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Tilicho Basecamp near Tilicho Lake.',
+                            'fr' => 'Trek vers le camp de base de Tilicho près du lac Tilicho.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,150 m/13,616 ft',
+                            'fr' => '4 150 m/13 616 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Acclimatization at Tilicho Basecamp with hike to Tilicho Lake',
+                    'fr' => 'Jour 10: Acclimatation au camp de base de Tilicho avec randonnée au lac Tilicho',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with a hike to Tilicho Lake for acclimatization.',
+                            'fr' => 'Journée de repos avec une randonnée au lac Tilicho pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,919 m/16,138 ft (Tilicho Lake)',
+                            'fr' => '4 919 m/16 138 ft (lac Tilicho)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-25: Rotation period for acclimatization and summit push to Tilicho Peak',
+                    'fr' => 'Jour 11-25: Période de rotation pour l\'acclimatation et poussée au sommet de Tilicho Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, and Camp II, followed by a summit push to Tilicho Peak (7,134 m) and return to Basecamp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II, suivie d\'une poussée au sommet de Tilicho Peak (7 134 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 26: Trek from Tilicho Basecamp to Manang',
+                    'fr' => 'Jour 26: Trek du camp de base de Tilicho à Manang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Manang.',
+                            'fr' => 'Descendre à Manang.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,540 m/11,614 ft',
+                            'fr' => '3 540 m/11 614 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 27: Trek from Manang to Chame',
+                    'fr' => 'Jour 27: Trek de Manang à Chame',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Chame.',
+                            'fr' => 'Trek de retour à Chame.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 28: Drive from Chame to Besisahar',
+                    'fr' => 'Jour 28: Route de Chame à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Besisahar.',
+                            'fr' => 'Retour en voiture à Besisahar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 29: Drive from Besisahar to Kathmandu',
+                    'fr' => 'Jour 29: Route de Besisahar à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Kathmandu.',
+                            'fr' => 'Retour en voiture à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30: Leisure day in Kathmandu',
+                    'fr' => 'Jour 30: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Transfer to the airport for final departure',
+                    'fr' => 'Jour 31: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $dhaulagiri_vii_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Pokhara and drive to Darbang',
+                    'fr' => 'Jour 03: Vol de Katmandou à Pokhara et route vers Darbang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Pokhara.',
+                            'fr' => 'Court vol vers Pokhara.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive from Pokhara to Darbang.',
+                            'fr' => 'Conduire de Pokhara à Darbang.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,110 m/3,642 ft',
+                            'fr' => '1 110 m/3 642 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Darbang to Dharapani',
+                    'fr' => 'Jour 04: Trek de Darbang à Dharapani',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dharapani through rural trails.',
+                            'fr' => 'Trek vers Dharapani à travers des sentiers ruraux.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,560 m/5,118 ft',
+                            'fr' => '1 560 m/5 118 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Dharapani to Muri',
+                    'fr' => 'Jour 05: Trek de Dharapani à Muri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Muri with views of the Dhaulagiri range.',
+                            'fr' => 'Trek vers Muri avec des vues sur la chaîne du Dhaulagiri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,850 m/6,070 ft',
+                            'fr' => '1 850 m/6 070 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Muri to Bagar',
+                    'fr' => 'Jour 06: Trek de Muri à Bagar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Bagar through rugged terrain.',
+                            'fr' => 'Trek vers Bagar à travers un terrain accidenté.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,375 m/7,792 ft',
+                            'fr' => '2 375 m/7 792 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Bagar to Italian Basecamp',
+                    'fr' => 'Jour 07: Trek de Bagar au camp de base italien',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Italian Basecamp.',
+                            'fr' => 'Trek vers le camp de base italien.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,660 m/12,008 ft',
+                            'fr' => '3 660 m/12 008 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Italian Basecamp to Dhaulagiri VII Basecamp',
+                    'fr' => 'Jour 08: Trek du camp de base italien au camp de base de Dhaulagiri VII',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dhaulagiri VII Basecamp.',
+                            'fr' => 'Trek vers le camp de base de Dhaulagiri VII.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,750 m/15,584 ft',
+                            'fr' => '4 750 m/15 584 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09-29: Rotation period for acclimatization and summit push to Dhaulagiri VII',
+                    'fr' => 'Jour 09-29: Période de rotation pour l\'acclimatation et poussée au sommet de Dhaulagiri VII',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, and Camp II, followed by a summit push to Dhaulagiri VII (7,246 m) and return to Basecamp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II, suivie d\'une poussée au sommet de Dhaulagiri VII (7 246 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30: Trek from Dhaulagiri VII Basecamp to Italian Basecamp',
+                    'fr' => 'Jour 30: Trek du camp de base de Dhaulagiri VII au camp de base italien',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Italian Basecamp.',
+                            'fr' => 'Descendre au camp de base italien.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,660 m/12,008 ft',
+                            'fr' => '3 660 m/12 008 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Trek from Italian Basecamp to Muri',
+                    'fr' => 'Jour 31: Trek du camp de base italien à Muri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Muri.',
+                            'fr' => 'Trek de retour à Muri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,850 m/6,070 ft',
+                            'fr' => '1 850 m/6 070 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 32: Trek from Muri to Darbang',
+                    'fr' => 'Jour 32: Trek de Muri à Darbang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Darbang.',
+                            'fr' => 'Trek de retour à Darbang.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,110 m/3,642 ft',
+                            'fr' => '1 110 m/3 642 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 33: Drive from Darbang to Pokhara',
+                    'fr' => 'Jour 33: Route de Darbang à Pokhara',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Pokhara.',
+                            'fr' => 'Retour en voiture à Pokhara.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '960 m/3,150 ft',
+                            'fr' => '960 m/3 150 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 34: Fly from Pokhara to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 34: Vol de Pokhara à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 35: Leisure day in Kathmandu',
+                    'fr' => 'Jour 35: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 36: Transfer to the airport for final departure',
+                    'fr' => 'Jour 36: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $pisang_peak_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Drive from Kathmandu to Besisahar',
+                    'fr' => 'Jour 03: Route de Katmandou à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Besisahar, the gateway to the Annapurna region.',
+                            'fr' => 'Conduire jusqu\'à Besisahar, la porte d\'entrée de la région de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Drive from Besisahar to Chame',
+                    'fr' => 'Jour 04: Route de Besisahar à Chame',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Chame, a key village in the Annapurna Circuit.',
+                            'fr' => 'Conduire jusqu\'à Chame, un village clé du circuit de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Chame to Pisang',
+                    'fr' => 'Jour 05: Trek de Chame à Pisang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Pisang through pine forests.',
+                            'fr' => 'Trek vers Pisang à travers des forêts de pins.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,200 m/10,499 ft',
+                            'fr' => '3 200 m/10 499 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Pisang to Pisang Peak Basecamp',
+                    'fr' => 'Jour 06: Trek de Pisang au camp de base de Pisang Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Pisang Peak Basecamp.',
+                            'fr' => 'Trek vers le camp de base de Pisang Peak.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,380 m/14,370 ft',
+                            'fr' => '4 380 m/14 370 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07-15: Rotation period for acclimatization and summit push to Pisang Peak',
+                    'fr' => 'Jour 07-15: Période de rotation pour l\'acclimatation et poussée au sommet de Pisang Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, High Camp, followed by a summit push to Pisang Peak (6,091 m) and return to Basecamp.',
+                            'fr' => 'Rotation entre le camp de base, le camp élevé, suivie d\'une poussée au sommet de Pisang Peak (6 091 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 16: Trek from Pisang Peak Basecamp to Manang',
+                    'fr' => 'Jour 16: Trek du camp de base de Pisang Peak à Manang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Manang.',
+                            'fr' => 'Descendre à Manang.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,540 m/11,614 ft',
+                            'fr' => '3 540 m/11 614 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 17: Trek from Manang to Chame',
+                    'fr' => 'Jour 17: Trek de Manang à Chame',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Chame.',
+                            'fr' => 'Trek de retour à Chame.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 18: Drive from Chame to Besisahar',
+                    'fr' => 'Jour 18: Route de Chame à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Besisahar.',
+                            'fr' => 'Retour en voiture à Besisahar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 19: Drive from Besisahar to Kathmandu',
+                    'fr' => 'Jour 19: Route de Besisahar à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Kathmandu.',
+                            'fr' => 'Retour en voiture à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 20: Leisure day in Kathmandu',
+                    'fr' => 'Jour 20: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 21: Transfer to the airport for final departure',
+                    'fr' => 'Jour 21: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $island_peak_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Lukla and trek to Phakding',
+                    'fr' => 'Jour 03: Vol de Katmandou à Lukla et trek à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Lukla.',
+                            'fr' => 'Court vol vers Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek from Lukla to Phakding.',
+                            'fr' => 'Trek de Lukla à Phakding.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Phakding to Namche Bazaar',
+                    'fr' => 'Jour 04: Trek de Phakding à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namche Bazaar, the gateway to Everest.',
+                            'fr' => 'Trek vers Namche Bazaar, la porte d\'entrée de l\'Everest.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Acclimatization at Namche Bazaar',
+                    'fr' => 'Jour 05: Acclimatation à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Namche Bazaar to Tengboche',
+                    'fr' => 'Jour 06: Trek de Namche Bazaar à Tengboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Tengboche, home to a famous monastery.',
+                            'fr' => 'Trek vers Tengboche, abritant un célèbre monastère.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,870 m/12,697 ft',
+                            'fr' => '3 870 m/12 697 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Tengboche to Dingboche',
+                    'fr' => 'Jour 07: Trek de Tengboche à Dingboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dingboche with views of Ama Dablam.',
+                            'fr' => 'Trek vers Dingboche avec des vues sur Ama Dablam.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,410 m/14,469 ft',
+                            'fr' => '4 410 m/14 469 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization at Dingboche',
+                    'fr' => 'Jour 08: Acclimatation à Dingboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Dingboche to Chhukung',
+                    'fr' => 'Jour 09: Trek de Dingboche à Chhukung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Chhukung, a base for Island Peak.',
+                            'fr' => 'Trek vers Chhukung, une base pour Island Peak.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,730 m/15,518 ft',
+                            'fr' => '4 730 m/15 518 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Chhukung to Island Peak Basecamp',
+                    'fr' => 'Jour 10: Trek de Chhukung au camp de base d\'Island Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Island Peak Basecamp.',
+                            'fr' => 'Trek vers le camp de base d\'Island Peak.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,200 m/17,060 ft',
+                            'fr' => '5 200 m/17 060 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-14: Rotation period for acclimatization and summit push to Island Peak',
+                    'fr' => 'Jour 11-14: Période de rotation pour l\'acclimatation et poussée au sommet d\'Island Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp and High Camp, followed by a summit push to Island Peak (6,189 m) and return to Basecamp.',
+                            'fr' => 'Rotation entre le camp de base et le camp élevé, suivie d\'une poussée au sommet d\'Island Peak (6 189 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 15: Trek from Island Peak Basecamp to Pangboche',
+                    'fr' => 'Jour 15: Trek du camp de base d\'Island Peak à Pangboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Pangboche.',
+                            'fr' => 'Descendre à Pangboche.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,985 m/13,074 ft',
+                            'fr' => '3 985 m/13 074 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 16: Trek from Pangboche to Namche Bazaar',
+                    'fr' => 'Jour 16: Trek de Pangboche à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Namche Bazaar.',
+                            'fr' => 'Trek de retour à Namche Bazaar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 17: Trek from Namche Bazaar to Lukla',
+                    'fr' => 'Jour 17: Trek de Namche Bazaar à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Lukla.',
+                            'fr' => 'Dernier trek de retour à Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 18: Fly from Lukla to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 18: Vol de Lukla à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 19: Leisure day in Kathmandu',
+                    'fr' => 'Jour 19: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 20: Transfer to the airport for final departure',
+                    'fr' => 'Jour 20: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $mera_peak_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Lukla',
+                    'fr' => 'Jour 03: Vol de Katmandou à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Lukla.',
+                            'fr' => 'Court vol vers Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Lukla to Chutanga',
+                    'fr' => 'Jour 04: Trek de Lukla à Chutanga',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Chutanga, a quiet settlement.',
+                            'fr' => 'Trek vers Chutanga, un établissement calme.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,050 m/10,007 ft',
+                            'fr' => '3 050 m/10 007 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Chutanga to Thuli Kharka via Zatrwa La Pass',
+                    'fr' => 'Jour 05: Trek de Chutanga à Thuli Kharka via le col de Zatrwa La',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek over Zatrwa La Pass to Thuli Kharka.',
+                            'fr' => 'Trek par le col de Zatrwa La jusqu\'à Thuli Kharka.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,300 m/14,108 ft (Zatrwa La), 4,200 m/13,780 ft (Thuli Kharka)',
+                            'fr' => '4 300 m/14 108 ft (Zatrwa La), 4 200 m/13 780 ft (Thuli Kharka)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Thuli Kharka to Kothe',
+                    'fr' => 'Jour 06: Trek de Thuli Kharka à Kothe',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Kothe through forested trails.',
+                            'fr' => 'Trek vers Kothe à travers des sentiers forestiers.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,600 m/11,811 ft',
+                            'fr' => '3 600 m/11 811 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Kothe to Thangnak',
+                    'fr' => 'Jour 07: Trek de Kothe à Thangnak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Thangnak in the Hinku Valley.',
+                            'fr' => 'Trek vers Thangnak dans la vallée de Hinku.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,350 m/14,272 ft',
+                            'fr' => '4 350 m/14 272 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Thangnak to Khare',
+                    'fr' => 'Jour 08: Trek de Thangnak à Khare',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Khare, the base for Mera Peak.',
+                            'fr' => 'Trek vers Khare, la base pour Mera Peak.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,045 m/16,552 ft',
+                            'fr' => '5 045 m/16 552 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Acclimatization at Khare',
+                    'fr' => 'Jour 09: Acclimatation à Khare',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization and training.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation et l\'entraînement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Khare to Mera Peak High Camp',
+                    'fr' => 'Jour 10: Trek de Khare au camp élevé de Mera Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Mera Peak High Camp.',
+                            'fr' => 'Trek vers le camp élevé de Mera Peak.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,780 m/18,963 ft',
+                            'fr' => '5 780 m/18 963 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-13: Summit push to Mera Peak and descent to Khare',
+                    'fr' => 'Jour 11-13: Poussée au sommet de Mera Peak et descente à Khare',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Summit push to Mera Peak (6,476 m) from High Camp and descent back to Khare.',
+                            'fr' => 'Poussée au sommet de Mera Peak (6 476 m) depuis le camp élevé et descente à Khare.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent/Lodge',
+                            'fr' => 'Tente/Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 14: Trek from Khare to Kothe',
+                    'fr' => 'Jour 14: Trek de Khare à Kothe',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Kothe.',
+                            'fr' => 'Descendre à Kothe.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,600 m/11,811 ft',
+                            'fr' => '3 600 m/11 811 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 15: Trek from Kothe to Thuli Kharka',
+                    'fr' => 'Jour 15: Trek de Kothe à Thuli Kharka',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Thuli Kharka.',
+                            'fr' => 'Trek de retour à Thuli Kharka.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,200 m/13,780 ft',
+                            'fr' => '4 200 m/13 780 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 16: Trek from Thuli Kharka to Lukla via Zatrwa La Pass',
+                    'fr' => 'Jour 16: Trek de Thuli Kharka à Lukla via le col de Zatrwa La',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek over Zatrwa La Pass back to Lukla.',
+                            'fr' => 'Trek par le col de Zatrwa La jusqu\'à Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,300 m/14,108 ft (Zatrwa La), 2,800 m/9,186 ft (Lukla)',
+                            'fr' => '4 300 m/14 108 ft (Zatrwa La), 2 800 m/9 186 ft (Lukla)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 17: Fly from Lukla to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 17: Vol de Lukla à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 18: Leisure day in Kathmandu',
+                    'fr' => 'Jour 18: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 19: Transfer to the airport for final departure',
+                    'fr' => 'Jour 19: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+
+        $nuptse_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Lukla and trek to Phakding',
+                    'fr' => 'Jour 03: Vol de Katmandou à Lukla et trek à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Lukla.',
+                            'fr' => 'Court vol vers Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek from Lukla to Phakding.',
+                            'fr' => 'Trek de Lukla à Phakding.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Phakding to Namche Bazaar',
+                    'fr' => 'Jour 04: Trek de Phakding à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namche Bazaar, the gateway to Everest.',
+                            'fr' => 'Trek vers Namche Bazaar, la porte d\'entrée de l\'Everest.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Acclimatization at Namche Bazaar',
+                    'fr' => 'Jour 05: Acclimatation à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Namche Bazaar to Tengboche',
+                    'fr' => 'Jour 06: Trek de Namche Bazaar à Tengboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Tengboche, home to a famous monastery.',
+                            'fr' => 'Trek vers Tengboche, abritant un célèbre monastère.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,870 m/12,697 ft',
+                            'fr' => '3 870 m/12 697 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Tengboche to Dingboche',
+                    'fr' => 'Jour 07: Trek de Tengboche à Dingboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dingboche with views of Ama Dablam.',
+                            'fr' => 'Trek vers Dingboche avec des vues sur Ama Dablam.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,410 m/14,469 ft',
+                            'fr' => '4 410 m/14 469 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization at Dingboche',
+                    'fr' => 'Jour 08: Acclimatation à Dingboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Dingboche to Lobuche',
+                    'fr' => 'Jour 09: Trek de Dingboche à Lobuche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Lobuche along the Khumbu Glacier.',
+                            'fr' => 'Trek vers Lobuche le long du glacier Khumbu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,940 m/16,207 ft',
+                            'fr' => '4 940 m/16 207 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Lobuche to Nuptse Base Camp',
+                    'fr' => 'Jour 10: Trek de Lobuche au camp de base de Nuptse',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Nuptse Base Camp near the Khumbu Glacier.',
+                            'fr' => 'Trek vers le camp de base de Nuptse près du glacier Khumbu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,300 m/17,388 ft',
+                            'fr' => '5 300 m/17 388 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-28: Rotation period for acclimatization and summit push to Nuptse',
+                    'fr' => 'Jour 11-28: Période de rotation pour l\'acclimatation et poussée au sommet de Nuptse',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Base Camp, Camp I, and Camp II, followed by a summit push to Nuptse (7,861 m) and return to Base Camp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II, suivie d\'une poussée au sommet de Nuptse (7 861 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 29: Trek from Nuptse Base Camp to Pangboche',
+                    'fr' => 'Jour 29: Trek du camp de base de Nuptse à Pangboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Pangboche.',
+                            'fr' => 'Descendre à Pangboche.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,985 m/13,074 ft',
+                            'fr' => '3 985 m/13 074 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30: Trek from Pangboche to Namche Bazaar',
+                    'fr' => 'Jour 30: Trek de Pangboche à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Namche Bazaar.',
+                            'fr' => 'Trek de retour à Namche Bazaar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Trek from Namche Bazaar to Lukla',
+                    'fr' => 'Jour 31: Trek de Namche Bazaar à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Lukla.',
+                            'fr' => 'Dernier trek de retour à Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 32: Fly from Lukla to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 32: Vol de Lukla à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 33: Leisure day in Kathmandu',
+                    'fr' => 'Jour 33: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 34: Transfer to the airport for final departure',
+                    'fr' => 'Jour 34: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $gangapurna_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Drive from Kathmandu to Besisahar',
+                    'fr' => 'Jour 03: Route de Katmandou à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Besisahar, the gateway to the Annapurna region.',
+                            'fr' => 'Conduire jusqu\'à Besisahar, la porte d\'entrée de la région de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Drive from Besisahar to Chame',
+                    'fr' => 'Jour 04: Route de Besisahar à Chame',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Chame, a key village in the Annapurna Circuit.',
+                            'fr' => 'Conduire jusqu\'à Chame, un village clé du circuit de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Chame to Pisang',
+                    'fr' => 'Jour 05: Trek de Chame à Pisang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Pisang through pine forests.',
+                            'fr' => 'Trek vers Pisang à travers des forêts de pins.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,200 m/10,499 ft',
+                            'fr' => '3 200 m/10 499 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Pisang to Manang',
+                    'fr' => 'Jour 06: Trek de Pisang à Manang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Manang, a major village for acclimatization.',
+                            'fr' => 'Trek vers Manang, un village majeur pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,540 m/11,614 ft',
+                            'fr' => '3 540 m/11 614 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Acclimatization at Manang',
+                    'fr' => 'Jour 07: Acclimatation à Manang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Manang to Gangapurna Base Camp',
+                    'fr' => 'Jour 08: Trek de Manang au camp de base de Gangapurna',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Gangapurna Base Camp with views of Annapurna peaks.',
+                            'fr' => 'Trek vers le camp de base de Gangapurna avec des vues sur les sommets de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,700 m/15,420 ft',
+                            'fr' => '4 700 m/15 420 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09-28: Rotation period for acclimatization and summit push to Gangapurna',
+                    'fr' => 'Jour 09-28: Période de rotation pour l\'acclimatation et poussée au sommet de Gangapurna',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Base Camp, Camp I, and Camp II, followed by a summit push to Gangapurna (7,455 m) and return to Base Camp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II, suivie d\'une poussée au sommet de Gangapurna (7 455 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 29: Trek from Gangapurna Base Camp to Manang',
+                    'fr' => 'Jour 29: Trek du camp de base de Gangapurna à Manang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Manang.',
+                            'fr' => 'Descendre à Manang.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,540 m/11,614 ft',
+                            'fr' => '3 540 m/11 614 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 30: Trek from Manang to Chame',
+                    'fr' => 'Jour 30: Trek de Manang à Chame',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Chame.',
+                            'fr' => 'Trek de retour à Chame.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Drive from Chame to Besisahar',
+                    'fr' => 'Jour 31: Route de Chame à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Besisahar.',
+                            'fr' => 'Retour en voiture à Besisahar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 32: Drive from Besisahar to Kathmandu',
+                    'fr' => 'Jour 32: Route de Besisahar à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Kathmandu.',
+                            'fr' => 'Retour en voiture à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 33: Leisure day in Kathmandu',
+                    'fr' => 'Jour 33: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 34: Transfer to the airport for final departure',
+                    'fr' => 'Jour 34: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $vip_everest_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and VIP transfer to luxury hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert VIP à l\'hôtel de luxe',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport with VIP airport assistance and transfer to a luxury hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan avec assistance VIP et transfert vers un hôtel de luxe.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Hotel',
+                            'fr' => 'Hôtel de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu with VIP expedition briefing',
+                    'fr' => 'Jour 02: Repos à Katmandou avec briefing VIP de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a private VIP expedition briefing with personal guides and relax in luxury.',
+                            'fr' => 'Assister à un briefing privé VIP de l\'expédition avec des guides personnels et se détendre dans le luxe.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Hotel',
+                            'fr' => 'Hôtel de luxe',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Helicopter from Kathmandu to Lukla and trek to Phakding',
+                    'fr' => 'Jour 03: Hélicoptère de Katmandou à Lukla et trek à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Private helicopter flight to Lukla.',
+                            'fr' => 'Vol en hélicoptère privé vers Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek from Lukla to Phakding with VIP porter support.',
+                            'fr' => 'Trek de Lukla à Phakding avec support VIP des porteurs.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Phakding to Namche Bazaar',
+                    'fr' => 'Jour 04: Trek de Phakding à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namche Bazaar with VIP services.',
+                            'fr' => 'Trek vers Namche Bazaar avec services VIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Acclimatization at Namche Bazaar',
+                    'fr' => 'Jour 05: Acclimatation à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with guided acclimatization hikes and luxury amenities.',
+                            'fr' => 'Journée de repos avec randonnées d\'acclimatation guidées et commodités de luxe.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Namche Bazaar to Tengboche',
+                    'fr' => 'Jour 06: Trek de Namche Bazaar à Tengboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Tengboche with VIP porter support.',
+                            'fr' => 'Trek vers Tengboche avec support VIP des porteurs.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,870 m/12,697 ft',
+                            'fr' => '3 870 m/12 697 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Tengboche to Dingboche',
+                    'fr' => 'Jour 07: Trek de Tengboche à Dingboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dingboche with enhanced VIP services.',
+                            'fr' => 'Trek vers Dingboche avec services VIP améliorés.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,410 m/14,469 ft',
+                            'fr' => '4 410 m/14 469 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Acclimatization at Dingboche',
+                    'fr' => 'Jour 08: Acclimatation à Dingboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with private guided hikes and luxury accommodations.',
+                            'fr' => 'Journée de repos avec randonnées guidées privées et hébergements de luxe.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Dingboche to Lobuche',
+                    'fr' => 'Jour 09: Trek de Dingboche à Lobuche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Lobuche with VIP support team.',
+                            'fr' => 'Trek vers Lobuche avec équipe de support VIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,940 m/16,207 ft',
+                            'fr' => '4 940 m/16 207 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Lobuche to Everest Base Camp',
+                    'fr' => 'Jour 10: Trek de Lobuche au camp de base de l\'Everest',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Everest Base Camp with VIP amenities.',
+                            'fr' => 'Trek vers le camp de base de l\'Everest avec commodités VIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,364 m/17,598 ft',
+                            'fr' => '5 364 m/17 598 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Tent',
+                            'fr' => 'Tente de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-50: Rotation period for acclimatization and summit push to Everest',
+                    'fr' => 'Jour 11-50: Période de rotation pour l\'acclimatation et poussée au sommet de l\'Everest',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Base Camp, Camp I, Camp II, Camp III, and Camp IV, with VIP support (oxygen, personal Sherpas), followed by a summit push to Everest (8,848 m) and return to Base Camp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II, le camp III et le camp IV, avec support VIP (oxygène, Sherpas personnels), suivie d\'une poussée au sommet de l\'Everest (8 848 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Tent',
+                            'fr' => 'Tente de luxe',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 51: Trek from Everest Base Camp to Pheriche',
+                    'fr' => 'Jour 51: Trek du camp de base de l\'Everest à Pheriche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Pheriche with VIP support.',
+                            'fr' => 'Descendre à Pheriche avec support VIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,371 m/14,340 ft',
+                            'fr' => '4 371 m/14 340 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 52: Trek from Pheriche to Namche Bazaar',
+                    'fr' => 'Jour 52: Trek de Pheriche à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Namche Bazaar with VIP services.',
+                            'fr' => 'Trek de retour à Namche Bazaar avec services VIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 53: Trek from Namche Bazaar to Lukla',
+                    'fr' => 'Jour 53: Trek de Namche Bazaar à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Lukla with VIP support.',
+                            'fr' => 'Dernier trek de retour à Lukla avec support VIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 54: Helicopter from Lukla to Kathmandu',
+                    'fr' => 'Jour 54: Hélicoptère de Lukla à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Private helicopter flight back to Kathmandu.',
+                            'fr' => 'Vol en hélicoptère privé de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Hotel',
+                            'fr' => 'Hôtel de luxe',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 55: Leisure day in Kathmandu with VIP services',
+                    'fr' => 'Jour 55: Journée de loisirs à Katmandou avec services VIP',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax with spa treatments and explore Kathmandu with a private guide.',
+                            'fr' => 'Détendez-vous avec des soins spa et explorez Katmandou avec un guide privé.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet meals)',
+                            'fr' => 'Pension complète (repas gastronomiques)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Hotel',
+                            'fr' => 'Hôtel de luxe',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 56: VIP transfer to the airport for final departure',
+                    'fr' => 'Jour 56: Transfert VIP à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'VIP transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert VIP à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only (gourmet)',
+                            'fr' => 'Petit-déjeuner seulement (gastronomique)',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $cholatse_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Lukla and trek to Phakding',
+                    'fr' => 'Jour 03: Vol de Katmandou à Lukla et trek à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Lukla.',
+                            'fr' => 'Court vol vers Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek from Lukla to Phakding.',
+                            'fr' => 'Trek de Lukla à Phakding.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Phakding to Namche Bazaar',
+                    'fr' => 'Jour 04: Trek de Phakding à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namche Bazaar.',
+                            'fr' => 'Trek vers Namche Bazaar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Acclimatization at Namche Bazaar',
+                    'fr' => 'Jour 05: Acclimatation à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Namche Bazaar to Phortse Thanga',
+                    'fr' => 'Jour 06: Trek de Namche Bazaar à Phortse Thanga',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Phortse Thanga via a scenic route.',
+                            'fr' => 'Trek vers Phortse Thanga par une route pittoresque.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,680 m/12,073 ft',
+                            'fr' => '3 680 m/12 073 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Phortse Thanga to Machhermo',
+                    'fr' => 'Jour 07: Trek de Phortse Thanga à Machhermo',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Machhermo in the Gokyo Valley.',
+                            'fr' => 'Trek vers Machhermo dans la vallée de Gokyo.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,470 m/14,665 ft',
+                            'fr' => '4 470 m/14 665 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Machhermo to Gokyo',
+                    'fr' => 'Jour 08: Trek de Machhermo à Gokyo',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Gokyo with views of sacred lakes.',
+                            'fr' => 'Trek vers Gokyo avec des vues sur les lacs sacrés.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,790 m/15,715 ft',
+                            'fr' => '4 790 m/15 715 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Acclimatization at Gokyo with ascent of Gokyo Ri',
+                    'fr' => 'Jour 09: Acclimatation à Gokyo avec ascension de Gokyo Ri',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with a climb up Gokyo Ri for panoramic views.',
+                            'fr' => 'Journée de repos avec une ascension de Gokyo Ri pour des vues panoramiques.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,357 m/17,575 ft (Gokyo Ri)',
+                            'fr' => '5 357 m/17 575 ft (Gokyo Ri)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Gokyo to Cholatse Basecamp',
+                    'fr' => 'Jour 10: Trek de Gokyo au camp de base de Cholatse',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Cholatse Basecamp with views of the peak.',
+                            'fr' => 'Trek vers le camp de base de Cholatse avec des vues sur le sommet.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,000 m/16,404 ft',
+                            'fr' => '5 000 m/16 404 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-30: Rotation period for acclimatization and summit push to Cholatse',
+                    'fr' => 'Jour 11-30: Période de rotation pour l\'acclimatation et poussée au sommet de Cholatse',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Basecamp, Camp I, and Camp II, followed by a summit push to Cholatse (6,440 m) and return to Basecamp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II, suivie d\'une poussée au sommet de Cholatse (6 440 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 31: Trek from Cholatse Basecamp to Gokyo',
+                    'fr' => 'Jour 31: Trek du camp de base de Cholatse à Gokyo',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Gokyo.',
+                            'fr' => 'Descendre à Gokyo.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,790 m/15,715 ft',
+                            'fr' => '4 790 m/15 715 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 32: Trek from Gokyo to Dole',
+                    'fr' => 'Jour 32: Trek de Gokyo à Dole',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Dole.',
+                            'fr' => 'Trek de retour à Dole.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,200 m/13,780 ft',
+                            'fr' => '4 200 m/13 780 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 33: Trek from Dole to Namche Bazaar',
+                    'fr' => 'Jour 33: Trek de Dole à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Namche Bazaar.',
+                            'fr' => 'Trek de retour à Namche Bazaar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 34: Trek from Namche Bazaar to Lukla',
+                    'fr' => 'Jour 34: Trek de Namche Bazaar à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Lukla.',
+                            'fr' => 'Dernier trek de retour à Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 35: Fly from Lukla to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 35: Vol de Lukla à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 36: Leisure day in Kathmandu',
+                    'fr' => 'Jour 36: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 37: Transfer to the airport for final departure',
+                    'fr' => 'Jour 37: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $ama_dablam_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Lukla and trek to Phakding',
+                    'fr' => 'Jour 03: Vol de Katmandou à Lukla et trek à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Lukla.',
+                            'fr' => 'Court vol vers Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek from Lukla to Phakding.',
+                            'fr' => 'Trek de Lukla à Phakding.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Phakding to Namche Bazaar',
+                    'fr' => 'Jour 04: Trek de Phakding à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namche Bazaar, the gateway to Everest.',
+                            'fr' => 'Trek vers Namche Bazaar, la porte d\'entrée de l\'Everest.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Acclimatization at Namche Bazaar',
+                    'fr' => 'Jour 05: Acclimatation à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Namche Bazaar to Pangboche',
+                    'fr' => 'Jour 06: Trek de Namche Bazaar à Pangboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Pangboche with views of Ama Dablam.',
+                            'fr' => 'Trek vers Pangboche avec des vues sur Ama Dablam.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,985 m/13,074 ft',
+                            'fr' => '3 985 m/13 074 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Pangboche to Ama Dablam Base Camp',
+                    'fr' => 'Jour 07: Trek de Pangboche au camp de base d\'Ama Dablam',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Ama Dablam Base Camp.',
+                            'fr' => 'Trek vers le camp de base d\'Ama Dablam.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,600 m/15,092 ft',
+                            'fr' => '4 600 m/15 092 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08-22: Rotation period for acclimatization and summit push to Ama Dablam',
+                    'fr' => 'Jour 08-22: Période de rotation pour l\'acclimatation et poussée au sommet d\'Ama Dablam',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Base Camp, Camp I, and Camp II, followed by a summit push to Ama Dablam (6,812 m) and return to Base Camp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II, suivie d\'une poussée au sommet d\'Ama Dablam (6 812 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 23: Trek from Ama Dablam Base Camp to Tengboche',
+                    'fr' => 'Jour 23: Trek du camp de base d\'Ama Dablam à Tengboche',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Tengboche.',
+                            'fr' => 'Descendre à Tengboche.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,870 m/12,697 ft',
+                            'fr' => '3 870 m/12 697 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 24: Trek from Tengboche to Namche Bazaar',
+                    'fr' => 'Jour 24: Trek de Tengboche à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Namche Bazaar.',
+                            'fr' => 'Trek de retour à Namche Bazaar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 25: Trek from Namche Bazaar to Lukla',
+                    'fr' => 'Jour 25: Trek de Namche Bazaar à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Final trek back to Lukla.',
+                            'fr' => 'Dernier trek de retour à Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 26: Fly from Lukla to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 26: Vol de Lukla à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 27: Leisure day in Kathmandu',
+                    'fr' => 'Jour 27: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 28: Transfer to the airport for final departure',
+                    'fr' => 'Jour 28: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $vvip_manaslu_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and VVIP transfer to luxury hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert VVIP à l\'hôtel de luxe',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport with VVIP airport assistance and transfer to a top-tier luxury hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan avec assistance VVIP et transfert vers un hôtel de luxe haut de gamme.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Top-tier Luxury Hotel',
+                            'fr' => 'Hôtel de luxe haut de gamme',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu with VVIP expedition briefing',
+                    'fr' => 'Jour 02: Repos à Katmandou avec briefing VVIP de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Private VVIP briefing with personal expedition team, spa services, and luxury relaxation.',
+                            'fr' => 'Briefing VVIP privé avec équipe d\'expédition personnelle, services spa et détente de luxe.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Top-tier Luxury Hotel',
+                            'fr' => 'Hôtel de luxe haut de gamme',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Helicopter from Kathmandu to Soti Khola',
+                    'fr' => 'Jour 03: Hélicoptère de Katmandou à Soti Khola',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Private helicopter flight to Soti Khola.',
+                            'fr' => 'Vol en hélicoptère privé vers Soti Khola.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '700 m/2,297 ft',
+                            'fr' => '700 m/2 297 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Soti Khola to Machha Khola',
+                    'fr' => 'Jour 04: Trek de Soti Khola à Machha Khola',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Machha Khola with VVIP porter and guide services.',
+                            'fr' => 'Trek vers Machha Khola avec services de porteurs et guides VVIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '900 m/2,953 ft',
+                            'fr' => '900 m/2 953 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Machha Khola to Jagat',
+                    'fr' => 'Jour 05: Trek de Machha Khola à Jagat',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Jagat with VVIP support team.',
+                            'fr' => 'Trek vers Jagat avec équipe de support VVIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,340 m/4,396 ft',
+                            'fr' => '1 340 m/4 396 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Jagat to Deng',
+                    'fr' => 'Jour 06: Trek de Jagat à Deng',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Deng with enhanced VVIP services.',
+                            'fr' => 'Trek vers Deng avec services VVIP améliorés.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,860 m/6,102 ft',
+                            'fr' => '1 860 m/6 102 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Deng to Namrung',
+                    'fr' => 'Jour 07: Trek de Deng à Namrung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namrung with VVIP porter support.',
+                            'fr' => 'Trek vers Namrung avec support VVIP des porteurs.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,630 m/8,629 ft',
+                            'fr' => '2 630 m/8 629 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Namrung to Samagaon',
+                    'fr' => 'Jour 08: Trek de Namrung à Samagaon',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Samagaon with VVIP amenities.',
+                            'fr' => 'Trek vers Samagaon avec commodités VVIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,530 m/11,581 ft',
+                            'fr' => '3 530 m/11 581 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Acclimatization at Samagaon',
+                    'fr' => 'Jour 09: Acclimatation à Samagaon',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with private guided hikes and VVIP luxury services.',
+                            'fr' => 'Journée de repos avec randonnées guidées privées et services de luxe VVIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Samagaon to Manaslu Base Camp',
+                    'fr' => 'Jour 10: Trek de Samagaon au camp de base de Manaslu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Manaslu Base Camp with VVIP support team.',
+                            'fr' => 'Trek vers le camp de base de Manaslu avec équipe de support VVIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,800 m/15,748 ft',
+                            'fr' => '4 800 m/15 748 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Tent',
+                            'fr' => 'Tente de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11-45: Rotation period for acclimatization and summit push to Manaslu',
+                    'fr' => 'Jour 11-45: Période de rotation pour l\'acclimatation et poussée au sommet de Manaslu',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Base Camp, Camp I, Camp II, Camp III, and Camp IV, with VVIP support (oxygen, personal Sherpas, heated tents), followed by a summit push to Manaslu (8,163 m) and return to Base Camp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I, le camp II, le camp III et le camp IV, avec support VVIP (oxygène, Sherpas personnels, tentes chauffées), suivie d\'une poussée au sommet de Manaslu (8 163 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Tent',
+                            'fr' => 'Tente de luxe',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 46: Trek from Manaslu Base Camp to Samagaon',
+                    'fr' => 'Jour 46: Trek du camp de base de Manaslu à Samagaon',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Samagaon with VVIP support.',
+                            'fr' => 'Descendre à Samagaon avec support VVIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,530 m/11,581 ft',
+                            'fr' => '3 530 m/11 581 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 47: Trek from Samagaon to Namrung',
+                    'fr' => 'Jour 47: Trek de Samagaon à Namrung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Namrung with VVIP services.',
+                            'fr' => 'Trek de retour à Namrung avec services VVIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,630 m/8,629 ft',
+                            'fr' => '2 630 m/8 629 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 48: Trek from Namrung to Jagat',
+                    'fr' => 'Jour 48: Trek de Namrung à Jagat',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Jagat with VVIP support.',
+                            'fr' => 'Trek de retour à Jagat avec support VVIP.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,340 m/4,396 ft',
+                            'fr' => '1 340 m/4 396 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Luxury Lodge',
+                            'fr' => 'Lodge de luxe',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 49: Helicopter from Jagat to Kathmandu',
+                    'fr' => 'Jour 49: Hélicoptère de Jagat à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Private helicopter flight back to Kathmandu.',
+                            'fr' => 'Vol en hélicoptère privé de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Top-tier Luxury Hotel',
+                            'fr' => 'Hôtel de luxe haut de gamme',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 50: Leisure day in Kathmandu with VVIP services',
+                    'fr' => 'Jour 50: Journée de loisirs à Katmandou avec services VVIP',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax with spa treatments and explore Kathmandu with a private guide.',
+                            'fr' => 'Détendez-vous avec des soins spa et explorez Katmandou avec un guide privé.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board (gourmet dining)',
+                            'fr' => 'Pension complète (cuisine gastronomique)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Top-tier Luxury Hotel',
+                            'fr' => 'Hôtel de luxe haut de gamme',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 51: VVIP transfer to the airport for final departure',
+                    'fr' => 'Jour 51: Transfert VVIP à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'VVIP transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert VVIP à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only (gourmet)',
+                            'fr' => 'Petit-déjeuner seulement (gastronomique)',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $chulu_west_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Drive from Kathmandu to Besisahar',
+                    'fr' => 'Jour 03: Route de Katmandou à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Besisahar, the gateway to the Annapurna region.',
+                            'fr' => 'Conduire jusqu\'à Besisahar, la porte d\'entrée de la région de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Drive from Besisahar to Chame',
+                    'fr' => 'Jour 04: Route de Besisahar à Chame',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Chame, a key village in the Annapurna Circuit.',
+                            'fr' => 'Conduire jusqu\'à Chame, un village clé du circuit de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Chame to Pisang',
+                    'fr' => 'Jour 05: Trek de Chame à Pisang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Pisang through pine forests.',
+                            'fr' => 'Trek vers Pisang à travers des forêts de pins.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,200 m/10,499 ft',
+                            'fr' => '3 200 m/10 499 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Pisang to Manang',
+                    'fr' => 'Jour 06: Trek de Pisang à Manang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Manang, a major village for acclimatization.',
+                            'fr' => 'Trek vers Manang, un village majeur pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,540 m/11,614 ft',
+                            'fr' => '3 540 m/11 614 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Acclimatization at Manang',
+                    'fr' => 'Jour 07: Acclimatation à Manang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Manang to Chulu West Base Camp',
+                    'fr' => 'Jour 08: Trek de Manang au camp de base de Chulu West',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Chulu West Base Camp with views of Annapurna peaks.',
+                            'fr' => 'Trek vers le camp de base de Chulu West avec des vues sur les sommets de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,900 m/16,076 ft',
+                            'fr' => '4 900 m/16 076 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09-18: Rotation period for acclimatization and summit push to Chulu West',
+                    'fr' => 'Jour 09-18: Période de rotation pour l\'acclimatation et poussée au sommet de Chulu West',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Base Camp, Camp I, and Camp II, followed by a summit push to Chulu West (6,419 m) and return to Base Camp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II, suivie d\'une poussée au sommet de Chulu West (6 419 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 19: Trek from Chulu West Base Camp to Manang',
+                    'fr' => 'Jour 19: Trek du camp de base de Chulu West à Manang',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Manang.',
+                            'fr' => 'Descendre à Manang.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,540 m/11,614 ft',
+                            'fr' => '3 540 m/11 614 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 20: Trek from Manang to Chame',
+                    'fr' => 'Jour 20: Trek de Manang à Chame',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Chame.',
+                            'fr' => 'Trek de retour à Chame.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,670 m/8,760 ft',
+                            'fr' => '2 670 m/8 760 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 21: Drive from Chame to Besisahar',
+                    'fr' => 'Jour 21: Route de Chame à Besisahar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Besisahar.',
+                            'fr' => 'Retour en voiture à Besisahar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '760 m/2,493 ft',
+                            'fr' => '760 m/2 493 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 22: Drive from Besisahar to Kathmandu',
+                    'fr' => 'Jour 22: Route de Besisahar à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Kathmandu.',
+                            'fr' => 'Retour en voiture à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 23: Leisure day in Kathmandu',
+                    'fr' => 'Jour 23: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 24: Transfer to the airport for final departure',
+                    'fr' => 'Jour 24: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $larke_peak_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Drive from Kathmandu to Soti Khola',
+                    'fr' => 'Jour 03: Route de Katmandou à Soti Khola',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Soti Khola, the starting point of the Manaslu Circuit.',
+                            'fr' => 'Conduire jusqu\'à Soti Khola, le point de départ du circuit du Manaslu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '700 m/2,297 ft',
+                            'fr' => '700 m/2 297 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Soti Khola to Machha Khola',
+                    'fr' => 'Jour 04: Trek de Soti Khola à Machha Khola',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Machha Khola along the Budhi Gandaki River.',
+                            'fr' => 'Trek vers Machha Khola le long de la rivière Budhi Gandaki.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '900 m/2,953 ft',
+                            'fr' => '900 m/2 953 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Machha Khola to Jagat',
+                    'fr' => 'Jour 05: Trek de Machha Khola à Jagat',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Jagat through remote villages.',
+                            'fr' => 'Trek vers Jagat à travers des villages isolés.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,340 m/4,396 ft',
+                            'fr' => '1 340 m/4 396 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Jagat to Deng',
+                    'fr' => 'Jour 06: Trek de Jagat à Deng',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Deng with increasing altitude.',
+                            'fr' => 'Trek vers Deng avec une altitude croissante.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,860 m/6,102 ft',
+                            'fr' => '1 860 m/6 102 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Deng to Namrung',
+                    'fr' => 'Jour 07: Trek de Deng à Namrung',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namrung with views of the Manaslu range.',
+                            'fr' => 'Trek vers Namrung avec des vues sur la chaîne du Manaslu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,630 m/8,629 ft',
+                            'fr' => '2 630 m/8 629 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Namrung to Samagaon',
+                    'fr' => 'Jour 08: Trek de Namrung à Samagaon',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Samagaon, a key village near Manaslu.',
+                            'fr' => 'Trek vers Samagaon, un village clé près de Manaslu.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,530 m/11,581 ft',
+                            'fr' => '3 530 m/11 581 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Acclimatization at Samagaon',
+                    'fr' => 'Jour 09: Acclimatation à Samagaon',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10: Trek from Samagaon to Samdo',
+                    'fr' => 'Jour 10: Trek de Samagaon à Samdo',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Samdo, a high-altitude village.',
+                            'fr' => 'Trek vers Samdo, un village en haute altitude.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,875 m/12,713 ft',
+                            'fr' => '3 875 m/12 713 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 11: Trek from Samdo to Larke Peak Base Camp',
+                    'fr' => 'Jour 11: Trek de Samdo au camp de base de Larke Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Larke Peak Base Camp near Larkya La Pass.',
+                            'fr' => 'Trek vers le camp de base de Larke Peak près du col de Larkya La.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,460 m/14,633 ft',
+                            'fr' => '4 460 m/14 633 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 12-20: Rotation period for acclimatization and summit push to Larke Peak',
+                    'fr' => 'Jour 12-20: Période de rotation pour l\'acclimatation et poussée au sommet de Larke Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Base Camp, Camp I, and Camp II, followed by a summit push to Larke Peak (6,249 m) and return to Base Camp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II, suivie d\'une poussée au sommet de Larke Peak (6 249 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 21: Trek from Larke Peak Base Camp to Bhimthang via Larkya La Pass',
+                    'fr' => 'Jour 21: Trek du camp de base de Larke Peak à Bhimthang via le col de Larkya La',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek over Larkya La Pass to Bhimthang.',
+                            'fr' => 'Trek par le col de Larkya La jusqu\'à Bhimthang.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '5,160 m/16,929 ft (Larkya La), 3,720 m/12,205 ft (Bhimthang)',
+                            'fr' => '5 160 m/16 929 ft (Larkya La), 3 720 m/12 205 ft (Bhimthang)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '8-9 hours',
+                            'fr' => '8-9 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 22: Trek from Bhimthang to Tilije',
+                    'fr' => 'Jour 22: Trek de Bhimthang à Tilije',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Tilije through forested trails.',
+                            'fr' => 'Trek vers Tilije à travers des sentiers forestiers.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,300 m/7,546 ft',
+                            'fr' => '2 300 m/7 546 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 23: Trek from Tilije to Jagat',
+                    'fr' => 'Jour 23: Trek de Tilije à Jagat',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Jagat.',
+                            'fr' => 'Trek de retour à Jagat.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,340 m/4,396 ft',
+                            'fr' => '1 340 m/4 396 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 24: Drive from Jagat to Kathmandu',
+                    'fr' => 'Jour 24: Route de Jagat à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Kathmandu via Besisahar.',
+                            'fr' => 'Retour en voiture à Katmandou via Besisahar.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 25: Leisure day in Kathmandu',
+                    'fr' => 'Jour 25: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 26: Transfer to the airport for final departure',
+                    'fr' => 'Jour 26: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $dhampus_peak_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Drive from Kathmandu to Pokhara',
+                    'fr' => 'Jour 03: Route de Katmandou à Pokhara',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Pokhara, the gateway to the Annapurna region.',
+                            'fr' => 'Conduire jusqu\'à Pokhara, la porte d\'entrée de la région de l\'Annapurna.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '827 m/2,713 ft',
+                            'fr' => '827 m/2 713 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Drive from Pokhara to Nayapul and trek to Tikhedhunga',
+                    'fr' => 'Jour 04: Route de Pokhara à Nayapul et trek à Tikhedhunga',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive to Nayapul, the trek starting point.',
+                            'fr' => 'Conduire jusqu\'à Nayapul, le point de départ du trek.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Tikhedhunga.',
+                            'fr' => 'Trek vers Tikhedhunga.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,540 m/5,052 ft',
+                            'fr' => '1 540 m/5 052 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Trek from Tikhedhunga to Ghorepani',
+                    'fr' => 'Jour 05: Trek de Tikhedhunga à Ghorepani',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Ghorepani via Ulleri’s stone steps.',
+                            'fr' => 'Trek vers Ghorepani via les marches en pierre d\'Ulleri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,850 m/9,350 ft',
+                            'fr' => '2 850 m/9 350 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Ghorepani to Tadapani with Poon Hill visit',
+                    'fr' => 'Jour 06: Trek de Ghorepani à Tadapani avec visite de Poon Hill',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Early morning hike to Poon Hill for sunrise, then trek to Tadapani.',
+                            'fr' => 'Randonnée matinale à Poon Hill pour le lever du soleil, puis trek vers Tadapani.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,210 m/10,531 ft (Poon Hill), 2,630 m/8,629 ft (Tadapani)',
+                            'fr' => '3 210 m/10 531 ft (Poon Hill), 2 630 m/8 629 ft (Tadapani)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Tadapani to Chhomrong',
+                    'fr' => 'Jour 07: Trek de Tadapani à Chhomrong',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Chhomrong with views of Annapurna South.',
+                            'fr' => 'Trek vers Chhomrong avec des vues sur Annapurna Sud.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,170 m/7,119 ft',
+                            'fr' => '2 170 m/7 119 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08: Trek from Chhomrong to Himalaya Hotel',
+                    'fr' => 'Jour 08: Trek de Chhomrong à Himalaya Hotel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Himalaya Hotel through bamboo forests.',
+                            'fr' => 'Trek vers Himalaya Hotel à travers des forêts de bambous.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,920 m/9,580 ft',
+                            'fr' => '2 920 m/9 580 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 09: Trek from Himalaya Hotel to Dhampus Peak Base Camp',
+                    'fr' => 'Jour 09: Trek de Himalaya Hotel au camp de base de Dhampus Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Dhampus Peak Base Camp with views of Dhaulagiri.',
+                            'fr' => 'Trek vers le camp de base de Dhampus Peak avec des vues sur Dhaulagiri.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,200 m/13,780 ft',
+                            'fr' => '4 200 m/13 780 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 10-15: Rotation period for acclimatization and summit push to Dhampus Peak',
+                    'fr' => 'Jour 10-15: Période de rotation pour l\'acclimatation et poussée au sommet de Dhampus Peak',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Base Camp and High Camp, followed by a summit push to Dhampus Peak (6,012 m) and return to Base Camp.',
+                            'fr' => 'Rotation entre le camp de base et le camp élevé, suivie d\'une poussée au sommet de Dhampus Peak (6 012 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 16: Trek from Dhampus Peak Base Camp to Bamboo',
+                    'fr' => 'Jour 16: Trek du camp de base de Dhampus Peak à Bamboo',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Bamboo through forested trails.',
+                            'fr' => 'Descendre à Bamboo à travers des sentiers forestiers.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,310 m/7,579 ft',
+                            'fr' => '2 310 m/7 579 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 17: Trek from Bamboo to Jhinu Danda',
+                    'fr' => 'Jour 17: Trek de Bamboo à Jhinu Danda',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Jhinu Danda, known for its hot springs.',
+                            'fr' => 'Trek vers Jhinu Danda, connu pour ses sources chaudes.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,780 m/5,840 ft',
+                            'fr' => '1 780 m/5 840 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 18: Trek from Jhinu Danda to Nayapul and drive to Pokhara',
+                    'fr' => 'Jour 18: Trek de Jhinu Danda à Nayapul et route vers Pokhara',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Nayapul.',
+                            'fr' => 'Trek vers Nayapul.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Pokhara.',
+                            'fr' => 'Retour en voiture à Pokhara.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '827 m/2,713 ft (Pokhara)',
+                            'fr' => '827 m/2 713 ft (Pokhara)',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '4-5 hours',
+                            'fr' => '4-5 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 19: Drive from Pokhara to Kathmandu',
+                    'fr' => 'Jour 19: Route de Pokhara à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::DRIVE,
+                        'description' => [
+                            'en' => 'Drive back to Kathmandu.',
+                            'fr' => 'Retour en voiture à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and lunch',
+                            'fr' => 'Petit-déjeuner et déjeuner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 20: Leisure day in Kathmandu',
+                    'fr' => 'Jour 20: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 21: Transfer to the airport for final departure',
+                    'fr' => 'Jour 21: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+        $kusum_kanguru_expedition_itinerary = [
+            [
+                'title' => [
+                    'en' => 'Day 01: Arrival in Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 01: Arrivée à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Arrive at Tribhuvan International Airport and transfer to your hotel.',
+                            'fr' => 'Arrivée à l\'aéroport international de Tribhuvan et transfert à votre hôtel.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 02: Rest in Kathmandu for expedition briefing and preparation',
+                    'fr' => 'Jour 02: Repos à Katmandou pour le briefing et la préparation de l\'expédition',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Attend a detailed expedition briefing and prepare gear.',
+                            'fr' => 'Assister à un briefing détaillé de l\'expédition et préparer l\'équipement.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast and dinner',
+                            'fr' => 'Petit-déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 03: Fly from Kathmandu to Lukla and trek to Phakding',
+                    'fr' => 'Jour 03: Vol de Katmandou à Lukla et trek à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Short flight to Lukla.',
+                            'fr' => 'Court vol vers Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek from Lukla to Phakding.',
+                            'fr' => 'Trek de Lukla à Phakding.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 04: Trek from Phakding to Namche Bazaar',
+                    'fr' => 'Jour 04: Trek de Phakding à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Namche Bazaar, the gateway to Everest.',
+                            'fr' => 'Trek vers Namche Bazaar, la porte d\'entrée de l\'Everest.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,440 m/11,286 ft',
+                            'fr' => '3 440 m/11 286 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 05: Acclimatization at Namche Bazaar',
+                    'fr' => 'Jour 05: Acclimatation à Namche Bazaar',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Rest day with short hikes for acclimatization.',
+                            'fr' => 'Journée de repos avec de courtes randonnées pour l\'acclimatation.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 06: Trek from Namche Bazaar to Mong La',
+                    'fr' => 'Jour 06: Trek de Namche Bazaar à Mong La',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Mong La with views of Ama Dablam.',
+                            'fr' => 'Trek vers Mong La avec des vues sur Ama Dablam.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '3,975 m/13,041 ft',
+                            'fr' => '3 975 m/13 041 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 07: Trek from Mong La to Kusum Kanguru Base Camp',
+                    'fr' => 'Jour 07: Trek de Mong La au camp de base de Kusum Kanguru',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek to Kusum Kanguru Base Camp with rugged terrain.',
+                            'fr' => 'Trek vers le camp de base de Kusum Kanguru avec un terrain accidenté.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '4,360 m/14,304 ft',
+                            'fr' => '4 360 m/14 304 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '5-6 hours',
+                            'fr' => '5-6 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 08-22: Rotation period for acclimatization and summit push to Kusum Kanguru',
+                    'fr' => 'Jour 08-22: Période de rotation pour l\'acclimatation et poussée au sommet de Kusum Kanguru',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::HIMALAYA,
+                        'description' => [
+                            'en' => 'Rotation between Base Camp, Camp I, and Camp II, followed by a summit push to Kusum Kanguru (6,367 m) and return to Base Camp.',
+                            'fr' => 'Rotation entre le camp de base, le camp I et le camp II, suivie d\'une poussée au sommet de Kusum Kanguru (6 367 m) et retour au camp de base.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Full board',
+                            'fr' => 'Pension complète',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Tent',
+                            'fr' => 'Tente',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 23: Trek from Kusum Kanguru Base Camp to Phakding',
+                    'fr' => 'Jour 23: Trek du camp de base de Kusum Kanguru à Phakding',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Descend to Phakding.',
+                            'fr' => 'Descendre à Phakding.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '6-7 hours',
+                            'fr' => '6-7 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 24: Trek from Phakding to Lukla',
+                    'fr' => 'Jour 24: Trek de Phakding à Lukla',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::TREK,
+                        'description' => [
+                            'en' => 'Trek back to Lukla.',
+                            'fr' => 'Trek de retour à Lukla.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '2,800 m/9,186 ft',
+                            'fr' => '2 800 m/9 186 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast, lunch, and dinner',
+                            'fr' => 'Petit-déjeuner, déjeuner et dîner',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Lodge',
+                            'fr' => 'Lodge',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::TREK_HOURS,
+                        'description' => [
+                            'en' => '3-4 hours',
+                            'fr' => '3-4 heures',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 25: Fly from Lukla to Kathmandu and transfer to the hotel',
+                    'fr' => 'Jour 25: Vol de Lukla à Katmandou et transfert à l\'hôtel',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::FLIGHT,
+                        'description' => [
+                            'en' => 'Fly back to Kathmandu.',
+                            'fr' => 'Vol de retour à Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ALTITUDE,
+                        'description' => [
+                            'en' => '1,400 m/4,593 ft',
+                            'fr' => '1 400 m/4 593 ft',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 26: Leisure day in Kathmandu',
+                    'fr' => 'Jour 26: Journée de loisirs à Katmandou',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::REST,
+                        'description' => [
+                            'en' => 'Relax and explore Kathmandu.',
+                            'fr' => 'Détendez-vous et explorez Katmandou.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::ACCOMODATION,
+                        'description' => [
+                            'en' => 'Hotel',
+                            'fr' => 'Hôtel',
+                        ],
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Day 27: Transfer to the airport for final departure',
+                    'fr' => 'Jour 27: Transfert à l\'aéroport pour le départ final',
+                ],
+                'details' => [
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Transfer to Tribhuvan International Airport for your flight home.',
+                            'fr' => 'Transfert à l\'aéroport international de Tribhuvan pour votre vol de retour.',
+                        ],
+                    ],
+                    [
+                        'type' => ItineraryTypes::OTHERS,
+                        'description' => [
+                            'en' => 'Breakfast only',
+                            'fr' => 'Petit-déjeuner seulement',
+                        ],
+                    ],
+                ],
+            ],
+        ];
+
+
         $this->createItinerariesWithDetails(
             Expedition::first(),
-            $expeditionItineraries
+            $everestSouthExpeditionItineraries
         );
         $this->createItinerariesWithDetails(
             Expedition::find(2),
-            $kanchanjunga_exped_itinerary
+            $everest_expedition_north_itinerary
         );
         $this->createItinerariesWithDetails(
             Expedition::find(3),
+            $k2_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(4),
+            $kanchenjunga_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(5),
             $lhotse_exped_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(6),
+            $makalu_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(7),
+            $cho_oyu_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(8),
+            $dhaulagiri_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(9),
+            $manaslu_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(10),
+            $nanga_parbat_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(11),
+            $annapurna_i_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(12),
+            $gasherbrum_i_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(13),
+            $broad_peak_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(14),
+            $gasherbrum_ii_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(15),
+            $shisha_pangma_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(16),
+            $gyachung_kang_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(17),
+            $nuptse_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(18),
+            $gangapurna_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(19),
+            $dhaulagiri_vii_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(20),
+            $pumori_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(21),
+            $tilicho_peak_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(22),
+            $baruntse_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(23),
+            $himlung_himal_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(24),
+            $vip_everest_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(25),
+            $vvip_manaslu_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(26),
+            $lobuchePeakItineraries
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(27),
+            $ama_dablam_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(28),
+            $mera_peak_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(29),
+            $cholatse_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(30),
+            $chulu_west_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(31),
+            $larke_peak_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(32),
+            $dhampus_peak_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(33),
+            $dhampus_peak_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(34),
+            $pisang_peak_expedition_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Expedition::find(35),
+            $island_peak_expedition_itinerary
         );
     }
 
