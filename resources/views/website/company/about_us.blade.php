@@ -37,8 +37,6 @@
 
             <div class="2xl:mx-32 mx-4 ">
                 <div class="h-8"></div>
-
-
                 <div class="md:px-8 flex flex-col justify-center items-center">
                     <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-center md:text-center"
                         data-aos="fade-down" data-aos-duration="1200">
@@ -68,8 +66,7 @@
                     </h5>
                     <div class="h-8">
                     </div>
-                    <div id="all-services"
-                        class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1  skeleton animate-pulse">
+                    <div id="all-services" class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1  skeleton animate-pulse">
                         @foreach ($aboutUsSetting->certificate_images as $galleryImage)
                             <button
                                 class="card cursor-pointer rounded-none image-fullw-full relative items-end  card-side group hover:shadow border single-service hidden"

@@ -4,7 +4,7 @@
         <div class=" relative lg:flex lg:items-center ">
             <div class="flex items-center justify-between 2xl:mx-32 mx-4 ">
                 <a class="link text-base-content link-neutral texl-lg font-semibold no-underline " href="/home">
-                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-12 w-12 xl:w-20">
+                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-12 w-12 xl:w-24">
                 </a>
                 <div class="lg:hidden">
                     <div class="dropdown relative inline-flex [--placement:bottom-end]">
@@ -80,13 +80,13 @@
                             Expeditions
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300 overflow-hidden m-2"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0  transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 overflow-hidden px-32 "
                             role="menu" aria-orientation="vertical">
                             <div class="flex gap-5 justify-start overflow-y-scroll vertical-scrollbar h-[29rem]">
-                                <nav class="sticky top-5 tabs tabs-bordered bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black min-w-32"
+                                <nav class="sticky top-5 tabs tabs-bordered tabs-vertical gap-2 mt-8 text-black min-w-32 "
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active-tab:font-bold active text-wrap text-lg uppercase   tracking-normal "
+                                        class="tab active-tab:tab-active active-tab:font-bold active text-wrap text-lg uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
                                         id="tabs-center-item-expedition" data-tab="#tabs-center-expedition"
                                         aria-controls="tabs-center-expedition" role="tab" aria-selected="true">
                                         All
@@ -94,7 +94,7 @@
                                     @foreach ($navExpeditions as $index => $expCategory)
                                         @if ($expCategory->expeditions->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active active-tab:font-bold text-wrap text-lg uppercase tracking-normal "
+                                                class="tab active-tab:tab-active active-tab:font-bold text-nowrap text-lg uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
                                                 id="tabs-center-item-{{ $expCategory->id }}"
                                                 data-tab="#tabs-center-{{ $expCategory->id }}"
                                                 aria-controls="tabs-center-{{ $expCategory->id }}" role="tab"
@@ -186,13 +186,13 @@
                             Treks
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 px-32"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start gap-5 h-[29rem] overflow-y-scroll vertical-scrollbar">
-                                <nav class="sticky top-10 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black"
+                                <nav class="sticky top-10 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8  text-black"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active-tab:font-bold active text-lg   tracking-normal "
+                                        class="tab active-tab:tab-active active-tab:font-bold active text-lg tracking-normal bg-gray-300 rounded-md"
                                         id="tabs-center-item-all" data-tab="#tabs-center-all"
                                         aria-controls="tabs-center-all" role="tab" aria-selected="true">
                                         ALL
@@ -200,7 +200,7 @@
                                     @foreach ($navTreks as $index => $trekCategory)
                                         @if ($trekCategory->treks->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active active-tab:font-bold uppercase text-wrap text-lg   tracking-normal "
+                                                class="tab active-tab:tab-active active-tab:font-bold uppercase text-wrap text-lg tracking-normal bg-gray-300 rounded-md"
                                                 id="tabs-center-item-{{ $trekCategory->id }}"
                                                 data-tab="#tabs-center-{{ $trekCategory->id }}"
                                                 aria-controls="tabs-center-{{ $trekCategory->id }}" role="tab"
@@ -291,13 +291,13 @@
                             Activities
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-300"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 px-32"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start h-[29rem] overflow-y-scroll vertical-scrollbar">
-                                <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 m-4 text-black font-medium"
+                                <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 text-black font-medium"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active  uppercase text-wrap text-base   tracking-normal  border-none"
+                                        class="tab active-tab:tab-active active  uppercase text-wrap text-base   tracking-normal  border-none bg-gray-300 rounded-md"
                                         id="tabs-center-item-tour" data-tab="#tabs-center-tour"
                                         aria-controls="tabs-center-tour" role="tab" aria-selected="true">
                                         All
@@ -305,7 +305,7 @@
                                     @foreach ($navTours as $index => $tourCategory)
                                         @if ($tourCategory->tours->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active   uppercase text-wrap text-base   tracking-normal  border-none"
+                                                class="tab active-tab:tab-active   uppercase text-wrap text-base   tracking-normal  border-none bg-gray-300 rounded-md"
                                                 id="tabs-center-item-{{ $tourCategory->id }}"
                                                 data-tab="#tabs-center-{{ $tourCategory->id }}"
                                                 aria-controls="tabs-center-{{ $tourCategory->id }}" role="tab"
