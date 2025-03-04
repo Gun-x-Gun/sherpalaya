@@ -1211,6 +1211,18 @@ class EssentialTipsSeeder extends Seeder
             Tour::find(3),
             $kathmandu_cultural_tour_tips
         );
+        $this->createEssentialTips(
+            Tour::find(4),
+            $kathmandu_cultural_tour_tips
+        );
+        $this->createEssentialTips(
+            Tour::find(5),
+            $kathmandu_cultural_tour_tips
+        );
+        $this->createEssentialTips(
+            Tour::find(6),
+            $kathmandu_cultural_tour_tips
+        );
     }
     protected function createEssentialTips(Model $model, array $tips): void
     {

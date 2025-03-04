@@ -909,6 +909,18 @@ class KeyHighlightSeeder extends Seeder
             Tour::find(3),
             $kathmandu_cultural_tour
         );
+        $this->createKeyHighlights(
+            Tour::find(4),
+            $kathmandu_cultural_tour
+        );
+        $this->createKeyHighlights(
+            Tour::find(5),
+            $kathmandu_cultural_tour
+        );
+        $this->createKeyHighlights(
+            Tour::find(6),
+            $kathmandu_cultural_tour
+        );
     }
     protected function createKeyHighlights(Model $model, array $points): void
     {
