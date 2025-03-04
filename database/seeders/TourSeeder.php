@@ -277,6 +277,10 @@ class TourSeeder extends Seeder
             'photos/culture2.jpg',
             'photos/culture3.jpg',
             'photos/temple.jpg',
+            'photos/services.jpg',
+            'photos/activity.JPG',
+            'photos/activity2.JPG',
+            'photos/activity3.JPG',
         ];
 
         foreach ($tours as $tourData) {
