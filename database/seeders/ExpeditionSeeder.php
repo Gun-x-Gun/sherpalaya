@@ -150,7 +150,7 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $everest_expedition,
             'feature_image_id',
-            public_path('photos/mountain4.jpg')
+            public_path('photos/mountain3.jpg')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -355,7 +355,7 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $everest_expedition_north_data,
             'cover_image_id',
-            public_path('photos/mountain3.jpg')
+            public_path('photos/mountain4.jpg')
         );
         CuratorSeederHelper::seedBelongsTo(
             $everest_expedition_north_data,
@@ -488,12 +488,12 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $k2_expedition_data,
             'cover_image_id',
-            public_path('photos/mountain3.jpg')
+            public_path('photos/k2.jpg')
         );
         CuratorSeederHelper::seedBelongsTo(
             $k2_expedition_data,
             'feature_image_id',
-            public_path('photos/mountain4.jpg')
+            public_path('photos/k2.jpg')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -582,12 +582,12 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $kanchenjunga_expedition_data,
             'cover_image_id',
-            public_path('photos/mountain2.jpg')
+            public_path('photos/kanchenjunga.jpg')
         );
         CuratorSeederHelper::seedBelongsTo(
             $kanchenjunga_expedition_data,
             'feature_image_id',
-            public_path('photos/qualitymount2.png')
+            public_path('photos/kanchenjunga.jpg')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -736,7 +736,7 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $lhotse_exped,
             'cover_image_id',
-            public_path('photos/qualitymount2.png')
+            public_path('photos/qualitymount.png')
         );
         CuratorSeederHelper::seedBelongsTo(
             $lhotse_exped,
@@ -874,7 +874,7 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $makalu_expedition_data,
             'feature_image_id',
-            public_path('photos/qualitymount.png')
+            public_path('photos/qualitymount2.png')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -1223,12 +1223,12 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $manaslu_expedition_data,
             'cover_image_id',
-            public_path('photos/mountain2.jpg')
+            public_path('photos/qualitymount2.png')
         );
         CuratorSeederHelper::seedBelongsTo(
             $manaslu_expedition_data,
             'feature_image_id',
-            public_path('photos/qualitymount.png')
+            public_path('photos/qualitymount2.png')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -1462,12 +1462,12 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $annapurna_i_expedition_data,
             'cover_image_id',
-            public_path('photos/qualitymount.png')
+            public_path('photos/mountain1.jpg')
         );
         CuratorSeederHelper::seedBelongsTo(
             $annapurna_i_expedition_data,
             'feature_image_id',
-            public_path('photos/qualitymount.png')
+            public_path('photos/mountain1.jpg')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -3376,12 +3376,12 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $vip_everest_expedition_data,
             'cover_image_id',
-            public_path('photos/qualitymount2.png')
+            public_path('photos/qualitymount1.png')
         );
         CuratorSeederHelper::seedBelongsTo(
             $vip_everest_expedition_data,
             'feature_image_id',
-            public_path('photos/qualitymount.png')
+            public_path('photos/qualitymount1.png')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
