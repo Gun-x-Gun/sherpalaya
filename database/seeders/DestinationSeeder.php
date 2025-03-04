@@ -1618,9 +1618,8 @@ class DestinationSeeder extends Seeder
             'photos/mountain2.jpg',
             'photos/mountain3.jpg',
             'photos/mountain4.jpg',
-            'photos/mountain5.jpg',
-            'photos/mountain6.jpg',
-            'photos/mountain7.jpg',
+            'photos/mountain8.jpg',
+            'photos/mountain9.jpg',
         ];
 
         foreach ($destinations as $destinationData) {

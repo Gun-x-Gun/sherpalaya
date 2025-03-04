@@ -171,11 +171,6 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsToMany(
             $everest_expedition,
             'images',
-            public_path('photos/mountain5.jpg')
-        );
-        CuratorSeederHelper::seedBelongsToMany(
-            $everest_expedition,
-            'images',
             public_path('photos/mountain1.jpg')
         );
 
@@ -377,11 +372,6 @@ class ExpeditionSeeder extends Seeder
             $everest_expedition_north_data,
             'images',
             public_path('photos/mountain4.jpg')
-        );
-        CuratorSeederHelper::seedBelongsToMany(
-            $everest_expedition_north_data,
-            'images',
-            public_path('photos/mountain5.jpg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $everest_expedition_north_data,
@@ -608,11 +598,6 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsToMany(
             $kanchenjunga_expedition_data,
             'images',
-            public_path('photos/mountain5.jpg')
-        );
-        CuratorSeederHelper::seedBelongsToMany(
-            $kanchenjunga_expedition_data,
-            'images',
             public_path('photos/mountain1.jpg')
         );
 
@@ -758,11 +743,6 @@ class ExpeditionSeeder extends Seeder
             $lhotse_exped,
             'images',
             public_path('photos/mountain4.jpg')
-        );
-        CuratorSeederHelper::seedBelongsToMany(
-            $lhotse_exped,
-            'images',
-            public_path('photos/mountain5.jpg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $lhotse_exped,
@@ -3756,11 +3736,6 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsToMany(
             $peak,
             'images',
-            public_path('photos/mountain7.jpg')
-        );
-        CuratorSeederHelper::seedBelongsToMany(
-            $peak,
-            'images',
             public_path('photos/mountain1.jpg')
         );
 
@@ -4252,11 +4227,6 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsToMany(
             $chulu_west_expedition_data,
             'images',
-            public_path('photos/mountain7.jpg')
-        );
-        CuratorSeederHelper::seedBelongsToMany(
-            $chulu_west_expedition_data,
-            'images',
             public_path('photos/mountain1.jpg')
         );
 
@@ -4743,11 +4713,6 @@ class ExpeditionSeeder extends Seeder
             $pisang_peak_expedition_data,
             'images',
             public_path('photos/lobuche.jpg')
-        );
-        CuratorSeederHelper::seedBelongsToMany(
-            $pisang_peak_expedition_data,
-            'images',
-            public_path('photos/mountain7.jpg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $pisang_peak_expedition_data,

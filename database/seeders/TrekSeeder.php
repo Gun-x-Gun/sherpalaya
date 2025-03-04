@@ -169,12 +169,6 @@ class TrekSeeder extends Seeder
             public_path('photos/basecamp.JPG')
         );
 
-        CuratorSeederHelper::seedBelongsToMany(
-            $trek,
-            'images',
-            public_path('photos/mountain5.jpg')
-        );
-
 
 
         //id2
@@ -476,16 +470,6 @@ class TrekSeeder extends Seeder
             $trek3,
             'images',
             public_path('photos/mountain8.jpg')
-        );
-        CuratorSeederHelper::seedBelongsToMany(
-            $trek3,
-            'images',
-            public_path('photos/mountain7.jpg')
-        );
-        CuratorSeederHelper::seedBelongsToMany(
-            $trek3,
-            'images',
-            public_path('photos/mountain6.jpg')
         );
 
         //id4
@@ -1115,13 +1099,13 @@ class TrekSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $renjo_la_pass_trek_data,
             'cover_image_id',
-            public_path('photos/mountain5.jpg') // Replace with the actual path
+            public_path('photos/mountain9.jpg') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsTo(
             $renjo_la_pass_trek_data,
             'feature_image_id',
-            public_path('photos/mountain5.jpg') // Replace with the actual path
+            public_path('photos/mountain9.jpg') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -2172,7 +2156,7 @@ class TrekSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $nar_phu_trek_data,
             'cover_image_id',
-            public_path('photos/mountain6.jpg') // Replace with the actual path
+            public_path('photos/mountain9.jpg') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsTo(
@@ -2318,7 +2302,7 @@ class TrekSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $tsum_valley_trek_data,
             'cover_image_id',
-            public_path('photos/mountain6.jpg') // Replace with the actual path
+            public_path('photos/mountain1.jpg') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsTo(
@@ -2466,7 +2450,7 @@ class TrekSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $tamang_heritage_trek_data,
             'cover_image_id',
-            public_path('photos/mountain6.jpg') // Replace with the actual path
+            public_path('photos/mountain2.jpg') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsTo(
@@ -2615,7 +2599,7 @@ class TrekSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $everest_base_camp_cho_la_pass_trek_data,
             'cover_image_id',
-            public_path('photos/mountain6.jpg') // Replace with the actual path
+            public_path('photos/mountain1.jpg') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsTo(
@@ -2763,7 +2747,7 @@ class TrekSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $luxury_everest_base_camp_trek_data,
             'cover_image_id',
-            public_path('photos/mountain6.jpg') // Replace with the actual path
+            public_path('photos/mountain2.jpg') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsTo(
@@ -2915,7 +2899,7 @@ class TrekSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $annapurna_excursion_trek_data,
             'cover_image_id',
-            public_path('photos/mountain6.jpg') // Replace with the actual path
+            public_path('photos/mountain3.jpg') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsTo(
@@ -3068,7 +3052,7 @@ class TrekSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $annapurna_sanctuary_trek_data,
             'cover_image_id',
-            public_path('photos/mountain6.jpg') // Replace with the actual path
+            public_path('photos/mountain4.jpg') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsTo(
@@ -3232,7 +3216,7 @@ class TrekSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $dhampus_sarangkot_chitwan_trek_data,
             'cover_image_id',
-            public_path('photos/mountain6.jpg') // Replace with the actual path
+            public_path('photos/mountain3.jpg') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsTo(
@@ -3382,7 +3366,7 @@ class TrekSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $ghorepani_poonhill_trek_data,
             'cover_image_id',
-            public_path('photos/mountain6.jpg') // Replace with the actual path
+            public_path('photos/basecamp3.JPG') // Replace with the actual path
         );
 
         CuratorSeederHelper::seedBelongsTo(
