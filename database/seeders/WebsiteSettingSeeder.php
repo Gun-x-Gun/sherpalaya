@@ -97,9 +97,9 @@ class WebsiteSettingSeeder extends Seeder
 
 
         $landingPageSetting->expedition_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/mountain1.jpg'))->id;
-        $landingPageSetting->trek_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/mountain5.jpg'))->id;
+        $landingPageSetting->trek_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/trekbanner.jpg'))->id;
         $landingPageSetting->tour_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/culture.jpg'))->id;
-        $landingPageSetting->peak_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/mountain4.jpg'))->id;
+        $landingPageSetting->peak_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/services.jpg'))->id;
         $landingPageSetting->expedition_activity_content = "Embark on the ultimate adventure with our expertly guided expeditions. Whether conquering the towering Himalayas or traversing remote landscapes, our seasoned team ensures a thrilling yet safe journey. Experience high-altitude challenges, breathtaking scenery, and a deep connection with nature like never before.";
         $landingPageSetting->trek_activity_content = "Discover the magic of Nepal’s breathtaking trails with our immersive treks. From the legendary Everest Base Camp to the serene Annapurna Circuit, we take you through diverse landscapes, rich cultures, and unforgettable moments. Let each step lead you to a new adventure!";
         $landingPageSetting->tour_activity_content = "Unveil the wonders of Nepal with our expertly curated tours. Explore ancient heritage, vibrant cities, and stunning natural beauty with our knowledgeable guides. Whether cultural, spiritual, or scenic, every tour is crafted for an enriching and unforgettable experience.";
@@ -186,7 +186,7 @@ class WebsiteSettingSeeder extends Seeder
     {
         $aboutUsSetting = app(AboutUsSetting::class);
 
-        $aboutUsSetting->cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount.png'))->id;
+        $aboutUsSetting->cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/aboutpage.jpg'))->id;
         $aboutUsSetting->content = "<p>We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.</p>";
         $aboutUsSetting->certificate_images = [
             CuratorSeederHelper::resolveFileData(public_path('/certificates/company-registration.jpg'))->id,
