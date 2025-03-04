@@ -92,7 +92,7 @@
         <div
             class="card--rounded-none image-full h-full w-full relative flex items-center justify-center card-side group hover:shadow border bg-transparent">
             <figure class="h-full w-full">
-                <img src="{{ asset('photos/mountain5.jpg') }}" alt="overlay image"
+                <img src="{{ asset('photos/culture2.jpg') }}" alt="overlay image"
                     class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-center">
