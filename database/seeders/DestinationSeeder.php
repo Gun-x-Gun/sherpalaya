@@ -53,6 +53,42 @@ class DestinationSeeder extends Seeder
                 ]
             ],
             [
+                'name' => 'Thamel',
+                'region_id' => 2,
+                'description' => [
+                    'fr' => 'Un quartier touristique populaire de Katmandou, connu pour sa vie nocturne animée, ses restaurants et ses boutiques.',
+                    'en' => 'A popular tourist district in Kathmandu, known for its vibrant nightlife, restaurants, and shops.'
+                ],
+                'location' => [
+                    'lat' => 27.7172,
+                    'lng' => 85.3240
+                ]
+            ],
+            [
+                'name' => 'Lalitpur',
+                'region_id' => 2,
+                'description' => [
+                    'fr' => 'Une ville historique de la vallée de Katmandou, célèbre pour son riche patrimoine culturel et son architecture traditionnelle newar.',
+                    'en' => 'A historic city in the Kathmandu Valley, famous for its rich cultural heritage and traditional Newari architecture.'
+                ],
+                'location' => [
+                    'lat' => 27.6667,
+                    'lng' => 85.3167
+                ]
+            ],
+            [
+                'name' => 'Bhaktapur',
+                'region_id' => 2,
+                'description' => [
+                    'fr' => 'Une ancienne ville de la vallée de Katmandou, réputée pour ses temples bien conservés, ses places et sa poterie traditionnelle.',
+                    'en' => 'An ancient city in the Kathmandu Valley, renowned for its well-preserved temples, squares, and traditional pottery.'
+                ],
+                'location' => [
+                    'lat' => 27.6722,
+                    'lng' => 85.4298
+                ]
+                ],
+            [
                 'name' => 'Phakding',
                 'region_id' => 1,
                 'description' => [
