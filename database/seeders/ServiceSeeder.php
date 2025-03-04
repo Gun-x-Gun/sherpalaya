@@ -15,8 +15,7 @@ class ServiceSeeder extends Seeder
      */
     public function run(): void
     {
-        $services = [
-            [
+        $helicopter = [
                 'title' => [
                     'en' => 'Emergency Helicopter Rescue Service',
                     'fr' => 'Service de secours héliporté d\'urgence',
@@ -27,20 +26,70 @@ class ServiceSeeder extends Seeder
                 ],
                 'cover_image_id' => null,
                 'location' => ['lat' => 27.6622, 'lng' => 85.3240],
+        ];
+        $serv = Service::create($helicopter);
+            $serv->destinations()->sync(
+                Destination::where('region_id',2)
+                    ->limit(1)
+                    ->get()
+                    ->pluck('id')
+                    ->toArray()
+            );
+
+            CuratorSeederHelper::seedBelongsTo(
+                $serv,
+                'cover_image_id',
+                public_path('photos/services.jpg')
+            );
+            CuratorSeederHelper::seedBelongsToMany(
+                $serv,
+                'images',
+                public_path('photos/service.jpg')
+            );
+            CuratorSeederHelper::seedBelongsToMany(
+                $serv,
+                'images',
+                public_path('photos/servicehelicopter.jpg')
+            );
+        $trekkingshop = [
+            'title' => [
+                'en' => 'Recommended Trekking Gear Shops',
+                'fr' => 'Magasins de matériel de trekking recommandés',
             ],
-            [
-                'title' => [
-                    'en' => 'Recommended Trekking Gear Shops',
-                    'fr' => 'Magasins de matériel de trekking recommandés',
-                ],
-                'description' => [
-                    'en' => 'Get high-quality trekking gear at our recommended shop in Thamel. Trusted by seasoned trekkers.',
-                    'fr' => 'Procurez-vous du matériel de trekking de haute qualité dans notre magasin recommandé à Thamel. Approuvé par des trekkeurs expérimentés.',
-                ],
-                'cover_image_id' => null,
-                'location' => ['lat' => 27.7109, 'lng' => 85.3000],
+            'description' => [
+                'en' => 'Get high-quality trekking gear at our recommended shop in Thamel. Trusted by seasoned trekkers.',
+                'fr' => 'Procurez-vous du matériel de trekking de haute qualité dans notre magasin recommandé à Thamel. Approuvé par des trekkeurs expérimentés.',
             ],
-            [
+            'cover_image_id' => null,
+            'location' => ['lat' => 27.7109, 'lng' => 85.3000],
+        ];
+       
+        $serv = Service::create($trekkingshop);
+            $serv->destinations()->sync(
+                Destination::where('region_id',2)
+                    ->limit(3)
+                    ->get()
+                    ->pluck('id')
+                    ->toArray()
+            );
+
+            CuratorSeederHelper::seedBelongsTo(
+                $serv,
+                'cover_image_id',
+                public_path('photos/trekkingshop1.jpg')
+            );
+            CuratorSeederHelper::seedBelongsToMany(
+                $serv,
+                'images',
+                public_path('photos/trekkingshop2.webp')
+            );
+            CuratorSeederHelper::seedBelongsToMany(
+                $serv,
+                'images',
+                public_path('photos/mountain2.jpg')
+            );
+
+            $rentals = [
                 'title' => [
                     'en' => 'Adventure Gear Rentals',
                     'fr' => 'Location de matériel d\'aventure',
@@ -51,26 +100,11 @@ class ServiceSeeder extends Seeder
                 ],
                 'cover_image_id' => null,
                 'location' => ['lat' => 28.2090, 'lng' => 83.9856],
-            ],
-            [
-                'title' => [
-                    'en' => 'Photography Workshops',
-                    'fr' => 'Ateliers de photographie',
-                ],
-                'description' => [
-                    'en' => 'Join photography workshops that teach you how to capture the stunning landscapes and culture of the Annapurna region.',
-                    'fr' => 'Participez à des ateliers de photographie qui vous apprendront à capturer les paysages et la culture époustouflants de la région de l\'Annapurna.',
-                ],
-                'cover_image_id' => null,
-                'location' => ['lat' => 28.4581, 'lng' => 83.8389],
-            ],
-        ];
-
-        foreach ($services as $serviceData) {
-            $serv = Service::create($serviceData);
+            ];
+            $serv = Service::create($rentals);
             $serv->destinations()->sync(
-                Destination::inRandomOrder()
-                    ->limit(5)
+                Destination::where('region_id',2)
+                    ->limit(3)
                     ->get()
                     ->pluck('id')
                     ->toArray()
@@ -79,33 +113,54 @@ class ServiceSeeder extends Seeder
             CuratorSeederHelper::seedBelongsTo(
                 $serv,
                 'cover_image_id',
-                public_path('photos/Chor.jpg')
+                public_path('photos/trekkingshop1.jpg')
             );
             CuratorSeederHelper::seedBelongsToMany(
                 $serv,
                 'images',
-                public_path('photos/mountain1.jpg')
+                public_path('photos/trekkingshop2.webp')
             );
             CuratorSeederHelper::seedBelongsToMany(
                 $serv,
                 'images',
                 public_path('photos/mountain2.jpg')
             );
-            CuratorSeederHelper::seedBelongsToMany(
+        $photography = [
+            'title' => [
+                'en' => 'Photography Workshops',
+                'fr' => 'Ateliers de photographie',
+            ],
+            'description' => [
+                'en' => 'Join photography workshops that teach you how to capture the stunning landscapes and culture of the Annapurna region.',
+                'fr' => 'Participez à des ateliers de photographie qui vous apprendront à capturer les paysages et la culture époustouflants de la région de l\'Annapurna.',
+            ],
+            'cover_image_id' => null,
+            'location' => ['lat' => 28.4581, 'lng' => 83.8389],
+        ];
+        $serv = Service::create($photography);
+            $serv->destinations()->sync(
+                Destination::where('region_id',2)
+                ->limit(1)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+            );
+
+            CuratorSeederHelper::seedBelongsTo(
                 $serv,
-                'images',
-                public_path('photos/mountain3.jpg')
+                'cover_image_id',
+                public_path('photos/temple.jpg')
             );
             CuratorSeederHelper::seedBelongsToMany(
                 $serv,
                 'images',
-                public_path('photos/mountain4.jpg')
+                public_path('photos/culture3.jpg')
             );
             CuratorSeederHelper::seedBelongsToMany(
                 $serv,
                 'images',
-                public_path('photos/mountain5.jpg')
+                public_path('photos/culture2.jpg')
             );
-        }
+
     }
 }
