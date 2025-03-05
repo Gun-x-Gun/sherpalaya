@@ -14,19 +14,35 @@
 
 <x-website-layout>
     <div class="bg-blue-100/10 font-body">
-        <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
-            <figure class="h-[60vh] w-full">
+        {{-- <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
+            <figure class="h-[80vh] w-full">
                 <img src="{{ $service->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
-                    class="h-[60vh] w-full object-cover brightness-50" />
+                    class="h-[80vh] w-full object-cover brightness-50" />
             </figure>
-            <div class="card-body">
-                <div
-                    class="absolute bottom-1/2 2xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                    <div class=" max-w-[92%] 2xl:max-w-[100%]" data-aos="fade-down" data-aos-duration="1200">
-                        <h2 class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-bold">
-                            {{ $service->title }}
-                        </h2>
-                    </div>
+            <div class="card-body absolute inset-0 flex items-center justify-start font-oswald">
+                <div class="absolute bottom-1/4 left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
+                    data-aos="fade-down" data-aos-duration="1200">
+                    <h2
+                        class="card-title mb-2 text-blue-50 text-4xl sm:text-5xl lg:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap md:w-[70%] leading-[1.3]  overflow-hidden opacity-75">
+                        {{ ' ' . $service->title }} 
+                    </h2>
+                </div>
+            </div>
+        </div> --}}
+
+        <div class="card--rounded-none image-full bg-blue-100/50 h-[80vh] relative">
+            <figure class="h-[80vh] w-full">
+                <img src="{{ $service->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
+                    class="h-[80vh] w-full object-cover brightness-50" />
+            </figure>
+            <div class="card-body absolute inset-0 flex items-center justify-start font-oswald">
+                <div class="absolute bottom-1/4 left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
+                    data-aos="fade-down" data-aos-duration="1200">
+                    <h2
+                        class="card-title mb-2 text-white text-4xl sm:text-5xl lg:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap md:w-[70%] leading-[1.3]  overflow-hidden opacity-75">
+                        {{ $service->title }}
+
+                    </h2>
                 </div>
             </div>
         </div>
@@ -51,8 +67,7 @@
         <div class="mx-4 2xl:mx-32 mt-4">
             {{-- description  --}}
 
-            <div class="card sm:w-full md:px-8 shadow-sm shadow-slate-300 bg-blue-50/10" data-aos="fade-down"
-                data-aos-duration="1200">
+            <div class="card sm:w-full md:px-8 shadow-sm shadow-slate-300 bg-blue-50/10">
                 <div class="card-body text-center text-black px-2 tracking-wide font-light text-lg/7 font-body">
                     <p>
                         {{ $service->description }}
@@ -77,8 +92,7 @@
                                 <div class="h-4"></div>
                                 <div class="sm:grid sm:grid-cols-2 md:grid-cols-2 flex flex-col gap-2 w-full md:px-2">
                                     @foreach ($service->destinations as $destination)
-                                        <div class="card w-full bg-blue-100/30 at-a-glimpse my-2 " data-aos="fade-down"
-                                            data-aos-duration="1200">
+                                        <div class="card w-full bg-blue-100/30 at-a-glimpse my-2 ">
                                             {{-- @if (!empty($destination->destinationImages) && $destination->destinationImages->isNotEmpty()) --}}
                                             <div>
                                                 <div id="limited-destiinations-images"

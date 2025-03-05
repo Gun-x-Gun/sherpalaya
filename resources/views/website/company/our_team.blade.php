@@ -1,6 +1,6 @@
 <x-website-layout>
     <div class="bg-blue-100/10 font-body">
-        <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
+        {{-- <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <img src="{{ asset('/photos/activity2.JPG') }}" alt="Trekking background image"
                     class="h-[60vh] w-full object-cover brightness-50" />
@@ -9,13 +9,35 @@
                 <div
                     class="absolute bottom-1/2 2xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class="">
-                        {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
-                            Get to know
-                        </h5> --}}
+                        
                         <h5 class="card-title mb-8 text-white text-3xl md:text-5xl uppercase font-normal tracking-wide ">
                             Sherpalaya's Team
                         </h5>
                     </div>
+                </div>
+            </div>
+        </div> --}}
+
+        <div class="card--rounded-none image-full  h-[80vh] relative">
+            <figure class="h-[80vh] w-full">
+                <img src="{{ asset('/photos/activity2.JPG') }}" alt="Trekking background image"
+                    class="h-[80vh] w-full object-cover brightness-50" />
+            </figure>
+            <div class="card-body absolute inset-0 flex items-center justify-start">
+                <div class="absolute bottom-1/4  left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
+                    data-aos="fade-down" data-aos-duration="1200">
+                    <h5
+                        class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
+                        Meet Our Experts
+                    </h5>
+                    <h2
+                        class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
+                        Our Travel Specialists
+                    </h2>
+                    <h5
+                        class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
+                        The People Behind Your Journeys
+                    </h5>
                 </div>
             </div>
         </div>

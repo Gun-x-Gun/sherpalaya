@@ -1,29 +1,28 @@
 <x-website-layout>
     <div class="bg-blue-100/10 font-oswald">
-        <div class="card--rounded-none image-full  h-[60vh]">
-            <figure class="h-[60vh] w-full">
-                <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$aboutUsSetting->cover_image_id" :fallback="asset('/photos/banner.jpg')"
+        <div class="card--rounded-none image-full  h-[80vh] relative">
+            <figure class="h-[80vh] w-full">
+                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$aboutUsSetting->cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
             </figure>
-            <div class="card-body font-oswald">
-                <div
-                    class="absolute bottom-1/2 2xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                    <div class="" data-aos="fade-down" data-aos-duration="1200">
-                        {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
-                            Explore
-                        </h5> --}}
-                        <h2
-                            class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-normal tracking-wide">
-                            About Sherpalaya
-                        </h2>
-                        {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-normal ">
-                            About Sherpalaya
-                        </h5> --}}
-                    </div>
+            <div class="card-body absolute inset-0 flex items-center justify-start">
+                <div class="absolute bottom-1/4  left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
+                    data-aos="fade-down" data-aos-duration="1200">
+                    <h5
+                        class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
+                        Embark on Unforgettable Journeys
+                    </h5>
+                    <h2
+                        class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
+                        About Sherpalaya
+                     </h2>
+                    <h5
+                        class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
+                        Crafting Experiences, Creating Memories
+                    </h5>
                 </div>
             </div>
         </div>
-
         <div class="bg-blue-100/20 font-oswald">
             <x-breadcrumb :breadcrumbs="[
                 [
@@ -66,13 +65,12 @@
                     </h5>
                     <div class="h-8">
                     </div>
-                    <div id="all-services" class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1  skeleton animate-pulse">
+                    <div id="all-services" class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1  skeleton animate-pulse">
                         @foreach ($aboutUsSetting->certificate_images as $galleryImage)
                             <button
                                 class="card cursor-pointer rounded-none image-fullw-full relative items-end  card-side group hover:shadow border single-service hidden"
                                 aria-haspopup="dialog" aria-expanded="false" aria-controls="service-gallery-modal"
-                                data-overlay="#service-gallery-modal" onclick="changeCarouselSlide({{ $loop->index }})"
-                                data-aos="fade-down" data-aos-duration="1200">
+                                data-overlay="#service-gallery-modal" onclick="changeCarouselSlide({{ $loop->index }})">
                                 <figure class="h-full w-full brightness-90">
                                     <x-curator-glider class="h-[40vh] w-full object-cover brightness-50"
                                         :media="$galleryImage" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
@@ -81,7 +79,7 @@
                         @endforeach
                     </div>
                     <div class="h-10"></div>
-                    <p class="text-warning italic tracking-wider font-normal"> Legal Notice: This document is the
+                    <p class="text-warning italic tracking-wider font-normal text-sm"> Legal Notice: This document is the
                         property of Sherpalaya.
                         Unauthorized reproduction, distribution, or modification is strictly prohibited. All rights
                         reserved.

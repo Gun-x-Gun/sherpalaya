@@ -1,6 +1,6 @@
 <x-website-layout>
     <div class="bg-blue-100/10 font-body">
-        <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
+        {{-- <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
@@ -13,10 +13,33 @@
                             Our
                         </h5>
                         <h2 class="card-title mb-2.5  text-white text-3xl md:text-5xl uppercase font-bold">
-                            {{-- {{ $trek->title }} --}}
                             Services
                         </h2>
                     </div>
+                </div>
+            </div>
+        </div> --}}
+
+        <div class="card--rounded-none image-full  h-[80vh] relative">
+            <figure class="h-[80vh] w-full">
+                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
+                    loading="lazy" />
+            </figure>
+            <div class="card-body absolute inset-0 flex items-center justify-start">
+                <div class="absolute bottom-1/4  left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
+                    data-aos="fade-down" data-aos-duration="1200">
+                    <h5
+                        class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
+                        Tailored Travel Solutions
+                    </h5>
+                    <h2
+                        class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
+                        Our Services
+                    </h2>
+                    <h5
+                        class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
+                        Seamless Travel Planning
+                    </h5>
                 </div>
             </div>
         </div>

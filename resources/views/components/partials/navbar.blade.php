@@ -7,7 +7,7 @@
                     <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-12 w-12 xl:w-24">
                 </a>
                 <div class="lg:hidden">
-                    <div class="dropdown relative inline-flex [--placement:bottom-end]">
+                    <div class="dropdown relative inline-flex [--placement:bottom-end] px-2 ">
                         <button id="language-select-dropdown-drawer" type="button" class="dropdown-toggle"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             <span class="icon-[tabler--language-hiragana] size-5"></span>
@@ -23,6 +23,7 @@
                         aria-controls="middle-center-modal" data-overlay="#middle-center-modal">
                         <span class="icon-[tabler--search] size-5"></span>
                     </button>
+
                     <button type="button" class="btn btn-transparent border-none" aria-haspopup="dialog"
                         aria-expanded="false" aria-controls="overlay-end-example" data-overlay="#overlay-end-example">
                         <span class="icon-[tabler--menu-2] collapse-open:hidden size-5"></span>
