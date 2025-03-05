@@ -389,7 +389,7 @@
                     </div>
                     {{-- tourend --}}
 
-                    <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
+                    {{-- <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="service-dropdown" type="button"
                             class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
@@ -406,10 +406,19 @@
                                 </li>
                             @endforeach
                         </ul>
-                    </div>
+                    </div> --}}
 
                     {{-- contact  --}}
                     <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent items-center  ">
+                        <li class=" hover:text-warning rounded-lg text-base "><a href="/services"
+                                @class([
+                                    'text-warning' => request()->route()->getName() == 'website.contact',
+                                ])>Services</a>
+                        </li>
+
+
+
+
                         <li class=" hover:text-warning rounded-lg text-base "><a href="/contact"
                                 @class([
                                     'text-warning' => request()->route()->getName() == 'website.contact',
