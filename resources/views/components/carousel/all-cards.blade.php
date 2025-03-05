@@ -13,23 +13,23 @@
         </div>
     </div> --}}
 
-    <div class="md:px-8 flex flex-col justify-center items-center">
-        <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-center md:text-center"
+    <div class="md:px-8 flex flex-col justify-center items-center 2xl:mx-32 mx-4 ">
+        <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left md:text-center"
             data-aos="fade-down" data-aos-duration="1200">
             Explore
             Beyond
             Limits
         </h5>
         <div
-            class="text-xl/7 mt-6 text-preety text-black text-center
-                 font-light font-body lg:w-[80%] tracking-wide">
+            class="text-xl/7 mt-6 text-preety text-black text-left md:text-center
+                 font-light font-body lg:w-[80%] tracking-wide ">
             {!! $landingPageSetting->expedition_activity_content !!}
         </div>
         <div class="h-10 md:h-12"></div>
     </div>
 
-    <div class="bg-blue-100/50 max-w-full font-body">
-
+    <div class=" max-w-full font-body">
+        <div class=""></div>
         <div class="md:grid grid-cols-7 gap-2 2xl:mx-32 mx-4 flex flex-col ">
             <a href="/expeditions" class="col-span-4 ">
                 <div
