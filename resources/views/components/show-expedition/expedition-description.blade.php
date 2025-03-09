@@ -40,50 +40,13 @@
 <div class="h-4"></div>
 <div class="card sm:w-full shadow-sm shadow-slate-300 bg-blue-100/20 font-body">
     <div class="card-body gap-2 text-gray px-2  text-preety">
-        <div class="align-top text-black-800 text-lg/8 tracking-wide font-light line-clamp-[10]"
+        <div class="align-top text-black-800 text-lg/8 tracking-wide font-lights"
             id="expedition-description-{{ $expedition->id }}">
             {!! $expedition->description !!}
         </div>
-        <button class="btn btn-text read-more" id="expedition-description-read-more-{{ $expedition->id }}">
-            Read More
-        </button>
+
+        <x-read-more componentId="expedition-description-{{ $expedition->id }}"/>
+
     </div>
-
-    @push('scripts')
-        <script defer>
-            document.addEventListener('DOMContentLoaded', (e) => {
-                let expeditionDescription = document.getElementById("expedition-description-" +
-                    '{{ $expedition->id }}');
-                let expeditionDescriptionReadMore = document.getElementById("expedition-description-read-more-" +
-                    '{{ $expedition->id }}');
-
-                expeditionDescriptionReadMore.addEventListener('click', function(clickEvent) {
-
-                    let isInReadMoreState = expeditionDescriptionReadMore.classList.contains('read-more');
-
-                    console.log("Read more clicked",{
-                        clickEvent,
-                        isInReadMoreState
-                    });
-
-
-                    if (isInReadMoreState) {
-                        expeditionDescriptionReadMore.classList.remove('read-more');
-                        expeditionDescription.classList.remove('line-clamp-[10]');
-                        expeditionDescriptionReadMore.innerHTML = "Read Less";
-                    } else {
-                        expeditionDescriptionReadMore.classList.add('read-more');
-                        expeditionDescription.classList.add('line-clamp-[10]');
-                        expeditionDescriptionReadMore.innerHTML = "Read More";
-                    }
-                });
-            });
-
-            function toggleReadMore(id) {
-
-
-            }
-        </script>
-    @endpush
 
 </div>
