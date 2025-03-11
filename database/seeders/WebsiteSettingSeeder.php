@@ -44,7 +44,11 @@ class WebsiteSettingSeeder extends Seeder
                 'title' => 'Expedition',
                 'wait_time' => 2,
                 'content' => 'Embark on the ultimate adventure with our expertly guided expeditions',
-                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/mountain1.jpg'))->id,
+                'image_id' => '',
+                'images' => [
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/mountain1.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/mountain2.jpg'))->id,
+                ],
                 'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/icons/expedition.svg'))->id,
             ],
             [

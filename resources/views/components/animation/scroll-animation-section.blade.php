@@ -1,11 +1,26 @@
-@props(['id', 'icon', 'title', 'image', 'content', 'hideAfterScroll' => false, 'waitBeforeHide' => 0])
+@props([
+    'id',
+    'icon',
+    'title',
+    'image',
+    'content',
+    'hideAfterScroll' => false,
+    'waitBeforeHide' => 0,
+    'images' => [],
+])
 
 <div id="{{ $id }}" class="w-[100vw] h-[100vh] card image-full flex-col-reverse rounded-none">
     <figure class="overflow-hidden rounded-none">
-        <img src="{{ $image }}" alt="overlay image" />
+        @if (is_array($images) && count($images) != 0)
+            @foreach ($images as $image)
+                <img src="{{ $image }}" alt="overlay image" class="hidden" />
+            @endforeach
+        @else
+            <img src="{{ $image }}" alt="overlay image" />
+        @endif
     </figure>
     <div class="card-body justify-center items-center">
-        <img src="{{ $icon }}" class="size-28 animated-icon"/>
+        <img src="{{ $icon }}" class="size-28 animated-icon" />
         <h2 class="card-title mb-2.5 text-white animated-title text-3xl">
             {{ $title }}
         </h2>
@@ -27,6 +42,11 @@
             let animationRoot = document.querySelector(animationRootId);
             let hideAfterScroll = {{ $hideAfterScroll ? 'true' : 'false' }};
             let waitBeforeHide = {{ $waitBeforeHide }};
+
+
+            let multipleImages = animationRoot.querySelectorAll("figure img");
+
+            let totalAnimationDuration = 0;
 
 
             let inviewEffect = window.motion.inView(animationInviewSelector, (element) => {
@@ -58,6 +78,8 @@
                     }
                 ];
 
+                totalAnimationDuration = 1;
+
                 let contentSpanAnimationSequence = [
                     contentSpanElements,
                     {
@@ -68,6 +90,8 @@
                         delay: window.motion.stagger(0.125)
                     }
                 ];
+
+                totalAnimationDuration = 1 * (contentSpanElements.length + 1) * 0.125;
 
 
                 let sequence = [
@@ -98,6 +122,12 @@
                         },
                     ]);
 
+                    totalAnimationDuration = 1 + waitBeforeHide + 1;
+
+
+                } else {
+                    totalAnimationDuration = 50;
+
                 }
 
                 let imageAnimation = window.motion.animate(
@@ -109,10 +139,28 @@
                 );
 
                 let sequenceAnimation = window.motion.animate(sequence);
+                let imageAnimationInvervalId = null;
+                if (multipleImages.length > 1) {
+                    let currentImageIndex = 0;
+                    imageAnimationInvervalId = setInterval(function() {
+                        if (currentImageIndex >= multipleImages.length) {
+                            return;
+                        }
+
+                        if (currentImageIndex > 0) {
+                            multipleImages[currentImageIndex - 1].classList.add('hidden');
+                        }
+                        multipleImages[currentImageIndex].classList.remove('hidden');
+                        currentImageIndex = currentImageIndex + 1;
+                    }, (totalAnimationDuration * 1000 / multipleImages.length));
+                }
 
 
-                sequenceAnimation.then(()=>{
-                    if(hideAfterScroll){
+                sequenceAnimation.then(() => {
+                    if (imageAnimationInvervalId !== null) {
+                        clearInverval(imageAnimationInvervalId);
+                    }
+                    if (hideAfterScroll) {
                         animationRoot.remove();
                     }
                 });

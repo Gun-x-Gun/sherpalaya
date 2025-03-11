@@ -27,12 +27,15 @@
     {{-- Animation sections --}}
     <div id="home-page-animation">
         @foreach ($animationSections as $animationSection)
-            @if ($loop->remaining != 0)
-                <x-animation.scroll-animation-section :id="$animationSection['id']" :title="$animationSection['title']" :image="$animationMediaUrls[$animationSection['image_id']]"
-                    :content="$animationSection['content']" :hideAfterScroll="true" :waitBeforeHide="$animationSection['wait_time']" :icon="$animationMediaUrls[$animationSection['icon_id']]" />
-            @else
-                <x-animation.scroll-animation-section :id="$animationSection['id']" :title="$animationSection['title']" :image="$animationMediaUrls[$animationSection['image_id']]"
-                    :content="$animationSection['content']" :hideAfterScroll="false" :waitBeforeHide="$animationSection['wait_time']" :icon="$animationMediaUrls[$animationSection['icon_id']]">
+            <x-animation.scroll-animation-section :id="$animationSection['id']" :title="$animationSection['title']" :image="isset($animationSection['images'])
+                ? $animationMediaUrls[$animationSection['images'][0]]
+                : $animationMediaUrls[$animationSection['image_id']]"
+                :images="isset($animationSection['images'])
+                    ? Arr::map($animationSection['images'], function ($imageId) use ($animationMediaUrls) {
+                        return $animationMediaUrls[$imageId];
+                    })
+                    : []" :content="$animationSection['content']" :hideAfterScroll="$loop->remaining != 0" :waitBeforeHide="$animationSection['wait_time']" :icon="$animationMediaUrls[$animationSection['icon_id']]">
+                @if ($loop->remaining != 0)
                     <div class="absolute bottom-20">
                         <p class="text-xl text-white text-center w-full cursor-pointer hidden" id="scroll-down-wrapper">
                             <img src="{{ $animationMediaUrls[$animationButton['icon_id']] }}"
@@ -42,8 +45,8 @@
                                 class="inline size-8 text-white animated-scroll-down-icon" alt="Scroll down">
                         </p>
                     </div>
-                </x-animation.scroll-animation-section>
-            @endif
+                @endif
+            </x-animation.scroll-animation-section>
         @endforeach
 
         <!-- Hidden Audio Player -->

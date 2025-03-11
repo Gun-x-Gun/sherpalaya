@@ -38,6 +38,15 @@ class HomePageAnimation extends Component
             ->push($landingPageSetting->animation_sound_id)
             ->toArray();
 
+        $mediaIds = array_merge(
+            $mediaIds,
+            $this->animationSections
+                ->pluck('images')
+                ->filter()
+                ->flatten()
+                ->toArray()
+        );
+
         $this->animationMediaUrls = Media::whereIn('id', $mediaIds)
             ->get()
             ->pluck('url', 'id')
@@ -58,7 +67,6 @@ class HomePageAnimation extends Component
 
         $this->parallaxAudioUrl = Media::find($landingPageSetting->animation_sound_id)?->url ?? asset('audio/background-music.mp3');
         $this->parallaxAudioType = Media::find($landingPageSetting->animation_sound_id)?->type ?? 'audio/mpeg';
-
     }
 
     /**
