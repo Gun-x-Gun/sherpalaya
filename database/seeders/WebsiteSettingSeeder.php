@@ -41,30 +41,38 @@ class WebsiteSettingSeeder extends Seeder
         $landingPageSetting->animation_sections = [
             [
                 'id' => fake()->regexify('[A-Za-z]{10}'),
-                'title' => 'Expedition',
+                'title' => 'Expeditions',
                 'wait_time' => 2,
-                'content' => 'Embark on the ultimate adventure with our expertly guided expeditions',
+                'content' => 'Embark on the ultimate adventure with our expertly guided 8000ers, 7000ers, 6000ers and more expeditions',
                 'image_id' => '',
                 'images' => [
-                    CuratorSeederHelper::resolveFileData(public_path('/photos/mountain1.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount2.png'))->id,
                     CuratorSeederHelper::resolveFileData(public_path('/photos/mountain2.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/basecamp.JPG'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/k2.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/expeditionlanding.jpeg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/mountain8.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/mountain9.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/basecamp4.JPG'))->id,
                 ],
                 'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/icons/expedition.svg'))->id,
             ],
             [
                 'id' => fake()->regexify('[A-Za-z]{10}'),
-                'title' => 'Peak',
-                'wait_time' => 2,
-                'content' => 'Reach new heights with our exhilarating peak climbing adventures',
-                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/mountain2.jpg'))->id,
-                'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/icons/peak.svg'))->id,
-            ],
-            [
-                'id' => fake()->regexify('[A-Za-z]{10}'),
                 'title' => 'Trek',
                 'wait_time' => 2,
-                'content' => 'Discover the magic of Nepal’s breathtaking trails with our immersive treks',
-                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/mountain3.jpg'))->id,
+                'content' => 'Discover the magic of Nepal’s breathtaking trails with our immersive treks all around the East to the West',
+                'image_id' => '',
+                'images' => [
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/basecamp2.JPG'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/trekbanner.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/trek1.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/trek2.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/treklanding.jpeg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/mountain3.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/P1030503.JPG'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/activity4.JPG'))->id,
+                ],
                 'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/icons/trek.svg'))->id,
             ],
 
@@ -73,14 +81,24 @@ class WebsiteSettingSeeder extends Seeder
                 'title' => 'Activities',
                 'wait_time' => 2,
                 'content' => 'Indulge and explore Nepali society and culture in the best way possible',
-                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/culture2.jpg'))->id,
+                'image_id' => '',
+                'images' => [
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/activity2.JPG'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/activity3.JPG'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/activity.JPG'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/culture.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/culture2.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/culture3.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/service.jpg'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/temple.jpg'))->id,
+                ],
                 'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/icons/culture.svg'))->id,
             ],
             [
                 'id' => fake()->regexify('[A-Za-z]{10}'),
-                'title' => 'Explore Now',
+                'title' => 'Explore',
                 'wait_time' => 2,
-                'content' => 'Explore Nepal with Sherpalaya',
+                'content' => 'with Sherpalayas finest experts Today!',
                 'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/mountain2.jpg'))->id,
                 'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/logo.png'))->id,
             ],
@@ -93,7 +111,7 @@ class WebsiteSettingSeeder extends Seeder
         $landingPageSetting->ask_for_animation_negative_response = 'Skip';
 
 
-        $landingPageSetting->animation_button_text = 'Explore Now';
+        $landingPageSetting->animation_button_text = 'Proceed';
         $landingPageSetting->animation_button_icon_id = CuratorSeederHelper::resolveFileData(public_path('/icons/scroll-down.svg'))->id;
 
 
