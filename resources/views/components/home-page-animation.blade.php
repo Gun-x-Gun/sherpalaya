@@ -35,7 +35,7 @@
                         return $animationMediaUrls[$imageId];
                     })
                     : []" :content="$animationSection['content']" :hideAfterScroll="$loop->remaining != 0" :waitBeforeHide="$animationSection['wait_time']" :icon="$animationMediaUrls[$animationSection['icon_id']]">
-                @if ($loop->remaining != 0)
+                @if ($loop->remaining == 0)
                     <div class="absolute bottom-20">
                         <p class="text-xl text-white text-center w-full cursor-pointer hidden" id="scroll-down-wrapper">
                             <img src="{{ $animationMediaUrls[$animationButton['icon_id']] }}"

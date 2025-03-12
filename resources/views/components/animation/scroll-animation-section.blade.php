@@ -20,15 +20,23 @@
         @endif
     </figure>
     <div class="card-body justify-center items-center">
-        <img src="{{ $icon }}" class="size-28 animated-icon" />
-        <h2 class="card-title mb-2.5 text-white animated-title text-3xl">
-            {{ $title }}
-        </h2>
-        <p class="text-white animated-content">
-            @foreach (explode(' ', $content) as $unitContent)
-                <span class="inline-block p-0 m-0">{{ $unitContent }}</span>
-            @endforeach
-        </p>
+        <div class="max-w-[40rem]">
+            <div class="grid grid-cols-2 justify-between items-end mb-2.5 mt-2.5">
+                <div class="justify-self-start">
+                    <h2 class="card-title  animated-title text-6xl font-animation-title text-warning">
+                        {{ $title }}
+                    </h2>
+                </div>
+                <img src="{{ $icon }}" class="size-28 animated-icon justify-self-end" />
+            </div>
+            <p class="text-white animated-content font-animation-content text-4xl text-justify">
+                @foreach (explode(' ', $content) as $unitContent)
+                    <span class="inline-block p-0 m-0">{{ $unitContent }}</span>
+                @endforeach
+            </p>
+        </div>
+
+
         {{ $slot ?? '' }}
     </div>
 </div>
@@ -118,11 +126,11 @@
                             opacity: [1, 0]
                         },
                         {
-                            duration: 1
+                            duration: 0.5
                         },
                     ]);
 
-                    totalAnimationDuration = 1 + waitBeforeHide + 1;
+                    totalAnimationDuration = 1 + waitBeforeHide + 0.5;
 
 
                 } else {
@@ -158,7 +166,7 @@
 
                 sequenceAnimation.then(() => {
                     if (imageAnimationInvervalId !== null) {
-                        clearInverval(imageAnimationInvervalId);
+                        // window.clearInverval(imageAnimationInvervalId);
                     }
                     if (hideAfterScroll) {
                         animationRoot.remove();

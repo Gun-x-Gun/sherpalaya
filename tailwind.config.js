@@ -25,6 +25,8 @@ export default {
         oswald: ["Oswald"],
         body: ["Roboto"],
         card: ["Public Sans"],
+        'animation-title':["Cardo"],
+        'animation-content':["Josefin Sans"],
       },
     },
   },
