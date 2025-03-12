@@ -49,7 +49,13 @@ class CuratorSeederHelper
         $mimeType = mime_content_type($filePath) ?: null;
         $fileSize = filesize($filePath) ?: null;
         $imageData = @getimagesize($filePath);
-        $exifData = (stripos($mimeType, 'image') === 0) ? (@exif_read_data($filePath) ?: null) : null;
+        $exifData = null;
+        if( stripos($mimeType, 'image') === 0 ){
+            $exifData = @exif_read_data($filePath) ?? null;
+            if(!is_null($exifData)){
+                $exifData = mb_convert_encoding($exifData, 'UTF-8', 'UTF-8');
+            }
+        }
 
         $mediaData = [
             'disk' => 'public',
@@ -67,7 +73,12 @@ class CuratorSeederHelper
             'exif' => $exifData,
         ];
 
-        return Media::create($mediaData);
+        try {
+            return Media::create($mediaData);
+        }
+        catch (Exception $e) {
+            dd("Exception", $mediaData['exif'], $e);
+        }
     }
 
     public static function seedBelongsTo(Model $related, string $relatedField, string|Media $filePath): Media
