@@ -71,7 +71,7 @@ class WebsiteSettingSeeder extends Seeder
                     CuratorSeederHelper::resolveFileData(public_path('/photos/treklanding.jpeg'))->id,
                     CuratorSeederHelper::resolveFileData(public_path('/photos/mountain3.jpg'))->id,
                     CuratorSeederHelper::resolveFileData(public_path('/photos/P1030503.JPG'))->id,
-                    CuratorSeederHelper::resolveFileData(public_path('/photos/activity4.JPG'))->id,
+                    CuratorSeederHelper::resolveFileData(public_path('/photos/activity4.jpg'))->id,
                 ],
                 'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/icons/trek.svg'))->id,
             ],
