@@ -42,7 +42,7 @@ class WebsiteSettingSeeder extends Seeder
             [
                 'id' => fake()->regexify('[A-Za-z]{10}'),
                 'title' => 'Expeditions',
-                'wait_time' => 2,
+                'wait_time' => 1,
                 'content' => 'Embark on the ultimate adventure with our expertly guided 8000ers, 7000ers, 6000ers and more expeditions',
                 'image_id' => '',
                 'images' => [
@@ -60,7 +60,7 @@ class WebsiteSettingSeeder extends Seeder
             [
                 'id' => fake()->regexify('[A-Za-z]{10}'),
                 'title' => 'Trek',
-                'wait_time' => 2,
+                'wait_time' => 1,
                 'content' => 'Discover the magic of Nepal’s breathtaking trails with our immersive treks all around the East to the West',
                 'image_id' => '',
                 'images' => [
@@ -79,7 +79,7 @@ class WebsiteSettingSeeder extends Seeder
             [
                 'id' => fake()->regexify('[A-Za-z]{10}'),
                 'title' => 'Activities',
-                'wait_time' => 2,
+                'wait_time' => 1,
                 'content' => 'Indulge and explore Nepali society and culture in the best way possible',
                 'image_id' => '',
                 'images' => [
@@ -97,9 +97,9 @@ class WebsiteSettingSeeder extends Seeder
             [
                 'id' => fake()->regexify('[A-Za-z]{10}'),
                 'title' => 'Explore',
-                'wait_time' => 2,
-                'content' => 'with Sherpalayas finest experts Today!',
-                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/mountain2.jpg'))->id,
+                'wait_time' => 1,
+                'content' => 'with Sherpalaya\'s finest experts RIGHT NOW!',
+                'image_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/qualitymount.png'))->id,
                 'icon_id' => CuratorSeederHelper::resolveFileData(public_path('/photos/logo.png'))->id,
             ],
         ];
