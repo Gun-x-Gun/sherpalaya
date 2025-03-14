@@ -4,5 +4,8 @@
         <div class="align-top text-black text-lg/8 tracking-wide  font-light">
             {!! $tour->description !!}
         </div>
+        
+        <x-read-more componentId="tour-description-{{ $tour->id }}" />
+
     </div>
 </div>

@@ -4,5 +4,8 @@
         <div class="align-top text-black text-lg/8 tracking-wide  font-light">
             {!! $trek->description !!}
         </div>
+
+        <x-read-more componentId="trek-description-{{ $trek->id }}"/>
+
     </div>
 </div>

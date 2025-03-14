@@ -40,7 +40,7 @@
 <div class="h-4"></div>
 <div class="card sm:w-full shadow-sm shadow-slate-300 bg-blue-100/20 font-body">
     <div class="card-body gap-2 text-gray px-2  text-preety">
-        <div class="align-top text-black-800 text-lg/8 tracking-wide font-lights"
+        <div class="align-top text-black-800 text-lg/8 tracking-wide font-light"
             id="expedition-description-{{ $expedition->id }}">
             {!! $expedition->description !!}
         </div>
