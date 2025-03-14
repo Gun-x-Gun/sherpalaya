@@ -63,12 +63,18 @@ class ManageLangingPage extends SettingsPage
                                                     ->required(),
                                                 Textarea::make('ask_for_animation_content')
                                                     ->required(),
-                                                Grid::make(2)
+                                                Grid::make(3)
                                                     ->columnSpan(1)
                                                     ->schema([
                                                         TextInput::make('ask_for_animation_positive_response')
+                                                            ->label('Start button text')
                                                             ->required(),
                                                         TextInput::make('ask_for_animation_negative_response')
+                                                            ->label('Skip button text')
+                                                            ->required(),
+                                                        TextInput::make('animation_button_text')
+                                                            ->label('Continue to site')
+                                                            // ->hint('after animation ends')
                                                             ->required(),
                                                     ])
                                             ]),
@@ -81,8 +87,6 @@ class ManageLangingPage extends SettingsPage
                                         CuratorPicker::make('animation_sound_id')
                                             ->required(),
                                     ]),
-                                TextInput::make('animation_button_text')
-                                    ->required(),
 
                                 // Animation sections
 
@@ -105,23 +109,33 @@ class ManageLangingPage extends SettingsPage
                                             ->default(fake()->regexify('[A-Za-z]{10}')),
                                         Grid::make(2)
                                             ->schema([
-                                                CuratorPicker::make('image_id')
-                                                    ->required(),
-                                                CuratorPicker::make('icon_id')
-                                                    ->required(),
+                                                CuratorPicker::make('images')
+                                                    ->required()
+                                                    ->label('Images')
+                                                    ->columnSpanFull()
+                                                    ->multiple(),
                                             ]),
-                                        TextInput::make('title')
-                                            ->required()
-                                            ->columnSpanFull(),
-                                        TextInput::make('wait_time')
-                                            ->numeric()
-                                            ->minValue(0)
-                                            ->default(2)
-                                            ->required()
-                                            ->columnSpanFull(),
-                                        Textarea::make('content')
-                                            ->required()
-                                            ->columnSpanFull(),
+                                        Grid::make(6)
+                                            ->schema([
+                                                TextInput::make('title')
+                                                    ->required()
+                                                    ->columnSpan(4),
+                                                TextInput::make('wait_time')
+                                                    ->numeric()
+                                                    ->minValue(0)
+                                                    ->default(2)
+                                                    ->required()
+                                                    ->columnSpan(2),
+                                                
+                                                CuratorPicker::make('icon_id')
+                                                    ->label('Animation Icon')
+                                                    ->required()
+                                                    ->columnSpan(3),
+                                                Textarea::make('content')
+                                                    ->required()
+                                                    ->columnSpan(3),
+                                            ]),
+
                                     ]),
 
 
