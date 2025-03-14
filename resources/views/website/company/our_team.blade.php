@@ -48,22 +48,22 @@
                 'url' => url('/home'),
             ],
             [
-                'name' => 'Our Sherpas',
+                'name' => 'Our Team',
             ],
         ]" />
 
 
         {{--  --}}
-        <div class="2xl:mx-32 mx-4 text-left">
+        <div class="2xl:mx-32 mx-4 ">
             <div class="h-8"></div>
 
-            <div class="md:px-8 flex flex-col justify-center items-center">
-                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-center md:text-center"
+            <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center">
+                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
                     data-aos="fade-down" data-aos-duration="1200">
                     Journey with Experts
                 </h5>
                 <p
-                    class="text-xl/7 mt-6 text-preety text-black text-center 
+                    class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center 
                              font-light font-body lg:w-[80%] tracking-wide">
                     {{-- {{ $pageSetting->about_us_page_content }} --}}
                     Our team of travel experts is dedicated to making your journey seamless and unforgettable. With
@@ -76,7 +76,7 @@
         </div>
 
         <div class="mx-4 2xl:mx-32">
-            <div class="md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div class=" flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
                 @foreach ($allSherpas as $allSherpa)
                     <a href="{{ route('show_team_member', $allSherpa->id) }}">
                         <div class="card w-full h-full ">

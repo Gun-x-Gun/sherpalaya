@@ -8,7 +8,7 @@
         </h5>
         <div class="h-8"></div>
         @foreach ($recommendations as $key => $recommendationDatas)
-            <div class="bg-blue-100/20">
+            <div class="bg-blue-100/20 font-body">
                 @if ($recommendationDatas->isNotEmpty())
                     @if ($recommendationDatas->count() === 1)
                         <div>
@@ -22,13 +22,13 @@
                                                 class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                         </figure>
                                         <a href="{{ $recommendation->url }}">
-                                            <div class="card-body absolute inset-0 justify-center">
+                                            <div class="card-body absolute inset-0 justify-center ">
                                                 <div class="text-center">
-                                                    <h2 class="font-black text-blue-50 text-3xl uppercase">
+                                                    <h2 class="font-semibold text-blue-50 text-3xl uppercase group-hover:text-warning">
                                                         {{ $recommendation->title }}
                                                     </h2>
                                                     <h2
-                                                        class="font-black tracking-normal text-blue-50 line-clamp-2 text-2xl">
+                                                        class="font-semibold tracking-normal text-blue-50 line-clamp-2 text-3xl group-hover:text-warning">
                                                         {{ $recommendation->duration }}
                                                     </h2>
                                                 </div>
@@ -53,11 +53,11 @@
                                         <a href="{{ $recommendation->url }}">
                                             <div class="card-body absolute inset-0 justify-center">
                                                 <div class="text-center">
-                                                    <h2 class="font-black text-blue-50 text-2xl uppercase">
+                                                    <h2 class="font-semibold text-blue-50 text-2xl uppercase group-hover:text-warning">
                                                         {{ $recommendation->title }}
                                                     </h2>
                                                     <h2
-                                                        class="font-black tracking-normal text-blue-50 line-clamp-2 text-2xl">
+                                                        class="font-semibold tracking-normal text-blue-50 line-clamp-2 text-2xl group-hover:text-warning">
                                                         {{ $recommendation->duration }}
                                                     </h2>
                                                 </div>
@@ -83,11 +83,11 @@
                                         <a href="{{ $recommendation->url }}">
                                             <div class="card-body absolute inset-0 justify-center">
                                                 <div class="text-center">
-                                                    <h2 class="font-normal text-blue-50 text-2xl uppercase">
+                                                    <h2 class="font-normal text-blue-50 text-2xl uppercase group-hover:text-warning">
                                                         {{ $recommendation->title }}
                                                     </h2>
                                                     <h2
-                                                        class="font-normal tracking-normal text-blue-50 line-clamp-2 text-2xl">
+                                                        class="font-normal tracking-normal text-blue-50 line-clamp-2 text-2xl group-hover:text-warning">
                                                         {{ $recommendation->duration }}
                                                     </h2>
                                                 </div>
@@ -114,11 +114,11 @@
                                                     <a href="{{ $recommendation->url }}">
                                                         <div class="card-body absolute inset-0 justify-center max-w-sm">
                                                             <div class="text-center">
-                                                                <h2 class="font-black text-blue-50 text-2xl uppercase">
+                                                                <h2 class="font-semibold text-blue-50 text-2xl uppercase group-hover:text-warning">
                                                                     {{ $recommendation->title }}
                                                                 </h2>
                                                                 <h2
-                                                                    class="font-black tracking-normal text-blue-50 line-clamp-2 text-2xl">
+                                                                    class="font-semibold tracking-normal text-blue-50 line-clamp-2 text-2xl group-hover:text-warning">
                                                                     {{ $recommendation->duration }}
                                                                 </h2>
                                                             </div>
@@ -167,11 +167,11 @@
                                                     <a href="{{ $recommendation->url }}">
                                                         <div class="card-body absolute inset-0 justify-center max-w-sm">
                                                             <div class="text-center">
-                                                                <h2 class="font-black text-blue-50 text-2xl uppercase">
+                                                                <h2 class="font-semibold text-blue-50 text-2xl uppercase group-hover:text-warning">
                                                                     {{ $recommendation->title }}
                                                                 </h2>
                                                                 <h2
-                                                                    class="font-black tracking-normal text-blue-50 line-clamp-2 text-2xl">
+                                                                    class="font-semibold tracking-normal text-blue-50 line-clamp-2 text-2xl group-hover:text-warning">
                                                                     {{ $recommendation->duration }}
                                                                 </h2>
                                                             </div>
@@ -186,7 +186,7 @@
                                 <!-- Previous Slide -->
                                 <button type="button" class="carousel-prev">
                                     <span
-                                        class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow bg-opacity-80 ">
+                                        class="hidden md:flex size-9.5 bg-base-100  items-center justify-center rounded-full shadow bg-opacity-80 ">
                                         <span
                                             class="hidden md:flex icon-[tabler--chevron-left] size-8 text-black cursor-pointer rtl:rotate-180"></span>
                                         <span class="sr-only">Previous</span>
@@ -196,7 +196,7 @@
                                 <button type="button" class="carousel-next">
                                     <span class="sr-only">Next</span>
                                     <span
-                                        class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow bg-opacity-80">
+                                        class=" hidden md:flex size-9.5 bg-base-100  items-center justify-center rounded-full shadow bg-opacity-80">
 
                                         <span
                                             class="hidden md:flex icon-[tabler--chevron-right] size-8 text-black cursor-pointer rtl:rotate-180"></span>

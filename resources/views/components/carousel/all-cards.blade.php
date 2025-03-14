@@ -13,15 +13,15 @@
         </div>
     </div> --}}
 
-    <div class="md:px-8 flex flex-col justify-center items-center 2xl:mx-32 mx-4 ">
-        <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left md:text-center"
+    <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center 2xl:mx-32 mx-4 ">
+        <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
             data-aos="fade-down" data-aos-duration="1200">
             Explore
             Beyond
             Limits
         </h5>
         <div
-            class="text-xl/7 mt-6 text-preety text-black text-left md:text-center
+            class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
                  font-light font-body lg:w-[80%] tracking-wide ">
             {!! $landingPageSetting->expedition_activity_content !!}
         </div>

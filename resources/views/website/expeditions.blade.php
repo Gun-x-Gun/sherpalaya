@@ -13,7 +13,7 @@
                         Conquer New Heights
                     </h5>
                     <h2
-                        class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
+                        class="card-title mb-2 text-warning w  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
                         Epic Expeditions 
                     </h2>
                     <h5

@@ -36,13 +36,13 @@
 
             <div class="2xl:mx-32 mx-4 ">
                 <div class="h-8"></div>
-                <div class="md:px-8 flex flex-col justify-center items-center">
-                    <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-center md:text-center"
+                <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center">
+                    <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
                         data-aos="fade-down" data-aos-duration="1200">
                         Our Passion, Your Adventure
                     </h5>
                     <div
-                        class="text-xl/7 mt-6 text-preety text-black text-center
+                        class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
                              font-light font-body lg:w-[80%] tracking-wide">
                         {!! $aboutUsSetting->content !!}
                     </div>

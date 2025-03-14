@@ -1,5 +1,5 @@
 <header id="navbar"
-    class="fixed top-0 z-50  w-full flex  flex-wrap md:py-4 text-base lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
+    class="fixed top-0 z-50  w-full flex  flex-wrap py-4 text-base lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
     <nav class="w-full" aria-label="Global">
         <div class=" relative lg:flex lg:items-center ">
             <div class="flex items-center justify-between 2xl:mx-32 mx-4 ">
@@ -412,7 +412,7 @@
                     <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent items-center  ">
                         <li class=" hover:text-warning rounded-lg text-base "><a href="/services"
                                 @class([
-                                    'text-warning' => request()->route()->getName() == 'website.contact',
+                                    'text-warning' => request()->route()->getName() == 'website.company.our_service',
                                 ])>Services</a>
                         </li>
 
@@ -480,7 +480,7 @@
         <div class="drawer-body justify-start pb-6 px-0">
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
                 <li class=" hover:text-warning rounded-lg items-start"><a href="/home" @class([
-                    'underline decoration-wavy text-black' =>
+                    'text-warning' =>
                         request()->route()->getName() == 'website.home',
                 ])>
                         <span class="icon-[solar--home-outline] size-5">
@@ -672,7 +672,7 @@
                 {{-- contact  --}}
                 <li class="text-slate-900 hover:text-warning rounded-lg text-base uppercase">
                     <a href="/contact" @class([
-                        'underline decoration-wavy text-black' =>
+                        'text-warning' =>
                             request()->route()->getName() == 'website.contact',
                     ])>
                         <span class="icon-[majesticons--phone-line] size-5"></span>

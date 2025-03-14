@@ -57,14 +57,14 @@
         <div class="2xl:mx-32 mx-4 text-left">
             <div class="h-8"></div>
 
-            <div class="md:px-8 flex flex-col md:justify-center md:items-center">
-                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left md:text-center"
+            <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center">
+                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
                     data-aos="fade-down" data-aos-duration="1200">
                     A helping hand
                 </h5>
                 <p
-                    class="text-xl/7 mt-6 text-preety text-black text-left md:text-center 
-                             font-light font-body md:w-[60%] tracking-wide">
+                    class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center 
+                             font-light font-body lg:w-[80%] tracking-wide">
                     {{-- {{ $pageSetting->service_page_page_content }} --}}
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nostrum doloremque eaque ducimus
                     repellendus odio laborum sint optio quis harum molestiae maxime atque delectus ipsa, ullam minima
