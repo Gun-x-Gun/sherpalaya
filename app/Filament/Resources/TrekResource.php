@@ -67,6 +67,7 @@ class TrekResource extends Resource
                                             TextInput::make('title')
                                                 ->columnSpanFull()
                                                 ->required()
+
                                                 ->hiddenOn('view'),
                                             Select::make('region_id')
                                                 ->required()
@@ -296,7 +297,8 @@ class TrekResource extends Resource
                     Stack::make([
                         TextColumn::make('title')
                             ->size(TextColumn\TextColumnSize::Large)
-                            ->weight(FontWeight::Bold),
+                            ->weight(FontWeight::Bold)
+                            ->searchable(),
                         TextColumn::make('duration')
                             ->icon('heroicon-m-clock')
                             ->size(TextColumn\TextColumnSize::Small)
