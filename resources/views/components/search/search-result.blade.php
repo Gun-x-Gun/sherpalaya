@@ -69,8 +69,7 @@
     </div>
 </div> --}}
 
-<div class="h-8"></div>
-<div class="md:grid md:grid-cols-3 xl:grid-cols-4">
+{{-- <div class="md:grid md:grid-cols-3 xl:grid-cols-4">
     <div class="card w-full h-full ">
         <a href="{{ $result->url }}">
             <img src="{{ $coverImage->url ?? asset('photos/P1030127.JPG') }}" alt="{{ $result->title }} Cover Image"
@@ -79,9 +78,26 @@
         <div class="card-body bg-blue-100 px-2 pb-4">
             <a href="{{ $result->url }}">
                 <h5 class="card-title line-clamp-2 uppercase text-xl text-primary font-semibold">
-                    {{ $result->title }}</h5>
+                    {{ $result->title }}
+                </h5>
             </a>
         </div>
     </div>
-</div>
-<div class="h-8"></div>
+</div> --}}
+
+    <div class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
+        <img src="{{ $coverImage->url ?? asset('photos/P1030127.JPG') }}" 
+             alt="{{ $result->title }} Cover Image"
+             class="transition-transform brightness-75 duration-500  h-[20rem] w-full object-cover" />
+        <a href="{{ $result->url }}">
+            <div class="card-body absolute inset-0 justify-center">
+                <div class="font-oswald tracking-wide font-normal text-center">
+                    <h2 class="text-blue-50 text-3xl uppercase group-hover:text-warning">
+                        {{ $result->title }}
+                    </h2>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
