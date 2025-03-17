@@ -24,6 +24,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\Layout\Split;
 use Filament\Tables\Columns\Layout\Stack;
 use Filament\Tables\Columns\TextColumn;
@@ -283,7 +284,8 @@ class ExpeditionResource extends Resource
                     Stack::make([
                         TextColumn::make('title')
                             ->size(TextColumn\TextColumnSize::Large)
-                            ->weight(FontWeight::Bold),
+                            ->weight(FontWeight::Bold)
+                            ->searchable(),
                         TextColumn::make('duration')
                             ->icon('heroicon-m-clock')
                             ->size(TextColumn\TextColumnSize::Small)
