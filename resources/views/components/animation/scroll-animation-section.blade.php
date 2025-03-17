@@ -23,13 +23,13 @@
         <div class="max-w-[40rem]">
             <div class="grid grid-cols-2 justify-between items-end mb-2.5 mt-2.5">
                 <div class="justify-self-start">
-                    <h2 class="card-title  animated-title text-6xl font-animation-title text-warning">
+                    <h2 class="card-title  animated-title text-3xl lg:text-6xl font-animation-title text-warning">
                         {{ $title }}
                     </h2>
                 </div>
-                <img src="{{ $icon }}" class="size-28 animated-icon justify-self-end" />
+                <img src="{{ $icon }}" class="size-14 lg:size-28 animated-icon justify-self-end" />
             </div>
-            <p class="text-white animated-content font-animation-content text-4xl text-justify">
+            <p class="text-white animated-content font-animation-content text-2xl lg:text-4xl text-justify">
                 @foreach (explode(' ', $content) as $unitContent)
                     <span class="inline-block p-0 m-0">{{ $unitContent }}</span>
                 @endforeach
