@@ -12,6 +12,7 @@ use Awcodes\Curator\Models\Media;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Collection;
 use Spatie\Translatable\HasTranslations;
 
@@ -62,6 +63,10 @@ class Service extends Model implements CanBeEasySearched, CanBeInquiried
 
     // RELATIONSHIPS
 
+    public function inquiries(): MorphMany
+    {
+        return $this->morphMany(Inquiry::class, 'inquiriable');
+    }
     public function destinations()
     {
         return $this->belongsToMany(

@@ -96,6 +96,10 @@ class Trek extends Model implements CanBeEasySearched, CanBeInquiried
     {
         return $this->morphMany(EssentialTip::class,'tippable');
     }
+    public function inquiries(): MorphMany
+    {
+        return $this->morphMany(Inquiry::class, 'inquiriable');
+    }
 
     public function region(): BelongsTo
     {
