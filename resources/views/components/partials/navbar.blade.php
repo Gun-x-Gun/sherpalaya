@@ -37,25 +37,27 @@
                 <div
                     class="flex flex-col rounded-lg max-lg:mt-3 max-lg:border  lg:flex-row lg:items-center lg:justify-end  lg:py-0.5">
                     <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent ">
-                        <li class=" hover:text-warning rounded-lg "><a href="/home"
-                                @class([
-                                    'text-warning' => request()->route()->getName() == 'website.home',
-                                ])>Home</a>
+                        <li class=" hover:text-warning rounded-lg "><a href="/home" @class([
+                            'text-warning' => request()->route()->getName() == 'website.home',
+                        ])>
+                                {{ __('navbar.home') }}
+                            </a>
                         </li>
                     </ul>
                     <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="nested-dropdown" type="button"
                             class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                            Company
+                            {{ __('navbar.company') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
                         <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60  rounded-none" role="menu"
                             aria-orientation="vertical" aria-labelledby="nested-dropdown">
                             <li
                                 class="text-black text-base  teacking-normal  hover:text-warning hover:underline decoration-1">
-                                <a class="dropdown-item" href="/about_us">About
-                                    Us</a>
+                                <a class="dropdown-item" href="/about_us">
+                                    {{ __('navbar.about-us') }}
+                                </a>
                             </li>
                             {{-- <li
                                 class="text-black text-base  teacking-normal  hover:text-warning hover:underline decoration-1">
@@ -66,7 +68,8 @@
                             <li
                                 class="text-black text-base  teacking-normal  hover:text-warning hover:underline decoration-1">
                                 <a class="dropdown-item" href="/sherpas">
-                                    Our Team</a>
+                                    {{ __('navbar.our-team') }}
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -78,7 +81,7 @@
                         <button type="button"
                             class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base  font-bold "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                            Expeditions
+                            {{ __('navbar.expeditions') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
                         <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0  transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 overflow-hidden 2xl:px-32 px-4 "
@@ -184,7 +187,7 @@
                         <button type="button"
                             class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                            Treks
+                            {{ __('navbar.treks') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
                         <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 2xl:px-32 px-4"
@@ -289,7 +292,7 @@
                         <button type="button"
                             class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                            Activities
+                            {{ __('navbar.activities') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
                         <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 2xl:px-32 px-4"
@@ -412,8 +415,11 @@
                     <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent items-center  ">
                         <li class=" hover:text-warning rounded-lg text-base "><a href="/services"
                                 @class([
-                                    'text-warning' => request()->route()->getName() == 'website.company.our_service',
-                                ])>Services</a>
+                                    'text-warning' =>
+                                        request()->route()->getName() == 'website.company.our_service',
+                                ])>
+                                {{ __('navbar.services') }}
+                            </a>
                         </li>
 
 
@@ -422,7 +428,9 @@
                         <li class=" hover:text-warning rounded-lg text-base "><a href="/contact"
                                 @class([
                                     'text-warning' => request()->route()->getName() == 'website.contact',
-                                ])>Contact</a>
+                                ])>
+                                {{ __('navbar.contact') }}
+                                </a>
                         </li>
 
                         {{-- Search --}}
@@ -480,8 +488,7 @@
         <div class="drawer-body justify-start pb-6 px-0">
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
                 <li class=" hover:text-warning rounded-lg items-start"><a href="/home" @class([
-                    'text-warning' =>
-                        request()->route()->getName() == 'website.home',
+                    'text-warning' => request()->route()->getName() == 'website.home',
                 ])>
                         <span class="icon-[solar--home-outline] size-5">
                         </span>
@@ -672,8 +679,7 @@
                 {{-- contact  --}}
                 <li class="text-slate-900 hover:text-warning rounded-lg text-base uppercase">
                     <a href="/contact" @class([
-                        'text-warning' =>
-                            request()->route()->getName() == 'website.contact',
+                        'text-warning' => request()->route()->getName() == 'website.contact',
                     ])>
                         <span class="icon-[majesticons--phone-line] size-5"></span>
                         Contact

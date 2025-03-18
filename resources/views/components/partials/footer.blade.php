@@ -35,28 +35,34 @@
 
                 </div>
                 <nav class="text-base-content capitalize">
-                    <h6 class="footer-title font-bold text-blue-50 uppercase">Adventures</h6>
-                    <a href="/expeditions" class="link link-hover text-blue-100 capitalize">Expeditions</a>
-                    <a href="/services" class="link link-hover text-blue-100">Services</a>
-                    <a href="/treks" class="link link-hover text-blue-100">treks</a>
-                    <a href="/tours" class="link link-hover text-blue-100">Activities</a>
+                    <h6 class="footer-title font-bold text-blue-50 uppercase">
+                        {{__('footer.adventures')}}
+                    </h6>
+                    <a href="/expeditions" class="link link-hover text-blue-100 capitalize">
+                    {{__('footer.expeditions')}}</a>
+                    <a href="/services" class="link link-hover text-blue-100">
+                    {{__('footer.services')}}</a>
+                    <a href="/treks" class="link link-hover text-blue-100">
+                    {{__('footer.treks')}}</a>
+                    <a href="/tours" class="link link-hover text-blue-100">
+                    {{__('footer.activities')}}</a>
                 </nav>
                 <nav class="text-base-content capitalize">
-                    <h6 class="footer-title font-bold text-blue-50 uppercase">Company</h6>
-                    <a href="/about_us" class="link link-hover text-blue-100">About</a>
-                    <a href="/sherpas" class="link link-hover text-blue-100">Our Sherpas</a>
+                    <h6 class="footer-title font-bold text-blue-50 uppercase">{{__('footer.company')}}</h6>
+                    <a href="/about_us" class="link link-hover text-blue-100">{{__('footer.about-us')}}</a>
+                    <a href="/sherpas" class="link link-hover text-blue-100">{{__('footer.our-team')}}</a>
                     {{-- <a href="/" class="link link-hover text-blue-100">Certificates</a> --}}
 
                 </nav>
                 <nav class="text-base-content">
-                    <h6 class="footer-title font-bold text-blue-50 uppercase">Legal</h6>
-                    <a href="/terms-and-conditions" class="link link-hover text-blue-100">Terms of use</a>
-                    <a href="/privacy-policy" class="link link-hover text-blue-100">Privacy policy</a>
-                    <a href="/cookie-policy" class="link link-hover text-blue-100">Cookie policy</a>
+                    <h6 class="footer-title font-bold text-blue-50 uppercase">{{__('footer.legal')}}</h6>
+                    <a href="/terms-and-conditions" class="link link-hover text-blue-100">{{__('footer.terms-of-use')}}</a>
+                    <a href="/privacy-policy" class="link link-hover text-blue-100">{{__('footer.privacy-policy')}}</a>
+                    <a href="/cookie-policy" class="link link-hover text-blue-100">{{__('footer.cookie-policy')}}</a>
                 </nav>
                 <nav class="text-base-content">
                     <div class="flex items-center gap- text-base uppercase font-semibold text-blue-200  text-wrap">
-                        <span>Follow us</span>
+                        <span>{{__('footer.follow-us')}}</span>
                     </div>
                     <div class="flex gap-4 text-blue-300">
                         <a href="{{ $companySetting->facebook_url }}" target="_blank" class="link link-animated"
@@ -80,7 +86,7 @@
                     <a href="https://wa.me/{{ config('services.whatsapp.number') }}">
                         <div
                             class="flex items-center gap-2 text-base uppercase font-semibold text-green-300  text-wrap">
-                            <span>Reach Us Via</span>
+                            <span>{{__('footer.reach-us')}}</span>
                         </div>
                         <div class="flex items-center gap-2 text-base Capitalize font-normal text-green-300 mt-2">
                             <span class="icon-[tabler--brand-whatsapp] size-7"></span>
@@ -93,7 +99,7 @@
             <footer class="footer footer-center bg-transparent rounded ">
                 <div class="h-2"></div>
                 <aside class="text-blue-300 xl:mb-8">
-                    <p>Copyright © 2025 - All right reserved by Sherpalaya</p>
+                    <p>{{__('footer.copyright')}}</p>
                 </aside>
                 <div class="h-10 xl:hidden"></div>
 

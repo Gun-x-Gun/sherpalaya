@@ -107,7 +107,7 @@
                 <button
                     class="btn btn-primary btn-lg  gap-2 rounded-full text-base hover:btn-warning tracking-wide pl-2 opacity-80">
                     <span class="icon-[mdi--chevron-double-right] size-5 "></span>
-                    Explore
+                    {{__('home-carousel.explore')}}
                 </button>
             </a>
             {{-- <h5 class="card-title flex gap-2 mb-2  text-lg/7 items-center  text-black capitalize font-medium font-body">
