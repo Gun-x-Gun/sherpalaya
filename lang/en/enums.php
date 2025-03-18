@@ -32,4 +32,8 @@ return [
         'cultural' => 'Cultural', // or 'Culture' (culture)
         'others' => 'Others', // or 'Divers'
     ],
+    'inquiry-types' => [
+        'booking' => 'Booking',
+        'inquiry' => 'Inquiry',
+    ],
 ];

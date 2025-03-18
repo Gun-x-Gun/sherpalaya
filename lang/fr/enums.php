@@ -12,10 +12,6 @@ return [
         'hard' => 'Difficile',
         'challenging' => 'Corsé',
     ],
-    'inquiry-types' => [
-        'booking' => 'Réserver',
-        'inquiry' => 'Renseignez-vous maintenant',
-    ],
     'itinerary-types' => [
         'flight' => 'Vol',
         'drive' => 'Trajet en voiture',
@@ -36,4 +32,9 @@ return [
         'cultural' => 'Culturel', // or 'Culture' (culture)
         'others' => 'Autres', // or 'Divers'
     ],
+    'inquiry-types' => [
+        'booking' => 'Réservation',
+        'inquiry' => 'Demande',
+    ]
+
 ];
