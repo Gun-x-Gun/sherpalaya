@@ -30,15 +30,15 @@
                     data-aos="fade-down" data-aos-duration="1200">
                     <h5
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
-                        Tailored Travel Solutions
+                        {{__('services.title-up')}}
                     </h5>
                     <h2
                         class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
-                        Our Services
+                        {{__('services.title-main')}}
                     </h2>
                     <h5
                         class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
-                        Seamless Travel Planning
+                        {{__('services.title-down')}}
                     </h5>
                 </div>
             </div>
@@ -60,15 +60,13 @@
             <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center">
                 <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
                     data-aos="fade-down" data-aos-duration="1200">
-                    A helping hand
+                    {{__('services.heading')}}
                 </h5>
                 <p
-                    class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center 
+                    class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
                              font-light font-body lg:w-[80%] tracking-wide">
                     {{-- {{ $pageSetting->service_page_page_content }} --}}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nostrum doloremque eaque ducimus
-                    repellendus odio laborum sint optio quis harum molestiae maxime atque delectus ipsa, ullam minima
-                    quia earum quas!
+                    {{__('services.description')}}
                 </p>
                 <div class="h-10 md:h-12"></div>
             </div>

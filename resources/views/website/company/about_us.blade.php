@@ -10,15 +10,15 @@
                     data-aos="fade-down" data-aos-duration="1200">
                     <h5
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
-                        Embark on Unforgettable Journeys
+                        {{__('aboutpage.title-up')}}
                     </h5>
                     <h2
                         class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
-                        About Sherpalaya
+                        {{__('aboutpage.title-main')}}
                      </h2>
                     <h5
                         class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
-                        Crafting Experiences, Creating Memories
+                        {{__('aboutpage.title-down')}}
                     </h5>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center">
                     <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
                         data-aos="fade-down" data-aos-duration="1200">
-                        Our Passion, Your Adventure
+                        {{__('aboutpage.heading')}}
                     </h5>
                     <div
                         class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
@@ -61,7 +61,7 @@
                 <div class="card-header   px-0">
                     <h5 class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-left "
                         data-aos="flip-up" data-aos-duration="800">
-                        Legal Certificates
+                        {{__('aboutpage.legal')}}
                     </h5>
                     <div class="h-8">
                     </div>
@@ -79,10 +79,9 @@
                         @endforeach
                     </div>
                     <div class="h-10"></div>
-                    <p class="text-warning italic tracking-wider font-normal text-sm"> Legal Notice: This document is the
-                        property of Sherpalaya.
-                        Unauthorized reproduction, distribution, or modification is strictly prohibited. All rights
-                        reserved.
+                    <p class="text-warning italic tracking-wider font-normal text-sm">
+                        {{__('aboutpage.notice')}}
+
                     </p>
 
                 </div>
@@ -94,7 +93,7 @@
             <div class="h-10"></div>
             <h1 class="text-3xl md:text-4xl tracking-normal font-body  text-left line-clamp-2 text-black font-medium uppercase"
                 data-aos="fade-down" data-aos-duration="1200">
-                Frequently Asked Questions
+                {{__('aboutpage.faq')}}
             </h1>
             <div class="h-8"></div>
             <div class="accordion accordion-shadow shadow-md font-body">
