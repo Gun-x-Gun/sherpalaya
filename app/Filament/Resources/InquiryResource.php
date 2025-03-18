@@ -2,14 +2,22 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\InquiryType;
 use App\Filament\Resources\InquiryResource\Pages;
 use App\Filament\Resources\InquiryResource\RelationManagers;
+use App\Models\Expedition;
 use App\Models\Inquiry;
+use App\Models\Service;
+use App\Models\Tour;
+use App\Models\Trek;
 use Filament\Forms;
+use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\FontWeight;
 use Filament\Tables;
@@ -32,15 +40,15 @@ class InquiryResource extends Resource
     protected static ?int $navigationSort = 1;
 
     public static function getNavigationBadge(): ?string
-{
-    return static::getModel()::count();
-}
+    {
+        return static::getModel()::count();
+    }
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Section::make()
-                    ->columns(2)
+                    ->columnSpan(1)
                     ->schema([
                         TextInput::make('full_name')
                             ->required(),
@@ -67,6 +75,32 @@ class InquiryResource extends Resource
                                 'underline',
                                 'undo',
                             ]),
+                        Select::make('type')
+                            ->options(InquiryType::class)
+                    ]),
+                Section::make()
+                    ->hiddenOn(['create', 'edit'])
+                    ->columnSpan(1)
+                    ->schema([
+                        Select::make('inquiriable_type')
+                            ->required()
+                            ->reactive()
+                            ->options([
+                                Expedition::class => 'Expedition',
+                                Trek::class => 'Trek',
+                                Service::class => 'Service',
+                                Tour::class => 'Tour',
+
+                            ]),
+                        Select::make('inquiriable_id')
+                            ->options(function (Get $get) {
+                                $type = $get('inquiriable_type');
+                                if (is_null($type)) {
+                                    return [];
+                                } else {
+                                    return $type::query()->pluck('title', 'id');
+                                }
+                            }),
                     ]),
             ]);
     }
@@ -81,6 +115,7 @@ class InquiryResource extends Resource
                         ->weight(FontWeight::Bold),
                     TextColumn::make('email')
                         ->size(TextColumn\TextColumnSize::Large),
+                    TextColumn::make('inquiriable.title'),
                 ])->from('md'),
                 Panel::make([
                     Stack::make([
