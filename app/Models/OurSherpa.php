@@ -15,6 +15,7 @@ class OurSherpa extends Model
     protected $fillable = [
         'profile_picture_id',
         'name',
+        'language',
         'title',
         'description',
     ];
@@ -23,6 +24,9 @@ class OurSherpa extends Model
         'title',
         'description',
     ];
+    protected $casts = [
+        'language' => 'array',
+    ];
 
 
     protected static function booted()
@@ -30,6 +34,9 @@ class OurSherpa extends Model
         static::creating(function ($sherpa){
             if(is_null($sherpa->description)){
                 $sherpa->description = '';
+            }
+            if(is_null($sherpa->language)){
+                $sherpa->language = [];
             }
         });
     }

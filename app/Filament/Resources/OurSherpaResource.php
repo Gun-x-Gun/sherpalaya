@@ -16,6 +16,7 @@ use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -74,6 +75,15 @@ class OurSherpaResource extends Resource
                                 TextInput::make('title')
                                     ->columnSpan(2)
                                     ->required(),
+                                TagsInput::make('language')
+                                    ->columnSpan(2)
+                                    ->label('Languages')
+                                    ->hint('Press \'Enter\'')
+                                    ->suggestions([
+                                        'Nepali',
+                                        'English',
+                                        'French'
+                                    ]),
                                 RichEditor::make('description')
                                     ->toolbarButtons([
                                         // 'attachFiles',
@@ -93,9 +103,9 @@ class OurSherpaResource extends Resource
                                     ]),
                             ]),
                     ]),
-                    Section::make('Sherpa Experience')
+                Section::make('Sherpa Experience')
                     ->hiddenOn('view')
-                    ->columns(2)
+                    ->columns(3)
                     ->schema([
                         Select::make('expeditions')
                             ->relationship(titleAttribute: 'title')
@@ -125,7 +135,6 @@ class OurSherpaResource extends Resource
                             ->hint('rewarded to Sherpa')
                             ->relationship('awardsAndCertificates', 'id'),
                     ]),
-
             ]);
     }
 
@@ -143,10 +152,13 @@ class OurSherpaResource extends Resource
                             ->weight(FontWeight::Bold),
                         TextColumn::make('title')
                             ->size(TextColumn\TextColumnSize::Large)
-                            ->description(fn(?OurSherpa $record): HtmlString => new HtmlString($record?->description ?? ''))
+                            ->color('info'),
+                        TextColumn::make('description')
+                            ->size(TextColumn\TextColumnSize::Medium)
+                            ->weight(FontWeight::ExtraLight)
+                            ->limit(200),
                     ]),
                 ]),
-
             ])
             ->contentGrid([
                 'sm' => 1,
