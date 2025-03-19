@@ -30,11 +30,14 @@ class LandingPageSetting extends Settings
 
     public ?string $animation_sound_id;
 
+    public ?string $homepage_title;
+    public ?string $homepage_description;
     // Activity
 
     public ?string $expedition_activity_image_id;
     public ?string $expedition_activity_content;
     public ?string $expedition_activity_count;
+
 
     public ?string $trek_activity_image_id;
     public ?string $trek_activity_content;
