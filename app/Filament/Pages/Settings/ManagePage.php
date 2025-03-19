@@ -33,29 +33,37 @@ class ManagePage extends SettingsPage
                         Tabs\Tab::make('Expedition')
                             ->schema([
                                 CuratorPicker::make('expedition_page_cover_image_id')
+                                    ->label('Exped Page Image')
                                     ->required(),
                                 Textarea::make('expedition_page_content')
+                                    ->label('Exped Page Content')
                                     ->required()
                             ]),
                         Tabs\Tab::make('Trek')
                             ->schema([
                                 CuratorPicker::make('trek_page_cover_image_id')
+                                    ->label('Trek Page Image')
                                     ->required(),
                                 Textarea::make('trek_page_content')
+                                    ->label('Trek Page Content')
                                     ->required()
                             ]),
-                        Tabs\Tab::make('Tour')
+                        Tabs\Tab::make('Activity')
                             ->schema([
                                 CuratorPicker::make('tour_page_cover_image_id')
+                                    ->label('Activity Page Image')
                                     ->required(),
                                 Textarea::make('tour_page_content')
+                                    ->label('Activity Page Content')
                                     ->required()
                             ]),
                         Tabs\Tab::make('Service')
                             ->schema([
                                 CuratorPicker::make('service_page_cover_image_id')
+                                    ->label('Service Page Image')
                                     ->required(),
                                 Textarea::make('service_page_content')
+                                    ->label('Service Page Content')
                                     ->required()
                             ]),
                     ])
