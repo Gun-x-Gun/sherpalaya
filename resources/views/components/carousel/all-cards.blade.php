@@ -2,7 +2,7 @@
     {{-- <div class="bg-blue-100/50 md:pb-44">
         <div class="2xl:mx-32 mx-4 ">
             <div class="h-8 md:h-15"></div>
-            <x-section-title>   
+            <x-section-title>
                 <x-slot name="title">
                     Explore<br />
                     Beyond<br />
@@ -16,14 +16,12 @@
     <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center 2xl:mx-32 mx-4 ">
         <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
             data-aos="fade-down" data-aos-duration="1200">
-            Explore
-            Beyond
-            Limits
+            {!!  $landingPageSetting->homepage_title !!}
         </h5>
         <div
             class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
                  font-light font-body lg:w-[80%] tracking-wide ">
-            {!! $landingPageSetting->expedition_activity_content !!}
+            {!! $landingPageSetting->homepage_description !!}
         </div>
         <div class="h-10 md:h-12"></div>
     </div>
@@ -44,7 +42,7 @@
                         data-aos-duration="800">
                         <div class="text-left ">
                             <h2 class="font-extrabold text-blue-50 text-2xl lg:text-4xl">
-                                Expeditions
+                                {{__('footer.expeditions')}}
                             </h2>
                         </div>
                     </div>
@@ -74,7 +72,7 @@
                     <div class="card-body absolute inset-0 uppercase">
                         <div class="text-left" data-aos="flip-up" data-aos-duration="800">
                             <h2 class="font-bold text-blue-50 text-2xl lg:text-4xl ">
-                                Treks
+                                {{__('footer.treks')}}
                             </h2>
                         </div>
                     </div>
@@ -109,7 +107,7 @@
                     <div class="card-body absolute inset-0 uppercase" data-aos="flip-up" data-aos-duration="800">
                         <div class="text-left ">
                             <h2 class="font-bold text-blue-50 text-2xl lg:text-4xl ">
-                                Activities
+                                {{__('footer.activities')}}
                             </h2>
                         </div>
                     </div>
@@ -139,7 +137,7 @@
                     <div class="card-body absolute inset-0 uppercase" data-aos="flip-up" data-aos-duration="800">
                         <div class="text-left ">
                             <h2 class="font-bold text-blue-50  text-2xl lg:text-4xl ">
-                                Services
+                                {{__('footer.services')}}
                             </h2>
                         </div>
                     </div>
