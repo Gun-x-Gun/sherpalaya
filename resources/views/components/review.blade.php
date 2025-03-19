@@ -6,7 +6,8 @@
         <div class="">
             <h5 class="text-3xl md:text-4xl font-body font-medium uppercase tracking-normal text-black text-left md:text-left"
                 data-aos="fade-down" data-aos-duration="1200">
-                Real Stories, Real Adventures!</h5>
+                {{__('review.review')}}
+            </h5>
             <div class="h-6 md:h-12"></div>
         </div>
         <div class="accordion accordion-shadow max-w-full ">

@@ -3,7 +3,7 @@
         <div class="h-8"></div>
         <h5 class="card-title text-center" data-aos="fade-down" data-aos-duration="1200">
             <span class="uppercase font-medium text-3xl text-black rounded-full">
-                REcommended
+                Recommended
             </span>
         </h5>
         <div class="h-8"></div>
