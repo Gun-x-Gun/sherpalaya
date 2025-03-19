@@ -18,6 +18,9 @@ return new class extends SettingsMigration
         $this->migrator->add('landing_page.animation_button_text', null);
         $this->migrator->add('landing_page.animation_sound_id', null);
 
+        $this->migrator->add('landing_page.homepage_title', null);
+        $this->migrator->add('landing_page.homepage_description', null);
+
         $this->migrator->add('landing_page.expedition_activity_image_id', null);
         $this->migrator->add('landing_page.expedition_activity_content', null);
         $this->migrator->add('landing_page.expedition_activity_count', null);
