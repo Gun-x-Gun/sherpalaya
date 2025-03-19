@@ -35,6 +35,7 @@ class ManageAboutUs extends SettingsPage
                         Tabs\Tab::make('General')
                             ->schema([
                                 CuratorPicker::make('cover_image_id')
+                                    ->label('About Page Image')
                                     ->required(),
                                 RichEditor::make('content')
                                     ->required(),
