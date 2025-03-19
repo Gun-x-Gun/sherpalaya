@@ -117,6 +117,9 @@ class WebsiteSettingSeeder extends Seeder
 
         $landingPageSetting->animation_sound_id = CuratorSeederHelper::resolveFileData(public_path('/audio/sherpasound.wav'))->id;
 
+        $landingPageSetting->homepage_title = 'Explore Beyond Limits';
+        $landingPageSetting->homepage_description = 'Welcome to Sherpalaya, a virtual world where you can explore the wonders of the Himalayas. Discover the beauty of the mountains, the culture of the Sherpas, and the history of the region. Join us on a journey of discovery and immerse yourself in the magic of the Himalayas.';
+
 
         $landingPageSetting->expedition_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/mountain1.jpg'))->id;
         $landingPageSetting->trek_activity_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/trekbanner.jpg'))->id;
