@@ -3,6 +3,7 @@
 namespace App\Filament\Pages\Settings;
 
 use Filament\Forms;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Illuminate\Support\Str;
 use Filament\Pages\SettingsPage;
@@ -18,7 +19,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Support\HtmlString;
 
-class ManageLangingPage extends SettingsPage
+class ManageLandingPage extends SettingsPage
 {
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
@@ -126,7 +127,7 @@ class ManageLangingPage extends SettingsPage
                                                     ->default(2)
                                                     ->required()
                                                     ->columnSpan(2),
-                                                
+
                                                 CuratorPicker::make('icon_id')
                                                     ->label('Animation Icon')
                                                     ->required()
@@ -140,59 +141,87 @@ class ManageLangingPage extends SettingsPage
 
 
                             ]),
-                        Tabs\Tab::make('Expedition Activity')
+                        Tabs\Tab::make('Home Page')
                             ->schema([
-                                CuratorPicker::make('expedition_activity_image_id')
-                                    ->required(),
-                                TextInput::make('expedition_activity_count')
-                                    ->required(),
-                                Textarea::make('expedition_activity_content')
-                                    ->required()
+                                Section::make('Header')
+                                    ->schema([
+                                        TextInput::make('homepage_title')
+                                            ->label('Title')
+                                            ->required(),
+                                        Textarea::make('homepage_description')
+                                            ->label('Description')
+                                            ->required(),
+
+                                    ]),
+                                Section::make('Cards')
+                                    ->columns(4)
+                                    ->schema([
+                                        CuratorPicker::make('expedition_activity_image_id')
+                                            ->required()
+                                            ->label('Expedition Image')
+
+                                            ->columnSpan(2),
+                                        CuratorPicker::make('trek_activity_image_id')
+                                            ->required()
+                                            ->label('Trek Image')
+
+                                            ->columnSpan(2),
+                                        CuratorPicker::make('tour_activity_image_id')
+                                            ->columnSpan(2)
+                                            ->label('Activity Image')
+                                            ->required(),
+                                        CuratorPicker::make('peak_activity_image_id')
+                                            ->columnSpan(2)
+                                            ->label('Service Image')
+                                            ->required(),
+                                        TextInput::make('expedition_activity_count')
+                                            ->label('Expeditions Count')
+                                            ->required(),
+                                        TextInput::make('trek_activity_count')
+                                            ->label('Treks Count')
+                                            ->required(),
+                                        TextInput::make('tour_activity_count')
+                                            ->label('Activities Count')
+                                            ->required(),
+                                        TextInput::make('peak_activity_count')
+                                            ->label('Services Count')
+                                            ->required(),
+                                    ]),
+                                Section::make('Stats')
+                                    ->columns(2)
+                                    ->schema([
+                                        TextInput::make('stat_traveller_count')
+                                            ->label("Travellers Count")
+                                            ->required(),
+                                        TextInput::make('stat_association_count')
+                                        ->label("Associations Count")
+                                            ->required(),
+                                        TextInput::make('stat_customer_feedback')
+                                            ->label("Customer Feedback")
+                                            ->suffix('out of 10')
+                                            ->required(),
+                                        TextInput::make('stat_success_rate')
+                                            ->label("Success Rate")
+                                            ->suffix('%')
+                                            ->required(),
+                                    ]),
+
+
                             ]),
-                        Tabs\Tab::make('Trek Activity')
+                        Tabs\Tab::make('Featured')
                             ->schema([
-                                CuratorPicker::make('trek_activity_image_id')
-                                    ->required(),
-                                TextInput::make('trek_activity_count')
+                                Textarea::make('expedition_activity_content')
+                                    ->label('Expedition Content')
                                     ->required(),
                                 Textarea::make('trek_activity_content')
-                                    ->required()
-                            ]),
-                        Tabs\Tab::make('Tour Activity')
-                            ->schema([
-                                CuratorPicker::make('tour_activity_image_id')
-                                    ->required(),
-                                TextInput::make('tour_activity_count')
+                                    ->label('Trek Content')
                                     ->required(),
                                 Textarea::make('tour_activity_content')
-                                    ->required()
-                            ]),
-                        Tabs\Tab::make('Peak Activity')
-                            ->schema([
-                                CuratorPicker::make('peak_activity_image_id')
+                                    ->label('Activity Content')
                                     ->required(),
-                                TextInput::make('peak_activity_count')
-                                    ->required(),
-                                Textarea::make('peak_activity_content')
-                                    ->required()
                             ]),
 
-                        Tabs\Tab::make('Stats')
-                            ->schema([
-                                TextInput::make('stat_traveller_count')
-                                    ->label("Traveller count")
-                                    ->required(),
-                                TextInput::make('stat_association_count')
-                                    ->required(),
-                                TextInput::make('stat_customer_feedback')
-                                    ->label("Customer feedback")
-                                    ->suffix('out of 10')
-                                    ->required(),
-                                TextInput::make('stat_success_rate')
-                                    ->label("Success rate")
-                                    ->suffix('%')
-                                    ->required(),
-                            ]),
+
                         Tabs\Tab::make('Parallax')
                             ->schema([
                                 CuratorPicker::make('parallax_image_id')
