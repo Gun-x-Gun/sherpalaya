@@ -5,7 +5,7 @@ namespace App\Traits;
 use App\Filament\Pages\Settings\ManageAboutUs;
 use App\Filament\Pages\Settings\ManageCompany;
 use App\Filament\Pages\Settings\ManageContactUs;
-use App\Filament\Pages\Settings\ManageLangingPage;
+use App\Filament\Pages\Settings\ManageLandingPage;
 use App\Filament\Pages\Settings\ManageLegal;
 use App\Filament\Pages\Settings\ManagePage;
 use AymanAlhattami\FilamentPageWithSidebar\FilamentPageSidebar;
@@ -22,10 +22,10 @@ trait HasSettingsSidebar
             ->setTitle('Settings')
             ->setNavigationItems([
                 PageNavigationItem::make('Landing Page')
-                    ->url(ManageLangingPage::getUrl())
+                    ->url(ManageLandingPage::getUrl())
                     ->icon('heroicon-o-cog-6-tooth')
                     ->isActiveWhen(function () {
-                        return request()->routeIs(ManageLangingPage::getRouteName());
+                        return request()->routeIs(ManageLandingPage::getRouteName());
                     })
                     ->visible(true),
                 PageNavigationItem::make('Page')
