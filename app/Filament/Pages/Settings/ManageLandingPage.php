@@ -68,26 +68,26 @@ class ManageLandingPage extends SettingsPage
                                                     ->required(),
                                                 Textarea::make('ask_for_animation_content_fr')
                                                     ->required(),
-                                                Grid::make(3)
+                                                Grid::make(2)
                                                     ->columnSpan(1)
                                                     ->schema([
                                                         TextInput::make('ask_for_animation_positive_response_en')
-                                                            ->label('Start button text')
+                                                            ->label('Start button text en')
                                                             ->required(),
                                                         TextInput::make('ask_for_animation_positive_response_fr')
-                                                            ->label('Start button text')
+                                                            ->label('Start button text fr')
                                                             ->required(),
                                                         TextInput::make('ask_for_animation_negative_response_en')
-                                                            ->label('Skip button text')
+                                                            ->label('Skip button text en')
                                                             ->required(),
                                                         TextInput::make('ask_for_animation_negative_response_fr')
-                                                            ->label('Skip button text')
+                                                            ->label('Skip button text fr')
                                                             ->required(),
                                                         TextInput::make('animation_button_text_en')
-                                                            ->label('Continue to site')
+                                                            ->label('Continue to site en')
                                                             ->required(),
                                                         TextInput::make('animation_button_text_fr')
-                                                            ->label('Continue to site')
+                                                            ->label('Continue to site fr')
                                                             ->required(),
                                                     ])
                                             ]),
