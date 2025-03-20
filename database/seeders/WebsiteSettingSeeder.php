@@ -178,23 +178,67 @@ class WebsiteSettingSeeder extends Seeder
         $pageSetting->expedition_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/expeditionlanding.jpeg'))->id;
         $pageSetting->trek_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/treklanding.jpeg'))->id;
         $pageSetting->tour_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/culture2.jpg'))->id;
-        $pageSetting->peak_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/lobuche.jpg'))->id;
         $pageSetting->service_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/serviceslanding.jpeg'))->id;
+        $pageSetting->team_page_cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/activity2.JPG'))->id;
 
         $pageSetting->expedition_page_content_en = "Push your limits and embark on an extraordinary Himalayan expedition. Our expertly guided journeys take you to some of the highest and most challenging peaks on the planet. Experience raw adventure, breathtaking landscapes, and the triumph of reaching new heights with our experienced mountaineers and support teams.";
         $pageSetting->expedition_page_content_fr = "Repoussez vos limites et embarquez pour une expédition himalayenne extraordinaire. Nos voyages expertement guidés vous emmènent vers certains des sommets les plus hauts et les plus difficiles de la planète. Vivez une aventure brute, des paysages à couper le souffle et le triomphe d'atteindre de nouveaux sommets avec nos alpinistes expérimentés et nos équipes de soutien.";
 
+        $pageSetting->expedition_page_title_up_en = "Conquer New Heights";
+        $pageSetting->expedition_page_main_title_en = "Epic Expeditions";
+        $pageSetting->expedition_page_title_down_en = "Guided by Experience, Inspired by Nature";
+
+        $pageSetting->expedition_page_title_up_fr = "Conquérez de Nouveaux Sommets";
+        $pageSetting->expedition_page_main_title_fr = "Expéditions Épiques";
+        $pageSetting->expedition_page_title_down_fr = "Guidés par l’Expérience, Inspirés par la Nature";
+
         $pageSetting->trek_page_content_en = "Step into the heart of the Himalayas with our unforgettable trekking adventures. Walk through lush forests, rugged mountain trails, and culturally rich villages as you discover Nepal’s most iconic routes. Whether you seek a short scenic trek or an epic multi-day journey, we create experiences that inspire.";
         $pageSetting->trek_page_content_fr = "Plongez au cœur de l'Himalaya avec nos aventures de trekking inoubliables. Parcourez des forêts luxuriantes, des sentiers montagneux accidentés et des villages culturellement riches tout en découvrant les itinéraires les plus emblématiques du Népal. Que vous recherchiez une randonnée courte et pittoresque ou un voyage épique de plusieurs jours, nous créons des expériences qui inspirent.";
+
+        $pageSetting->trek_page_title_up_en = "Unforgettable";
+        $pageSetting->trek_page_main_title_en = "Trekking Adventure";
+        $pageSetting->trek_page_title_down_en = "Every Step Counts";
+
+        $pageSetting->trek_page_title_up_fr = "Inoubliable";
+        $pageSetting->trek_page_main_title_fr = "Aventure de Randonnée";
+        $pageSetting->trek_page_title_down_fr = "Chaque Pas Compte";
 
         $pageSetting->tour_page_content_en = "Experience Nepal beyond the mountains with our immersive tours. From exploring Kathmandu’s UNESCO-listed sites to witnessing the serene beauty of Pokhara and the wildlife of Chitwan, our tours blend history, nature, and culture into an unforgettable adventure tailored just for you.";
         $pageSetting->tour_page_content_fr = "Découvrez le Népal au-delà des montagnes avec nos circuits immersifs. De l'exploration des sites classés au patrimoine mondial de l'UNESCO à Katmandou à la découverte de la beauté sereine de Pokhara et de la faune de Chitwan, nos circuits mélangent histoire, nature et culture pour une aventure inoubliable conçue spécialement pour vous.";
 
-        $pageSetting->peak_page_content_en = "Challenge yourself with our thrilling peak climbing adventures. Designed for climbers of all levels, our expertly guided expeditions help you conquer Nepal’s stunning peaks, from beginner-friendly summits to technical ascents. Let the mountains call, and we’ll guide you to the top!";
-        $pageSetting->peak_page_content_fr = "Défiez-vous avec nos aventures palpitantes d'escalade de pics. Conçues pour les grimpeurs de tous niveaux, nos expéditions expertement guidées vous aident à conquérir les sommets impressionnants du Népal, des sommets adaptés aux débutants aux ascensions techniques. Laissez les montagnes vous appeler, et nous vous guiderons jusqu'au sommet !";
+        $pageSetting->tour_page_title_up_en = "Jaw Dropping";
+        $pageSetting->tour_page_main_title_en = "Tours & Activities";
+        $pageSetting->tour_page_title_down_en = "The Journey of a Lifetime";
 
+        $pageSetting->tour_page_title_up_fr = "Époustouflant";
+        $pageSetting->tour_page_main_title_fr = "Tours et Activités";
+        $pageSetting->tour_page_title_down_fr = "Le Voyage d’une Vie";
+
+        $pageSetting->service_page_content_title_en = "A Helping Hand";
+        $pageSetting->service_page_content_title_fr = "Un Coup de Main";
         $pageSetting->service_page_content_en = "We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.";
         $pageSetting->service_page_content_fr = "Nous offrons une large gamme de services pour garantir que votre voyage au Népal soit fluide et inoubliable. Des expéditions guidées et des aventures de trekking aux circuits culturels, en passant par la logistique, les permis et le soutien à la sécurité, nous gérons chaque détail pour que vous puissiez vous concentrer sur l'aventure qui vous attend.";
+
+        $pageSetting->service_page_title_up_en = "Tailored Travel Solutions";
+        $pageSetting->service_page_main_title_en = "Our Services";
+        $pageSetting->service_page_title_down_en = "Seamless Travel Planning";
+
+        $pageSetting->service_page_title_up_fr = "Solutions de voyage sur mesure";
+        $pageSetting->service_page_main_title_fr = "Nos services";
+        $pageSetting->service_page_title_down_fr = "Planification de voyage sans encombre";
+
+        $pageSetting->team_page_content_title_en = "Journey with Experts";
+        $pageSetting->team_page_content_title_fr = "Voyagez avec des Experts";
+        $pageSetting->team_page_content_en = "Our team of travel experts is dedicated to making your journey seamless and unforgettable. With years of experience and a passion for exploration, we ensure every trip is planned to perfection. From breathtaking destinations to personalized itineraries, we’re here to guide you every step of the way.";
+        $pageSetting->team_page_content_fr = "Notre équipe d’experts en voyage est dévouée à rendre votre périple fluide et inoubliable. Avec des années d’expérience et une passion pour l’exploration, nous veillons à ce que chaque voyage soit planifié à la perfection. Des destinations à couper le souffle aux itinéraires personnalisés, nous sommes là pour vous guider à chaque étape du chemin.";
+
+        $pageSetting->team_page_title_up_en = "Meet Our Experts";
+        $pageSetting->team_page_main_title_en = "Our Travel Specialists";
+        $pageSetting->team_page_title_down_en = "The People Behind Your Journeys";
+
+        $pageSetting->team_page_title_up_fr = "Rencontrez Nos Experts";
+        $pageSetting->team_page_main_title_fr = "Nos Spécialistes du Voyage";
+        $pageSetting->team_page_title_down_fr = "Les Personnes Derrière Vos Voyages";
 
         $pageSetting->save();
     }
@@ -203,8 +247,19 @@ class WebsiteSettingSeeder extends Seeder
     {
         $contactUsSetting = app(ContactUsSetting::class);
 
+        $contactUsSetting->cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/satellite.jpg'))->id;
+        $contactUsSetting->content_title_en = "Get In Touch";
+        $contactUsSetting->content_title_fr = "Nous contacter";
+
         $contactUsSetting->content_en = "We’d love to hear from you! Whether you’re planning your next big adventure, have questions about our trips, or need expert guidance, our team is here to help. Reach out to us for personalized travel advice, booking inquiries, or any other assistance. Let’s make your Himalayan journey a reality—contact us today!";
         $contactUsSetting->content_fr = "Nous aimerions avoir de vos nouvelles ! Que vous planifiez votre prochaine grande aventure, ayez des questions sur nos voyages ou ayez besoin de conseils d'experts, notre équipe est là pour vous aider. Contactez-nous pour des conseils de voyage personnalisés, des demandes de réservation ou toute autre assistance. Faisons de votre voyage himalayen une réalité—contactez-nous dès aujourd'hui !";
+
+        $contactUsSetting->title_up_fr = "Parlons Voyage !";
+        $contactUsSetting->title_up_en = "Let’s Talk Travel!";
+        $contactUsSetting->main_title_en = "Contact Us";
+        $contactUsSetting->main_title_fr = "Contactez-nous";
+        $contactUsSetting->title_down_en = "Travel Assistance, Just a Click Away";
+        $contactUsSetting->title_down_fr = "Assistance voyage, à un clic de distance";
 
         $contactUsSetting->address_en = 'Thamel, Kathmandu';
         $contactUsSetting->address_fr = 'Thamel, Katmandou';
@@ -269,6 +324,15 @@ class WebsiteSettingSeeder extends Seeder
         $aboutUsSetting->content_en = "<p>We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.</p>";
         $aboutUsSetting->content_fr = "<p>Nous offrons une large gamme de services pour garantir que votre voyage au Népal soit fluide et inoubliable. Des expéditions guidées et des aventures de trekking aux circuits culturels, en passant par la logistique, les permis et le soutien à la sécurité, nous gérons chaque détail pour que vous puissiez vous concentrer sur l'aventure qui vous attend.</p>";
 
+        $aboutUsSetting->content_title_en = "Our Passion, Your Adventure";
+        $aboutUsSetting->content_title_fr = "Notre Passion, Votre Aventure";
+
+        $aboutUsSetting->title_up_fr = "Embarquez pour des voyages inoubliables";
+        $aboutUsSetting->title_up_en = "Embark on Unforgettable Journeys";
+        $aboutUsSetting->main_title_en = "About Sherpalaya";
+        $aboutUsSetting->main_title_fr = "À propos de Sherpalaya";
+        $aboutUsSetting->title_down_en = "Crafting Experiences, Creating Memories";
+        $aboutUsSetting->title_down_fr = "Façonner des expériences, créer des souvenirs";
         $aboutUsSetting->certificate_images = [
             CuratorSeederHelper::resolveFileData(public_path('/certificates/company-registration.jpg'))->id,
             CuratorSeederHelper::resolveFileData(public_path('/certificates/gharelu-udhyog.jpg'))->id,
