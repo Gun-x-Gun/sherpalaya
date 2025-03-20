@@ -120,8 +120,8 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
     {
         return $this->belongsToMany(
             OurSherpa::class,
-            'our_sherpa_expedition'
-        )->using(OurSherpaExpedition::class)
+            'expedition_our_sherpa'
+        )->using(ExpeditionOurSherpa::class)
             ->withPivot([
                 'order'
             ]);
