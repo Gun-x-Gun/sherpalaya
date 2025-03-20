@@ -65,13 +65,13 @@
                     </h5>
                     <div class="h-8">
                     </div>
-                    <div id="all-services"
+                    <div id="about-us-certificates"
                         class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1  skeleton animate-pulse">
                         @foreach ($aboutUsSetting->certificate_images as $galleryImage)
                             <button
                                 class="card cursor-pointer rounded-none image-fullw-full relative items-end  card-side group hover:shadow border single-service hidden"
-                                aria-haspopup="dialog" aria-expanded="false" aria-controls="service-gallery-modal"
-                                data-overlay="#service-gallery-modal"
+                                aria-haspopup="dialog" aria-expanded="false" aria-controls="about-us-certificates-modal"
+                                data-overlay="#about-us-certificates-modal"
                                 onclick="changeCarouselSlide({{ $loop->index }})">
                                 <figure class="h-full w-full brightness-90">
                                     <x-curator-glider class="h-[40vh] w-full object-cover brightness-50"
@@ -132,19 +132,55 @@
 
 
     @push('modals')
-        <div id="service-gallery-modal" class="overlay modal overlay-open:opacity-100 hidden p-0" role="dialog"
+        <div id="about-us-certificates-modal" class="overlay modal overlay-open:opacity-100 hidden p-0" role="dialog"
             tabindex="-1">
             <div class="modal-dialog overlay-open:opacity-100 max-w-[100vw] ">
                 <div class="modal-content h-full max-h-[100vh] justify-center  bg-transparent backdrop-blur-sm">
                     <div class="modal-header">
                         <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3"
-                            aria-label="Close" data-overlay="#service-gallery-modal">
+                            aria-label="Close" data-overlay="#about-us-certificates-modal">
                             <span class="icon-[tabler--x] size-6 p-0 m-0"></span>
                         </button>
                     </div>
                     <div class="modal-body ">
                         {{-- <x-gallery :medias="$aboutUsSetting->certificate_images" :showMedia="null" /> --}}
                         {{-- $aboutUsSetting->certificate_images --}}
+
+                        <div id="image-carousel"
+                                data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true }'
+                                class="relative w-full">
+                                <div class="carousel">
+                                    <div class="carousel-body h-full opacity-0">
+                                        <!-- Slide 1 -->
+                                        @foreach ($aboutUsSetting->certificate_images as $certificateImage)
+                                            <div class="carousel-slide">
+                                                <div class="flex h-full justify-center ">
+                                                    <x-curator-glider :media="$certificateImage" class="h-[90vh] w-full object-contain  "
+                                                        alt="certificate" />
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <!-- Previous Slide -->
+                                <button type="button" class="carousel-prev">
+                                    <span
+                                        class="size-9.5 bg-blue-200 hidden lg:flex items-center justify-center rounded-full shadow">
+                                        <span
+                                            class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                                    </span>
+                                    <span class="sr-only">Previous</span>
+                                </button>
+                                <!-- Next Slide -->
+                                <button type="button" class="carousel-next">
+                                    <span class="sr-only">Next</span>
+                                    <span
+                                        class="size-9.5 bg-blue-200 hidden lg:flex items-center justify-center rounded-full shadow">
+                                        <span
+                                            class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                                    </span>
+                                </button>
+                            </div>
                     </div>
                     <div class="modal-footer">
                     </div>
@@ -157,7 +193,7 @@
     @push('scripts')
         <script>
             window.addEventListener('load', function() {
-                const allServicesDiv = document.querySelector('#all-services');
+                const allServicesDiv = document.querySelector('#about-us-certificates');
                 const singleServiceCollection = document.querySelectorAll('.single-service');
                 allServicesDiv.classList.remove('skeleton');
                 allServicesDiv.classList.remove('animate-pulse');
