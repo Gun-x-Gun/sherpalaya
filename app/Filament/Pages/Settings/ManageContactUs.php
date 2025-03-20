@@ -25,23 +25,52 @@ class ManageContactUs extends SettingsPage
     {
         return $form
             ->schema([
-                Section::make()
+                Section::make('English')
+                    ->columnSpan(1)
                     ->schema([
-                        Textarea::make('content_en')
+                        Textarea::make('content_title_en')
+                            ->label('Page Title')
+                            ->autosize()
                             ->required(),
-                        Textarea::make('content_fr')
+                        Textarea::make('content_en')
+                            ->label('Content')
+                            ->autosize()
                             ->required(),
                         Textarea::make('address_en')
-                            ->required(),
-                        Textarea::make('address_fr')
+                            ->label('Address')
+                            ->autosize()
                             ->required(),
                         Textarea::make('contact_en')
-                            ->required(),
-                        Textarea::make('contact_fr')
+                            ->label('Contact')
+                            ->autosize()
                             ->required(),
                         Textarea::make('working_hour_en')
+                            ->label('Working Hours')
+                            ->autosize()
+                            ->required(),
+                    ]),
+                Section::make('French')
+                    ->columnSpan(1)
+                    ->schema([
+                        Textarea::make('content_title_fr')
+                            ->label('Page Title')
+                            ->autosize()
+                            ->required(),
+                        Textarea::make('content_fr')
+                            ->label('Content')
+                            ->autosize()
+                            ->required(),
+                        Textarea::make('address_fr')
+                            ->label('Address')
+                            ->autosize()
+                            ->required(),
+                        Textarea::make('contact_fr')
+                            ->label('Contact')
+                            ->autosize()
                             ->required(),
                         Textarea::make('working_hour_fr')
+                            ->label('Working Hours')
+                            ->autosize()
                             ->required(),
                     ]),
             ]);

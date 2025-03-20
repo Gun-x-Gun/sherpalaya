@@ -44,6 +44,7 @@ class ManageLandingPage extends SettingsPage
 
                                 Placeholder::make('general_animation_settings_placeholder')
                                     ->dehydrated(false)
+                                    ->columnSpanFull()
                                     ->hiddenLabel()
                                     ->content(
                                         new HtmlString('
@@ -56,38 +57,54 @@ class ManageLandingPage extends SettingsPage
                                 Grid::make(2)
                                     ->schema([
                                         CuratorPicker::make('ask_for_animation_image_id')
+                                            ->label('Static Image Before Animation')
+                                            ->columnSpanFull()
                                             ->required(),
-                                        Grid::make(1)
+                                        Section::make('English')
                                             ->columnSpan(1)
                                             ->schema([
                                                 TextInput::make('ask_for_animation_title_en')
-                                                    ->required(),
-                                                TextInput::make('ask_for_animation_title_fr')
+                                                    ->label('Title')
                                                     ->required(),
                                                 Textarea::make('ask_for_animation_content_en')
+                                                    ->label('Content')
+                                                    ->autosize()
                                                     ->required(),
-                                                Textarea::make('ask_for_animation_content_fr')
-                                                    ->required(),
-                                                Grid::make(2)
+                                                Grid::make(3)
                                                     ->columnSpan(1)
                                                     ->schema([
                                                         TextInput::make('ask_for_animation_positive_response_en')
-                                                            ->label('Start button text en')
-                                                            ->required(),
-                                                        TextInput::make('ask_for_animation_positive_response_fr')
-                                                            ->label('Start button text fr')
+                                                            ->label('Start button')
                                                             ->required(),
                                                         TextInput::make('ask_for_animation_negative_response_en')
-                                                            ->label('Skip button text en')
-                                                            ->required(),
-                                                        TextInput::make('ask_for_animation_negative_response_fr')
-                                                            ->label('Skip button text fr')
+                                                            ->label('Skip button')
                                                             ->required(),
                                                         TextInput::make('animation_button_text_en')
-                                                            ->label('Continue to site en')
+                                                            ->label('Continue to site')
+                                                            ->required(),
+                                                    ])
+                                            ]),
+                                        Section::make('French')
+                                            ->columnSpan(1)
+                                            ->schema([
+                                                TextInput::make('ask_for_animation_title_fr')
+                                                    ->label('Title')
+                                                    ->required(),
+                                                Textarea::make('ask_for_animation_content_fr')
+                                                    ->label('Content')
+                                                    ->autosize()
+                                                    ->required(),
+                                                Grid::make(3)
+                                                    ->columnSpan(1)
+                                                    ->schema([
+                                                        TextInput::make('ask_for_animation_positive_response_fr')
+                                                            ->label('Start button')
+                                                            ->required(),
+                                                        TextInput::make('ask_for_animation_negative_response_fr')
+                                                            ->label('Skip button')
                                                             ->required(),
                                                         TextInput::make('animation_button_text_fr')
-                                                            ->label('Continue to site fr')
+                                                            ->label('Continue to site')
                                                             ->required(),
                                                     ])
                                             ]),
@@ -96,8 +113,10 @@ class ManageLandingPage extends SettingsPage
                                 Grid::make(2)
                                     ->schema([
                                         CuratorPicker::make('animation_button_icon_id')
+                                            ->label('Button Icon')
                                             ->required(),
                                         CuratorPicker::make('animation_sound_id')
+                                            ->label('Animation Sound')
                                             ->required(),
                                     ]),
 
@@ -117,9 +136,48 @@ class ManageLandingPage extends SettingsPage
 
                                 Repeater::make('animation_sections')
                                     ->hiddenLabel()
+                                    ->columns(2)
                                     ->schema([
                                         Hidden::make('id')
                                             ->default(fake()->regexify('[A-Za-z]{10}')),
+
+                                        Section::make('English')
+                                            ->columnSpan(1)
+                                            ->schema([
+                                                TextInput::make('title_en')
+                                                    ->label('Title')
+                                                    ->required(),
+                                                Textarea::make('content_en')
+                                                    ->autosize()
+                                                    ->label('Content')
+                                                    ->required()
+                                            ]),
+                                        Section::make('French')
+                                            ->columnSpan(1)
+                                            ->schema([
+                                                TextInput::make('title_fr')
+                                                    ->label('Title')
+                                                    ->required(),
+                                                Textarea::make('content_fr')
+                                                    ->label('Content')
+                                                    ->autosize()
+                                                    ->required()
+                                            ]),
+                                        Section::make()
+                                            ->columns(8)
+                                            ->schema([
+                                                TextInput::make('wait_time')
+                                                    ->numeric()
+                                                    ->minValue(0)
+                                                    ->default(2)
+                                                    ->required()
+                                                    ->columnSpan(3),
+                                                CuratorPicker::make('icon_id')
+                                                    ->label('Animation Icon')
+                                                    ->required()
+                                                    ->columnSpan(3),
+                                            ]),
+
                                         Grid::make(2)
                                             ->schema([
                                                 CuratorPicker::make('images')
@@ -128,27 +186,6 @@ class ManageLandingPage extends SettingsPage
                                                     ->columnSpanFull()
                                                     ->multiple(),
                                             ]),
-                                        Grid::make(6)
-                                            ->schema([
-                                                TextInput::make('title')
-                                                    ->required()
-                                                    ->columnSpan(4),
-                                                TextInput::make('wait_time')
-                                                    ->numeric()
-                                                    ->minValue(0)
-                                                    ->default(2)
-                                                    ->required()
-                                                    ->columnSpan(2),
-
-                                                CuratorPicker::make('icon_id')
-                                                    ->label('Animation Icon')
-                                                    ->required()
-                                                    ->columnSpan(3),
-                                                Textarea::make('content')
-                                                    ->required()
-                                                    ->columnSpan(3),
-                                            ]),
-
                                     ]),
 
 
@@ -156,20 +193,31 @@ class ManageLandingPage extends SettingsPage
                         Tabs\Tab::make('Home Page')
                             ->schema([
                                 Section::make('Header')
+                                    ->columns(2)
                                     ->schema([
-                                        TextInput::make('homepage_title_en')
-                                            ->label('Title')
-                                            ->required(),
-                                        TextInput::make('homepage_title_fr')
-                                            ->label('Title')
-                                            ->required(),
-                                        Textarea::make('homepage_description_en')
-                                            ->label('Description')
-                                            ->required(),
-                                        Textarea::make('homepage_description_fr')
-                                            ->label('Description')
-                                            ->required(),
+                                        Section::make('English')
+                                            ->columnSpan(1)
+                                            ->schema([
+                                                TextInput::make('homepage_title_en')
+                                                    ->label('Title')
+                                                    ->required(),
+                                                Textarea::make('homepage_description_en')
+                                                    ->label('Description')
+                                                    ->autosize()
+                                                    ->required(),
+                                            ]),
+                                        Section::make('French')
+                                            ->columnSpan(1)
+                                            ->schema([
+                                                TextInput::make('homepage_title_fr')
+                                                    ->label('Title')
+                                                    ->required(),
 
+                                                Textarea::make('homepage_description_fr')
+                                                    ->label('Description')
+                                                    ->autosize()
+                                                    ->required(),
+                                            ]),
                                     ]),
                                 Section::make('Cards')
                                     ->columns(4)
@@ -212,7 +260,7 @@ class ManageLandingPage extends SettingsPage
                                             ->label("Travellers Count")
                                             ->required(),
                                         TextInput::make('stat_association_count')
-                                        ->label("Associations Count")
+                                            ->label("Associations Count")
                                             ->required(),
                                         TextInput::make('stat_customer_feedback')
                                             ->label("Customer Feedback")
@@ -227,25 +275,44 @@ class ManageLandingPage extends SettingsPage
 
                             ]),
                         Tabs\Tab::make('Featured')
+                            ->columns(2)
                             ->schema([
-                                Textarea::make('expedition_activity_content_en')
-                                    ->label('Expedition Content')
-                                    ->required(),
-                                Textarea::make('expedition_activity_content_fr')
-                                    ->label('Expedition Content')
-                                    ->required(),
-                                Textarea::make('trek_activity_content_en')
-                                    ->label('Trek Content')
-                                    ->required(),
-                                Textarea::make('trek_activity_content_fr')
-                                    ->label('Trek Content')
-                                    ->required(),
-                                Textarea::make('tour_activity_content_en')
-                                    ->label('Activity Content')
-                                    ->required(),
-                                Textarea::make('tour_activity_content_fr')
-                                    ->label('Activity Content')
-                                    ->required(),
+                                Section::make('English')
+                                    ->columnSpan(1)
+                                    ->schema([
+                                        Textarea::make('expedition_activity_content_en')
+                                            ->label('Expedition Content')
+                                            ->autosize()
+                                            ->required(),
+                                        Textarea::make('trek_activity_content_en')
+                                            ->label('Trek Content')
+                                            ->autosize()
+                                            ->required(),
+                                        Textarea::make('tour_activity_content_en')
+                                            ->label('Activity Content')
+                                            ->autosize()
+                                            ->required(),
+                                    ]),
+                                Section::make('French')
+                                    ->columnSpan(1)
+                                    ->schema([
+                                        Textarea::make('expedition_activity_content_fr')
+                                        ->label('Expedition Content')
+                                        ->autosize()
+                                        ->required(),
+
+                                    Textarea::make('trek_activity_content_fr')
+                                        ->label('Trek Content')
+                                        ->autosize()
+                                        ->required(),
+
+                                    Textarea::make('tour_activity_content_fr')
+                                        ->label('Activity Content')
+                                        ->autosize()
+                                        ->required(),
+                                    ]),
+
+
                             ]),
 
 
