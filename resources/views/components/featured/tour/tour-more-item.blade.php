@@ -80,7 +80,7 @@
             <div class="flex flex-col md:justify-center md:items-center ">
                 <h5 class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-center  "
                     data-aos="fade-down" data-aos-duration="1200">
-                    The Fun Corner </h5>
+                    {{__('featured.tours')}} </h5>
                 <p
                     class="text-xl/7 mt-4 text-black text-left md:text-center
                  font-light font-body  lg:w-[80%]">
