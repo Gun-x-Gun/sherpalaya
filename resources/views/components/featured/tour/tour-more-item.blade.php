@@ -9,7 +9,7 @@
                 <p
                     class="text-xl/7 mt-4 text-black text-left md:text-center
                      font-light font-body  lg:w-[80%]">
-                    {{ $landingPageSetting->tour_activity_content }}
+                    {{ app()->currentLocale() == 'fr' ?$landingPageSetting->tour_activity_content_fr:$landingPageSetting->tour_activity_content_en }}
                 </p>
                 <div class="h-6 md:h-12"></div>
             </div>
@@ -84,7 +84,7 @@
                 <p
                     class="text-xl/7 mt-4 text-black text-left md:text-center
                  font-light font-body  lg:w-[80%]">
-                    {{ $landingPageSetting->tour_activity_content }}
+                    {{ app()->currentLocale() == 'fr' ?$landingPageSetting->tour_activity_content_fr:$landingPageSetting->tour_activity_content_en }}
                 </p>
                 <div class="h-6 md:h-12"></div>
             </div>

@@ -4,6 +4,7 @@
         <figure class="overflow-hidden rounded-none">
             <img src="{{ $animationMediaUrls[$askForAnimation['image_id']] }}" alt="overlay image" />
         </figure>
+
         <div class="card-body justify-center items-center">
 
             {{-- <span class="icon-[mynaui--{{ $icon }}] size-28 text-white animated-icon"></span> --}}
@@ -20,6 +21,19 @@
                 <button class="btn btn-soft btn-error" id="ask-for-animation-negative-response">
                     {{ $askForAnimation['negative_response'] }}
                 </button>
+
+                {{-- Language selection --}}
+                <div class="dropdown relative inline-flex [--placement:bottom-end] px-2 ">
+                    <button id="language-select-dropdown-drawer-animation" type="button" class="btn btn-soft btn-info dropdown-toggle"
+                        aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                        <span class="icon-[tabler--language-hiragana] size-5"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu"
+                        aria-orientation="vertical" aria-labelledby="language-select-dropdown-drawer-animation">
+                        <li><a class="dropdown-item text-black" href="/change-locale/en"> English</a></li>
+                        <li><a class="dropdown-item text-black" href="/change-locale/fr"> French</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

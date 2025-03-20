@@ -37,7 +37,9 @@ class ManageAboutUs extends SettingsPage
                                 CuratorPicker::make('cover_image_id')
                                     ->label('About Page Image')
                                     ->required(),
-                                RichEditor::make('content')
+                                RichEditor::make('content_en')
+                                    ->required(),
+                                RichEditor::make('content_fr')
                                     ->required(),
                             ]),
                         Tabs\Tab::make('Certificates')

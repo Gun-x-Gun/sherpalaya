@@ -34,7 +34,7 @@
                     <p
                         class="text-md mt-2 text-preety text-slate-800 text-balance md:text-wrap
                             md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light">
-                            {{ $landingPageSetting->tour_activity_content }}
+                            {{ app()->currentLocale() == 'fr' ?$landingPageSetting->tour_activity_content_fr:$landingPageSetting->tour_activity_content_en }}
                     </p>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                 <p
                     class="text-md mt-2 text-preety text-slate-800 text-balance md:text-wrap
                         md:text-justify first-line:uppercase first-line:tracking-widest first-line:font-light pr-2">
-                        {{ $landingPageSetting->tour_activity_content }}
+                        {{ app()->currentLocale() == 'fr' ?$landingPageSetting->tour_activity_content_fr:$landingPageSetting->tour_activity_content_en }}
                 </p>
                 <div id="multi-slide"
                     data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.5, "md":2 } }'

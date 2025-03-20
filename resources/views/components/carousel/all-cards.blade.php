@@ -16,12 +16,16 @@
     <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center 2xl:mx-32 mx-4 ">
         <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
             data-aos="fade-down" data-aos-duration="1200">
-            {!!  $landingPageSetting->homepage_title !!}
+            {!! app()->currentLocale() == 'fr'
+                ? $landingPageSetting->homepage_title_fr
+                : $landingPageSetting->homepage_title_en !!}
         </h5>
         <div
             class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
                  font-light font-body lg:w-[80%] tracking-wide ">
-            {!! $landingPageSetting->homepage_description !!}
+            {!! app()->currentLocale() == 'fr'
+                ? $landingPageSetting->homepage_description_fr
+                : $landingPageSetting->homepage_description_en !!}
         </div>
         <div class="h-10 md:h-12"></div>
     </div>
@@ -42,7 +46,7 @@
                         data-aos-duration="800">
                         <div class="text-left ">
                             <h2 class="font-extrabold text-blue-50 text-2xl lg:text-4xl">
-                                {{__('footer.expeditions')}}
+                                {{ __('footer.expeditions') }}
                             </h2>
                         </div>
                     </div>
@@ -72,7 +76,7 @@
                     <div class="card-body absolute inset-0 uppercase">
                         <div class="text-left" data-aos="flip-up" data-aos-duration="800">
                             <h2 class="font-bold text-blue-50 text-2xl lg:text-4xl ">
-                                {{__('footer.treks')}}
+                                {{ __('footer.treks') }}
                             </h2>
                         </div>
                     </div>
@@ -107,7 +111,7 @@
                     <div class="card-body absolute inset-0 uppercase" data-aos="flip-up" data-aos-duration="800">
                         <div class="text-left ">
                             <h2 class="font-bold text-blue-50 text-2xl lg:text-4xl ">
-                                {{__('footer.activities')}}
+                                {{ __('footer.activities') }}
                             </h2>
                         </div>
                     </div>
@@ -137,7 +141,7 @@
                     <div class="card-body absolute inset-0 uppercase" data-aos="flip-up" data-aos-duration="800">
                         <div class="text-left ">
                             <h2 class="font-bold text-blue-50  text-2xl lg:text-4xl ">
-                                {{__('footer.services')}}
+                                {{ __('footer.services') }}
                             </h2>
                         </div>
                     </div>

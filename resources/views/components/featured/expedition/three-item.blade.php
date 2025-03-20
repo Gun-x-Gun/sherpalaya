@@ -1,4 +1,4 @@
-@if ($featuredExpeditions->count()>1)
+@if ($featuredExpeditions->count() > 1)
 
     <div class="bg-blue-100/60">
         <div class="2xl:mx-32 mx-4 ">
@@ -10,7 +10,7 @@
                 <p
                     class="text-md mt-2 text-preety text-slate-800 md:text-center md:text-wrap
                          first-line:uppercase first-line:tracking-widest first-line:font-light">
-                    {{ $landingPageSetting->expedition_activity_content }}
+                    {{ app()->currentLocale() == 'fr' ? $landingPageSetting->expedition_activity_content_fr : $landingPageSetting->expedition_activity_content_en }}
                 </p>
             </div>
 

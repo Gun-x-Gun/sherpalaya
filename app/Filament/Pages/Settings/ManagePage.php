@@ -35,7 +35,10 @@ class ManagePage extends SettingsPage
                                 CuratorPicker::make('expedition_page_cover_image_id')
                                     ->label('Exped Page Image')
                                     ->required(),
-                                Textarea::make('expedition_page_content')
+                                Textarea::make('expedition_page_content_en')
+                                    ->label('Exped Page Content')
+                                    ->required(),
+                                Textarea::make('expedition_page_content_fr')
                                     ->label('Exped Page Content')
                                     ->required()
                             ]),
@@ -44,7 +47,10 @@ class ManagePage extends SettingsPage
                                 CuratorPicker::make('trek_page_cover_image_id')
                                     ->label('Trek Page Image')
                                     ->required(),
-                                Textarea::make('trek_page_content')
+                                Textarea::make('trek_page_content_en')
+                                    ->label('Trek Page Content')
+                                    ->required(),
+                                Textarea::make('trek_page_content_fr')
                                     ->label('Trek Page Content')
                                     ->required()
                             ]),
@@ -53,7 +59,10 @@ class ManagePage extends SettingsPage
                                 CuratorPicker::make('tour_page_cover_image_id')
                                     ->label('Activity Page Image')
                                     ->required(),
-                                Textarea::make('tour_page_content')
+                                Textarea::make('tour_page_content_en')
+                                    ->label('Activity Page Content')
+                                    ->required(),
+                                Textarea::make('tour_page_content_fr')
                                     ->label('Activity Page Content')
                                     ->required()
                             ]),
@@ -62,7 +71,10 @@ class ManagePage extends SettingsPage
                                 CuratorPicker::make('service_page_cover_image_id')
                                     ->label('Service Page Image')
                                     ->required(),
-                                Textarea::make('service_page_content')
+                                Textarea::make('service_page_content_en')
+                                    ->label('Service Page Content')
+                                    ->required(),
+                                Textarea::make('service_page_content_fr')
                                     ->label('Service Page Content')
                                     ->required()
                             ]),

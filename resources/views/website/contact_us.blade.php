@@ -28,15 +28,15 @@
                     data-aos="fade-down" data-aos-duration="1200">
                     <h5
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
-                        {{__('contact.title-up')}}
+                        {{ __('contact.title-up') }}
                     </h5>
                     <h2
                         class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
-                        {{__('contact.title-main')}}
+                        {{ __('contact.title-main') }}
                     </h2>
                     <h5
                         class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
-                        {{__('contact.title-down')}}
+                        {{ __('contact.title-down') }}
                     </h5>
                 </div>
             </div>
@@ -55,7 +55,7 @@
             <div class="">
                 <div class=" text-center sm:text-center ">
                     <h2 class="font-medium text-black uppercase tracking-normal text-3xl md:text-4xl ">
-                        {{__('contact.heading')}}
+                        {{ __('contact.heading') }}
                     </h2>
                 </div>
                 <div class=" md:h-10"></div>
@@ -64,7 +64,7 @@
                     <div class="grid md:grid-cols-2">
                         <div class="h-full pr-4 ">
                             <p class="mt-3 mb-12 font-body text-xl/7  tracking-wide font-light text-black">
-                                {{ $contactUsSetting->content }}
+                                {{ app()->currentLocale() == 'fr' ? $contactUsSetting->content_fr : $contactUsSetting->content_en }}
                             </p>
                             <ul class="mb-6 md:mb-0">
                                 <li class="flex">
@@ -81,9 +81,9 @@
                                     </div>
                                     <div class="ml-4 mb-4">
                                         <h3 class="mb-2 text-lg font-medium leading-6 text-black uppercase">
-                                            {{__('contact.address')}}</h3>
+                                            {{ __('contact.address') }}</h3>
                                         <p class="text-black font-light text-lg tracking-tighter font-body">
-                                            {{ $contactUsSetting->address }}
+                                            {{ app()->currentLocale() == 'fr' ? $contactUsSetting->address_fr : $contactUsSetting->address_en }}
                                         </p>
                                         {{-- <p class="text-black font-light">New York, EEUU</p> --}}
                                     </div>
@@ -105,7 +105,7 @@
                                         <h3 class="mb-2 text-lg uppercase font-medium leading-6 text-black">Contact
                                         </h3>
                                         <p class="text-black font-light text-lg tracking-wide">
-                                            {{ $contactUsSetting->contact }}
+                                            {{ app()->currentLocale() == 'fr' ? $contactUsSetting->contact_fr : $contactUsSetting->contact_en }}
                                         </p>
                                         {{-- <p class="text-black font-light">Mail: tailnext@gmail.com</p> --}}
                                     </div>
@@ -121,10 +121,11 @@
                                         </svg>
                                     </div>
                                     <div class="ml-4 mb-4">
-                                        <h3 class="mb-2 text-lg uppercase font-medium leading-6 text-black">{{__('contact.work')}}
+                                        <h3 class="mb-2 text-lg uppercase font-medium leading-6 text-black">
+                                            {{ __('contact.work') }}
                                         </h3>
                                         <p class="text-black font-light text-lg tracking-wide">
-                                            {{ $contactUsSetting->working_hour }}
+                                            {{ app()->currentLocale() == 'fr' ? $contactUsSetting->working_hour_fr : $contactUsSetting->working_hour_en }}
                                         </p>
                                         {{-- <p class="text-black font-light">Saturday &amp; Sunday: 08:00 - 12:00</p> --}}
                                     </div>
@@ -132,11 +133,11 @@
                             </ul>
                         </div>
                         <div class="card h-fit max-w-6xl p-5 md:px-12 bg-blue-100/30" id="form ">
-                            <h2 class="mb-2 text-2xl font-bold uppercase text-black">{{__('contact.form-head')}}</h2>
+                            <h2 class="mb-2 text-2xl font-bold uppercase text-black">{{ __('contact.form-head') }}</h2>
                             @if (isset($contactUsSubmitted))
                                 @if ($contactUsSubmitted === true)
                                     <div class="alert alert-outline alert-success mb-2" role="alert">
-                                        {{__('contact.form-success')}}
+                                        {{ __('contact.form-success') }}
                                     </div>
                                 @endif
 
@@ -154,8 +155,7 @@
                                                 name="full_name" required>
                                         </div>
                                         <div class="mx-0 mb-1 sm:mb-4">
-                                            <label for="email"
-                                                class="pb-1 text-xs uppercase tracking-wider"></label>
+                                            <label for="email" class="pb-1 text-xs uppercase tracking-wider"></label>
                                             <input type="email" id="email" autocomplete="email"
                                                 placeholder="Your email address"
                                                 class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md"
@@ -178,7 +178,7 @@
                                 </div>
                                 <div class="text-center">
                                     <button type="submit"
-                                        class="w-full bg-blue-800 text-white px-6 py-3 font-xl tracking-wide uppercase rounded-md sm:mb-0">{{__('contact.send')}}</button>
+                                        class="w-full bg-blue-800 text-white px-6 py-3 font-xl tracking-wide uppercase rounded-md sm:mb-0">{{ __('contact.send') }}</button>
                                 </div>
                             </form>
                         </div>

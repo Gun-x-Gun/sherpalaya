@@ -38,7 +38,7 @@
             <div class="h-4 "></div>
             <div class="2xl:mx-32 mx-4 text-left">
                 <p class="text-md text-left  mt-2  text-stone-600 font-body text-xl/7 font-light ">
-                    {{ $pageSetting->trek_page_content }}
+                    {{ app()->currentLocale() == 'fr' ? $pageSetting->trek_page_content_fr : $pageSetting->trek_page_content_en }}
                 </p>
             </div>
             <div class="h-12 "></div>

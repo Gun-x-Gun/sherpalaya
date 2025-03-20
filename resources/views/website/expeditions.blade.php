@@ -14,7 +14,7 @@
                     </h5>
                     <h2
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
-                        Epic Expeditions 
+                        Epic Expeditions
                     </h2>
                     <h5
                         class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
@@ -38,7 +38,7 @@
             </div>
             <div class="2xl:mx-32 mx-4 text-left">
                 <p class="text-left  mt-2  text-stone-600  font-body text-xl/7 font-light">
-                    {{ $pageSetting->expedition_page_content }}
+                    {{ app()->currentLocale() == 'fr' ? $pageSetting->expedition_page_content_fr : $pageSetting->expedition_page_content_en }}
                 </p>
             </div>
             <div class="h-10"></div>

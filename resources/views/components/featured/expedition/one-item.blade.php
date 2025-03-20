@@ -12,7 +12,7 @@
                     <p
                         class="text-md mt-2 text-preety text-slate-800 lg:text-right lg:text-wrap
                          first-line:uppercase first-line:font-light">
-                        {{ $landingPageSetting->expedition_activity_content }}
+                        {{ app()->currentLocale() == 'fr' ? $landingPageSetting->expedition_activity_content_fr : $landingPageSetting->expedition_activity_content_en }}
                     </p>
                     <div class="h-4"></div>
                 </div>

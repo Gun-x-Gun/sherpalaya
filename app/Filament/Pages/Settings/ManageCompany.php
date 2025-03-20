@@ -33,13 +33,21 @@ class ManageCompany extends SettingsPage
                             ->schema([
                                 CuratorPicker::make('company_logo_id')
                                     ->required(),
-                                TextInput::make('company_name')
+                                TextInput::make('company_name_en')
                                     ->required(),
-                                TextInput::make('company_address')
+                                TextInput::make('company_name_fr')
                                     ->required(),
-                                TextInput::make('company_email')
+                                TextInput::make('company_address_en')
                                     ->required(),
-                                TextInput::make('company_contact_number')
+                                TextInput::make('company_address_fr')
+                                    ->required(),
+                                TextInput::make('company_email_en')
+                                    ->required(),
+                                TextInput::make('company_email_fr')
+                                    ->required(),
+                                TextInput::make('company_contact_number_en')
+                                    ->required(),
+                                TextInput::make('company_contact_number_fr')
                                     ->required(),
                             ]),
                         Tabs\Tab::make('Social Media')

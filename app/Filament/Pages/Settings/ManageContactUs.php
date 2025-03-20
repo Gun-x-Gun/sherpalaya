@@ -27,13 +27,21 @@ class ManageContactUs extends SettingsPage
             ->schema([
                 Section::make()
                     ->schema([
-                        Textarea::make('content')
+                        Textarea::make('content_en')
                             ->required(),
-                        Textarea::make('address')
+                        Textarea::make('content_fr')
                             ->required(),
-                        Textarea::make('contact')
+                        Textarea::make('address_en')
                             ->required(),
-                        Textarea::make('working_hour')
+                        Textarea::make('address_fr')
+                            ->required(),
+                        Textarea::make('contact_en')
+                            ->required(),
+                        Textarea::make('contact_fr')
+                            ->required(),
+                        Textarea::make('working_hour_en')
+                            ->required(),
+                        Textarea::make('working_hour_fr')
                             ->required(),
                     ]),
             ]);

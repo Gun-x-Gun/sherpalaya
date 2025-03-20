@@ -7,9 +7,9 @@
                     data-aos="flip-up" data-aos-duration="800">
                     Expeditions</h5>
                 <p
-                    class="text-xl/7 mt-4 text-preety text-black lg:text-left 
+                    class="text-xl/7 mt-4 text-preety text-black lg:text-left
                      font-light font-body ">
-                    {{ $landingPageSetting->expedition_activity_content }}
+                    {{ app()->currentLocale() == 'fr' ? $landingPageSetting->expedition_activity_content_fr : $landingPageSetting->expedition_activity_content_en }}
                 </p>
                 <div class="h-6 md:h-12"></div>
             </div>
@@ -25,8 +25,7 @@
                                     {{ $featuredExpedition->title }}
                                 </h5>
                             </a>
-                            <div
-                                class=" mt-2 text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
+                            <div class=" mt-2 text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
@@ -59,8 +58,7 @@
                             </a>
                         </div>
                         <div class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start ">
-                            <div
-                                class="text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
+                            <div class="text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
@@ -103,8 +101,7 @@
                                     {{ $featuredExpedition->title }}
                                 </h5>
                             </a>
-                            <div
-                                class="text-preety mt-2 text-black  font-body font-light text-xl/8 line-clamp-[6] ">
+                            <div class="text-preety mt-2 text-black  font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
@@ -116,8 +113,7 @@
                         </div>
                         <div
                             class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start bg-blue-100">
-                            <div
-                                class="text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
+                            <div class="text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">

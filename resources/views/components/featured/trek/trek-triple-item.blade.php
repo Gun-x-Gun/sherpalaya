@@ -6,9 +6,8 @@
 
             <div class="">
                 <h5 class="text-4xl font-light line-clamp-2 uppercase tracking-wider text-black text-center ">Treks</h5>
-                <p
-                    class="text-md mt-4 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light">
-                        {{ $landingPageSetting->trek_activity_content }}
+                <p class="text-md mt-4 text-preety text-slate-800 break-all first-line:uppercase first-line:font-light">
+                    {{ app()->currentLocale() == 'fr' ? $landingPageSetting->trek_activity_content_fr : $landingPageSetting->trek_activity_content_en }}
                 </p>
             </div>
 

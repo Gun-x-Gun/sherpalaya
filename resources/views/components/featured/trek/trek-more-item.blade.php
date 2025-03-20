@@ -8,9 +8,9 @@
                     Treks
                 </h5>
                 <p
-                    class="text-xl/7 mt-4 text-preety text-black lg:text-left 
+                    class="text-xl/7 mt-4 text-preety text-black lg:text-left
                      font-light font-body break-all">
-                    {{ $landingPageSetting->trek_activity_content }}
+                    {{ app()->currentLocale() == 'fr' ? $landingPageSetting->trek_activity_content_fr:$landingPageSetting->trek_activity_content_en }}
                 </p>
                 <div class="h-6 md:h-12"></div>
             </div>

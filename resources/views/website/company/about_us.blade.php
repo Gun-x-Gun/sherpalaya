@@ -10,15 +10,15 @@
                     data-aos="fade-down" data-aos-duration="1200">
                     <h5
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
-                        {{__('aboutpage.title-up')}}
+                        {{ __('aboutpage.title-up') }}
                     </h5>
                     <h2
                         class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
-                        {{__('aboutpage.title-main')}}
-                     </h2>
+                        {{ __('aboutpage.title-main') }}
+                    </h2>
                     <h5
                         class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
-                        {{__('aboutpage.title-down')}}
+                        {{ __('aboutpage.title-down') }}
                     </h5>
                 </div>
             </div>
@@ -39,12 +39,12 @@
                 <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center">
                     <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
                         data-aos="fade-down" data-aos-duration="1200">
-                        {{__('aboutpage.heading')}}
+                        {{ __('aboutpage.heading') }}
                     </h5>
                     <div
                         class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
                              font-light font-body lg:w-[80%] tracking-wide">
-                        {!! $aboutUsSetting->content !!}
+                        {!! app()->currentLocale() == 'fr' ? $aboutUsSetting->content_fr : $aboutUsSetting->content_en !!}
                     </div>
                     <div class="h-10 md:h-12"></div>
                 </div>
@@ -61,16 +61,18 @@
                 <div class="card-header   px-0">
                     <h5 class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-left "
                         data-aos="flip-up" data-aos-duration="800">
-                        {{__('aboutpage.legal')}}
+                        {{ __('aboutpage.legal') }}
                     </h5>
                     <div class="h-8">
                     </div>
-                    <div id="all-services" class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1  skeleton animate-pulse">
+                    <div id="all-services"
+                        class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1  skeleton animate-pulse">
                         @foreach ($aboutUsSetting->certificate_images as $galleryImage)
                             <button
                                 class="card cursor-pointer rounded-none image-fullw-full relative items-end  card-side group hover:shadow border single-service hidden"
                                 aria-haspopup="dialog" aria-expanded="false" aria-controls="service-gallery-modal"
-                                data-overlay="#service-gallery-modal" onclick="changeCarouselSlide({{ $loop->index }})">
+                                data-overlay="#service-gallery-modal"
+                                onclick="changeCarouselSlide({{ $loop->index }})">
                                 <figure class="h-full w-full brightness-90">
                                     <x-curator-glider class="h-[40vh] w-full object-cover brightness-50"
                                         :media="$galleryImage" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
@@ -80,7 +82,7 @@
                     </div>
                     <div class="h-10"></div>
                     <p class="text-warning italic tracking-wider font-normal text-sm">
-                        {{__('aboutpage.notice')}}
+                        {{ __('aboutpage.notice') }}
 
                     </p>
 
@@ -93,7 +95,7 @@
             <div class="h-10"></div>
             <h1 class="text-3xl md:text-4xl tracking-normal font-body  text-left line-clamp-2 text-black font-medium uppercase"
                 data-aos="fade-down" data-aos-duration="1200">
-                {{__('aboutpage.faq')}}
+                {{ __('aboutpage.faq') }}
             </h1>
             <div class="h-8"></div>
             <div class="accordion accordion-shadow shadow-md font-body">

@@ -9,8 +9,8 @@
                 {{-- <h3 class="text-3xl tracking-widest text-accent md:text-center ">With Sherpalaya</h3> --}}
                 <p
                     class="text-md mt-2 text-preety text-slate-800 text-balance md:text-wrap
-                    md:text-center first-line:uppercase first-line:tracking-widest first-line:font-light">
-                    {{ $landingPageSetting->expedition_activity_content }}
+                    md:text-center first-$landingPageSetting->expedition_activity_contentline:uppercase first-line:tracking-widest first-line:font-light">
+                    {{ app()->currentLocale() == 'fr' ? $landingPageSetting->expedition_activity_content_fr : $landingPageSetting->expedition_activity_content_en }}
 
                 </p>
             </div>

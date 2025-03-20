@@ -60,22 +60,34 @@ class ManageLandingPage extends SettingsPage
                                         Grid::make(1)
                                             ->columnSpan(1)
                                             ->schema([
-                                                TextInput::make('ask_for_animation_title')
+                                                TextInput::make('ask_for_animation_title_en')
                                                     ->required(),
-                                                Textarea::make('ask_for_animation_content')
+                                                TextInput::make('ask_for_animation_title_fr')
+                                                    ->required(),
+                                                Textarea::make('ask_for_animation_content_en')
+                                                    ->required(),
+                                                Textarea::make('ask_for_animation_content_fr')
                                                     ->required(),
                                                 Grid::make(3)
                                                     ->columnSpan(1)
                                                     ->schema([
-                                                        TextInput::make('ask_for_animation_positive_response')
+                                                        TextInput::make('ask_for_animation_positive_response_en')
                                                             ->label('Start button text')
                                                             ->required(),
-                                                        TextInput::make('ask_for_animation_negative_response')
+                                                        TextInput::make('ask_for_animation_positive_response_fr')
+                                                            ->label('Start button text')
+                                                            ->required(),
+                                                        TextInput::make('ask_for_animation_negative_response_en')
                                                             ->label('Skip button text')
                                                             ->required(),
-                                                        TextInput::make('animation_button_text')
+                                                        TextInput::make('ask_for_animation_negative_response_fr')
+                                                            ->label('Skip button text')
+                                                            ->required(),
+                                                        TextInput::make('animation_button_text_en')
                                                             ->label('Continue to site')
-                                                            // ->hint('after animation ends')
+                                                            ->required(),
+                                                        TextInput::make('animation_button_text_fr')
+                                                            ->label('Continue to site')
                                                             ->required(),
                                                     ])
                                             ]),
@@ -145,10 +157,16 @@ class ManageLandingPage extends SettingsPage
                             ->schema([
                                 Section::make('Header')
                                     ->schema([
-                                        TextInput::make('homepage_title')
+                                        TextInput::make('homepage_title_en')
                                             ->label('Title')
                                             ->required(),
-                                        Textarea::make('homepage_description')
+                                        TextInput::make('homepage_title_fr')
+                                            ->label('Title')
+                                            ->required(),
+                                        Textarea::make('homepage_description_en')
+                                            ->label('Description')
+                                            ->required(),
+                                        Textarea::make('homepage_description_fr')
                                             ->label('Description')
                                             ->required(),
 
@@ -210,13 +228,22 @@ class ManageLandingPage extends SettingsPage
                             ]),
                         Tabs\Tab::make('Featured')
                             ->schema([
-                                Textarea::make('expedition_activity_content')
+                                Textarea::make('expedition_activity_content_en')
                                     ->label('Expedition Content')
                                     ->required(),
-                                Textarea::make('trek_activity_content')
+                                Textarea::make('expedition_activity_content_fr')
+                                    ->label('Expedition Content')
+                                    ->required(),
+                                Textarea::make('trek_activity_content_en')
                                     ->label('Trek Content')
                                     ->required(),
-                                Textarea::make('tour_activity_content')
+                                Textarea::make('trek_activity_content_fr')
+                                    ->label('Trek Content')
+                                    ->required(),
+                                Textarea::make('tour_activity_content_en')
+                                    ->label('Activity Content')
+                                    ->required(),
+                                Textarea::make('tour_activity_content_fr')
                                     ->label('Activity Content')
                                     ->required(),
                             ]),

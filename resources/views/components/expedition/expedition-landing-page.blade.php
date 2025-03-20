@@ -36,9 +36,11 @@
                 Expedition In Nepal
             </h1>
             <p
-                class="text-md mt-2 text-preety text-slate-800 lg:text-center 
+                class="text-md mt-2 text-preety text-slate-800 lg:text-center
                  first-line:uppercase first-line:font-light">
-                {!! $landingPageSetting->expedition_activity_content !!}
+                {!! app()->currentLocale() == 'fr'
+                    ? $landingPageSetting->expedition_activity_content_fr
+                    : $landingPageSetting->expedition_activity_content_en !!}
             </p>
         </div>
         <div class="h-12 "></div>
