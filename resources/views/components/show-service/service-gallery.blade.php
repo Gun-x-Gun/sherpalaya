@@ -3,7 +3,7 @@
     <div class="bg-blue-100/5">
         <div class="card-header   px-0">
             <h5 class="card-title uppercase text-center font-semi-bold text-3xl px-2" data-aos="fade-down" data-aos-duration="1200">
-                Gallery
+                {{__('show-page.gallery')}}
             </h5>
             <div class="h-8">
             </div>

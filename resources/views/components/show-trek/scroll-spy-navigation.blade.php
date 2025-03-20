@@ -8,7 +8,7 @@
             data-tab="#tabs-scroll-5" aria-controls="#tabs-scroll-5" role="tab" aria-selected="false">
             <div class="gap-1 lg:gap-2 uppercase text-base tracking-wide font-normal flex text-nowrap ">
                 <span class="icon-[eva--bulb-outline] size-5"></span>
-                Key Highlights
+                {{__('show-page.key')}}
             </div>
         </button>
         <button href="#itineraries" type="button"
@@ -16,7 +16,7 @@
             data-tab="#tabs-scroll-4" aria-controls="#tabs-scroll-4" role="tab" aria-selected="false">
             <div class="gap-1 lg:gap-2 uppercase text-base tracking-wide font-normal flex text-nowrap">
                 <span class="icon-[tabler--calendar-week] size-5"></span>
-                Itinerary
+                {{__('show-page.itinerary')}}
             </div>
         </button>
         <button href="#costs_include" type="button"
@@ -24,7 +24,7 @@
             data-tab="#tabs-scroll-2" aria-controls="#tabs-scroll-2" role="tab" aria-selected="false">
             <div class="gap-1 lg:gap-2 uppercase text-base tracking-wide font-normal flex text-nowrap">
                 <span class="icon-[eva--done-all-fill] size-5"></span>
-                Cost Include
+                {{__('show-page.costs_include')}}
             </div>
         </button>
         <button href="#costs_exclude" type="button"
@@ -32,7 +32,7 @@
             data-tab="#tabs-scroll-3" aria-controls="#tabs-scroll-3" role="tab" aria-selected="false">
             <div class="gap-1 lg:gap-2 uppercase text-base tracking-wide font-normal flex text-nowrap">
                 <span class="icon-[tabler--exclamation-circle] size-5"></span>
-                Cost Exclude
+                {{__('show-page.costs_exclude')}}
             </div>
         </button>
         <button href="#essential_tips" type="button"
@@ -40,7 +40,7 @@
             data-tab="#tabs-scroll-6" aria-controls="#tabs-scroll-6" role="tab" aria-selected="false">
             <div class="gap-1 lg:gap-2 uppercase text-base tracking-wide font-normal flex text-nowrap">
                 <span class="icon-[tabler--info-circle] size-5"></span>
-                Essential Tips
+                {{__('show-page.tips')}}
             </div>
         </button>
         <button href="#gallery" type="button" class="tab active-tab:tab-active scrollspy-active:text-bg-soft-primary "
@@ -48,7 +48,7 @@
             aria-selected="false">
             <div class="gap-1 lg:gap-2 uppercase text-base tracking-wide font-normal flex text-nowrap">
                 <span class="icon-[tabler--photo] size-5"></span>
-                Gallery
+                {{__('show-page.gallery')}}
             </div>
         </button>
         {{-- <button href="#destination" type="button"

@@ -5,7 +5,7 @@
         </div>
         <div class="card-header px-2 pb-2" data-aos="fade-down" data-aos-duration="1200">
             <h5 class="card-title text-black uppercase font-medium text-3xl">
-                Essential Tips
+                {{__('show-page.tips')}}
             </h5>
             <div class="h-4"></div>
 

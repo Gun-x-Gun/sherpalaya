@@ -4,7 +4,7 @@
         </div>
         <div class="card-header px-2" data-aos="fade-down" data-aos-duration="1200">
             <h5 class="card-title text-primary uppercase font-semi-bold text-2xl">
-                Itineraries
+                {{__('show-page.itinerary')}}
             </h5>
         </div>
         <div class="card-body mx-0 px-2">

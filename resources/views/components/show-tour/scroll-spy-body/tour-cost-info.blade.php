@@ -5,8 +5,8 @@
             <div class="h-8">
             </div>
             <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
-                <h5 class="card-title text-black uppercase font-oswald font-medium text-2xl">Cost
-                    Includes
+                <h5 class="card-title text-black uppercase font-oswald font-medium text-2xl">
+                    {{__('show-page.costs_include')}}
                 </h5>
             </div>
             <div class="card-body p-2 mt-4 font-body">
@@ -36,8 +36,8 @@
 
             </div>
             <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
-                <h5 class="card-title text-black uppercase font-oswald font-medium text-2xl">Cost
-                    Excludes
+                <h5 class="card-title text-black uppercase font-oswald font-medium text-2xl">
+                    {{__('show-page.costs_exclude')}}
                 </h5>
             </div>
             <div class="card-body p-2 mt-4 font-body">

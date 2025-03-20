@@ -5,7 +5,7 @@
             </div>
             <h5 class="card-title text-center pb-2 text-black uppercase font-medium tracking-wide text-3xl px-2"
                 data-aos="fade-down" data-aos-duration="1200">
-                Gallery
+                {{__('show-page.gallery')}}
             </h5>
             <div class="h-6">
             </div>

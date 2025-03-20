@@ -4,8 +4,8 @@
         <div class="h-6">
         </div>
         <div class="card-header  text-left px-2 pb-2" data-aos="fade-down" data-aos-duration="1200">
-            <h5 class="card-title text-black uppercase tracking-normal font-body font-medium text-3xl">Key
-                Highlights
+            <h5 class="card-title text-black uppercase tracking-normal font-body font-medium text-3xl">
+                {{__('show-page.key')}}
             </h5>
             <div class="h-2"></div>
         </div>
