@@ -1,23 +1,41 @@
-<x-website-layout>
-    <div class="bg-blue-100/10 font-body">
-        <div class="card--rounded-none image-full   h-[60vh]">
-            <figure class="h-[60vh] w-full">
+{{-- <div class="card--rounded-none image-full h-[80vh] relative ">
+            <figure class="h-[80vh] w-full ">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
-                    class="h-[60vh] w-full object-cover brightness-50" />
+                    class="h-[80vh] w-full object-cover brightness-50" />
             </figure>
-            <div class="card-body absolute bottom-1/2 xl:left-28 left-0 flex flex-row items-center gap-4">
-                <div class="overflow-hidden border-none " data-aos="fade-down" data-aos-duration="1200">
-                    <figure class="w-full ">
-                        <img class="h-28 lg:h-52 object-cover rounded-full" src="{{ $sherpa->profilePicture->url }}"
-                            alt="picture" />
-                    </figure>
+            <div
+                class="card-body absolute bottom-1/4 left-[50%]  translate-x-[-50%] translate-y-[10%] flex flex-col items-center gap-8 ">
+                <div class="overflow-hidden  justify-center" data-aos="fade-down" data-aos-duration="1200">
+                    <img class="h-[28vh] w-full object-cover rounded-full" src="{{ $sherpa->profilePicture->url }}"
+                        alt="picture" />
                 </div>
-                <div class="" data-aos="fade-down" data-aos-duration="1200">
-                    <h5 class=" card-title mb-1 text-warning text-xl md:text-2xl lowercase font-oswald font-normal ">
+                <div class="text-center w-full font-oswald" data-aos="fade-down" data-aos-duration="1200">
+                    <h5 class="card-title mb-1 text-warning  text-2xl md:text-4xl uppercase font-bold ">
+                        {{ $sherpa->name }}
+                    </h5>
+                    <h5 class="card-title text-white text-sm md:text-xl lowercase font-oswald font-semibold ">
                         {{ $sherpa->title }}
                     </h5>
-                    <h5 class=" card-title  text-white text-2xl md:text-4xl uppercase font-normal ">
+                </div>
+            </div>
+        </div> --}}
+
+
+<x-website-layout>
+    <div class="bg-blue-100/10 font-body">
+        <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');"
+            class="bg-cover bg-center w-full  object-top font-body ">
+            <div class="card-body flex flex-col items-center justify-center gap-8 backdrop-blur-md h-[80vh]">
+                <div class="overflow-hidden  justify-center" data-aos="fade-down" data-aos-duration="1200">
+                    <img class="h-[28vh] w-full object-cover rounded-full border-white border-4"
+                        src="{{ $sherpa->profilePicture->url }}" alt="picture" />
+                </div>
+                <div class="text-center w-full font-oswald" data-aos="fade-down" data-aos-duration="1200">
+                    <h5 class="card-title mb-1 text-warning  text-2xl md:text-4xl uppercase font-bold ">
                         {{ $sherpa->name }}
+                    </h5>
+                    <h5 class="card-title text-white text-sm md:text-xl capitalize font-oswald font-semibold ">
+                        {{ $sherpa->title }}
                     </h5>
                 </div>
             </div>
@@ -40,9 +58,16 @@
 
         <div class="mx-4 2xl:mx-32">
             <div class="h-4"></div>
-            <p class="my-1  text-pretty text-stone-700 text-center font-body text-xl/7">
-                {{ $sherpa->description }}
-            </p>
+            <div
+                class="text-xl/7 mt-6 text-justify text-black  md:mx-8 lg:mx-16  xl:mx-28
+                         font-light font-body tracking-normal ">
+                {!! $sherpa->description !!}
+            </div>
+            <div class="h-10 md:h-12"></div>
+
+            {{-- <div class="my-1 text-pretty text-black font-light font-body text-xl/7">
+                {!! $sherpa->description !!}
+            </div> --}}
             <div class="h-8"></div>
             <h5 class="card-title font-normal uppercase text-4xl text-black tracking-wide mx-0 text-center"
                 data-aos="fade-down" data-aos-duration="1200">
@@ -68,14 +93,14 @@
                 </div>
                 <div class="h-8"></div>
             </div>
-            <div class="w-full col-span-2">
+            <div class="col-span-2 md:mx-8 lg:mx-16 xl:mx-28">
                 @if ($sherpa->awardsAndCertificates->count() > 0)
                     <h5 class="card-title font-normal uppercase text-4xl text-black tracking-normal mx-0 text-center"
                         data-aos="fade-down" data-aos-duration="1200">
                         Awards & Certificates
                     </h5>
                     <div class="h-8"></div>
-                    <div class="card-actions  sm:grid grid-cols-2 lg:grid-cols-3 flex flex-col gap-2 md:gap-4 mb-0 skeleton animate-pulse min-h-52"
+                    <div class="card-actions  sm:grid grid-cols-2  flex flex-col gap-2 md:gap-4 mb-0 skeleton animate-pulse min-h-52"
                         id="all-awards">
                         @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
                             <button type="button"
