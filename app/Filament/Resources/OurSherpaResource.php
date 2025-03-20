@@ -9,14 +9,17 @@ use App\Filament\Resources\OurSherpaResource\Widgets\SherpaExpeditionsTableWidge
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaMultiWidget;
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaToursTableWidget;
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaTreksTableWidget;
+use App\Models\Expedition;
 use App\Models\OurSherpa;
 use App\Traits\Filament\TranslatableResource;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -57,7 +60,7 @@ class OurSherpaResource extends Resource
                 Section::make('General')
                     ->columns(2)
                     ->schema([
-                        Section::make('')
+                        Section::make('Info')
                             ->columnSpan(1)
                             ->schema([
                                 CuratorPicker::make('profile_picture_id')
@@ -65,68 +68,90 @@ class OurSherpaResource extends Resource
                                     ->label('Profile Picture')
                                     ->hint('for profile page')
                                     ->relationship('profilePicture', 'id'),
+                                Section::make('')
+                                    ->columnSpan(1)
+                                    ->schema([
+                                        TextInput::make('name')
+                                            ->columnSpan(2)
+                                            ->required(),
+                                        TextInput::make('title')
+                                            ->columnSpan(2)
+                                            ->required(),
+                                        TagsInput::make('language')
+                                            ->columnSpan(2)
+                                            ->label('Languages')
+                                            ->hint('Press \'Enter\'')
+                                            ->suggestions([
+                                                'Nepali',
+                                                'English',
+                                                'French'
+                                            ]),
+                                        RichEditor::make('description')
+                                            ->toolbarButtons([
+                                                // 'attachFiles',
+                                                'blockquote',
+                                                'bold',
+                                                'bulletList',
+                                                // 'codeBlock',
+                                                'h2',
+                                                'h3',
+                                                'italic',
+                                                'link',
+                                                'orderedList',
+                                                'redo',
+                                                // 'strike',
+                                                'underline',
+                                                'undo',
+                                            ]),
+                                    ]),
                             ]),
-                        Section::make('')
+                        Section::make('Sherpa Experience')
+                            // ->hiddenOn('view')
+                            ->columns(1)
                             ->columnSpan(1)
                             ->schema([
-                                TextInput::make('name')
-                                    ->columnSpan(2)
-                                    ->required(),
-                                TextInput::make('title')
-                                    ->columnSpan(2)
-                                    ->required(),
-                                TagsInput::make('language')
-                                    ->columnSpan(2)
-                                    ->label('Languages')
-                                    ->hint('Press \'Enter\'')
-                                    ->suggestions([
-                                        'Nepali',
-                                        'English',
-                                        'French'
-                                    ]),
-                                RichEditor::make('description')
-                                    ->toolbarButtons([
-                                        // 'attachFiles',
-                                        'blockquote',
-                                        'bold',
-                                        'bulletList',
-                                        // 'codeBlock',
-                                        'h2',
-                                        'h3',
-                                        'italic',
-                                        'link',
-                                        'orderedList',
-                                        'redo',
-                                        // 'strike',
-                                        'underline',
-                                        'undo',
-                                    ]),
+                                Repeater::make('expedition_experience')
+                                    ->relationship('expidetionOurSherpas')
+                                    ->hiddenLabel()
+                                    ->addActionLabel('Add Expedition')
+                                    ->orderable('order')
+                                    ->schema([
+                                        Select::make('expedition_id')
+                                            ->options(Expedition::all()->pluck('title', 'id'))
+                                            ->preload()
+                                            ->label('Expedition')
+                                            ->native(false),
+                                        TextInput::make('count')
+                                            ->numeric()
+                                            ->minValue(1)
+                                            ->required()
+                                    ])
+                                    ->columns(2),
+
+                                Select::make('treks')
+                                    // ->hiddenLabel()
+                                    ->multiple()
+                                    ->relationship(titleAttribute: 'title')
+                                    ->preload()
+                                    ->searchable(['title', 'region'])
+                                    ->native(false),
+                                Select::make('tours')
+                                    // ->hiddenLabel()
+                                    ->multiple()
+                                    ->relationship(titleAttribute: 'title')
+                                    ->preload()
+                                    ->searchable(['title', 'region'])
+                                    ->native(false),
+
+                                Repeater::make('experience')
+                                        ->label('Other')
+                                        ->simple(
+                                            Textarea::make('experience')
+                                                ->autosize(),
+                                        )
                             ]),
                     ]),
-                Section::make('Sherpa Experience')
-                    ->hiddenOn('view')
-                    ->columns(3)
-                    ->schema([
-                        Select::make('expeditions')
-                            ->relationship(titleAttribute: 'title')
-                            ->multiple()
-                            ->preload()
-                            ->native(false),
-                        Select::make('treks')
-                            // ->hiddenLabel()
-                            ->multiple()
-                            ->relationship(titleAttribute: 'title')
-                            ->preload()
-                            ->searchable(['title', 'region'])
-                            ->native(false),
-                        Select::make('tours')
-                            // ->hiddenLabel()
-                            ->multiple()
-                            ->relationship(titleAttribute: 'title')
-                            ->preload()
-                            ->searchable(['title', 'region'])
-                            ->native(false),
-                    ]),
+
                 Section::make('Recognition')
                     ->schema([
                         CuratorPicker::make('awardsAndCertificates')

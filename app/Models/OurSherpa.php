@@ -18,14 +18,17 @@ class OurSherpa extends Model
         'language',
         'title',
         'description',
+        'experience'
     ];
 
     public $translatable = [
         'title',
         'description',
+        // 'experience',
     ];
     protected $casts = [
         'language' => 'array',
+        'experience' => 'array',
     ];
 
 
@@ -34,6 +37,9 @@ class OurSherpa extends Model
         static::creating(function ($sherpa){
             if(is_null($sherpa->description)){
                 $sherpa->description = '';
+            }
+            if(is_null($sherpa->experience)){
+                $sherpa->experience = '';
             }
             if(is_null($sherpa->language)){
                 $sherpa->language = [];
@@ -50,14 +56,18 @@ class OurSherpa extends Model
                 'order'
             ]);
     }
+
+    public function expidetionOurSherpas(){
+        return $this->hasMany(ExpeditionOurSherpa::class);
+    }
     public function expeditions()
     {
         return $this->belongsToMany(
             Expedition::class,
-            'our_sherpa_expedition'
-        )->using(OurSherpaExpedition::class)
+            'expedition_our_sherpa'
+        )->using(ExpeditionOurSherpa::class)
             ->withPivot([
-                'order'
+                'order','count'
             ]);
     }
     public function tours()

@@ -25,6 +25,17 @@ class OurSherpasSeeder extends Seeder
                 'English',
                 'French',
             ],
+            'experience' => [
+                "Mt. Kamet x1",
+                "Mt. Makalu 2 x1",
+                "Mt. Mustagh Ata x1",
+                "Mt. Kula Kangri x1",
+                "Mt. Gimmigela x1",
+                "Mt. Ratna Chuli x1",
+                "Mt. Mont Blanc x2",
+                "Mt. Mont Rose x1",
+                "Mt. Matterhorn x1"
+            ],
             'description' => [
                 'en' => 'Mr. Pemba Sherpa is a world-renowned mountaineer and trekking guide from Solukhumbu, Nepal, with an extraordinary record of summiting some of the planet’s highest and most challenging peaks. Born on September 4, 1971, in Taksindu Hewa-6, he has conquered Mount Everest an impressive seven times, alongside other formidable mountains such as Makalu, Cho Oyu (five times), Dhaulagiri, and Manaslu. His expertise extends beyond Nepal to peaks like Shisha Pangma in Tibet, Gasherbrum in Pakistan, and Mont Blanc in France, showcasing his versatility and skill across diverse terrains. With over two decades of experience as a freelance mountain guide, Pemba’s fluency in Nepali, English, and French enhances his ability to lead international expeditions, making him a trusted and legendary figure in the global mountaineering community.',
                 'fr' => 'M. Pemba Sherpa est un alpiniste et guide de trekking de renommée mondiale, originaire de Solukhumbu, au Népal, avec un palmarès exceptionnel de sommets parmi les plus hauts et les plus difficiles de la planète. Né le 4 septembre 1971 à Taksindu Hewa-6, il a gravi le mont Everest à sept reprises, ainsi que d’autres sommets impressionnants tels que Makalu, Cho Oyu (cinq fois), Dhaulagiri et Manaslu. Son expertise s’étend au-delà du Népal, avec des ascensions comme Shisha Pangma au Tibet, Gasherbrum au Pakistan et le Mont Blanc en France, démontrant sa polyvalence et son talent sur divers terrains. Avec plus de deux décennies d’expérience en tant que guide de montagne indépendant, la maîtrise du népalais, de l’anglais et du français par Pemba renforce sa capacité à diriger des expéditions internationales, faisant de lui une figure légendaire et respectée dans la communauté mondiale de l’alpinisme.',
@@ -32,6 +43,24 @@ class OurSherpasSeeder extends Seeder
         ];
         $sherpa = OurSherpa::create($sherpa1);
 
+        $expeditions = [
+            ['expedition_id' => 1, 'count' => 7],
+            ['expedition_id' => 6, 'count' => 1],  // Mt. Makalu Expedition
+            ['expedition_id' => 7, 'count' => 5],  // Mt. Cho-Oyu Expedition
+            ['expedition_id' => 8, 'count' => 1],  // Mt. Dhaulagiri Expedition
+            ['expedition_id' => 9, 'count' => 1],
+            ['expedition_id' => 14, 'count' => 1],
+            ['expedition_id' => 15, 'count' => 2],
+            ['expedition_id' => 22, 'count' => 1],
+        ];
+        foreach ($expeditions as $index => $expedition) {
+            if ($expedition['count'] > 0) {
+                $sherpa->expeditions()->attach($expedition['expedition_id'], [
+                    'count' => $expedition['count'],
+                    'order' => $index + 1,
+                ]);
+            }
+        }
         CuratorSeederHelper::seedBelongsTo(
             $sherpa,
             'profile_picture_id',
@@ -64,9 +93,17 @@ class OurSherpasSeeder extends Seeder
                 'English',
                 'French',
             ],
+            'experience' => [
+                "Manages an import business for outdoor gear from China",
+                "Led financial and logistic operations at Khumbu Shangrila Nepal Trek Pvt. Ltd",
+                "Conducted socio-economic surveys in Gajeda and Kohalpur",
+                "Trained in psychosocial counseling at Richmond Fellowship Nepal",
+                "Organized teacher training and advocacy programs for Humanitarian Trust",
+                "Completed Disaster Risk Reduction training for fieldwork safety",
+            ],
             'description' => [
-                'en' => 'Mr. Tashi Palzor Sherpa, born on April 15, 1988 (Nepali calendar: 2045/04/15), in Chaurikharka-6, Solukhumbu, Nepal, is a dynamic mountaineer, social worker, and entrepreneur. With a Master’s in Social Work from St. Xavier College (2014) and a Bachelor’s in Business Studies from Campion College (2010), Tashi blends academic excellence with practical expertise. He operates Sherpalaya Trek, a trekking and expedition company, runs Sherpa Kitchen, a restaurant in Pokhara, and manages an import business for outdoor materials from China, all while serving as a freelance Francophone trekking guide. His past roles include Program Officer at Mountain Spirit Nepal, District Project Officer at Concern Worldwide, and PR team member at GIZ’s INCLUDE, where he honed skills in project management, community development, and communication. A seasoned trekking leader with extensive experience across Nepal’s trails, Tashi’s fluency in Nepali, English, and French, combined with his training in Disaster Risk Reduction and psychosocial counseling, makes him a versatile leader. His research on glue sniffing among street children and socio-economic studies further showcases his commitment to social impact, cementing his reputation as a multifaceted figure in Nepal’s adventure and development sectors.',
-                'fr' => 'M. Tashi Palzor Sherpa, né le 15 avril 1988 (calendrier népalais : 2045/04/15) à Chaurikharka-6, Solukhumbu, Népal, est un alpiniste dynamique, travailleur social et entrepreneur. Titulaire d’une maîtrise en travail social du St. Xavier College (2014) et d’une licence en études commerciales du Campion College (2010), Tashi allie excellence académique et expertise pratique. Il dirige Sherpalaya Trek, une entreprise de trekking et d’expéditions, gère Sherpa Kitchen, un restaurant à Pokhara, et supervise une activité d’importation de matériel outdoor depuis la Chine, tout en travaillant comme guide de trekking francophone indépendant. Ses expériences passées incluent des postes de chargé de programme chez Mountain Spirit Nepal, d’officier de projet de district chez Concern Worldwide et de membre de l’équipe de relations publiques chez GIZ’s INCLUDE, où il a perfectionné ses compétences en gestion de projets, développement communautaire et communication. Guide de trekking aguerri ayant parcouru presque tous les sentiers du Népal, Tashi maîtrise le népalais, l’anglais et le français, et bénéficie de formations en réduction des risques de catastrophe et en conseil psychosocial. Ses recherches sur l’inhalation de colle chez les enfants des rues et ses études socio-économiques témoignent de son engagement envers l’impact social, consolidant sa réputation de figure polyvalente dans les secteurs de l’aventure et du développement au Népal.',
+                'en' => 'Mr. Tashi Palzor Sherpa is a versatile leader blending mountaineering prowess with social entrepreneurship. With a Master’s in Social Work from St. Xavier College and a Bachelor’s in Business Studies from Campion College, he excels in both academic and practical realms. He spearheads Sherpalaya Trek, a thriving trekking and expedition company, while also running Sherpa Kitchen, a restaurant in Pokhara that celebrates Sherpa heritage. His career spans roles like Program Officer at Mountain Spirit Nepal, where he oversaw project budgets, and District Project Officer at Concern Worldwide, where he championed community development. A skilled communicator fluent in Nepali, English, and French, Tashi has led treks across Nepal’s diverse trails as a certified guide. His expertise in project management, honed at GIZ’s INCLUDE, and his knack for photography and design make him a standout figure in Nepal’s adventure and social impact scenes.',
+                'fr' => 'M. Tashi Palzor Sherpa est un leader polyvalent alliant prouesses en alpinisme et entrepreneuriat social. Titulaire d’une maîtrise en travail social du St. Xavier College et d’une licence en études commerciales du Campion College, il excelle dans les domaines académique et pratique. Il dirige Sherpalaya Trek, une entreprise florissante de trekking et d’expéditions, tout en gérant Sherpa Kitchen, un restaurant à Pokhara célébrant l’héritage sherpa. Sa carrière inclut des postes tels que chargé de programme chez Mountain Spirit Nepal, où il gérait les budgets de projets, et officier de projet de district chez Concern Worldwide, où il défendait le développement communautaire. Communicateur habile maîtrisant le népalais, l’anglais et le français, Tashi a guidé des treks sur les sentiers variés du Népal en tant que guide certifié. Son expertise en gestion de projets, affinée chez GIZ’s INCLUDE, et son talent pour la photographie et le design le distinguent dans les domaines de l’aventure et de l’impact social au Népal.',
             ],
         ];
 
