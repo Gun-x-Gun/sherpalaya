@@ -24,7 +24,7 @@
                     data-aos="fade-down" data-aos-duration="1200">
                     <h2
                         class="card-title mb-2 text-blue-50 text-4xl sm:text-5xl lg:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap md:w-[70%] leading-[1.3]  overflow-hidden opacity-75">
-                        {{ ' ' . $service->title }} 
+                        {{ ' ' . $service->title }}
                     </h2>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                                 <div class="card-header  pb-4  px-2" data-aos="fade-down" data-aos-duration="1200">
                                     <h5
                                         class="card-title  text-center uppercase text-3xl text-black font-semibold tracking-tight">
-                                        Service Station
+                                        {{__('show-page.service')}}
                                     </h5>
                                 </div>
                                 <div class="h-4"></div>

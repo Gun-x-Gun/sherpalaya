@@ -18,5 +18,7 @@ return [
     'book' => 'Réservez ce voyage',
     'inquire' => 'Demande de renseignements',
 
-    'recommend' => 'Recommandé'
+    'recommend' => 'Recommandé',
+
+    'service' => 'Station-Service',
 ];
