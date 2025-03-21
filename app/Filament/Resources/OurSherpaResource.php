@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Fields\CuratorPicker;
+use App\Filament\Fields\TranslatableRepeater;
 use App\Filament\Resources\OurSherpaResource\Pages;
 use App\Filament\Resources\OurSherpaResource\RelationManagers;
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaExpeditionsTableWidget;
@@ -48,6 +49,13 @@ class OurSherpaResource extends Resource
     protected static ?string $navigationGroup = 'Site';
 
     protected static ?int $navigationSort = 4;
+
+    public static function getRepeaterFields(): array
+    {
+        return [
+            'experience',
+        ];
+    }
 
     public static function getNavigationBadge(): ?string
     {
@@ -143,12 +151,13 @@ class OurSherpaResource extends Resource
                                     ->searchable(['title', 'region'])
                                     ->native(false),
 
-                                Repeater::make('experience')
-                                        ->label('Other')
-                                        ->simple(
-                                            Textarea::make('experience')
-                                                ->autosize(),
-                                        )
+                                TranslatableRepeater::make('experience')
+                                    ->field(function ($field) {
+                                        return $field
+                                            ->autosize();
+                                    })
+                                    ->simple(Textarea::class)
+                                    ->label('Other'),
                             ]),
                     ]),
 

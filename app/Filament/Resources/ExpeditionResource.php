@@ -9,6 +9,7 @@ use App\Filament\Resources\ExpeditionResource\Pages;
 use App\Filament\Resources\ExpeditionResource\RelationManagers;
 use App\Models\Expedition;
 use App\Filament\Fields\CuratorPicker;
+use App\Filament\Fields\TranslatableRepeater;
 use App\Traits\Filament\TranslatableResource;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
@@ -44,6 +45,14 @@ class ExpeditionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-moon';
 
+    public static function getRepeaterFields(): array
+    {
+        return [
+            'costs_include',
+            'costs_exclude',
+        ];
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -69,10 +78,10 @@ class ExpeditionResource extends Resource
                                                 ->required()
                                                 ->columnSpan(3),
                                             Select::make('category_id')
-                                            ->relationship(
-                                                'category',
-                                                'name',
-                                                modifyQueryUsing: fn ($query) => $query->where('type', CategoryTypes::EXPEDITION)
+                                                ->relationship(
+                                                    'category',
+                                                    'name',
+                                                    modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::EXPEDITION)
                                                 )
                                                 ->native(false)
                                                 ->columnSpan(3),
@@ -132,7 +141,7 @@ class ExpeditionResource extends Resource
                                                 ->searchable(['name', 'location'])
                                                 ->native(false),
                                         ]),
-                                        Section::make('Key Highlights')
+                                    Section::make('Key Highlights')
                                         ->schema([
                                             TableRepeater::make('key_highlights')
                                                 ->label('Key Highlights')
@@ -215,23 +224,25 @@ class ExpeditionResource extends Resource
                             ->schema([
                                 Section::make('Costs Include')
                                     ->schema([
-                                        Repeater::make('costs_include')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextInput::make('costs_include')
+                                        TranslatableRepeater::make('costs_include')
+                                            ->field(function ($field) {
+                                                return $field
                                                     ->prefixIcon('heroicon-o-check-badge')
-                                                    ->prefixIconColor('success')
-                                            )
+                                                    ->prefixIconColor('success');
+                                            })
+                                            ->simple(TextInput::class)
+                                            ->hiddenLabel(),
                                     ]),
                                 Section::make('Costs Exclude')
                                     ->schema([
-                                        Repeater::make('costs_exclude')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextInput::make('costs_exclude')
+                                        TranslatableRepeater::make('costs_exclude')
+                                            ->field(function ($field) {
+                                                return $field
                                                     ->prefixIcon('heroicon-o-x-circle')
-                                                    ->prefixIconColor('danger')
-                                            )
+                                                    ->prefixIconColor('danger');
+                                            })
+                                            ->simple(TextInput::class)
+                                            ->hiddenLabel(),
                                     ]),
                             ]),
                         Tabs\Tab::make('Itinerary')

@@ -10,6 +10,7 @@ use App\Filament\Resources\TourResource\Pages;
 use App\Filament\Resources\TourResource\RelationManagers;
 use App\Models\Tour;
 use App\Filament\Fields\CuratorPicker;
+use App\Filament\Fields\TranslatableRepeater;
 use App\Traits\Filament\TranslatableResource;
 use Awcodes\Curator\Components\Tables\CuratorColumn;
 use Filament\Forms;
@@ -48,6 +49,13 @@ class TourResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-swatch';
     protected static ?string $navigationGroup = 'Content';
 
+    public static function getRepeaterFields(): array
+    {
+        return [
+            'costs_include',
+            'costs_exclude',
+        ];
+    }
 
     public static function form(Form $form): Form
     {
@@ -66,10 +74,10 @@ class TourResource extends Resource
                                             ->hiddenOn('view')
                                             ->required(),
                                         Select::make('category_id')
-                                        ->relationship(
-                                            'category',
-                                            'name',
-                                            modifyQueryUsing: fn ($query) => $query->where('type', CategoryTypes::TOUR) 
+                                            ->relationship(
+                                                'category',
+                                                'name',
+                                                modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::TOUR)
                                             )
                                             ->native(false)
                                             ->columnSpan(1),
@@ -131,7 +139,7 @@ class TourResource extends Resource
                                             ->searchable(['name', 'location'])
                                             ->native(false),
                                     ]),
-                                    Section::make('Key Highlights')
+                                Section::make('Key Highlights')
                                     ->schema([
                                         TableRepeater::make('key_highlights')
                                             ->label('Key Highlights')
@@ -200,24 +208,25 @@ class TourResource extends Resource
                         ->schema([
                             Section::make('Costs Include')
                                 ->schema([
-                                    Repeater::make('costs_include')
-                                        ->hiddenLabel()
-                                        ->simple(
-                                            TextInput::make('costs_include')
+                                    TranslatableRepeater::make('costs_include')
+                                        ->field(function ($field) {
+                                            return $field
                                                 ->prefixIcon('heroicon-o-check-badge')
-                                                ->prefixIconColor('success')
-
-                                        )
+                                                ->prefixIconColor('success');
+                                        })
+                                        ->simple(TextInput::class)
+                                        ->hiddenLabel(),
                                 ]),
                             Section::make('Costs Exclude')
                                 ->schema([
-                                    Repeater::make('costs_exclude')
-                                        ->hiddenLabel()
-                                        ->simple(
-                                            TextInput::make('costs_exclude')
+                                    TranslatableRepeater::make('costs_exclude')
+                                        ->field(function ($field) {
+                                            return $field
                                                 ->prefixIcon('heroicon-o-x-circle')
-                                                ->prefixIconColor('danger')
-                                        )
+                                                ->prefixIconColor('danger');
+                                        })
+                                        ->simple(TextInput::class)
+                                        ->hiddenLabel(),
                                 ]),
                         ]),
                     Wizard\Step::make('Itinerary')

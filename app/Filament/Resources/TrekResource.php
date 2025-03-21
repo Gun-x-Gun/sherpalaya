@@ -6,6 +6,7 @@ use App\Enums\CategoryTypes;
 use App\Enums\ItineraryTypes;
 use App\Enums\TrekDifficulty;
 use App\Filament\Fields\CuratorPicker;
+use App\Filament\Fields\TranslatableRepeater;
 use App\Filament\Resources\TrekResource\Pages;
 use App\Filament\Resources\TrekResource\RelationManagers;
 use App\Models\Trek;
@@ -45,10 +46,17 @@ class TrekResource extends Resource
 
     protected static ?int $navigationSort = 3;
 
-
     protected static ?string $navigationIcon = 'heroicon-o-eye';
 
     protected static ?string $navigationGroup = 'Content';
+
+    public static function getRepeaterFields(): array
+    {
+        return [
+            'costs_include',
+            'costs_exclude',
+        ];
+    }
 
     public static function form(Form $form): Form
     {
@@ -79,8 +87,8 @@ class TrekResource extends Resource
                                                 ->relationship(
                                                     'category',
                                                     'name',
-                                                    modifyQueryUsing: fn ($query) => $query->where('type', CategoryTypes::TREK)
-                                                    )
+                                                    modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::TREK)
+                                                )
                                                 ->native(false)
                                                 ->columnSpan(3),
                                             RichEditor::make('description')
@@ -226,23 +234,25 @@ class TrekResource extends Resource
                             ->schema([
                                 Section::make('Costs Include')
                                     ->schema([
-                                        Repeater::make('costs_include')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextInput::make('costs_include')
+                                        TranslatableRepeater::make('costs_include')
+                                            ->field(function ($field) {
+                                                return $field
                                                     ->prefixIcon('heroicon-o-check-badge')
-                                                    ->prefixIconColor('success')
-                                            )
+                                                    ->prefixIconColor('success');
+                                            })
+                                            ->simple(TextInput::class)
+                                            ->hiddenLabel(),
                                     ]),
                                 Section::make('Costs Exclude')
                                     ->schema([
-                                        Repeater::make('costs_exclude')
-                                            ->hiddenLabel()
-                                            ->simple(
-                                                TextInput::make('costs_exclude')
+                                        TranslatableRepeater::make('costs_exclude')
+                                            ->field(function ($field) {
+                                                return $field
                                                     ->prefixIcon('heroicon-o-x-circle')
-                                                    ->prefixIconColor('danger')
-                                            )
+                                                    ->prefixIconColor('danger');
+                                            })
+                                            ->simple(TextInput::class)
+                                            ->hiddenLabel()
                                     ]),
                             ]),
                         Tabs\Tab::make('Itinerary')

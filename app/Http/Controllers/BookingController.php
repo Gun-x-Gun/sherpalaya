@@ -48,6 +48,8 @@ class BookingController extends Controller
             explode('?', $previousUrl)
         );
 
+        dd($url);
+
         return redirect()
             ->to(
                 $url . '?' . http_build_query([
