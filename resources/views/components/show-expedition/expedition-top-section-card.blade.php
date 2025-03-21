@@ -1,6 +1,6 @@
 <div class="card--rounded-none image-full bg-blue-100/50 h-[80vh] relative">
     <figure class="h-[80vh] w-full">
-        <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$expedition->coverImage" :fallback="asset('/photos/banner.jpg')"
+        <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$expedition->coverImage" fallback="default"
             loading="lazy" />
     </figure>
     <div class="card-body absolute inset-0 flex items-center justify-start font-oswald">

@@ -4,7 +4,7 @@
         <div class=" relative lg:flex lg:items-center ">
             <div class="flex items-center justify-between 2xl:mx-32 mx-4 ">
                 <a class="link text-base-content link-neutral texl-lg font-semibold no-underline " href="/home">
-                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class="h-12 w-12 xl:w-24">
+                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class=" w-12 xl:w-24">
                 </a>
                 <div class="lg:hidden">
                     <div class="dropdown relative inline-flex [--placement:bottom-end] px-2 ">

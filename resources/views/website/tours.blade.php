@@ -35,10 +35,10 @@
                 ],
             ]" />
             <div class="h-4"></div>
-            <div class="2xl:mx-32 mx-4 text-left">
-                <p class="text-xl/7 text-left  text-stone-600 font-light font-body">
+            <div class="2xl:mx-32 mx-4 text-justify">
+                <div class="text-xl/7 text-justify  text-stone-600 font-light font-body">
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->tour_page_content_fr : $pageSetting->tour_page_content_en }}
-                </p>
+                </div>
             </div>
             <div class="h-14"></div>
         </div>

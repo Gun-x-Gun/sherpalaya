@@ -1,5 +1,5 @@
 {{-- <x-show-expedition.scroll-spy-navigation /> --}}
-@if (!empty($expedition->keyHighlights))
+@if (count($expedition->keyHighlights)>0)
     <div id="key_highlights" class="card 2xl:max-w-full rounded-none bg-blue-100/30 font-body">
         <div class="h-6">
         </div>

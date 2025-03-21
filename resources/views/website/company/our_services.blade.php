@@ -62,12 +62,12 @@
                     data-aos="fade-down" data-aos-duration="1200">
                     {{__('services.heading')}}
                 </h5>
-                <p
+                <div
                     class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
                              font-light font-body lg:w-[80%] tracking-wide">
                     {{-- {{ $pageSetting->service_page_page_content }} --}}
                     {{__('services.description')}}
-                </p>
+                </div>
                 <div class="h-10 md:h-12"></div>
             </div>
         </div>

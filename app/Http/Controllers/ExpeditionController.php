@@ -8,6 +8,7 @@ use App\Models\Expedition;
 use App\Models\Region;
 use App\Settings\PageSetting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class ExpeditionController extends Controller
 {
@@ -35,6 +36,7 @@ class ExpeditionController extends Controller
     public function show(Request $request, string $id)
     {
         $expedition = Expedition::findOrFail($id);
+
         return view('website.id_pages.show_expedition', compact('expedition'));
     }
 }

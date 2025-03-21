@@ -6,12 +6,15 @@
             </div>
             <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
                 <h5 class="card-title text-black uppercase font-body tracking-normal font-medium text-2xl">
-                    {{__('show-page.costs_include')}}
+                    {{ __('show-page.costs_include') }}
                 </h5>
             </div>
             <div class="card-body p-2 mt-4 font-body">
                 <ul class="space-y-5 ">
-                    @foreach ($expedition->costs_include as $cost_include)
+                    @php
+                        $costsInclude = array_filter($expedition->costs_include);
+                    @endphp
+                    @foreach ($costsInclude as $cost_include)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse  ">
                             <span class="bg-transparent text-success flex items-center justify-center rounded-full p-1">
                                 <span class="icon-[eva--done-all-fill] size-5"></span>
@@ -37,12 +40,15 @@
             </div>
             <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
                 <h5 class="card-title text-black uppercase font-body tracking-normal font-medium text-2xl">
-                    {{__('show-page.costs_exclude')}}
+                    {{ __('show-page.costs_exclude') }}
                 </h5>
             </div>
             <div class="card-body p-2 mt-4 font-body">
                 <ul class="space-y-5">
-                    @foreach ($expedition->costs_exclude as $cost_exclude)
+                    @php
+                        $costsExclude = array_filter($expedition->costs_exclude);
+                    @endphp
+                    @foreach ($costsExclude as $cost_exclude)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse">
                             <span class="bg-transparent text-red-300 flex items-center justify-center rounded-full ">
                                 <span class="icon-[tabler--exclamation-circle] size-5"></span>

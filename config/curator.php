@@ -1,5 +1,7 @@
 <?php
 
+use App\GliderFallbacks\DefaultGliderFallback;
+
 return [
     'accepted_file_types' => [
         'image/jpeg',
@@ -31,7 +33,9 @@ return [
     'disk' => env('FILAMENT_FILESYSTEM_DISK', 'public'),
     'glide' => [
         'server' => \Awcodes\Curator\Glide\DefaultServerFactory::class,
-        'fallbacks' => [],
+        'fallbacks' => [
+            DefaultGliderFallback::class,
+        ],
         'route_path' => 'curator',
     ],
     'image_crop_aspect_ratio' => null,
