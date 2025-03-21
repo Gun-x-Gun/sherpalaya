@@ -16,5 +16,6 @@ return [
     'gallery' => 'Gallery',
     'book' => 'Book This Trip',
     'inquire' => 'Inquiry',
-    'recommend' => 'Recommended'
+    'recommend' => 'Recommended',
+    'service' => 'Service Station',
 ];
