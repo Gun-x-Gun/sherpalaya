@@ -1,5 +1,9 @@
 <div class="md:grid grid-cols-2 ">
-    @if (!empty($expedition->costs_include))
+    @php
+        $costsInclude = array_filter($expedition->costs_include);
+        $costsExclude = array_filter($expedition->costs_exclude);
+    @endphp
+    @if (!empty($costsInclude))
 
         <div id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/40">
             <div class="h-8">
@@ -11,9 +15,7 @@
             </div>
             <div class="card-body p-2 mt-4 font-body">
                 <ul class="space-y-5 ">
-                    @php
-                        $costsInclude = array_filter($expedition->costs_include);
-                    @endphp
+
                     @foreach ($costsInclude as $cost_include)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse  ">
                             <span class="bg-transparent text-success flex items-center justify-center rounded-full p-1">
@@ -32,7 +34,7 @@
         </div>
     @endif
 
-    @if (!empty($expedition->costs_exclude))
+    @if (!empty($costsExclude))
         {{-- cost exclude --}}
         <div id="costs_exclude" class="card 2xl:max-w-full  rounded-none bg-red-100/40">
             <div class="h-8">
@@ -45,9 +47,6 @@
             </div>
             <div class="card-body p-2 mt-4 font-body">
                 <ul class="space-y-5">
-                    @php
-                        $costsExclude = array_filter($expedition->costs_exclude);
-                    @endphp
                     @foreach ($costsExclude as $cost_exclude)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse">
                             <span class="bg-transparent text-red-300 flex items-center justify-center rounded-full ">
