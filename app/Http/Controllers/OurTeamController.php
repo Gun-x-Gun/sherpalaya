@@ -47,10 +47,7 @@ class OurTeamController extends Controller
 
         return view('website.company.our_team', [
             'pageSetting' => $pageSetting,
-            // 'expedSherpas' => $expedSherpas,
-            // 'trekSherpas' => $trekSherpas,
             'allSherpas' => $allSherpas,
-            // 'tourSherpas' => $tourSherpas,
         ]);
     }
 

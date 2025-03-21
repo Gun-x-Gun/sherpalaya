@@ -75,6 +75,8 @@
             </div>
         </div>
 
+        {{-- {{ dd($allSherpas) }} --}}
+
         <div class="mx-4 2xl:mx-32">
             <div class=" flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
                 @foreach ($allSherpas as $allSherpa)

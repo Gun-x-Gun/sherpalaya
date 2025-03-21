@@ -22,7 +22,7 @@
 
 
 <x-website-layout>
-    <div class="bg-blue-100/10 font-body">
+    <div class="bg-blue-50 font-body">
         <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');"
             class="bg-cover bg-center w-full  object-top font-body ">
             <div class="card-body flex flex-col items-center justify-center gap-8 backdrop-blur-md h-[80vh]">
@@ -69,33 +69,77 @@
                 {!! $sherpa->description !!}
             </div> --}}
             <div class="h-8"></div>
-            <h5 class="card-title font-normal uppercase text-4xl text-black tracking-wide mx-0 text-center"
+            <h5 class="card-title font-normal uppercase text-4xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16  xl:mx-28"
                 data-aos="fade-down" data-aos-duration="1200">
                 Experience
             </h5>
-            <div class="card-body w-full px-0 pt-2 flex justify-center items-center mb-4">
-                @php
-                    $sherpaExperienceData = [
-                        'treks' => $sherpa->treks->pluck('title'),
-                        'expeditions' => $sherpa->expeditions->pluck('title'),
-                        'tours' => $sherpa->tours->pluck('title'),
-                    ];
-                @endphp
+            <div class="h-10"></div>
+
+            {{-- <div class="card-body w-full px-0 pt-2 flex justify-center items-center mb-4">
+
                 <div class="text-preety overflow-hidden text-center md:w-[70%] my-2">
                     @foreach ($sherpaExperienceData as $category => $experiences)
                         @foreach ($experiences as $experience)
                             <span
                                 class="badge badge-primary badge-outline  mx-1 my-1 py-4 text-nowrap tracking-wider text-preety text-xl font-light ">
-                                {{ $experience }}
+                                {{ $experience->title }}
+                            </span>
+                            <span
+                                class="badge badge-primary badge-outline  mx-1 my-1 py-4 text-nowrap tracking-wider text-preety text-xl font-light ">
+                                {{ $experience->highest_altitude }}
+                            </span>
+                            <span
+                                class="badge badge-primary badge-outline  mx-1 my-1 py-4 text-nowrap tracking-wider text-preety text-xl font-light ">
+                                {{ $experience->count }}
                             </span>
                         @endforeach
                     @endforeach
                 </div>
                 <div class="h-8"></div>
+            </div> --}}
+            @php
+                $sherpaExperienceData = [
+                    'treks' => $sherpa->treks,
+                    'expeditions' => $sherpa->expeditions,
+                    'tours' => $sherpa->tours,
+                ];
+            @endphp
+            <div class="">
+                <div class="md:mx-8 lg:mx-16 xl:mx-28">
+                    <table class="table-striped-columns table ">
+                        <thead>
+                            <tr>
+                                {{-- <th>SN</th> --}}
+                                <th>Name Of The Mountain</th>
+                                <th>Max Altitude</th>
+                                <th>Count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($sherpaExperienceData as $category => $experiences)
+                                @foreach ($experiences as $experience)
+                                    <tr>
+                                        {{-- <td class="text-nowrap"> {{ $experience  }}
+                                        </td> --}}
+                                        <td class="text-nowrap"> {{ $experience->title }}
+                                        </td>
+                                        <td> {{ $experience->highest_altitude }} M
+                                        </td>
+                                        <td><span class="badge badge-soft badge-success text-xs">
+                                                {{ $experience->count }}
+                                            </span></td>
+                                    </tr>
+                                @endforeach
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
+            <div class="h-10"></div>
+
             <div class="col-span-2 md:mx-8 lg:mx-16 xl:mx-28">
                 @if ($sherpa->awardsAndCertificates->count() > 0)
-                    <h5 class="card-title font-normal uppercase text-4xl text-black tracking-normal mx-0 text-center"
+                    <h5 class="card-title font-normal uppercase text-4xl text-black tracking-normal mx-0 text-left"
                         data-aos="fade-down" data-aos-duration="1200">
                         Awards & Certificates
                     </h5>
