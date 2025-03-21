@@ -23,7 +23,7 @@ class DefaultGliderFallback extends GliderFallback
  
     public function getSource(): string
     {
-        return asset('/photos/banner.jpg');
+        return asset('/photos/kanchenjunga.jpg');
     }
  
     public function getType(): string
