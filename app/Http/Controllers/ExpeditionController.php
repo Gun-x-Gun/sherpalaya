@@ -35,6 +35,7 @@ class ExpeditionController extends Controller
      */
     public function show(Request $request, string $id)
     {
+        $pageSetting = app(PageSetting::class);
         $expedition = Expedition::findOrFail($id);
 
         return view('website.id_pages.show_expedition', compact('expedition'));

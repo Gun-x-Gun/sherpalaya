@@ -3,7 +3,7 @@
     <div class="bg-blue-100/10 font-body">
         <div class="card--rounded-none image-full bg-blue-100/50 h-[80vh] relative">
             <figure class="h-[80vh] w-full">
-                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->trek_page_cover_image_id ?? null" :fallback="asset('/photos/banner.jpg')"
+                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->trek_page_cover_image_id ?? null" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
@@ -11,15 +11,15 @@
                     data-aos="fade-down" data-aos-duration="1200">
                     <h5
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
-                        Unforgettable
+                        {{ app()->currentLocale() == 'fr' ? $pageSetting->trek_page_title_up_fr : $pageSetting->trek_page_title_up_en }}
                     </h5>
                     <h2
                         class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
-                        Trekking Adventure
+                        {{ app()->currentLocale() == 'fr' ? $pageSetting->trek_page_main_title_fr : $pageSetting->trek_page_main_title_en }}
                     </h2>
                     <h5
                         class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
-                        Every Step Counts
+                        {{ app()->currentLocale() == 'fr' ? $pageSetting->trek_page_title_down_fr : $pageSetting->trek_page_title_down_en }}
                     </h5>
                 </div>
             </div>

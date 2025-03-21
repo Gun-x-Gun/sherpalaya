@@ -2,7 +2,7 @@
     <div class="bg-blue-100/10 font-oswald">
         <div class="card--rounded-none image-full  h-[80vh] relative">
             <figure class="h-[80vh] w-full">
-                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$aboutUsSetting->cover_image_id" :fallback="asset('/photos/banner.jpg')"
+                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$aboutUsSetting->cover_image_id" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
@@ -10,15 +10,15 @@
                     data-aos="fade-down" data-aos-duration="1200">
                     <h5
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
-                        {{ __('aboutpage.title-up') }}
+                        {{ app()->currentLocale() == 'fr' ? $aboutUsSetting->title_up_fr : $aboutUsSetting->title_up_en }}
                     </h5>
                     <h2
                         class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
-                        {{ __('aboutpage.title-main') }}
+                        {{ app()->currentLocale() == 'fr' ? $aboutUsSetting->main_title_fr : $aboutUsSetting->main_title_en }}
                     </h2>
                     <h5
                         class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
-                        {{ __('aboutpage.title-down') }}
+                        {{ app()->currentLocale() == 'fr' ? $aboutUsSetting->title_down_fr : $aboutUsSetting->title_down_en }}
                     </h5>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center">
                     <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
                         data-aos="fade-down" data-aos-duration="1200">
-                        {{ __('aboutpage.heading') }}
+                        {{ app()->currentLocale() == 'fr' ? $aboutUsSetting->content_title_fr : $aboutUsSetting->content_title_en }}
                     </h5>
                     <div
                         class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center

@@ -70,7 +70,7 @@ class ManageAboutUs extends SettingsPage
                                             ->autosize()
                                             ->columnSpanFull()
                                             ->required(),
-                                        
+
                                     ]),
                                 Section::make('French')
                                     ->columnSpan(1)
@@ -101,7 +101,7 @@ class ManageAboutUs extends SettingsPage
                                             ->autosize()
                                             ->columnSpanFull()
                                             ->required(),
-                                        
+
                                     ]),
                             ]),
                         Tabs\Tab::make('Certificates')

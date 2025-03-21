@@ -40,7 +40,7 @@
                         {{-- expedition_activity_image_id --}}
                         <x-curator-glider
                             class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-75"
-                            :media="$landingPageSetting->expedition_activity_image_id" :fallback="asset('/photos/banner.jpg')" loading="lazy" />
+                            :media="$landingPageSetting->expedition_activity_image_id" fallback="default" loading="lazy" />
                     </figure>
                     <div class="card-body absolute bottom-0 inset-0 uppercase" data-aos="flip-up"
                         data-aos-duration="800">

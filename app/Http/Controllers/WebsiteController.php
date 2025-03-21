@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ContactUs;
 use App\Models\Faq;
 use App\Settings\AboutUsSetting;
+use App\Settings\LandingPageSetting;
 use App\Settings\ContactUsSetting;
 use App\Settings\PageSetting;
 use Illuminate\Http\Request;
@@ -15,6 +16,13 @@ class WebsiteController extends Controller
 {
     public function home(Request $request){
         return view('website.home');
+    }
+    public function homePage(Request $request){
+        $landingPageSetting = app(LandingPageSetting::class);
+
+        return view('components.carousel.all-cards',[
+            'landingPageSetting' => $landingPageSetting,
+        ]);
     }
 
     public function contactUs(Request $request, bool $contactUsSubmitted = false){

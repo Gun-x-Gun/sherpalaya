@@ -20,23 +20,26 @@
 
         <div class="card--rounded-none image-full  h-[80vh] relative">
             <figure class="h-[80vh] w-full">
-                <img src="{{ asset('/photos/satellite.jpg') }}" alt="Trekking background image"
-                    class="h-[80vh] w-full object-cover brightness-50" />
+                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$contactUsSetting->cover_image_id" fallback="default"
+                    loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
                 <div class="absolute bottom-1/4  left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
                     data-aos="fade-down" data-aos-duration="1200">
                     <h5
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
-                        {{ __('contact.title-up') }}
+                        {{ app()->currentLocale() == 'fr' ? $contactUsSetting->title_up_fr : $contactUsSetting->title_up_en }}
+
                     </h5>
                     <h2
                         class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
-                        {{ __('contact.title-main') }}
+                        {{ app()->currentLocale() == 'fr' ? $contactUsSetting->main_title_fr : $contactUsSetting->main_title_en }}
+
                     </h2>
                     <h5
                         class="card-title  mb-8 text-blue-50 text-xl sm:text-2xl font-oswald  uppercase  font-medium tracking-wider opacity-75 ">
-                        {{ __('contact.title-down') }}
+                        {{ app()->currentLocale() == 'fr' ? $contactUsSetting->title_down_fr : $contactUsSetting->title_down_en }}
+
                     </h5>
                 </div>
             </div>
@@ -55,7 +58,7 @@
             <div class="">
                 <div class=" text-center sm:text-center ">
                     <h2 class="font-medium text-black uppercase tracking-normal text-3xl md:text-4xl ">
-                        {{ __('contact.heading') }}
+                        {{ app()->currentLocale() == 'fr' ? $contactUsSetting->content_title_fr : $contactUsSetting->content_title_en }}
                     </h2>
                 </div>
                 <div class=" md:h-10"></div>

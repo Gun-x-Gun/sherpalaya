@@ -45,13 +45,16 @@ class ManagePage extends SettingsPage
                                     ->columns(10)
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('expedition_page_title_up_en')
+                                        Textarea::make('expedition_page_title_up_en')
+                                            ->autosize()
                                             ->label('Exped Page Title (up)')
                                             ->columnSpan(6),
-                                        TextInput::make('expedition_page_main_title_en')
+                                        Textarea::make('expedition_page_main_title_en')
+                                            ->autosize()
                                             ->label('Exped Page Title (main)')
                                             ->columnSpanFull(),
-                                        TextInput::make('expedition_page_title_down_en')
+                                        Textarea::make('expedition_page_title_down_en')
+                                            ->autosize()
                                             ->columnSpan(8)
                                             ->label('Exped Page Title (down)'),
                                         Textarea::make('expedition_page_content_en')
@@ -64,13 +67,16 @@ class ManagePage extends SettingsPage
                                     ->columns(10)
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('expedition_page_title_up_fr')
+                                        Textarea::make('expedition_page_title_up_fr')
+                                            ->autosize()
                                             ->label('Exped Page Title (up)')
                                             ->columnSpan(6),
-                                        TextInput::make('expedition_page_main_title_fr')
+                                        Textarea::make('expedition_page_main_title_fr')
+                                            ->autosize()
                                             ->label('Exped Page Title (main)')
                                             ->columnSpanFull(),
-                                        TextInput::make('expedition_page_title_down_fr')
+                                        Textarea::make('expedition_page_title_down_fr')
+                                            ->autosize()
                                             ->columnSpan(8)
                                             ->label('Exped Page Title (down)'),
                                         Textarea::make('expedition_page_content_fr')
@@ -92,13 +98,16 @@ class ManagePage extends SettingsPage
                                     ->columns(10)
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('trek_page_title_up_en')
+                                        Textarea::make('trek_page_title_up_en')
+                                            ->autosize()
                                             ->label('Trek Page Title (up)')
                                             ->columnSpan(6),
-                                        TextInput::make('trek_page_main_title_en')
+                                        Textarea::make('trek_page_main_title_en')
+                                            ->autosize()
                                             ->label('Trek Page Title (main)')
                                             ->columnSpanFull(),
-                                        TextInput::make('trek_page_title_down_en')
+                                        Textarea::make('trek_page_title_down_en')
+                                            ->autosize()
                                             ->columnSpan(8)
                                             ->label('Trek Page Title (down)'),
                                         Textarea::make('trek_page_content_en')
@@ -111,13 +120,16 @@ class ManagePage extends SettingsPage
                                     ->columns(10)
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('trek_page_title_up_fr')
+                                        Textarea::make('trek_page_title_up_fr')
+                                            ->autosize()
                                             ->label('Trek Page Title (up)')
                                             ->columnSpan(6),
-                                        TextInput::make('trek_page_main_title_fr')
+                                        Textarea::make('trek_page_main_title_fr')
+                                            ->autosize()
                                             ->label('Trek Page Title (main)')
                                             ->columnSpanFull(),
-                                        TextInput::make('trek_page_title_down_fr')
+                                        Textarea::make('trek_page_title_down_fr')
+                                            ->autosize()
                                             ->columnSpan(8)
                                             ->label('Trek Page Title (down)'),
                                         Textarea::make('trek_page_content_fr')
@@ -138,13 +150,16 @@ class ManagePage extends SettingsPage
                                     ->columns(10)
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('tour_page_title_up_en')
+                                        Textarea::make('tour_page_title_up_en')
+                                            ->autosize()
                                             ->label('Activity Page Title (up)')
                                             ->columnSpan(6),
-                                        TextInput::make('tour_page_main_title_en')
+                                        Textarea::make('tour_page_main_title_en')
+                                            ->autosize()
                                             ->label('Activity Page Title (main)')
                                             ->columnSpanFull(),
-                                        TextInput::make('tour_page_title_down_en')
+                                        Textarea::make('tour_page_title_down_en')
+                                            ->autosize()
                                             ->columnSpan(8)
                                             ->label('Activity Page Title (down)'),
                                         Textarea::make('tour_page_content_en')
@@ -157,13 +172,16 @@ class ManagePage extends SettingsPage
                                     ->columns(10)
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('tour_page_title_up_fr')
+                                        Textarea::make('tour_page_title_up_fr')
+                                            ->autosize()
                                             ->label('Activity Page Title (up)')
                                             ->columnSpan(6),
-                                        TextInput::make('tour_page_main_title_fr')
+                                        Textarea::make('tour_page_main_title_fr')
+                                            ->autosize()
                                             ->label('Activity Page Title (main)')
                                             ->columnSpanFull(),
-                                        TextInput::make('tour_page_title_down_fr')
+                                        Textarea::make('tour_page_title_down_fr')
+                                            ->autosize()
                                             ->columnSpan(8)
                                             ->label('Activity Page Title (down)'),
                                         Textarea::make('tour_page_content_fr')
@@ -184,16 +202,20 @@ class ManagePage extends SettingsPage
                                     ->columns(10)
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('service_page_title_up_en')
+                                        Textarea::make('service_page_title_up_en')
+                                            ->autosize()
                                             ->label('Service Page Title (up)')
                                             ->columnSpan(6),
-                                        TextInput::make('service_page_main_title_en')
+                                        Textarea::make('service_page_main_title_en')
+                                            ->autosize()
                                             ->label('Service Page Title (main)')
                                             ->columnSpanFull(),
-                                        TextInput::make('service_page_title_down_en')
+                                        Textarea::make('service_page_title_down_en')
+                                            ->autosize()
                                             ->columnSpan(8)
                                             ->label('Service Page Title (down)'),
-                                        TextInput::make('service_page_content_title_en')
+                                        Textarea::make('service_page_content_title_en')
+                                            ->autosize()
                                             ->label('Service Page Content Title')
                                             ->columnSpanFull(),
                                         Textarea::make('service_page_content_en')
@@ -206,17 +228,21 @@ class ManagePage extends SettingsPage
                                     ->columns(10)
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('service_page_title_up_fr')
+                                        Textarea::make('service_page_title_up_fr')
+                                            ->autosize()
                                             ->label('Service Page Title (up)')
                                             ->columnSpan(6),
-                                        TextInput::make('service_page_main_title_fr')
+                                        Textarea::make('service_page_main_title_fr')
+                                            ->autosize()
                                             ->label('Service Page Title (main)')
                                             ->columnSpanFull(),
-                                        TextInput::make('service_page_title_down_fr')
+                                        Textarea::make('service_page_title_down_fr')
+                                            ->autosize()
                                             ->columnSpan(8)
                                             ->label('Service Page Title (down)'),
 
-                                        TextInput::make('service_page_content_title_fr')
+                                        Textarea::make('service_page_content_title_fr')
+                                            ->autosize()
                                             ->label('Service Page Content Title')
                                             ->columnSpanFull(),
                                         Textarea::make('service_page_content_fr')
@@ -237,16 +263,20 @@ class ManagePage extends SettingsPage
                                     ->columns(10)
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('team_page_title_up_en')
+                                        Textarea::make('team_page_title_up_en')
+                                            ->autosize()
                                             ->label('Team Page Title (up)')
                                             ->columnSpan(6),
-                                        TextInput::make('team_page_main_title_en')
+                                        Textarea::make('team_page_main_title_en')
+                                            ->autosize()
                                             ->label('Team Page Title (main)')
                                             ->columnSpanFull(),
-                                        TextInput::make('team_page_title_down_en')
+                                        Textarea::make('team_page_title_down_en')
+                                            ->autosize()
                                             ->columnSpan(8)
                                             ->label('Team Page Title (down)'),
-                                        TextInput::make('team_page_content_title_en')
+                                        Textarea::make('team_page_content_title_en')
+                                            ->autosize()
                                             ->label('Team Page Content Title')
                                             ->columnSpanFull(),
                                         Textarea::make('team_page_content_en')
@@ -259,17 +289,21 @@ class ManagePage extends SettingsPage
                                     ->columns(10)
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('team_page_title_up_fr')
+                                        Textarea::make('team_page_title_up_fr')
+                                            ->autosize()
                                             ->label('Team Page Title (up)')
                                             ->columnSpan(6),
-                                        TextInput::make('team_page_main_title_fr')
+                                        Textarea::make('team_page_main_title_fr')
+                                            ->autosize()
                                             ->label('Team Page Title (main)')
                                             ->columnSpanFull(),
-                                        TextInput::make('team_page_title_down_fr')
+                                        Textarea::make('team_page_title_down_fr')
+                                            ->autosize()
                                             ->columnSpan(8)
                                             ->label('Team Page Title (down)'),
 
-                                        TextInput::make('team_page_content_title_fr')
+                                        Textarea::make('team_page_content_title_fr')
+                                            ->autosize()
                                             ->label('Team Page Content Title')
                                             ->columnSpanFull(),
                                         Textarea::make('team_page_content_fr')
