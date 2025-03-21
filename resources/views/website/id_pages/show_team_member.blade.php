@@ -57,9 +57,9 @@
 
 
         <div class="mx-4 2xl:mx-32">
-            <div class="h-10"></div>
+            <div class="h-4"></div>
             <div
-                class="text-lg/7 mt-6 text-justify text-black  md:mx-8 lg:mx-16  xl:mx-28
+                class="text-base/7 mt-6 text-justify text-black  md:mx-8 lg:mx-16  xl:mx-28
                          font-light font-body tracking-normal ">
                 {!! $sherpa->description !!}
             </div>
