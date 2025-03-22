@@ -199,6 +199,7 @@ class TranslatableRepeater
 
         return Repeater::make($this->name)
             ->afterStateHydrated(function ($component, $state) {
+                // dd($state, $this->name);
                 $component->state($state['en']);
             })
             ->dehydrateStateUsing(function ($state) {
@@ -222,7 +223,7 @@ class TranslatableRepeater
         return Tabs::make()
             ->dehydrated(true)
             ->dehydrateStateUsing(function ($state) {
-                dd($state);
+                // dd($state);
                 return $state;
             })
             ->schema([
