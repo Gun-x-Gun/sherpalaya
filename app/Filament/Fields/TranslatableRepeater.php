@@ -17,23 +17,6 @@ use Filament\Support\Enums\ActionSize;
 use Icetalker\FilamentTableRepeater\Forms\Components\TableRepeater;
 use Illuminate\Support\Arr;
 
-/**
-Repeater::make('costs_include')
-        ->hiddenLabel()
-        ->afterStateHydrated(function($component, $state){
-            $component->state($state['en']);
-        })
-        ->schema([
-            TextInput::make('en')
-                ->prefixIcon('heroicon-o-check-badge')
-                ->prefixIconColor('success'),
-            TextInput::make('fr')
-                ->prefixIcon('heroicon-o-check-badge')
-                ->prefixIconColor('success'),
-        ]),
-]),
- */
-
 class TranslatableRepeater
 {
     use EvaluatesClosures;
@@ -198,13 +181,20 @@ class TranslatableRepeater
 
 
         return Repeater::make($this->name)
-            ->afterStateHydrated(function ($component, $state) {
+            ->afterStateHydrated(function ($component, $state, $operation) {
+                if ($operation == 'create') {
+                    return;
+                }
                 // dd($state, $this->name);
                 $component->state($state['en']);
             })
             ->dehydrateStateUsing(function ($state) {
+                if (isset($state['en'])) {
+                    return $state['en'];
+                } else {
+                    return $state;
+                }
                 // dd($state);
-                return $state;
             })
             ->schema([
                 $fields['en'],
