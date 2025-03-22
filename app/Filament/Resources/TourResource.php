@@ -71,8 +71,8 @@ class TourResource extends Resource
                                     ->columns(2)
                                     ->schema([
                                         TextInput::make('title')
-                                            ->hiddenOn('view')
-                                            ->required(),
+                                            ->required()
+                                            ->translatable(),
                                         Select::make('category_id')
                                             ->relationship(
                                                 'category',
@@ -82,7 +82,6 @@ class TourResource extends Resource
                                             ->native(false)
                                             ->columnSpan(1),
                                         RichEditor::make('description')
-                                            ->columnSpanFull()
                                             ->required()
                                             ->toolbarButtons([
                                                 // 'attachFiles',
@@ -99,7 +98,9 @@ class TourResource extends Resource
                                                 // 'strike',
                                                 'underline',
                                                 'undo',
-                                            ]),
+                                            ])
+                                            ->translatable()
+                                            ->columnSpanFull(),
                                     ]),
                             ], [
                                 Section::make()
@@ -141,32 +142,71 @@ class TourResource extends Resource
                                     ]),
                                 Section::make('Key Highlights')
                                     ->schema([
-                                        TableRepeater::make('key_highlights')
-                                            ->label('Key Highlights')
-                                            ->relationship('keyHighlights')
-                                            ->schema([
-                                                TextInput::make('title')->label('Title')->required(),
-                                                TextArea::make('description')->label('Description')->autosize()->required(),
-                                            ])->reorderable()
+                                        TranslatableRepeater::make('keyHighlights')
+                                            ->repeater(function ($repeater) {
+                                                return $repeater
+                                                    ->label('Key Highlights')
+                                                    ->relationship('keyHighlights')
+                                                    ->reorderable();
+                                            })
+                                            ->fields(function ($fields) {
+                                                $fields[0] = $fields[0]->label('Title')
+                                                    ->required();
+                                                $fields[1] = $fields[1]->label('Description')
+                                                    ->autosize()
+                                                    ->required();
+
+                                                return $fields;
+                                            })
+                                            ->table(
+                                                [
+                                                    TextInput::class,
+                                                    TextArea::class,
+                                                ],
+                                                [
+                                                    'title',
+                                                    'description'
+                                                ]
+                                            ),
                                     ]),
                                 Section::make('Essential Tips')
                                     ->schema([
-                                        TableRepeater::make('essential_tips')
-                                            ->label('Essential Tips')
-                                            ->relationship('essentialTips')
-                                            ->schema([
-                                                TextInput::make('title')->label('Title')->required(),
-                                                TextArea::make('description')->label('Description')->autosize()->required(),
-                                            ])->reorderable()
+                                        TranslatableRepeater::make('essentialTips')
+                                            ->repeater(function ($repeater) {
+                                                return $repeater
+                                                    ->label('Essential Tips')
+                                                    ->relationship('essentialTips')
+                                                    ->reorderable();
+                                            })
+                                            ->fields(function ($fields) {
+                                                $fields[0] = $fields[0]->label('Title')
+                                                    ->required();
+                                                $fields[1] = $fields[1]->label('Description')
+                                                    ->autosize()
+                                                    ->required();
+
+                                                return $fields;
+                                            })
+                                            ->table(
+                                                [
+                                                    TextInput::class,
+                                                    TextArea::class,
+                                                ],
+                                                [
+                                                    'title',
+                                                    'description'
+                                                ]
+                                            ),
                                     ]),
                             ], [
                                 Section::make()
                                     ->columns(2)
                                     ->schema([
                                         TextArea::make('best_time_for_tour')
-                                            ->columnSpanFull()
                                             ->required()
-                                            ->label('Best Time For Tour'),
+                                            ->label('Best Time For Tour')
+                                            ->translatable()
+                                            ->columnSpanFull(),
                                         TextInput::make('duration')
                                             ->required(),
                                         TextInput::make('grade')
@@ -242,8 +282,9 @@ class TourResource extends Resource
                                         ->columns(7)
                                         ->schema([
                                             TextInput::make('title')
-                                                ->columnSpan(3)
-                                                ->required(),
+                                                ->required()
+                                                ->translatable()
+                                                ->columnSpan(3),
                                             Select::make('destinations')
                                                 ->relationship('destinations', 'name')
                                                 ->multiple()
@@ -251,18 +292,34 @@ class TourResource extends Resource
                                                 ->searchable()
                                                 ->columnSpan(4)
                                                 ->native(false),
-                                            TableRepeater::make('itineraryDetails')
-                                                ->relationship('itineraryDetails')
-                                                ->schema([
-                                                    Select::make('type')
-                                                        ->options(ItineraryTypes::class)
-                                                        ->native(false),
-                                                    Textarea::make('description')
-                                                        ->rows(1)
-                                                        ->autosize(),
+                                            TranslatableRepeater::make('itineraryDetails')
+                                                ->repeater(function ($repeater) {
+                                                    return $repeater
+                                                        ->relationship('itineraryDetails')
+                                                        ->reorderable()
+                                                        ->cloneable();
+                                                })
+                                                ->fields(function ($fields) {
+                                                    $fields[0] = $fields[0]->options(ItineraryTypes::class)
+                                                        ->native(false);
+                                                    $fields[1] = $fields[1]->rows(1)
+                                                        ->autosize();
+
+                                                    return $fields;
+                                                })
+                                                ->excludeFieldsFromTranslation([
+                                                    'type'
                                                 ])
-                                                ->reorderable()
-                                                ->cloneable()
+                                                ->table(
+                                                    [
+                                                        Select::class,
+                                                        Textarea::class,
+                                                    ],
+                                                    [
+                                                        'type',
+                                                        'description',
+                                                    ]
+                                                )->columnSpanFull(),
                                         ])
                                 ]),
                         ]),

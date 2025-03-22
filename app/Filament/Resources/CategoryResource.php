@@ -47,9 +47,11 @@ class CategoryResource extends Resource
                     ->hiddenOn('view')
                     ->schema([
                         TextInput::make('name')
-                            ->required(),
-                            FilamentEnumFieldHelper::makeSelectField('type', CategoryTypes::class)
-                                ->required(),
+                            ->required()
+                            ->translatable(),
+                        FilamentEnumFieldHelper::makeSelectField('type', CategoryTypes::class, function ($select) {
+                            return $select->required();
+                        }),
                     ])
             ]);
     }
@@ -60,15 +62,15 @@ class CategoryResource extends Resource
             ->columns([
                 Split::make([
                     TextColumn::make('name')
-                    ->size(TextColumn\TextColumnSize::Large)
-                    ->weight(FontWeight::Bold),
+                        ->size(TextColumn\TextColumnSize::Large)
+                        ->weight(FontWeight::Bold),
                 ]),
                 // FilamentEnumFieldHelper::makeTextColumn('type', CategoryTypes::class),
             ])
             ->contentGrid([
-                'sm' =>2,
+                'sm' => 2,
                 'md' => 2,
-                'lg' =>3,
+                'lg' => 3,
             ])
             ->filters([
                 //

@@ -50,12 +50,12 @@ class OurSherpaResource extends Resource
 
     protected static ?int $navigationSort = 4;
 
-    public static function getRepeaterFields(): array
-    {
-        return [
-            'experience',
-        ];
-    }
+    // public static function getRepeaterFields(): array
+    // {
+    //     return [
+    //         'experience',
+    //     ];
+    // }
 
     public static function getNavigationBadge(): ?string
     {
@@ -83,11 +83,12 @@ class OurSherpaResource extends Resource
                                             ->columnSpan(2)
                                             ->required(),
                                         TextInput::make('title')
-                                            ->columnSpan(2)
-                                            ->required(),
+                                        ->required()
+                                        ->translatable()
+                                            ->columnSpan(2),
                                         TagsInput::make('language')
-                                            ->columnSpan(2)
-                                            ->label('Languages')
+                                        ->columnSpan(2)
+                                        ->label('Languages')
                                             ->hint('Press \'Enter\'')
                                             ->suggestions([
                                                 'Nepali',
@@ -110,7 +111,8 @@ class OurSherpaResource extends Resource
                                                 // 'strike',
                                                 'underline',
                                                 'undo',
-                                            ]),
+                                            ])
+                                            ->translatable(),
                                     ]),
                             ]),
                         Section::make('Sherpa Experience')
@@ -151,12 +153,9 @@ class OurSherpaResource extends Resource
                                     ->searchable(['title', 'region'])
                                     ->native(false),
 
-                                TranslatableRepeater::make('experience')
-                                    ->field(function ($field) {
-                                        return $field
-                                            ->autosize();
-                                    })
-                                    ->simple(Textarea::class)
+                                Repeater::make('experience')
+                                    ->simple(Textarea::make('experience')
+                                        ->autosize())
                                     ->label('Other'),
                             ]),
                     ]),

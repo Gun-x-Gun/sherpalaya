@@ -46,10 +46,10 @@ class ServiceResource extends Resource
                     Section::make('')
                     ->schema([
                         TextInput::make('title')
-                        ->columnSpanFull()
-                        ->required(),
+                        ->required()
+                        ->translatable()
+                        ->columnSpanFull(),
                     RichEditor::make('description')
-                        ->columnSpanFull()
                         ->required()
                         ->toolbarButtons([
                             // 'attachFiles',
@@ -66,7 +66,9 @@ class ServiceResource extends Resource
                             // 'strike',
                             'underline',
                             'undo',
-                        ]),
+                        ])
+                        ->translatable()
+                        ->columnSpanFull(),
 
                         Map::make('location')
                             ->label('Location')

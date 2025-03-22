@@ -62,7 +62,6 @@ class DestinationResource extends Resource
                             ->searchable()
                             ->required(),
                             RichEditor::make('description')
-                            ->columnSpan(3)
                             ->required()
                             ->toolbarButtons([
                                 // 'attachFiles',
@@ -79,7 +78,9 @@ class DestinationResource extends Resource
                                 // 'strike',
                                 'underline',
                                 'undo',
-                            ]),
+                            ])
+                            ->translatable()
+                            ->columnSpan(3),
                             Map::make('location')
                                 ->label('Location')
                                 ->columnSpan(2)
