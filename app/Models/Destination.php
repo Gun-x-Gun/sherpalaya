@@ -2,14 +2,10 @@
 
 namespace App\Models;
 
-use App\Contracts\CanBeEasySearched;
-use App\Enums\SearchType;
 use App\Helpers\CuratorModelHelper;
-use App\Traits\EasySearch;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Support\Collection;
 use Spatie\Translatable\HasTranslations;
 
 class Destination extends Model
