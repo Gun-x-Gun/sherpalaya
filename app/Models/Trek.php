@@ -68,7 +68,7 @@ class Trek extends Model implements CanBeEasySearched, CanBeInquiried
 
 
     public function searchResultTitle(): string{
-        return $this->title;
+        return $this->title[app()->currentLocale()];
     }
 
     public function searchResultUrl(): string
