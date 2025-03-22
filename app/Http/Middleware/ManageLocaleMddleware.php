@@ -27,6 +27,10 @@ class ManageLocaleMddleware
             }
         }
 
-        return $next($request);
+        $response = $next($request);
+
+        $response->headers->set('X-LiteSpeed-Vary', 'current_locale');
+
+        return $response;
     }
 }

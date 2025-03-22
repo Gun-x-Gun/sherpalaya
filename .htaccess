@@ -6,6 +6,7 @@ RewriteRule ^(.*)$ /public/$1 [L]
 
 <IfModule LiteSpeed>
    CacheLookup on
+    RewriteRule .* - [E=Cache-Vary:current_locale]
 </IfModule>
 
 # --- END ---
