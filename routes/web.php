@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 // Redirect to home page
 Route::redirect('/', '/home');
 
-Route::middleware(ManageLocaleMddleware::class)
+Route::middleware([
+    ManageLocaleMddleware::class,
+    'lscache:max-age=600;public',
+    'lstags:sherpalaya_website'
+])
     ->group(function () {
 
 
