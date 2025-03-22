@@ -114,10 +114,9 @@
                             class="accordion-content w-full overflow-hidden transition-[height] duration-300 bg-blue-100/40"
                             aria-labelledby="faq-{{ $faq->id }}" role="region">
                             <div class="px-5 pb-4 ">
-                                <p class=" font-light text-lg/7 tracking-wide">
-                                    {{ $faq->answer }}
+                                <div class=" font-light text-lg/7 tracking-wide">
                                     {!! $faq->answer !!}
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>
