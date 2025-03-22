@@ -33,6 +33,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Outerweb\FilamentTranslatableFields\Filament\Plugins\FilamentTranslatableFieldsPlugin;
 use Swis\Filament\Backgrounds\FilamentBackgroundsPlugin;
 
 class AdminPanelProvider extends PanelProvider
@@ -80,10 +81,16 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 SpatieLaravelTranslatablePlugin::make()
-                ->defaultLocales(['en', 'fr']),
+                    ->defaultLocales(['en', 'fr']),
+
+                FilamentTranslatableFieldsPlugin::make()
+                    ->supportedLocales([
+                        'en' => 'English',
+                        'fr' => 'French',
+                    ]),
                 OverlookPlugin::make()
-                ->columns(4)
-                ->includes([
+                    ->columns(4)
+                    ->includes([
                         ExpeditionResource::class,
                         TrekResource::class,
                         TourResource::class,
@@ -95,15 +102,15 @@ class AdminPanelProvider extends PanelProvider
                     ]),
                 FilamentShieldPlugin::make(),
                 FilamentBackgroundsPlugin::make()
-                ->showAttribution(false),
+                    ->showAttribution(false),
                 \Awcodes\Curator\CuratorPlugin::make()
-                ->label('Media')
-                ->pluralLabel('Media')
-                ->navigationIcon('heroicon-o-photo')
-                ->navigationGroup('Content')
-                ->navigationSort(8)
-                // ->navigationCountBadge()
-                ->registerNavigation(true)
+                    ->label('Media')
+                    ->pluralLabel('Media')
+                    ->navigationIcon('heroicon-o-photo')
+                    ->navigationGroup('Content')
+                    ->navigationSort(8)
+                    // ->navigationCountBadge()
+                    ->registerNavigation(true)
             ])
             ->navigationItems([
                 NavigationItem::make('Sherpalaya Home')
@@ -119,7 +126,7 @@ class AdminPanelProvider extends PanelProvider
             ->userMenuItems([
                 MenuItem::make()
                     ->label('Users')
-                    ->url(fn (): string => UserResource::getUrl())
+                    ->url(fn(): string => UserResource::getUrl())
                     ->icon('heroicon-o-users'),
                 MenuItem::make()
                     ->label('Roles')
@@ -127,7 +134,7 @@ class AdminPanelProvider extends PanelProvider
                     ->icon('heroicon-o-tag'),
                 MenuItem::make()
                     ->label('Settings')
-                    ->url(fn (): string => ManageLandingPage::getUrl())
+                    ->url(fn(): string => ManageLandingPage::getUrl())
                     ->icon('heroicon-o-cog'),
             ]);
     }
