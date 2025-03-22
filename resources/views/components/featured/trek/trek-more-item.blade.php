@@ -2,16 +2,16 @@
     <div class="bg-blue-100/10">
         <div class="2xl:mx-32 mx-4 font-body">
             <div class="h-10 md:h-20"></div>
-            <div class="md:px-8 ">
+            <div class="">
                 <h5 class="text-3xl md:text-4xl font-oswald  font-medium line-clamp-2 uppercase tracking-wider text-black text-left md:text-left"
                     data-aos="zoom-in" data-aos-duration="1000">
                     Treks
                 </h5>
-                <p
-                    class="text-xl/7 mt-4 text-preety text-black lg:text-left
-                     font-light font-body break-all">
-                    {{ app()->currentLocale() == 'fr' ? $landingPageSetting->trek_activity_content_fr:$landingPageSetting->trek_activity_content_en }}
-                </p>
+                <div
+                    class="text-xl/7 mt-4 text-preety text-black lg:text-justify
+                     font-light font-body lg:w-[80%]">
+                    {{ app()->currentLocale() == 'fr' ? $landingPageSetting->trek_activity_content_fr : $landingPageSetting->trek_activity_content_en }}
+                </div>
                 <div class="h-6 md:h-12"></div>
             </div>
             <div class="flex flex-col md:grid grid-cols-2  bg-transparent ">
@@ -22,14 +22,12 @@
                             class="card rounded-none px-8 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-50">
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <h5
-                                    class=" text-2xl  line-clamp-2 font-medium tracking-tight font-body text-black lg:text-left  uppercase group-hover:underline  decoration-8 decoration-warning   group-hover:underline-offset-4">
+                                    class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
                                     {{ $featuredTrek->title }}
                                 </h5>
                             </a>
-                            <div
-                                class=" mt-4 text-preety text-black break-all font-body  font-light text-xl/8   line-clamp-[6] ">
-                                {!! Str::words($featuredTrek->description, 50) !!}
-
+                            <div class="mt-4 text-justify text-black  font-body font-light text-lg/8 line-clamp-[8] ">
+                                {!! Str::words($featuredTrek->description, 70) !!}
                             </div>
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">
@@ -62,7 +60,7 @@
                         </div>
                         <div class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start ">
                             <div
-                                class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
+                                class="text-preety text-black break-all font-body font-light text-lg/8 line-clamp-[6] ">
                                 {!! Str::words($featuredTrek->description, 50) !!}
 
                             </div>
@@ -102,17 +100,15 @@
                             class="card rounded-none px-8 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-50">
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
                                 <h5
-                                    class=" text-2xl  line-clamp-2 font-medium tracking-tighter font-body text-black lg:text-left  uppercase group-hover:underline  decoration-8 decoration-warning   group-hover:underline-offset-4">
+                                    class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
                                     {{ $featuredTrek->title }}
                                 </h5>
                             </a>
-                            <div
-                                class=" mt-4 text-preety text-black break-all font-body  font-light text-xl/8   line-clamp-[6] ">
-                                {!! Str::words($featuredTrek->description, 50) !!}
-
+                            <div class="mt-4 text-justify text-black  font-body font-light text-lg/8 line-clamp-[8] ">
+                                {!! Str::words($featuredTrek->description, 70) !!}
                             </div>
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">
-                                <button class="btn btn-primary btn-md mt-6 text-base hover:btn-warning pl-2">
+                                <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
                                     Explore
                                 </button>
@@ -121,7 +117,7 @@
                         <div
                             class="card rounded-none px-2 py-2 col-span-1  md:hidden group justify-start items-start bg-blue-100">
                             <div
-                                class="text-preety text-black break-all font-body font-light text-xl/8 line-clamp-[6] ">
+                                class="text-preety text-black break-all font-body font-light text-lg/8 line-clamp-[6] ">
                                 {!! Str::words($featuredTrek->description, 50) !!}
                             </div>
                             <a href="{{ route('show_trek', $featuredTrek->id) }}">

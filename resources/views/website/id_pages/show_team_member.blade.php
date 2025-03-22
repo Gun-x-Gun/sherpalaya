@@ -59,7 +59,7 @@
         <div class="mx-4 2xl:mx-32">
             <div class="h-4"></div>
             <div
-                class="text-base/7 mt-6 text-justify text-black  md:mx-8 lg:mx-16  xl:mx-28
+                class="text-lg/8 mt-6 text-justify text-black  md:mx-8 lg:mx-16  xl:mx-28
                          font-light font-body tracking-normal ">
                 {!! $sherpa->description !!}
             </div>
@@ -160,7 +160,7 @@
                     <table class="table-striped-columns table font-body">
                         <thead>
                             <tr class="text-2xl">
-                                <th>Name Of The Trek</th>
+                                <th>Name Of The Tour</th>
                             </tr>
                         </thead>
                         <tbody>

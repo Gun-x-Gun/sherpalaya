@@ -13,15 +13,15 @@
         </div>
     </div> --}}
 
-    <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center 2xl:mx-32 mx-4 ">
-        <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
+    <div class="flex flex-col lg:justify-start lg:items-start 2xl:mx-32 mx-4 ">
+        <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-justify"
             data-aos="fade-down" data-aos-duration="1200">
             {!! app()->currentLocale() == 'fr'
                 ? $landingPageSetting->homepage_title_fr
                 : $landingPageSetting->homepage_title_en !!}
         </h5>
         <div
-            class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
+            class="text-xl/7 mt-6 text-preety text-black text-justify lg:text-justify
                  font-light font-body lg:w-[80%] tracking-wide ">
             {!! app()->currentLocale() == 'fr'
                 ? $landingPageSetting->homepage_description_fr

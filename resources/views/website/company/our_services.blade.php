@@ -54,26 +54,26 @@
             ],
         ]" />
 
-        <div class="2xl:mx-32 mx-4 text-left">
+        <div class="2xl:mx-32 mx-4 ">
             <div class="h-8"></div>
 
-            <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center">
-                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
+            <div class=" flex flex-col lg:justify-start lg:items-start">
+                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left"
                     data-aos="fade-down" data-aos-duration="1200">
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->service_page_content_title_fr : $pageSetting->service_page_content_title_en }}
                 </h5>
                 <div
-                    class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
-                             font-light font-body lg:w-[80%] tracking-wide">
+                    class="text-xl/7 mt-4 text-preety text-black lg:text-justify
+                     font-light font-body lg:w-[80%]">
                     {{-- {{ $pageSetting->service_page_page_content }} --}}
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->service_page_content_fr : $pageSetting->service_page_content_en }}
-                </p>
-                <div class="h-10 md:h-12"></div>
+                    </p>
+                    <div class="h-10 md:h-12"></div>
+                </div>
             </div>
-        </div>
 
-        {{-- Showing <strong>{{ $serviceDestination->services->count() }}</strong> --}}
-        <div class="2xl:mx-32 mx-4">
+            {{-- Showing <strong>{{ $serviceDestination->services->count() }}</strong> --}}
+
             <div class="flex flex-col  md:grid md:grid-cols-2 xl:grid-cols-3  gap-4 ">
                 @foreach ($services as $serviceData)
                     <div class="card w-full h-full">
@@ -91,7 +91,7 @@
                             </a>
                             <div class="justify-start flex flex-col  gap-2 pb-0">
                                 <span
-                                    class="items-center text-black break-all text-lg/7 font-body font-light  line-clamp-4">
+                                    class="items-center text-black text-justify text-base/7 font-body font-light  line-clamp-4">
                                     {{ $serviceData->service->description }}
                                 </span>
                             </div>
@@ -99,9 +99,9 @@
                     </div>
                 @endforeach
             </div>
-        </div>
-        <div class="h-20"></div>
 
-    </div>
+            <div class="h-20"></div>
+
+        </div>
 
 </x-website-layout>

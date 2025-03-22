@@ -2,18 +2,18 @@
     <div class="bg-blue-100/40">
         <div class="2xl:mx-32 mx-4 font-body">
             <div class="h-10 md:h-20"></div>
-            <div class="md:px-4">
+            <div class="">
                 <h5 class="text-3xl md:text-4xl font-oswald font-medium  line-clamp-2 uppercase tracking-wider text-black text-left md:text-left"
                     data-aos="flip-up" data-aos-duration="800">
                     Expeditions</h5>
-                <p
-                    class="text-xl/7 mt-4 text-preety text-black lg:text-left
-                     font-light font-body ">
+                <div
+                    class="text-xl/7 mt-4 text-preety text-black lg:text-justify
+                     font-light font-body lg:w-[80%]">
                     {{ app()->currentLocale() == 'fr' ? $landingPageSetting->expedition_activity_content_fr : $landingPageSetting->expedition_activity_content_en }}
-                </p>
+                </div>
                 <div class="h-6 md:h-12"></div>
             </div>
-            <div class="flex flex-col md:grid grid-cols-7 md:gap-0 bg-blue-100/10 ">
+            <div class="flex flex-col md:grid grid-cols-7 gap-y-1 bg-blue-100/10 ">
                 @foreach ($featuredExpeditions->slice(0, 4) as $featuredExpedition)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-3 on the text and col-span-4 on the image --}}
@@ -21,12 +21,12 @@
                             class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-blue-100/60">
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <h5
-                                    class=" text-2xl  line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning   group-hover:underline-offset-4">
+                                    class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
                                     {{ $featuredExpedition->title }}
                                 </h5>
                             </a>
-                            <div class=" mt-2 text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
-                                {!! Str::words($featuredExpedition->description, 40) !!}
+                            <div class="mt-4 text-justify text-black  font-body font-light text-lg/8 line-clamp-[8] ">
+                                {!! Str::words($featuredExpedition->description, 60) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">
@@ -58,7 +58,7 @@
                             </a>
                         </div>
                         <div class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start ">
-                            <div class="text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
+                            <div class="text-preety text-black  font-body font-light text-lg/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
@@ -97,15 +97,15 @@
                             class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-transparent">
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <h5
-                                    class=" text-2xl  line-clamp-2 font-medium tracking-tighter font-body text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning   group-hover:underline-offset-4">
+                                    class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
                                     {{ $featuredExpedition->title }}
                                 </h5>
                             </a>
-                            <div class="text-preety mt-2 text-black  font-body font-light text-xl/8 line-clamp-[6] ">
-                                {!! Str::words($featuredExpedition->description, 40) !!}
+                            <div class="mt-4 text-justify text-black  font-body font-light text-lg/8 line-clamp-[8] ">
+                                {!! Str::words($featuredExpedition->description, 60) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
-                                <button class="btn btn-primary btn-md mt-6 text-base hover:btn-warning pl-2">
+                                <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
                                     Explore
                                 </button>
@@ -113,7 +113,7 @@
                         </div>
                         <div
                             class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start bg-blue-100">
-                            <div class="text-preety text-black  font-body font-light text-xl/8 line-clamp-[6] ">
+                            <div class="text-preety text-black  font-body font-light text-lg/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
@@ -128,8 +128,8 @@
                 @endforeach
             </div>
 
-            <div class="h-2"></div>
-            <div class="hidden md:grid md:grid-cols-2 xl:grid-cols-3 md:gap-2 bg-blue-100/10 ">
+            <div class="h-1"></div>
+            <div class="hidden md:grid md:grid-cols-2 xl:grid-cols-3 md:gap-1 bg-blue-100/10 ">
                 @foreach ($featuredExpeditions->slice(4, 10) as $featuredExpedition)
                     {{-- First Iteration: col-span-3 on the text and col-span-4 on the image --}}
                     <div

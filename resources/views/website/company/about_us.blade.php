@@ -36,14 +36,14 @@
 
             <div class="2xl:mx-32 mx-4 ">
                 <div class="h-8"></div>
-                <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center">
-                    <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
-                        data-aos="fade-down" data-aos-duration="1200">
+                <div class="flex flex-col lg:justify-start lg:items-start">
+                    <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left "
+                        data-aos="fade-up" data-aos-duration="1200">
                         {{ app()->currentLocale() == 'fr' ? $aboutUsSetting->content_title_fr : $aboutUsSetting->content_title_en }}
                     </h5>
                     <div
-                        class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
-                             font-light font-body lg:w-[80%] tracking-wide">
+                    class="text-xl/7 mt-4 text-preety text-black lg:text-justify
+                     font-light font-body lg:w-[80%]">
                         {!! app()->currentLocale() == 'fr' ? $aboutUsSetting->content_fr : $aboutUsSetting->content_en !!}
                     </div>
                     <div class="h-10 md:h-12"></div>

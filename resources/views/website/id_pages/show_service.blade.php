@@ -68,7 +68,7 @@
             {{-- description  --}}
 
             <div class="card sm:w-full md:px-8 shadow-sm shadow-slate-300 bg-blue-50/10">
-                <div class="card-body text-center text-black px-2 tracking-wide font-light text-lg/7 font-body">
+                <div class="card-body text-justify text-black px-0 tracking-wide font-light text-lg/7 font-body">
                     <p>
                         {{ $service->description }}
                     </p>
@@ -153,7 +153,7 @@
                                                         class="text-black uppercase items-center badge tracking-wider badge-warning  px-1 py-0 text-xs">
                                                         {{ $destination->region->name }} Region
                                                     </p>
-                                                    <p class="text-black tracking-wide font-body text-lg/6 font-light">
+                                                    <p class="text-black tracking-wide font-body text-base/6 font-light">
                                                         {{ Str::words($destination->description, 50) }}
                                                     </p>
                                                 </div>

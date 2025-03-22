@@ -57,18 +57,18 @@
         <div class="2xl:mx-32 mx-4 ">
             <div class="h-8"></div>
 
-            <div class="lg:px-8 flex flex-col lg:justify-center lg:items-center">
-                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-center"
+            <div class=" flex flex-col lg:justify-start lg:items-start">
+                <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left"
                     data-aos="fade-down" data-aos-duration="1200">
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->team_page_content_title_fr : $pageSetting->team_page_content_title_en }}
                 </h5>
-                <p
-                    class="text-xl/7 mt-6 text-preety text-black text-left lg:text-center
-                             font-light font-body lg:w-[80%] tracking-wide">
+                <div
+                    class="text-xl/7 mt-4 text-preety text-black lg:text-justify
+                     font-light font-body lg:w-[80%]">
                     {{-- {{ $pageSetting->about_us_page_content }} --}}
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->team_page_content_fr : $pageSetting->team_page_content_en }}
 
-                </p>
+            </div>
                 <div class="h-10 md:h-12"></div>
             </div>
         </div>
