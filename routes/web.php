@@ -39,7 +39,8 @@ Route::middleware([
                 Route::get('/contact', 'contactUs')->name('website.contact');
                 Route::post('/contact', 'contactUsSubmit');
                 Route::get('/about_us', 'aboutUs')->name('website.company.about_us');
-                Route::get('/change-locale/{locale}', 'changeLocale')->name('website.change_locale');
+                Route::get('/change-locale/{locale}', 'changeLocale')->name('website.change_locale')
+                    ->middleware('lscache:no-cache');
                 // Route::get('/our_team', 'ourTeam')->name('website.company.our_team');
             });
 
