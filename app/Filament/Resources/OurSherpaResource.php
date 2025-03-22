@@ -124,7 +124,7 @@ class OurSherpaResource extends Resource
                                     ->relationship('expidetionOurSherpas')
                                     ->hiddenLabel()
                                     ->addActionLabel('Add Expedition')
-                                    ->orderable('order')
+                                    ->orderColumn('order')
                                     ->schema([
                                         Select::make('expedition_id')
                                             ->options(Expedition::all()->pluck('title', 'id'))
