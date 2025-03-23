@@ -145,7 +145,7 @@
                                 @endif
 
                             @endif
-                            <form id="contactForm" action="/contact" method="POST" class="mt-2">
+                            <form id="contactForm" action="/{{ app()->currentLocale() }}/contact" method="POST" class="mt-2">
                                 @csrf
                                 <div class="mb-6 ">
                                     <div class="mx-0 mb-1 sm:mb-4">

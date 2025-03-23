@@ -19,7 +19,7 @@
                         {{-- First Iteration: col-span-3 on the text and col-span-4 on the image --}}
                         <div
                             class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-blue-100/60 h-[28rem]">
-                            <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                            <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                 <h5
                                     class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
                                     {{ $featuredExpedition->title }}
@@ -28,7 +28,7 @@
                             <div class="mt-4 text-justify text-black  font-body font-light text-lg/8 line-clamp-[8] ">
                                 {!! Str::words($featuredExpedition->description, 60) !!}
                             </div>
-                            <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                            <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                 <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
                                     Explore
@@ -42,7 +42,7 @@
                                     alt="{{ $featuredExpedition->title }} Cover Image"
                                     class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
-                            <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                            <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                 <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2 h-[28rem]">
                                     <div class="md:text-center " data-aos="flip-up" data-aos-duration="800">
                                         <h2
@@ -61,7 +61,7 @@
                             <div class="text-preety text-black  font-body font-light text-lg/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
-                            <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                            <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                 <button
                                     class="btn btn-primary btn-md my-4 text-base hover:btn-warning justify-start pl-2">
                                     <span class="icon-[ci--chevron-right] size-5 "></span>
@@ -78,7 +78,7 @@
                                     alt="{{ $featuredExpedition->title }} Cover Image"
                                     class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
-                            <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                            <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                 <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2 ">
                                     <div class="text-left md:text-center " data-aos="flip-up" data-aos-duration="800">
                                         <h2
@@ -95,7 +95,7 @@
                         </div>
                         <div
                             class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-transparent h-[28rem]">
-                            <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                            <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                 <h5
                                     class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
                                     {{ $featuredExpedition->title }}
@@ -104,7 +104,7 @@
                             <div class="mt-4 text-justify text-black  font-body font-light text-lg/8 line-clamp-[8] ">
                                 {!! Str::words($featuredExpedition->description, 60) !!}
                             </div>
-                            <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                            <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                 <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
                                     Explore
@@ -116,7 +116,7 @@
                             <div class="text-preety text-black  font-body font-light text-lg/8 line-clamp-[6] ">
                                 {!! Str::words($featuredExpedition->description, 40) !!}
                             </div>
-                            <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                            <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                 <button
                                     class="btn btn-primary btn-md my-4 text-base hover:btn-warning justify-start pl-2">
                                     <span class="icon-[ci--chevron-right] size-5 "></span>
@@ -139,7 +139,7 @@
                                 alt="{{ $featuredExpedition->title }} Cover Image"
                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[20rem] w-full object-cover" />
                         </figure>
-                        <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                        <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                             <div class="card-body absolute inset-0 justify-center md:justify-center">
                                 <div class="text-center " data-aos="flip-up" data-aos-duration="800">
                                     <h2
@@ -173,7 +173,7 @@
                                             alt="{{ $featuredExpedition->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
+                                    <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center">
                                                 <h2 class="font-medium text-blue-50 text-2xl uppercase">

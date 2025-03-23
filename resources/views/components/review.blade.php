@@ -61,5 +61,5 @@
     </div>
     <div class="h-20"></div>
 
-    {{-- {{ route('show_trek', $trek->id) }} --}}
+    {{-- {{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }} --}}
 </div>

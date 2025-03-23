@@ -73,7 +73,7 @@ class Trek extends Model implements CanBeEasySearched, CanBeInquiried
 
     public function searchResultUrl(): string
     {
-        return '/treks/' . $this->id;
+        return '/' . app()->currentLocale() . '/treks/' . $this->id;
     }
 
     public function searchResultImage(): ?Media

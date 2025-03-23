@@ -78,7 +78,7 @@
                                             <div class="carousel-body h-full opacity-0">
                                                 @foreach ($trek->images as $image)
                                                     <div class="carousel-slide">
-                                                        <a href="{{ route('show_trek', $trek->id) }}">
+                                                        <a href="{{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div class="bg-base-200/50 flex h-full justify-center">
                                                                 <span class="self-start w-full ">
                                                                     <figure>
@@ -124,7 +124,7 @@
                                 </div>
 
                                 <div class="card-body px-2 pt-2 bg-blue-100/30 ">
-                                    <a href="{{ route('show_trek', $trek->id) }}">
+                                    <a href="{{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }}">
                                         <h5
                                             class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-primary font-semibold">
                                             {{ $trek->title }}</h5>
@@ -156,14 +156,14 @@
                                 @foreach ($trekRegion->treks as $trek)
                                     <div class="carousel-slide  bg-blue-100">
                                         <div class="card w-full ">
-                                            <a href="{{ route('show_trek', $trek->id) }}">
+                                            <a href="{{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }}">
                                                 <img src="{{ $trek->coverImage->url ?? asset('photos/P1030127.JPG') }}"
                                                     alt="{{ $trek->title }} Cover Image"
                                                     class="h-[20rem] object-cover" />
                                             </a>
                                         </div>
                                         <div class="card-body bg-blue-100/30 ">
-                                            <a href="{{ route('show_trek', $trek->id) }}">
+                                            <a href="{{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }}">
                                                 <h5
                                                     class="card-title mb-2.5 line-clamp-2 uppercase text-lg text-primary font-normal">
                                                     {{ $trek->title }}</h5>

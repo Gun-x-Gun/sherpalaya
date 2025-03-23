@@ -80,7 +80,7 @@
                                             alt="{{ $tour->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_tour', $tour->id) }}">
+                                    <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center">
                                                 <h2
@@ -112,7 +112,7 @@
                                             alt="{{ $tour->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_tour', $tour->id) }}">
+                                    <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center">
                                                 <h2
@@ -156,7 +156,7 @@
                                             <div class="carousel-body h-full opacity-0">
                                                 @foreach ($tour->images as $image)
                                                     <div class="carousel-slide">
-                                                        <a href="{{ route('show_tour', $tour->id) }}">
+                                                        <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div class="bg-base-200/50 flex h-full justify-center">
                                                                 <span class="self-start w-full ">
                                                                     <figure>
@@ -203,7 +203,7 @@
                                 </div>
 
                                 <div class="card-body px-2 pt-2 bg-blue-100/50 ">
-                                    <a href="{{ route('show_tour', $tour->id) }}">
+                                    <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
                                         <h5
                                             class="card-title mb-1 line-clamp-2 uppercase text-lg text-blue-700 font-semibold">
                                             {{ $tour->title }}</h5>
@@ -231,7 +231,7 @@
                                     @foreach ($tourCategory->tours as $tour)
                                         <div class="carousel-slide max-w-sm px-1">
                                             <div class="card w-full ">
-                                                <a href="{{ route('show_tour', $tour->id) }}">
+                                                <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
                                                     <figure>
                                                         <img src="{{ $tour->coverImage?->url ?? asset('photos/P1030127.JPG') }}"
                                                             alt="{{ $tour->title }} Cover Image"
@@ -240,7 +240,7 @@
                                                 </a>
                                             </div>
                                             <div class="card-body bg-blue-100 px-2 pt-2">
-                                                <a href="{{ route('show_tour', $tour->id) }}">
+                                                <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
                                                     <h5
                                                         class="card-title mb-1 line-clamp-2 uppercase text-lg text-blue-700 font-semibold">
                                                         {{ $tour->title }}</h5>

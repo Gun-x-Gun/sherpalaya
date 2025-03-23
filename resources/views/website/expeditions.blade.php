@@ -81,7 +81,7 @@
                                             alt="{{ $expedition->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_expedition', $expedition->id) }}">
+                                    <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center ">
                                             <div class="font-oswald tracking-wide font-normal text-center">
                                                 <h2 class=" text-blue-50 text-3xl uppercase group-hover:text-warning">
@@ -111,7 +111,7 @@
                                             alt="{{ $expedition->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_expedition', $expedition->id) }}">
+                                    <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
                                             <div class="font-oswald tracking-wide font-normal text-center">
                                                 <h2 class=" text-blue-50 text-3xl uppercase group-hover:text-warning">
@@ -153,7 +153,7 @@
                                             alt="{{ $expedition->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_expedition', $expedition->id) }}">
+                                    <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center" >
                                                 <h2 class="font-bold text-blue-50 text-3xl uppercase">
@@ -187,7 +187,7 @@
                                                         alt="{{ $expedition->title }} Cover Image"
                                                         class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
                                                 </figure>
-                                                <a href="{{ route('show_expedition', $expedition->id) }}">
+                                                <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                                     <div class="card-body absolute inset-0 justify-center">
                                                         <div class="text-center">
                                                             <h2 class="font-bold text-blue-50 text-2xl uppercase">

@@ -15,7 +15,7 @@
     <nav class="w-full" aria-label="Global">
         <div class=" relative lg:flex lg:items-center ">
             <div class="flex items-center justify-between 2xl:mx-32 mx-4 ">
-                <a class="link text-base-content link-neutral texl-lg font-semibold no-underline " href="/home">
+                <a class="link text-base-content link-neutral texl-lg font-semibold no-underline " href="/{{ app()->currentLocale() }}/home">
                     <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class=" w-12 xl:w-24">
                 </a>
                 <div class="lg:hidden">
@@ -49,7 +49,7 @@
                 <div
                     class="flex flex-col rounded-lg max-lg:mt-3 max-lg:border  lg:flex-row lg:items-center lg:justify-end  lg:py-0.5">
                     <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent ">
-                        <li class=" hover:text-warning rounded-lg "><a href="/home" @class([
+                        <li class=" hover:text-warning rounded-lg "><a href="/{{ app()->currentLocale() }}/home" @class([
                             'text-warning' => request()->route()->getName() == 'website.home',
                         ])>
                                 {{ __('navbar.home') }}
@@ -67,7 +67,7 @@
                             aria-orientation="vertical" aria-labelledby="nested-dropdown">
                             <li
                                 class="text-black text-base  teacking-normal  hover:text-warning hover:underline decoration-1">
-                                <a class="dropdown-item" href="/about_us">
+                                <a class="dropdown-item" href="/{{ app()->currentLocale() }}/about_us">
                                     {{ __('navbar.about-us') }}
                                 </a>
                             </li>
@@ -79,7 +79,7 @@
                             </li> --}}
                             <li
                                 class="text-black text-base  teacking-normal  hover:text-warning hover:underline decoration-1">
-                                <a class="dropdown-item" href="/sherpas">
+                                <a class="dropdown-item" href="/{{ app()->currentLocale() }}/sherpas">
                                     {{ __('navbar.our-team') }}
                                 </a>
                             </li>
@@ -133,7 +133,7 @@
                                                                 alt="{{ $expedition->title }} Cover Image"
                                                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_expedition', $expedition->id) }}">
+                                                        <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
                                                                 <div
@@ -167,7 +167,7 @@
                                                                 alt="{{ $expedition->title }} Cover Image"
                                                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_expedition', $expedition->id) }}">
+                                                        <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
                                                                 <div
                                                                     class="text-center font-oswald tracking-widest font-normal">
@@ -238,7 +238,7 @@
                                                                 alt="{{ $catTrek->title }} Cover Image"
                                                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_trek', $catTrek->id) }}">
+                                                        <a href="{{ route('show_trek', ['id'=>$catTrek->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
                                                                 <div
@@ -272,7 +272,7 @@
                                                                 alt="{{ $trek->title }} Cover Image"
                                                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_trek', $trek->id) }}">
+                                                        <a href="{{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
                                                                 <div
                                                                     class="text-center font-oswald tracking-widest font-normal">
@@ -344,7 +344,7 @@
                                                                 alt="{{ $tour->title }} Cover Image"
                                                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_tour', $tour->id) }}">
+                                                        <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
                                                                 <div
@@ -378,7 +378,7 @@
                                                                 alt="{{ $tour->title }} Cover Image"
                                                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_tour', $tour->id) }}">
+                                                        <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
                                                                 <div
                                                                     class="text-center font-oswald tracking-wide font-normal">
@@ -417,7 +417,7 @@
                                 <li
                                     class="text-black text-sm  teacking-wider  hover:text-primary hover:underline decoration-2">
                                     <a class="dropdown-item"
-                                        href="{{ route('show_service', $navService->id) }}">{{ $navService->title }}</a>
+                                        href="{{ route('show_service', ['id'=>$navService->id, 'locale'=>app()->currentLocale()]) }}">{{ $navService->title }}</a>
                                 </li>
                             @endforeach
                         </ul>
@@ -425,7 +425,7 @@
 
                     {{-- contact  --}}
                     <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent items-center  ">
-                        <li class=" hover:text-warning rounded-lg text-base "><a href="/services"
+                        <li class=" hover:text-warning rounded-lg text-base "><a href="/{{ app()->currentLocale() }}/services"
                                 @class([
                                     'text-warning' =>
                                         request()->route()->getName() == 'website.company.our_service',
@@ -437,7 +437,7 @@
 
 
 
-                        <li class=" hover:text-warning rounded-lg text-base "><a href="/contact"
+                        <li class=" hover:text-warning rounded-lg text-base "><a href="/{{ app()->currentLocale() }}/contact"
                                 @class([
                                     'text-warning' => request()->route()->getName() == 'website.contact',
                                 ])>
@@ -499,7 +499,7 @@
         </div>
         <div class="drawer-body justify-start pb-6 px-0">
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
-                <li class=" hover:text-warning rounded-lg items-start"><a href="/home" @class([
+                <li class=" hover:text-warning rounded-lg items-start"><a href="/{{ app()->currentLocale() }}/home" @class([
                     'text-warning' => request()->route()->getName() == 'website.home',
                 ])>
                         <span class="icon-[solar--home-outline] size-5">
@@ -520,7 +520,7 @@
                         <li class="uppercase">
                             <ul class="menu px-0 mx-0">
                                 <li class="text-black hover:underline px-0"><a class="dropdown-item"
-                                        href="/about_us">
+                                        href="/{{ app()->currentLocale() }}/about_us">
                                         <span class="icon-[majesticons--tooltip-text-line]"></span>
                                         About Us
                                     </a>
@@ -531,7 +531,7 @@
                                         Documents
                                     </a>
                                 </li> --}}
-                                <li class="text-black hover:underline"><a class="dropdown-item" href="/sherpas">
+                                <li class="text-black hover:underline"><a class="dropdown-item" href="/{{ app()->currentLocale() }}/sherpas">
                                         <span class="icon-[stash--people-group-duotone]"></span>
                                         Our Team
                                     </a>
@@ -557,7 +557,7 @@
                         @foreach ($navExpeditions as $expeditionCategory)
                             @if ($expeditionCategory->expeditions->isNotEmpty())
                                 <li class="uppercase ">
-                                    <a href="/expeditions#category-{{ $expeditionCategory->id }}"
+                                    <a href="/{{ app()->currentLocale() }}/expeditions#category-{{ $expeditionCategory->id }}"
                                         class="menu font-normal text-black text-lg">{{ $expeditionCategory->name }}
                                         </p></a>
                                     <ul class="menu px-2">
@@ -565,7 +565,7 @@
                                             <div class="flex flex-col items-start  ">
                                                 <div
                                                     class="text-black hover:underline text-wrap tracking-normal font-light">
-                                                    <a href="{{ route('show_expedition', $expedition->id) }}">
+                                                    <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                                         {{ $expedition->title }}
                                                     </a>
                                                 </div>
@@ -599,7 +599,7 @@
                         @foreach ($navTreks as $trekCategory)
                             @if ($trekCategory->treks->isNotEmpty())
                                 <li class="uppercase ">
-                                    <a href="/treks#category-{{ $trekCategory->id }}"
+                                    <a href="/{{ app()->currentLocale() }}/treks#category-{{ $trekCategory->id }}"
                                         class="menu font-normal text-black text-lg">{{ $trekCategory->name }}
                                         </p></a>
                                     <ul class="menu px-2">
@@ -607,7 +607,7 @@
                                             <div class="flex flex-col items-start  ">
                                                 <div
                                                     class="text-black hover:underline tracking-normal font-light text-wrap">
-                                                    <a href="{{ route('show_trek', $trek->id) }}">
+                                                    <a href="{{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }}">
                                                         {{ $trek->title }}
                                                     </a>
                                                 </div>
@@ -641,7 +641,7 @@
                             <li class="items-start">
                                 <div class="flex flex-row gap-0 items-center">
                                     <div class="menu hover:underline text-black font-light">
-                                        <a href="/tours#type-{{ $tourCategory->id }}">
+                                        <a href="/{{ app()->currentLocale() }}/tours#type-{{ $tourCategory->id }}">
                                             {{ $tourCategory->name }}
                                         </a>
                                     </div>
@@ -679,7 +679,7 @@
                                     <li
                                         class="text-black text-base font-light teacking-wide  hover:text-warning hover:underline decoration-1">
                                         <a class="dropdown-item"
-                                            href="{{ route('show_service', $navService->id) }}">{{ $navService->title }}</a>
+                                            href="{{ route('show_service', ['id'=>$navService->id, 'locale'=>app()->currentLocale()]) }}">{{ $navService->title }}</a>
                                     </li>
                                 @endforeach
                             </ul>
@@ -690,7 +690,7 @@
 
                 {{-- contact  --}}
                 <li class="text-slate-900 hover:text-warning rounded-lg text-base uppercase">
-                    <a href="/contact" @class([
+                    <a href="/{{ app()->currentLocale() }}/contact" @class([
                         'text-warning' => request()->route()->getName() == 'website.contact',
                     ])>
                         <span class="icon-[majesticons--phone-line] size-5"></span>

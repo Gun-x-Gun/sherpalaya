@@ -103,7 +103,7 @@
                     <div class="accordion-item {{ $index == 0 ? 'active' : '' }}" id="faq-{{ $faq->id }}">
                         <button
                             class="accordion-toggle inline-flex items-center gap-x-4 px-5 py-4 text-start bg-blue-100/40 font-body tracking-tight text-xl font-normal"
-                            aria-controls="faq-{{ $faq->id }}-collapse" aria-expanded="true">
+                            aria-controls="faq-{{ $faq->id }}-collapse" aria-expanded="false">
                             <span
                                 class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
                             <span

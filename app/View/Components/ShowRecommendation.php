@@ -109,7 +109,7 @@ class ShowRecommendation extends Component
                         'title' => $trek->title,
                         'duration' => $trek->duration . ' Days',
                         'description' => Str::words($trek->description, 30),
-                        'url' => '/treks/' . $trek->id,
+                        'url' => '/' . app()->currentLocale() . '/treks/' . $trek->id,
                         'coverImage' => $trek->coverImage->url,
                     ];
                 }),
@@ -122,7 +122,7 @@ class ShowRecommendation extends Component
                         'title' => $expedition->title,
                         'duration' => $expedition->duration . ' Days',
                         'description' => Str::words($expedition->description),
-                        'url' => '/expeditions/' . $expedition->id,
+                        'url' => '/' . app()->currentLocale() . '/expeditions/' . $expedition->id,
                         'coverImage' => $expedition->coverImage->url,
 
                     ];
@@ -136,7 +136,7 @@ class ShowRecommendation extends Component
                         'title' => $tour->title,
                         'duration' => $tour->duration,
                         'description' => Str::words($tour->description),
-                        'url' => '/tours/' . $tour->id,
+                        'url' => '/' . app()->currentLocale() . '/tours/' . $tour->id,
                         'coverImage' => $tour->coverImage->url,
 
                     ];
@@ -164,7 +164,7 @@ class ShowRecommendation extends Component
                         'title' => $service->title,
                         'duration' => null,
                         'description' => Str::words($service->description),
-                        'url' => '/services/' . $service->id,
+                        'url' => '/' . app()->currentLocale() . '/services/' . $service->id,
                         'coverImage' => $service->coverImage->url,
 
                     ];

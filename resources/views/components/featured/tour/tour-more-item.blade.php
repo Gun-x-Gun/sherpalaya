@@ -28,7 +28,7 @@
                                             alt="{{ $featuredTour->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_tour', $featuredTour->id) }}">
+                                    <a href="{{ route('show_tour', ['id'=>$featuredTour->id, 'locale'=>app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center max-w-sm">
                                             <div class="text-center">
                                                 <h2
@@ -92,7 +92,7 @@
                 @foreach ($featuredTours as $featuredTour)
                     <div
                         class="card group xl:card-side sm:max-w-full rounded-md xl:h-[20rem] shadow-sm  shadow-blue-50 ">
-                        <a class="xl:w-1/2 " href="{{ route('show_tour', $featuredTour->id) }}">
+                        <a class="xl:w-1/2 " href="{{ route('show_tour', ['id'=>$featuredTour->id, 'locale'=>app()->currentLocale()]) }}">
                             <figure>
                                 <img src="{{ optional($featuredTour->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredTour->title }} Cover Image"
@@ -100,7 +100,7 @@
                             </figure>
                         </a>
                         <div class="card-body xl:w-1/2 px-2 md:px-4 bg-blue-100/80">
-                            <a href="{{ route('show_tour', $featuredTour->id) }}">
+                            <a href="{{ route('show_tour', ['id'=>$featuredTour->id, 'locale'=>app()->currentLocale()]) }}">
                                 <h5
                                     class="text-xl  text-balance line-clamp-2  tracking-wide font-body font-medium text-black lg:text-left  uppercase group-hover:text-warning  decoration-2 decoration-warning   group-hover:underline-offset-4">
                                     {{ $featuredTour->title }}
@@ -110,7 +110,7 @@
                                 class=" mt-2 text-preety text-black break-all font-body font-light text-base/7 line-clamp-[5] ">
                                 {!! Str::words($featuredTour->description, 30) !!}
                             </div>
-                            <a href="{{ route('show_tour', $featuredTour->id) }}">
+                            <a href="{{ route('show_tour', ['id'=>$featuredTour->id, 'locale'=>app()->currentLocale()]) }}">
                                 <button class="btn btn-primary btn-md pl-2 mt-6 text-sm hover:btn-warning">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
                                     Explore

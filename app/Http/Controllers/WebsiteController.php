@@ -82,6 +82,11 @@ class WebsiteController extends Controller
         App::setLocale($locale);
         Session::put('current_locale', $locale);
 
-        return redirect()->back();
+        $returnUrl = redirect()->back()->getTargetUrl();
+
+        $returnUrl = str_replace("/en/", "/" . $locale . "/", $returnUrl);
+        $returnUrl = str_replace("/fr/", "/" . $locale . "/", $returnUrl);
+
+        return redirect()->to($returnUrl);
     }
 }

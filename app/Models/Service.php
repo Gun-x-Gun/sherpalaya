@@ -52,7 +52,7 @@ class Service extends Model implements CanBeEasySearched, CanBeInquiried
 
     public function searchResultUrl(): string
     {
-        return '/services/' . $this->id;
+        return '/' . app()->currentLocale() . '/services/' . $this->id;
     }
 
     public function searchResultImage(): ?Media

@@ -33,7 +33,7 @@
     <div class=" max-w-full font-body">
         <div class=""></div>
         <div class="md:grid grid-cols-7 gap-2 2xl:mx-32 mx-4 flex flex-col ">
-            <a href="/expeditions" class="col-span-4 ">
+            <a href="/{{ app()->currentLocale() }}/expeditions" class="col-span-4 ">
                 <div
                     class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group  border expedition-activity-card hover:shadow-sm hover:shadow-black">
                     <figure class="h-full w-full">
@@ -64,7 +64,7 @@
                 </div>
             </a>
 
-            <a href="/treks" class="col-span-3">
+            <a href="/{{ app()->currentLocale() }}/treks" class="col-span-3">
                 <div
                     class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group  border hover:shadow-sm  hover:shadow-black">
                     <figure class="h-full w-full ">
@@ -100,7 +100,7 @@
         </div>
 
         <div class="md:grid grid-cols-7 gap-2 2xl:mx-32 mx-4 flex flex-col">
-            <a href="/tours" class="col-span-3">
+            <a href="/{{ app()->currentLocale() }}/tours" class="col-span-3">
                 <div
                     class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group  border hover:shadow-sm  hover:shadow-black">
                     <figure class="h-full w-full">
@@ -129,7 +129,7 @@
                 </div>
             </a>
 
-            <a href="/services" class=" col-span-4">
+            <a href="/{{ app()->currentLocale() }}/services" class=" col-span-4">
                 <div
                     class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow-sm  hover:shadow-black border">
 

@@ -5,7 +5,7 @@
             <div class="h-10"></div>
             <footer class="footer">
                 <div class="gap-6">
-                    <a class="link text-base-content link-neutral texl-lg font-semibold no-underline" href="/home">
+                    <a class="link text-base-content link-neutral texl-lg font-semibold no-underline" href="/{{ app()->currentLocale() }}/home">
                         <div class="flex items-center gap-4 text-xl uppercase font-semibold text-blue-100  text-wrap"
                             data-aos="fade-down" data-aos-duration="1200">
                             <x-curator-glider alt="Sherpalaya Logo" class="h-6 w-6" :media="$companySetting->company_logo_id" :fallback="asset('/photos/banner.jpg')"
@@ -38,29 +38,29 @@
                     <h6 class="footer-title font-bold text-blue-50 uppercase">
                         {{ __('footer.adventures') }}
                     </h6>
-                    <a href="/expeditions" class="link link-hover text-blue-100 capitalize">
+                    <a href="/{{ app()->currentLocale() }}/expeditions" class="link link-hover text-blue-100 capitalize">
                         {{ __('footer.expeditions') }}</a>
-                    <a href="/services" class="link link-hover text-blue-100">
+                    <a href="/{{ app()->currentLocale() }}/services" class="link link-hover text-blue-100">
                         {{ __('footer.services') }}</a>
-                    <a href="/treks" class="link link-hover text-blue-100">
+                    <a href="/{{ app()->currentLocale() }}/treks" class="link link-hover text-blue-100">
                         {{ __('footer.treks') }}</a>
-                    <a href="/tours" class="link link-hover text-blue-100">
+                    <a href="/{{ app()->currentLocale() }}/tours" class="link link-hover text-blue-100">
                         {{ __('footer.activities') }}</a>
                 </nav>
                 <nav class="text-base-content capitalize">
                     <h6 class="footer-title font-bold text-blue-50 uppercase">{{ __('footer.company') }}</h6>
-                    <a href="/about_us" class="link link-hover text-blue-100">{{ __('footer.about-us') }}</a>
-                    <a href="/sherpas" class="link link-hover text-blue-100">{{ __('footer.our-team') }}</a>
+                    <a href="/{{ app()->currentLocale() }}/about_us" class="link link-hover text-blue-100">{{ __('footer.about-us') }}</a>
+                    <a href="/{{ app()->currentLocale() }}/sherpas" class="link link-hover text-blue-100">{{ __('footer.our-team') }}</a>
                     {{-- <a href="/" class="link link-hover text-blue-100">Certificates</a> --}}
 
                 </nav>
                 <nav class="text-base-content">
                     <h6 class="footer-title font-bold text-blue-50 uppercase">{{ __('footer.legal') }}</h6>
-                    <a href="/terms-and-conditions"
+                    <a href="/{{ app()->currentLocale() }}/terms-and-conditions"
                         class="link link-hover text-blue-100">{{ __('footer.terms-of-use') }}</a>
-                    <a href="/privacy-policy"
+                    <a href="/{{ app()->currentLocale() }}/privacy-policy"
                         class="link link-hover text-blue-100">{{ __('footer.privacy-policy') }}</a>
-                    <a href="/cookie-policy" class="link link-hover text-blue-100">{{ __('footer.cookie-policy') }}</a>
+                    <a href="/{{ app()->currentLocale() }}/cookie-policy" class="link link-hover text-blue-100">{{ __('footer.cookie-policy') }}</a>
                 </nav>
                 <nav class="text-base-content">
                     <div class="flex items-center gap- text-base uppercase font-semibold text-blue-200  text-wrap">

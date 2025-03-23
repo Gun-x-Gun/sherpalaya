@@ -71,7 +71,7 @@ class Tour extends Model implements CanBeEasySearched, CanBeInquiried
 
     public function searchResultUrl(): string
     {
-        return '/tours/' . $this->id;
+        return '/' . app()->currentLocale() . '/tours/' . $this->id;
     }
 
     public function searchResultImage(): ?Media

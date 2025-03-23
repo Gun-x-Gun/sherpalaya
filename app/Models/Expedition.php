@@ -78,7 +78,7 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
 
     public function searchResultUrl(): string
     {
-        return '/expeditions/' . $this->id;
+        return '/' . app()->currentLocale() . '/expeditions/' . $this->id;
     }
 
     public function searchResultImage(): ?Media

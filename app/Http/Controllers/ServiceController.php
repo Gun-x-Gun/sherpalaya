@@ -37,7 +37,7 @@ class ServiceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Request $request, string $id)
+    public function show(Request $request, string $locale, string $id)
     {
         $service = Service::with([
             'coverImage',

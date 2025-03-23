@@ -34,7 +34,7 @@
                             aria-label="Close" data-overlay="#booking-section-booking-modal"><span
                                 class="icon-[tabler--x] size-4"></span></button>
                     </div>
-                    <form action="/bookings/booking" method="POST">
+                    <form action="/{{ app()->currentLocale() }}/bookings/booking" method="POST">
                         @csrf
                         <input type="hidden" name="inquiriable_id" value="{{ $bookingFor->getKey() }}">
                         <input type="hidden" name="inquiriable_type" value="{{ get_class($bookingFor) }}">
@@ -75,7 +75,7 @@
                             aria-label="Close" data-overlay="#booking-section-inquiry-modal"><span
                                 class="icon-[tabler--x] size-4"></span></button>
                     </div>
-                    <form action="/bookings/inquiry" method="POST">
+                    <form action="/{{ app()->currentLocale() }}/bookings/inquiry" method="POST">
                         @csrf
                         <input type="hidden" name="inquiriable_id" value="{{ $bookingFor->getKey() }}">
                         <input type="hidden" name="inquiriable_type" value="{{ get_class($bookingFor) }}">

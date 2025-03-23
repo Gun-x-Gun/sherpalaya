@@ -29,7 +29,7 @@ class PeakController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Request $request, string $id)
+    public function show(Request $request, string $locale, string $id)
     {
         $pageSetting = app(PageSetting::class);
 

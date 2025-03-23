@@ -31,7 +31,7 @@ class TourController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Request $request, string $id)
+    public function show(Request $request, string $locale, string $id)
     {
         $tour = Tour::findOrFail($id);
         return view('website.id_pages.show_tour', compact('tour'));

@@ -14,13 +14,18 @@ use App\Http\Middleware\ManageLocaleMddleware;
 use Illuminate\Support\Facades\Route;
 
 // Redirect to home page
-Route::redirect('/', '/home');
+Route::redirect('/', '/en/home');
+
+Route::get('/change-locale/{locale}', [WebsiteController::class, 'changeLocale'])
+    ->name('website.change_locale')
+    ->middleware('lscache:no-cache');
 
 Route::middleware([
     ManageLocaleMddleware::class,
     'lscache:max-age=600;public',
     'lstags:sherpalaya_website'
 ])
+    ->prefix('/{locale}')
     ->group(function () {
 
 
@@ -39,8 +44,6 @@ Route::middleware([
                 Route::get('/contact', 'contactUs')->name('website.contact');
                 Route::post('/contact', 'contactUsSubmit');
                 Route::get('/about_us', 'aboutUs')->name('website.company.about_us');
-                Route::get('/change-locale/{locale}', 'changeLocale')->name('website.change_locale')
-                    ->middleware('lscache:no-cache');
                 // Route::get('/our_team', 'ourTeam')->name('website.company.our_team');
             });
 
