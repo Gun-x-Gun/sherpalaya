@@ -67,7 +67,6 @@
                      font-light font-body lg:w-[80%]">
                     {{-- {{ $pageSetting->service_page_page_content }} --}}
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->service_page_content_fr : $pageSetting->service_page_content_en }}
-                    </p>
                     <div class="h-10 md:h-12"></div>
                 </div>
             </div>

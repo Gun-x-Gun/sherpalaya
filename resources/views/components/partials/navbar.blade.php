@@ -110,7 +110,7 @@
                                     @foreach ($navExpeditions as $index => $expCategory)
                                         @if ($expCategory->expeditions->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active active-tab:font-bold text-nowrap text-lg uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
+                                                class="tab active-tab:tab-active active-tab:font-bold text-lg uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
                                                 id="tabs-center-item-{{ $expCategory->id }}"
                                                 data-tab="#tabs-center-{{ $expCategory->id }}"
                                                 aria-controls="tabs-center-{{ $expCategory->id }}" role="tab"
@@ -739,17 +739,31 @@
                 drawer.style.transition = "transform 0.5s ease";
             }
 
+            function applyNavbarStyles() {
+                const currentScroll = window.pageYOffset;
+
+                if (navbar) {
+                    if (currentScroll <= 5) { // Apply default styles when at the top
+                        navbar.classList.add("top-navbar");
+                        navbar.style.transform = "translateY(0)";
+                    } else {
+                        navbar.classList.remove("top-navbar");
+                    }
+                }
+            }
+
             function handleScroll(event) {
                 const currentScroll = window.pageYOffset;
                 const isScrollingUp = checkScrollDirection(event);
 
                 if (navbar) {
-                    if (currentScroll === 0) {
+                    if (currentScroll <= 5) {
                         navbar.classList.add("top-navbar"); // Apply default style
-                        navbar.style.transform = "translateY(0)"; // Ensure it's visible
+                        navbar.style.transform = "translateY(0)";
                     } else {
-                        navbar.classList.remove("top-navbar"); // Change on scroll
-                        if (Math.abs(currentScroll - lastScrollTop) > 10) {
+                        navbar.classList.remove("top-navbar");
+
+                        if (Math.abs(currentScroll - lastScrollTop) > 10) { // Threshold to prevent flickering
                             navbar.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
                         }
                     }
@@ -778,6 +792,10 @@
 
             window.addEventListener('touchmove', handleScroll, { passive: true });
             window.addEventListener('wheel', handleScroll, { passive: true });
+
+            // Check scroll position when page loads
+            applyNavbarStyles();
         });
     </script>
 @endpush
+

@@ -8,7 +8,7 @@
                     <a class="link text-base-content link-neutral texl-lg font-semibold no-underline" href="/{{ app()->currentLocale() }}/home">
                         <div class="flex items-center gap-4 text-xl uppercase font-semibold text-blue-100  text-wrap"
                             data-aos="fade-down" data-aos-duration="1200">
-                            <x-curator-glider alt="Sherpalaya Logo" class="h-6 w-6" :media="$companySetting->company_logo_id" :fallback="asset('/photos/banner.jpg')"
+                            <x-curator-glider alt="Sherpalaya Logo" class="h-6 w-6" :media="$companySetting->company_logo_id" fallback="default"
                                 loading="lazy" />
                             <span>{{ app()->currentLocale() == 'fr' ? $companySetting->company_name_fr : $companySetting->company_name_en }}</span>
                         </div>
