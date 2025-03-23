@@ -114,7 +114,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->navigationItems([
                 NavigationItem::make('Sherpalaya Home')
-                    ->url('/home', shouldOpenInNewTab: true)
+                    ->url('/en/home', shouldOpenInNewTab: true)
                     ->icon('heroicon-o-chevron-double-up'),
             ])
             ->navigationGroups([
