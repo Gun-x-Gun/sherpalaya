@@ -98,7 +98,7 @@
                 {{ __('aboutpage.faq') }}
             </h1>
             <div class="h-8"></div>
-            <div class="accordion accordion-shadow shadow-md font-body">
+            <div class="accordion accordion-shadow shadow-md font-body" data-accordion-always-open="">
                 @foreach ($faqs as $index => $faq)
                     <div class="accordion-item" id="faq-{{ $faq->id }}">
                         <button
