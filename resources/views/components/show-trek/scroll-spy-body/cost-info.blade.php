@@ -3,6 +3,11 @@
         $costsInclude = array_filter($trek->costs_include);
         $costsExclude = array_filter($trek->costs_exclude);
     @endphp
+
+    {{-- @dd($costsInclude) --}}
+
+    {{-- {{ dd($trek->costs_include) }} --}}
+
     @if (!empty($trek->costs_include))
         <div id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/40">
             <div class="h-8">
@@ -45,7 +50,7 @@
             </div>
             <div class="card-body p-2 mt-4 font-body">
                 <ul class="space-y-5">
-                    @foreach ($trek->costsExclude as $cost_exclude)
+                    @foreach ($costsExclude as $cost_exclude)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse">
                             <span class="bg-transparent text-red-300 flex items-center justify-center rounded-full ">
                                 <span class="icon-[tabler--exclamation-circle] size-5"></span>

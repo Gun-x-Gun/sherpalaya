@@ -18,7 +18,7 @@
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-3 on the text and col-span-4 on the image --}}
                         <div
-                            class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-blue-100/60">
+                            class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-blue-100/60 h-[28rem]">
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <h5
                                     class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
@@ -43,7 +43,7 @@
                                     class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
-                                <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2">
+                                <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2 h-[28rem]">
                                     <div class="md:text-center " data-aos="flip-up" data-aos-duration="800">
                                         <h2
                                             class="font-normal tracking-wide font-oswald text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning ">
@@ -79,7 +79,7 @@
                                     class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
-                                <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2">
+                                <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2 ">
                                     <div class="text-left md:text-center " data-aos="flip-up" data-aos-duration="800">
                                         <h2
                                             class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
@@ -94,7 +94,7 @@
                             </a>
                         </div>
                         <div
-                            class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-transparent">
+                            class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-transparent h-[28rem]">
                             <a href="{{ route('show_expedition', $featuredExpedition->id) }}">
                                 <h5
                                     class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
