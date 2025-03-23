@@ -1,4 +1,4 @@
-<div id="home-page-carousel-container" class=" w-full">
+<div id="home-page-carousel-container" class="h-screen w-full">
     <div id="snap"
         data-carousel='{ "loadingClasses": "opacity-0", "isAutoPlay": true, "speed": 10000, "isCentered": true, "dotsItemClasses": "carousel-dot border shadow-black bg-warning bg-opacity-20 carousel-active:bg-warning carousel-active:bg-opacity-70", "isInfiniteLoop": true}'
         class="relative h-full w-full ">

@@ -47,7 +47,7 @@
                 'url' => url('/home'),
             ],
             [
-                'name' => 'Our Sherpas',
+                'name' => 'Our Team',
                 'url' => url('/sherpas'),
             ],
             [
@@ -67,19 +67,19 @@
 
             <div>
                 @if (count($sherpa->language) > 0)
-                    <div class="md:mx-8 lg:mx-16 xl:mx-28 bg-gray-200">
+                    <div class="md:mx-8 lg:mx-16 xl:mx-28 bg-gray-300">
                         <div class="h-10"></div>
                         <div class="mx-2">
                             <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left"
-                                data-aos="fade-down" data-aos-duration="1200">
+                                data-aos="fade-up" data-aos-duration="1200">
                                 Languages
                             </h5>
                             <div class="h-4"></div>
-                            <ul class="list-inside list-disc tracking-wide">
-                                @foreach ($sherpa->language as $lang)
-                                    <li class="mb-2 tracking-wide font-light">{{ $lang }}</li>
-                                @endforeach
-                            </ul>
+                            @foreach ($sherpa->language as $lang)
+                                <p class="text-black uppercase items-center badge badge-warning  px-1 py-0 text-xs">
+                                    {{ $lang }}
+                                </p>
+                            @endforeach
                         </div>
                         <div class="h-10"></div>
                     </div>
@@ -96,8 +96,8 @@
                     Expeditions
                 </h5>
                 <div class="h-4"></div>
-                <div class="md:mx-8 lg:mx-16 xl:mx-28">
-                    <table class="table-striped-columns table font-body">
+                <div class="overflow-x-scroll horizontal-scrollbar md:mx-8 lg:mx-16 xl:mx-28">
+                    <table class="table-striped-columns table font-body ">
                         <thead>
                             <tr class="text-2xl">
                                 <th>Name Of The Mountain</th>
@@ -205,7 +205,7 @@
             <div class="col-span-2 md:mx-8 lg:mx-16 xl:mx-28">
                 @if ($sherpa->awardsAndCertificates->count() > 0)
                     <h5 class="card-title font-normal uppercase text-2xl text-black tracking-normal mx-0 text-left"
-                        data-aos="fade-down" data-aos-duration="1200">
+                        data-aos="fade-up" data-aos-duration="1200">
                         Awards & Certificates
                     </h5>
                     <div class="h-10"></div>

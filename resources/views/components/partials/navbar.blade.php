@@ -430,7 +430,7 @@
                                     'text-warning' => request()->route()->getName() == 'website.contact',
                                 ])>
                                 {{ __('navbar.contact') }}
-                                </a>
+                            </a>
                         </li>
 
                         {{-- Search --}}
@@ -715,10 +715,11 @@
     <script defer>
         document.addEventListener("DOMContentLoaded", function() {
             const navbar = document.getElementById('navbar');
-            const drawer = document.getElementById('navbar');
-            let lastScrollTop = 0;
+            const drawer = document.getElementById('drawer'); // Ensure this ID exists for the mobile menu
+            let lastScrollTop = window.pageYOffset;
+            let touchStartY = 0;
 
-            // Ensure transitions are smooth
+            // Apply smooth transitions
             if (navbar) {
                 navbar.style.transition = "background 0.5s ease, transform 0.5s ease";
             }
@@ -728,16 +729,17 @@
 
             function handleScroll(event) {
                 const currentScroll = window.pageYOffset;
-                const isScrollingUp = checkScrollDirectionIsUp(event);
+                const isScrollingUp = checkScrollDirection(event);
 
-                // Change background based on position
                 if (navbar) {
                     navbar.style.background = currentScroll === 0 ? "transparent" : "rgba(255, 255, 255, 1)";
                     navbar.style.color = currentScroll === 0 ? "white" : "black";
-                    navbar.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
+
+                    if (Math.abs(currentScroll - lastScrollTop) > 10) { // Add a threshold to prevent flickering
+                        navbar.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
+                    }
                 }
 
-                // Only affect drawer if it is visible (mobile)
                 if (drawer && getComputedStyle(drawer).display !== "none") {
                     drawer.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
                 }
@@ -745,20 +747,26 @@
                 lastScrollTop = currentScroll;
             }
 
-            function checkScrollDirectionIsUp(event) {
+            function checkScrollDirection(event) {
                 if (event.type === "wheel") {
                     return event.deltaY < 0;
                 } else if (event.type === "touchmove") {
-                    return window.pageYOffset < lastScrollTop;
+                    return event.touches[0].clientY > touchStartY;
                 }
                 return false;
             }
 
-            // Apply event listeners for different devices
-            window.addEventListener('wheel', handleScroll, {
+            // Touch event handlers for mobile
+            window.addEventListener('touchstart', function(event) {
+                touchStartY = event.touches[0].clientY;
+            }, {
                 passive: true
             });
+
             window.addEventListener('touchmove', handleScroll, {
+                passive: true
+            });
+            window.addEventListener('wheel', handleScroll, {
                 passive: true
             });
         });
