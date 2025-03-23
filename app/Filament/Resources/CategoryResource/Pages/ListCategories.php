@@ -31,7 +31,7 @@ class ListCategories extends ListRecords
             ->modifyQueryUsing(fn (Builder $query) => $query->where('type', CategoryTypes::EXPEDITION)),
         'trek' => Tab::make('Trek')
             ->modifyQueryUsing(fn (Builder $query) => $query->where('type', CategoryTypes::TREK)),
-        'tour' => Tab::make('Tour')
+        'tour' => Tab::make('Activity')
             ->modifyQueryUsing(fn (Builder $query) => $query->where('type', CategoryTypes::TOUR)),
     ];
 }
