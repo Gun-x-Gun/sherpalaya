@@ -1,7 +1,11 @@
 <div class="md:grid grid-cols-2 ">
     @php
-        $costsInclude = array_filter($expedition->costs_include);
-        $costsExclude = array_filter($expedition->costs_exclude);
+        $costsInclude = array_filter($expedition->costs_include, function ($costInc) {
+            return !is_null($costInc[app()->currentLocale()]);
+        });
+        $costsExclude = array_filter($expedition->costs_exclude, function ($costExc) {
+            return !is_null($costExc[app()->currentLocale()]);
+        });
     @endphp
     @if (!empty($costsInclude))
 

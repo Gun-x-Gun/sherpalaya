@@ -35,15 +35,13 @@
                 <img src="{{ $service->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
                     class="h-[80vh] w-full object-cover brightness-50" />
             </figure>
-            <div class="card-body absolute inset-0 flex items-center justify-start font-oswald">
-                <div class="absolute bottom-1/4 left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
-                    data-aos="fade-down" data-aos-duration="1200">
-                    <h2
-                        class="card-title mb-2 text-white text-4xl sm:text-5xl lg:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap md:w-[70%] leading-[1.3]  overflow-hidden opacity-75">
-                        {{ $service->title }}
+            <div class="absolute bottom-1/4 left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden w-[90%] md:w-[60%]"
+                data-aos="fade-down" data-aos-duration="1200">
+                <h1
+                    class="card-title mb-2 text-warning text-4xl sm:text-5xl lg:text-6xl  uppercase font-card font-semibold tracking-tight text-balance leading-[1.3] opacity-75">
+                    {{ $service->title }}
 
-                    </h2>
-                </div>
+                </h1>
             </div>
         </div>
 
@@ -53,7 +51,7 @@
                 'url' => url('/home'),
             ],
             [
-                'name' => 'Service',
+                'name' => 'Services',
                 'url' => url('/services'),
             ],
             [
@@ -67,28 +65,30 @@
         <div class="mx-4 2xl:mx-32 mt-4">
             {{-- description  --}}
 
-            <div class="card sm:w-full md:px-8 shadow-sm shadow-slate-300 bg-blue-50/10">
-                <div class="card-body text-justify text-black px-0 tracking-wide font-light text-lg/7 font-body">
-                    <p>
-                        {{ $service->description }}
-                    </p>
-                </div>
-            </div>
-
-
             <div class="h-10"></div>
             <div class="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 gap-4">
-                <div class="col-span-2">
-                    <div class="bg-blue-100/5">
-                        @if (!empty($service->destinations))
-                            <div class="card 2xl:max-w-full rounded-none bg-transparent ">
 
+                <div class="col-span-2">
+                    {{-- @dd($service->destinations) --}}
+
+                    <div class="bg-blue-100/5">
+                        @if (count($service->destinations) > 0)
+                            <div class="card 2xl:max-w-full rounded-none bg-transparent">
+                                <div class="card sm:w-full shadow-sm shadow-slate-300 bg-blue-50/10">
+                                    <div class="card-body text-left text-black px-2 tracking-wide font-light text-lg/7 font-body">
+                                        <div>
+                                            {!! $service->description !!}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="h-6"></div>
                                 <div class="card-header  pb-4  px-2" data-aos="fade-down" data-aos-duration="1200">
                                     <h5
                                         class="card-title  text-center uppercase text-3xl text-black font-semibold tracking-tight">
-                                        {{__('show-page.service')}}
+                                        {{ __('show-page.service') }}
                                     </h5>
                                 </div>
+                                
                                 <div class="h-4"></div>
                                 <div class="sm:grid sm:grid-cols-2 md:grid-cols-2 flex flex-col gap-2 w-full md:px-2">
                                     @foreach ($service->destinations as $destination)
@@ -153,7 +153,7 @@
                                                         class="text-black uppercase items-center badge tracking-wider badge-warning  px-1 py-0 text-xs">
                                                         {{ $destination->region->name }} Region
                                                     </p>
-                                                    <p class="text-black tracking-wide font-body text-base/6 font-light">
+                                                    <p class="text-black tracking-wide font-body text-lg/6 font-light">
                                                         {{ Str::words($destination->description, 50) }}
                                                     </p>
                                                 </div>
@@ -162,19 +162,24 @@
                                     @endforeach
                                 </div>
                                 <div class="h-6">
-
                                 </div>
                             </div>
                         @endif
                     </div>
-
+                    
                     <x-show-service.service-gallery :service="$service" />
+
                 </div>
 
                 <div class="w-full hidden xl:block">
                     <div class="sticky top-32">
                         <x-booking.booking-section :bookingFor="$service" />
                     </div>
+                </div>
+            </div>
+            <div class="w-full xl:hidden">
+                <div class="sticky bottom-0">
+                    <x-booking.booking-section :bookingFor="$service" />
                 </div>
             </div>
             <x-show-recommendation :recommendFor="$service" />

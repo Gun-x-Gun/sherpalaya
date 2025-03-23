@@ -31,12 +31,12 @@
                         src="{{ $sherpa->profilePicture->url }}" alt="picture" />
                 </div>
                 <div class="text-center w-full font-oswald" data-aos="fade-down" data-aos-duration="1200">
-                    <h5 class="card-title mb-1 text-warning  tracking-tight text-2xl md:text-2xl uppercase font-bold ">
+                    <h1 class="card-title mb-1 text-warning  tracking-tight text-2xl md:text-2xl uppercase font-bold ">
                         {{ $sherpa->name }}
-                    </h5>
-                    <h5 class="card-title text-white text-sm md:text-xl capitalize font-oswald font-normal ">
+                    </h1>
+                    <h2 class="card-title text-white text-sm md:text-xl capitalize font-oswald font-normal ">
                         {{ $sherpa->title }}
-                    </h5>
+                    </h2>
                 </div>
             </div>
         </div>

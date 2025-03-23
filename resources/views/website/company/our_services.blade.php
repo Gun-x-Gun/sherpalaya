@@ -67,8 +67,9 @@
                      font-light font-body lg:w-[80%]">
                     {{-- {{ $pageSetting->service_page_page_content }} --}}
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->service_page_content_fr : $pageSetting->service_page_content_en }}
-                    <div class="h-10 md:h-12"></div>
                 </div>
+                <div class="h-10 md:h-12"></div>
+
             </div>
 
             {{-- Showing <strong>{{ $serviceDestination->services->count() }}</strong> --}}
@@ -85,14 +86,14 @@
                         <div class="card-body group px-2 py-4  bg-blue-100/40 ">
                             <a href="{{ route('show_service',['id'=> $serviceData->service->id, 'locale'=>app()->currentLocale()]) }}">
                                 <h5
-                                    class="card-title line-clamp-2 mb-2 uppercase text-lg text-black tracking-tight  group-hover:underline  decoration-4 decoration-warning">
+                                    class="card-title line-clamp-2 mb-2 uppercase text-lg text-black tracking-tight group-hover:underline decoration-4 decoration-warning">
                                     {{ $serviceData->service->title }}</h5>
                             </a>
-                            <div class="justify-start flex flex-col  gap-2 pb-0">
-                                <span
-                                    class="items-center text-black text-justify text-base/7 font-body font-light  line-clamp-4">
-                                    {{ $serviceData->service->description }}
-                                </span>
+                            <div class="justify-start flex flex-col gap-2 pb-0">
+                                <div
+                                    class="items-center text-black text-justify text-base/7 font-body font-light line-clamp-4">
+                                    {!! $serviceData->service->description !!}
+                                </div>
                             </div>
                         </div>
                     </div>

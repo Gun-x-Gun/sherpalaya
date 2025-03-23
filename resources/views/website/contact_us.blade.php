@@ -56,7 +56,7 @@
         <div class="2xl:mx-32 mx-4">
             <div class="h-8"></div>
             <div class="">
-                <div class=" text-center sm:text-center ">
+                <div class=" text-left " data-aos="fade-up" data-aos-duration="1200">
                     <h2 class="font-medium text-black uppercase tracking-normal text-3xl md:text-4xl ">
                         {{ app()->currentLocale() == 'fr' ? $contactUsSetting->content_title_fr : $contactUsSetting->content_title_en }}
                     </h2>
@@ -143,7 +143,6 @@
                                         {{ __('contact.form-success') }}
                                     </div>
                                 @endif
-
                             @endif
                             <form id="contactForm" action="/{{ app()->currentLocale() }}/contact" method="POST" class="mt-2">
                                 @csrf

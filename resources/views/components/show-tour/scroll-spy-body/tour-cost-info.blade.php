@@ -1,9 +1,14 @@
 <div class="md:grid grid-cols-2 ">
     @php
-        $costsInclude = array_filter($tour->costs_include);
-        $costsExclude = array_filter($tour->costs_exclude);
+        $costsInclude = array_filter($tour->costs_include, function ($costInc) {
+            return !is_null($costInc[app()->currentLocale()]);
+        });
+        $costsExclude = array_filter($tour->costs_exclude, function ($costExc) {
+            return !is_null($costExc[app()->currentLocale()]);
+        });
     @endphp
-    @if (!empty($tour->costs_include))
+
+    @if (!empty($costsInclude))
         <div id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/40">
             <div class="h-8">
             </div>
@@ -32,7 +37,7 @@
         </div>
     @endif
 
-    @if (!empty($tour->costs_exclude))
+    @if (!empty($costsExclude))
         {{-- cost exclude --}}
         <div id="costs_exclude" class="card 2xl:max-w-full  rounded-none bg-red-100/40">
             <div class="h-8">

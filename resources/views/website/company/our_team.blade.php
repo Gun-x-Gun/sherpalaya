@@ -78,7 +78,7 @@
         <div class="mx-4 2xl:mx-32">
             <div class=" flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
                 @foreach ($allSherpas as $allSherpa)
-                    <a href="{{ route('show_team_member', $allSherpa->id) }}">
+                    <a href="{{ route('show_team_member', ['id'=>$allSherpa->id,'locale'=>app()->currentLocale()]) }}">
                         <div class="card w-full h-full ">
                             <img src="{{ $allSherpa->profilePicture->url ?? asset('photos/P1030127.JPG') }}"
                                 alt="{{ $allSherpa->title }} Cover Image" class="h-[20rem] object-cover " />
