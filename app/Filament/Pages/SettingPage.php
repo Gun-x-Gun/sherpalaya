@@ -12,5 +12,7 @@ class SettingPage extends Page
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static string $view = 'filament.pages.setting-page';
 }

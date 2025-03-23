@@ -13,21 +13,26 @@ use Filament\Widgets\StatsOverviewWidget\Stat;
 
 class SettingsOverview extends BaseWidget
 {
+    protected static ?int $sort = 2;
+
     protected function getStats(): array
     {
         return [
-            Stat::make('Manage', 'About Us')
-                ->url(ManageAboutUs::getUrl()),
-            Stat::make('Manage', 'Company')
-                ->url(ManageCompany::getUrl()),
-            Stat::make('Manage', 'Contact Us')
-                ->url(ManageContactUs::getUrl()),
-            Stat::make('Manage', 'Landing Page')
+            Stat::make('Manage', 'Home Page')
                 ->url(ManageLandingPage::getUrl()),
-            Stat::make('Manage', 'Legal')
-                ->url(ManageLegal::getUrl()),
-            Stat::make('Manage', 'Page')
+            Stat::make('Manage', 'List Pages')
                 ->url(ManagePage::getUrl()),
+
+            Stat::make('Manage', 'Company Info')
+                ->url(ManageCompany::getUrl()),
+            Stat::make('Manage', 'About Us Page')
+                ->url(ManageAboutUs::getUrl()),
+            Stat::make('Manage', 'Contact Us Page')
+                ->url(ManageContactUs::getUrl()),
+
+            Stat::make('Manage', 'Legal Details')
+                ->url(ManageLegal::getUrl()),
+
         ];
     }
 }
