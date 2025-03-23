@@ -6,6 +6,7 @@ use App\Filament\Fields\CuratorPicker;
 use App\Settings\AboutUsSetting;
 use App\Settings\PageSetting;
 use App\Traits\HasSettingsSidebar;
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
@@ -17,6 +18,8 @@ use Filament\Pages\SettingsPage;
 
 class ManageAboutUs extends SettingsPage
 {
+    use HasPageShield;
+
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
     protected static string $settings = AboutUsSetting::class;

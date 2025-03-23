@@ -13,6 +13,7 @@ use Filament\Forms\Components\Tabs;
 use App\Settings\LandingPageSetting;
 use Filament\Forms\Components\Hidden;
 use App\Filament\Fields\CuratorPicker;
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
@@ -21,6 +22,8 @@ use Illuminate\Support\HtmlString;
 
 class ManageLandingPage extends SettingsPage
 {
+    use HasPageShield;
+
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
     protected static string $settings = LandingPageSetting::class;

@@ -5,6 +5,7 @@ namespace App\Filament\Pages\Settings;
 use App\Filament\Fields\CuratorPicker;
 use App\Settings\ContactUsSetting;
 use App\Traits\HasSettingsSidebar;
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -13,6 +14,8 @@ use Filament\Pages\SettingsPage;
 
 class ManageContactUs extends SettingsPage
 {
+    use HasPageShield;
+
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
     protected static string $settings = ContactUsSetting::class;
@@ -119,7 +122,7 @@ class ManageContactUs extends SettingsPage
                                 ->required(),
                         ]),
                     ]),
-                
+
             ]);
     }
 }

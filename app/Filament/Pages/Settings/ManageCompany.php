@@ -5,6 +5,7 @@ namespace App\Filament\Pages\Settings;
 use App\Filament\Fields\CuratorPicker;
 use App\Settings\CompanySetting;
 use App\Traits\HasSettingsSidebar;
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 use Filament\Forms;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Tabs;
@@ -14,6 +15,8 @@ use Filament\Pages\SettingsPage;
 
 class ManageCompany extends SettingsPage
 {
+    use HasPageShield;
+
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
     protected static string $settings = CompanySetting::class;
@@ -77,21 +80,21 @@ class ManageCompany extends SettingsPage
                             TextInput::make('company_name_fr')
                             ->label('Company Name')
                                 ->required(),
-    
+
                             TextInput::make('company_address_fr')
                             ->label('Address')
                                 ->required(),
-    
+
                             TextInput::make('company_email_fr')
                             ->label('Email')
                                 ->required(),
-    
+
                             TextInput::make('company_contact_number_fr')
                             ->label('Contact Number')
                                 ->required(),
                         ]),
                     ]),
-                
+
             ]);
     }
 }

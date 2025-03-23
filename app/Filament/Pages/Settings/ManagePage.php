@@ -5,6 +5,7 @@ namespace App\Filament\Pages\Settings;
 use App\Filament\Fields\CuratorPicker;
 use App\Settings\PageSetting;
 use App\Traits\HasSettingsSidebar;
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 use Filament\Forms;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Grid;
@@ -16,6 +17,8 @@ use Filament\Pages\SettingsPage;
 
 class ManagePage extends SettingsPage
 {
+    use HasPageShield;
+
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
     protected static string $settings = PageSetting::class;
