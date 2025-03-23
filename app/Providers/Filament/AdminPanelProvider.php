@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\SettingPage;
 use App\Filament\Pages\Settings\ManageLandingPage;
 use App\Filament\Resources\DestinationResource;
 use App\Filament\Resources\ExpeditionResource;
@@ -134,7 +135,7 @@ class AdminPanelProvider extends PanelProvider
                     ->icon('heroicon-o-tag'),
                 MenuItem::make()
                     ->label('Settings')
-                    ->url(fn(): string => ManageLandingPage::getUrl())
+                    ->url(fn(): string => SettingPage::getUrl())
                     ->icon('heroicon-o-cog'),
             ]);
     }
