@@ -3,14 +3,16 @@
         {{-- Booking --}}
 
         <button type="button" class="btn btn-primary btn-wide uppercase" aria-haspopup="dialog" aria-expanded="false"
-            aria-controls="booking-section-booking-modal" data-overlay="#booking-section-booking-modal" > Book this trip
+            aria-controls="booking-section-booking-modal" data-overlay="#booking-section-booking-modal" >
+            {{__('show-page.book')}}
         </button>
 
 
         {{-- Inquiry --}}
 
         <button type="button" class="btn btn-info  btn-wide uppercase" aria-haspopup="dialog" aria-expanded="false"
-            aria-controls="booking-section-inquiry-modal" data-overlay="#booking-section-inquiry-modal"> Inquiry
+            aria-controls="booking-section-inquiry-modal" data-overlay="#booking-section-inquiry-modal">
+            {{__('show-page.inquire')}}
         </button>
 
         <a href="{{ $bookingFor->getWhatsappUrl() }}" class="btn btn-success btn-wide uppercase text-white"

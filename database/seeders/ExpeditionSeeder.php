@@ -721,12 +721,12 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $lhotse_exped,
             'cover_image_id',
-            public_path('photos/qualitymount.png')
+            public_path('photos/newexped.JPG')
         );
         CuratorSeederHelper::seedBelongsTo(
             $lhotse_exped,
             'feature_image_id',
-            public_path('photos/qualitymount.png')
+            public_path('photos/newexped2.JPG')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -1203,12 +1203,12 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $manaslu_expedition_data,
             'cover_image_id',
-            public_path('photos/qualitymount2.png')
+            public_path('photos/newexped2.JPG')
         );
         CuratorSeederHelper::seedBelongsTo(
             $manaslu_expedition_data,
             'feature_image_id',
-            public_path('photos/qualitymount2.png')
+            public_path('photos/newexped.JPG')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -3356,12 +3356,12 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $vip_everest_expedition_data,
             'cover_image_id',
-            public_path('photos/qualitymount1.png')
+            public_path('photos/newexped3.JPG')
         );
         CuratorSeederHelper::seedBelongsTo(
             $vip_everest_expedition_data,
             'feature_image_id',
-            public_path('photos/qualitymount1.png')
+            public_path('photos/newexped4.JPG')
         );
 
         CuratorSeederHelper::seedBelongsToMany(

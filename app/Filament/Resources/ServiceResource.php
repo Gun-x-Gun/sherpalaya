@@ -13,6 +13,7 @@ use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -71,6 +72,7 @@ class ServiceResource extends Resource
                         ->columnSpanFull(),
 
                         Map::make('location')
+                            ->required()
                             ->label('Location')
                             ->columnSpanFull()
                             ->defaultLocation(latitude: 27.700769, longitude: 85.300140)

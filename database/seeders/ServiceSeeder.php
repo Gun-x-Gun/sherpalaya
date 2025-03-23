@@ -169,5 +169,44 @@ class ServiceSeeder extends Seeder
             public_path('photos/culture2.jpg')
         );
 
+        $photographyService = [
+            'title' => [
+                'en' => 'Adventure Photography Sessions',
+                'fr' => 'Séances de photographie d’aventure',
+            ],
+            'description' => [
+                'en' => 'Experience personalized photography sessions capturing your adventures, treks, and tours across Nepal’s breathtaking landscapes and vibrant cultures.',
+                'fr' => 'Profitez de séances de photographie personnalisées pour immortaliser vos aventures, treks et circuits à travers les paysages époustouflants et les cultures vibrantes du Népal.',
+            ],
+            'cover_image_id' => null,
+            'location' => ['lat' => 27.7172, 'lng' => 85.3240], // Example coordinates near Kathmandu, adjustable to specific areas
+        ];
+        
+        // Creating the service and syncing with a random destination in a specific region (e.g., region_id 2)
+        $serv = Service::create($photographyService);
+        $serv->destinations()->sync(
+            Destination::where('region_id', 2)
+                ->inRandomOrder()
+                ->limit(1)
+                ->get()
+                ->pluck('id')
+                ->toArray()
+        );
+        CuratorSeederHelper::seedBelongsTo(
+            $serv,
+            'cover_image_id',
+            public_path('photos/photography.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $serv,
+            'images',
+            public_path('photos/culture3.jpg')
+        );
+        CuratorSeederHelper::seedBelongsToMany(
+            $serv,
+            'images',
+            public_path('photos/culture2.jpg')
+        );
+
     }
 }
