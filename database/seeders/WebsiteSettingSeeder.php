@@ -325,8 +325,8 @@ class WebsiteSettingSeeder extends Seeder
 
         $aboutUsSetting->cover_image_id = CuratorSeederHelper::resolveFileData(public_path('/photos/aboutpage.jpg'))->id;
 
-        $aboutUsSetting->content_en = "<p>We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.</p>";
-        $aboutUsSetting->content_fr = "<p>Nous offrons une large gamme de services pour garantir que votre voyage au Népal soit fluide et inoubliable. Des expéditions guidées et des aventures de trekking aux circuits culturels, en passant par la logistique, les permis et le soutien à la sécurité, nous gérons chaque détail pour que vous puissiez vous concentrer sur l'aventure qui vous attend.</p>";
+        $aboutUsSetting->content_en = "We offer a wide range of services to ensure your journey in Nepal is seamless and unforgettable. From guided expeditions and trekking adventures to cultural tours, logistics, permits, and safety support, we handle every detail so you can focus on the adventure ahead.";
+        $aboutUsSetting->content_fr = "Nous offrons une large gamme de services pour garantir que votre voyage au Népal soit fluide et inoubliable. Des expéditions guidées et des aventures de trekking aux circuits culturels, en passant par la logistique, les permis et le soutien à la sécurité, nous gérons chaque détail pour que vous puissiez vous concentrer sur l'aventure qui vous attend.";
 
         $aboutUsSetting->content_title_en = "Our Passion, Your Adventure";
         $aboutUsSetting->content_title_fr = "Notre Passion, Votre Aventure";
