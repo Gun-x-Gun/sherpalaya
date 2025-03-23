@@ -733,7 +733,7 @@
 
             // Apply smooth transitions
             if (navbar) {
-                navbar.style.transition = "background 0.8s ease, transform 0.8s ease, color 0.1s ease";
+                navbar.style.transition = "background 0.5s ease, transform 0.5s ease, color 0.1s ease";
             }
             if (drawer) {
                 drawer.style.transition = "transform 0.5s ease";
