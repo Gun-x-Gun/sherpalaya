@@ -1,3 +1,15 @@
+<style>
+    .top-navbar {
+        background: transparent !important;
+        color: white !important;
+    }
+
+    #navbar:not(.top-navbar) {
+        background: rgba(255, 255, 255, 1) !important;
+        color: black !important;
+    }
+</style>
+
 <header id="navbar"
     class="fixed top-0 z-50  w-full flex  flex-wrap py-4 text-base lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
     <nav class="w-full" aria-label="Global">
@@ -721,7 +733,7 @@
 
             // Apply smooth transitions
             if (navbar) {
-                navbar.style.transition = "background 0.5s ease, transform 0.5s ease";
+                navbar.style.transition = "background 0.8s ease, transform 0.8s ease, color 0.1s ease";
             }
             if (drawer) {
                 drawer.style.transition = "transform 0.5s ease";
@@ -732,11 +744,14 @@
                 const isScrollingUp = checkScrollDirection(event);
 
                 if (navbar) {
-                    navbar.style.background = currentScroll === 0 ? "transparent" : "rgba(255, 255, 255, 1)";
-                    navbar.style.color = currentScroll === 0 ? "white" : "black";
-
-                    if (Math.abs(currentScroll - lastScrollTop) > 10) { // Add a threshold to prevent flickering
-                        navbar.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
+                    if (currentScroll === 0) {
+                        navbar.classList.add("top-navbar"); // Apply default style
+                        navbar.style.transform = "translateY(0)"; // Ensure it's visible
+                    } else {
+                        navbar.classList.remove("top-navbar"); // Change on scroll
+                        if (Math.abs(currentScroll - lastScrollTop) > 10) {
+                            navbar.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
+                        }
                     }
                 }
 
@@ -759,16 +774,10 @@
             // Touch event handlers for mobile
             window.addEventListener('touchstart', function(event) {
                 touchStartY = event.touches[0].clientY;
-            }, {
-                passive: true
-            });
+            }, { passive: true });
 
-            window.addEventListener('touchmove', handleScroll, {
-                passive: true
-            });
-            window.addEventListener('wheel', handleScroll, {
-                passive: true
-            });
+            window.addEventListener('touchmove', handleScroll, { passive: true });
+            window.addEventListener('wheel', handleScroll, { passive: true });
         });
     </script>
 @endpush
