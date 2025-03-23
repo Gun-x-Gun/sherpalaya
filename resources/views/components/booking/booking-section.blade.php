@@ -2,7 +2,7 @@
     <div class="card-actions justify-center" >
         {{-- Booking --}}
 
-        <button type="button" class="btn btn-primary btn-wide uppercase" aria-haspopup="dialog" aria-expanded="false"
+        <button type="button" class="btn btn-primary btn-wide uppercase h-full" aria-haspopup="dialog" aria-expanded="false"
             aria-controls="booking-section-booking-modal" data-overlay="#booking-section-booking-modal" >
             {{__('show-page.book')}}
         </button>
@@ -10,12 +10,12 @@
 
         {{-- Inquiry --}}
 
-        <button type="button" class="btn btn-info  btn-wide uppercase" aria-haspopup="dialog" aria-expanded="false"
+        <button type="button" class="btn btn-info btn-wide uppercase h-full" aria-haspopup="dialog" aria-expanded="false"
             aria-controls="booking-section-inquiry-modal" data-overlay="#booking-section-inquiry-modal">
             {{__('show-page.inquire')}}
         </button>
 
-        <a href="{{ $bookingFor->getWhatsappUrl() }}" class="btn btn-success btn-wide uppercase text-white"
+        <a href="{{ $bookingFor->getWhatsappUrl() }}" class="btn btn-success btn-wide uppercase text-white h-full"
             target="_blank">
             <span class="icon-[tabler--brand-whatsapp]"></span>
             Whatsapp
