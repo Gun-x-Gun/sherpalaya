@@ -83,7 +83,7 @@ class ManageLandingPage extends SettingsPage
                                                             ->label('Skip button')
                                                             ->required(),
                                                         TextInput::make('animation_button_text_en')
-                                                            ->label('Continue to site')
+                                                            ->label('End button')
                                                             ->required(),
                                                     ])
                                             ]),
@@ -107,7 +107,7 @@ class ManageLandingPage extends SettingsPage
                                                             ->label('Skip button')
                                                             ->required(),
                                                         TextInput::make('animation_button_text_fr')
-                                                            ->label('Continue to site')
+                                                            ->label('End button')
                                                             ->required(),
                                                     ])
                                             ]),
@@ -322,6 +322,7 @@ class ManageLandingPage extends SettingsPage
                         Tabs\Tab::make('Parallax')
                             ->schema([
                                 CuratorPicker::make('parallax_image_id')
+                                    ->label('Parallax Image')
                                     ->required(),
                             ]),
                     ]),
