@@ -77,14 +77,14 @@
             <div class="flex flex-col  md:grid md:grid-cols-2 xl:grid-cols-3  gap-4 ">
                 @foreach ($services as $serviceData)
                     <div class="card w-full h-full">
-                        <a href="{{ route('show_service', $serviceData->service->id) }}">
+                        <a href="{{ route('show_service',['id'=> $serviceData->service->id, 'locale'=>app()->currentLocale()]) }}">
                             <figure>
                                 <img src="{{ $serviceData->service->coverImage?->url ?? asset('photos/P1030127.JPG') }}"
                                     alt="{{ $serviceData->service->title }} Cover Image" class="h-60 object-cover" />
                             </figure>
                         </a>
                         <div class="card-body group px-2 py-4  bg-blue-100/40 ">
-                            <a href="{{ route('show_service', $serviceData->service->id) }}">
+                            <a href="{{ route('show_service',['id'=> $serviceData->service->id, 'locale'=>app()->currentLocale()]) }}">
                                 <h5
                                     class="card-title line-clamp-2 mb-2 uppercase text-lg text-black tracking-tight  group-hover:underline  decoration-4 decoration-warning">
                                     {{ $serviceData->service->title }}</h5>
