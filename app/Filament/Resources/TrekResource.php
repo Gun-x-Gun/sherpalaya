@@ -77,20 +77,7 @@ class TrekResource extends Resource
                                                 ->hiddenOn('view')
                                                 ->translatable()
                                                 ->columnSpanFull(),
-                                            Select::make('region_id')
-                                                ->required()
-                                                ->label('Region')
-                                                ->relationship('region', 'name')
-                                                ->native(false)
-                                                ->columnSpan(3),
-                                            Select::make('category_id')
-                                                ->relationship(
-                                                    'category',
-                                                    'name',
-                                                    modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::TREK)
-                                                )
-                                                ->native(false)
-                                                ->columnSpan(3),
+
                                             RichEditor::make('description')
                                                 ->required()
                                                 ->toolbarButtons([
@@ -111,6 +98,21 @@ class TrekResource extends Resource
                                                 ])
                                                 ->translatable()
                                                 ->columnSpanFull(),
+
+                                            Select::make('region_id')
+                                                ->required()
+                                                ->label('Region')
+                                                ->relationship('region', 'name')
+                                                ->native(false)
+                                                ->columnSpan(3),
+                                            Select::make('category_id')
+                                                ->relationship(
+                                                    'category',
+                                                    'name',
+                                                    modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::TREK)
+                                                )
+                                                ->native(false)
+                                                ->columnSpan(3),
                                         ]),
                                 ], [
                                     Section::make('')
@@ -304,8 +306,9 @@ class TrekResource extends Resource
                                             ->relationship('itineraries')
                                             ->columns(7)
                                             ->schema([
-                                                TextInput::make('title')
+                                                Textarea::make('title')
                                                     ->required()
+                                                    ->autosize()
                                                     ->translatable()
                                                     ->columnSpan(3),
                                                 Select::make('destinations')

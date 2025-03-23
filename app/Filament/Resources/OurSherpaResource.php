@@ -71,30 +71,35 @@ class OurSherpaResource extends Resource
                         Section::make('Info')
                             ->columnSpan(1)
                             ->schema([
+
+                                TextInput::make('name')
+                                    ->columnSpan(2)
+                                    ->required(),
+                                TagsInput::make('language')
+                                    ->columnSpan(2)
+                                    ->label('Languages')
+                                    ->hint('Press \'Enter\'')
+                                    ->suggestions([
+                                        'Nepali',
+                                        'English',
+                                        'French'
+                                    ]),
                                 CuratorPicker::make('profile_picture_id')
                                     ->color('primary')
                                     ->label('Profile Picture')
                                     ->hint('for profile page')
                                     ->relationship('profilePicture', 'id'),
-                                Section::make('')
+                               
+                            ]),
+                            Section::make('Page')
                                     ->columnSpan(1)
                                     ->schema([
-                                        TextInput::make('name')
-                                            ->columnSpan(2)
-                                            ->required(),
+                                        
                                         TextInput::make('title')
-                                        ->required()
-                                        ->translatable()
+                                            ->required()
+                                            ->translatable()
                                             ->columnSpan(2),
-                                        TagsInput::make('language')
-                                        ->columnSpan(2)
-                                        ->label('Languages')
-                                            ->hint('Press \'Enter\'')
-                                            ->suggestions([
-                                                'Nepali',
-                                                'English',
-                                                'French'
-                                            ]),
+
                                         RichEditor::make('description')
                                             ->toolbarButtons([
                                                 // 'attachFiles',
@@ -114,15 +119,16 @@ class OurSherpaResource extends Resource
                                             ])
                                             ->translatable(),
                                     ]),
-                            ]),
                         Section::make('Sherpa Experience')
                             // ->hiddenOn('view')
-                            ->columns(1)
-                            ->columnSpan(1)
+                            ->columns(2)
+                            ->columnSpan(2)
                             ->schema([
+
                                 Repeater::make('expedition_experience')
                                     ->relationship('expidetionOurSherpas')
-                                    ->hiddenLabel()
+                                    ->columnSpan(1)
+                                    ->label('Expeditions')
                                     ->addActionLabel('Add Expedition')
                                     ->orderColumn('order')
                                     ->schema([
@@ -138,6 +144,12 @@ class OurSherpaResource extends Resource
                                     ])
                                     ->columns(2),
 
+
+                                Repeater::make('experience')
+                                ->simple(Textarea::make('experience')
+                                    ->autosize())
+                                ->label('Experiences'),
+
                                 Select::make('treks')
                                     // ->hiddenLabel()
                                     ->multiple()
@@ -152,11 +164,6 @@ class OurSherpaResource extends Resource
                                     ->preload()
                                     ->searchable(['title', 'region'])
                                     ->native(false),
-
-                                Repeater::make('experience')
-                                    ->simple(Textarea::make('experience')
-                                        ->autosize())
-                                    ->label('Other'),
                             ]),
                     ]),
 

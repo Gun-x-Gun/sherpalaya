@@ -72,15 +72,8 @@ class TourResource extends Resource
                                     ->schema([
                                         TextInput::make('title')
                                             ->required()
-                                            ->translatable(),
-                                        Select::make('category_id')
-                                            ->relationship(
-                                                'category',
-                                                'name',
-                                                modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::TOUR)
-                                            )
-                                            ->native(false)
-                                            ->columnSpan(1),
+                                            ->translatable()
+                                            ->columnSpanFull(),
                                         RichEditor::make('description')
                                             ->required()
                                             ->toolbarButtons([
@@ -101,6 +94,15 @@ class TourResource extends Resource
                                             ])
                                             ->translatable()
                                             ->columnSpanFull(),
+
+                                        Select::make('category_id')
+                                            ->relationship(
+                                                'category',
+                                                'name',
+                                                modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::TOUR)
+                                            )
+                                            ->native(false)
+                                            ->columnSpan(1)
                                     ]),
                             ], [
                                 Section::make()
@@ -281,7 +283,8 @@ class TourResource extends Resource
                                         ->relationship('itineraries')
                                         ->columns(7)
                                         ->schema([
-                                            TextInput::make('title')
+                                            Textarea::make('title')
+                                                ->autosize()
                                                 ->required()
                                                 ->translatable()
                                                 ->columnSpan(3),

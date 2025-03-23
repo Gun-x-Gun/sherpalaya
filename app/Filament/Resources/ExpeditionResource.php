@@ -71,20 +71,7 @@ class ExpeditionResource extends Resource
                                                 ->required()
                                                 ->translatable()
                                                 ->columnSpanFull(),
-                                            Select::make('region_id')
-                                                ->label('Region')
-                                                ->relationship('region', 'name')
-                                                ->native(false)
-                                                ->required()
-                                                ->columnSpan(3),
-                                            Select::make('category_id')
-                                                ->relationship(
-                                                    'category',
-                                                    'name',
-                                                    modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::EXPEDITION)
-                                                )
-                                                ->native(false)
-                                                ->columnSpan(3),
+                                            
                                             RichEditor::make('description')
                                                 ->required()
                                                 ->toolbarButtons([
@@ -105,6 +92,21 @@ class ExpeditionResource extends Resource
                                                 ])
                                                 ->translatable()
                                                 ->columnSpanFull(),
+
+                                                Select::make('region_id')
+                                                ->label('Region')
+                                                ->relationship('region', 'name')
+                                                ->native(false)
+                                                ->required()
+                                                ->columnSpan(3),
+                                            Select::make('category_id')
+                                                ->relationship(
+                                                    'category',
+                                                    'name',
+                                                    modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::EXPEDITION)
+                                                )
+                                                ->native(false)
+                                                ->columnSpan(3),
                                         ]),
                                 ], [
                                     Section::make('')
@@ -295,8 +297,9 @@ class ExpeditionResource extends Resource
                                             ->relationship('itineraries')
                                             ->columns(7)
                                             ->schema([
-                                                TextInput::make('title')
+                                                Textarea::make('title')
                                                     ->required()
+                                                    ->autosize()
                                                     ->translatable()
                                                     ->columnSpan(3),
                                                 Select::make('destinations')
