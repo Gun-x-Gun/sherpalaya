@@ -80,12 +80,12 @@ class ServiceSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $serv,
             'cover_image_id',
-            public_path('photos/trekkingshop1.jpg')
+            public_path('photos/trekkingshop2.webp')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $serv,
             'images',
-            public_path('photos/trekkingshop2.webp')
+            public_path('photos/trekkingshop1.jpg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $serv,
@@ -156,12 +156,12 @@ class ServiceSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $serv,
             'cover_image_id',
-            public_path('photos/temple.jpg')
+            public_path('photos/vtourphotography.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $serv,
             'images',
-            public_path('photos/culture3.jpg')
+            public_path('photos/vtours.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $serv,
@@ -200,7 +200,7 @@ class ServiceSeeder extends Seeder
         CuratorSeederHelper::seedBelongsToMany(
             $serv,
             'images',
-            public_path('photos/culture3.jpg')
+            public_path('photos/vtourphotography2.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $serv,

@@ -64,7 +64,7 @@ class OurSherpasSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $sherpa,
             'profile_picture_id',
-            public_path('photos/oursherpa1.jpg')
+            public_path('photos/pemba.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $sherpa,
@@ -112,22 +112,22 @@ class OurSherpasSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $sherpa,
             'profile_picture_id',
-            public_path('photos/oursherpa2.jpeg')
+            public_path('photos/tashi.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $sherpa,
             'awardsAndCertificates',
-            public_path('photos/culture.jpg')
+            public_path('photos/tashi2.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $sherpa,
             'awardsAndCertificates',
-            public_path('photos/culture2.jpg')
+            public_path('photos/tashi3.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $sherpa,
             'awardsAndCertificates',
-            public_path('photos/culture3.jpg')
+            public_path('photos/tashi4.jpeg')
         );
 
     }

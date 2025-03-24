@@ -145,33 +145,33 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $everest_expedition,
             'cover_image_id',
-            public_path('photos/mountain3.jpg')
+            public_path('photos/himalaya.jpeg')
         );
         CuratorSeederHelper::seedBelongsTo(
             $everest_expedition,
             'feature_image_id',
-            public_path('photos/mountain3.jpg')
+            public_path('photos/himalaya2.jpeg')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
             $everest_expedition,
             'images',
-            public_path('photos/mountain2.jpg')
+            public_path('photos/vhimalaya1.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $everest_expedition,
             'images',
-            public_path('photos/mountain3.jpg')
+            public_path('photos/vhimalaya2.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $everest_expedition,
             'images',
-            public_path('photos/mountain4.jpg')
+            public_path('photos/vhimalaya3.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $everest_expedition,
             'images',
-            public_path('photos/mountain1.jpg')
+            public_path('photos/vhimalaya4.jpeg')
         );
 
         $everest_expedition_north_data = Expedition::create([
@@ -572,33 +572,33 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $kanchenjunga_expedition_data,
             'cover_image_id',
-            public_path('photos/kanchenjunga.jpg')
+            public_path('photos/himalaya2.jpeg')
         );
         CuratorSeederHelper::seedBelongsTo(
             $kanchenjunga_expedition_data,
             'feature_image_id',
-            public_path('photos/kanchenjunga.jpg')
+            public_path('photos/himalaya.jpeg')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
             $kanchenjunga_expedition_data,
             'images',
-            public_path('photos/mountain2.jpg')
+            public_path('photos/vhimalaya4.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $kanchenjunga_expedition_data,
             'images',
-            public_path('photos/mountain3.jpg')
+            public_path('photos/vhimalaya5.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $kanchenjunga_expedition_data,
             'images',
-            public_path('photos/mountain4.jpg')
+            public_path('photos/vhimalaya6.jpeg')
         );
         CuratorSeederHelper::seedBelongsToMany(
             $kanchenjunga_expedition_data,
             'images',
-            public_path('photos/mountain1.jpg')
+            public_path('photos/vhimalaya.jpeg')
         );
 
 
@@ -1442,12 +1442,12 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $annapurna_i_expedition_data,
             'cover_image_id',
-            public_path('photos/mountain1.jpg')
+            public_path('photos/himalaya3.jpeg')
         );
         CuratorSeederHelper::seedBelongsTo(
             $annapurna_i_expedition_data,
             'feature_image_id',
-            public_path('photos/mountain1.jpg')
+            public_path('photos/himalaya3.jpeg')
         );
 
         CuratorSeederHelper::seedBelongsToMany(
@@ -3356,7 +3356,7 @@ class ExpeditionSeeder extends Seeder
         CuratorSeederHelper::seedBelongsTo(
             $vip_everest_expedition_data,
             'cover_image_id',
-            public_path('photos/newexped3.JPG')
+            public_path('photos/qualitymount1.png')
         );
         CuratorSeederHelper::seedBelongsTo(
             $vip_everest_expedition_data,
