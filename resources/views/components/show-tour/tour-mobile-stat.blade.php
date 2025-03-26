@@ -1,50 +1,40 @@
 <div class="xl:hidden w-full my-4 font-oswald">
-    <div class="stats stats-vertical bg-blue-100/20 w-full rounded-none">
-        <div class="stat">
-            <div class="stat-title text-black uppercase font-normal">
-                {{__('show-page.duration')}}
+    <div class="stats stats-vertical bg-blue-100/50 w-full rounded-lg shadow-sm shadow-gray-200">
+        @if (!empty($tour->duration) || !empty($tour->best_time_for_tour))
+            <div class="stat">
+                @if (!empty($tour->duration))
+                    <div class="stat-title text-black uppercase font-normal">
+                        {{ __('show-page.duration') }}
+                    </div>
+                    <div class="stat-value font-normal tracking-wider">
+                        {{ $tour->duration ?? 'N/A' }}
+                    </div>
+                @endif
+                @if (!empty($tour->best_time_for_tour))
+                    <div class="stat-value font-body">
+                        <span class="badge badge-outline badge-success text-wrap h-full font-normal text-base px-2">
+                            {{ __('show-page.best-time') }} {{ $tour->best_time_for_tour }}
+                        </span>
+                    </div>
+                @endif
             </div>
-            <div class="stat-value font-normal">
-                {{ $tour->duration }}
-            </div>
-            <div class="stat-value font-body">
-                <span class="badge badge-outline badge-success text-wrap h-full text-lg px-2 ">
-                    @if (!empty($tour->best_time_for_tour))
-                    {{__('show-page.best-time')}}
-                     {{ $tour->best_time_for_tour }}
+        @endif
+
+        @if (!empty($tour->starting_altitude) || !empty($tour->highest_altitude))
+            <div class="stat">
+                <div class="stat-value font-body">
+                    @if (!empty($tour->starting_altitude))
+                        <span class="badge badge-outline text-base">
+                            {{ __('show-page.start') }} {{ $tour->starting_altitude }}M
+                        </span>
                     @endif
-                </span>
+                    @if (!empty($tour->highest_altitude))
+                        <span class="badge badge-outline text-base">
+                            {{ __('show-page.highest') }} {{ $tour->highest_altitude }}M
+                        </span>
+                    @endif
+                </div>
             </div>
-        </div>
-        <div class="stat">
-            <div class="stat-title text-black uppercase font-normal"> 
-                {{__('show-page.difficulty')}}
-
-            </div>
-            <div class="stat-value font-body">
-                @if ($tour->grade)
-                    <span class="badge badge-outline badge-primary text-lg">
-                        {{__('show-page.grade')}}
-                        {{ $tour->grade }}</span>
-                @endif
-            </div>
-        </div>
-        {{-- <div class="stat">
-            <div class="stat-title text-black uppercase font-normal">Altitude</div>
-            <div class="stat-value font-body">
-                @if (!empty($tour->starting_altitude))
-                    <span class="badge badge-outline text-lg">
-                        Start: {{ $tour->starting_altitude }}
-                    </span>
-                @endif
-
-                @if (!empty($tour->highest_altitude))
-                    <span class="badge badge-outline text-lg">
-                        Highest: {{ $tour->highest_altitude }}
-                    </span>
-                @endif
-                </span>
-            </div>
-        </div> --}}
+        @endif
     </div>
 </div>

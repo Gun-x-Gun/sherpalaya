@@ -40,8 +40,8 @@
                     </h6>
                     <a href="/{{ app()->currentLocale() }}/expeditions" class="link link-hover text-blue-100 capitalize">
                         {{ __('footer.expeditions') }}</a>
-                    <a href="/{{ app()->currentLocale() }}/services" class="link link-hover text-blue-100">
-                        {{ __('footer.services') }}</a>
+                    {{-- <a href="/{{ app()->currentLocale() }}/services" class="link link-hover text-blue-100">
+                        {{ __('footer.services') }}</a> --}}
                     <a href="/{{ app()->currentLocale() }}/treks" class="link link-hover text-blue-100">
                         {{ __('footer.treks') }}</a>
                     <a href="/{{ app()->currentLocale() }}/tours" class="link link-hover text-blue-100">
@@ -51,6 +51,7 @@
                     <h6 class="footer-title font-bold text-blue-50 uppercase">{{ __('footer.company') }}</h6>
                     <a href="/{{ app()->currentLocale() }}/about_us" class="link link-hover text-blue-100">{{ __('footer.about-us') }}</a>
                     <a href="/{{ app()->currentLocale() }}/sherpas" class="link link-hover text-blue-100">{{ __('footer.our-team') }}</a>
+                    <a href="/{{ app()->currentLocale() }}/contact" class="link link-hover text-blue-100">{{ __('footer.contact') }}</a>
                     {{-- <a href="/" class="link link-hover text-blue-100">Certificates</a> --}}
 
                 </nav>
