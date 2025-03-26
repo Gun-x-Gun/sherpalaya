@@ -996,6 +996,39 @@ class EssentialTipsSeeder extends Seeder
             ],
         ];
 
+        $service = [
+            [
+                'title' => [
+                    'en' => 'Learn Basic Nepali Phrases',
+                    'fr' => 'Apprenez quelques phrases de base en népalais',
+                ],
+                'description' => [
+                    'en' => 'A simple "Namaste" or "Dhanyabad" (thank you) goes a long way in connecting with locals.',
+                    'fr' => 'Un simple "Namaste" ou "Dhanyabad" (merci) contribue grandement à établir un lien avec les habitants.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Be Mindful of Street Scams',
+                    'fr' => 'Soyez attentif aux arnaques de rue',
+                ],
+                'description' => [
+                    'en' => 'Avoid overly pushy vendors and fake tour guides—stick to well-reviewed experiences and licensed guides.',
+                    'fr' => 'Évitez les vendeurs trop insistants et les faux guides touristiques - optez pour des expériences bien évaluées et des guides agréés.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Respect the Local Pace of Life',
+                    'fr' => 'Respectez le rythme de vie local',
+                ],
+                'description' => [
+                    'en' => 'Kathmandu is chaotic yet spiritual—embrace the honking, street cows, and bustling markets as part of the experience.',
+                    'fr' => 'Katmandou est chaotique mais spirituelle - acceptez les klaxons, les vaches dans les rues et les marchés animés comme faisant partie de l\'expérience.',
+                ],
+            ],
+        ];
+
 
         $this->createEssentialTips(
             Trek::first(),
@@ -1222,6 +1255,10 @@ class EssentialTipsSeeder extends Seeder
         $this->createEssentialTips(
             Tour::find(6),
             $kathmandu_cultural_tour_tips
+        );
+        $this->createEssentialTips(
+            Tour::find(7),
+            $service
         );
     }
     protected function createEssentialTips(Model $model, array $tips): void

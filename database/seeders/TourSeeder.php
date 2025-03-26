@@ -237,7 +237,7 @@ class TourSeeder extends Seeder
                     'fr' => 'Une excursion en hélicoptère de luxe qui vous emmène au camp de base de l\'Everest et à Kala Patthar pour des vues imprenables sur le mont Everest et les sommets environnants.',
                 ],
                 'duration' => '5 hours',
-                'category_id' => Category::find(16)->id,
+                'category_id' => Category::find(11)->id,
                 'is_featured' => true,
                 'grade' => '9',
                 'starting_point' => 'Kathmandu',
@@ -245,6 +245,50 @@ class TourSeeder extends Seeder
                 'best_time_for_tour' => [
                     'en' => 'Autumn and Spring',
                     'fr' => 'Automne et printemps',
+                ],
+                'costs_include' => [
+                    [
+                        'en' => 'Helicopter Ride',
+                        'fr' => 'Vol en hélicoptère',
+                    ],
+                    [
+                        'en' => 'Guide',
+                        'fr' => 'Guide',
+                    ],
+                    [
+                        'en' => 'Fuel Surcharge',
+                        'fr' => 'Supplément carburant',
+                    ],
+                ],
+                'costs_exclude' => [
+                    [
+                        'en' => 'Personal Insurance',
+                        'fr' => 'Assurance personnelle',
+                    ],
+                    [
+                        'en' => 'Meals',
+                        'fr' => 'Repas',
+                    ],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Helicopter Rescue Service',
+                    'fr' => 'Service de secours héliporté d\'urgence',
+                ],
+                'description' => [
+                    'en' => 'Explore traditional and contemporary Nepali art at the Patan Museum. A must-visit event for art lovers.',
+                    'fr' => 'Explorez l\'art népalais traditionnel et contemporain au musée de Patan. Un événement incontournable pour les amateurs d\'art.',
+                ],
+                'duration' => 'Emergency',
+                'category_id' => Category::find(16)->id,
+                'is_featured' => true,
+                'grade' => 'n/a',
+                'starting_point' => 'Kathmandu',
+                'ending_point' => 'Kathmandu',
+                'best_time_for_tour' => [
+                    'en' => '',
+                    'fr' => '',
                 ],
                 'costs_include' => [
                     [

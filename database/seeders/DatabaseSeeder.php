@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             TrekSeeder::class,
             TourSeeder::class,
             ItinerarySeeder::class,
-            ServiceSeeder::class,
+            // ServiceSeeder::class,
             // ContactUsSeeder::class,
             // InquirySeeder::class,
             FaqSeeder::class,

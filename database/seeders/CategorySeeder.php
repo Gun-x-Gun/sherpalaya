@@ -129,6 +129,13 @@ class CategorySeeder extends Seeder
         ]);
         Category::create([
             'name' => [
+                'en' => 'Services',
+                'fr' => 'Services',
+            ],
+            'type' => CategoryType::TOUR
+        ]);
+        Category::create([
+            'name' => [
                 'en' => 'Others',
                 'fr' => 'Autres',
             ],
