@@ -705,18 +705,18 @@
 </div>
 {{-- drawer end --}}
 @push('modals')
-    <div id="middle-center-modal" class="overlay modal overlay-open:opacity-100 modal-middle hidden backdrop-blur-sm"
+    <div id="middle-center-modal" class="overlay modal overlay-open:opacity-100 modal-middle hidden backdrop-blur-sm "
         role="dialog" tabindex="-1">
-        <div class="modal-dialog overlay-open:opacity-100 ">
-            <div class="modal-content">
+        <div class="modal-dialog overlay-open:opacity-100">
+            <div class="modal-content bg-blue-50  rounded-lg shadow-md shadow-gray-400">
                 <div class="modal-header">
-                    <h3 class="modal-title">Dialog Title</h3>
+                    {{-- <h3 class="modal-title">Type</h3> --}}
                     <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close"
                         data-overlay="#middle-center-modal">
                         <span class="icon-[tabler--x] size-4"></span>
                     </button>
                 </div>
-                <div class="modal-body h-full bg-blue-50">
+                <div class="modal-body h-full ">
                     <x-search.search-input :query="$query" :type="$type" />
                 </div>
             </div>
