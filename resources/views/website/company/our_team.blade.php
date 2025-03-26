@@ -1,24 +1,8 @@
 <x-website-layout>
     <div class="bg-blue-100/10 font-body">
-        {{-- <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
-            <figure class="h-[60vh] w-full">
-                <img src="{{ asset('/photos/activity2.JPG') }}" alt="Trekking background image"
-                    class="h-[60vh] w-full object-cover brightness-50" />
-            </figure>
-            <div class="card-body">
-                <div
-                    class="absolute bottom-1/2 2xl:left-32  left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
-                    <div class="">
 
-                        <h5 class="card-title mb-8 text-white text-3xl md:text-5xl uppercase font-normal tracking-wide ">
-                            Sherpalaya's Team
-                        </h5>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
 
-        <div class="card--rounded-none image-full  h-[80vh] relative">
+        <header class="card--rounded-none image-full  h-[80vh] relative">
             <figure class="h-[80vh] w-full">
                 <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->team_page_cover_image_id" fallback="default"
                     loading="lazy" />
@@ -40,7 +24,7 @@
                     </h5>
                 </div>
             </div>
-        </div>
+        </header>
 
         <x-breadcrumb :breadcrumbs="[
             [
@@ -54,7 +38,7 @@
 
 
         {{--  --}}
-        <div class="2xl:mx-32 mx-4 ">
+        <article class="2xl:mx-32 mx-4 ">
             <div class="h-8"></div>
 
             <div class=" flex flex-col lg:justify-start lg:items-start">
@@ -71,11 +55,11 @@
             </div>
                 <div class="h-10 md:h-12"></div>
             </div>
-        </div>
+        </article>
 
         {{-- {{ dd($allSherpas) }} --}}
 
-        <div class="mx-4 2xl:mx-32">
+        <aside class="mx-4 2xl:mx-32">
             <div class=" flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
                 @foreach ($allSherpas as $allSherpa)
                     <a href="{{ route('show_team_member', ['id'=>$allSherpa->id,'locale'=>app()->currentLocale()]) }}">
@@ -96,7 +80,7 @@
                     </a>
                 @endforeach
             </div>
-        </div>
+        </aside>
         <div class="h-20"></div>
     </div>
 </x-website-layout>

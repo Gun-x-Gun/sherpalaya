@@ -73,11 +73,10 @@
 @endif --}}
 
 @if ($featuredTours->count() > 0)
-
     <div class="bg-blue-100/30 font-body">
         <div class="h-20"></div>
         <div class="2xl:mx-32 mx-4 ">
-            <div class="flex flex-col md:justify-start md:items-start ">
+            <article class="flex flex-col md:justify-start md:items-start ">
                 <h5 class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-center  "
                     data-aos="fade-down" data-aos-duration="1200">
                     {{ __('featured.tours') }} </h5>
@@ -87,12 +86,13 @@
                     {{ app()->currentLocale() == 'fr' ? $landingPageSetting->tour_activity_content_fr : $landingPageSetting->tour_activity_content_en }}
                 </div>
                 <div class="h-6 md:h-12"></div>
-            </div>
-            <div class="flex flex-col md:grid grid-cols-2 gap-2">
+            </article>
+            <aside class="flex flex-col md:grid grid-cols-2 gap-2">
                 @foreach ($featuredTours as $featuredTour)
                     <div
                         class="card group xl:card-side sm:max-w-full rounded-md xl:h-[20rem] shadow-sm  shadow-blue-50 ">
-                        <a class="xl:w-1/2 " href="{{ route('show_tour', ['id'=>$featuredTour->id, 'locale'=>app()->currentLocale()]) }}">
+                        <a class="xl:w-1/2 "
+                            href="{{ route('show_tour', ['id' => $featuredTour->id, 'locale' => app()->currentLocale()]) }}">
                             <figure>
                                 <img src="{{ optional($featuredTour->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredTour->title }} Cover Image"
@@ -100,17 +100,19 @@
                             </figure>
                         </a>
                         <div class="card-body xl:w-1/2 px-2 md:px-4 bg-blue-100/80">
-                            <a href="{{ route('show_tour', ['id'=>$featuredTour->id, 'locale'=>app()->currentLocale()]) }}">
+                            <a
+                                href="{{ route('show_tour', ['id' => $featuredTour->id, 'locale' => app()->currentLocale()]) }}">
                                 <h5
                                     class="text-xl  text-balance line-clamp-2  tracking-wide font-body font-medium text-black lg:text-left  uppercase group-hover:text-warning  decoration-2 decoration-warning   group-hover:underline-offset-4">
                                     {{ $featuredTour->title }}
                                 </h5>
                             </a>
                             <div
-                                class=" mt-2 text-preety text-black break-all font-body font-light text-base/7 line-clamp-[5] ">
+                                class=" mt-2 text-justify text-black font-body font-light text-base/7 line-clamp-[5] ">
                                 {!! Str::words($featuredTour->description, 30) !!}
                             </div>
-                            <a href="{{ route('show_tour', ['id'=>$featuredTour->id, 'locale'=>app()->currentLocale()]) }}">
+                            <a
+                                href="{{ route('show_tour', ['id' => $featuredTour->id, 'locale' => app()->currentLocale()]) }}">
                                 <button class="btn btn-primary btn-md pl-2 mt-6 text-sm hover:btn-warning">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
                                     Explore
@@ -119,7 +121,7 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
+            </aside>
         </div>
         <div class="h-20"></div>
     </div>

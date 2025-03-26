@@ -23,23 +23,27 @@
 
 <x-website-layout>
     <div class="bg-blue-50 font-body">
-        <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');"
-            class="bg-cover bg-center w-full  object-top font-body ">
-            <div class="card-body flex flex-col items-center justify-center gap-8 backdrop-blur-md h-[80vh]">
-                <div class="overflow-hidden  justify-center" data-aos="fade-down" data-aos-duration="1200">
-                    <img class="h-[28vh] w-full object-cover rounded-full border-white border-4"
-                        src="{{ $sherpa->profilePicture->url }}" alt="picture" />
-                </div>
-                <div class="text-center w-full font-oswald" data-aos="fade-down" data-aos-duration="1200">
-                    <h1 class="card-title mb-1 text-warning  tracking-tight text-2xl md:text-2xl uppercase font-bold ">
-                        {{ $sherpa->name }}
-                    </h1>
-                    <h2 class="card-title text-white text-sm md:text-xl capitalize font-oswald font-normal ">
-                        {{ $sherpa->title }}
-                    </h2>
+        <header>
+            <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');"
+                class="bg-cover bg-center w-full  object-top font-body ">
+                <div class="card-body flex flex-col items-center justify-center gap-8 backdrop-blur-md h-[80vh]">
+                    <div class="overflow-hidden  justify-center" data-aos="fade-down" data-aos-duration="1200">
+                        <img class="h-[28vh] w-[30vw] object-cover object-center rounded-2xl border-white border-4"
+                            src="{{ $sherpa->profilePicture->url }}" alt="picture" />
+                    </div>
+                    <div class="text-center w-full font-card" data-aos="fade-down" data-aos-duration="1200">
+                        <h1
+                            class="card-title mb-1 text-warning  tracking-wider text-2xl md:text-2xl uppercase font-bold text-balance">
+                            {{ $sherpa->name }}
+                        </h1>
+                        <h2
+                            class="card-title text-white text-sm md:text-xl capitalize  font-normal tracking-wide text-balance">
+                            {{ $sherpa->title }}
+                        </h2>
+                    </div>
                 </div>
             </div>
-        </div>
+        </header>
 
         <x-breadcrumb :breadcrumbs="[
             [
@@ -56,7 +60,7 @@
         ]" />
 
 
-        <div class="mx-4 2xl:mx-32">
+        <section class="mx-4 2xl:mx-32">
             <div class="h-4"></div>
             <div
                 class="text-lg/8 mt-6 text-justify text-black  md:mx-8 lg:mx-16  xl:mx-28
@@ -64,12 +68,14 @@
                 {!! $sherpa->description !!}
             </div>
             <div class="h-10"></div>
+        </section>
 
-            <div>
+        <section class="bg-blue-100/20">
+            <div class="mx-4 2xl:mx-32">
                 @if (count($sherpa->language) > 0)
-                    <div class="md:mx-8 lg:mx-16 xl:mx-28 bg-gray-300">
+                    <div class="md:mx-8 lg:mx-16 xl:mx-28 ">
                         <div class="h-10"></div>
-                        <div class="mx-2">
+                        <div class="">
                             <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left"
                                 data-aos="fade-up" data-aos-duration="1200">
                                 Languages
@@ -85,152 +91,175 @@
                     </div>
                 @endif
             </div>
-            {{-- <div class="my-1 text-pretty text-black font-light font-body text-xl/7">
+        </section>
+        {{-- <div class="my-1 text-pretty text-black font-light font-body text-xl/7">
                 {!! $sherpa->description !!}
             </div> --}}
 
-            @if (count($sherpa->expeditions) > 0)
-                <div class="h-10"></div>
-                <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
-                    data-aos="fade-down" data-aos-duration="1200">
-                    Expeditions
-                </h5>
-                <div class="h-4"></div>
-                <div class="overflow-x-scroll horizontal-scrollbar md:mx-8 lg:mx-16 xl:mx-28">
-                    <table class="table-striped-columns table font-body ">
-                        <thead>
-                            <tr class="text-2xl">
-                                <th>Name Of The Mountain</th>
-                                <th>Altitude</th>
-                                <th>Count</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($sherpa->expeditions as $expedition)
-                                <tr class="font-light">
-                                    <td class="text-nowrap">{{ $expedition->title }}</td>
-                                    <td>{{ $expedition->highest_altitude }} M</td>
-                                    <td>
-                                        <span class="badge badge-soft badge-success text-xs">
-                                            {{ $expedition->pivot?->count ?? '1' }}
-                                        </span>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            @endif
-            @if (count($sherpa->treks) > 0)
-                <div class="h-10"></div>
-                <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
-                    data-aos="fade-down" data-aos-duration="1200">
-                    Treks
-                </h5>
-                <div class="h-4"></div>
-                <div class="md:mx-8 lg:mx-16 xl:mx-28">
-                    <table class="table-striped-columns table font-body">
-                        <thead>
-                            <tr class="text-2xl">
-                                <th>Name Of The Trek</th>
-                                <th>Altitude</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($sherpa->treks as $trek)
-                                <tr class="font-light">
-                                    <td class="text-nowrap">{{ $trek->title }}</td>
-                                    <td>{{ $trek->highest_altitude }} M</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+        <main class="bg-blue-100/10">
+            <div class="mx-4 2xl:mx-32">
+                @if (count($sherpa->expeditions) > 0)
                     <div class="h-10"></div>
-                </div>
-            @endif
-            @if (count($sherpa->tours) > 0)
-                <div class="h-4"></div>
-                <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
-                    data-aos="fade-down" data-aos-duration="1200">
-                    Tours
-                </h5>
-                <div class="h-10"></div>
-
-                <div class="md:mx-8 lg:mx-16 xl:mx-28">
-                    <table class="table-striped-columns table font-body">
-                        <thead>
-                            <tr class="text-2xl">
-                                <th>Name Of The Tour</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($sherpa->tours as $tour)
-                                <tr class="font-light">
-                                    <td class="text-nowrap">{{ $tour->title }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                    <div class="h-10"></div>
-                </div>
-            @endif
-
-
-            {{-- $sherpa->experience  --}}
-
-            <div class="h-10"></div>
-
-            @if (count($sherpa->experience) > 0)
-                <div class="bg-gray-300 md:mx-8 lg:mx-16  xl:mx-28">
-                    <div class="h-10"></div>
-                    <div class="mx-2">
-                        <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left "
-                            data-aos="fade-down" data-aos-duration="1200">
-                            Experiences
-                        </h5>
-                        <div class="h-4"></div>
-                        <ul class="list-inside list-disc tracking-wide">
-                            @foreach ($sherpa->experience as $exp)
-                                <li class="mb-2 tracking-wide font-light">{{ $exp }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    <div class="h-10"></div>
-                </div>
-            @endif
-
-
-
-            <div class="h-10"></div>
-            <div class="col-span-2 md:mx-8 lg:mx-16 xl:mx-28">
-                @if ($sherpa->awardsAndCertificates->count() > 0)
-                    <h5 class="card-title font-normal uppercase text-2xl text-black tracking-normal mx-0 text-left"
-                        data-aos="fade-up" data-aos-duration="1200">
-                        Awards & Certificates
+                    <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
+                        data-aos="fade-down" data-aos-duration="1200">
+                        Expeditions
                     </h5>
-                    <div class="h-10"></div>
-                    <div class="card-actions  sm:grid grid-cols-2  flex flex-col gap-2 md:gap-4 mb-0 skeleton animate-pulse min-h-52"
-                        id="all-awards">
-                        @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
-                            <button type="button"
-                                class="w-full h-full uppercase single-award hidden group hover:shadow"
-                                aria-haspopup="dialog" aria-expanded="false" aria-controls="award-modal"
-                                data-overlay="#award-modal" onclick="changeCarouselSlide({{ $loop->index }})">
-                                <img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-90"
-                                    src="{{ $awardAndCertificate->url }}" alt="headphone" />
-                            </button>
-                        @endforeach
+                    <div class="h-4"></div>
+                    <div class="overflow-x-scroll horizontal-scrollbar md:mx-8 lg:mx-16 xl:mx-28">
+                        <table class="table-striped-columns table font-body ">
+                            <thead>
+                                <tr class="text-2xl">
+                                    <th>Name Of The Mountain</th>
+                                    <th>Altitude</th>
+                                    <th>Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($sherpa->expeditions as $expedition)
+                                    <tr class="font-light">
+                                        <td class="text-nowrap">{{ $expedition->title }}</td>
+                                        <td>{{ $expedition->highest_altitude }} M</td>
+                                        <td>
+                                            <span class="badge badge-soft badge-success text-xs">
+                                                {{ $expedition->pivot?->count ?? '1' }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                     </div>
+                    <div class="h-10"></div>
                 @endif
             </div>
-        </div>
+        </main>
+        <main class="bg-blue-100/10">
+            <div class="mx-4 2xl:mx-32">
+                @if (count($sherpa->treks) > 0)
+                    <div class="h-10"></div>
+                    <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
+                        data-aos="fade-down" data-aos-duration="1200">
+                        Treks
+                    </h5>
+                    <div class="h-4"></div>
+                    <div class="md:mx-8 lg:mx-16 xl:mx-28">
+                        <table class="table-striped-columns table font-body">
+                            <thead>
+                                <tr class="text-2xl">
+                                    <th>Name Of The Trek</th>
+                                    <th>Altitude</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($sherpa->treks as $trek)
+                                    <tr class="font-light">
+                                        <td class="text-nowrap">{{ $trek->title }}</td>
+                                        <td>{{ $trek->highest_altitude }} M</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="h-10"></div>
+                @endif
+            </div>
+        </main>
+        <main class="bg-blue-100/10">
+            <div class="mx-4 2xl:mx-32">
+                @if (count($sherpa->tours) > 0)
+                    <div class="h-10"></div>
+
+                    <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
+                        data-aos="fade-down" data-aos-duration="1200">
+                        Tours
+                    </h5>
+                    <div class="h-4"></div>
+
+                    <div class="md:mx-8 lg:mx-16 xl:mx-28">
+                        <table class="table-striped-columns table font-body">
+                            <thead>
+                                <tr class="text-2xl">
+                                    <th>Name Of The Tour</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($sherpa->tours as $tour)
+                                    <tr class="font-light">
+                                        <td class="text-nowrap">{{ $tour->title }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="h-10"></div>
+                @endif
+            </div>
+        </main>
 
 
-        <div class="h-20"></div>
+        {{-- $sherpa->experience  --}}
+
+        <section class="bg-blue-100/20">
+            <div class="mx-4 2xl:mx-32">
+                @if (count($sherpa->experience) > 0)
+                    <div class="h-10"></div>
+
+                    <div class=" md:mx-8 lg:mx-16  xl:mx-28">
+                        <div class="mx-2">
+                            <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left "
+                                data-aos="fade-down" data-aos-duration="1200">
+                                Experiences
+                            </h5>
+                            <div class="h-4"></div>
+                            <ul class="list-inside list-disc tracking-wide">
+                                @foreach ($sherpa->experience as $exp)
+                                    <li class="mb-2 tracking-wide font-light">{{ $exp }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="h-10"></div>
+                @endif
+            </div>
+        </section>
+
+        <section class="bg-blue-100/10">
+            <div class="mx-4 2xl:mx-32">
+                <div class="col-span-2 md:mx-8 lg:mx-16 xl:mx-28">
+                    <div class="h-10"></div>
+
+                    @if ($sherpa->awardsAndCertificates->count() > 0)
+                        <h5 class="card-title font-normal uppercase text-2xl text-black tracking-normal mx-0 text-left"
+                            data-aos="fade-up" data-aos-duration="1200">
+                            Awards & Certificates
+                        </h5>
+                        <div class="h-10"></div>
+                        <div class="card-actions  sm:grid grid-cols-2  flex flex-col gap-2 md:gap-4 mb-0 skeleton animate-pulse min-h-52"
+                            id="all-awards">
+                            @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
+                                <button type="button"
+                                    class="w-full h-full uppercase single-award hidden group hover:shadow"
+                                    aria-haspopup="dialog" aria-expanded="false" aria-controls="award-modal"
+                                    data-overlay="#award-modal" onclick="changeCarouselSlide({{ $loop->index }})">
+                                    <img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-90"
+                                        src="{{ $awardAndCertificate->url }}" alt="headphone" />
+                                </button>
+                            @endforeach
+                        </div>
+                    @endif
+                    <div class="h-10"></div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="h-10"></div>
 
 
         @push('modals')
-            <div id="award-modal" class="overlay modal overlay-open:opacity-100 hidden p-0" role="dialog" tabindex="-1">
+            <div id="award-modal" class="overlay modal overlay-open:opacity-100 hidden p-0" role="dialog"
+                tabindex="-1">
                 <div class="modal-dialog overlay-open:opacity-100 max-w-[100vw] ">
                     <div class="modal-content h-full max-h-[100vh] justify-center  bg-transparent backdrop-blur-lg">
                         <div class="modal-header">

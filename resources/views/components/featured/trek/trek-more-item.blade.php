@@ -2,7 +2,7 @@
     <div class="bg-blue-100/10">
         <div class="2xl:mx-32 mx-4 font-body">
             <div class="h-10 md:h-20"></div>
-            <div class="">
+            <article class="">
                 <h5 class="text-3xl md:text-4xl font-oswald  font-medium line-clamp-2 uppercase tracking-wider text-black text-left md:text-left"
                     data-aos="zoom-in" data-aos-duration="1000">
                     Treks
@@ -13,14 +13,15 @@
                     {{ app()->currentLocale() == 'fr' ? $landingPageSetting->trek_activity_content_fr : $landingPageSetting->trek_activity_content_en }}
                 </div>
                 <div class="h-6 md:h-12"></div>
-            </div>
-            <div class="flex flex-col md:grid grid-cols-2  bg-transparent ">
+            </article>
+            <aside class="flex flex-col md:grid grid-cols-2  bg-transparent ">
                 @foreach ($featuredTreks->slice(0, 2) as $featuredTrek)
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
                         <div
                             class="card rounded-none px-8 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-50">
-                            <a href="{{ route('show_trek', ['id'=>$featuredTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                            <a
+                                href="{{ route('show_trek', ['id' => $featuredTrek->id, 'locale' => app()->currentLocale()]) }}">
                                 <h5
                                     class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
                                     {{ $featuredTrek->title }}
@@ -29,7 +30,8 @@
                             <div class="mt-4 text-justify text-black  font-body font-light text-lg/8 line-clamp-[8] ">
                                 {!! Str::words($featuredTrek->description, 70) !!}
                             </div>
-                            <a href="{{ route('show_trek', ['id'=>$featuredTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                            <a
+                                href="{{ route('show_trek', ['id' => $featuredTrek->id, 'locale' => app()->currentLocale()]) }}">
                                 <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
                                     Explore
@@ -43,7 +45,8 @@
                                     alt="{{ $featuredTrek->title }} Cover Image"
                                     class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
-                            <a href="{{ route('show_trek', ['id'=>$featuredTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                            <a
+                                href="{{ route('show_trek', ['id' => $featuredTrek->id, 'locale' => app()->currentLocale()]) }}">
                                 <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2">
                                     <div class="text-left md:text-center " data-aos="zoom-in" data-aos-duration="800">
                                         <h2
@@ -64,7 +67,8 @@
                                 {!! Str::words($featuredTrek->description, 50) !!}
 
                             </div>
-                            <a href="{{ route('show_trek', ['id'=>$featuredTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                            <a
+                                href="{{ route('show_trek', ['id' => $featuredTrek->id, 'locale' => app()->currentLocale()]) }}">
                                 <button
                                     class="btn btn-primary btn-md my-4 text-base hover:btn-warning justify-start pl-2">
                                     <span class="icon-[ci--chevron-right] size-5 "></span>
@@ -81,7 +85,8 @@
                                     alt="{{ $featuredTrek->title }} Cover Image"
                                     class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
-                            <a href="{{ route('show_trek', ['id'=>$featuredTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                            <a
+                                href="{{ route('show_trek', ['id' => $featuredTrek->id, 'locale' => app()->currentLocale()]) }}">
                                 <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2">
                                     <div class="text-left md:text-center " data-aos="zoom-in" data-aos-duration="1200">
                                         <h2
@@ -98,7 +103,8 @@
                         </div>
                         <div
                             class="card rounded-none px-8 py-14 col-span-1 hidden md:block group justify-center items-center bg-blue-50">
-                            <a href="{{ route('show_trek', ['id'=>$featuredTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                            <a
+                                href="{{ route('show_trek', ['id' => $featuredTrek->id, 'locale' => app()->currentLocale()]) }}">
                                 <h5
                                     class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
                                     {{ $featuredTrek->title }}
@@ -107,7 +113,8 @@
                             <div class="mt-4 text-justify text-black  font-body font-light text-lg/8 line-clamp-[8] ">
                                 {!! Str::words($featuredTrek->description, 70) !!}
                             </div>
-                            <a href="{{ route('show_trek', ['id'=>$featuredTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                            <a
+                                href="{{ route('show_trek', ['id' => $featuredTrek->id, 'locale' => app()->currentLocale()]) }}">
                                 <button class="btn btn-primary btn-md pl-2 mt-6 text-base hover:btn-warning">
                                     <span class="icon-[ci--chevron-right] size-4"></span>
                                     Explore
@@ -120,7 +127,8 @@
                                 class="text-preety text-black break-all font-body font-light text-lg/8 line-clamp-[6] ">
                                 {!! Str::words($featuredTrek->description, 50) !!}
                             </div>
-                            <a href="{{ route('show_trek', ['id'=>$featuredTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                            <a
+                                href="{{ route('show_trek', ['id' => $featuredTrek->id, 'locale' => app()->currentLocale()]) }}">
                                 <button
                                     class="btn btn-primary btn-md my-4 text-base hover:btn-warning justify-start pl-2">
                                     <span class="icon-[ci--chevron-right] size-5 "></span>
@@ -130,9 +138,9 @@
                         </div>
                     @endif
                 @endforeach
-            </div>
+            </aside>
             <div class="h-2"></div>
-            <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2 bg-blue-100/10 ">
+            <aside class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2 bg-blue-100/10 ">
                 @foreach ($featuredTreks->slice(3, 10) as $featuredTrek)
                     {{-- First Iteration: col-span-1 on the text and col-span-2 on the image --}}
                     <div
@@ -142,7 +150,8 @@
                                 alt="{{ $featuredTrek->title }} Cover Image"
                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                         </figure>
-                        <a href="{{ route('show_trek', ['id'=>$featuredTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                        <a
+                            href="{{ route('show_trek', ['id' => $featuredTrek->id, 'locale' => app()->currentLocale()]) }}">
                             <div class="card-body absolute inset-0 justify-center md:justify-center">
                                 <div class="text-center " data-aos="zoom-in" data-aos-duration="1200">
                                     <h2
@@ -158,10 +167,10 @@
                         </a>
                     </div>
                 @endforeach
-            </div>
+            </aside>
 
             @if ($featuredTreks->count() > 2)
-                <div id="multi-slide"
+                <aside id="multi-slide"
                     data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8, "md": 2.5, "lg": 3.1, "xl": 3.5 } }'
                     class="relative w-full md:hidden">
                     <div class="carousel h-[28rem] rounded-none">
@@ -176,7 +185,8 @@
                                                 alt="{{ $featuredTrek->title }} Cover Image"
                                                 class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
                                         </figure>
-                                        <a href="{{ route('show_trek', ['id'=>$featuredTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                                        <a
+                                            href="{{ route('show_trek', ['id' => $featuredTrek->id, 'locale' => app()->currentLocale()]) }}">
                                             <div class="card-body absolute inset-0 justify-center">
                                                 <div class="text-center">
                                                     <h2
@@ -207,7 +217,7 @@
                         <span
                             class="hidden md:flex icon-[tabler--chevron-right] size-8 text-white cursor-pointer rtl:rotate-180"></span>
                     </button>
-                </div>
+                </aside>
             @endif
         </div>
         <div class="h-15 md:h-20"></div>

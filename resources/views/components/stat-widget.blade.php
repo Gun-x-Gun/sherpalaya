@@ -1,4 +1,4 @@
-<div class="bg-blue-100/20 font-oswald">
+<article class="bg-blue-100/20 font-oswald">
 
     <div class="h-20 ">
 
@@ -58,4 +58,4 @@
     <div class="h-20">
 
     </div>
-</div>
+</article>

@@ -1,19 +1,5 @@
 <div class="mt-24">
-    {{-- <div class="bg-blue-100/50 md:pb-44">
-        <div class="2xl:mx-32 mx-4 ">
-            <div class="h-8 md:h-15"></div>
-            <x-section-title>
-                <x-slot name="title">
-                    Explore<br />
-                    Beyond<br />
-                    Limits
-                </x-slot>
-                {{ $landingPageSetting->expedition_activity_content }}
-            </x-section-title>
-        </div>
-    </div> --}}
-
-    <div class="flex flex-col lg:justify-start lg:items-start 2xl:mx-32 mx-4 ">
+    <article class="flex flex-col lg:justify-start lg:items-start 2xl:mx-32 mx-4 ">
         <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-justify"
             data-aos="fade-down" data-aos-duration="1200">
             {!! app()->currentLocale() == 'fr'
@@ -28,10 +14,8 @@
                 : $landingPageSetting->homepage_description_en !!}
         </div>
         <div class="h-10 md:h-12"></div>
-    </div>
-
-    <div class=" max-w-full font-body">
-        <div class=""></div>
+    </article>
+    <main class=" max-w-full font-body">
         <div class="md:grid grid-cols-7 gap-2 2xl:mx-32 mx-4 flex flex-col ">
             <a href="/{{ app()->currentLocale() }}/expeditions" class="col-span-4 ">
                 <div
@@ -160,8 +144,6 @@
             </a>
         </div>
         <div class="h-16">
-
         </div>
-    </div>
-
+    </main>
 </div>

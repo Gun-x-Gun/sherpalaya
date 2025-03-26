@@ -1,4 +1,4 @@
-<div class="bg-blue-100/20 font-body">
+<section class="bg-blue-100/20 font-body">
 
     <div class="h-20"></div>
 
@@ -62,4 +62,4 @@
     <div class="h-20"></div>
 
     {{-- {{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }} --}}
-</div>
+</section>
