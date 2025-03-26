@@ -2,7 +2,7 @@
 
 namespace App\View\Components\Partials;
 
-use App\Enums\CategoryTypes;
+use App\Enums\CategoryType;
 use App\Models\Category;
 use App\Models\Expedition;
 use App\Models\Peak;
@@ -28,15 +28,15 @@ class Navbar extends Component
 
         $this->navTours = Category::with([
             'tours'
-        ])->where('type', CategoryTypes::TOUR)
+        ])->where('type', CategoryType::TOUR)
             ->get();
         $this->navTreks = Category::with([
             'treks'
-        ])->where('type', CategoryTypes::TREK)
+        ])->where('type', CategoryType::TREK)
             ->get();
         $this->navExpeditions = Category::with([
             'expeditions'
-        ])->where('type', CategoryTypes::EXPEDITION)
+        ])->where('type', CategoryType::EXPEDITION)
             ->get();
         $this->navServices = Service::select('id', 'title')
             ->get();

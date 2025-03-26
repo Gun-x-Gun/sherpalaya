@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\CategoryTypes;
+use App\Enums\CategoryType;
 use App\Models\Category;
 use App\Models\Tour;
 use App\Settings\PageSetting;
@@ -17,7 +17,7 @@ class TourController extends Controller
     {
         $allTours = Category::with([
             'tours'
-        ])->where('type', CategoryTypes::TOUR)
+        ])->where('type', CategoryType::TOUR)
             ->get();
 
         $pageSetting = app(PageSetting::class);

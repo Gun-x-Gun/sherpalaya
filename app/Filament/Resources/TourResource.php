@@ -2,8 +2,8 @@
 
 namespace App\Filament\Resources;
 
-use App\Enums\CategoryTypes;
-use App\Enums\ItineraryTypes;
+use App\Enums\CategoryType;
+use App\Enums\ItineraryType;
 use App\Enums\TourType;
 use App\Enums\TrekDifficulty;
 use App\Filament\Resources\TourResource\Pages;
@@ -99,7 +99,7 @@ class TourResource extends Resource
                                             ->relationship(
                                                 'category',
                                                 'name',
-                                                modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::TOUR)
+                                                modifyQueryUsing: fn($query) => $query->where('type', CategoryType::TOUR)
                                             )
                                             ->native(false)
                                             ->columnSpan(1)
@@ -303,7 +303,7 @@ class TourResource extends Resource
                                                         ->cloneable();
                                                 })
                                                 ->fields(function ($fields) {
-                                                    $fields[0] = $fields[0]->options(ItineraryTypes::class)
+                                                    $fields[0] = $fields[0]->options(ItineraryType::class)
                                                         ->native(false);
                                                     $fields[1] = $fields[1]->rows(1)
                                                         ->autosize();

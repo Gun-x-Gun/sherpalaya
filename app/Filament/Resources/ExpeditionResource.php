@@ -2,8 +2,8 @@
 
 namespace App\Filament\Resources;
 
-use App\Enums\CategoryTypes;
-use App\Enums\ItineraryTypes;
+use App\Enums\CategoryType;
+use App\Enums\ItineraryType;
 use App\Enums\TrekDifficulty;
 use App\Filament\Resources\ExpeditionResource\Pages;
 use App\Filament\Resources\ExpeditionResource\RelationManagers;
@@ -71,7 +71,7 @@ class ExpeditionResource extends Resource
                                                 ->required()
                                                 ->translatable()
                                                 ->columnSpanFull(),
-                                            
+
                                             RichEditor::make('description')
                                                 ->required()
                                                 ->toolbarButtons([
@@ -103,7 +103,7 @@ class ExpeditionResource extends Resource
                                                 ->relationship(
                                                     'category',
                                                     'name',
-                                                    modifyQueryUsing: fn($query) => $query->where('type', CategoryTypes::EXPEDITION)
+                                                    modifyQueryUsing: fn($query) => $query->where('type', CategoryType::EXPEDITION)
                                                 )
                                                 ->native(false)
                                                 ->columnSpan(3),
@@ -317,7 +317,7 @@ class ExpeditionResource extends Resource
                                                             ->cloneable();
                                                     })
                                                     ->fields(function ($fields) {
-                                                        $fields[0] = $fields[0]->options(ItineraryTypes::class)
+                                                        $fields[0] = $fields[0]->options(ItineraryType::class)
                                                             ->native(false);
                                                         $fields[1] = $fields[1]->rows(1)
                                                             ->autosize();

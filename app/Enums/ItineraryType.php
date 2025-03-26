@@ -6,7 +6,7 @@ use App\Traits\TranslatableEnum;
 
 
 
-enum ItineraryTypes: string implements EnumHasTranslation
+enum ItineraryType: string implements EnumHasTranslation
 {
     use TranslatableEnum;
     case FLIGHT = 'flight';

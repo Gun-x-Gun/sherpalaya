@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\CategoryTypes;
+use App\Enums\CategoryType;
 use App\Models\Category;
 use App\Models\Expedition;
 use App\Models\Region;
@@ -20,7 +20,7 @@ class ExpeditionController extends Controller
         $pageSetting = app(PageSetting::class);
         $allExpeditions = Category::with([
             'expeditions'
-        ])->where('type', CategoryTypes::EXPEDITION)
+        ])->where('type', CategoryType::EXPEDITION)
             ->get();
 
         return view('website.expeditions', [

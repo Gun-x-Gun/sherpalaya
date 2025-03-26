@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources;
 
-use App\Enums\CategoryTypes;
+use App\Enums\CategoryType;
 use App\Filament\Resources\CategoryResource\Pages;
 use App\Filament\Resources\CategoryResource\RelationManagers;
 use App\Filament\Resources\CategoryResource\Widgets\CategoryTable;
@@ -49,7 +49,7 @@ class CategoryResource extends Resource
                         TextInput::make('name')
                             ->required()
                             ->translatable(),
-                        FilamentEnumFieldHelper::makeSelectField('type', CategoryTypes::class, function ($select) {
+                        FilamentEnumFieldHelper::makeSelectField('type', CategoryType::class, function ($select) {
                             return $select->required();
                         }),
                     ])
@@ -65,7 +65,7 @@ class CategoryResource extends Resource
                         ->size(TextColumn\TextColumnSize::Large)
                         ->weight(FontWeight::Bold),
                 ]),
-                // FilamentEnumFieldHelper::makeTextColumn('type', CategoryTypes::class),
+                // FilamentEnumFieldHelper::makeTextColumn('type', CategoryType::class),
             ])
             ->contentGrid([
                 'sm' => 2,

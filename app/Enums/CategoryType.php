@@ -7,11 +7,11 @@ use App\Traits\TranslatableEnum;
 use Filament\Support\Contracts\HasLabel;
 
 
-enum CategoryTypes: string implements EnumHasTranslation
+enum CategoryType: string implements EnumHasTranslation
 {
     use TranslatableEnum;
 
-    
+
     case EXPEDITION = 'expedition';
     case TREK = 'trek';
     case TOUR = 'tour';
