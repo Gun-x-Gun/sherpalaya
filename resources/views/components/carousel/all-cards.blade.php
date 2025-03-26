@@ -129,7 +129,7 @@
                 </div>
             </a>
 
-            <a href="/{{ app()->currentLocale() }}/services" class=" col-span-4">
+            <a href="/{{ app()->currentLocale() }}/sherpas" class=" col-span-4">
                 <div
                     class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow-sm  hover:shadow-black border">
 
@@ -141,7 +141,7 @@
                     <div class="card-body absolute inset-0 uppercase" data-aos="flip-up" data-aos-duration="800">
                         <div class="text-left ">
                             <h2 class="font-bold text-blue-50  text-2xl lg:text-4xl ">
-                                {{ __('footer.services') }}
+                                {{ __('footer.teams') }}
                             </h2>
                         </div>
                     </div>

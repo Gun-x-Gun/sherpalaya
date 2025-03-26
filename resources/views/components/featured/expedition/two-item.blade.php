@@ -18,7 +18,7 @@
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-3 on the text and col-span-4 on the image --}}
                         <div
-                            class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-blue-100/60 h-[28rem]">
+                            class="card rounded-none px-4 py-7 lg:py-14 col-span-3 hidden md:block group justify-center items-center bg-blue-100/60 h-[28rem]">
                             <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                 <h5
                                     class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
@@ -94,7 +94,7 @@
                             </a>
                         </div>
                         <div
-                            class="card rounded-none px-4 py-14 col-span-3 hidden md:block group justify-center items-center bg-transparent h-[28rem]">
+                            class="card rounded-none px-4 py-7 lg:py-14 col-span-3 hidden md:block group justify-center items-center bg-transparent h-[28rem]">
                             <a href="{{ route('show_expedition', ['id'=>$featuredExpedition->id, 'locale'=>app()->currentLocale()]) }}">
                                 <h5
                                     class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">

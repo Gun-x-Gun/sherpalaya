@@ -11,7 +11,7 @@
 </style>
 
 <header id="navbar"
-    class="fixed top-0 z-50  w-full flex  flex-wrap py-4 text-base lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
+    class="fixed top-0 z-50  w-full flex  flex-wrap py-4 text-lg lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
     <nav class="w-full" aria-label="Global">
         <div class=" relative lg:flex lg:items-center ">
             <div class="flex items-center justify-between 2xl:mx-32 mx-4 ">
@@ -58,7 +58,7 @@
                     </ul>
                     <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="nested-dropdown" type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.company') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -91,7 +91,7 @@
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base  font-bold "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg  font-bold "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.expeditions') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -197,7 +197,7 @@
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.treks') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -302,7 +302,7 @@
                     <div
                         class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.activities') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -406,7 +406,7 @@
 
                     {{-- <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="service-dropdown" type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-base"
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Services
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -425,19 +425,19 @@
 
                     {{-- contact  --}}
                     <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent items-center  ">
-                        <li class=" hover:text-warning rounded-lg text-base "><a href="/{{ app()->currentLocale() }}/services"
+                        {{-- <li class=" hover:text-warning rounded-lg text-base "><a href="/{{ app()->currentLocale() }}/services"
                                 @class([
                                     'text-warning' =>
                                         request()->route()->getName() == 'website.company.our_service',
                                 ])>
                                 {{ __('navbar.services') }}
                             </a>
-                        </li>
+                        </li> --}}
 
 
 
 
-                        <li class=" hover:text-warning rounded-lg text-base "><a href="/{{ app()->currentLocale() }}/contact"
+                        <li class=" hover:text-warning rounded-lg text-lg "><a href="/{{ app()->currentLocale() }}/contact"
                                 @class([
                                     'text-warning' => request()->route()->getName() == 'website.contact',
                                 ])>
@@ -665,11 +665,11 @@
 
 
                 <li class="nested-collapse-wrapper">
-                    <a class="collapse-toggle nested-collapse" id="service-collapse"
+                    {{-- <a class="collapse-toggle nested-collapse" id="service-collapse"
                         data-collapse="#service-collapse-menu">
                         <span class="icon-[ep--office-building] size-5"></span> Services
                         <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
-                    </a>
+                    </a> --}}
                     <ul id="service-collapse-menu"
                         class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
                         aria-labelledby="service-collapse">

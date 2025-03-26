@@ -56,12 +56,12 @@ Route::middleware([
             });
 
         // Service Route
-        Route::controller(ServiceController::class)
-            ->prefix('/services')
-            ->group(function () {
-                Route::get('/', 'index')->name('website.company.our_service');
-                Route::get('/{id}', 'show')->name('show_service');
-            });
+        // Route::controller(ServiceController::class)
+        //     ->prefix('/services')
+        //     ->group(function () {
+        //         Route::get('/', 'index')->name('website.company.our_service');
+        //         Route::get('/{id}', 'show')->name('show_service');
+        //     });
 
 
         // Our Team Route
