@@ -17,6 +17,7 @@ return [
         'audio/x-hx-aac-adts',
         'audio/x-m4a',
         'audio/m4a',
+        'audio/aac',
     ],
     'cloud_disks' => [
         's3',
