@@ -207,7 +207,7 @@ class TourSeeder extends Seeder
                 ],
                 'duration' => '2 hours',
                 'category_id' => Category::find(15)->id,
-                'is_featured' => true,
+                'is_featured' => false,
                 'grade' => '6',
                 'starting_point' => 'Bhaktapur',
                 'ending_point' => 'Bhaktapur',
