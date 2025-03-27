@@ -68,7 +68,7 @@ trait HasSettingsSidebar
                     ->url(ManageCache::getUrl())
                     ->icon('heroicon-o-archive-box')
                     ->isActiveWhen(function () {
-                        return request()->routeIs(ManageAboutUs::getRouteName());
+                        return request()->routeIs(ManageCache::getRouteName());
                     })
                     ->visible(true),
             ]);
