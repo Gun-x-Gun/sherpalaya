@@ -74,7 +74,6 @@ class TrekResource extends Resource
                                         ->schema([
                                             TextInput::make('title')
                                                 ->required()
-                                                ->hiddenOn('view')
                                                 ->translatable()
                                                 ->columnSpanFull(),
 

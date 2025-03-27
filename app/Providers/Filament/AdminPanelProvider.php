@@ -6,8 +6,8 @@ use App\Filament\Pages\SettingPage;
 use App\Filament\Pages\Settings\ManageLandingPage;
 use App\Filament\Resources\DestinationResource;
 use App\Filament\Resources\ExpeditionResource;
+use App\Filament\Resources\OurSherpaResource;
 use App\Filament\Resources\RegionResource;
-use App\Filament\Resources\ServiceResource;
 use App\Filament\Resources\TrekResource;
 use App\Filament\Resources\TourResource;
 use App\Filament\Resources\CategoryResource;
@@ -95,11 +95,11 @@ class AdminPanelProvider extends PanelProvider
                         ExpeditionResource::class,
                         TrekResource::class,
                         TourResource::class,
+                        OurSherpaResource::class,
+                        MediaResource::class,
                         CategoryResource::class,
                         RegionResource::class,
                         DestinationResource::class,
-                        ServiceResource::class,
-                        MediaResource::class,
                     ]),
                 FilamentShieldPlugin::make(),
                 FilamentBackgroundsPlugin::make()

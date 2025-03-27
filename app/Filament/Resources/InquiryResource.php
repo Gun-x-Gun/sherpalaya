@@ -7,7 +7,6 @@ use App\Filament\Resources\InquiryResource\Pages;
 use App\Filament\Resources\InquiryResource\RelationManagers;
 use App\Models\Expedition;
 use App\Models\Inquiry;
-use App\Models\Service;
 use App\Models\Tour;
 use App\Models\Trek;
 use Filament\Forms;
@@ -94,7 +93,6 @@ class InquiryResource extends Resource
                             ->options([
                                 Expedition::class => 'Expedition',
                                 Trek::class => 'Trek',
-                                Service::class => 'Service',
                                 Tour::class => 'Tour',
 
                             ]),

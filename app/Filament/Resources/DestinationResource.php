@@ -5,7 +5,6 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\DestinationResource\Pages;
 use App\Filament\Resources\DestinationResource\RelationManagers;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationExpeditionTable;
-use App\Filament\Resources\DestinationResource\Widgets\DestinationServiceTable;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationToursTable;
 use App\Filament\Resources\DestinationResource\Widgets\DestinationTrekTable;
 use App\Models\Destination;
@@ -181,7 +180,6 @@ class DestinationResource extends Resource
     public static function getWidgets(): array
     {
         return [
-            DestinationServiceTable::class,
             DestinationToursTable::class,
             DestinationExpeditionTable::class,
             DestinationTrekTable::class,

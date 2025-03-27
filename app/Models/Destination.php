@@ -40,16 +40,7 @@ class Destination extends Model
         return $this->belongsTo(Region::class);
     }
 
-    public function services(): BelongsToMany
-    {
-        return $this->belongsToMany(
-            Service::class,
-            'destination_service'
-        )->using(DestinationService::class)
-            ->withPivot([
-                'order'
-            ]);
-    }
+  
 
     public function treks()
     {

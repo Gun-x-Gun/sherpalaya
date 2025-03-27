@@ -664,13 +664,13 @@
                 {{-- tours end  --}}
 
 
-                <li class="nested-collapse-wrapper">
+                {{-- <li class="nested-collapse-wrapper"> --}}
                     {{-- <a class="collapse-toggle nested-collapse" id="service-collapse"
                         data-collapse="#service-collapse-menu">
                         <span class="icon-[ep--office-building] size-5"></span> Services
                         <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
                     </a> --}}
-                    <ul id="service-collapse-menu"
+                    {{-- <ul id="service-collapse-menu"
                         class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
                         aria-labelledby="service-collapse">
                         <li class="uppercase">
@@ -685,7 +685,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 {{-- services end --}}
 
                 {{-- contact  --}}

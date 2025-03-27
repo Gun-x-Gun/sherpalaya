@@ -4,12 +4,6 @@ namespace App\View\Components\Partials;
 
 use App\Enums\CategoryType;
 use App\Models\Category;
-use App\Models\Expedition;
-use App\Models\Peak;
-use App\Models\Region;
-use App\Models\Service;
-use App\Models\Tour;
-use App\Models\Trek;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -19,7 +13,6 @@ class Navbar extends Component
     public $navTours;
     public $navTreks;
     public $navExpeditions;
-    public $navServices;
 
     public function __construct(
         public ?string $query = null,
@@ -37,8 +30,6 @@ class Navbar extends Component
         $this->navExpeditions = Category::with([
             'expeditions'
         ])->where('type', CategoryType::EXPEDITION)
-            ->get();
-        $this->navServices = Service::select('id', 'title')
             ->get();
             // dd($this->navServices);
     }

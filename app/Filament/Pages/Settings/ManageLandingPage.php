@@ -241,7 +241,7 @@ class ManageLandingPage extends SettingsPage
                                             ->required(),
                                         CuratorPicker::make('peak_activity_image_id')
                                             ->columnSpan(2)
-                                            ->label('Service Image')
+                                            ->label('Team Image')
                                             ->required(),
                                         TextInput::make('expedition_activity_count')
                                             ->label('Expeditions Count')
@@ -253,7 +253,7 @@ class ManageLandingPage extends SettingsPage
                                             ->label('Activities Count')
                                             ->required(),
                                         TextInput::make('peak_activity_count')
-                                            ->label('Services Count')
+                                            ->label('Team message')
                                             ->required(),
                                     ]),
                                 Section::make('Stats')
