@@ -46,9 +46,9 @@ class OurSherpaResource extends Resource
     protected static ?string $navigationLabel = 'Our Sherpas';
 
 
-    protected static ?string $navigationGroup = 'Site';
+    protected static ?string $navigationGroup = 'Content';
 
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 5;
 
     // public static function getRepeaterFields(): array
     // {
@@ -57,10 +57,10 @@ class OurSherpaResource extends Resource
     //     ];
     // }
 
-    public static function getNavigationBadge(): ?string
-    {
-        return static::getModel()::count();
-    }
+    // public static function getNavigationBadge(): ?string
+    // {
+    //     return static::getModel()::count();
+    // }
     public static function form(Form $form): Form
     {
         return $form
@@ -89,12 +89,12 @@ class OurSherpaResource extends Resource
                                     ->label('Profile Picture')
                                     ->hint('for profile page')
                                     ->relationship('profilePicture', 'id'),
-                               
+
                             ]),
                             Section::make('Page')
                                     ->columnSpan(1)
                                     ->schema([
-                                        
+
                                         TextInput::make('title')
                                             ->required()
                                             ->translatable()

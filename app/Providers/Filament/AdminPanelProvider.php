@@ -109,7 +109,7 @@ class AdminPanelProvider extends PanelProvider
                     ->pluralLabel('Media')
                     ->navigationIcon('heroicon-o-photo')
                     ->navigationGroup('Content')
-                    ->navigationSort(8)
+                    ->navigationSort(5)
                     // ->navigationCountBadge()
                     ->registerNavigation(true)
             ])
