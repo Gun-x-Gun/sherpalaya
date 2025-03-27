@@ -10,8 +10,9 @@ return [
         'image/gif',
         'image/svg+xml',
         'application/pdf',
-        'audio/x-wav',
-        'audio/mp3',
+        'audio/vnd.wav',
+        'audio/mpeg',
+        'audio/mp4',
     ],
     'cloud_disks' => [
         's3',
