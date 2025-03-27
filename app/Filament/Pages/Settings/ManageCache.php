@@ -9,7 +9,7 @@ use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
-use Litespeed\LSCache\LSCache;
+use LSCache;
 
 class ManageCache extends Page
 {
