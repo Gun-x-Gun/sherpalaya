@@ -3,6 +3,7 @@
 namespace App\Traits;
 
 use App\Filament\Pages\Settings\ManageAboutUs;
+use App\Filament\Pages\Settings\ManageCache;
 use App\Filament\Pages\Settings\ManageCompany;
 use App\Filament\Pages\Settings\ManageContactUs;
 use App\Filament\Pages\Settings\ManageLandingPage;
@@ -59,6 +60,13 @@ trait HasSettingsSidebar
                 PageNavigationItem::make('About Us')
                     ->url(ManageAboutUs::getUrl())
                     ->icon('heroicon-o-cog-6-tooth')
+                    ->isActiveWhen(function () {
+                        return request()->routeIs(ManageAboutUs::getRouteName());
+                    })
+                    ->visible(true),
+                PageNavigationItem::make('Cache')
+                    ->url(ManageCache::getUrl())
+                    ->icon('heroicon-o-archive-box')
                     ->isActiveWhen(function () {
                         return request()->routeIs(ManageAboutUs::getRouteName());
                     })

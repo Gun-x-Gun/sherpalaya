@@ -3,6 +3,7 @@
 namespace App\Filament\Widgets;
 
 use App\Filament\Pages\Settings\ManageAboutUs;
+use App\Filament\Pages\Settings\ManageCache;
 use App\Filament\Pages\Settings\ManageCompany;
 use App\Filament\Pages\Settings\ManageContactUs;
 use App\Filament\Pages\Settings\ManageLandingPage;
@@ -32,6 +33,9 @@ class SettingsOverview extends BaseWidget
 
             Stat::make('Manage', 'Legal Details')
                 ->url(ManageLegal::getUrl()),
+
+            Stat::make('Manage', 'Cache')
+                ->url(ManageCache::getUrl()),
 
         ];
     }
