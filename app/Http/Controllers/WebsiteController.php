@@ -25,7 +25,7 @@ class WebsiteController extends Controller
         ]);
     }
 
-    public function contactUs(Request $request, bool $contactUsSubmitted = false){
+    public function contactUs(Request $request, string $locale, bool $contactUsSubmitted = false){
         $contactUsSetting = app(ContactUsSetting::class);
         return view('website.contact_us', [
             'contactUsSubmitted' => $contactUsSubmitted,
@@ -33,7 +33,7 @@ class WebsiteController extends Controller
         ]);
     }
 
-    public function contactUsSubmit(Request $request){
+    public function contactUsSubmit(Request $request, string $locale){
         $validatedData = $request->validate([
             'full_name' => [
                 'required', 'string'
@@ -52,6 +52,7 @@ class WebsiteController extends Controller
         ContactUs::create($validatedData);
         return $this->contactUs(
             $request,
+            $locale,
             true
         );
     }

@@ -137,14 +137,13 @@
                         </div>
                         <div class="card h-fit max-w-6xl p-5 md:px-12 bg-blue-100/30" id="form ">
                             <h2 class="mb-2 text-2xl font-bold uppercase text-black">{{ __('contact.form-head') }}</h2>
-                            @if (isset($contactUsSubmitted))
-                                @if ($contactUsSubmitted === true)
-                                    <div class="alert alert-outline alert-success mb-2" role="alert">
-                                        {{ __('contact.form-success') }}
-                                    </div>
-                                @endif
+                            @if (isset($contactUsSubmitted) && $contactUsSubmitted === true)
+                                <div class="alert alert-outline alert-success mb-2" role="alert">
+                                    {{ __('contact.form-success') }}
+                                </div>
                             @endif
-                            <form id="contactForm" action="/{{ app()->currentLocale() }}/contact" method="POST" class="mt-2">
+                            <form id="contactForm" action="/{{ app()->currentLocale() }}/contact" method="POST"
+                                class="mt-2">
                                 @csrf
                                 <div class="mb-6 ">
                                     <div class="mx-0 mb-1 sm:mb-4">
