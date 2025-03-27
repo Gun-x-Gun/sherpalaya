@@ -370,11 +370,6 @@ class TrekResource extends Resource
                             ->icon('heroicon-m-clock')
                             ->size(TextColumn\TextColumnSize::Small)
                             ->suffix(' days'),
-                        TextColumn::make('category.name')
-                            ->badge()
-                            ->icon('heroicon-m-bolt')
-                            ->size(TextColumn\TextColumnSize::Small)
-                            ->prefix(''),
                         TextColumn::make('region.name')
                             ->badge()
                             ->icon('heroicon-m-map')
