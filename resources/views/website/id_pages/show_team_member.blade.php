@@ -24,7 +24,7 @@
 <x-website-layout>
     <div class="bg-blue-50 font-body">
         <header>
-            <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');"
+            <div style="background-image: url('{{ asset('/photos/qualitymount1.png') }}');"
                 class="bg-cover bg-center w-full  object-top font-body ">
                 <div class="card-body flex flex-col items-center justify-center gap-8 backdrop-blur-md h-[80vh]">
                     <div class="overflow-hidden  justify-center" data-aos="fade-down" data-aos-duration="1200">
