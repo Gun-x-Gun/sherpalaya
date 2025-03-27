@@ -8267,6 +8267,50 @@ class ItinerarySeeder extends Seeder
                     ['type' => ItineraryType::TREK_HOURS, 'description' => ['en' => 'Varies', 'fr' => 'Variable']],
                 ],
             ],
+            [
+                'title' => [
+                    'en' => 'Annapurna Region',
+                    'fr' => 'Région de l’Annapurna',
+                ],
+                'details' => [
+                    ['type' => ItineraryType::TREK, 'description' => ['en' => 'Shoot Poon Hill sunrise, Machapuchare, and Gurung villages.', 'fr' => 'Photographiez le lever de soleil à Poon Hill, Machapuchare et les villages Gurung.']],
+                    ['type' => ItineraryType::ALTITUDE, 'description' => ['en' => '3,210 m (Poon Hill)', 'fr' => '3 210 m (Poon Hill)']],
+                    ['type' => ItineraryType::TREK_HOURS, 'description' => ['en' => 'Multiple days', 'fr' => 'Plusieurs jours']],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Pokhara',
+                    'fr' => 'Pokhara',
+                ],
+                'details' => [
+                    ['type' => ItineraryType::TREK, 'description' => ['en' => 'Capture Phewa Lake reflections and Sarangkot views.', 'fr' => 'Saisissez les reflets du lac Phewa et les vues de Sarangkot.']],
+                    ['type' => ItineraryType::ALTITUDE, 'description' => ['en' => '1,400 m (Sarangkot)', 'fr' => '1 400 m (Sarangkot)']],
+                    ['type' => ItineraryType::TREK_HOURS, 'description' => ['en' => 'Varies', 'fr' => 'Variable']],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Upper Mustang',
+                    'fr' => 'Haut Mustang',
+                ],
+                'details' => [
+                    ['type' => ItineraryType::TREK, 'description' => ['en' => 'Photograph red cliffs, monasteries, and Tiji Festival.', 'fr' => 'Photographiez les falaises rouges, les monastères et le festival Tiji.']],
+                    ['type' => ItineraryType::ALTITUDE, 'description' => ['en' => '3,800 m (approx.)', 'fr' => '3 800 m (approx.)']],
+                    ['type' => ItineraryType::TREK_HOURS, 'description' => ['en' => 'Multiple days', 'fr' => 'Plusieurs jours']],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Langtang Valley',
+                    'fr' => 'Vallée de Langtang',
+                ],
+                'details' => [
+                    ['type' => ItineraryType::TREK, 'description' => ['en' => 'Snap Himalayan peaks, Tamang villages, and Gosainkunda lakes.', 'fr' => 'Photographiez les sommets himalayens, les villages Tamang et les lacs Gosainkunda.']],
+                    ['type' => ItineraryType::ALTITUDE, 'description' => ['en' => '4,984 m (Tserko Ri)', 'fr' => '4 984 m (Tserko Ri)']],
+                    ['type' => ItineraryType::TREK_HOURS, 'description' => ['en' => 'Multiple days', 'fr' => 'Plusieurs jours']],
+                ],
+            ],
         ];
 
         //Treks
