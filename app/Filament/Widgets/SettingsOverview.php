@@ -23,20 +23,16 @@ class SettingsOverview extends BaseWidget
                 ->url(ManageLandingPage::getUrl()),
             Stat::make('Manage', 'List Pages')
                 ->url(ManagePage::getUrl()),
-
             Stat::make('Manage', 'Company Info')
                 ->url(ManageCompany::getUrl()),
-            Stat::make('Manage', 'About Us Page')
-                ->url(ManageAboutUs::getUrl()),
-            Stat::make('Manage', 'Contact Us Page')
-                ->url(ManageContactUs::getUrl()),
-
             Stat::make('Manage', 'Legal Details')
                 ->url(ManageLegal::getUrl()),
-
+            Stat::make('Manage', 'About Us')
+                ->url(ManageAboutUs::getUrl()),
+            Stat::make('Manage', 'Contact Us')
+                ->url(ManageContactUs::getUrl()),
             Stat::make('Manage', 'Cache')
                 ->url(ManageCache::getUrl()),
-
         ];
     }
 }
