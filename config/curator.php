@@ -13,6 +13,10 @@ return [
         'audio/vnd.wav',
         'audio/mpeg',
         'audio/mp4',
+        'video/mp4',
+        'audio/x-hx-aac-adts',
+        'audio/x-m4a',
+        'audio/m4a',
     ],
     'cloud_disks' => [
         's3',
