@@ -149,22 +149,22 @@ class TourSeeder extends Seeder
             ],
             [
                 'title' => [
-                    'en' => 'Photography Tour of Pokhara',
-                    'fr' => 'Visite photographique de Pokhara',
+                    'en' => 'Ultimate Photography Tour of Nepal',
+                    'fr' => 'Visite photographique ultime du Népal',
                 ],
                 'description' => [
-                    'en' => 'A photography-focused tour to capture the stunning beauty of Pokhara, including Phewa Lake, Sarangkot, and the Annapurna Range.',
-                    'fr' => 'Une visite axée sur la photographie pour capturer la beauté époustouflante de Pokhara, notamment le lac Phewa, Sarangkot et la chaîne de l\'Annapurna.',
+                    'en' => 'A photography-focused journey through Nepal’s stunning landscapes, vibrant culture, and diverse wildlife, from the Himalayas to Chitwan’s jungles.',
+                    'fr' => 'Un voyage axé sur la photographie à travers les paysages époustouflants du Népal, sa culture vibrante et sa faune diversifiée, des Himalayas aux jungles de Chitwan.',
                 ],
-                'duration' => '4 hours',
-                'category_id' => Category::find(14)->id,
+                'duration' => '7-21 days',
+                'category_id' => Category::find(14)->id, // Assuming category 14 is "Photography Tours"
                 'is_featured' => true,
-                'grade' => '8',
-                'starting_point' => 'Pokhara',
-                'ending_point' => 'Pokhara',
+                'grade' => '9',
+                'starting_point' => 'Kathmandu',
+                'ending_point' => 'usually Kathmandu',
                 'best_time_for_tour' => [
-                    'en' => 'Autumn and Spring',
-                    'fr' => 'Automne et printemps',
+                    'en' => 'Autumn (Sep-Nov) and Spring (Mar-May)',
+                    'fr' => 'Automne (sep-nov) et printemps (mar-mai)',
                 ],
                 'costs_include' => [
                     [
@@ -172,18 +172,18 @@ class TourSeeder extends Seeder
                         'fr' => 'Guide photographe',
                     ],
                     [
-                        'en' => 'Transportation',
-                        'fr' => 'Transport',
+                        'en' => 'Permits and Transportation',
+                        'fr' => 'Permis et transport',
                     ],
                 ],
                 'costs_exclude' => [
                     [
-                        'en' => 'Camera Equipment',
-                        'fr' => 'Matériel photo',
+                        'en' => 'Camera Gear',
+                        'fr' => 'Équipement photo',
                     ],
                     [
-                        'en' => 'Meals',
-                        'fr' => 'Repas',
+                        'en' => 'Personal Expenses and Meals',
+                        'fr' => 'Dépenses personnelles et repas',
                     ],
                 ],
             ],

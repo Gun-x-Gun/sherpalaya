@@ -1028,6 +1028,108 @@ class EssentialTipsSeeder extends Seeder
                 ],
             ],
         ];
+        $ultimate_photography = [
+            [
+                'title' => [
+                    'en' => 'Pack Extra Batteries',
+                    'fr' => 'Apportez des batteries supplémentaires',
+                ],
+                'description' => [
+                    'en' => 'Cold altitudes drain batteries fast—bring spares for uninterrupted shooting.',
+                    'fr' => 'Les hautes altitudes froides épuisent rapidement les batteries—apportez des rechanges pour des prises de vue continues.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Use a Wide-Angle Lens',
+                    'fr' => 'Utilisez un objectif grand-angle',
+                ],
+                'description' => [
+                    'en' => 'Capture Nepal’s vast landscapes, from mountains to terraced fields.',
+                    'fr' => 'Saisissez les vastes paysages du Népal, des montagnes aux champs en terrasses.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Shoot During Golden Hours',
+                    'fr' => 'Photographiez pendant les heures dorées',
+                ],
+                'description' => [
+                    'en' => 'Sunrise and sunset offer the best light for dramatic photos.',
+                    'fr' => 'Le lever et le coucher du soleil offrent la meilleure lumière pour des photos dramatiques.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Ask Permission for Portraits',
+                    'fr' => 'Demandez la permission pour les portraits',
+                ],
+                'description' => [
+                    'en' => 'Respect locals, especially in religious sites, by asking before photographing.',
+                    'fr' => 'Respectez les habitants, surtout dans les lieux religieux, en demandant avant de photographier.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Bring a Telephoto Lens',
+                    'fr' => 'Apportez un téléobjectif',
+                ],
+                'description' => [
+                    'en' => 'Essential for wildlife shots like tigers and distant peaks.',
+                    'fr' => 'Essentiel pour les photos d’animaux sauvages comme les tigres et les sommets éloignés.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Be Patient with Wildlife',
+                    'fr' => 'Soyez patient avec la faune',
+                ],
+                'description' => [
+                    'en' => 'Wait quietly for the perfect moment—animals like tigers are elusive.',
+                    'fr' => 'Attendez calmement le moment parfait—les animaux comme les tigres sont insaisissables.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Protect Gear from Weather',
+                    'fr' => 'Protégez votre matériel du climat',
+                ],
+                'description' => [
+                    'en' => 'Use rain covers and silica gel for rain, dust, and humidity.',
+                    'fr' => 'Utilisez des housses imperméables et du gel de silice pour la pluie, la poussière et l’humidité.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Learn Basic Nepali',
+                    'fr' => 'Apprenez le népalais de base',
+                ],
+                'description' => [
+                    'en' => '“Namaste” helps connect with locals for better portraits.',
+                    'fr' => '“Namaste” aide à établir un lien avec les habitants pour de meilleurs portraits.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Plan for Festivals',
+                    'fr' => 'Planifiez pour les festivals',
+                ],
+                'description' => [
+                    'en' => 'Time your trip for Dashain or Holi for vibrant cultural shots.',
+                    'fr' => 'Planifiez votre voyage pour Dashain ou Holi pour des photos culturelles vibrantes.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Respect Nature and Culture',
+                    'fr' => 'Respectez la nature et la culture',
+                ],
+                'description' => [
+                    'en' => 'Stay on trails and avoid disturbing wildlife or sacred sites.',
+                    'fr' => 'Restez sur les sentiers et évitez de perturber la faune ou les sites sacrés.',
+                ],
+            ],
+        ];
 
 
         $this->createEssentialTips(
@@ -1246,7 +1348,7 @@ class EssentialTipsSeeder extends Seeder
         );
         $this->createEssentialTips(
             Tour::find(4),
-            $kathmandu_cultural_tour_tips
+            $ultimate_photography
         );
         $this->createEssentialTips(
             Tour::find(5),

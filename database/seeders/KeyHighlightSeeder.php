@@ -767,6 +767,108 @@ class KeyHighlightSeeder extends Seeder
                 ],
             ],
         ];
+        $ultimate_photography = [
+            [
+                'title' => [
+                    'en' => 'Sunrise over Mount Everest',
+                    'fr' => 'Lever de soleil sur le mont Everest',
+                ],
+                'description' => [
+                    'en' => 'Capture the golden glow on the world’s highest peak from Kala Patthar.',
+                    'fr' => 'Saisissez l’éclat doré sur le plus haut sommet du monde depuis Kala Patthar.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Bengal Tiger in Chitwan',
+                    'fr' => 'Tigre du Bengale à Chitwan',
+                ],
+                'description' => [
+                    'en' => 'Snap a rare shot of a tiger emerging from the jungle shadows.',
+                    'fr' => 'Prenez une photo rare d’un tigre émergeant des ombres de la jungle.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Phewa Lake Reflections',
+                    'fr' => 'Réflexions sur le lac Phewa',
+                ],
+                'description' => [
+                    'en' => 'Photograph the Annapurna range mirrored in Pokhara’s serene waters.',
+                    'fr' => 'Photographiez la chaîne de l’Annapurna reflétée dans les eaux calmes de Pokhara.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Dashain Festival Colors',
+                    'fr' => 'Couleurs du festival Dashain',
+                ],
+                'description' => [
+                    'en' => 'Document the vibrant rituals and family gatherings of Nepal’s biggest Hindu festival.',
+                    'fr' => 'Documentez les rituels vibrants et les rassemblements familiaux du plus grand festival hindou du Népal.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Sherpa Life in Khumbu',
+                    'fr' => 'Vie des Sherpas à Khumbu',
+                ],
+                'description' => [
+                    'en' => 'Capture the weathered faces and prayer flags of Sherpa villages.',
+                    'fr' => 'Saisissez les visages burinés et les drapeaux de prière des villages Sherpas.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Poon Hill Sunrise',
+                    'fr' => 'Lever de soleil à Poon Hill',
+                ],
+                'description' => [
+                    'en' => 'Shoot the fiery dawn over Annapurna and Dhaulagiri peaks.',
+                    'fr' => 'Photographiez l’aube ardente sur les sommets de l’Annapurna et du Dhaulagiri.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Boudhanath Stupa at Dawn',
+                    'fr' => 'Stupa de Boudhanath à l’aube',
+                ],
+                'description' => [
+                    'en' => 'Photograph monks and incense smoke as the sun rises over this iconic stupa.',
+                    'fr' => 'Photographiez les moines et la fumée d’encens au lever du soleil sur ce stupa emblématique.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Upper Mustang’s Red Cliffs',
+                    'fr' => 'Falaises rouges de l’Upper Mustang',
+                ],
+                'description' => [
+                    'en' => 'Capture the surreal desert landscapes and ancient monasteries.',
+                    'fr' => 'Saisissez les paysages désertiques surréalistes et les anciens monastères.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Rhino Bathing in Chitwan',
+                    'fr' => 'Rhinocéros se baignant à Chitwan',
+                ],
+                'description' => [
+                    'en' => 'Snap a one-horned rhino enjoying a mud bath in the jungle.',
+                    'fr' => 'Prenez une photo d’un rhinocéros unicorne profitant d’un bain de boue dans la jungle.',
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Langtang Valley Panoramas',
+                    'fr' => 'Panoramas de la vallée de Langtang',
+                ],
+                'description' => [
+                    'en' => 'Photograph sweeping Himalayan views from Kyanjin Ri with fewer crowds.',
+                    'fr' => 'Photographiez des vues panoramiques de l’Himalaya depuis Kyanjin Ri avec moins de foule.',
+                ],
+            ],
+        ];
 
         $this->createKeyHighlights(
             Trek::first(),
@@ -987,7 +1089,7 @@ class KeyHighlightSeeder extends Seeder
         );
         $this->createKeyHighlights(
             Tour::find(4),
-            $kathmandu_cultural_tour
+            $ultimate_photography
         );
         $this->createKeyHighlights(
             Tour::find(5),

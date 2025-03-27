@@ -6,6 +6,7 @@ use App\Enums\ItineraryType;
 use App\Models\Destination;
 use App\Models\Expedition;
 use App\Models\Itinerary;
+use App\Models\Tour;
 use App\Models\Trek;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Eloquent\Model;
@@ -8232,6 +8233,41 @@ class ItinerarySeeder extends Seeder
                 ],
             ],
         ];
+        $photographyTourItineraries = [
+            [
+                'title' => [
+                    'en' => 'Kathmandu Valley',
+                    'fr' => 'Vallée de Katmandou',
+                ],
+                'details' => [
+                    ['type' => ItineraryType::TREK, 'description' => ['en' => 'Photograph ancient temples, Boudhanath Stupa, and vibrant festivals.', 'fr' => 'Photographiez les temples anciens, le stupa de Boudhanath et les festivals vibrants.']],
+                    ['type' => ItineraryType::ALTITUDE, 'description' => ['en' => '1,400 m', 'fr' => '1 400 m']],
+                    ['type' => ItineraryType::TREK_HOURS, 'description' => ['en' => 'Varies', 'fr' => 'Variable']],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Everest Base Camp and Kala Patthar',
+                    'fr' => 'Camp de base de l’Everest et Kala Patthar',
+                ],
+                'details' => [
+                    ['type' => ItineraryType::TREK, 'description' => ['en' => 'Capture Mount Everest’s sunrise glow and Sherpa culture.', 'fr' => 'Saisissez l’éclat du lever de soleil sur l’Everest et la culture Sherpa.']],
+                    ['type' => ItineraryType::ALTITUDE, 'description' => ['en' => '5,644 m (Kala Patthar)', 'fr' => '5 644 m (Kala Patthar)']],
+                    ['type' => ItineraryType::TREK_HOURS, 'description' => ['en' => 'Multiple days', 'fr' => 'Plusieurs jours']],
+                ],
+            ],
+            [
+                'title' => [
+                    'en' => 'Chitwan National Park',
+                    'fr' => 'Parc national de Chitwan',
+                ],
+                'details' => [
+                    ['type' => ItineraryType::TREK, 'description' => ['en' => 'Snap Bengal tigers, rhinos, and Tharu village life.', 'fr' => 'Photographiez les tigres du Bengale, les rhinocéros et la vie des villages Tharu.']],
+                    ['type' => ItineraryType::ALTITUDE, 'description' => ['en' => '150 m', 'fr' => '150 m']],
+                    ['type' => ItineraryType::TREK_HOURS, 'description' => ['en' => 'Varies', 'fr' => 'Variable']],
+                ],
+            ],
+        ];
 
         //Treks
 
@@ -8290,6 +8326,10 @@ class ItinerarySeeder extends Seeder
         $this->createItinerariesWithDetails(
             Trek::find(14),
             $upper_mustang_trek_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Tour::find(4),
+            $photographyTourItineraries
         );
 
 
