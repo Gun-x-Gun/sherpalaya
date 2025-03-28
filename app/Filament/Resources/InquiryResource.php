@@ -50,11 +50,14 @@ class InquiryResource extends Resource
                     ->columnSpan(1)
                     ->schema([
                         TextInput::make('full_name')
-                            ->required(),
+                            ->required()
+                            ->columnSpan(2),
                         TextInput::make('email')
                             ->required()
                             ->email()
+                            ->columnSpan(2)
                             ->prefixIcon('heroicon-m-envelope'),
+                        
                         RichEditor::make('message')
                             ->required()
                             ->columnSpan(3)
@@ -77,18 +80,19 @@ class InquiryResource extends Resource
 
                     ]),
                 Section::make()
-                    ->hiddenOn(['create', 'edit'])
                     ->columnSpan(1)
                     ->columns(2)
                     ->schema([
                         Select::make('type')
                             ->options(InquiryType::class)
                             ->label('Inquiry or Booking?')
+                            ->native(false)
                             ->columnSpan(1),
                         Select::make('inquiriable_type')
                             ->required()
                             ->label('Type')
                             ->reactive()
+                            ->native(false)
                             ->columnSpan(1)
                             ->options([
                                 Expedition::class => 'Expedition',

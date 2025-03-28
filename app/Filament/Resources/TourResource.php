@@ -341,6 +341,7 @@ class TourResource extends Resource
                         ->size(200),
                     Stack::make([
                         TextColumn::make('title')
+                            ->searchable()
                             ->size(TextColumn\TextColumnSize::Large)
                             ->weight(FontWeight::Bold),
                         TextColumn::make('duration')
@@ -352,6 +353,9 @@ class TourResource extends Resource
                     ]),
 
                 ]),
+            ])
+            ->groups([
+                'category.name'
             ])
             ->contentGrid([
                 'sm' => 1,
