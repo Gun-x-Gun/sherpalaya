@@ -262,11 +262,11 @@ class WebsiteSettingSeeder extends Seeder
         $contactUsSetting->title_down_en = "Travel Assistance, Just a Click Away";
         $contactUsSetting->title_down_fr = "Assistance voyage, à un clic de distance";
 
-        $contactUsSetting->address_en = 'Thamel, Kathmandu';
-        $contactUsSetting->address_fr = 'Thamel, Katmandou';
+        $contactUsSetting->address_en = 'Bafal - 13, Kathmandu';
+        $contactUsSetting->address_fr = 'Bafal - 13, Katmandou';
 
-        $contactUsSetting->contact_en = '+977- 981343434/+01- 55313536';
-        $contactUsSetting->contact_fr = '+977- 981343434/+01- 55313536';
+        $contactUsSetting->contact_en = '+977- 9801717177';
+        $contactUsSetting->contact_fr = '+977- 9801717177';
 
         $contactUsSetting->working_hour_en = 'Sun-Thurs: 11-5 / Fri: 12-3 / Sat: Closed';
         $contactUsSetting->working_hour_fr = 'Dim-Jeu: 11-5 / Ven: 12-3 / Sam: Fermé';
@@ -283,14 +283,14 @@ class WebsiteSettingSeeder extends Seeder
         $companySetting->company_name_en = "Sherpalaya Pvt. Ltd.";
         $companySetting->company_name_fr = "Sherpalaya Pvt. Ltd.";
 
-        $companySetting->company_address_en = "Kathmandu, thamel, street no 6";
-        $companySetting->company_address_fr = "Katmandou, thamel, rue n°6";
+        $companySetting->company_address_en = "Bafal - 13, Kathmandu";
+        $companySetting->company_address_fr = "Bafal - 13, Kathmandu";
 
-        $companySetting->company_email_en = "sherpalaya@gmail.com";
-        $companySetting->company_email_fr = "sherpalaya@gmail.com";
+        $companySetting->company_email_en = "tashi.palzor.sherpa@gmail.com";
+        $companySetting->company_email_fr = "tashi.palzor.sherpa@gmail.com";
 
-        $companySetting->company_contact_number_en = "+977 9800112233";
-        $companySetting->company_contact_number_fr = "+977 9800112233";
+        $companySetting->company_contact_number_en = "+977 9801717177";
+        $companySetting->company_contact_number_fr = "+977 9801717177";
 
         $companySetting->facebook_url = "https://www.facebook.com/sherpalaya.trek.1/";
         $companySetting->instagram_url = "https://www.instagram.com/sherpalaya/";
