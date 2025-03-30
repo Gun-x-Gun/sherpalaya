@@ -58,7 +58,7 @@ class OurSherpa extends Model
         return new SEOData(
             title: $this->name,
             description: $this->title,
-            image: $this->profilePicture?->medium_url,
+            image: $this->profilePicture?->url,
             author: "Sherpalaya",
         );
     }

@@ -1,3 +1,635 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+    xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    <url>
+        <loc>http://127.0.0.1:8000/</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/home</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/change-locale/en</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/change-locale/fr</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/about_us</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/our-team</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/1</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/2</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/3</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/4</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/5</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/6</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/7</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/8</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/9</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/10</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/11</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/12</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/13</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/14</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/15</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/16</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/17</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/18</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/19</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/20</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/21</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/22</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/23</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/26</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/27</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/28</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/29</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/30</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/31</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/32</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/33</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/34</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/35</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/24</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions/25</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/1</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/5</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/6</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/7</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/8</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/18</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/19</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/2</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/3</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/9</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/10</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/11</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/15</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/20</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/21</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/23</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/4</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/12</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/17</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/13</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/14</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/16</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks/22</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/tours/1</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/tours/6</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/tours/2</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/tours/3</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/tours/4</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/tours/5</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/tours/7</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/contact</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/expeditions</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/treks</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/tours</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/terms-and-conditions</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/privacy-policy</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/cookie-policy</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/our-team/1</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/our-team/2</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/home</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/about_us</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/our-team</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/1</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/2</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/3</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/4</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/5</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/6</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/7</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/8</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/9</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/10</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/11</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/12</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/13</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/14</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/15</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/16</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/17</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/18</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/19</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/20</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/21</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/22</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/23</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/26</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/27</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/28</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/29</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/30</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/31</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/32</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/33</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/34</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/35</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/24</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions/25</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/1</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/5</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/6</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/7</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/8</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/18</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/19</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/2</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/3</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/9</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/10</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/11</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/15</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/20</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/21</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/23</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/4</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/12</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/17</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/13</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/14</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/16</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks/22</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/tours/1</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/tours/6</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/tours/2</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/tours/3</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/tours/4</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/tours/5</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/tours/7</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/contact</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/expeditions</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/treks</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/tours</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/terms-and-conditions</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/privacy-policy</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/cookie-policy</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/our-team/1</loc>
+
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/fr/our-team/2</loc>
+
+    </url>
 </urlset>

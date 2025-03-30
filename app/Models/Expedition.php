@@ -70,7 +70,7 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
         return new SEOData(
             title: $this->title,
             description: $this->description,
-            image: $this->searchResultImage()?->medium_url,
+            image: $this->searchResultImage()?->url,
             author: "Sherpalaya",
         );
     }
