@@ -38,6 +38,9 @@ class ExpeditionController extends Controller
         $pageSetting = app(PageSetting::class);
         $expedition = Expedition::findOrFail($id);
 
-        return view('website.id_pages.show_expedition', compact('expedition'));
+        return view('website.id_pages.show_expedition', [
+            'expedition'=>$expedition,
+            'seoData' => $expedition->getDynamicSEOData(),
+        ]);
     }
 }

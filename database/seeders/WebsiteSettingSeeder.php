@@ -146,7 +146,7 @@ class WebsiteSettingSeeder extends Seeder
 
         $landingPageSetting->animation_button_icon_id = CuratorSeederHelper::resolveFileData(public_path('/icons/scroll-down.svg'))->id;
 
-        $landingPageSetting->animation_sound_id = CuratorSeederHelper::resolveFileData(public_path('/audio/sherpasound.wav'))->id;
+        $landingPageSetting->animation_sound_id = CuratorSeederHelper::resolveFileData(public_path('/audio/our-teamound.wav'))->id;
 
         $landingPageSetting->homepage_title_en = 'Explore Beyond Limits';
         $landingPageSetting->homepage_title_fr = 'Explorez au-delà des limites';

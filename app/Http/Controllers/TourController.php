@@ -34,6 +34,9 @@ class TourController extends Controller
     public function show(Request $request, string $locale, string $id)
     {
         $tour = Tour::findOrFail($id);
-        return view('website.id_pages.show_tour', compact('tour'));
+        return view('website.id_pages.show_tour', [
+            'tour' => $tour,
+            'seoData' => $tour->getDynamicSEOData(),
+        ]);
     }
 }

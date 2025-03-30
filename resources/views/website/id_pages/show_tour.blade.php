@@ -1,4 +1,4 @@
-<x-website-layout>
+<x-website-layout :seoData="$seoData">
     <div class="bg-blue-100/10 font-oswald">
         <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1" class="">
             <div id="scrollspy-scrollable-parent-1" class="">
@@ -29,8 +29,8 @@
                         {{-- end description --}}
                         <div class="h-4  "></div>
 
-                        
-                       
+
+
                     </div>
 
                     <div class="h-12 "></div>
@@ -79,7 +79,7 @@
                                 {{-- destinations --}}
                                 {{-- <x-show-tour.scroll-spy-body.tour-destination :tour="$tour" /> --}}
 
-                                
+
 
                                 <div class="h-10 "></div>
                             </div>

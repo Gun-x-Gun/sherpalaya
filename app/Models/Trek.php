@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Support\Collection;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Spatie\Translatable\HasTranslations;
 
 class Trek extends Model implements CanBeEasySearched, CanBeInquiried
@@ -59,6 +60,18 @@ class Trek extends Model implements CanBeEasySearched, CanBeInquiried
         'costs_exclude' => 'array',
         'costs_include' => 'array',
     ];
+
+    // SEO
+
+    public function getDynamicSEOData(): SEOData
+    {
+        return new SEOData(
+            title: $this->title,
+            description: $this->description,
+            image: $this->searchResultImage()?->medium_url,
+            author: "Sherpalaya",
+        );
+    }
 
     // Easy Search
 

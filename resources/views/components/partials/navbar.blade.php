@@ -79,7 +79,7 @@
                             </li> --}}
                             <li
                                 class="text-black text-base  teacking-normal  hover:text-warning hover:underline decoration-1">
-                                <a class="dropdown-item" href="/{{ app()->currentLocale() }}/sherpas">
+                                <a class="dropdown-item" href="/{{ app()->currentLocale() }}/our-team">
                                     {{ __('navbar.our-team') }}
                                 </a>
                             </li>
@@ -531,7 +531,7 @@
                                         Documents
                                     </a>
                                 </li> --}}
-                                <li class="text-black hover:underline"><a class="dropdown-item" href="/{{ app()->currentLocale() }}/sherpas">
+                                <li class="text-black hover:underline"><a class="dropdown-item" href="/{{ app()->currentLocale() }}/our-team">
                                         <span class="icon-[stash--people-group-duotone]"></span>
                                         Our Team
                                     </a>

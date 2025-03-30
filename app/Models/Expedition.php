@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Collection;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Spatie\Translatable\HasTranslations;
 
 class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
@@ -27,7 +28,6 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
     use HasInquiries;
     use HasTranslations;
     use HasCategory;
-
 
 
     protected $fillable = [
@@ -62,6 +62,18 @@ class Expedition extends Model implements CanBeEasySearched, CanBeInquiried
         'costs_exclude' => 'array',
         'costs_include' => 'array',
     ];
+
+    // SEO
+
+    public function getDynamicSEOData(): SEOData
+    {
+        return new SEOData(
+            title: $this->title,
+            description: $this->description,
+            image: $this->searchResultImage()?->medium_url,
+            author: "Sherpalaya",
+        );
+    }
 
     // Easy Search
 

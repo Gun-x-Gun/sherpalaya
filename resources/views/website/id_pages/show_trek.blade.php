@@ -1,4 +1,4 @@
-<x-website-layout>
+<x-website-layout :seoData="$seoData">
     <div class="bg-blue-100/10 font-body">
         <div data-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1">
             <div id="scrollspy-scrollable-parent-1 overflow-x-hidden">
@@ -29,7 +29,7 @@
                         <x-show-trek.description :trek="$trek" />
                         {{-- end description --}}
                         <div class="h-4  "></div>
-                        
+
                     </div>
 
                     <div class="h-12 "></div>

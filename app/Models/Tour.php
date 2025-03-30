@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Collection;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Spatie\Translatable\HasTranslations;
 
 
@@ -55,6 +56,18 @@ class Tour extends Model implements CanBeEasySearched, CanBeInquiried
         'costs_include',
         'costs_exclude',
     ];
+
+    // SEO
+
+    public function getDynamicSEOData(): SEOData
+    {
+        return new SEOData(
+            title: $this->title,
+            description: $this->description,
+            image: $this->searchResultImage()?->medium_url,
+            author: "Sherpalaya",
+        );
+    }
 
     // Easy Search
 

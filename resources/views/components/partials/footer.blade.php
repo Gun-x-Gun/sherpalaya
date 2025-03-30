@@ -50,7 +50,7 @@
                 <nav class="text-base-content capitalize">
                     <h6 class="footer-title font-bold text-blue-50 uppercase">{{ __('footer.company') }}</h6>
                     <a href="/{{ app()->currentLocale() }}/about_us" class="link link-hover text-blue-100">{{ __('footer.about-us') }}</a>
-                    <a href="/{{ app()->currentLocale() }}/sherpas" class="link link-hover text-blue-100">{{ __('footer.our-team') }}</a>
+                    <a href="/{{ app()->currentLocale() }}/our-team" class="link link-hover text-blue-100">{{ __('footer.our-team') }}</a>
                     <a href="/{{ app()->currentLocale() }}/contact" class="link link-hover text-blue-100">{{ __('footer.contact') }}</a>
                     {{-- <a href="/" class="link link-hover text-blue-100">Certificates</a> --}}
 

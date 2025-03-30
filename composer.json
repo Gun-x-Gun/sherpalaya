@@ -24,6 +24,7 @@
         "litespeed/lscache-laravel": "^1.3",
         "outerweb/filament-translatable-fields": "^2.1",
         "ralphjsmit/laravel-filament-components": "^2.1",
+        "ralphjsmit/laravel-seo": "^1.7",
         "spatie/laravel-settings": "^3.4",
         "spatie/laravel-translatable": "^6.10",
         "swisnl/filament-backgrounds": "^1.1"

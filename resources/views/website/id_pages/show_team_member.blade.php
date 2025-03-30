@@ -21,7 +21,7 @@
         </div> --}}
 
 
-<x-website-layout>
+<x-website-layout :seoData="$seoData">
     <div class="bg-blue-50 font-body">
         <header>
             <div style="background-image: url('{{ asset('/photos/qualitymount1.png') }}');"
@@ -52,7 +52,7 @@
             ],
             [
                 'name' => 'Our Team',
-                'url' => url('/sherpas'),
+                'url' => url('/our-team'),
             ],
             [
                 'name' => $sherpa->name,

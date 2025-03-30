@@ -55,6 +55,9 @@ class OurTeamController extends Controller
     public function show(Request $request, string $locale, string $id)
     {
         $sherpa = OurSherpa::findOrFail($id);
-        return view('website.id_pages.show_team_member', compact('sherpa'));
+        return view('website.id_pages.show_team_member', [
+            'sherpa' => $sherpa,
+            'seoData' => $sherpa->getDynamicSEOData(),
+        ]);
     }
 }

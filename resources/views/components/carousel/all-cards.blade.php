@@ -113,7 +113,7 @@
                 </div>
             </a>
 
-            <a href="/{{ app()->currentLocale() }}/sherpas" class=" col-span-4">
+            <a href="/{{ app()->currentLocale() }}/our-team" class=" col-span-4">
                 <div
                     class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group hover:shadow-sm  hover:shadow-black border">
 

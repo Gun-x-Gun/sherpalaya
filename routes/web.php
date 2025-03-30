@@ -4,7 +4,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ExpeditionController;
 use App\Http\Controllers\LegalController;
 use App\Http\Controllers\OurTeamController;
-use App\Http\Controllers\PeakController;
+// use App\Http\Controllers\PeakController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TourController;
@@ -66,7 +66,7 @@ Route::middleware([
 
         // Our Team Route
         Route::controller(OurTeamController::class)
-            ->prefix('/sherpas')
+            ->prefix('/our-team')
             ->group(function () {
                 Route::get('/', 'index')->name('website.company.our_team');
                 Route::get('/{id}', 'show')->name('show_team_member');
@@ -82,13 +82,13 @@ Route::middleware([
             });
 
 
-        // Peak Route
-        Route::controller(PeakController::class)
-            ->prefix('/peaks')
-            ->group(function () {
-                Route::get('/', 'index')->name('website.peaks');
-                Route::get('/{id}', 'show')->name('show_peak');
-            });
+        // // Peak Route
+        // Route::controller(PeakController::class)
+        //     ->prefix('/peaks')
+        //     ->group(function () {
+        //         Route::get('/', 'index')->name('website.peaks');
+        //         Route::get('/{id}', 'show')->name('show_peak');
+        //     });
 
         // Expedition Route
         Route::controller(ExpeditionController::class)

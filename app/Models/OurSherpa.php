@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 use Spatie\Translatable\HasTranslations;
 
 class OurSherpa extends Model
@@ -46,6 +47,24 @@ class OurSherpa extends Model
             }
         });
     }
+
+    // SEO
+
+    public function getDynamicSEOData(): SEOData
+    {
+        $this->loadMissing('profilePicture');
+
+        // Override only the properties you want:
+        return new SEOData(
+            title: $this->name,
+            description: $this->title,
+            image: $this->profilePicture?->medium_url,
+            author: "Sherpalaya",
+        );
+    }
+
+    // Relationships
+
     public function treks()
     {
         return $this->belongsToMany(
