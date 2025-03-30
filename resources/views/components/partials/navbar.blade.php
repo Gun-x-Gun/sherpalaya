@@ -11,14 +11,14 @@
 </style>
 
 <header id="navbar"
-    class="fixed top-0 z-50  w-full flex  flex-wrap py-4  xl:flex-nowrap xl:justify-start  bg-transparent font-body  font-medium tracking-wide">
+    class="fixed top-0 z-50  w-full flex  flex-wrap py-4  lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
     <nav class="w-full" aria-label="Global">
-        <div class=" relative xl:flex xl:items-center ">
-            <div class="flex items-center justify-between xl:mx-32 mx-4 ">
-                <a class="link text-base-content link-neutral texl-xl font-semibold no-underline " href="/{{ app()->currentLocale() }}/home">
-                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class=" w-12 xl:w-24">
+        <div class=" relative lg:flex lg:items-center ">
+            <div class="flex items-center justify-between xl:ml-32 mx-4 ">
+                <a class="link text-base-content link-neutral text-lg font-semibold no-underline " href="/{{ app()->currentLocale() }}/home">
+                    <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class=" w-12 lg:w-24">
                 </a>
-                <div class="xl:hidden">
+                <div class="lg:hidden">
                     <div class="dropdown relative inline-flex [--placement:bottom-end] px-2 ">
                         <button id="language-select-dropdown-drawer" type="button" class="dropdown-toggle"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
@@ -45,11 +45,11 @@
             </div>
 
             <div id="navbar-mega-menu-click"
-                class="collapse hidden grow basis-full overflow-hidden rounded-xl transition-all duration-300  xl:block xl:mr-32 mx-4 ">
+                class="collapse hidden grow basis-full overflow-hidden rounded-lg transition-all duration-300  lg:block xl:mr-32 mx-4 ">
                 <div
-                    class="flex flex-col rounded-xl max-xl:mt-3 max-xl:border  xl:flex-row xl:items-center xl:justify-end  xl:py-0.5">
-                    <ul class="menu xl:menu-horizontal p-0  max-xl:w-fit bg-transparent ">
-                        <li class=" hover:text-warning rounded-xl text-xl"><a href="/{{ app()->currentLocale() }}/home" @class([
+                    class="flex flex-col rounded-lg max-lg:mt-3 max-lg:border  lg:flex-row lg:items-center lg:justify-end  lg:py-0.5">
+                    <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent ">
+                        <li class=" hover:text-warning rounded-lg text-lg"><a href="/{{ app()->currentLocale() }}/home" @class([
                             'text-warning' => request()->route()->getName() == 'website.home',
                         ])>
                                 {{ __('navbar.home') }}
@@ -58,7 +58,7 @@
                     </ul>
                     <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="nested-dropdown" type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-xl "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.company') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -89,20 +89,20 @@
 
                     {{-- expedition start --}}
                     <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-xl  font-bold "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg  font-bold "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.expeditions') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0  transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 overflow-hidden 2xl:px-32 px-4 "
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0  transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 overflow-hidden 2lg:px-32 px-4 "
                             role="menu" aria-orientation="vertical">
                             <div class="flex gap-5 justify-start overflow-y-scroll vertical-scrollbar h-[29rem]">
                                 <nav class="sticky top-5 tabs tabs-bordered tabs-vertical gap-2 mt-8 text-black min-w-32 "
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active-tab:font-bold active text-wrap text-xl uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
+                                        class="tab active-tab:tab-active active-tab:font-bold active text-wrap text-lg uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
                                         id="tabs-center-item-expedition" data-tab="#tabs-center-expedition"
                                         aria-controls="tabs-center-expedition" role="tab" aria-selected="true">
                                         All
@@ -110,7 +110,7 @@
                                     @foreach ($navExpeditions as $index => $expCategory)
                                         @if ($expCategory->expeditions->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active active-tab:font-bold text-xl uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
+                                                class="tab active-tab:tab-active active-tab:font-bold text-lg uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
                                                 id="tabs-center-item-{{ $expCategory->id }}"
                                                 data-tab="#tabs-center-{{ $expCategory->id }}"
                                                 aria-controls="tabs-center-{{ $expCategory->id }}" role="tab"
@@ -123,7 +123,7 @@
                                 <div class="m-8 w-full">
                                     <div id="tabs-center-expedition" role="tabpanel"
                                         aria-labelledby="tabs-center-item-expedition">
-                                        <div class="grid grid-cols-2 xl:grid-cols-3 gap-4 w-full">
+                                        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 w-full">
                                             @foreach ($navExpeditions as $allExpedition)
                                                 @foreach ($allExpedition->expeditions as $expedition)
                                                     <div
@@ -139,11 +139,11 @@
                                                                 <div
                                                                     class="text-center font-oswald tracking-widest font-normal">
                                                                     <h2
-                                                                        class=" text-blue-100 text-xl  group-hover:text-warning uppercase text-wrap">
+                                                                        class=" text-blue-100 text-lg  group-hover:text-warning uppercase text-wrap">
                                                                         {{ $expedition->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" text-blue-100 line-clamp-2 text-xl group-hover:text-warning">
+                                                                        class=" text-blue-100 line-clamp-2 text-lg group-hover:text-warning">
                                                                         {{ $expedition->highest_altitude }} m
                                                                     </h2>
                                                                 </div>
@@ -158,7 +158,7 @@
                                         <div id="tabs-center-{{ $expCategory->id }}" role="tabpanel"
                                             aria-labelledby="tabs-center-item-{{ $expCategory->id }}"
                                             class="@if ($index !== -1) hidden @endif ">
-                                            <div class="grid grid-cols-2 xl:grid-cols-3 gap-4  w-full">
+                                            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4  w-full">
                                                 @foreach ($expCategory->expeditions as $expedition)
                                                     <div
                                                         class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black ">
@@ -172,11 +172,11 @@
                                                                 <div
                                                                     class="text-center font-oswald tracking-widest font-normal">
                                                                     <h2
-                                                                        class=" text-blue-100 text-xl uppercase group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-100 text-lg uppercase group-hover:text-warning text-wrap">
                                                                         {{ $expedition->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" tracking-widest text-blue-100 line-clamp-2 text-xl group-hover:text-warning">
+                                                                        class=" tracking-widest text-blue-100 line-clamp-2 text-lg group-hover:text-warning">
                                                                         {{ $expedition->highest_altitude }} m
                                                                     </h2>
                                                                 </div>
@@ -195,20 +195,20 @@
 
                     {{-- trek-start --}}
                     <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-xl "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.treks') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 2xl:px-32 px-4"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 2lg:px-32 px-4"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start gap-5 h-[29rem] overflow-y-scroll vertical-scrollbar">
                                 <nav class="sticky top-10 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8  text-black"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active-tab:font-bold active text-xl tracking-normal bg-gray-300 rounded-md"
+                                        class="tab active-tab:tab-active active-tab:font-bold active text-lg tracking-normal bg-gray-300 rounded-md"
                                         id="tabs-center-item-all" data-tab="#tabs-center-all"
                                         aria-controls="tabs-center-all" role="tab" aria-selected="true">
                                         ALL
@@ -216,7 +216,7 @@
                                     @foreach ($navTreks as $index => $trekCategory)
                                         @if ($trekCategory->treks->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active active-tab:font-bold uppercase text-wrap text-xl tracking-normal bg-gray-300 rounded-md"
+                                                class="tab active-tab:tab-active active-tab:font-bold uppercase text-wrap text-lg tracking-normal bg-gray-300 rounded-md"
                                                 id="tabs-center-item-{{ $trekCategory->id }}"
                                                 data-tab="#tabs-center-{{ $trekCategory->id }}"
                                                 aria-controls="tabs-center-{{ $trekCategory->id }}" role="tab"
@@ -228,7 +228,7 @@
                                 </nav>
                                 <div class="m-8 w-full">
                                     <div id="tabs-center-all" role="tabpanel" aria-labelledby="tabs-center-item-all">
-                                        <div class="grid grid-cols-2 xl:grid-cols-3  gap-4">
+                                        <div class="grid grid-cols-2 lg:grid-cols-3  gap-4">
                                             @foreach ($navTreks as $allTrek)
                                                 @foreach ($allTrek->treks as $catTrek)
                                                     <div
@@ -244,11 +244,11 @@
                                                                 <div
                                                                     class="text-center font-oswald tracking-widest font-normal ">
                                                                     <h2
-                                                                        class=" text-blue-50 text-xl uppercase group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-50 text-lg uppercase group-hover:text-warning text-wrap">
                                                                         {{ $catTrek->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" text-blue-50 line-clamp-2 text-xl group-hover:text-warning">
+                                                                        class=" text-blue-50 line-clamp-2 text-lg group-hover:text-warning">
                                                                         {{ $catTrek->highest_altitude }} m
                                                                     </h2>
                                                                 </div>
@@ -263,7 +263,7 @@
                                         <div id="tabs-center-{{ $trekCategory->id }}" role="tabpanel"
                                             aria-labelledby="tabs-center-item-{{ $trekCategory->id }}"
                                             class="@if ($index !== -1) hidden @endif ">
-                                            <div class="grid grid-cols-2 xl:grid-cols-3 gap-4  ">
+                                            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4  ">
                                                 @foreach ($trekCategory->treks as $trek)
                                                     <div
                                                         class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black">
@@ -277,11 +277,11 @@
                                                                 <div
                                                                     class="text-center font-oswald tracking-widest font-normal">
                                                                     <h2
-                                                                        class=" text-blue-50 text-xl uppercase group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-50 text-lg uppercase group-hover:text-warning text-wrap">
                                                                         {{ $trek->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" tracking-normal text-blue-50 line-clamp-2 text-xl group-hover:text-warning">
+                                                                        class=" tracking-normal text-blue-50 line-clamp-2 text-lg group-hover:text-warning">
                                                                         {{ $trek->highest_altitude }} m
                                                                     </h2>
                                                                 </div>
@@ -300,14 +300,14 @@
 
                     {{-- tours --}}
                     <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-xl "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.activities') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
                         </button>
-                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 2xl:px-32 px-4"
+                        <div class="dropdown-menu dropdown-open:opacity-100 start-0 top-full hidden w-full min-w-60 rounded-none p-0 opacity-0 shadow-none transition-[opacity,margin] duration-[0.1ms] before:absolute  h-[30rem] bg-gray-100 2lg:px-32 px-4"
                             role="menu" aria-orientation="vertical">
                             <div class="flex justify-start h-[29rem] overflow-y-scroll vertical-scrollbar">
                                 <nav class="sticky top-5 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8 text-black font-medium"
@@ -334,7 +334,7 @@
                                 <div class="m-8 w-full">
                                     <div id="tabs-center-tour" role="tabpanel"
                                         aria-labelledby="tabs-center-item-tour">
-                                        <div class="grid grid-cols-2 xl:grid-cols-3  gap-4 w-full">
+                                        <div class="grid grid-cols-2 lg:grid-cols-3  gap-4 w-full">
                                             @foreach ($navTours as $allTour)
                                                 @foreach ($allTour->tours as $tour)
                                                     <div
@@ -350,11 +350,11 @@
                                                                 <div
                                                                     class="text-center font-oswald tracking-widest font-normal ">
                                                                     <h2
-                                                                        class=" text-blue-50 text-xl uppercase group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-50 text-lg uppercase group-hover:text-warning text-wrap">
                                                                         {{ $tour->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" text-blue-50 line-clamp-2 text-xl group-hover:text-warning uppercase">
+                                                                        class=" text-blue-50 line-clamp-2 text-lg group-hover:text-warning uppercase">
                                                                         {{ $tour->duration }}
                                                                     </h2>
                                                                 </div>
@@ -369,7 +369,7 @@
                                         <div id="tabs-center-{{ $tourCategory->id }}" role="tabpanel"
                                             aria-labelledby="tabs-center-item-{{ $tourCategory->id }}"
                                             class="@if ($index !== -1) hidden @endif ">
-                                            <div class="grid grid-cols-2 xl:grid-cols-3  gap-4 w-full">
+                                            <div class="grid grid-cols-2 lg:grid-cols-3  gap-4 w-full">
                                                 @foreach ($tourCategory->tours as $tour)
                                                     <div
                                                         class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border-none shadow-md shadow-black ">
@@ -383,11 +383,11 @@
                                                                 <div
                                                                     class="text-center font-oswald tracking-wide font-normal">
                                                                     <h2
-                                                                        class=" text-blue-50 text-xl uppercase group-hover:text-warning text-wrap">
+                                                                        class=" text-blue-50 text-lg uppercase group-hover:text-warning text-wrap">
                                                                         {{ $tour->title }}
                                                                     </h2>
                                                                     <h2
-                                                                        class=" text-blue-50 line-clamp-2 text-xl group-hover:text-warning uppercase">
+                                                                        class=" text-blue-50 line-clamp-2 text-lg group-hover:text-warning uppercase">
                                                                         {{ $tour->duration }}
                                                                     </h2>
                                                                 </div>
@@ -406,7 +406,7 @@
 
                     {{-- <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="service-dropdown" type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-xl"
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Services
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -424,8 +424,8 @@
                     </div> --}}
 
                     {{-- contact  --}}
-                    <ul class="menu xl:menu-horizontal p-0  max-xl:w-fit bg-transparent items-center  ">
-                        {{-- <li class=" hover:text-warning rounded-xl text-base "><a href="/{{ app()->currentLocale() }}/services"
+                    <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent items-center  ">
+                        {{-- <li class=" hover:text-warning rounded-lg text-base "><a href="/{{ app()->currentLocale() }}/services"
                                 @class([
                                     'text-warning' =>
                                         request()->route()->getName() == 'website.company.our_service',
@@ -437,7 +437,7 @@
 
 
 
-                        <li class=" hover:text-warning rounded-xl text-xl "><a href="/{{ app()->currentLocale() }}/contact"
+                        <li class=" hover:text-warning rounded-lg text-lg "><a href="/{{ app()->currentLocale() }}/contact"
                                 @class([
                                     'text-warning' => request()->route()->getName() == 'website.contact',
                                 ])>
@@ -446,7 +446,7 @@
                         </li>
 
                         {{-- Search --}}
-                        <li class=" hover:text-warning rounded-xl text-base ">
+                        <li class=" hover:text-warning rounded-lg text-base ">
                             <button type="button" class="" aria-haspopup="dialog" aria-expanded="false"
                                 aria-controls="middle-center-modal" data-overlay="#middle-center-modal">
                                 <span class="icon-[tabler--search] size-5"></span>
@@ -454,7 +454,7 @@
                         </li>
 
                         {{-- Language Select --}}
-                        <li class=" hover:text-warning rounded-xl text-base uppercase">
+                        <li class=" hover:text-warning rounded-lg text-base uppercase">
                             <div class="dropdown relative inline-flex [--placement:bottom-end]">
                                 <button id="language-select-dropdown" type="button" class="dropdown-toggle"
                                     aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
@@ -479,7 +479,7 @@
 
 
 {{-- drawer --}}
-<div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden xl:hidden font-body"
+<div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden lg:hidden font-body"
     role="dialog" tabindex="-1">
     <div class="drawer-body px-2 uppercase">
         <div class="drawer-header px-2">
@@ -499,7 +499,7 @@
         </div>
         <div class="drawer-body justify-start pb-6 px-0">
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
-                <li class=" hover:text-warning rounded-xl items-start"><a href="/{{ app()->currentLocale() }}/home" @class([
+                <li class=" hover:text-warning rounded-lg items-start"><a href="/{{ app()->currentLocale() }}/home" @class([
                     'text-warning' => request()->route()->getName() == 'website.home',
                 ])>
                         <span class="icon-[solar--home-outline] size-5">
@@ -526,7 +526,7 @@
                                     </a>
                                 </li>
                                 {{-- <li
-                                    class="text-black text-xl font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
+                                    class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
                                     <a class="dropdown-item" href="/">
                                         Documents
                                     </a>
@@ -558,7 +558,7 @@
                             @if ($expeditionCategory->expeditions->isNotEmpty())
                                 <li class="uppercase ">
                                     <a href="/{{ app()->currentLocale() }}/expeditions#category-{{ $expeditionCategory->id }}"
-                                        class="menu font-normal text-black text-xl">{{ $expeditionCategory->name }}
+                                        class="menu font-normal text-black text-lg">{{ $expeditionCategory->name }}
                                         </p></a>
                                     <ul class="menu px-2">
                                         @foreach ($expeditionCategory->expeditions as $expedition)
@@ -600,7 +600,7 @@
                             @if ($trekCategory->treks->isNotEmpty())
                                 <li class="uppercase ">
                                     <a href="/{{ app()->currentLocale() }}/treks#category-{{ $trekCategory->id }}"
-                                        class="menu font-normal text-black text-xl">{{ $trekCategory->name }}
+                                        class="menu font-normal text-black text-lg">{{ $trekCategory->name }}
                                         </p></a>
                                     <ul class="menu px-2">
                                         @foreach ($trekCategory->treks as $trek)
@@ -689,7 +689,7 @@
                 {{-- services end --}}
 
                 {{-- contact  --}}
-                <li class="text-slate-900 hover:text-warning rounded-xl text-base uppercase">
+                <li class="text-slate-900 hover:text-warning rounded-lg text-base uppercase">
                     <a href="/{{ app()->currentLocale() }}/contact" @class([
                         'text-warning' => request()->route()->getName() == 'website.contact',
                     ])>
@@ -708,7 +708,7 @@
     <div id="middle-center-modal" class="overlay modal overlay-open:opacity-100 modal-middle hidden backdrop-blur-sm "
         role="dialog" tabindex="-1">
         <div class="modal-dialog overlay-open:opacity-100">
-            <div class="modal-content bg-blue-50  rounded-xl shadow-md shadow-gray-400">
+            <div class="modal-content bg-blue-50  rounded-lg shadow-md shadow-gray-400">
                 <div class="modal-header">
                     {{-- <h3 class="modal-title">Type</h3> --}}
                     <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close"
