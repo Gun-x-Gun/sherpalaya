@@ -43,7 +43,7 @@
                             <figure class="h-[28rem] w-full ">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
-                                    class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
+                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
                             <a
                                 href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
@@ -82,7 +82,7 @@
                             <figure class="h-[28rem] w-full">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
-                                    class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
+                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
                             </figure>
                             <a
                                 href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
@@ -147,7 +147,7 @@
                         <figure class="h-[28rem] w-full ">
                             <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                 alt="{{ $featuredExpedition->title }} Cover Image"
-                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-[20rem] w-full object-cover" />
+                                class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[20rem] w-full object-cover" />
                         </figure>
                         <a
                             href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
@@ -182,7 +182,7 @@
                                     <figure class="h-[28rem] max-w-sm">
                                         <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $featuredExpedition->title }} Cover Image"
-                                            class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
+                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
                                     </figure>
                                     <a
                                         href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">

@@ -3,7 +3,7 @@
     <div class="bg-blue-100/10 font-body">
         <div class="card--rounded-none image-full bg-blue-100/50 h-[80dvh] relative">
             <figure class="h-[80dvh] w-full">
-                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$pageSetting->trek_page_cover_image_id ?? null" fallback="default"
+                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$pageSetting->trek_page_cover_image_id ?? null" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
@@ -78,7 +78,7 @@
                                     <figure class="h-[20rem] w-full">
                                         <img src="{{ optional($catTrek->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $catTrek->title }} Cover Image"
-                                            class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
                                     <a
                                         href="{{ route('show_trek', ['id' => $catTrek->id, 'locale' => app()->currentLocale()]) }}">
@@ -110,7 +110,7 @@
                                     <figure class="h-[20rem] w-full">
                                         <img src="{{ optional($trek->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $trek->title }} Cover Image"
-                                            class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
                                     <a
                                         href="{{ route('show_trek', ['id' => $trek->id, 'locale' => app()->currentLocale()]) }}">

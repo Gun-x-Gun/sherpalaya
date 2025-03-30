@@ -131,7 +131,7 @@
                                                         <figure class="h-[15rem] w-full">
                                                             <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $expedition->title }} Cover Image"
-                                                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                                                class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
                                                         <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div
@@ -165,7 +165,7 @@
                                                         <figure class="h-[15rem] w-full">
                                                             <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $expedition->title }} Cover Image"
-                                                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                                                class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
                                                         <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
@@ -236,7 +236,7 @@
                                                         <figure class="h-[15rem] w-full ">
                                                             <img src="{{ optional($catTrek->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $catTrek->title }} Cover Image"
-                                                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                                                class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
                                                         <a href="{{ route('show_trek', ['id'=>$catTrek->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div
@@ -270,7 +270,7 @@
                                                         <figure class="h-[15rem] w-full">
                                                             <img src="{{ optional($trek->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $trek->title }} Cover Image"
-                                                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                                                class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
                                                         <a href="{{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
@@ -342,7 +342,7 @@
                                                         <figure class="h-[15rem] w-full">
                                                             <img src="{{ optional($tour->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $tour->title }} Cover Image"
-                                                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                                                class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
                                                         <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div
@@ -376,7 +376,7 @@
                                                         <figure class="h-[15rem] w-full">
                                                             <img src="{{ optional($tour->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                                 alt="{{ $tour->title }} Cover Image"
-                                                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                                                class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
                                                         <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
                                                             <div class="card-body absolute inset-0 justify-center">

@@ -2,7 +2,7 @@
     <div class="card--rounded-none image-full  bg-blue-100/50 h-[80dvh]">
         <figure class="h-[80dvh] w-full">
             <img src="{{ $peak->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
-                class="h-[80dvh] w-full object-cover brightness-50" />
+                class="h-[80dvh] w-full object-cover brightness-75" />
         </figure>
         <div class="card-body relative">
             <div

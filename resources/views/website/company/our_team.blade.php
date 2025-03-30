@@ -2,7 +2,7 @@
     <div class="bg-blue-100/10 font-body">
         <header class="card--rounded-none image-full  h-[80dvh] relative">
             <figure class="h-[80dvh] w-full">
-                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$pageSetting->team_page_cover_image_id" fallback="default"
+                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$pageSetting->team_page_cover_image_id" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">

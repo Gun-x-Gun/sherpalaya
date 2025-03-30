@@ -2,7 +2,7 @@
     <div class="bg-blue-100/10 font-body">
         {{-- <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
-                <x-curator-glider class="h-[60vh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
+                <x-curator-glider class="h-[60vh] w-full object-cover brightness-75" :media="$pageSetting->service_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
                     loading="lazy" />
             </figure>
             <div class="card-body">
@@ -22,7 +22,7 @@
 
         <div class="card--rounded-none image-full  h-[80dvh] relative">
             <figure class="h-[80dvh] w-full">
-                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$pageSetting->service_page_cover_image_id" fallback="default"
+                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$pageSetting->service_page_cover_image_id" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">

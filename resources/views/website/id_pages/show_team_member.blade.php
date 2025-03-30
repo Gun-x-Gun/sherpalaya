@@ -1,7 +1,7 @@
 {{-- <div class="card--rounded-none image-full h-[80dvh] relative ">
             <figure class="h-[80dvh] w-full ">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
-                    class="h-[80dvh] w-full object-cover brightness-50" />
+                    class="h-[80dvh] w-full object-cover brightness-75" />
             </figure>
             <div
                 class="card-body absolute bottom-1/4 left-[50%]  translate-x-[-50%] translate-y-[10%] flex flex-col items-center gap-8 ">
@@ -241,7 +241,7 @@
                                     class="w-full h-full uppercase single-award hidden group hover:shadow"
                                     aria-haspopup="dialog" aria-expanded="false" aria-controls="award-modal"
                                     data-overlay="#award-modal" onclick="changeCarouselSlide({{ $loop->index }})">
-                                    <img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-90"
+                                    <img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-75"
                                         src="{{ $awardAndCertificate->url }}" alt="headphone" />
                                 </button>
                             @endforeach

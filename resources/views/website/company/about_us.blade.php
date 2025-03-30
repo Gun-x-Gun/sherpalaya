@@ -2,7 +2,7 @@
     <div class="bg-blue-100/10 font-body">
         <header class="card--rounded-none image-full  h-[80dvh] relative">
             <figure class="h-[80dvh] w-full">
-                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$aboutUsSetting->cover_image_id" fallback="default"
+                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$aboutUsSetting->cover_image_id" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
@@ -74,8 +74,8 @@
                             aria-haspopup="dialog" aria-expanded="false" aria-controls="about-us-certificates-modal"
                             data-overlay="#about-us-certificates-modal"
                             onclick="changeCarouselSlide({{ $loop->index }})">
-                            <figure class="h-full w-full brightness-90">
-                                <x-curator-glider class="h-[40vh] w-full object-cover brightness-50" :media="$galleryImage"
+                            <figure class="h-full w-full brightness-75">
+                                <x-curator-glider class="h-[40vh] w-full object-cover brightness-75" :media="$galleryImage"
                                     :fallback="asset('/photos/banner.jpg')" loading="lazy" />
                             </figure>
                         </button>

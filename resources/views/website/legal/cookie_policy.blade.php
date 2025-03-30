@@ -3,7 +3,7 @@
         <div class="card--rounded-none image-full bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Privacy Policy background image"
-                    class="h-[60vh] w-full object-cover brightness-50" />
+                    class="h-[60vh] w-full object-cover brightness-75" />
             </figure>
             <div class="card-body">
                 <div class="absolute bottom-1/2 xl:left-32 left-4 max-w-full 2xl:max-w-full overflow-hidden border-none">

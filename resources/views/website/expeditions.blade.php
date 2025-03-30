@@ -2,7 +2,7 @@
     <div class="bg-blue-100/10 font-body">
         <div class="card--rounded-none image-full  h-[80dvh] relative">
             <figure class="h-[80dvh] w-full">
-                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$pageSetting->expedition_page_cover_image_id ?? null" fallback="default"
+                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$pageSetting->expedition_page_cover_image_id ?? null" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
@@ -79,7 +79,7 @@
                                     <figure class="h-[20rem] w-full">
                                         <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $expedition->title }} Cover Image"
-                                            class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
                                     <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center ">
@@ -109,7 +109,7 @@
                                     <figure class="h-[20rem] w-full">
                                         <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $expedition->title }} Cover Image"
-                                            class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
                                     <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
@@ -151,7 +151,7 @@
                                     <figure class="h-[20rem] w-full">
                                         <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $expedition->title }} Cover Image"
-                                            class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
                                     <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
@@ -185,7 +185,7 @@
                                                 <figure class="h-[28rem] max-w-sm">
                                                     <img src="{{ optional($expedition->coverImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                                         alt="{{ $expedition->title }} Cover Image"
-                                                        class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
+                                                        class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
                                                 </figure>
                                                 <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
                                                     <div class="card-body absolute inset-0 justify-center">

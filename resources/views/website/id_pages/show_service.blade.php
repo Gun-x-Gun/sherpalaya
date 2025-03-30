@@ -17,7 +17,7 @@
         {{-- <div class="card--rounded-none image-full  bg-blue-100/50 h-[80dvh]">
             <figure class="h-[80dvh] w-full">
                 <img src="{{ $service->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
-                    class="h-[80dvh] w-full object-cover brightness-50" />
+                    class="h-[80dvh] w-full object-cover brightness-75" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start font-oswald">
                 <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden"
@@ -33,7 +33,7 @@
         <div class="card--rounded-none image-full bg-blue-100/50 h-[80dvh] relative">
             <figure class="h-[80dvh] w-full">
                 <img src="{{ $service->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
-                    class="h-[80dvh] w-full object-cover brightness-50" />
+                    class="h-[80dvh] w-full object-cover brightness-75" />
             </figure>
             <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden w-[90%] md:w-[60%]"
                 data-aos="fade-down" data-aos-duration="1200">

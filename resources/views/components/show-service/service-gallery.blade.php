@@ -13,7 +13,7 @@
                         class="card cursor-pointer rounded-none image-full h-52 w-full relative items-end  card-side group hover:shadow border single-service hidden"
                         aria-haspopup="dialog" aria-expanded="false" aria-controls="service-gallery-modal"
                         data-overlay="#service-gallery-modal" onclick="changeCarouselSlide({{ $loop->index }})" >
-                        <figure class="h-full w-full brightness-90">
+                        <figure class="h-full w-full brightness-75">
                             <img src="{{ $galleryImage->url }}" alt="overlay image"
                                 class="transition-transform duration-500 group-hover:scale-110 h-full w-full object-cover brightness-95 contrast-120" />
                         </figure>

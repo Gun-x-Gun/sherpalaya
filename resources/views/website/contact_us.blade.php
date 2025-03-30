@@ -3,7 +3,7 @@
         {{-- <div class="card--rounded-none image-full  bg-blue-100/50 h-[60vh]">
             <figure class="h-[60vh] w-full">
                 <img src="{{ asset('/photos/satellite.jpg') }}" alt="Trekking background image"
-                    class="h-[60vh] w-full object-cover brightness-50" />
+                    class="h-[60vh] w-full object-cover brightness-75" />
             </figure>
             <div class="card-body">
                 <div
@@ -20,7 +20,7 @@
 
         <div class="card--rounded-none image-full  h-[80dvh] relative">
             <figure class="h-[80dvh] w-full">
-                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$contactUsSetting->cover_image_id" fallback="default"
+                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$contactUsSetting->cover_image_id" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">

@@ -1,6 +1,6 @@
 <div class="card--rounded-none image-full bg-blue-100/50 h-[80dvh] relative">
     <figure class="h-[80dvh] w-full">
-        <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$trek->coverImage" fallback="default"
+        <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$trek->coverImage" fallback="default"
             loading="lazy" />
     </figure>
     <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden w-[90%] md:w-[60%]"

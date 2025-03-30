@@ -48,7 +48,7 @@
                                         <figure class="h-[20rem] w-full">
                                             <img src="{{ $recommendation->coverImage }}"
                                                 alt="{{ $recommendation->title }} Cover Image"
-                                                class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
+                                                class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                         </figure>
                                         <a href="{{ $recommendation->url }}">
                                             <div class="card-body absolute inset-0 justify-center">
