@@ -1,7 +1,7 @@
 
-<div class="card--rounded-none image-full bg-blue-100/50 h-[80vh] relative">
-    <figure class="h-[80vh] w-full">
-        <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->peak_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
+<div class="card--rounded-none image-full bg-blue-100/50 h-[80dvh] relative">
+    <figure class="h-[80dvh] w-full">
+        <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$pageSetting->peak_page_cover_image_id" :fallback="asset('/photos/banner.jpg')"
             loading="lazy" />
     </figure>
     <div class="card-body absolute inset-0 flex items-center justify-start">

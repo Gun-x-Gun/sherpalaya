@@ -29,11 +29,11 @@
     </div> --}}
 
     <div class="bg-blue-100/40">
-        {{-- <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh] w-full">
-            <figure class="h-[80vh] w-full">
+        {{-- <div class="card--rounded-none image-full  bg-blue-100/50 h-[80dvh] w-full">
+            <figure class="h-[80dvh] w-full">
                 
                 <img src="{{ asset('/photos/mountain1.jpg') }}"
-                    class="h-[80vh] w-full object-cover object-center brightness-50" alt="">
+                    class="h-[80dvh] w-full object-cover object-center brightness-50" alt="">
             </figure>
             <div class="card-body">
                 <div
@@ -49,10 +49,10 @@
                 </div>
             </div>
         </div> --}}
-        <div class="card--rounded-none image-full  h-[80vh] relative">
-            <figure class="h-[80vh] w-full">
+        <div class="card--rounded-none image-full  h-[80dvh] relative">
+            <figure class="h-[80dvh] w-full">
                 <img src="{{ asset('/photos/mountain1.jpg') }}"
-                    class="h-[80vh] w-full object-cover object-center brightness-50" alt="background-image">
+                    class="h-[80dvh] w-full object-cover object-center brightness-50" alt="background-image">
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
                 <div class="absolute bottom-1/4  left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"

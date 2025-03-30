@@ -1,8 +1,8 @@
 <x-website-layout>
     <div class="bg-blue-100/10 font-body">
-        <div class="card--rounded-none image-full bg-blue-100/50 h-[80vh] relative">
-            <figure class="h-[80vh] w-full">
-                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->tour_page_cover_image_id ?? null" fallback="default"
+        <div class="card--rounded-none image-full bg-blue-100/50 h-[80dvh] relative">
+            <figure class="h-[80dvh] w-full">
+                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$pageSetting->tour_page_cover_image_id ?? null" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
@@ -29,10 +29,10 @@
             <x-breadcrumb :breadcrumbs="[
                 [
                     'name' => 'Home',
-                    'url' => url('/home'),
+                    'url' => url(app()->currentLocale() . '/home'),
                 ],
                 [
-                    'name' => 'Tours',
+                    'name' => 'Activities',
                 ],
             ]" />
             <div class="h-4"></div>
@@ -80,7 +80,8 @@
                                             alt="{{ $tour->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
+                                    <a
+                                        href="{{ route('show_tour', ['id' => $tour->id, 'locale' => app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center">
                                                 <h2
@@ -112,7 +113,8 @@
                                             alt="{{ $tour->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
+                                    <a
+                                        href="{{ route('show_tour', ['id' => $tour->id, 'locale' => app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center">
                                                 <h2

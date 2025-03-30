@@ -1,9 +1,9 @@
 <div class="bg-blue-100/50">
 
-    <div class="card--rounded-none image-full  bg-blue-100/50 h-[80vh]">
-        <figure class="h-[80vh] w-full">
+    <div class="card--rounded-none image-full  bg-blue-100/50 h-[80dvh]">
+        <figure class="h-[80dvh] w-full">
             <img src="{{ $trek->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
-                class="h-[80vh] w-full object-cover brightness-50" />
+                class="h-[80dvh] w-full object-cover brightness-50" />
         </figure>
         <div class="card-body relative">
             <div

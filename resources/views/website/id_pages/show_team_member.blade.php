@@ -1,7 +1,7 @@
-{{-- <div class="card--rounded-none image-full h-[80vh] relative ">
-            <figure class="h-[80vh] w-full ">
+{{-- <div class="card--rounded-none image-full h-[80dvh] relative ">
+            <figure class="h-[80dvh] w-full ">
                 <img src="{{ asset('/photos/mountain2.jpg') }}" alt="Trekking background image"
-                    class="h-[80vh] w-full object-cover brightness-50" />
+                    class="h-[80dvh] w-full object-cover brightness-50" />
             </figure>
             <div
                 class="card-body absolute bottom-1/4 left-[50%]  translate-x-[-50%] translate-y-[10%] flex flex-col items-center gap-8 ">
@@ -26,7 +26,7 @@
         <header>
             <div style="background-image: url('{{ asset('/photos/qualitymount1.png') }}');"
                 class="bg-cover bg-center w-full  object-top font-body ">
-                <div class="card-body flex flex-col items-center justify-center gap-8 backdrop-blur-md h-[80vh]">
+                <div class="card-body flex flex-col items-center justify-center gap-8 backdrop-blur-md h-[80dvh]">
                     <div class="overflow-hidden  justify-center" data-aos="fade-down" data-aos-duration="1200">
                         <img class="h-[28vh] w-[30vw] object-cover object-center rounded-2xl border-white border-4"
                             src="{{ $sherpa->profilePicture->url }}" alt="picture" />

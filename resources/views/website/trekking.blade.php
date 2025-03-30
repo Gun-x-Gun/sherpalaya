@@ -1,9 +1,9 @@
 <x-website-layout>
     {{-- <x-trek.trek-landing-page /> --}}
     <div class="bg-blue-100/10 font-body">
-        <div class="card--rounded-none image-full bg-blue-100/50 h-[80vh] relative">
-            <figure class="h-[80vh] w-full">
-                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->trek_page_cover_image_id ?? null" fallback="default"
+        <div class="card--rounded-none image-full bg-blue-100/50 h-[80dvh] relative">
+            <figure class="h-[80dvh] w-full">
+                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$pageSetting->trek_page_cover_image_id ?? null" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
@@ -29,7 +29,7 @@
             <x-breadcrumb :breadcrumbs="[
                 [
                     'name' => 'Home',
-                    'url' => url('/home'),
+                    'url' => url(app()->currentLocale() . '/home'),
                 ],
                 [
                     'name' => 'Treks',
@@ -80,7 +80,8 @@
                                             alt="{{ $catTrek->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_trek', ['id'=>$catTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                                    <a
+                                        href="{{ route('show_trek', ['id' => $catTrek->id, 'locale' => app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center group ">
                                             <div class="text-center font-oswald tracking-wide font-normal ">
                                                 <h2 class=" text-blue-50 text-3xl uppercase group-hover:text-warning">
@@ -111,7 +112,8 @@
                                             alt="{{ $trek->title }} Cover Image"
                                             class="transition-transform brightness-50 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                     </figure>
-                                    <a href="{{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }}">
+                                    <a
+                                        href="{{ route('show_trek', ['id' => $trek->id, 'locale' => app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
                                             <div class="text-center font-oswald tracking-wide font-normal">
                                                 <h2 class=" text-blue-50 text-3xl uppercase group-hover:text-warning">

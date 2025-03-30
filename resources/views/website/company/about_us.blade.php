@@ -1,8 +1,8 @@
 <x-website-layout>
-    <div class="bg-blue-100/10 font-oswald">
-        <header class="card--rounded-none image-full  h-[80vh] relative">
-            <figure class="h-[80vh] w-full">
-                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$aboutUsSetting->cover_image_id" fallback="default"
+    <div class="bg-blue-100/10 font-body">
+        <header class="card--rounded-none image-full  h-[80dvh] relative">
+            <figure class="h-[80dvh] w-full">
+                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$aboutUsSetting->cover_image_id" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
@@ -27,7 +27,7 @@
             <x-breadcrumb :breadcrumbs="[
                 [
                     'name' => 'Home',
-                    'url' => url('/home'),
+                    'url' => url(app()->currentLocale() . '/home'),
                 ],
                 [
                     'name' => 'AboutUs',

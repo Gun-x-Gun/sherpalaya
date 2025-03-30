@@ -1,10 +1,8 @@
 <x-website-layout>
     <div class="bg-blue-100/10 font-body">
-
-
-        <header class="card--rounded-none image-full  h-[80vh] relative">
-            <figure class="h-[80vh] w-full">
-                <x-curator-glider class="h-[80vh] w-full object-cover brightness-50" :media="$pageSetting->team_page_cover_image_id" fallback="default"
+        <header class="card--rounded-none image-full  h-[80dvh] relative">
+            <figure class="h-[80dvh] w-full">
+                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-50" :media="$pageSetting->team_page_cover_image_id" fallback="default"
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
@@ -29,7 +27,7 @@
         <x-breadcrumb :breadcrumbs="[
             [
                 'name' => 'Home',
-                'url' => url('/home'),
+                'url' => url(app()->currentLocale() . '/home'),
             ],
             [
                 'name' => 'Our Team',
@@ -72,7 +70,7 @@
                                     {{ $allSherpa->name }}
                                 </h5>
                                 <h5
-                                    class="card-title line-clamp-2 capitalize tracking-wide warning text-sm badge badge-outline text-primary font-light  ">
+                                    class="card-title  capitalize tracking-wide  text-xs badge badge-outline text-primary font-light  text-left py-4">
                                     {{ $allSherpa->title }}
                                 </h5>
                             </div>
