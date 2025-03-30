@@ -135,7 +135,7 @@
                                 <span class="icon-[hugeicons--gem] size-44 rotate-12 text-black opacity-35"></span>
 
                             </div>
-                            <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[6rem] opacity-60">
+                            <div class="flex-none text-yellow-200 font-extrabold text-[2rem] lg:text-[4rem] opacity-60">
                                 {{ $landingPageSetting->peak_activity_count }}
                             </div>
                         </div>

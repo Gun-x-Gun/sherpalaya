@@ -8,14 +8,14 @@
                     <x-show-tour.tour-top-section-card :tour="$tour" />
                     {{-- end-section-card --}}
 
-                   <x-breadcrumb :breadcrumbs="[
+                    <x-breadcrumb :breadcrumbs="[
                         [
                             'name' => 'Home',
-                            'url' => url('/home'),
+                            'url' => url(app()->currentLocale() . '/home'),
                         ],
                         [
-                            'name' => 'Tours',
-                            'url' => url('/tours'),
+                            'name' => 'Activities',
+                            'url' => url(app()->currentLocale() . '/tours'),
                         ],
                         [
                             'name' => $tour->title,
@@ -40,7 +40,7 @@
 
 
                 {{-- mobile section tour --}}
-                <x-booking.mobile-booking-section :bookingFor="$tour"/>
+                <x-booking.mobile-booking-section :bookingFor="$tour" />
 
 
                 {{-- stat-mobile --}}
@@ -91,7 +91,7 @@
                                     <x-show-tour.tour-stat-section :tour="$tour" />
 
                                     {{-- booking-section --}}
-                                    <x-booking.booking-section :bookingFor="$tour"/>
+                                    <x-booking.booking-section :bookingFor="$tour" />
 
                                     <div class="h-10"></div>
                                 </div>

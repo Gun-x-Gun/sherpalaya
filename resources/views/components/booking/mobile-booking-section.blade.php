@@ -6,7 +6,7 @@
         aria-controls="mobile-booking-section-inquiry-modal"
         data-overlay="#mobile-booking-section-inquiry-modal">Inquiry</button>
     <a href="{{ $bookingFor->getWhatsappUrl() }}" class="btn btn-success uppercase text-white" target="_blank">
-        <span class="icon-[tabler--brand-whatsapp]"></span>
+        <span class="icon-[tabler--brand-whatsapp] size-8"></span>
         Whatsapp
     </a>
     @push('modals')

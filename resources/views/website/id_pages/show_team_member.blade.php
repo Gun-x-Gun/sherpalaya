@@ -48,16 +48,16 @@
         <x-breadcrumb :breadcrumbs="[
             [
                 'name' => 'Home',
-                'url' => url('/home'),
+                'url' => url(app()->currentLocale() . '/home'),
             ],
             [
-                'name' => 'Our Team',
-                'url' => url('/our-team'),
+                'name' => 'Teams',
+                'url' => url(app()->currentLocale() . '/our-team'),
             ],
             [
                 'name' => $sherpa->name,
             ],
-        ]" />
+        ]" class="lg:mx-16 xl:mx-28 "/>
 
 
         <section class="mx-4 xl:mx-32">
@@ -78,7 +78,7 @@
                         <div class="">
                             <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left"
                                 data-aos="fade-up" data-aos-duration="1200">
-                                {{__('team.languages')}}
+                                {{ __('team.languages') }}
                             </h5>
                             <div class="h-4"></div>
                             @foreach ($sherpa->language as $lang)
@@ -102,16 +102,16 @@
                     <div class="h-10"></div>
                     <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
                         data-aos="fade-down" data-aos-duration="1200">
-                        {{__('footer.expeditions')}}
+                        {{ __('footer.expeditions') }}
                     </h5>
                     <div class="h-4"></div>
                     <div class="overflow-x-scroll horizontal-scrollbar md:mx-8 lg:mx-16 xl:mx-28">
                         <table class="table-striped-columns table font-body ">
                             <thead>
                                 <tr class="text-2xl">
-                                    <th>{{__('team.exped-table')}}</th>
-                                    <th>{{__('team.altitude')}}</th>
-                                    <th>{{__('team.count')}}</th>
+                                    <th>{{ __('team.exped-table') }}</th>
+                                    <th>{{ __('team.altitude') }}</th>
+                                    <th>{{ __('team.count') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -139,15 +139,15 @@
                     <div class="h-10"></div>
                     <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
                         data-aos="fade-down" data-aos-duration="1200">
-                        {{__('footer.treks')}}
+                        {{ __('footer.treks') }}
                     </h5>
                     <div class="h-4"></div>
                     <div class="md:mx-8 lg:mx-16 xl:mx-28">
                         <table class="table-striped-columns table font-body">
                             <thead>
                                 <tr class="text-2xl">
-                                    <th>{{__('team.trek-table')}}</th>
-                                    <th>{{__('team.altitude')}}</th>
+                                    <th>{{ __('team.trek-table') }}</th>
+                                    <th>{{ __('team.altitude') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -171,7 +171,7 @@
 
                     <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
                         data-aos="fade-down" data-aos-duration="1200">
-                        {{__('footer.activities')}}
+                        {{ __('footer.activities') }}
                     </h5>
                     <div class="h-4"></div>
 
@@ -179,7 +179,7 @@
                         <table class="table-striped-columns table font-body">
                             <thead>
                                 <tr class="text-2xl">
-                                    <th>{{__('team.activity-table')}}</th>
+                                    <th>{{ __('team.activity-table') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -208,7 +208,7 @@
                         <div class="mx-2">
                             <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left "
                                 data-aos="fade-down" data-aos-duration="1200">
-                                {{__('team.experiences')}}
+                                {{ __('team.experiences') }}
                             </h5>
                             <div class="h-4"></div>
                             <ul class="list-inside list-disc tracking-wide">
@@ -231,7 +231,7 @@
                     @if ($sherpa->awardsAndCertificates->count() > 0)
                         <h5 class="card-title font-normal uppercase text-2xl text-black tracking-normal mx-0 text-left"
                             data-aos="fade-up" data-aos-duration="1200">
-                            {{__('team.awards')}}
+                            {{ __('team.awards') }}
                         </h5>
                         <div class="h-10"></div>
                         <div class="card-actions  sm:grid grid-cols-2  flex flex-col gap-2 md:gap-4 mb-0 skeleton animate-pulse min-h-52"
