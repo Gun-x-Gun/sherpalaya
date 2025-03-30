@@ -48,11 +48,11 @@
         <x-breadcrumb :breadcrumbs="[
             [
                 'name' => 'Home',
-                'url' => url(app()->currentLocale() . '/home'),
+                'url' => url('/' . app()->currentLocale() . '/home'),
             ],
             [
-                'name' => 'Teams',
-                'url' => url(app()->currentLocale() . '/our-team'),
+                'name' => 'Our Team',
+                'url' => url('/' . app()->currentLocale() . '/our-team'),
             ],
             [
                 'name' => $sherpa->name,

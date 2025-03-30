@@ -27,10 +27,10 @@
             <x-breadcrumb :breadcrumbs="[
                 [
                     'name' => 'Home',
-                    'url' => url(app()->currentLocale() . '/home'),
+                    'url' => url('/' . app()->currentLocale() . '/home'),
                 ],
                 [
-                    'name' => 'AboutUs',
+                    'name' => 'About Us',
                 ],
             ]" />
 

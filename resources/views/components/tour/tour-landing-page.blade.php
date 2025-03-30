@@ -46,7 +46,7 @@
     <x-breadcrumb :breadcrumbs="[
         [
             'name' => 'Home',
-            'url' => url('/home'),
+            'url' => url('/' . app()->currentLocale() . '/home'),
         ],
         [
             'name' => 'Tours',

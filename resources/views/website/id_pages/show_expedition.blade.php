@@ -14,11 +14,11 @@
                     <x-breadcrumb :breadcrumbs="[
                         [
                             'name' => 'Home',
-                            'url' => url(app()->currentLocale() . '/home'),
+                            'url' => url('/' . app()->currentLocale() . '/home'),
                         ],
                         [
                             'name' => 'Expeditions',
-                            'url' => url(app()->currentLocale() . '/expeditions'),
+                            'url' => url('/' . app()->currentLocale() . '/expeditions'),
                         ],
                         [
                             'name' => $expedition->title,

@@ -48,11 +48,11 @@
         <x-breadcrumb :breadcrumbs="[
             [
                 'name' => 'Home',
-                'url' => url('/home'),
+                'url' => url('/' . app()->currentLocale() . '/home'),
             ],
             [
                 'name' => 'Services',
-                'url' => url('/services'),
+                'url' => url('/' . app()->currentLocale() . '/services'),
             ],
             [
                 'name' => $service->title,
@@ -88,7 +88,7 @@
                                         {{ __('show-page.service') }}
                                     </h5>
                                 </div>
-                                
+
                                 <div class="h-4"></div>
                                 <div class="sm:grid sm:grid-cols-2 md:grid-cols-2 flex flex-col gap-2 w-full md:px-2">
                                     @foreach ($service->destinations as $destination)
@@ -166,7 +166,7 @@
                             </div>
                         @endif
                     </div>
-                    
+
                     <x-show-service.service-gallery :service="$service" />
 
                 </div>
