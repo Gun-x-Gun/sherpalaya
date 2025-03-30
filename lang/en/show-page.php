@@ -18,4 +18,8 @@ return [
     'inquire' => 'Inquiry',
     'recommend' => 'Recommended',
     'service' => 'Service Station',
+
+    'journey' => 'Journey',
+    'from' => 'From',
+    'to' => 'To',
 ];

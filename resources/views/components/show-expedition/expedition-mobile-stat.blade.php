@@ -61,5 +61,25 @@
             </div>
         @endif
 
+        @if (!empty($expedition->starting_point) || !empty($expedition->ending_point))
+            <div class="stat">
+                <div class="stat-title text-black uppercase font-normal">
+                    {{ __('show-page.journey') }}
+                </div>
+                <div class="stat-value font-body flex flex-col gap-2 mt-2">
+                    @if (!empty($expedition->starting_point))
+                        <span class="badge badge-outline text-base">
+                            {{ __('show-page.from') }}: {{ $expedition->starting_point }}
+                        </span>
+                    @endif
+                    @if (!empty($expedition->ending_point))
+                        <span class="badge badge-outline text-base">
+                            {{ __('show-page.to') }}: {{ $expedition->ending_point }}
+                        </span>
+                    @endif
+                </div>
+            </div>
+        @endif
+
     </div>
 </div>

@@ -6,7 +6,7 @@
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
-                <div class="absolute bottom-1/4  left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
+                <div class="absolute bottom-1/4  left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden"
                     data-aos="fade-down" data-aos-duration="1200">
                     <h5
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
@@ -34,7 +34,7 @@
                 ],
             ]" />
 
-            <article class="2xl:mx-32 mx-4 ">
+            <article class="xl:mx-32 mx-4 ">
                 <div class="h-8"></div>
                 <div class="flex flex-col lg:justify-start lg:items-start">
                     <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left "
@@ -59,7 +59,7 @@
 
         <section class=" bg-blue-100/20">
             <div class="h-10"></div>
-            <div class="2xl:mx-32 mx-4">
+            <div class="xl:mx-32 mx-4">
                 <h5 class="text-3xl md:text-4xl font-body  uppercase tracking-normal text-black font-medium text-left "
                     data-aos="flip-up" data-aos-duration="800">
                     {{ __('aboutpage.legal') }}
@@ -91,7 +91,7 @@
 
         <section class="bg-blue-100/5">
             <div class="h-10"></div>
-            <div class="2xl:mx-32 mx-4">
+            <div class="xl:mx-32 mx-4">
                 <h1 class="text-3xl md:text-4xl tracking-normal font-body  text-left line-clamp-2 text-black font-medium uppercase"
                     data-aos="fade-down" data-aos-duration="1200">
                     {{ __('aboutpage.faq') }}

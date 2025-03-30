@@ -1,6 +1,6 @@
 {{-- @if ($featuredTours->count() > 3)
     <div class="bg-blue-100/40">
-        <div class="2xl:mx-32 mx-4 ">
+        <div class="xl:mx-32 mx-4 ">
             <div class="h-10 md:h-20"></div>
             <div class="flex flex-col md:justify-center md:items-center ">
                 <h5 class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-center  "
@@ -75,7 +75,7 @@
 @if ($featuredTours->count() > 0)
     <div class="bg-blue-100/30 font-body">
         <div class="h-20"></div>
-        <div class="2xl:mx-32 mx-4 ">
+        <div class="xl:mx-32 mx-4 ">
             <article class="flex flex-col md:justify-start md:items-start ">
                 <h5 class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-center  "
                     data-aos="fade-down" data-aos-duration="1200">

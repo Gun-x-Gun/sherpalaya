@@ -60,7 +60,7 @@
         ]" />
 
 
-        <section class="mx-4 2xl:mx-32">
+        <section class="mx-4 xl:mx-32">
             <div class="h-4"></div>
             <div
                 class="text-lg/8 mt-6 text-justify text-black  md:mx-8 lg:mx-16  xl:mx-28
@@ -71,7 +71,7 @@
         </section>
 
         <section class="bg-blue-100/20">
-            <div class="mx-4 2xl:mx-32">
+            <div class="mx-4 xl:mx-32">
                 @if (count($sherpa->language) > 0)
                     <div class="md:mx-8 lg:mx-16 xl:mx-28 ">
                         <div class="h-10"></div>
@@ -97,7 +97,7 @@
             </div> --}}
 
         <main class="bg-blue-100/10">
-            <div class="mx-4 2xl:mx-32">
+            <div class="mx-4 xl:mx-32">
                 @if (count($sherpa->expeditions) > 0)
                     <div class="h-10"></div>
                     <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
@@ -134,7 +134,7 @@
             </div>
         </main>
         <main class="bg-blue-100/10">
-            <div class="mx-4 2xl:mx-32">
+            <div class="mx-4 xl:mx-32">
                 @if (count($sherpa->treks) > 0)
                     <div class="h-10"></div>
                     <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
@@ -165,7 +165,7 @@
             </div>
         </main>
         <main class="bg-blue-100/10">
-            <div class="mx-4 2xl:mx-32">
+            <div class="mx-4 xl:mx-32">
                 @if (count($sherpa->tours) > 0)
                     <div class="h-10"></div>
 
@@ -200,7 +200,7 @@
         {{-- $sherpa->experience  --}}
 
         <section class="bg-blue-100/20">
-            <div class="mx-4 2xl:mx-32">
+            <div class="mx-4 xl:mx-32">
                 @if (count($sherpa->experience) > 0)
                     <div class="h-10"></div>
 
@@ -224,7 +224,7 @@
         </section>
 
         <section class="bg-blue-100/10">
-            <div class="mx-4 2xl:mx-32">
+            <div class="mx-4 xl:mx-32">
                 <div class="col-span-2 md:mx-8 lg:mx-16 xl:mx-28">
                     <div class="h-10"></div>
 

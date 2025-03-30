@@ -5,7 +5,7 @@
     </figure>
     <div class="card-body absolute inset-0 flex items-center justify-start leading-[1.1] md:leading-snug"
         data-aos="fade-down" data-aos-duration="1500">
-        <div class="absolute bottom-2/4 left-4 lg:left-16   2xl:left-32 transform translate-y-1/2 ">
+        <div class="absolute bottom-2/4 left-4 xl:left-32 transform translate-y-1/2 ">
             <h2
                 class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-preety md:w-[70%] leading-[1.3]  overflow-hidden opacity-75">
                 {{ $title }}

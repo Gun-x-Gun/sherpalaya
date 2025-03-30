@@ -1,7 +1,7 @@
 <div style="background-image: url('{{ asset('/photos/background1.jpg') }}');"
     class="bg-cover bg-center w-full  object-top font-body">
     <div class="backdrop-blur-md">
-        <div class="mx-4 2xl:mx-32">
+        <div class="mx-4 xl:mx-32">
             <div class="h-10"></div>
             <footer class="footer">
                 <div class="gap-6">

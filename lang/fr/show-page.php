@@ -21,4 +21,8 @@ return [
     'recommend' => 'Recommandé',
 
     'service' => 'Station-Service',
+
+    'journey' => 'Voyage',
+    'from' => 'De',
+    'to' => 'À',
 ];

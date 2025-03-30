@@ -7,7 +7,7 @@
         </figure>
         <div class="card-body relative">
             <div
-                class="absolute 2xl:bottom-52 2xl:left-32  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                class="absolute 2xl:bottom-52 xl:left-32  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class=" max-w-[92%] 2xl:max-w-[100%]">
                     <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-extrabold ">
                         Our
@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="h-8 "></div>
-    <div class="2xl:mx-32 mx-4 text-left">
+    <div class="xl:mx-32 mx-4 text-left">
         <h1
             class="text-2xl lg:text-5xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
             Our Services In Nepal
@@ -55,7 +55,7 @@
 
 
     {{-- Showing <strong>{{ $serviceDestination->services->count() }}</strong> --}}
-    <div class="2xl:mx-32 mx-4">
+    <div class="xl:mx-32 mx-4">
 
         @foreach ($servicesRegion as $serviceRegion)
             @if (!empty($serviceRegion->name))

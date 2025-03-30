@@ -1,7 +1,7 @@
 @if ($featuredTours->count() === 3)
 
     <div class="bg-blue-100/10" data-aos="fade-down" data-aos-duration="1200">
-        <div class="2xl:mx-32 mx-4 ">
+        <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
 
             <div class="">

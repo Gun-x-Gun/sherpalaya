@@ -6,7 +6,7 @@
         </figure>
         <div class="card-body relative">
             <div
-                class="absolute 2xl:bottom-52 2xl:left-32  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                class="absolute 2xl:bottom-52 xl:left-32  bottom-40 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class="">
                     {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
                         Explore
@@ -25,7 +25,7 @@
 
     <div class="bg-blue-100/50">
         <div class="h-8 "></div>
-        <div class="2xl:mx-32 mx-4 text-left">
+        <div class="xl:mx-32 mx-4 text-left">
             <h1
                 class="text-2xl lg:text-4xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
                 Peaks In Nepal
@@ -60,7 +60,7 @@
 
 
     {{-- Showing <strong>{{ $peakRegion->peaks->count() }}</strong> --}}
-    <div class="2xl:mx-32 mx-4">
+    <div class="xl:mx-32 mx-4">
         @foreach ($peaksRegion as $peakRegion)
             @if ($peakRegion->peaks->isNotEmpty())
                 <div id="region-{{ $peakRegion->id }}">

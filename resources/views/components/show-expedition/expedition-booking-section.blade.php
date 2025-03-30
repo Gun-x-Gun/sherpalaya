@@ -6,5 +6,6 @@
         <button class="btn btn-info  btn-wide uppercase">
             {{__('show-page.inquire')}}
         </button>
+        
     </div>
 </div>

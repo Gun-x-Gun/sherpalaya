@@ -18,14 +18,6 @@
                         </span>
                     </div>
                 @endif
-            </div>
-        @endif
-
-        @if (!empty($expedition->grade) || !empty($expedition->expedition_difficulty))
-            <div class="stat">
-                <div class="stat-title text-black uppercase font-normal">
-                    {{ __('show-page.difficulty') }}
-                </div>
                 <div class="stat-value font-body">
                     @if (!empty($expedition->grade))
                         <span class="badge badge-outline badge-primary text-base">
@@ -34,14 +26,38 @@
                     @endif
                     @if (!empty($expedition->expedition_difficulty))
                         <span class="badge badge-outline badge-error text-base">
-                            {{ $expedition->expedition_difficulty->getLabel() }}
+                            {{ __('show-page.difficulty') }} : {{ $expedition->expedition_difficulty->getLabel() }}
                         </span>
                     @endif
                 </div>
             </div>
         @endif
 
-        @if (!empty($expedition->starting_altitude) || !empty($expedition->highest_altitude))
+        @if (!empty($expedition->grade) || !empty($expedition->expedition_difficulty))
+            <div class="stat">
+                {{-- <div class="stat-title text-black uppercase font-normal">
+                    {{ __('show-page.difficulty') }}
+                </div> --}}
+
+                <div class="stat-title text-black uppercase font-normal">
+                    {{ __('show-page.altitude') }}
+                </div>
+                <div class="stat-value font-body">
+                    @if (!empty($expedition->starting_altitude))
+                        <span class="badge badge-outline text-base">
+                            {{ __('show-page.start') }} {{ $expedition->starting_altitude }}M
+                        </span>
+                    @endif
+                    @if (!empty($expedition->highest_altitude))
+                        <span class="badge badge-outline text-base">
+                            {{ __('show-page.highest') }} {{ $expedition->highest_altitude }}M
+                        </span>
+                    @endif
+                </div>
+            </div>
+        @endif
+
+        {{-- @if (!empty($expedition->starting_altitude) || !empty($expedition->highest_altitude))
             <div class="stat">
                 <div class="stat-title text-black uppercase font-normal">
                     {{ __('show-page.altitude') }}
@@ -55,6 +71,26 @@
                     @if (!empty($expedition->highest_altitude))
                         <span class="badge badge-outline text-base">
                             {{ __('show-page.highest') }} {{ $expedition->highest_altitude }}M
+                        </span>
+                    @endif
+                </div>
+            </div>
+        @endif --}}
+
+        @if (!empty($expedition->starting_point) || !empty($expedition->ending_point))
+            <div class="stat">
+                <div class="stat-title text-black uppercase font-normal">
+                    {{ __('show-page.journey') }}
+                </div>
+                <div class="stat-value font-body flex flex-col gap-2 mt-2">
+                    @if (!empty($expedition->starting_point))
+                        <span class="badge badge-outline text-base">
+                            {{ __('show-page.from') }}: {{ $expedition->starting_point }}
+                        </span>
+                    @endif
+                    @if (!empty($expedition->ending_point))
+                        <span class="badge badge-outline text-base ">
+                            {{ __('show-page.to') }}: {{ $expedition->ending_point }}
                         </span>
                     @endif
                 </div>

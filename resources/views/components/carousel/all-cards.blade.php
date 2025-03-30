@@ -1,5 +1,5 @@
 <div class="mt-24">
-    <article class="flex flex-col lg:justify-start lg:items-start 2xl:mx-32 mx-4 ">
+    <article class="flex flex-col lg:justify-start lg:items-start xl:mx-32 mx-4 ">
         <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-justify"
             data-aos="fade-down" data-aos-duration="1200">
             {!! app()->currentLocale() == 'fr'
@@ -16,7 +16,7 @@
         <div class="h-10 md:h-12"></div>
     </article>
     <main class=" max-w-full font-body">
-        <div class="md:grid grid-cols-7 gap-2 2xl:mx-32 mx-4 flex flex-col ">
+        <div class="md:grid grid-cols-7 gap-2 xl:mx-32 mx-4 flex flex-col ">
             <a href="/{{ app()->currentLocale() }}/expeditions" class="col-span-4 ">
                 <div
                     class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group  border expedition-activity-card hover:shadow-sm hover:shadow-black">
@@ -83,7 +83,7 @@
 
         </div>
 
-        <div class="md:grid grid-cols-7 gap-2 2xl:mx-32 mx-4 flex flex-col">
+        <div class="md:grid grid-cols-7 gap-2 xl:mx-32 mx-4 flex flex-col">
             <a href="/{{ app()->currentLocale() }}/tours" class="col-span-3">
                 <div
                     class="card rounded-md image-full h-[22rem] w-full relative flex items-end  card-side group  border hover:shadow-sm  hover:shadow-black">

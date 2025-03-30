@@ -3,7 +3,7 @@
 @endphp
 @if ($featuredTours->count() === 1)
     <div class="bg-blue-100/10">
-        <div class="2xl:mx-32 mx-4 ">
+        <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>
             <div class="lg:grid grid-cols-3 md:gap-8 flex flex-col gap-2 bg-blue-100/10" data-aos="fade-down" data-aos-duration="1200">
 

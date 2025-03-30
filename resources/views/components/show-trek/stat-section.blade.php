@@ -61,5 +61,25 @@
             </div>
         @endif
 
+        @if (!empty($trek->starting_point) || !empty($trek->ending_point))
+            <div class="stat">
+                <div class="stat-title text-black uppercase font-normal">
+                    {{ __('show-page.journey') }}
+                </div>
+                <div class="stat-value font-body">
+                    @if (!empty($trek->starting_point))
+                        <span class="badge badge-outline text-base">
+                            {{ __('show-page.from') }}: {{ $trek->starting_point }}
+                        </span>
+                    @endif
+                    @if (!empty($trek->ending_point))
+                        <span class="badge badge-outline text-base">
+                            {{ __('show-page.to') }}: {{ $trek->ending_point }}
+                        </span>
+                    @endif
+                </div>
+            </div>
+        @endif
+
     </div>
 </div>

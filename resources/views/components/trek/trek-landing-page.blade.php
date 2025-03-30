@@ -6,7 +6,7 @@
         </figure>
         <div class="card-body relative">
             <div
-                class="absolute lg:bottom-96 2xl:left-32  bottom-20 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                class="absolute lg:bottom-96 xl:left-32  bottom-20 left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                 <div class="">
                     {{-- <h5 class="card-title mb-2.5 text-warning text-2xl md:text-5xl uppercase font-extrabold ">
                         Explore
@@ -34,7 +34,7 @@
     <div class="bg-blue-100/50">
 
         <div class="h-8 "></div>
-        <div class="2xl:mx-32 mx-4 text-left">
+        <div class="xl:mx-32 mx-4 text-left">
             <h1
                 class="text-2xl lg:text-4xl  font-light  line-clamp-2 tracking-wider text-primary uppercase wrap text-pretty">
                 Trekking Adventure In Nepal
@@ -59,7 +59,7 @@
     <div class="h-12"></div>
 
 
-    <div class="2xl:mx-32 mx-4">
+    <div class="xl:mx-32 mx-4">
         @foreach ($treksRegion as $trekRegion)
             @if ($trekRegion->treks->isNotEmpty())
                 <div id="region-{{ $trekRegion->id }}">

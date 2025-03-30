@@ -1,6 +1,6 @@
 @if ($featuredExpeditions->count() > 0)
     <div class="bg-blue-100/40">
-        <div class="2xl:mx-32 mx-4 font-body">
+        <div class="xl:mx-32 mx-4 font-body">
             <div class="h-10 md:h-20"></div>
             <article>
                 <h5 class="text-3xl md:text-4xl font-oswald font-medium  line-clamp-2 uppercase tracking-wider text-black text-left md:text-left"

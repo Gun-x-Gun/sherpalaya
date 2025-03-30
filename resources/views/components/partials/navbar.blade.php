@@ -11,14 +11,14 @@
 </style>
 
 <header id="navbar"
-    class="fixed top-0 z-50  w-full flex  flex-wrap py-4 text-lg lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
+    class="fixed top-0 z-50  w-full flex  flex-wrap py-4  xl:flex-nowrap xl:justify-start  bg-transparent font-body  font-medium tracking-wide">
     <nav class="w-full" aria-label="Global">
-        <div class=" relative lg:flex lg:items-center ">
-            <div class="flex items-center justify-between 2xl:mx-32 mx-4 ">
-                <a class="link text-base-content link-neutral texl-lg font-semibold no-underline " href="/{{ app()->currentLocale() }}/home">
+        <div class=" relative xl:flex xl:items-center ">
+            <div class="flex items-center justify-between xl:mx-32 mx-4 ">
+                <a class="link text-base-content link-neutral texl-xl font-semibold no-underline " href="/{{ app()->currentLocale() }}/home">
                     <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class=" w-12 xl:w-24">
                 </a>
-                <div class="lg:hidden">
+                <div class="xl:hidden">
                     <div class="dropdown relative inline-flex [--placement:bottom-end] px-2 ">
                         <button id="language-select-dropdown-drawer" type="button" class="dropdown-toggle"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
@@ -45,11 +45,11 @@
             </div>
 
             <div id="navbar-mega-menu-click"
-                class="collapse hidden grow basis-full overflow-hidden rounded-lg transition-all duration-300  lg:block 2xl:mx-32 mx-4 ">
+                class="collapse hidden grow basis-full overflow-hidden rounded-xl transition-all duration-300  xl:block xl:mr-32 mx-4 ">
                 <div
-                    class="flex flex-col rounded-lg max-lg:mt-3 max-lg:border  lg:flex-row lg:items-center lg:justify-end  lg:py-0.5">
-                    <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent ">
-                        <li class=" hover:text-warning rounded-lg "><a href="/{{ app()->currentLocale() }}/home" @class([
+                    class="flex flex-col rounded-xl max-xl:mt-3 max-xl:border  xl:flex-row xl:items-center xl:justify-end  xl:py-0.5">
+                    <ul class="menu xl:menu-horizontal p-0  max-xl:w-fit bg-transparent ">
+                        <li class=" hover:text-warning rounded-xl text-xl"><a href="/{{ app()->currentLocale() }}/home" @class([
                             'text-warning' => request()->route()->getName() == 'website.home',
                         ])>
                                 {{ __('navbar.home') }}
@@ -58,7 +58,7 @@
                     </ul>
                     <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="nested-dropdown" type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-xl "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.company') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -89,9 +89,9 @@
 
                     {{-- expedition start --}}
                     <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg  font-bold "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-xl  font-bold "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.expeditions') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -102,7 +102,7 @@
                                 <nav class="sticky top-5 tabs tabs-bordered tabs-vertical gap-2 mt-8 text-black min-w-32 "
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active-tab:font-bold active text-wrap text-lg uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
+                                        class="tab active-tab:tab-active active-tab:font-bold active text-wrap text-xl uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
                                         id="tabs-center-item-expedition" data-tab="#tabs-center-expedition"
                                         aria-controls="tabs-center-expedition" role="tab" aria-selected="true">
                                         All
@@ -110,7 +110,7 @@
                                     @foreach ($navExpeditions as $index => $expCategory)
                                         @if ($expCategory->expeditions->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active active-tab:font-bold text-lg uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
+                                                class="tab active-tab:tab-active active-tab:font-bold text-xl uppercase tracking-normal shadow-sm shadow-gray-300 border-none bg-gray-300 rounded-md"
                                                 id="tabs-center-item-{{ $expCategory->id }}"
                                                 data-tab="#tabs-center-{{ $expCategory->id }}"
                                                 aria-controls="tabs-center-{{ $expCategory->id }}" role="tab"
@@ -195,9 +195,9 @@
 
                     {{-- trek-start --}}
                     <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-xl "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.treks') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -208,7 +208,7 @@
                                 <nav class="sticky top-10 tabs tabs-bordered  bg-transparent tabs-vertical gap-2 mt-8  text-black"
                                     aria-label="Tabs" role="tablist" aria-orientation="horizontal">
                                     <button type="button"
-                                        class="tab active-tab:tab-active active-tab:font-bold active text-lg tracking-normal bg-gray-300 rounded-md"
+                                        class="tab active-tab:tab-active active-tab:font-bold active text-xl tracking-normal bg-gray-300 rounded-md"
                                         id="tabs-center-item-all" data-tab="#tabs-center-all"
                                         aria-controls="tabs-center-all" role="tab" aria-selected="true">
                                         ALL
@@ -216,7 +216,7 @@
                                     @foreach ($navTreks as $index => $trekCategory)
                                         @if ($trekCategory->treks->count() > 0)
                                             <button type="button"
-                                                class="tab active-tab:tab-active active-tab:font-bold uppercase text-wrap text-lg tracking-normal bg-gray-300 rounded-md"
+                                                class="tab active-tab:tab-active active-tab:font-bold uppercase text-wrap text-xl tracking-normal bg-gray-300 rounded-md"
                                                 id="tabs-center-item-{{ $trekCategory->id }}"
                                                 data-tab="#tabs-center-{{ $trekCategory->id }}"
                                                 aria-controls="tabs-center-{{ $trekCategory->id }}" role="tab"
@@ -300,9 +300,9 @@
 
                     {{-- tours --}}
                     <div
-                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  lg:[--strategy:absolute]">
+                        class="dropdown [--adaptive:none] [--auto-close:inside] [--strategy:static]  xl:[--strategy:absolute]">
                         <button type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg "
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-xl "
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             {{ __('navbar.activities') }}
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -406,7 +406,7 @@
 
                     {{-- <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
                         <button id="service-dropdown" type="button"
-                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-lg"
+                            class="dropdown-toggle btn btn-text text-base-content/80 dropdown-open:bg-base-content/10 dropdown-open:text-base-content text-xl"
                             aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                             Services
                             <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
@@ -424,8 +424,8 @@
                     </div> --}}
 
                     {{-- contact  --}}
-                    <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent items-center  ">
-                        {{-- <li class=" hover:text-warning rounded-lg text-base "><a href="/{{ app()->currentLocale() }}/services"
+                    <ul class="menu xl:menu-horizontal p-0  max-xl:w-fit bg-transparent items-center  ">
+                        {{-- <li class=" hover:text-warning rounded-xl text-base "><a href="/{{ app()->currentLocale() }}/services"
                                 @class([
                                     'text-warning' =>
                                         request()->route()->getName() == 'website.company.our_service',
@@ -437,7 +437,7 @@
 
 
 
-                        <li class=" hover:text-warning rounded-lg text-lg "><a href="/{{ app()->currentLocale() }}/contact"
+                        <li class=" hover:text-warning rounded-xl text-xl "><a href="/{{ app()->currentLocale() }}/contact"
                                 @class([
                                     'text-warning' => request()->route()->getName() == 'website.contact',
                                 ])>
@@ -446,7 +446,7 @@
                         </li>
 
                         {{-- Search --}}
-                        <li class=" hover:text-warning rounded-lg text-base ">
+                        <li class=" hover:text-warning rounded-xl text-base ">
                             <button type="button" class="" aria-haspopup="dialog" aria-expanded="false"
                                 aria-controls="middle-center-modal" data-overlay="#middle-center-modal">
                                 <span class="icon-[tabler--search] size-5"></span>
@@ -454,7 +454,7 @@
                         </li>
 
                         {{-- Language Select --}}
-                        <li class=" hover:text-warning rounded-lg text-base uppercase">
+                        <li class=" hover:text-warning rounded-xl text-base uppercase">
                             <div class="dropdown relative inline-flex [--placement:bottom-end]">
                                 <button id="language-select-dropdown" type="button" class="dropdown-toggle"
                                     aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
@@ -479,7 +479,7 @@
 
 
 {{-- drawer --}}
-<div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden lg:hidden font-body"
+<div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden xl:hidden font-body"
     role="dialog" tabindex="-1">
     <div class="drawer-body px-2 uppercase">
         <div class="drawer-header px-2">
@@ -499,7 +499,7 @@
         </div>
         <div class="drawer-body justify-start pb-6 px-0">
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
-                <li class=" hover:text-warning rounded-lg items-start"><a href="/{{ app()->currentLocale() }}/home" @class([
+                <li class=" hover:text-warning rounded-xl items-start"><a href="/{{ app()->currentLocale() }}/home" @class([
                     'text-warning' => request()->route()->getName() == 'website.home',
                 ])>
                         <span class="icon-[solar--home-outline] size-5">
@@ -526,7 +526,7 @@
                                     </a>
                                 </li>
                                 {{-- <li
-                                    class="text-black text-lg font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
+                                    class="text-black text-xl font-normal teacking-normal  hover:text-warning hover:underline decoration-1">
                                     <a class="dropdown-item" href="/">
                                         Documents
                                     </a>
@@ -558,7 +558,7 @@
                             @if ($expeditionCategory->expeditions->isNotEmpty())
                                 <li class="uppercase ">
                                     <a href="/{{ app()->currentLocale() }}/expeditions#category-{{ $expeditionCategory->id }}"
-                                        class="menu font-normal text-black text-lg">{{ $expeditionCategory->name }}
+                                        class="menu font-normal text-black text-xl">{{ $expeditionCategory->name }}
                                         </p></a>
                                     <ul class="menu px-2">
                                         @foreach ($expeditionCategory->expeditions as $expedition)
@@ -600,7 +600,7 @@
                             @if ($trekCategory->treks->isNotEmpty())
                                 <li class="uppercase ">
                                     <a href="/{{ app()->currentLocale() }}/treks#category-{{ $trekCategory->id }}"
-                                        class="menu font-normal text-black text-lg">{{ $trekCategory->name }}
+                                        class="menu font-normal text-black text-xl">{{ $trekCategory->name }}
                                         </p></a>
                                     <ul class="menu px-2">
                                         @foreach ($trekCategory->treks as $trek)
@@ -689,7 +689,7 @@
                 {{-- services end --}}
 
                 {{-- contact  --}}
-                <li class="text-slate-900 hover:text-warning rounded-lg text-base uppercase">
+                <li class="text-slate-900 hover:text-warning rounded-xl text-base uppercase">
                     <a href="/{{ app()->currentLocale() }}/contact" @class([
                         'text-warning' => request()->route()->getName() == 'website.contact',
                     ])>
@@ -708,7 +708,7 @@
     <div id="middle-center-modal" class="overlay modal overlay-open:opacity-100 modal-middle hidden backdrop-blur-sm "
         role="dialog" tabindex="-1">
         <div class="modal-dialog overlay-open:opacity-100">
-            <div class="modal-content bg-blue-50  rounded-lg shadow-md shadow-gray-400">
+            <div class="modal-content bg-blue-50  rounded-xl shadow-md shadow-gray-400">
                 <div class="modal-header">
                     {{-- <h3 class="modal-title">Type</h3> --}}
                     <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close"

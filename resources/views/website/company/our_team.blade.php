@@ -6,7 +6,7 @@
                     loading="lazy" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
-                <div class="absolute bottom-1/4  left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
+                <div class="absolute bottom-1/4  left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden"
                     data-aos="fade-down" data-aos-duration="1200">
                     <h5
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
@@ -36,7 +36,7 @@
 
 
         {{--  --}}
-        <article class="2xl:mx-32 mx-4 ">
+        <article class="xl:mx-32 mx-4 ">
             <div class="h-8"></div>
 
             <div class=" flex flex-col lg:justify-start lg:items-start">
@@ -57,7 +57,7 @@
 
         {{-- {{ dd($allSherpas) }} --}}
 
-        <aside class="mx-4 2xl:mx-32">
+        <aside class="mx-4 xl:mx-32">
             <div class=" flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
                 @foreach ($allSherpas as $allSherpa)
                     <a href="{{ route('show_team_member', ['id'=>$allSherpa->id,'locale'=>app()->currentLocale()]) }}">

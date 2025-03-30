@@ -4,7 +4,7 @@
 
     </div>
 
-    <div class="2xl:mx-32 mx-4">
+    <div class="xl:mx-32 mx-4">
         <div class="stats  gap-2 w-full shadow-2xl">
             <div class="stat" data-aos="fade-down" data-aos-duration="1200">
                 <div class="stat-figure text-base-content size-8">

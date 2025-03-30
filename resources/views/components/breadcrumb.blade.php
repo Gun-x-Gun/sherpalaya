@@ -1,5 +1,5 @@
 <div class="bg-transparent">
-    <div class="breadcrumbs 2xl:mx-32 mx-4 text-accent  ">
+    <div class="breadcrumbs xl:mx-32 mx-4 text-accent  ">
         <ul >
             @foreach ($breadcrumbs as $breadcrumb)
                 <li class="hover:text-primary hover:underline decoration-wavy">

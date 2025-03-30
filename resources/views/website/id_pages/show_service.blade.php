@@ -20,7 +20,7 @@
                     class="h-[80dvh] w-full object-cover brightness-50" />
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start font-oswald">
-                <div class="absolute bottom-1/4 left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
+                <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden"
                     data-aos="fade-down" data-aos-duration="1200">
                     <h2
                         class="card-title mb-2 text-blue-50 text-4xl sm:text-5xl lg:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap md:w-[70%] leading-[1.3]  overflow-hidden opacity-75">
@@ -35,7 +35,7 @@
                 <img src="{{ $service->coverImage?->url ?? '/photos/banner.jpg' }}" alt="Trekking background image"
                     class="h-[80dvh] w-full object-cover brightness-50" />
             </figure>
-            <div class="absolute bottom-1/4 left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden w-[90%] md:w-[60%]"
+            <div class="absolute bottom-1/4 left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden w-[90%] md:w-[60%]"
                 data-aos="fade-down" data-aos-duration="1200">
                 <h1
                     class="card-title mb-2 text-warning text-4xl sm:text-5xl lg:text-6xl  uppercase font-card font-semibold tracking-tight text-balance leading-[1.3] opacity-75">
@@ -62,7 +62,7 @@
         <x-booking.mobile-booking-section :bookingFor="$service" />
 
 
-        <div class="mx-4 2xl:mx-32 mt-4">
+        <div class="mx-4 xl:mx-32 mt-4">
             {{-- description  --}}
 
             <div class="h-10"></div>

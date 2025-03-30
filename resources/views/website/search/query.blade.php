@@ -37,7 +37,7 @@
             </figure>
             <div class="card-body">
                 <div
-                    class="absolute bottom-1/3 2xl:left-32   left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
+                    class="absolute bottom-1/3 xl:left-32   left-4   max-w-full  2xl:max-w-full overflow-hidden border-none ">
                     <div class=" max-w-[92%] 2xl:max-w-[100%]">
                         <h5 class="card-title mb-2.5 text-warning text-2xl md:text-4xl uppercase font-medium ">
                             Search Result For
@@ -55,7 +55,7 @@
                     class="h-[80dvh] w-full object-cover object-center brightness-50" alt="background-image">
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
-                <div class="absolute bottom-1/4  left-4 lg:left-4 2xl:left-32 transform translate-y-1/2 overflow-hidden"
+                <div class="absolute bottom-1/4  left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden"
                     data-aos="fade-down" data-aos-duration="1200">
                     <h5
                         class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
@@ -68,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div class="2xl:mx-32 mx-4 ">
+        <div class="xl:mx-32 mx-4 ">
             <div class="h-8"></div>
             <div class="md:grid md:grid-cols-2  xl:grid-cols-3 gap-4 flex flex-col ">
                 @forelse ($results ?? [] as $resultType => $resultDatas)
