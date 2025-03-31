@@ -124,8 +124,8 @@
             </div>
             <div class="h-10"></div>
         </section>
-
         <x-review />
+        <x-whatsapp-icon />
     </div>
 
 

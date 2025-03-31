@@ -35,10 +35,11 @@
         <div class="h-8"></div>
         <div class="mx-4 xl:mx-32">
             <div class="bg-blue-transparent text-blue-600">
-               {!! $termsAndCondition !!}
+                {!! $termsAndCondition !!}
             </div>
         </div>
         <div class="h-8"></div>
+        <x-whatsapp-icon />
 
     </div>
 </x-website-layout>

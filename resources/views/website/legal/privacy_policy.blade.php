@@ -34,5 +34,7 @@
             </div>
         </div>
         <div class="h-16"></div>
+        <x-whatsapp-icon />
+
     </div>
 </x-website-layout>

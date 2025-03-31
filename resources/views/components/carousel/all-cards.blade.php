@@ -1,4 +1,5 @@
 <div class="mt-24">
+    
     <article class="flex flex-col lg:justify-start lg:items-start xl:mx-32 mx-4 ">
         <h5 class="text-3xl md:text-4xl font-body  font-medium uppercase tracking-normal text-black text-left lg:text-justify"
             data-aos="fade-down" data-aos-duration="1200">
@@ -146,4 +147,6 @@
         <div class="h-16">
         </div>
     </main>
+    <x-whatsapp-icon />
+
 </div>

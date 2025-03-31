@@ -57,7 +57,7 @@
             [
                 'name' => $sherpa->name,
             ],
-        ]" class="lg:mx-16 xl:mx-28 "/>
+        ]" />
 
 
         <section class="mx-4 xl:mx-32">
@@ -255,6 +255,7 @@
 
 
         <div class="h-10"></div>
+        <x-whatsapp-icon />
 
 
         @push('modals')

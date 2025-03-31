@@ -187,6 +187,8 @@
                 </div>
             </div>
             <div class="h-12"></div>
+        <x-whatsapp-icon />
+
         </div>
     </section>
 </x-website-layout>

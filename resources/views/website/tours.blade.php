@@ -279,5 +279,7 @@
             @endforeach --}}
             </div>
             <div class="h-10"></div>
+        <x-whatsapp-icon />
+
         </div>
 </x-website-layout>

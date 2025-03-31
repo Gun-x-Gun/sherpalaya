@@ -1,5 +1,5 @@
 <x-website-layout :initAOS="false">
-   
+    
     <x-home-page-animation/>
     <x-carousel.home-page-carousel />
     <x-carousel.all-cards />
