@@ -77,6 +77,7 @@
         document.addEventListener("DOMContentLoaded", function() {
 
             let audio = document.getElementById("background-audio");
+            let whatsappIcon = document.getElementById("whatsapp-icon");
 
             let askedForHomepageAnimation = sessionStorage.getItem("asked-for-homepage-animation");
             let showHomepageAnimation = sessionStorage.getItem("shown-homepage-animation");
@@ -149,10 +150,13 @@
                 navbar.classList.remove('hidden');
                 bodyElement.classList.remove('overflow-y-hidden');
 
+                whatsappIcon.classList.remove("hidden");
+
                 window.AOS.init();
             }
 
             function askForHomepageAnimation(showAnimation = true) {
+                whatsappIcon.classList.add("hidden");
                 sessionStorage.setItem("asked-for-homepage-animation", true);
                 askForAnimationSection.remove();
                 if (!showAnimation) {
