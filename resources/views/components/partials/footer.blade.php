@@ -5,34 +5,33 @@
             <div class="h-10"></div>
             <footer class="footer">
                 <div class="gap-6">
-                    <a class="link text-base-content link-neutral texl-lg no-underline"
+                    <a class="link text-base-content link-neutral  no-underline"
                         href="/{{ app()->currentLocale() }}/home">
-                        <div class="flex items-center gap-2 text-xl uppercase font-medium text-blue-100  text-wrap">
-                            <x-curator-glider alt="Sherpalaya Logo" class="w-8" :media="$companySetting->company_logo_id" fallback="default"
+                        <div class="flex items-center gap-2  text-base uppercase text-blue-100  text-wrap">
+                            <x-curator-glider alt="Sherpalaya Logo" class="w-7" :media="$companySetting->company_logo_id" fallback="default"
                                 loading="lazy" />
-                            <span class="font-card">{{ app()->currentLocale() == 'fr' ? $companySetting->company_name_fr : $companySetting->company_name_en }}</span>
+                            <span
+                                class="font-card font-extrabold ">{{ app()->currentLocale() == 'fr' ? $companySetting->company_name_fr : $companySetting->company_name_en }}</span>
                         </div>
                     </a>
                     <div class="flex items-center gap-4 text-base capitalize font-normal text-blue-100 text-wrap ">
                         <span class="icon-[iconoir--map-pin] size-6 text-blue-100"></span>
                         <span>{{ app()->currentLocale() == 'fr' ? $companySetting->company_address_fr : $companySetting->company_address_en }}</span>
                     </div>
-                    <a class="link text-base-content link-neutral texl-lg font-semibold no-underline"
+                    <a class="link text-base-content link-neutral text-base font-semibold no-underline"
                         href="mailto:{{ app()->currentLocale() == 'fr' ? $companySetting->company_email_fr : $companySetting->company_email_en }}">
                         <div
-                            class="flex items-center gap-4 text-lg lowercase font-normal text-blue-100 hover:underline">
+                            class="flex items-center gap-4 text-base lowercase font-normal text-blue-100 hover:underline">
                             <span class="icon-[iconoir--mail] size-6"></span>
                             <span>{{ app()->currentLocale() == 'fr' ? $companySetting->company_email_fr : $companySetting->company_email_en }}</span>
                         </div>
                     </a>
-                    <div class="flex items-center gap-4 text-lg uppercase font-normal text-blue-100">
+
+                    <div class="flex items-center gap-4 text-base uppercase font-normal text-blue-100">
                         <span class="icon-[iconoir--phone-income] size-6"></span>
                         <span>{{ app()->currentLocale() == 'fr' ? $companySetting->company_contact_number_fr : $companySetting->company_contact_number_en }}</span>
                     </div>
                     {{-- <a class="link text-base-content link-neutral texl-lg font-semibold no-underline"> --}}
-
-
-
                 </div>
                 <nav class="text-base-content capitalize">
                     <h6 class="footer-title font-bold text-blue-50 uppercase">
