@@ -1188,6 +1188,42 @@ class EssentialTipsSeeder extends Seeder
             Trek::find(14),
             $langtang_tips
         );
+        $this->createEssentialTips(
+            Trek::find(15),
+            $annapurna_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(16),
+            $annapurna_base_camp_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(17),
+            $manaslu_circuit_trek_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(18),
+            $langtang_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(19),
+            $langtang_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(20),
+            $langtang_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(21),
+            $langtang_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(22),
+            $langtang_tips
+        );
+        $this->createEssentialTips(
+            Trek::find(23),
+            $langtang_tips
+        );
 
 
         $this->createEssentialTips(

@@ -926,7 +926,42 @@ class KeyHighlightSeeder extends Seeder
             Trek::find(14),
             $kanchanjunga_highlights
         );
-
+        $this->createKeyHighlights(
+            Trek::find(15),
+            $everest_base_camp_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(16),
+            $annapurna_base_camp_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(17),
+            $annapurna_base_camp_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(18),
+            $annapurna_base_camp_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(19),
+            $manaslu_circuit_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(20),
+            $manaslu_circuit_trek
+        );
+        $this->createKeyHighlights(
+            Trek::find(21),
+            $langtang_highlights
+        );
+        $this->createKeyHighlights(
+            Trek::find(22),
+            $langtang_highlights
+        );
+        $this->createKeyHighlights(
+            Trek::find(23),
+            $kanchanjunga_highlights
+        );
 
 
         $this->createKeyHighlights(

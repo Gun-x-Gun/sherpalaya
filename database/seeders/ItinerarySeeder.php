@@ -8372,6 +8372,42 @@ class ItinerarySeeder extends Seeder
             $upper_mustang_trek_itinerary
         );
         $this->createItinerariesWithDetails(
+            Trek::find(15),
+            $everest_panorama_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(16),
+            $gokyo_valley_trek_itineraries
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(17),
+            $everest_three_passes_trek_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(18),
+            $gokyo_renjola_pass_trek_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(19),
+            $annapurna_dhaulagiri_trek_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(20),
+            $mardi_himal_trek_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(21),
+            $annapurna_circuit_trek_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(22),
+            $langtang_valley_trek_itinerary
+        );
+        $this->createItinerariesWithDetails(
+            Trek::find(23),
+            $kanchenjunga_circuit_trek_itinerary
+        );
+        $this->createItinerariesWithDetails(
             Tour::find(4),
             $photographyTourItineraries
         );
