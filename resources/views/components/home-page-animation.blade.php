@@ -1,6 +1,6 @@
 <div>
     {{-- Ask for animations --}}
-    <div id="ask-for-animation" class="w-[100vw] h-[100dvh] card image-full flex-col-reverse rounded-none">
+    <div id="ask-for-animation" class="w-[100vw] h-dvh card image-full flex-col-reverse rounded-none">
         <figure class="overflow-hidden rounded-none">
             <img src="{{ $animationMediaUrls[$askForAnimation['image_id']] }}" alt="overlay image" />
         </figure>

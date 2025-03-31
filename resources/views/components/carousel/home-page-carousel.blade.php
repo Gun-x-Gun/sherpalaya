@@ -1,4 +1,4 @@
-<header id="home-page-carousel-container" class="h-[100dvh] w-full">
+<header id="home-page-carousel-container" class="h-dvh w-full">
     <div id="snap"
         data-carousel='{ "loadingClasses": "opacity-0", "isAutoPlay": true, "speed": 10000, "isCentered": true, "dotsItemClasses": "carousel-dot border shadow-black bg-warning bg-opacity-20 carousel-active:bg-warning carousel-active:bg-opacity-70", "isInfiniteLoop": true}'
         class="relative h-full w-full ">
@@ -27,7 +27,7 @@
 </header>
 
 
-
+{{-- our-teamound --}}
 {{-- <div id="indicators" data-carousel='{ "loadingClasses": "opacity-0", "dotsItemClasses": "carousel-dot" }'
     class="relative w-full">
     <div class="carousel h-screen rounded-none">

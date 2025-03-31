@@ -1,6 +1,6 @@
-<div class="card--rounded-none image-full bg-blue-100/50 h-[100dvh] relative">
-    <figure class="h-[100dvh] w-full">
-        <x-curator-glider class="h-[100dvh] w-full object-cover brightness-75" :media="$image" :fallback="asset('/photos/banner.jpg')"
+<div class="card--rounded-none image-full bg-blue-100/50 h-dvh relative">
+    <figure class="h-dvh w-full">
+        <x-curator-glider class="h-dvh w-full object-cover brightness-75" :media="$image" :fallback="asset('/photos/banner.jpg')"
             loading="lazy" alt="{{ $title }} Image" />
     </figure>
     <div class="card-body absolute inset-0 flex items-center justify-start leading-[1.1] md:leading-snug"
