@@ -5,13 +5,12 @@
             <div class="h-10"></div>
             <footer class="footer">
                 <div class="gap-6">
-                    <a class="link text-base-content link-neutral texl-lg font-semibold no-underline"
+                    <a class="link text-base-content link-neutral texl-lg no-underline"
                         href="/{{ app()->currentLocale() }}/home">
-                        <div class="flex items-center gap-4 text-xl uppercase font-semibold text-blue-100  text-wrap"
-                            data-aos="fade-down" data-aos-duration="1200">
-                            <x-curator-glider alt="Sherpalaya Logo" class="h-6 w-6" :media="$companySetting->company_logo_id" fallback="default"
+                        <div class="flex items-center gap-2 text-xl uppercase font-medium text-blue-100  text-wrap">
+                            <x-curator-glider alt="Sherpalaya Logo" class="w-8" :media="$companySetting->company_logo_id" fallback="default"
                                 loading="lazy" />
-                            <span>{{ app()->currentLocale() == 'fr' ? $companySetting->company_name_fr : $companySetting->company_name_en }}</span>
+                            <span class="font-card">{{ app()->currentLocale() == 'fr' ? $companySetting->company_name_fr : $companySetting->company_name_en }}</span>
                         </div>
                     </a>
                     <div class="flex items-center gap-4 text-base capitalize font-normal text-blue-100 text-wrap ">

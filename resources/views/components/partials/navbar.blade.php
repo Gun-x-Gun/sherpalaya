@@ -479,9 +479,9 @@
 
 
 {{-- drawer --}}
-<div id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden lg:hidden font-body"
+<header id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden lg:hidden font-body"
     role="dialog" tabindex="-1">
-    <div class="drawer-body px-2 uppercase">
+    <nav class="drawer-body px-2 uppercase">
         <div class="drawer-header px-2">
             <h3 class="drawer-title">Sherpalaya</h3>
 
@@ -700,9 +700,9 @@
                 {{-- contact end  --}}
             </ul>
         </div>
-    </div>
+    </nav>
 
-</div>
+</header>
 {{-- drawer end --}}
 @push('modals')
     <div id="middle-center-modal" class="overlay modal overlay-open:opacity-100 modal-middle hidden backdrop-blur-sm "
