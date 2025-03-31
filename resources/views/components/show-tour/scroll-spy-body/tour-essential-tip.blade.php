@@ -1,6 +1,6 @@
 {{-- <x-show-tour.scroll-spy-navigation /> --}}
 @if (!empty($tour->essentialTips))
-    <div id="essential_tips" class="card 2xl:max-w-full rounded-none bg-blue-100/10 ">
+    <section id="essential_tips" class="card 2xl:max-w-full rounded-none bg-blue-100/10 ">
         <div class="h-6">
         </div>
         <div class="card-header px-2 pb-2" data-aos="fade-down" data-aos-duration="1200">
@@ -28,5 +28,5 @@
         </div>
         <div class="h-4">
         </div>
-    </div>
+    </section>
 @endif

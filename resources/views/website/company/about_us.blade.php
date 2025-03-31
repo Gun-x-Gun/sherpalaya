@@ -51,7 +51,6 @@
             </article>
         </div>
 
-        <x-stat-widget />
 
 
         {{-- Showing <strong>{{ $expeditionRegion->expeditions->count() }}</strong> --}}
@@ -124,6 +123,9 @@
             </div>
             <div class="h-10"></div>
         </section>
+
+        <x-stat-widget />
+
         <x-review />
         <x-whatsapp-icon />
     </div>

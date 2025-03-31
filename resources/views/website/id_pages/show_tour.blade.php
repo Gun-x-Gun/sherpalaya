@@ -56,7 +56,7 @@
 
                 <div class="bg-blue-100/10">
                     <div class=" mx-4 xl:mx-32 gap-2 max-w-full ">
-                        <div class="xl:grid grid-cols-3  gap-6">
+                        <main class="xl:grid grid-cols-3  gap-6">
                             <div class="xl:col-span-2 ">
                                 {{-- key_highlights --}}
                                 <x-show-tour.scroll-spy-body.tour-key-highlight :tour="$tour" />
@@ -84,7 +84,7 @@
                                 <div class="h-10 "></div>
                             </div>
 
-                            <div class=" ">
+                            <aside class=" ">
                                 <div class="h-8"></div>
                                 <div class="sticky top-20 hidden xl:block">
                                     {{-- stat --}}
@@ -95,8 +95,8 @@
 
                                     <div class="h-10"></div>
                                 </div>
-                            </div>
-                        </div>
+                            </aside>
+                        </main>
                         <x-show-recommendation :recommendFor="$tour" />
 
                     </div>

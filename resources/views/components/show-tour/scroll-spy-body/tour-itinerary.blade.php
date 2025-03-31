@@ -1,16 +1,17 @@
-<div id="itineraries" class="card 2xl:max-w-full rounded-none bg-blue-100/20">
+<section id="itineraries" class="card 2xl:max-w-full rounded-none bg-blue-100/20">
     @if ($tour->itineraries->isNotEmpty())
         <div class="h-6">
         </div>
         <div class="card-header px-2" data-aos="fade-down" data-aos-duration="1200">
             <h5 class="card-title text-primary uppercase font-semi-bold text-2xl">
-                {{__('show-page.itinerary')}}
+                {{ __('show-page.itinerary') }}
             </h5>
         </div>
         <div class="card-body mx-0 px-2">
             <div class="accordion">
                 @foreach ($tour->itineraries as $itinerary)
-                    <div class="accordion-item " id="itinerary-{{ $itinerary->id }}" data-aos="fade-down" data-aos-duration="1200">
+                    <div class="accordion-item " id="itinerary-{{ $itinerary->id }}" data-aos="fade-down"
+                        data-aos-duration="1200">
                         @if (!empty($itinerary->title))
                             <button
                                 class="accordion-toggle inline-flex items-center gap-x-4 text-start text-black font-medium  uppercase px-0"
@@ -63,11 +64,11 @@
                                     <div>
                                         @if (!empty($itinerary->destinations))
                                             <div class="card-body bg-transparent w-full p-0">
-                                                <div class="flex items-center gap-4 justify-start my-2  font-normal text-blue-600">
+                                                <div
+                                                    class="flex items-center gap-4 justify-start my-2  font-normal text-blue-600">
                                                     <span class="icon-[tabler--sun-high] size-4"></span>
                                                     <div>
-                                                        <h5
-                                                            class="card-title  uppercase text-xl ">
+                                                        <h5 class="card-title  uppercase text-xl ">
                                                             Highlighted Places
                                                         </h5>
                                                     </div>
@@ -117,4 +118,4 @@
         <div class="h-6">
         </div>
     @endif
-</div>
+</section>

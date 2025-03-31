@@ -1,6 +1,6 @@
 <x-website-layout>
     <div class="bg-blue-100/10 font-body">
-        <div class="card--rounded-none image-full  h-[80dvh] relative">
+        <header class="card--rounded-none image-full  h-[80dvh] relative">
             <figure class="h-[80dvh] w-full">
                 <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$pageSetting->expedition_page_cover_image_id ?? null" fallback="default"
                     loading="lazy" />
@@ -22,7 +22,7 @@
                     </h5>
                 </div>
             </div>
-        </div>
+        </header>
 
         <div class="bg-blue-100/20">
             <x-breadcrumb :breadcrumbs="[
@@ -36,11 +36,11 @@
             ]" />
             <div class="h-10">
             </div>
-            <div class="xl:mx-32 mx-4 text-left">
+            <article class="xl:mx-32 mx-4 text-left">
                 <div class="text-justify  mt-2  text-stone-600  font-body text-xl/7 font-light">
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->expedition_page_content_fr : $pageSetting->expedition_page_content_en }}
                 </div>
-            </div>
+            </article>
             <div class="h-10"></div>
         </div>
 
@@ -68,7 +68,7 @@
                 @endforeach
             </nav>
             <div class="h-10"></div>
-            <div class="bg-white">
+            <main class="bg-white">
                 <div id="expedition-tabs-center-all" role="tabpanel" aria-labelledby="expedition-tabs-center-item-all">
                     <div class="flex flex-col md:grid md:grid-cols-2 gap-2">
                         @foreach ($allExpeditions as $allExpedition)
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
+            </main>
             <div class="h-10">
             </div>
 

@@ -1,4 +1,4 @@
-<div class="card--rounded-none image-full bg-blue-100/50 h-[80dvh] relative">
+<header class="card--rounded-none image-full bg-blue-100/50 h-[80dvh] relative">
     <figure class="h-[80dvh] w-full">
         <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$tour->coverImage" :fallback="asset('/photos/banner.jpg')"
             loading="lazy" />
@@ -15,4 +15,4 @@
             {{$tour->duration }}
         </h2>
     </div>
-</div>
+</header>

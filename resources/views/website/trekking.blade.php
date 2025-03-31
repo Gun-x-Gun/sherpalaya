@@ -1,7 +1,7 @@
 <x-website-layout>
     {{-- <x-trek.trek-landing-page /> --}}
     <div class="bg-blue-100/10 font-body">
-        <div class="card--rounded-none image-full bg-blue-100/50 h-[80dvh] relative">
+        <header class="card--rounded-none image-full bg-blue-100/50 h-[80dvh] relative">
             <figure class="h-[80dvh] w-full">
                 <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$pageSetting->trek_page_cover_image_id ?? null" fallback="default"
                     loading="lazy" />
@@ -23,7 +23,7 @@
                     </h5>
                 </div>
             </div>
-        </div>
+        </header>
 
         <div class="bg-blue-100/30">
             <x-breadcrumb :breadcrumbs="[
@@ -36,11 +36,11 @@
                 ],
             ]" />
             <div class="h-4 "></div>
-            <div class="xl:mx-32 mx-4 text-justify">
+            <article class="xl:mx-32 mx-4 text-justify">
                 <div class="text-md text-justify  mt-2  text-stone-600 font-body text-xl/7 font-light ">
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->trek_page_content_fr : $pageSetting->trek_page_content_en }}
                 </div>
-            </div>
+            </article>
             <div class="h-12 "></div>
         </div>
 
@@ -68,7 +68,7 @@
                     @endif
                 @endforeach
             </nav>
-            <div class="mt-8">
+            <main class="mt-8">
                 <div id="trek-tabs-center-all" role="tabpanel" aria-labelledby="tabs-center-item-all">
                     <div class="flex flex-col md:grid md:grid-cols-2  gap-2">
                         @foreach ($allTreks as $allTrek)
@@ -131,10 +131,10 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
+            </main>
         </div>
 
-       
+
         <div class="h-12"></div>
         <x-whatsapp-icon />
 

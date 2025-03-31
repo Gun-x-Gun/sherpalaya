@@ -9,7 +9,7 @@
     @endphp
 
     @if (!empty($costsInclude))
-        <div id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/40">
+        <section id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/40">
             <div class="h-8">
             </div>
             <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
@@ -34,12 +34,12 @@
             <div class="h-8">
 
             </div>
-        </div>
+        </section>
     @endif
 
     @if (!empty($costsExclude))
         {{-- cost exclude --}}
-        <div id="costs_exclude" class="card 2xl:max-w-full  rounded-none bg-red-100/40">
+        <section id="costs_exclude" class="card 2xl:max-w-full  rounded-none bg-red-100/40">
             <div class="h-8">
 
             </div>
@@ -65,6 +65,6 @@
             <div class="h-8">
 
             </div>
-        </div>
+        </section>
     @endif
 </div>

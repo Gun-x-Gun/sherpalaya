@@ -1,11 +1,11 @@
 {{-- <x-show-tour.scroll-spy-navigation /> --}}
 @if (!empty($tour->keyHighlights))
-    <div id="key_highlights" class="card 2xl:max-w-full rounded-none bg-blue-100/30 font-body">
+    <section id="key_highlights" class="card 2xl:max-w-full rounded-none bg-blue-100/30 font-body">
         <div class="h-6">
         </div>
         <div class="card-header  text-left px-2 pb-2" data-aos="fade-down" data-aos-duration="1200">
             <h5 class="card-title text-black uppercase tracking-wide font-oswald font-medium text-3xl">
-                {{__('show-page.key')}}
+                {{ __('show-page.key') }}
             </h5>
             <div class="h-2"></div>
         </div>
@@ -17,7 +17,7 @@
                             {{ $highlight->title }} :
                         </p>
                     </div>
-                    <div class="col-span-2 items-start  text-left" >
+                    <div class="col-span-2 items-start  text-left">
                         <p class="my-1 font-light text-lg/7 tracking-wide  text-black ">
                             {{ $highlight->description }}
                         </p>
@@ -29,5 +29,5 @@
         </div>
         <div class="h-6">
         </div>
-    </div>
+    </section>
 @endif

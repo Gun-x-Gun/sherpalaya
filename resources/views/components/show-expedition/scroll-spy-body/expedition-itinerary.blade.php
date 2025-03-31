@@ -1,10 +1,10 @@
-<div id="itineraries" class="card 2xl:max-w-full rounded-none bg-blue-50/10">
+<section id="itineraries" class="card 2xl:max-w-full rounded-none bg-blue-50/10">
     @if ($expedition->itineraries->isNotEmpty())
         <div class="h-6">
         </div>
         <div class="card-header px-2" data-aos="fade-down" data-aos-duration="1200">
             <h5 class="card-title text-black uppercase tracking-normal font-body font-medium text-3xl">
-                {{__('show-page.itinerary')}}
+                {{ __('show-page.itinerary') }}
             </h5>
         </div>
         <div class="card-body mx-0 px-2">
@@ -118,4 +118,4 @@
         <div class="h-6">
         </div>
     @endif
-</div>
+</section>
