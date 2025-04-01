@@ -32,29 +32,36 @@ class SitemapGenerate extends Command
         $sitemapPath = public_path('sitemap.xml');
         $this->info("Generating sitemap for: " . $siteUrl . "\n");
 
+        // Create a new sitemap instance
         $completeSitemap = Sitemap::create();
 
-        $this->withProgressBar([
+        // Define starting points for crawling
+        $startUrls = [
             $siteUrl,
             $siteUrl . '/fr/home',
-        ], function (string $url) use ($completeSitemap) {
+        ];
+
+        foreach ($startUrls as $url) {
+            $this->info("Starting crawl from: $url");
+
             $sitemap = SitemapGenerator::create($url)
-            ->shouldCrawl(function (UriInterface $url) {
-                $shouldCrawl = strpos($url->getPath(), '/curator') === false;
+                ->shouldCrawl(function (UriInterface $url) {
+                    $shouldCrawl = strpos($url->getPath(), '/curator') === false;
 
-                if ($shouldCrawl) {
-                    $this->info("\tCrawling: " . $url->getPath());
-                } else {
-                    $this->warn("\Skipped: " . $url->getPath());
-                }
+                    if ($shouldCrawl) {
+                        $this->info("\tCrawling: " . $url->getPath());
+                    } else {
+                        $this->warn("\tSkipped: " . $url->getPath());
+                    }
 
-                return $shouldCrawl;
-            })
-            ->getSitemap();
+                    return $shouldCrawl;
+                })
+                ->getSitemap();
 
             $completeSitemap->add($sitemap->getTags());
-        });
+        }
 
+        // Write the combined sitemap
         $completeSitemap->writeToFile($sitemapPath);
 
         $this->info("\nSitemap generated successfully at path: " . $sitemapPath);
