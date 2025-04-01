@@ -12,6 +12,7 @@ use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Tabs\Tab;
+use Filament\Forms\Get;
 use Filament\Support\Concerns\EvaluatesClosures;
 use Filament\Support\Enums\ActionSize;
 use Icetalker\FilamentTableRepeater\Forms\Components\TableRepeater;
@@ -129,14 +130,14 @@ class TranslatableRepeater
 
 
         $enTableRepeater = $enTableRepeater
-            ->afterStateHydrated(function ($state, $record, $component) {
-                // dd($state, $record, $component);
-            })
             ->schema($fields['en'])
-            ->dehydrated(false);
+            ->dehydrated(true);
+            // ->dehydrateStateUsing(function($state, Get $get){
+            //     $frState = $get('/');
+            //     dd($state, $frState);
+            // });
 
         $frTableRepeater = $frTableRepeater
-            ->afterStateHydrated(function ($state) {})
             ->schema($fields['fr'])
             ->dehydrated(false);
 
@@ -185,8 +186,9 @@ class TranslatableRepeater
                 if ($operation == 'create') {
                     return;
                 }
-                // dd($state, $this->name);
-                $component->state($state['en']);
+                if(isset($state['en'])){
+                    $component->state($state['en']);
+                }
             })
             ->dehydrateStateUsing(function ($state) {
                 if (isset($state['en'])) {
@@ -211,11 +213,6 @@ class TranslatableRepeater
         $repeaters = $this->resolveRepeaters($fields);
 
         return Tabs::make()
-            ->dehydrated(true)
-            ->dehydrateStateUsing(function ($state) {
-                // dd($state);
-                return $state;
-            })
             ->schema([
                 Tab::make('English')
                     ->schema([
