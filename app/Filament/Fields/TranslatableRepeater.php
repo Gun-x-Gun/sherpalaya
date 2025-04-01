@@ -15,7 +15,6 @@ use Filament\Forms\Components\Tabs\Tab;
 use Filament\Forms\Get;
 use Filament\Support\Concerns\EvaluatesClosures;
 use Filament\Support\Enums\ActionSize;
-use Icetalker\FilamentTableRepeater\Forms\Components\TableRepeater;
 use Illuminate\Support\Arr;
 
 class TranslatableRepeater
@@ -39,17 +38,17 @@ class TranslatableRepeater
         return $this;
     }
 
-    public function fields(Closure $field): static
-    {
-        $this->getFieldsUsing = $field;
-        return $this;
-    }
+    // public function fields(Closure $field): static
+    // {
+    //     $this->getFieldsUsing = $field;
+    //     return $this;
+    // }
 
-    public function excludeFieldsFromTranslation(array $fields): static
-    {
-        $this->excludeFieldsFromTranslation = $fields;
-        return $this;
-    }
+    // public function excludeFieldsFromTranslation(array $fields): static
+    // {
+    //     $this->excludeFieldsFromTranslation = $fields;
+    //     return $this;
+    // }
 
     public function repeater(Closure $repeater): static
     {
@@ -61,91 +60,91 @@ class TranslatableRepeater
         protected string $name,
     ) {}
 
-    protected function validateFields(array $fields): void
-    {
-        $fields = array_unique($fields);
-        $fields = array_filter($fields);
-        array_map(function ($field) {
-            return $this->validateField($field);
-        }, $fields);
-    }
+    // protected function validateFields(array $fields): void
+    // {
+    //     $fields = array_unique($fields);
+    //     $fields = array_filter($fields);
+    //     array_map(function ($field) {
+    //         return $this->validateField($field);
+    //     }, $fields);
+    // }
 
-    protected function resolveFields(array $fields, array $columns): array
-    {
+    // protected function resolveFields(array $fields, array $columns): array
+    // {
 
-        if (count($fields) != count($columns)) {
-            throw new Exception("Unequal number of columns and fields for table repeater");
-        }
+    //     if (count($fields) != count($columns)) {
+    //         throw new Exception("Unequal number of columns and fields for table repeater");
+    //     }
 
-        $enFields = Arr::map($fields, function ($field, $key) use ($columns) {
-            if (in_array($columns[$key], $this->excludeFieldsFromTranslation)) {
-                return $field::make($columns[$key]);
-            } else {
-                return $field::make($columns[$key] . '.en');
-            }
-        });
+    //     $enFields = Arr::map($fields, function ($field, $key) use ($columns) {
+    //         if (in_array($columns[$key], $this->excludeFieldsFromTranslation)) {
+    //             return $field::make($columns[$key]);
+    //         } else {
+    //             return $field::make($columns[$key] . '.en');
+    //         }
+    //     });
 
-        $frFields = Arr::map($fields, function ($field, $key) use ($columns) {
-            if (in_array($columns[$key], $this->excludeFieldsFromTranslation)) {
-                return $field::make($columns[$key]);
-            } else {
-                return $field::make($columns[$key] . '.fr');
-            }
-        });
+    //     $frFields = Arr::map($fields, function ($field, $key) use ($columns) {
+    //         if (in_array($columns[$key], $this->excludeFieldsFromTranslation)) {
+    //             return $field::make($columns[$key]);
+    //         } else {
+    //             return $field::make($columns[$key] . '.fr');
+    //         }
+    //     });
 
-        $getFieldsUsing = $this->getFieldsUsing;
+    //     $getFieldsUsing = $this->getFieldsUsing;
 
-        if (!is_null($getFieldsUsing)) {
-            $enFields = $getFieldsUsing($enFields);
-            $frFields = $getFieldsUsing($frFields);
-        }
+    //     if (!is_null($getFieldsUsing)) {
+    //         $enFields = $getFieldsUsing($enFields);
+    //         $frFields = $getFieldsUsing($frFields);
+    //     }
 
-        $enFields = Arr::map($enFields, function ($field, $key) use ($columns) {
-            return $field;
-        });
+    //     $enFields = Arr::map($enFields, function ($field, $key) use ($columns) {
+    //         return $field;
+    //     });
 
-        $frFields = Arr::map($frFields, function ($field, $key) use ($columns) {
-            return $field;
-        });
+    //     $frFields = Arr::map($frFields, function ($field, $key) use ($columns) {
+    //         return $field;
+    //     });
 
-        return [
-            'en' => $enFields,
-            'fr' => $frFields,
-        ];
-    }
+    //     return [
+    //         'en' => $enFields,
+    //         'fr' => $frFields,
+    //     ];
+    // }
 
-    protected function resolveRepeaters(array $fields): array
-    {
+    // protected function resolveRepeaters(array $fields): array
+    // {
 
-        $enTableRepeater = TableRepeater::make($this->name);
+    //     $enTableRepeater = TableRepeater::make($this->name);
 
-        $frTableRepeater = TableRepeater::make($this->name);
+    //     $frTableRepeater = TableRepeater::make($this->name);
 
-        $getRepeaterUsing = $this->getRepeaterUsing;
+    //     $getRepeaterUsing = $this->getRepeaterUsing;
 
-        if (!is_null($getRepeaterUsing)) {
-            $enTableRepeater = $getRepeaterUsing($enTableRepeater);
-            $frTableRepeater = $getRepeaterUsing($frTableRepeater);
-        }
+    //     if (!is_null($getRepeaterUsing)) {
+    //         $enTableRepeater = $getRepeaterUsing($enTableRepeater);
+    //         $frTableRepeater = $getRepeaterUsing($frTableRepeater);
+    //     }
 
 
-        $enTableRepeater = $enTableRepeater
-            ->schema($fields['en'])
-            ->dehydrated(true);
-            // ->dehydrateStateUsing(function($state, Get $get){
-            //     $frState = $get('/');
-            //     dd($state, $frState);
-            // });
+    //     $enTableRepeater = $enTableRepeater
+    //         ->schema($fields['en'])
+    //         ->dehydrated(true);
+    //         // ->dehydrateStateUsing(function($state, Get $get){
+    //         //     $frState = $get('/');
+    //         //     dd($state, $frState);
+    //         // });
 
-        $frTableRepeater = $frTableRepeater
-            ->schema($fields['fr'])
-            ->dehydrated(false);
+    //     $frTableRepeater = $frTableRepeater
+    //         ->schema($fields['fr'])
+    //         ->dehydrated(false);
 
-        return [
-            'en' => $enTableRepeater,
-            'fr' => $frTableRepeater,
-        ];
-    }
+    //     return [
+    //         'en' => $enTableRepeater,
+    //         'fr' => $frTableRepeater,
+    //     ];
+    // }
 
 
     protected function validateField(string $field): void
@@ -204,24 +203,24 @@ class TranslatableRepeater
             ]);
     }
 
-    public function table(array $fields, array $columns): Tabs
-    {
-        $this->validateFields($fields);
+    // public function table(array $fields, array $columns): Tabs
+    // {
+    //     $this->validateFields($fields);
 
-        $fields = $this->resolveFields($fields, $columns);
+    //     $fields = $this->resolveFields($fields, $columns);
 
-        $repeaters = $this->resolveRepeaters($fields);
+    //     $repeaters = $this->resolveRepeaters($fields);
 
-        return Tabs::make()
-            ->schema([
-                Tab::make('English')
-                    ->schema([
-                        $repeaters['en']
-                    ]),
-                Tab::make('French')
-                    ->schema([
-                        $repeaters['fr']
-                    ]),
-            ]);
-    }
+    //     return Tabs::make()
+    //         ->schema([
+    //             Tab::make('English')
+    //                 ->schema([
+    //                     $repeaters['en']
+    //                 ]),
+    //             Tab::make('French')
+    //                 ->schema([
+    //                     $repeaters['fr']
+    //                 ]),
+    //         ]);
+    // }
 }

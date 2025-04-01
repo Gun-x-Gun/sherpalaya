@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Fields\CuratorPicker;
-use App\Filament\Fields\TranslatableRepeater;
 use App\Filament\Resources\OurSherpaResource\Pages;
 use App\Filament\Resources\OurSherpaResource\RelationManagers;
 use App\Filament\Resources\OurSherpaResource\Widgets\SherpaExpeditionsTableWidget;
