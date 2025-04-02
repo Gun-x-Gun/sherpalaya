@@ -3,11 +3,11 @@
         <div class="xl:mx-32 mx-4 ">
             <div class="h-10 md:h-20"></div>
             <div class="flex flex-col md:justify-center md:items-center ">
-                <h5 class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-center  "
+                <h4 class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-center  "
                     data-aos="fade-down" data-aos-duration="1200">
-                    The Fun Corner </h5>
+                    The Fun Corner </h4>
                 <p
-                    class="text-xl/7 mt-4 text-black text-left md:text-center
+                    class="text-lg/7 mt-4 text-black text-left md:text-center
                      font-light font-body  lg:w-[80%]">
                     {{ app()->currentLocale() == 'fr' ?$landingPageSetting->tour_activity_content_fr:$landingPageSetting->tour_activity_content_en }}
                 </p>
@@ -77,12 +77,13 @@
         <div class="h-20"></div>
         <div class="xl:mx-32 mx-4 ">
             <article class="flex flex-col md:justify-start md:items-start ">
-                <h5 class=" text-3xl md:text-4xl font-medium font-body line-clamp-2 uppercase tracking-normal text-black text-left md:text-center  "
+                <h3 class=" text-3xl md:text-4xl font-medium font-oswald line-clamp-2 uppercase tracking-normal text-black text-left md:text-center  "
                     data-aos="fade-down" data-aos-duration="1200">
-                    {{ __('featured.tours') }} </h5>
+                    {{ __('featured.tours') }}
+                </h3>
                 <div
-                    class="text-xl/7 mt-4 text-preety text-black lg:text-justify
-                     font-light font-body lg:w-[80%]">
+                    class="text-lg/7 mt-4 text-preety text-black lg:text-justify
+                     font-light font-body lg:w-[70%]">
                     {{ app()->currentLocale() == 'fr' ? $landingPageSetting->tour_activity_content_fr : $landingPageSetting->tour_activity_content_en }}
                 </div>
                 <div class="h-6 md:h-12"></div>
@@ -90,25 +91,24 @@
             <aside class="flex flex-col md:grid grid-cols-2 gap-2">
                 @foreach ($featuredTours as $featuredTour)
                     <div
-                        class="card group xl:card-side sm:max-w-full rounded-md xl:h-[20rem] shadow-sm  shadow-blue-50 ">
+                        class="card group xl:card-side sm:max-w-full rounded-md xl:h-[50vh] shadow-sm  shadow-blue-50 ">
                         <a class="xl:w-1/2 "
                             href="{{ route('show_tour', ['id' => $featuredTour->id, 'locale' => app()->currentLocale()]) }}">
                             <figure>
                                 <img src="{{ optional($featuredTour->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredTour->title }} Cover Image"
-                                    class="transition-transform brightness-75 duration-500   group-hover:scale-110 h-[20rem] object-cover" />
+                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[50vh] object-cover" />
                             </figure>
                         </a>
-                        <div class="card-body xl:w-1/2 px-2 md:px-4 bg-blue-100/80">
+                        <div class="card-body xl:w-1/2 px-2 md:px-4 bg-blue-100/80  justify-center content-center">
                             <a
                                 href="{{ route('show_tour', ['id' => $featuredTour->id, 'locale' => app()->currentLocale()]) }}">
-                                <h5
-                                    class="text-xl  text-balance line-clamp-2  tracking-wide font-body font-medium text-black lg:text-left  uppercase group-hover:text-warning  decoration-2 decoration-warning   group-hover:underline-offset-4">
+                                <h4
+                                    class="text-xl  text-balance line-clamp-2  tracking-wide font-body font-semibold text-black lg:text-left  uppercase group-hover:text-warning  decoration-2 decoration-warning   group-hover:underline-offset-4">
                                     {{ $featuredTour->title }}
-                                </h5>
+                                </h4>
                             </a>
-                            <div
-                                class=" mt-2 text-justify text-black font-body font-light text-base/7 line-clamp-[5] ">
+                            <div class=" mt-2 text-justify text-black font-body font-light text-lg/7 lg:text-base/7 line-clamp-[5] ">
                                 {!! Str::words($featuredTour->description, 30) !!}
                             </div>
                             <a

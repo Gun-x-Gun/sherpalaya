@@ -4,10 +4,10 @@
 
     <div class="xl:mx-32 mx-4">
         <div class="">
-            <h5 class="text-3xl md:text-4xl font-body font-medium uppercase tracking-normal text-black text-left md:text-left"
+            <h3 class="text-3xl md:text-4xl font-body font-medium uppercase tracking-normal text-black text-left md:text-left text-balance"
                 data-aos="fade-down" data-aos-duration="1200">
                 {{__('review.review')}}
-            </h5>
+            </h3>
             <div class="h-6 md:h-12"></div>
         </div>
         <div class="accordion accordion-shadow max-w-full ">
@@ -22,7 +22,7 @@
                         <div class="flex gap-4">
                             <div class="avatar">
                                 <div class="size-12 rounded-full">
-                                    <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png" alt="avatar" />
+                                    <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png" alt="avatar" loading="lazy"/>
                                 </div>
                             </div>
                             <div>

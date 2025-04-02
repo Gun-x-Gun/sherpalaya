@@ -69,7 +69,7 @@
                                                     <span class="icon-[tabler--sun-high] size-6"></span>
                                                     <div>
                                                         <h5
-                                                            class="card-title uppercase text-xl/7 font-body font-medium tracking-tighter ">
+                                                            class="card-title uppercase text-lg/7 font-body font-medium tracking-tighter ">
                                                             Highlighted Places
                                                         </h5>
                                                     </div>

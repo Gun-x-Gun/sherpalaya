@@ -1,14 +1,15 @@
 @if ($featuredExpeditions->count() > 0)
     <div class="bg-blue-100/40">
-        <div class="xl:mx-32 mx-4 font-body">
+        <div class="xl:mx-32 mx-4 font-card">
             <div class="h-10 md:h-20"></div>
             <article>
-                <h5 class="text-3xl md:text-4xl font-oswald font-medium  line-clamp-2 uppercase tracking-wider text-black text-left md:text-left"
+                <h3 class="text-3xl md:text-4xl font-oswald font-medium  line-clamp-2 uppercase tracking-wider text-black text-left md:text-left"
                     data-aos="flip-up" data-aos-duration="800">
-                    Expeditions</h5>
+                    Expeditions
+                </h3>
                 <div
-                    class="text-xl/7 mt-4 text-preety text-black lg:text-justify
-                     font-light font-body lg:w-[80%]">
+                    class="text-lg/7 mt-4 text-preety text-black lg:text-justify
+                     font-light font-body lg:w-[70%]">
                     {{ app()->currentLocale() == 'fr' ? $landingPageSetting->expedition_activity_content_fr : $landingPageSetting->expedition_activity_content_en }}
                 </div>
                 <div class="h-6 md:h-12"></div>
@@ -19,16 +20,16 @@
                     @if ($loop->index % 2 === 0)
                         {{-- First Iteration: col-span-3 on the text and col-span-4 on the image --}}
                         <div
-                            class="card rounded-none px-4 py-7 lg:py-14 col-span-3 hidden md:block group justify-center items-center bg-blue-100/60 h-[28rem]">
+                            class="card rounded-none px-4 col-span-3 hidden md:block group  content-center  bg-blue-100/60 min-h-[60vh]">
                             <a
                                 href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
-                                <h5
+                                <h3
                                     class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
                                     {{ $featuredExpedition->title }}
-                                </h5>
+                                </h3>
                             </a>
                             <div class="mt-4 text-justify text-black  font-body font-light text-lg/8 line-clamp-[8] ">
-                                {!! Str::words($featuredExpedition->description, 60) !!}
+                                {!! Str::words($featuredExpedition->description, 30) !!}
                             </div>
                             <a
                                 href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
@@ -40,31 +41,31 @@
                         </div>
                         <div
                             class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-4 ">
-                            <figure class="h-[28rem] w-full ">
+                            <figure class="h-[60vh] w-full ">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
-                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
+                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[60vh] w-full object-cover" />
                             </figure>
                             <a
                                 href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
                                 <div
-                                    class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2 h-[28rem]">
+                                    class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2 h-[60vh]">
                                     <div class="md:text-center " data-aos="flip-up" data-aos-duration="800">
-                                        <h2
-                                            class="font-normal tracking-wide font-oswald text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning ">
+                                        <h4
+                                            class="font-bold tracking-wide font-oswald text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning text-balance">
                                             {{ $featuredExpedition->title }}
-                                        </h2>
-                                        <h2
-                                            class="font-normal tracking-wide font-oswald text-blue-50 uppercase line-clamp-2 text-2xl md:text-3xl group-hover:text-warning">
+                                        </h4>
+                                        <h5
+                                            class="font-bold tracking-wide font-oswald text-blue-50 uppercase line-clamp-2 text-2xl md:text-3xl group-hover:text-warning">
                                             {{ $featuredExpedition->highest_altitude }} m
-                                        </h2>
+                                        </h5>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start ">
-                            <div class="text-preety text-black  font-body font-light text-lg/8 line-clamp-[6] ">
-                                {!! Str::words($featuredExpedition->description, 40) !!}
+                        <div class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start">
+                            <div class="text-justify text-black  font-body font-light text-lg/8 line-clamp-[6] ">
+                                {!! Str::words($featuredExpedition->description, 30) !!}
                             </div>
                             <a
                                 href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
@@ -79,38 +80,38 @@
                         {{-- Second Iteration: col-span-4 on the text and col-span-3 on the image --}}
                         <div
                             class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-4">
-                            <figure class="h-[28rem] w-full">
+                            <figure class="h-[60vh] w-full">
                                 <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                     alt="{{ $featuredExpedition->title }} Cover Image"
-                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[28rem] w-full object-cover" />
+                                    class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[60vh] w-full object-cover" />
                             </figure>
                             <a
                                 href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
-                                <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2 ">
+                                <div class="card-body absolute inset-0 justify-end md:justify-center px-2 pb-2 h-[60vh]">
                                     <div class="text-left md:text-center " data-aos="flip-up" data-aos-duration="800">
-                                        <h2
-                                            class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
+                                        <h4
+                                            class="font-bold tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning text-balance">
                                             {{ $featuredExpedition->title }}
-                                        </h2>
-                                        <h2
-                                            class="font-normal tracking-wide mt-2 text-blue-50 uppercase line-clamp-2 text-2xl md:text-3xl group-hover:text-warning">
+                                        </h4>
+                                        <h5
+                                            class="font-bold tracking-wide mt-2 text-blue-50 uppercase line-clamp-2 text-2xl md:text-3xl group-hover:text-warning">
                                             {{ $featuredExpedition->highest_altitude }} m
-                                        </h2>
+                                        </h5>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div
-                            class="card rounded-none px-4 py-7 lg:py-14 col-span-3 hidden md:block group justify-center items-center bg-transparent h-[28rem]">
+                            class="card rounded-none px-4  col-span-3 hidden md:block group justify-center content-center bg-transparent h-[60vh]">
                             <a
                                 href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
-                                <h5
+                                <h3
                                     class="text-2xl text-balance line-clamp-2  tracking-tight font-body font-medium text-black lg:text-left  uppercase group-hover:underline  decoration-4 decoration-warning  group-hover:underline-offset-4">
                                     {{ $featuredExpedition->title }}
-                                </h5>
+                                </h3>
                             </a>
                             <div class="mt-4 text-justify text-black  font-body font-light text-lg/8 line-clamp-[8] ">
-                                {!! Str::words($featuredExpedition->description, 60) !!}
+                                {!! Str::words($featuredExpedition->description, 30) !!}
                             </div>
                             <a
                                 href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
@@ -122,8 +123,8 @@
                         </div>
                         <div
                             class="card rounded-none px-2 py-2 col-span-3  md:hidden group justify-start items-start bg-blue-100">
-                            <div class="text-preety text-black  font-body font-light text-lg/8 line-clamp-[6] ">
-                                {!! Str::words($featuredExpedition->description, 40) !!}
+                            <div class="text-justify text-black  font-body font-light text-lg/8 line-clamp-[6] ">
+                                {!! Str::words($featuredExpedition->description, 30) !!}
                             </div>
                             <a
                                 href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
@@ -139,12 +140,12 @@
             </aside>
 
             <div class="h-1"></div>
-            <aside class="hidden md:grid md:grid-cols-2 xl:grid-cols-3 md:gap-1 bg-blue-100/10 ">
+            <aside class="hidden md:grid md:grid-cols-3 xl:grid-cols-3 md:gap-1 bg-blue-100/10 ">
                 @foreach ($featuredExpeditions->slice(4, 10) as $featuredExpedition)
                     {{-- First Iteration: col-span-3 on the text and col-span-4 on the image --}}
                     <div
                         class="card rounded-none font-oswald image-full w-full h-full relative flex items-center card-side group hover:shadow border col-span-1 ">
-                        <figure class="h-[28rem] w-full ">
+                        <figure class="h-[60vh] w-full ">
                             <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                 alt="{{ $featuredExpedition->title }} Cover Image"
                                 class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[20rem] w-full object-cover" />
@@ -153,14 +154,14 @@
                             href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
                             <div class="card-body absolute inset-0 justify-center md:justify-center">
                                 <div class="text-center " data-aos="flip-up" data-aos-duration="800">
-                                    <h2
-                                        class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
+                                    <h4
+                                        class="font-bold tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
                                         {{ $featuredExpedition->title }}
-                                    </h2>
-                                    <h2
-                                        class="font-normal tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
+                                    </h4>
+                                    <h5
+                                        class="font-bold tracking-wide text-blue-50 text-2xl md:text-3xl uppercase group-hover:text-warning">
                                         {{ $featuredExpedition->highest_altitude }} m
-                                    </h2>
+                                    </h5>
                                 </div>
                             </div>
                         </a>
@@ -172,29 +173,29 @@
             <aside id="multi-slide"
                 data-carousel='{ "loadingClasses": "opacity-0","isInfiniteLoop": true, "slidesQty": { "xs": 1.1, "sm": 1.8 } }'
                 class="relative w-full md:hidden">
-                <div class="carousel h-[28rem] rounded-none">
+                <div class="carousel h-[60vh] rounded-none">
                     <div class="carousel-body h-full opacity-0">
                         <!-- Slide 1 -->
                         @foreach ($featuredExpeditions->slice(4, 10) as $featuredExpedition)
                             <div class="carousel-slide px-1 max-w-sm">
                                 <div
                                     class="card rounded-none image-full w-full relative flex items-center card-side group hover:shadow border">
-                                    <figure class="h-[28rem] max-w-sm">
+                                    <figure class="h-[60vh] max-w-sm">
                                         <img src="{{ optional($featuredExpedition->featureImage)->url ?? asset('photos/DSCF2600.JPG') }}"
                                             alt="{{ $featuredExpedition->title }} Cover Image"
-                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full max-w-sm object-cover" />
+                                            class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-[60vh] max-w-sm object-cover" />
                                     </figure>
                                     <a
                                         href="{{ route('show_expedition', ['id' => $featuredExpedition->id, 'locale' => app()->currentLocale()]) }}">
                                         <div class="card-body absolute inset-0 justify-center">
-                                            <div class="text-center">
-                                                <h2 class="font-medium text-blue-50 text-2xl uppercase">
+                                            <div class="text-center ">
+                                                <h4 class="font-bold text-blue-50 text-2xl uppercase text-balance">
                                                     {{ $featuredExpedition->title }}
-                                                </h2>
-                                                <h2
-                                                    class="font-medium tracking-normal text-blue-50 line-clamp-2 text-2xl">
+                                                </h4>
+                                                <h5
+                                                    class="font-bold tracking-normal text-blue-50 line-clamp-2 text-2xl">
                                                     {{ $featuredExpedition->highest_altitude }} m
-                                                </h2>
+                                                </h5>
                                             </div>
                                         </div>
                                     </a>

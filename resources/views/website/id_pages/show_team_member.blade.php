@@ -92,7 +92,7 @@
                 @endif
             </div>
         </section>
-        {{-- <div class="my-1 text-pretty text-black font-light font-body text-xl/7">
+        {{-- <div class="my-1 text-pretty text-black font-light font-body text-lg/7">
                 {!! $sherpa->description !!}
             </div> --}}
 

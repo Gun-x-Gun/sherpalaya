@@ -37,7 +37,7 @@
             <div class="h-10">
             </div>
             <article class="xl:mx-32 mx-4 text-left">
-                <div class="text-justify  mt-2  text-stone-600  font-body text-xl/7 font-light">
+                <div class="text-justify  mt-2  text-stone-600  font-body text-lg/7 font-light">
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->expedition_page_content_fr : $pageSetting->expedition_page_content_en }}
                 </div>
             </article>

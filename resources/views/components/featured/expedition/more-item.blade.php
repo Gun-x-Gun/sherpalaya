@@ -1,5 +1,4 @@
 @if ($featuredExpeditions->count() > 4)
-
     <div class="bg-blue-100/60">
         <div class="xl:mx-32 mx-4 ">
             <div class="h-14"></div>

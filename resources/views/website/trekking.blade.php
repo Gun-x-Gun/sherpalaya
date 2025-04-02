@@ -37,7 +37,7 @@
             ]" />
             <div class="h-4 "></div>
             <article class="xl:mx-32 mx-4 text-justify">
-                <div class="text-md text-justify  mt-2  text-stone-600 font-body text-xl/7 font-light ">
+                <div class="text-md text-justify  mt-2  text-stone-600 font-body text-lg/7 font-light ">
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->trek_page_content_fr : $pageSetting->trek_page_content_en }}
                 </div>
             </article>

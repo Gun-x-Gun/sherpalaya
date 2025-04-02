@@ -63,7 +63,7 @@
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->service_page_content_title_fr : $pageSetting->service_page_content_title_en }}
                 </h5>
                 <div
-                    class="text-xl/7 mt-4 text-preety text-black lg:text-justify
+                    class="text-lg/7 mt-4 text-preety text-black lg:text-justify
                      font-light font-body lg:w-[80%]">
                     {{-- {{ $pageSetting->service_page_page_content }} --}}
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->service_page_content_fr : $pageSetting->service_page_content_en }}

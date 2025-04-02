@@ -1,9 +1,9 @@
 <x-website-layout>
     <section class="bg-blue-100/10 font-body" id="contact">
-        <header class="card--rounded-none image-full  h-[80dvh] relative">
-            <figure class="h-[80dvh] w-full">
-                <x-curator-glider class="h-[80dvh] w-full object-cover brightness-75" :media="$contactUsSetting->cover_image_id" fallback="default"
-                    loading="lazy" />
+        <header class="card--rounded-none image-full  h-1/3 relative">
+            <figure class="h-[70dvh] w-full">
+                <x-curator-glider class="h-[70dvh] w-full object-cover brightness-75" :media="$contactUsSetting->cover_image_id" fallback="default"
+                    loading="lazy" alt="Contact Cover Image"/> 
             </figure>
             <div class="card-body absolute inset-0 flex items-center justify-start">
                 <div class="absolute bottom-1/4  left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden"

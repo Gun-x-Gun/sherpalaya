@@ -37,7 +37,7 @@
             ]" />
             <div class="h-4"></div>
             <article class="xl:mx-32 mx-4 text-justify">
-                <div class="text-xl/7   text-stone-600 font-light font-body">
+                <div class="text-lg/7   text-stone-600 font-light font-body">
                     {{ app()->currentLocale() == 'fr' ? $pageSetting->tour_page_content_fr : $pageSetting->tour_page_content_en }}
                 </div>
             </article>
