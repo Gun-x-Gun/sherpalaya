@@ -1,7 +1,11 @@
 <div class="card--rounded-none image-full bg-blue-100/50 h-dvh relative">
+    {{-- <x-curator-glider class="h-dvh w-full object-cover brightness-75" :media="$image" :fallback="asset('/photos/banner.jpg')"
+            loading="lazy" alt="{{ $title }} Image" /> --}}
     <figure class="h-dvh w-full">
-        <x-curator-glider class="h-dvh w-full object-cover brightness-75" :media="$image" :fallback="asset('/photos/banner.jpg')"
-            loading="lazy" alt="{{ $title }} Image" />
+        <img src="{{ optional($image)->url ?? asset('photos/DSCF2600.JPG') }}"
+            alt="{{ $image->title }} Cover Image"
+            loading="lazy"
+            class="brightness-75 h-dvh w-full object-cover" />
     </figure>
     <div class="card-body absolute inset-0 flex items-center justify-start leading-[1.1] md:leading-snug"
         data-aos="fade-down" data-aos-duration="1500">

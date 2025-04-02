@@ -11,7 +11,7 @@
 </style>
 
 <header id="navbar"
-    class="fixed top-0 z-50  w-full flex  flex-wrap py-4  lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
+    class="fixed top-0 z-50  w-full flex  flex-wrap py-2  lg:flex-nowrap lg:justify-start  bg-transparent font-body  font-medium tracking-wide">
     <nav class="w-full" aria-label="Global">
         <div class=" relative lg:flex lg:items-center ">
             <div class="flex items-center justify-between xl:ml-32 mx-4 ">
