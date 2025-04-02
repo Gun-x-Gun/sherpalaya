@@ -4,7 +4,6 @@
     <figure class="h-dvh w-full">
         <img src="{{ optional($image)->url ?? asset('photos/DSCF2600.JPG') }}"
             alt="{{ $image->title }} Cover Image"
-            loading="lazy"
             class="brightness-75 h-dvh w-full object-cover" />
     </figure>
     <div class="card-body absolute inset-0 flex items-center justify-start leading-[1.1] md:leading-snug"
