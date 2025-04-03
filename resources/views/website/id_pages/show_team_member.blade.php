@@ -234,7 +234,7 @@
                             {{ __('team.awards') }}
                         </h5>
                         <div class="h-10"></div>
-                        <div class="card-actions  sm:grid grid-cols-2  flex flex-col gap-2 md:gap-4 mb-0 skeleton animate-pulse min-h-52"
+                        <div class="card-actions   sm:grid grid-cols-2 lg:grid-cols-3 flex flex-col gap-2 md:gap-4 mb-0 skeleton animate-pulse min-h-52"
                             id="all-awards">
                             @foreach ($sherpa->awardsAndCertificates as $awardAndCertificate)
                                 <button type="button"
