@@ -10,10 +10,10 @@
                         alt="picture" />
                 </div>
                 <div class="text-center w-full font-oswald" data-aos="fade-down" data-aos-duration="1200">
-                    <h5 class="card-title mb-1 text-warning  text-2xl md:text-2xl uppercase font-bold ">
+                    <h5 class="card-title mb-1 text-warning  text-2xl md:text-2xl uppercase font-semibold ">
                         {{ $sherpa->name }}
                     </h5>
-                    <h5 class="card-title text-white text-sm md:text-xl lowercase font-oswald font-semibold ">
+                    <h5 class="card-title text-white text-sm md:text-xl lowercase font-oswald font-semisemibold ">
                         {{ $sherpa->title }}
                     </h5>
                 </div>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="text-center w-full font-card" data-aos="fade-down" data-aos-duration="1200">
                         <h1
-                            class="card-title mb-1 text-warning  tracking-wider text-2xl md:text-2xl uppercase font-bold text-balance">
+                            class="card-title mb-1 text-warning  tracking-wider text-2xl md:text-2xl uppercase font-semibold text-balance">
                             {{ $sherpa->name }}
                         </h1>
                         <h2
@@ -73,13 +73,13 @@
         <section class="bg-blue-100/20">
             <div class="mx-4 xl:mx-32">
                 @if (count($sherpa->language) > 0)
-                    <div class="md:mx-8 lg:mx-16 xl:mx-28 ">
+                    <article class="md:mx-8 lg:mx-16 xl:mx-28 ">
                         <div class="h-10"></div>
                         <div class="">
-                            <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left"
+                            <h3 class="card-title font-semibold uppercase text-2xl text-black tracking-wide mx-0 text-left"
                                 data-aos="fade-up" data-aos-duration="1200">
                                 {{ __('team.languages') }}
-                            </h5>
+                            </h3>
                             <div class="h-4"></div>
                             @foreach ($sherpa->language as $lang)
                                 <p class="text-black uppercase items-center badge badge-warning  px-1 py-0 text-xs">
@@ -88,7 +88,7 @@
                             @endforeach
                         </div>
                         <div class="h-10"></div>
-                    </div>
+                    </article>
                 @endif
             </div>
         </section>
@@ -100,15 +100,15 @@
             <div class="mx-4 xl:mx-32">
                 @if (count($sherpa->expeditions) > 0)
                     <div class="h-10"></div>
-                    <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
+                    <h3 class="card-title font-semibold uppercase text-2xl  text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
                         data-aos="fade-down" data-aos-duration="1200">
                         {{ __('footer.expeditions') }}
-                    </h5>
+                    </h3>
                     <div class="h-4"></div>
                     <div class="overflow-x-scroll horizontal-scrollbar md:mx-8 lg:mx-16 xl:mx-28">
                         <table class="table-striped-columns table font-body ">
                             <thead>
-                                <tr class="text-2xl">
+                                <tr class="text-2xl ">
                                     <th>{{ __('team.exped-table') }}</th>
                                     <th>{{ __('team.altitude') }}</th>
                                     <th>{{ __('team.count') }}</th>
@@ -137,10 +137,10 @@
             <div class="mx-4 xl:mx-32">
                 @if (count($sherpa->treks) > 0)
                     <div class="h-10"></div>
-                    <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
+                    <h3 class="card-title font-semibold uppercase text-2xl  text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
                         data-aos="fade-down" data-aos-duration="1200">
                         {{ __('footer.treks') }}
-                    </h5>
+                    </h3>
                     <div class="h-4"></div>
                     <div class="md:mx-8 lg:mx-16 xl:mx-28">
                         <table class="table-striped-columns table font-body">
@@ -169,10 +169,10 @@
                 @if (count($sherpa->tours) > 0)
                     <div class="h-10"></div>
 
-                    <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
+                    <h3 class="card-title font-semibold uppercase text-2xl  text-black tracking-wide mx-0 text-left md:mx-8 lg:mx-16 xl:mx-28"
                         data-aos="fade-down" data-aos-duration="1200">
                         {{ __('footer.activities') }}
-                    </h5>
+                    </h3>
                     <div class="h-4"></div>
 
                     <div class="md:mx-8 lg:mx-16 xl:mx-28">
@@ -206,10 +206,10 @@
 
                     <div class=" md:mx-8 lg:mx-16  xl:mx-28">
                         <div class="mx-2">
-                            <h5 class="card-title font-normal uppercase text-2xl text-black tracking-wide mx-0 text-left "
+                            <h4 class="card-title font-semibold uppercase text-2xl  text-black tracking-wide mx-0 text-left "
                                 data-aos="fade-down" data-aos-duration="1200">
                                 {{ __('team.experiences') }}
-                            </h5>
+                            </h4>
                             <div class="h-4"></div>
                             <ul class="list-inside list-disc tracking-wide">
                                 @foreach ($sherpa->experience as $exp)
@@ -229,7 +229,7 @@
                     <div class="h-10"></div>
 
                     @if ($sherpa->awardsAndCertificates->count() > 0)
-                        <h5 class="card-title font-normal uppercase text-2xl text-black tracking-normal mx-0 text-left"
+                        <h5 class="card-title font-bold uppercase text-2xl text-black tracking-normal mx-0 text-left"
                             data-aos="fade-up" data-aos-duration="1200">
                             {{ __('team.awards') }}
                         </h5>
@@ -242,7 +242,7 @@
                                     aria-haspopup="dialog" aria-expanded="false" aria-controls="award-modal"
                                     data-overlay="#award-modal" onclick="changeCarouselSlide({{ $loop->index }})">
                                     <img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-75"
-                                        src="{{ $awardAndCertificate->url }}" alt="headphone" />
+                                        src="{{ $awardAndCertificate->url }}" alt="Award And Certificate" loading="lazy"/>
                                 </button>
                             @endforeach
                         </div>

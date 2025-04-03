@@ -1,26 +1,25 @@
 <div class="md:grid grid-cols-2 ">
     @php
-        $costsInclude = array_filter($trek->costs_include, function($costInc){
+        $costsInclude = array_filter($trek->costs_include, function ($costInc) {
             return !is_null($costInc[app()->currentLocale()]);
         });
-        $costsExclude = array_filter($trek->costs_exclude, function($costExc){
+        $costsExclude = array_filter($trek->costs_exclude, function ($costExc) {
             return !is_null($costExc[app()->currentLocale()]);
         });
     @endphp
-
-    {{-- {{ dd($trek->costs_include) }} --}}
-
     @if (!empty($costsInclude))
+
         <section id="costs_include" class="card 2xl:max-w-full rounded-none bg-blue-100/40">
             <div class="h-8">
             </div>
             <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
-                <h5 class="card-title text-black uppercase font-oswald font-medium text-2xl">
+                <h3 class="card-title text-black uppercase font-body tracking-normal font-bold text-2xl">
                     {{ __('show-page.costs_include') }}
-                </h5>
+                </h3>
             </div>
-            <div class="card-body p-2 mt-4 font-body">
+            <aside class="card-body p-2 mt-4 font-body">
                 <ul class="space-y-5 ">
+
                     @foreach ($costsInclude as $cost_include)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse  ">
                             <span class="bg-transparent text-success flex items-center justify-center rounded-full p-1">
@@ -32,7 +31,7 @@
                         </li>
                     @endforeach
                 </ul>
-            </div>
+            </aside>
             <div class="h-8">
 
             </div>
@@ -46,11 +45,11 @@
 
             </div>
             <div class="card-header p-2" data-aos="fade-down" data-aos-duration="1200">
-                <h5 class="card-title text-black uppercase font-oswald font-medium text-2xl">
+                <h3 class="card-title text-black uppercase font-body tracking-normal font-bold text-2xl">
                     {{ __('show-page.costs_exclude') }}
-                </h5>
+                </h3>
             </div>
-            <div class="card-body p-2 mt-4 font-body">
+            <aside class="card-body p-2 mt-4 font-body">
                 <ul class="space-y-5">
                     @foreach ($costsExclude as $cost_exclude)
                         <li class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -63,7 +62,7 @@
                         </li>
                     @endforeach
                 </ul>
-            </div>
+            </aside>
             <div class="h-8">
 
             </div>

@@ -57,20 +57,20 @@
             <div class="card-body absolute inset-0 flex items-center justify-start">
                 <div class="absolute bottom-1/4  left-4 lg:left-4 xl:left-32 transform translate-y-1/2 overflow-hidden"
                     data-aos="fade-down" data-aos-duration="1200">
-                    <h5
-                        class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-medium tracking-wider opacity-75">
-                        Search Result For ...
-                    </h5>
                     <h2
-                        class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-semibold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-75">
-                        {{ $query }}
+                        class="card-title mb-2 text-blue-50 text-xl sm:text-2xl  uppercase font-oswald  font-semibold tracking-wider opacity-100 animate-bounce">
+                        Search Result For ...
                     </h2>
+                    <h1
+                        class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl  uppercase font-card font-bold tracking-tight text-wrap  leading-[1.3]  overflow-hidden opacity-100">
+                        {{ $query }}
+                    </h1>
                 </div>
             </div>
         </div>
         <div class="xl:mx-32 mx-4 ">
             <div class="h-8"></div>
-            <div class="md:grid md:grid-cols-2  xl:grid-cols-3 gap-4 flex flex-col ">
+            <div class="md:grid md:grid-cols-2  xl:grid-cols-3 gap-2 flex flex-col ">
                 @forelse ($results ?? [] as $resultType => $resultDatas)
                     {{-- bg-blue-100/20 --}}
                     {{-- <div class="w-full "> --}}

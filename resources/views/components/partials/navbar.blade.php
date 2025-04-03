@@ -15,7 +15,8 @@
     <nav class="w-full" aria-label="Global">
         <div class=" relative lg:flex lg:items-center ">
             <div class="flex items-center justify-between xl:ml-32 mx-4 ">
-                <a class="link text-base-content link-neutral text-lg font-semibold no-underline " href="/{{ app()->currentLocale() }}/home">
+                <a class="link text-base-content link-neutral text-lg font-semibold no-underline "
+                    href="/{{ app()->currentLocale() }}/home">
                     <img src="{{ asset('photos/logo.png') }}" alt="Sherpalaya Logo" class=" w-12 lg:w-24">
                 </a>
                 <div class="lg:hidden">
@@ -49,9 +50,10 @@
                 <div
                     class="flex flex-col rounded-lg max-lg:mt-3 max-lg:border  lg:flex-row lg:items-center lg:justify-end  lg:py-0.5">
                     <ul class="menu lg:menu-horizontal p-0  max-lg:w-fit bg-transparent ">
-                        <li class=" hover:text-warning rounded-lg text-lg"><a href="/{{ app()->currentLocale() }}/home" @class([
-                            'text-warning' => request()->route()->getName() == 'website.home',
-                        ])>
+                        <li class=" hover:text-warning rounded-lg text-lg"><a href="/{{ app()->currentLocale() }}/home"
+                                @class([
+                                    'text-warning' => request()->route()->getName() == 'website.home',
+                                ])>
                                 {{ __('navbar.home') }}
                             </a>
                         </li>
@@ -133,7 +135,8 @@
                                                                 alt="{{ $expedition->title }} Cover Image"
                                                                 class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
+                                                        <a
+                                                            href="{{ route('show_expedition', ['id' => $expedition->id, 'locale' => app()->currentLocale()]) }}">
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
                                                                 <div
@@ -167,7 +170,8 @@
                                                                 alt="{{ $expedition->title }} Cover Image"
                                                                 class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
+                                                        <a
+                                                            href="{{ route('show_expedition', ['id' => $expedition->id, 'locale' => app()->currentLocale()]) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
                                                                 <div
                                                                     class="text-center font-oswald tracking-widest font-normal">
@@ -238,7 +242,8 @@
                                                                 alt="{{ $catTrek->title }} Cover Image"
                                                                 class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_trek', ['id'=>$catTrek->id, 'locale'=>app()->currentLocale()]) }}">
+                                                        <a
+                                                            href="{{ route('show_trek', ['id' => $catTrek->id, 'locale' => app()->currentLocale()]) }}">
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
                                                                 <div
@@ -272,7 +277,8 @@
                                                                 alt="{{ $trek->title }} Cover Image"
                                                                 class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }}">
+                                                        <a
+                                                            href="{{ route('show_trek', ['id' => $trek->id, 'locale' => app()->currentLocale()]) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
                                                                 <div
                                                                     class="text-center font-oswald tracking-widest font-normal">
@@ -344,7 +350,8 @@
                                                                 alt="{{ $tour->title }} Cover Image"
                                                                 class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
+                                                        <a
+                                                            href="{{ route('show_tour', ['id' => $tour->id, 'locale' => app()->currentLocale()]) }}">
                                                             <div
                                                                 class="card-body absolute inset-0 justify-center group ">
                                                                 <div
@@ -378,7 +385,8 @@
                                                                 alt="{{ $tour->title }} Cover Image"
                                                                 class="transition-transform brightness-75 duration-500 group-hover:scale-110 h-full w-full object-cover" />
                                                         </figure>
-                                                        <a href="{{ route('show_tour', ['id'=>$tour->id, 'locale'=>app()->currentLocale()]) }}">
+                                                        <a
+                                                            href="{{ route('show_tour', ['id' => $tour->id, 'locale' => app()->currentLocale()]) }}">
                                                             <div class="card-body absolute inset-0 justify-center">
                                                                 <div
                                                                     class="text-center font-oswald tracking-wide font-normal">
@@ -437,8 +445,8 @@
 
 
 
-                        <li class=" hover:text-warning rounded-lg text-lg "><a href="/{{ app()->currentLocale() }}/contact"
-                                @class([
+                        <li class=" hover:text-warning rounded-lg text-lg "><a
+                                href="/{{ app()->currentLocale() }}/contact" @class([
                                     'text-warning' => request()->route()->getName() == 'website.contact',
                                 ])>
                                 {{ __('navbar.contact') }}
@@ -479,8 +487,9 @@
 
 
 {{-- drawer --}}
-<header id="overlay-end-example" class="overlay overlay-open:translate-x-0 drawer drawer-end hidden lg:hidden font-body"
-    role="dialog" tabindex="-1">
+<header id="overlay-end-example"
+    class="overlay overlay-open:translate-x-0 drawer drawer-end hidden lg:hidden font-body" role="dialog"
+    tabindex="-1">
     <nav class="drawer-body px-2 uppercase">
         <div class="drawer-header px-2">
             <h3 class="drawer-title">Sherpalaya</h3>
@@ -499,9 +508,10 @@
         </div>
         <div class="drawer-body justify-start pb-6 px-0">
             <ul class="menu  p-0 [&_.nested-collapse-wrapper]:space-y-0.5 [&_ul]:space-y-0.5 ">
-                <li class=" hover:text-warning rounded-lg items-start"><a href="/{{ app()->currentLocale() }}/home" @class([
-                    'text-warning' => request()->route()->getName() == 'website.home',
-                ])>
+                <li class=" hover:text-warning rounded-lg items-start"><a href="/{{ app()->currentLocale() }}/home"
+                        @class([
+                            'text-warning' => request()->route()->getName() == 'website.home',
+                        ])>
                         <span class="icon-[solar--home-outline] size-5">
                         </span>
                         Home
@@ -531,7 +541,8 @@
                                         Documents
                                     </a>
                                 </li> --}}
-                                <li class="text-black hover:underline"><a class="dropdown-item" href="/{{ app()->currentLocale() }}/our-team">
+                                <li class="text-black hover:underline"><a class="dropdown-item"
+                                        href="/{{ app()->currentLocale() }}/our-team">
                                         <span class="icon-[stash--people-group-duotone]"></span>
                                         Our Team
                                     </a>
@@ -565,7 +576,8 @@
                                             <div class="flex flex-col items-start  ">
                                                 <div
                                                     class="text-black hover:underline text-wrap tracking-normal font-light">
-                                                    <a href="{{ route('show_expedition', ['id'=>$expedition->id, 'locale'=>app()->currentLocale()]) }}">
+                                                    <a
+                                                        href="{{ route('show_expedition', ['id' => $expedition->id, 'locale' => app()->currentLocale()]) }}">
                                                         {{ $expedition->title }}
                                                     </a>
                                                 </div>
@@ -607,7 +619,8 @@
                                             <div class="flex flex-col items-start  ">
                                                 <div
                                                     class="text-black hover:underline tracking-normal font-light text-wrap">
-                                                    <a href="{{ route('show_trek', ['id'=>$trek->id, 'locale'=>app()->currentLocale()]) }}">
+                                                    <a
+                                                        href="{{ route('show_trek', ['id' => $trek->id, 'locale' => app()->currentLocale()]) }}">
                                                         {{ $trek->title }}
                                                     </a>
                                                 </div>
@@ -665,12 +678,12 @@
 
 
                 {{-- <li class="nested-collapse-wrapper"> --}}
-                    {{-- <a class="collapse-toggle nested-collapse" id="service-collapse"
+                {{-- <a class="collapse-toggle nested-collapse" id="service-collapse"
                         data-collapse="#service-collapse-menu">
                         <span class="icon-[ep--office-building] size-5"></span> Services
                         <span class="icon-[tabler--chevron-down] collapse-icon size-4"></span>
                     </a> --}}
-                    {{-- <ul id="service-collapse-menu"
+                {{-- <ul id="service-collapse-menu"
                         class="collapse hidden w-auto overflow-hidden transition-[height] duration-300 "
                         aria-labelledby="service-collapse">
                         <li class="uppercase">
@@ -726,12 +739,12 @@
 @push('scripts')
     <script defer>
         document.addEventListener("DOMContentLoaded", function() {
-            const navbar = document.getElementById('navbar');
-            const drawer = document.getElementById('drawer'); // Ensure this ID exists for the mobile menu
+            const navbar = document.getElementById("navbar");
+            const drawer = document.getElementById("drawer"); // Ensure this ID exists for mobile
             let lastScrollTop = window.pageYOffset;
             let touchStartY = 0;
+            let ticking = false; // Prevents redundant event calls
 
-            // Apply smooth transitions
             if (navbar) {
                 navbar.style.transition = "background 0.5s ease, transform 0.5s ease, color 0.1s ease";
             }
@@ -743,8 +756,8 @@
                 const currentScroll = window.pageYOffset;
 
                 if (navbar) {
-                    if (currentScroll <= 5) { // Apply default styles when at the top
-                        navbar.classList.add("top-navbar");
+                    if (currentScroll <= 5) {
+                        navbar.classList.add("top-navbar"); // Apply default style
                         navbar.style.transform = "translateY(0)";
                     } else {
                         navbar.classList.remove("top-navbar");
@@ -753,27 +766,35 @@
             }
 
             function handleScroll(event) {
-                const currentScroll = window.pageYOffset;
-                const isScrollingUp = checkScrollDirection(event);
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const currentScroll = window.pageYOffset;
+                        const isScrollingUp = checkScrollDirection(event);
 
-                if (navbar) {
-                    if (currentScroll <= 5) {
-                        navbar.classList.add("top-navbar"); // Apply default style
-                        navbar.style.transform = "translateY(0)";
-                    } else {
-                        navbar.classList.remove("top-navbar");
+                        if (navbar) {
+                            if (currentScroll <= 5) {
+                                navbar.classList.add("top-navbar");
+                                navbar.style.transform = "translateY(0)";
+                            } else {
+                                navbar.classList.remove("top-navbar");
 
-                        if (Math.abs(currentScroll - lastScrollTop) > 10) { // Threshold to prevent flickering
-                            navbar.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
+                                if (Math.abs(currentScroll - lastScrollTop) > 10) {
+                                    navbar.style.transform = isScrollingUp ? "translateY(0)" :
+                                        "translateY(-100%)";
+                                }
+                            }
                         }
-                    }
-                }
 
-                if (drawer && getComputedStyle(drawer).display !== "none") {
-                    drawer.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
-                }
+                        if (drawer && getComputedStyle(drawer).display !== "none") {
+                            drawer.style.transform = isScrollingUp ? "translateY(0)" : "translateY(-100%)";
+                        }
 
-                lastScrollTop = currentScroll;
+                        lastScrollTop = currentScroll;
+                        ticking = false;
+                    });
+
+                    ticking = true;
+                }
             }
 
             function checkScrollDirection(event) {
@@ -786,16 +807,21 @@
             }
 
             // Touch event handlers for mobile
-            window.addEventListener('touchstart', function(event) {
+            window.addEventListener("touchstart", function(event) {
                 touchStartY = event.touches[0].clientY;
-            }, { passive: true });
+            }, {
+                passive: true
+            });
 
-            window.addEventListener('touchmove', handleScroll, { passive: true });
-            window.addEventListener('wheel', handleScroll, { passive: true });
+            window.addEventListener("touchmove", handleScroll, {
+                passive: true
+            });
+            window.addEventListener("wheel", handleScroll, {
+                passive: true
+            });
 
             // Check scroll position when page loads
             applyNavbarStyles();
         });
     </script>
 @endpush
-

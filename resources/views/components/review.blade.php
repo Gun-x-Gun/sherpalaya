@@ -4,7 +4,7 @@
 
     <div class="xl:mx-32 mx-4">
         <div class="">
-            <h3 class="text-3xl md:text-4xl font-body font-medium uppercase tracking-normal text-black text-left md:text-left text-balance"
+            <h3 class="text-3xl font-body font-medium uppercase tracking-normal text-black text-left md:text-left text-balance"
                 data-aos="fade-down" data-aos-duration="1200">
                 {{__('review.review')}}
             </h3>

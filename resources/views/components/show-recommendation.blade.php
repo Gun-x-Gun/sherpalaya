@@ -1,11 +1,11 @@
 @if (!empty($recommendations) && collect($recommendations)->flatten()->isNotEmpty())
     <section class="bg-transparent">
         {{-- <div class="h-8"></div> --}}
-        <h5 class="card-title text-left" data-aos="fade-down" data-aos-duration="1200">
-            <span class="uppercase font-medium text-3xl text-black rounded-full font-oswald">
+        <h3 class="card-title text-left" data-aos="fade-down" data-aos-duration="1200">
+            <span class="uppercase font-bold text-3xl text-black rounded-full font-body">
                 {{ __('show-page.recommend') }}
             </span>
-        </h5>
+        </h3>
         <div class="h-6"></div>
         @foreach ($recommendations as $key => $recommendationDatas)
             <div class="bg-blue-100/20 font-body">

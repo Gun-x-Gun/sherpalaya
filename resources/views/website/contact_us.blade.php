@@ -14,7 +14,7 @@
                     </h2>
 
                     <h1
-                        class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl uppercase font-card font-semibold tracking-tight text-wrap leading-[1.3] opacity-75">
+                        class="card-title mb-2 text-warning text-4xl sm:text-5xl md:text-6xl uppercase font-card font-bold tracking-tight text-wrap leading-[1.3] opacity-90">
                         {{ app()->currentLocale() == 'fr' ? $contactUsSetting->main_title_fr : $contactUsSetting->main_title_en }}
                     </h1>
 

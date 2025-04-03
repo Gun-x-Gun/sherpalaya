@@ -3,12 +3,12 @@
         <div id="gallery" class="card-header pb-4 px-0 ">
             <div class="h-6">
             </div>
-            <h5 class="card-title text-left p-2 text-black uppercase font-medium font-body tracking-wide text-3xl" data-aos="fade-down" data-aos-duration="1200">
+            <h3 class="card-title text-left p-2 text-black uppercase font-bold font-body tracking-wide text-3xl" data-aos="fade-down" data-aos-duration="1200">
                 {{__('show-page.gallery')}}
-            </h5>
+            </h3>
             <div class="h-6">
             </div>
-            <div id="all-expeditions" class="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1 px-2 skeleton animate-pulse">
+            <div id="all-expeditions" class="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-1 px-2 skeleton animate-pulse">
                 @foreach ($expedition->images->slice(0, 8) as $galleryImage)
                     <button
                         class="card cursor-pointer rounded-xl image-full h-52 w-full relative items-end  card-side group hover:shadow border single-expedition hidden"
