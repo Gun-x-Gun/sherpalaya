@@ -15,7 +15,7 @@
         </h2>
         <a href="{{ $url }}" >
             <button
-                class="pl-1 lg:pl-2 btn btn-primary lg:btn-lg  gap-2 rounded-xl lg:rounded-3xl ring-1 ring-blue-100 text-base hover:btn-warning tracking-wide  opacity-80 m-1">
+                class="pl-1 lg:pl-2 btn btn-primary lg:btn-lg  gap-2 rounded-xl lg:rounded-3xl ring-1  text-base hover:btn-warning tracking-wide  opacity-80 m-1">
                 <span class="icon-[mdi--chevron-double-right] size-5 "></span>
                 {{ __('home-carousel.explore') }}
             </button>
