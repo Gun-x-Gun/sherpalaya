@@ -1,12 +1,16 @@
 <x-website-layout :initAOS="false">
     {{-- Page Loading Screen --}}
     <div id="homepage-loading-container"
-        class="fixed top-0 left-0 w-screen h-screen flex flex-col justify-center items-center bg-white z-50">
-        <img src="{{ asset('photos/logo.png') }}" alt="Logo" class="w-1/4 h-1/3 animate-pulse" />
+        class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-white z-50 transition-opacity duration-700">
+        <img src="{{ asset('photos/logo.png') }}" alt="Logo" class="w-1/4 max-w-xs h-auto animate-pulse" />
     </div>
-    <div id="main-content" class="opacity-0">
+
+    {{-- Main Page Content --}}
+    <div id="main-content" class="opacity-0 transition-opacity duration-700">
         <x-home-page-animation />
-        <x-carousel.home-page-carousel />
+        <div id="homepage-carousel-wrapper">
+            <x-carousel.home-page-carousel />
+        </div>
         <x-carousel.all-cards />
         <x-stat-widget />
         <x-featured.featured-expedition />
@@ -20,25 +24,49 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let navbarComponent = document.querySelector("#navbar");
-            let pageLoadingContainer = document.querySelector("#homepage-loading-container");
-            let mainContent = document.querySelector("#main-content");
+            const navbarComponent = document.querySelector("#navbar");
+            const pageLoadingContainer = document.querySelector("#homepage-loading-container");
+            const mainContent = document.querySelector("#main-content");
+            const carouselWrapper = document.querySelector("#homepage-carousel-wrapper");
 
             // Show navbar
             if (navbarComponent) {
                 navbarComponent.classList.remove('hidden');
             }
 
-            // Hide the loading screen after page is fully loaded
-            setTimeout(() => {
-                pageLoadingContainer.classList.add('opacity-0', 'transition-opacity', 'duration-700');
+            // Wait for all images inside the carousel to load
+            const carouselImages = carouselWrapper.querySelectorAll("img");
+            let loadedCount = 0;
+
+            if (carouselImages.length === 0) {
+                finishLoading(); // No images to wait for
+            }
+
+            carouselImages.forEach((img) => {
+                if (img.complete) {
+                    loadedCount++;
+                    if (loadedCount === carouselImages.length) {
+                        finishLoading();
+                    }
+                } else {
+                    img.addEventListener("load", () => {
+                        loadedCount++;
+                        if (loadedCount === carouselImages.length) {
+                            finishLoading();
+                        }
+                    });
+                }
+            });
+
+            function finishLoading() {
+                pageLoadingContainer.classList.add('opacity-0');
+
                 setTimeout(() => {
                     pageLoadingContainer.classList.add('hidden');
-                }, 700); // Delay to allow smooth fade-out
+                }, 700);
 
-                // Fade in the main content
-                mainContent.classList.add('opacity-100', 'transition-opacity', 'duration-700');
-            }, 500); // Optional delay before hiding the loader
+                mainContent.classList.remove('opacity-0');
+            }
         });
     </script>
 
