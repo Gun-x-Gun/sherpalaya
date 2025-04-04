@@ -9,7 +9,7 @@
     'images' => [],
 ])
 
-<div id="{{ $id }}" class="w-[100vw] h-[100vh] card image-full flex-col-reverse rounded-none">
+<div id="{{ $id }}" class="w-[100vw] h-dvh card image-full flex-col-reverse rounded-none">
     <figure class="overflow-hidden rounded-none">
         @if (is_array($images) && count($images) != 0)
             @foreach ($images as $image)

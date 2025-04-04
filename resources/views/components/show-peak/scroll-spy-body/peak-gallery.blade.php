@@ -26,7 +26,7 @@
                 <div id="peak-gallery-modal" class="overlay modal overlay-open:opacity-100 hidden p-0" role="dialog"
                     tabindex="-1">
                     <div class="modal-dialog overlay-open:opacity-100 max-w-[100vw] ">
-                        <div class="modal-content h-full max-h-[100vh] justify-center  bg-transparent backdrop-blur-sm">
+                        <div class="modal-content h-full max-h-dvh justify-center  bg-transparent backdrop-blur-sm">
                             <div class="modal-header">
                                 <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3"
                                     aria-label="Close" data-overlay="#peak-gallery-modal">
